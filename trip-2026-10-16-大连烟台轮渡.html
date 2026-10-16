@@ -145,16 +145,20 @@ svg.paw{width:20px;height:20px;fill:currentColor;display:block}
 .b.ask{background:var(--amber-soft);color:var(--amber-ink);border-color:#EFD9AA}
 
 /* ---------- filters ---------- */
-.filters{
-  position:sticky;top:0;z-index:6;padding:12px 0 11px;
-  background:linear-gradient(to bottom,var(--paper) 74%,rgba(251,246,239,0));
-}
+/* 注意：.filters（见文件后段）自己已经做全宽出血，所以 .chips 不再负 margin，
+   否则会双倍出血把胶囊推出屏幕。 */
 .chips{
   display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;
-  margin:0 calc(-1 * var(--pad-r)) 0 calc(-1 * var(--pad-l));
-  padding:2px var(--pad-r) 2px var(--pad-l);
+  margin:0;padding:2px 0;
+  -webkit-overflow-scrolling:touch;
 }
+.chips+.chips{margin-top:8px}
 .chips::-webkit-scrollbar{display:none}
+/* 右边一小段渐隐，暗示「这一排还能横向滑」——不然被切一半的胶囊看着像坏了 */
+.chips{
+  -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 20px),transparent 100%);
+  mask-image:linear-gradient(to right,#000 calc(100% - 20px),transparent 100%);
+}
 .chip{
   flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 15px;
   border-radius:99px;background:var(--card);border:1px solid var(--line-2);color:var(--ink-2);
@@ -166,9 +170,6 @@ svg.paw{width:20px;height:20px;fill:currentColor;display:block}
 .chip:active{transform:scale(.96)}
 .chip.on{background:var(--ink);border-color:var(--ink);color:#FCF8F2;font-weight:600}
 .chip.on .n{color:rgba(252,248,242,.66)}
-.filter-count{
-  font-size:12px;color:var(--ink-3);margin:9px 2px 0;font-variant-numeric:tabular-nums;
-}
 
 /* ---------- place cards ---------- */
 .place{
@@ -331,6 +332,172 @@ details.more .more-body{padding:9px 0 2px}
   color:var(--ink-3);font-size:12px;line-height:1.85;text-align:center;
 }
 
+/* ---------- 定位面板 ---------- */
+/* 首屏绝不自动弹权限框：先给一个明确的按钮，点了才 request */
+.locate{
+  margin:18px 0 0;padding:13px 15px 15px;background:var(--paper-2);
+  border:1px solid var(--line);border-radius:var(--r-l);box-shadow:var(--sh-2);
+}
+.locate-head{
+  display:flex;align-items:center;gap:8px;font-family:var(--font-display);
+  font-size:16px;font-weight:600;line-height:1.4;
+}
+.locate-head .dot{
+  flex:0 0 auto;width:9px;height:9px;border-radius:99px;background:var(--ink-3);
+  box-shadow:0 0 0 3px rgba(156,138,118,.16);
+}
+.locate.ok .locate-head .dot{background:var(--green);box-shadow:0 0 0 3px rgba(46,125,83,.16)}
+.locate.bad .locate-head .dot{background:var(--amber);box-shadow:0 0 0 3px rgba(217,145,39,.18)}
+.locate p{margin:7px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.7;text-wrap:pretty}
+.loc-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.locbtn{
+  display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 18px;
+  border:1px solid #9A482A;border-radius:99px;color:#FFF7F0;
+  background:linear-gradient(158deg,#C4643D,#A94F2C);
+  font-family:inherit;font-size:14.5px;font-weight:600;cursor:pointer;
+  box-shadow:0 10px 22px -12px rgba(154,72,42,.62);
+  transition:transform .18s var(--ease),opacity .18s var(--ease);
+}
+.locbtn:active{transform:scale(.97)}
+.locbtn[disabled]{opacity:.55;box-shadow:none;cursor:default}
+.locbtn.ghost{
+  background:var(--card);color:var(--ink-2);border-color:var(--line-2);
+  font-weight:500;box-shadow:none;
+}
+.loc-note{margin:10px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.7;text-wrap:pretty}
+.loc-note:empty{display:none}
+.loc-note.ok{color:#1F6238}
+.loc-note.bad{color:var(--amber-ink)}
+.coords{display:block;margin-top:5px;font-size:11px;color:var(--ink-3);
+  font-variant-numeric:tabular-nums;letter-spacing:.01em}
+
+/* ---------- 搜索 / 筛选工具条 ---------- */
+.filters{
+  position:sticky;top:calc(env(safe-area-inset-top,0px));z-index:6;
+  margin:0 calc(-1 * var(--pad-r)) 0 calc(-1 * var(--pad-l));
+  padding:12px var(--pad-r) 10px var(--pad-l);background:var(--paper);
+}
+.filters::after{
+  content:"";position:absolute;left:0;right:0;bottom:-16px;height:16px;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(251,246,239,.96),rgba(251,246,239,0));
+}
+.searchrow{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.search{
+  flex:1;min-width:0;display:flex;align-items:center;gap:9px;min-height:46px;
+  padding:0 7px 0 15px;background:var(--card);border:1px solid var(--line-2);
+  border-radius:99px;box-shadow:var(--sh-1);
+  transition:border-color .18s var(--ease),box-shadow .18s var(--ease);
+}
+.search:focus-within{border-color:#DCC0A2;box-shadow:0 0 0 3px rgba(217,145,39,.15)}
+.search svg{flex:0 0 auto;width:15px;height:15px;fill:var(--ink-3)}
+.search input{
+  flex:1;min-width:0;min-height:44px;border:0;background:transparent;padding:0;
+  font:inherit;font-size:15px;color:var(--ink);outline:none;
+}
+.search input::placeholder{color:var(--ink-3)}
+.search input::-webkit-search-cancel-button{display:none}
+.search .clr{
+  flex:0 0 auto;width:34px;height:34px;border:0;border-radius:99px;cursor:pointer;
+  background:#F3EDE4;color:var(--ink-2);font:inherit;font-size:15px;line-height:1;
+  display:none;place-items:center;
+}
+.search.has .clr{display:grid}
+.searchrow .hits{
+  flex:0 0 auto;font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;
+  padding:0 2px;white-space:nowrap;
+}
+.chip-sep{flex:0 0 auto;width:1px;align-self:stretch;margin:7px 4px;background:var(--line-2)}
+/* 没有依据可标的筛选：不做成假按钮，做成安静的虚线胶囊 */
+.chip.zero{color:var(--ink-3);border-style:dashed;border-color:var(--line)}
+.chip.zero .n{color:var(--ink-3)}
+.filter-count{
+  font-size:12px;color:var(--ink-3);margin:9px 2px 0;font-variant-numeric:tabular-nums;
+}
+.filter-count b{font-weight:600;color:var(--ink-2)}
+
+/* ---------- 排序段控件 ---------- */
+.toolbar{margin:0 0 2px}
+.sorter{
+  display:flex;gap:4px;padding:4px;background:#F2EADE;border:1px solid var(--line);
+  border-radius:99px;box-shadow:inset 0 1px 2px rgba(74,50,28,.04);
+}
+.sorter button{
+  flex:1 1 0;min-height:44px;padding:0 6px;border:0;border-radius:99px;background:transparent;
+  color:var(--ink-2);font-family:inherit;font-size:13px;font-weight:500;white-space:nowrap;
+  display:inline-flex;align-items:center;justify-content:center;gap:4px;cursor:pointer;
+  transition:background .18s var(--ease),color .18s var(--ease),transform .18s var(--ease);
+}
+.sorter button:active{transform:scale(.98)}
+.sorter button.on{background:var(--card);color:var(--ink);font-weight:600;box-shadow:var(--sh-1)}
+.sorter button[disabled]{color:var(--ink-3);opacity:.62;cursor:default}
+/* 还没定位：「离我最近」淡一点但仍可点——点了会提示先去拿位置，比一个死按钮好懂 */
+.sorter button.needs{color:var(--ink-3);opacity:.66}
+.sorter button.needs::after{content:'﹖';font-size:11px;opacity:.7}
+.sorter-hint{margin:8px 2px 0;font-size:11.5px;color:var(--ink-3);line-height:1.68;text-wrap:pretty}
+
+/* ---------- 省份分组 ---------- */
+.pgroup.gone{display:none}
+.phead{
+  display:flex;align-items:center;gap:9px;margin:20px 0 11px;
+  font-family:var(--font-display);font-size:16.5px;font-weight:600;
+}
+.phead .n{
+  font-family:var(--font-sans);font-size:11px;font-weight:600;color:var(--ink-3);
+  background:#F2EADE;border-radius:99px;padding:2px 8px;font-variant-numeric:tabular-nums;
+}
+.phead .rule{flex:1;height:1px;background:var(--line)}
+.phead .src{
+  font-family:var(--font-sans);font-size:10.5px;font-weight:500;color:var(--ink-3);white-space:nowrap;
+}
+.prov-badge{
+  display:none;font-size:11px;font-weight:600;padding:4px 9px;border-radius:9px;
+  background:#F3EDE4;color:var(--ink-3);border:1px solid var(--line);
+}
+body.flat .prov-badge{display:inline-flex}
+
+/* ---------- 季节 / 玩法标签 ---------- */
+.tagrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tagp{
+  display:inline-flex;align-items:center;font-size:11.5px;font-weight:600;white-space:nowrap;
+  padding:3px 9px;border-radius:8px;background:#F3EDE4;color:var(--ink-2);
+}
+.tagp.camp{background:var(--green-soft);color:#1F6238}
+.tagp.park{background:#EAF0E8;color:#3F6B4C}
+.tagp.spring{background:#F7E7EC;color:#A75169}
+.tagp.summer{background:var(--amber-soft);color:var(--amber-ink)}
+.tagp.autumn{background:#F6E9DA;color:#96562B}
+.tagp.winter{background:var(--slate-soft);color:var(--slate)}
+.tagp.hotspring{background:var(--rose-soft);color:var(--rose)}
+.tagp.ski{background:var(--slate-soft);color:#4A6076}
+.tag-ev{margin:6px 0 0;font-size:11px;color:var(--ink-3);line-height:1.68;text-wrap:pretty}
+.dist{
+  display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:600;
+  padding:4px 10px;border-radius:9px;background:var(--terra-soft);color:var(--terra-2);
+  border:1px solid #F0DACB;font-variant-numeric:tabular-nums;
+}
+.why{
+  margin:9px 0 0;padding-top:9px;border-top:1px dashed var(--line-2);
+  font-size:11.5px;color:var(--ink-3);line-height:1.7;text-wrap:pretty;
+}
+.why b{font-weight:600;color:var(--ink-2)}
+
+/* ---------- 依据说明 ---------- */
+.explain{margin:12px 0 0}
+.explain>summary{
+  display:flex;align-items:center;gap:8px;min-height:44px;padding:10px 14px;cursor:pointer;
+  background:rgba(255,255,255,.62);border:1px dashed var(--line-2);border-radius:var(--r-m);
+  font-size:12.5px;color:var(--ink-2);list-style:none;
+}
+.explain>summary::-webkit-details-marker{display:none}
+.explain>summary::after{content:"\203A";margin-left:auto;font-size:15px;
+  transition:transform .2s var(--ease)}
+.explain[open]>summary::after{transform:rotate(90deg)}
+.explain .ex-body{padding:11px 3px 0;font-size:12px;color:var(--ink-2);line-height:1.78}
+.explain ul{margin:8px 0 0;padding-left:18px}
+.explain li{margin-bottom:7px}
+.explain li:last-child{margin-bottom:0}
+.explain code{font-family:inherit;background:#F3EDE4;border-radius:5px;padding:1px 5px;font-size:11.5px}
+
 @media (min-width:720px){
   /* 桌面端别让竖幅地图把卡片撑到 900px 高 */
   .thumb{aspect-ratio:16/11;padding:14px}
@@ -346,8 +513,9 @@ details.more .more-body{padding:9px 0 2px}
 </style></head>
 <body><div class="wrap"><a class="back" href="index.html">全部行程</a>
 <h1 class="d-title">大连-烟台 渤海轮渡</h1>
-<div class="d-meta"> · 2026-10-16 13:26 · 高德驾车路径规划（真实路网）</div>
+<div class="d-meta">辽宁 ·  · 2026-10-16 13:26 · 高德驾车路径规划（真实路网）</div>
 <div class="badges"><span class="b ">178.41 km</span><span class="b ">驾车</span><span class="b ">11 小时 51 分</span><span class="b ">🅿️ 停车</span></div>
+
 <div class="petpanel">
 <div class="pp ok zero"><b>0</b><span>可带宠物</span></div>
 <div class="pp ask zero"><b>0</b><span>待确认</span></div>

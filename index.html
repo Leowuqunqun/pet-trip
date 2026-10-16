@@ -145,16 +145,20 @@ svg.paw{width:20px;height:20px;fill:currentColor;display:block}
 .b.ask{background:var(--amber-soft);color:var(--amber-ink);border-color:#EFD9AA}
 
 /* ---------- filters ---------- */
-.filters{
-  position:sticky;top:0;z-index:6;padding:12px 0 11px;
-  background:linear-gradient(to bottom,var(--paper) 74%,rgba(251,246,239,0));
-}
+/* 注意：.filters（见文件后段）自己已经做全宽出血，所以 .chips 不再负 margin，
+   否则会双倍出血把胶囊推出屏幕。 */
 .chips{
   display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;
-  margin:0 calc(-1 * var(--pad-r)) 0 calc(-1 * var(--pad-l));
-  padding:2px var(--pad-r) 2px var(--pad-l);
+  margin:0;padding:2px 0;
+  -webkit-overflow-scrolling:touch;
 }
+.chips+.chips{margin-top:8px}
 .chips::-webkit-scrollbar{display:none}
+/* 右边一小段渐隐，暗示「这一排还能横向滑」——不然被切一半的胶囊看着像坏了 */
+.chips{
+  -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 20px),transparent 100%);
+  mask-image:linear-gradient(to right,#000 calc(100% - 20px),transparent 100%);
+}
 .chip{
   flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 15px;
   border-radius:99px;background:var(--card);border:1px solid var(--line-2);color:var(--ink-2);
@@ -166,9 +170,6 @@ svg.paw{width:20px;height:20px;fill:currentColor;display:block}
 .chip:active{transform:scale(.96)}
 .chip.on{background:var(--ink);border-color:var(--ink);color:#FCF8F2;font-weight:600}
 .chip.on .n{color:rgba(252,248,242,.66)}
-.filter-count{
-  font-size:12px;color:var(--ink-3);margin:9px 2px 0;font-variant-numeric:tabular-nums;
-}
 
 /* ---------- place cards ---------- */
 .place{
@@ -331,6 +332,172 @@ details.more .more-body{padding:9px 0 2px}
   color:var(--ink-3);font-size:12px;line-height:1.85;text-align:center;
 }
 
+/* ---------- 定位面板 ---------- */
+/* 首屏绝不自动弹权限框：先给一个明确的按钮，点了才 request */
+.locate{
+  margin:18px 0 0;padding:13px 15px 15px;background:var(--paper-2);
+  border:1px solid var(--line);border-radius:var(--r-l);box-shadow:var(--sh-2);
+}
+.locate-head{
+  display:flex;align-items:center;gap:8px;font-family:var(--font-display);
+  font-size:16px;font-weight:600;line-height:1.4;
+}
+.locate-head .dot{
+  flex:0 0 auto;width:9px;height:9px;border-radius:99px;background:var(--ink-3);
+  box-shadow:0 0 0 3px rgba(156,138,118,.16);
+}
+.locate.ok .locate-head .dot{background:var(--green);box-shadow:0 0 0 3px rgba(46,125,83,.16)}
+.locate.bad .locate-head .dot{background:var(--amber);box-shadow:0 0 0 3px rgba(217,145,39,.18)}
+.locate p{margin:7px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.7;text-wrap:pretty}
+.loc-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.locbtn{
+  display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 18px;
+  border:1px solid #9A482A;border-radius:99px;color:#FFF7F0;
+  background:linear-gradient(158deg,#C4643D,#A94F2C);
+  font-family:inherit;font-size:14.5px;font-weight:600;cursor:pointer;
+  box-shadow:0 10px 22px -12px rgba(154,72,42,.62);
+  transition:transform .18s var(--ease),opacity .18s var(--ease);
+}
+.locbtn:active{transform:scale(.97)}
+.locbtn[disabled]{opacity:.55;box-shadow:none;cursor:default}
+.locbtn.ghost{
+  background:var(--card);color:var(--ink-2);border-color:var(--line-2);
+  font-weight:500;box-shadow:none;
+}
+.loc-note{margin:10px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.7;text-wrap:pretty}
+.loc-note:empty{display:none}
+.loc-note.ok{color:#1F6238}
+.loc-note.bad{color:var(--amber-ink)}
+.coords{display:block;margin-top:5px;font-size:11px;color:var(--ink-3);
+  font-variant-numeric:tabular-nums;letter-spacing:.01em}
+
+/* ---------- 搜索 / 筛选工具条 ---------- */
+.filters{
+  position:sticky;top:calc(env(safe-area-inset-top,0px));z-index:6;
+  margin:0 calc(-1 * var(--pad-r)) 0 calc(-1 * var(--pad-l));
+  padding:12px var(--pad-r) 10px var(--pad-l);background:var(--paper);
+}
+.filters::after{
+  content:"";position:absolute;left:0;right:0;bottom:-16px;height:16px;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(251,246,239,.96),rgba(251,246,239,0));
+}
+.searchrow{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.search{
+  flex:1;min-width:0;display:flex;align-items:center;gap:9px;min-height:46px;
+  padding:0 7px 0 15px;background:var(--card);border:1px solid var(--line-2);
+  border-radius:99px;box-shadow:var(--sh-1);
+  transition:border-color .18s var(--ease),box-shadow .18s var(--ease);
+}
+.search:focus-within{border-color:#DCC0A2;box-shadow:0 0 0 3px rgba(217,145,39,.15)}
+.search svg{flex:0 0 auto;width:15px;height:15px;fill:var(--ink-3)}
+.search input{
+  flex:1;min-width:0;min-height:44px;border:0;background:transparent;padding:0;
+  font:inherit;font-size:15px;color:var(--ink);outline:none;
+}
+.search input::placeholder{color:var(--ink-3)}
+.search input::-webkit-search-cancel-button{display:none}
+.search .clr{
+  flex:0 0 auto;width:34px;height:34px;border:0;border-radius:99px;cursor:pointer;
+  background:#F3EDE4;color:var(--ink-2);font:inherit;font-size:15px;line-height:1;
+  display:none;place-items:center;
+}
+.search.has .clr{display:grid}
+.searchrow .hits{
+  flex:0 0 auto;font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;
+  padding:0 2px;white-space:nowrap;
+}
+.chip-sep{flex:0 0 auto;width:1px;align-self:stretch;margin:7px 4px;background:var(--line-2)}
+/* 没有依据可标的筛选：不做成假按钮，做成安静的虚线胶囊 */
+.chip.zero{color:var(--ink-3);border-style:dashed;border-color:var(--line)}
+.chip.zero .n{color:var(--ink-3)}
+.filter-count{
+  font-size:12px;color:var(--ink-3);margin:9px 2px 0;font-variant-numeric:tabular-nums;
+}
+.filter-count b{font-weight:600;color:var(--ink-2)}
+
+/* ---------- 排序段控件 ---------- */
+.toolbar{margin:0 0 2px}
+.sorter{
+  display:flex;gap:4px;padding:4px;background:#F2EADE;border:1px solid var(--line);
+  border-radius:99px;box-shadow:inset 0 1px 2px rgba(74,50,28,.04);
+}
+.sorter button{
+  flex:1 1 0;min-height:44px;padding:0 6px;border:0;border-radius:99px;background:transparent;
+  color:var(--ink-2);font-family:inherit;font-size:13px;font-weight:500;white-space:nowrap;
+  display:inline-flex;align-items:center;justify-content:center;gap:4px;cursor:pointer;
+  transition:background .18s var(--ease),color .18s var(--ease),transform .18s var(--ease);
+}
+.sorter button:active{transform:scale(.98)}
+.sorter button.on{background:var(--card);color:var(--ink);font-weight:600;box-shadow:var(--sh-1)}
+.sorter button[disabled]{color:var(--ink-3);opacity:.62;cursor:default}
+/* 还没定位：「离我最近」淡一点但仍可点——点了会提示先去拿位置，比一个死按钮好懂 */
+.sorter button.needs{color:var(--ink-3);opacity:.66}
+.sorter button.needs::after{content:'﹖';font-size:11px;opacity:.7}
+.sorter-hint{margin:8px 2px 0;font-size:11.5px;color:var(--ink-3);line-height:1.68;text-wrap:pretty}
+
+/* ---------- 省份分组 ---------- */
+.pgroup.gone{display:none}
+.phead{
+  display:flex;align-items:center;gap:9px;margin:20px 0 11px;
+  font-family:var(--font-display);font-size:16.5px;font-weight:600;
+}
+.phead .n{
+  font-family:var(--font-sans);font-size:11px;font-weight:600;color:var(--ink-3);
+  background:#F2EADE;border-radius:99px;padding:2px 8px;font-variant-numeric:tabular-nums;
+}
+.phead .rule{flex:1;height:1px;background:var(--line)}
+.phead .src{
+  font-family:var(--font-sans);font-size:10.5px;font-weight:500;color:var(--ink-3);white-space:nowrap;
+}
+.prov-badge{
+  display:none;font-size:11px;font-weight:600;padding:4px 9px;border-radius:9px;
+  background:#F3EDE4;color:var(--ink-3);border:1px solid var(--line);
+}
+body.flat .prov-badge{display:inline-flex}
+
+/* ---------- 季节 / 玩法标签 ---------- */
+.tagrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tagp{
+  display:inline-flex;align-items:center;font-size:11.5px;font-weight:600;white-space:nowrap;
+  padding:3px 9px;border-radius:8px;background:#F3EDE4;color:var(--ink-2);
+}
+.tagp.camp{background:var(--green-soft);color:#1F6238}
+.tagp.park{background:#EAF0E8;color:#3F6B4C}
+.tagp.spring{background:#F7E7EC;color:#A75169}
+.tagp.summer{background:var(--amber-soft);color:var(--amber-ink)}
+.tagp.autumn{background:#F6E9DA;color:#96562B}
+.tagp.winter{background:var(--slate-soft);color:var(--slate)}
+.tagp.hotspring{background:var(--rose-soft);color:var(--rose)}
+.tagp.ski{background:var(--slate-soft);color:#4A6076}
+.tag-ev{margin:6px 0 0;font-size:11px;color:var(--ink-3);line-height:1.68;text-wrap:pretty}
+.dist{
+  display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:600;
+  padding:4px 10px;border-radius:9px;background:var(--terra-soft);color:var(--terra-2);
+  border:1px solid #F0DACB;font-variant-numeric:tabular-nums;
+}
+.why{
+  margin:9px 0 0;padding-top:9px;border-top:1px dashed var(--line-2);
+  font-size:11.5px;color:var(--ink-3);line-height:1.7;text-wrap:pretty;
+}
+.why b{font-weight:600;color:var(--ink-2)}
+
+/* ---------- 依据说明 ---------- */
+.explain{margin:12px 0 0}
+.explain>summary{
+  display:flex;align-items:center;gap:8px;min-height:44px;padding:10px 14px;cursor:pointer;
+  background:rgba(255,255,255,.62);border:1px dashed var(--line-2);border-radius:var(--r-m);
+  font-size:12.5px;color:var(--ink-2);list-style:none;
+}
+.explain>summary::-webkit-details-marker{display:none}
+.explain>summary::after{content:"\203A";margin-left:auto;font-size:15px;
+  transition:transform .2s var(--ease)}
+.explain[open]>summary::after{transform:rotate(90deg)}
+.explain .ex-body{padding:11px 3px 0;font-size:12px;color:var(--ink-2);line-height:1.78}
+.explain ul{margin:8px 0 0;padding-left:18px}
+.explain li{margin-bottom:7px}
+.explain li:last-child{margin-bottom:0}
+.explain code{font-family:inherit;background:#F3EDE4;border-radius:5px;padding:1px 5px;font-size:11.5px}
+
 @media (min-width:720px){
   /* 桌面端别让竖幅地图把卡片撑到 900px 高 */
   .thumb{aspect-ratio:16/11;padding:14px}
@@ -344,29 +511,281 @@ details.more .more-body{padding:9px 0 2px}
   *{transition-duration:.001ms!important;animation-duration:.001ms!important}
 }
 </style></head>
-<body><div class="wrap"><header class="masthead"><div class="brand"><span class="brand-mark"><svg class="paw" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="6.6" cy="8.2" rx="2.3" ry="3"/><ellipse cx="12" cy="6.2" rx="2.4" ry="3.1"/><ellipse cx="17.4" cy="8.2" rx="2.3" ry="3"/><ellipse cx="20.4" cy="13.4" rx="1.9" ry="2.5"/><path d="M12 11.2c3.7 0 6.6 2.7 6.6 5.8 0 2.3-2 3.5-4 3.5-1 0-1.8-.3-2.6-.3s-1.6.3-2.6.3c-2 0-4-1.2-4-3.5 0-3.1 2.9-5.8 6.6-5.8z"/></svg></span><span class="brand-name">宠物友好旅行</span></div><h1 class="lede">带狗出门，先弄清哪些地方真的让进。</h1><div class="ledger"><div class="stat"><b>5</b><span>条行程</span></div><div class="stat"><b>26</b><span>个地点</span></div><div class="stat ok zero"><b>0</b><span>可带宠物</span></div><div class="stat ask"><b>6</b><span>待确认</span></div></div><p class="provenance"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1.5 21h21L12 2zm0 6.2 5.9 10.7H6.1L12 8.2z"/><path d="M11.1 11h1.8v5h-1.8zM11.1 17.1h1.8v1.8h-1.8z"/></svg><span>宠物判定只来自大众点评店铺标签，不做任何推测；没标注的一律标「待确认」并附上电话，出发前打一个最稳。</span></p></header><h2 class="sect">行程<span class="n">5</span><span class="rule"></span></h2><a class="trip" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html"><div class="thumb"><img src="travel/2026-10-16-浙江-莫干山庾村携宠慢行.png" alt="莫干山庾村携宠慢行 路线图" loading="lazy" onerror="this.style.display='none'"><span class="thumb-pet ask">☎ 1 处待确认</span></div><div class="trip-body"><h2 class="trip-title">莫干山庾村携宠慢行</h2><p class="trip-meta">湖州 · 2026-10-16 17:55 · 6 个点</p><div class="badges"><span class="b ">52.48 km</span><span class="b ">驾车</span><span class="b ">1 小时 37 分</span><span class="b ">🅿️ 停车</span></div></div></a><a class="trip" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html"><div class="thumb"><img src="travel/2026-10-16-浙江-杭州铜鉴湖带狗半日.png" alt="杭州铜鉴湖带狗半日 路线图" loading="lazy" onerror="this.style.display='none'"><span class="thumb-pet ask">☎ 2 处待确认</span></div><div class="trip-body"><h2 class="trip-title">杭州铜鉴湖带狗半日</h2><p class="trip-meta">杭州 · 2026-10-16 17:55 · 6 个点</p><div class="badges"><span class="b ">3.06 km</span><span class="b ">步行</span><span class="b ">41 分钟</span><span class="b ">🅿️ 停车</span></div></div></a><a class="trip" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html"><div class="thumb"><img src="travel/2026-10-16-浙江-安吉小杭坑携宠露营.png" alt="安吉小杭坑携宠露营 路线图" loading="lazy" onerror="this.style.display='none'"><span class="thumb-pet ask">☎ 2 处待确认</span></div><div class="trip-body"><h2 class="trip-title">安吉小杭坑携宠露营</h2><p class="trip-meta">湖州 · 2026-10-16 17:55 · 6 个点</p><div class="badges"><span class="b ">17.69 km</span><span class="b ">驾车</span><span class="b ">35 分钟</span><span class="b ">🅿️ 停车</span></div></div></a><a class="trip" href="trip-2026-10-16-大连烟台轮渡.html"><div class="thumb"><img src="travel/2026-10-16-大连烟台轮渡.png" alt="大连-烟台 渤海轮渡 路线图" loading="lazy" onerror="this.style.display='none'"></div><div class="trip-body"><h2 class="trip-title">大连-烟台 渤海轮渡</h2><p class="trip-meta">2026-10-16 13:26 · 3 个点</p><div class="badges"><span class="b ">178.41 km</span><span class="b ">驾车</span><span class="b ">11 小时 51 分</span><span class="b ">🅿️ 停车</span></div></div></a><a class="trip" href="trip-2026-10-14-杭州西湖西线-美食版.html"><div class="thumb"><img src="travel/2026-10-14-杭州西湖西线-美食版.png" alt="杭州西湖西线·美食版 路线图" loading="lazy" onerror="this.style.display='none'"><span class="thumb-pet ask">☎ 1 处待确认</span></div><div class="trip-body"><h2 class="trip-title">杭州西湖西线·美食版</h2><p class="trip-meta">杭州 · 2026-10-15 14:12 · 5 个点</p><div class="badges"><span class="b ">2.59 km</span><span class="b ">步行</span><span class="b ">35 分钟</span><span class="b ">🅿️ 停车</span></div></div></a><h2 class="sect">地点<span class="n">26</span><span class="rule"></span></h2><p class="legend"><span><i class="ok"></i>可带宠物</span><span><i class="ask"></i>待确认</span><span><i class="no"></i>未标注（默认）</span></p><div class="filters"><div class="chips" role="group" aria-label="按宠物状态筛选地点"><button class="chip on" type="button" data-f="all" aria-pressed="true">全部<span class="n">26</span></button><button class="chip" type="button" data-f="ok" aria-pressed="false">🐕 可带宠物<span class="n">0</span></button><button class="chip" type="button" data-f="ask" aria-pressed="false">☎ 待确认<span class="n">6</span></button><button class="chip" type="button" data-f="other" aria-pressed="false">其他<span class="n">20</span></button></div><p class="filter-count" id="filter-count" aria-live="polite">共 26 个地点</p></div><div id="places"><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">莫干山橙月·黑胶唱片民宿</h3><span class="status none">无宠物信息</span></div><p class="place-note">莫干山镇何村村方村坞26号 ☎<a class="tel" href="tel:13482824274">13482824274</a>｜小红书`6a0886a8`（C级UGC，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」</p><div class="place-foot"><span class="tag start">起点</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">庾信北街停车场</h3><span class="status none">无宠物信息</span></div><p class="place-note">庾信北街25号｜**高德 POI 实搜**（池子里庾村片区没有停车场 POI，不许编；这条是真搜出来的）距庾村广场约 0.2 km｜距「OmitoHotel·莫干山」约0.2 km</p><div class="place-foot"><span class="tag park">停车</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="ask"><div class="place-head"><h3 class="place-name">金鱼妈妈·山尖尖有面儿</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">莫干山镇燎原村后村68号 ☎<a class="tel" href="tel:05728212017">0572-8212017</a>｜小红书作者提到可带（C级UGC，未核验）☎<a class="tel" href="tel:05728212017">0572-8212017</a>｜原文：「▫️看完日落六点半 我们导航去了庾村 吃了“金鱼妈妈” 这里都是宠物友好👫 点评双人套餐又加了其他吃的」（笔记 69d63f45）</p><div class="place-foot"><span class="tag food">美食</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">OmitoHotel·莫干山</h3><span class="status none">无宠物信息</span></div><p class="place-note">莫干山镇黄郛东路234号 ☎<a class="tel" href="tel:13362298098">13362298098</a>｜小红书评论（C级UGC，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d）</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">下渚湖·湿地公园</h3><span class="status none">无宠物信息</span></div><p class="place-note">三合乡下渚湖 ☎<a class="tel" href="tel:05728484158">0572-8484158</a>｜小红书（C级UGC，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc）</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">大乐之野(莫干山庾村店)</h3><span class="status none">无宠物信息</span></div><p class="place-note">莫干山镇黄郛西路85号 ☎<a class="tel" href="tel:17774158008">17774158008</a>｜庾村广场旁的备选落脚点（本阶段无来源可依）</p><div class="place-foot"><span class="tag alt">备选</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="ask"><div class="place-head"><h3 class="place-name">铜鉴湖公园</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">双浦镇灵山风景区 ☎<a class="tel" href="tel:18157198875">18157198875</a>｜挂载命中（逐字同名，high）＋小红书`69c4e173`（C级UGC，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准</p><div class="place-foot"><span class="tag start">起点</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">铜鉴湖里湖P2停车场</h3><span class="status none">无宠物信息</span></div><p class="place-note">铜鉴湖里湖公园｜**高德 POI 实搜**（池子该片区没有停车场 POI）距铜鉴湖公园约 0.46 km｜距「铜鉴湖公园」约0.5 km</p><div class="place-foot"><span class="tag park">停车</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">铜鉴湖花海露营地</h3><span class="status none">无宠物信息</span></div><p class="place-note">铜鉴湖花海西侧200米｜池子 POI（营地），铜鉴湖花海边，草坪开阔</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="ask"><div class="place-head"><h3 class="place-name">云泉餐厅</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">双浦镇灵山村518号-1-203 ☎<a class="tel" href="tel:18106585920">18106585920</a>｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎<a class="tel" href="tel:18106585920">18106585920</a></p><div class="place-foot"><span class="tag food">美食</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">今天不上班</h3><span class="status none">无宠物信息</span></div><p class="place-note">灵山中路108号 ☎<a class="tel" href="tel:18989891503">18989891503</a>｜池子 POI（休闲/营地），灵山景区内，有电话可问</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">漫步山丘露营咖啡团建</h3><span class="status none">无宠物信息</span></div><p class="place-note">双浦镇灵山风景区 ☎<a class="tel" href="tel:13716512269">13716512269</a>｜池子 POI（营地咖啡），铜鉴湖西侧</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="ask"><div class="place-head"><h3 class="place-name">小杭坑生态营地</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">孝丰镇夏阳村 ☎<a class="tel" href="tel:15381292658">15381292658</a>｜挂载命中（同名 high）＋小红书`6a0886a8`（C级UGC，未核验）：「#安吉宠物友好 #带着狗狗去户外 #户外露营 #小杭坑」</p><div class="place-foot"><span class="tag start">起点</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">地面停车场</h3><span class="status none">无宠物信息</span></div><p class="place-note">距「小杭坑生态营地」约32米（高德 POI 实搜）｜另有：地面停车场(91米)、地面停车场(287米)、小杭坑停车场(274米)｜距「小杭坑生态营地」约0.0 km</p><div class="place-foot"><span class="tag park">停车</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">小杭坑露营公园</h3><span class="status none">无宠物信息</span></div><p class="place-note">小杭坑露营公园游客接待中心西南侧｜池子 POI（风景名胜）；同篇小红书说「很好玩，很美，没有脏乱的地方，维护的很好，很开阔，适合带小狗撒欢」（C级UGC）</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">小杭坑2号营地</h3><span class="status none">无宠物信息</span></div><p class="place-note">大关自然村1号 ☎<a class="tel" href="tel:17357211578">17357211578</a>｜池子 POI（营地），距生态营地 0.13 km，有电话可问营地规则</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="ask"><div class="place-head"><h3 class="place-name">月慧餐馆·精品农家菜</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">045乡道与九七线交叉口西北20米 ☎<a class="tel" href="tel:13735159461">13735159461</a>｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎<a class="tel" href="tel:13735159461">13735159461</a></p><div class="place-foot"><span class="tag food">美食</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">安吉杉咖咔营地</h3><span class="status none">无宠物信息</span></div><p class="place-note">杭垓镇缫舍村白石坞自然村13号 ☎<a class="tel" href="tel:18268236688">18268236688</a>｜池子 POI（营地），距小杭坑约 3.8 km，有电话可问营地规则</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">辽渔大连湾航运中心</h3><span class="status none">无宠物信息</span></div><p class="place-note">甘井子区大连湾街，导航&quot;辽渔大连航运中心&quot;；车辆登船口在右侧，11点15分前到</p><div class="place-foot"><span class="tag start">起点</span><a class="trip-ref" href="trip-2026-10-16-大连烟台轮渡.html">大连-烟台 渤海轮渡</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">大连湾航运中心北停车场</h3><span class="status none">无宠物信息</span></div><p class="place-note">中远路新港客运站｜距「辽渔大连湾航运中心」约29米（高德 POI 实搜）｜另有：大连湾航运中心南停车场(74米)、停车场(辽渔医院西南)(97米)、辽渔医院停车场(134米)｜距「辽渔大连湾航运中心」约0.0 km</p><div class="place-foot"><span class="tag park">停车</span><a class="trip-ref" href="trip-2026-10-16-大连烟台轮渡.html">大连-烟台 渤海轮渡</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">烟台港客运站</h3><span class="status none">无宠物信息</span></div><p class="place-note">芝罘区环海路2号，下船点，19点55分抵达</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-大连烟台轮渡.html">大连-烟台 渤海轮渡</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">茅家埠</h3><span class="status none">无宠物信息</span></div><p class="place-note">杨公堤西侧，湖边步道起点，早上人少</p><div class="place-foot"><span class="tag start">起点</span><a class="trip-ref" href="trip-2026-10-14-杭州西湖西线-美食版.html">杭州西湖西线·美食版</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">茅家埠地面停车场</h3><span class="status none">无宠物信息</span></div><p class="place-note">（高德搜「茅家埠地面停车场」）已封闭不能露营；评论区作者确认停车不受影响｜距「清溪余韵·花园餐厅(茅家埠店)」约0.1 km</p><div class="place-foot"><span class="tag park">停车</span><a class="trip-ref" href="trip-2026-10-14-杭州西湖西线-美食版.html">杭州西湖西线·美食版</a></div></article><article class="place" data-pet="ask"><div class="place-head"><h3 class="place-name">清溪余韵·花园餐厅(茅家埠店)</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">（高德搜「清溪余韵·花园餐厅(茅家埠店)」）茅家埠下茅家埠12号 ☎<a class="tel" href="tel:057187969617">0571-87969617</a>（点评未标可带宠物，需先电话确认）</p><div class="place-foot"><span class="tag food">美食</span><a class="trip-ref" href="trip-2026-10-14-杭州西湖西线-美食版.html">杭州西湖西线·美食版</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">乌龟潭</h3><span class="status none">无宠物信息</span></div><p class="place-note">水杉倒影，清晨最佳</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-14-杭州西湖西线-美食版.html">杭州西湖西线·美食版</a></div></article><article class="place" data-pet="other"><div class="place-head"><h3 class="place-name">浴鹄湾</h3><span class="status none">无宠物信息</span></div><p class="place-note">长廊倒影收尾</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-14-杭州西湖西线-美食版.html">杭州西湖西线·美食版</a></div></article></div><div class="empty" id="filter-empty" hidden><div class="empty-mark">🐾</div><p id="filter-empty-text"></p></div><div class="foot">加到主屏幕即可当 app 用（Safari / Chrome → 分享 → 添加到主屏幕）<br>每解读一条新视频，这里自动多一条</div><script>
+<body><div class="wrap"><header class="masthead"><div class="brand"><span class="brand-mark"><svg class="paw" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="6.6" cy="8.2" rx="2.3" ry="3"/><ellipse cx="12" cy="6.2" rx="2.4" ry="3.1"/><ellipse cx="17.4" cy="8.2" rx="2.3" ry="3"/><ellipse cx="20.4" cy="13.4" rx="1.9" ry="2.5"/><path d="M12 11.2c3.7 0 6.6 2.7 6.6 5.8 0 2.3-2 3.5-4 3.5-1 0-1.8-.3-2.6-.3s-1.6.3-2.6.3c-2 0-4-1.2-4-3.5 0-3.1 2.9-5.8 6.6-5.8z"/></svg></span><span class="brand-name">宠物友好旅行</span></div><h1 class="lede">带狗出门，先弄清哪些地方真的让进。</h1><div class="ledger"><div class="stat"><b>5</b><span>条行程</span></div><div class="stat"><b>26</b><span>个地点</span></div><div class="stat ok zero"><b>0</b><span>可带宠物</span></div><div class="stat ask"><b>6</b><span>待确认</span></div></div><p class="provenance"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1.5 21h21L12 2zm0 6.2 5.9 10.7H6.1L12 8.2z"/><path d="M11.1 11h1.8v5h-1.8zM11.1 17.1h1.8v1.8h-1.8z"/></svg><span>宠物判定只来自大众点评店铺标签，不做任何推测；没标注的一律标「待确认」并附上电话，出发前打一个最稳。季节与玩法的标签同样只认可核验依据，没依据就不标。</span></p></header><section class="locate" id="locate"><div class="locate-head"><span class="dot" aria-hidden="true"></span><span id="loc-head-txt">找附近：先拿你的位置</span></div><p>点了按钮才会向系统申请定位权限，首屏不会自己弹窗。浏览器给的是 WGS84 坐标，我们数据是高德 GCJ-02——这里会先换算再算距离，不换算会偏 500 米左右。拒绝授权也能正常浏览。</p><div class="loc-actions"><button class="locbtn" type="button" id="loc-btn">📍 用我的位置找附近</button><button class="locbtn ghost" type="button" id="loc-clear" hidden>清除位置</button></div><p class="loc-note" id="loc-note" aria-live="polite"></p></section><div class="filters"><div class="searchrow"><label class="search" id="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 4.55 13.46l4.24 4.25 1.42-1.42-4.25-4.24A7.5 7.5 0 0 0 10.5 3zm0 2a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11z"/></svg><input id="q" type="search" inputmode="search" autocomplete="off" placeholder="搜行程标题、地点名、备注…" aria-label="搜索行程与地点"><button class="clr" type="button" id="q-clear" aria-label="清空搜索">✕</button></label><span class="hits" id="search-hits" aria-live="polite"></span></div><div class="chips" role="group" aria-label="按宠物状态筛选"><button class="chip on" type="button" data-f="pet:all" aria-pressed="true">全部<span class="n">26</span></button><button class="chip" type="button" data-f="pet:ok" aria-pressed="false">🐕 可带宠物<span class="n">0</span></button><button class="chip" type="button" data-f="pet:ask" aria-pressed="false">☎ 待确认<span class="n">6</span></button><button class="chip" type="button" data-f="pet:other" aria-pressed="false">其他<span class="n">20</span></button></div><div class="chips" role="group" aria-label="按玩法与季节筛选"><button class="chip on" type="button" data-f="tag:all" aria-pressed="true">不限<span class="n">26</span></button><span class="chip-sep" aria-hidden="true"></span><button class="chip" type="button" data-f="tag:camp" aria-pressed="false">⛺ 露营<span class="n">6</span></button><button class="chip zero" type="button" data-f="tag:hotspring" aria-pressed="false">♨️ 温泉<span class="n">0</span></button><button class="chip zero" type="button" data-f="tag:ski" aria-pressed="false">🎿 滑雪<span class="n">0</span></button><button class="chip" type="button" data-f="tag:park" aria-pressed="false">🏞 风景/公园<span class="n">1</span></button><span class="chip-sep" aria-hidden="true"></span><button class="chip zero" type="button" data-f="tag:spring" aria-pressed="false">🌸 春<span class="n">0</span></button><button class="chip zero" type="button" data-f="tag:summer" aria-pressed="false">☀️ 夏<span class="n">0</span></button><button class="chip zero" type="button" data-f="tag:autumn" aria-pressed="false">🍂 秋<span class="n">0</span></button><button class="chip zero" type="button" data-f="tag:winter" aria-pressed="false">❄️ 冬<span class="n">0</span></button></div></div><p class="filter-count" id="filter-count" aria-live="polite">命中 行程 <b>5</b> · 地点 <b>26</b></p><details class="explain"><summary>筛选标签的依据规则（点开可核对）</summary><div class="ex-body"><ul><li><b>季节（春夏秋冬）</b>只认三种依据：客观 POI 类型（<code>池子 POI（温泉酒店）</code> / <code>滑雪场</code> / 赏花类）、行程或 UGC 原文里<b>明确写出</b>的季节词（如「春天樱花」「秋天银杏」「夏天避暑」）、sidecar 的 <code>season</code> 字段。</li><li><b>玩法（露营/温泉/滑雪/风景公园）</b>来自客观 POI 类型，或 UGC 原文里的玩法词。刻意不扫地址与点名——否则「小杭坑<b>露营</b>公园」这种地名会被当成玩法（它的高德分类其实是「风景名胜」，所以只进「风景/公园」）。</li><li><b>不看名字推季节</b>：实测「淮南牛肉汤」会被「汤」推成冬、「莲都区天宁中学停车场」会被「莲」推成夏；本页<b>从不读地点名</b>，词表也全是多字词（没有「汤」「莲」这类单字）。</li><li><b>否定守卫</b>：「已封闭不能露营」不会被标成露营。</li><li>当前 26 个点里 <b>7</b> 个有标签依据、<b>19</b> 个没有任何依据（保持不标）；其中 <b>26</b> 个点没有任何<b>季节</b>依据——所以春夏秋冬四个筛选命中数都是 0。这是「不编」，不是坏掉。将来行程里写了温泉/滑雪/赏花这类客观类型，或笔记/原文写了季节，它们会自动亮起来。</li></ul></div></details><h2 class="sect">行程<span class="n" id="n-trip">5</span><span class="rule"></span></h2><div class="toolbar"><div class="sorter" role="group" aria-label="行程排序"><button type="button" data-s="all" class="on" aria-pressed="true">全部</button><button type="button" data-s="near" aria-pressed="false" aria-disabled="true" class="needs">📍 离我最近</button><button type="button" data-s="now" aria-pressed="false">⏱ 当下最合适</button></div><p class="sorter-hint" id="sort-hint">「离我最近」要先点上面的定位按钮；「当下最合适」只按客观字段排：季节有无依据 → 今天来不来得及（营业时间/全程时长）→ 距离，每张卡下面会写清「为什么」。</p></div><div class="trip-list" id="trip-flat" hidden></div><div id="trip-groups"><section class="pgroup" data-prov="浙江"><h3 class="phead">浙江<span class="n">4</span><span class="rule"></span><span class="src">依据：sidecar province</span></h3><div class="pcards"><a class="trip" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html" data-slug="2026-10-16-浙江-莫干山庾村携宠慢行" data-prov="浙江" data-prov-src="sidecar province" data-tags="" data-pet="ask" data-dur="96.8" data-mode="driving" data-open="" data-gcj="119.882980,30.564815" data-q="莫干山庾村携宠慢行 湖州 浙江 高德驾车路径规划（真实路网） 莫干山橙月·黑胶唱片民宿 莫干山镇何村村方村坞26号 ☎13482824274｜小红书`6a0886a8`（c级ugc，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」 庾信北街停车场 庾信北街25号｜**高德 poi 实搜**（池子里庾村片区没有停车场 poi，不许编；这条是真搜出来的）距庾村广场约 0.2 km｜距「omitohotel·莫干山」约0.2 km 金鱼妈妈·山尖尖有面儿 莫干山镇燎原村后村68号 ☎0572-8212017｜小红书作者提到可带（c级ugc，未核验）☎0572-8212017｜原文：「▫️看完日落六点半 我们导航去了庾村 吃了“金鱼妈妈” 这里都是宠物友好👫 点评双人套餐又加了其他吃的」（笔记 69d63f45） omitohotel·莫干山 莫干山镇黄郛东路234号 ☎13362298098｜小红书评论（c级ugc，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d） 下渚湖·湿地公园 三合乡下渚湖 ☎0572-8484158｜小红书（c级ugc，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc） 大乐之野(莫干山庾村店) 莫干山镇黄郛西路85号 ☎17774158008｜庾村广场旁的备选落脚点（本阶段无来源可依）"><div class="thumb"><img src="travel/2026-10-16-浙江-莫干山庾村携宠慢行.png" alt="莫干山庾村携宠慢行 路线图" loading="lazy" onerror="this.style.display='none'"><span class="thumb-pet ask">☎ 1 处待确认</span></div><div class="trip-body"><h2 class="trip-title">莫干山庾村携宠慢行</h2><p class="trip-meta">湖州 · 2026-10-16 17:55 · 6 个点</p><div class="badges"><span class="b ">52.48 km</span><span class="b ">驾车</span><span class="b ">1 小时 37 分</span><span class="b ">🅿️ 停车</span><span class="dist" hidden></span><span class="prov-badge">浙江</span></div><p class="why" hidden></p></div></a><a class="trip" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html" data-slug="2026-10-16-浙江-杭州铜鉴湖带狗半日" data-prov="浙江" data-prov-src="sidecar province" data-tags="camp" data-pet="ask" data-dur="40.8" data-mode="walking" data-open="" data-gcj="120.068940,30.126538" data-q="杭州铜鉴湖带狗半日 杭州 浙江 高德步行路径规划（真实路网） 铜鉴湖公园 双浦镇灵山风景区 ☎18157198875｜挂载命中（逐字同名，high）＋小红书`69c4e173`（c级ugc，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准 铜鉴湖里湖p2停车场 铜鉴湖里湖公园｜**高德 poi 实搜**（池子该片区没有停车场 poi）距铜鉴湖公园约 0.46 km｜距「铜鉴湖公园」约0.5 km 铜鉴湖花海露营地 铜鉴湖花海西侧200米｜池子 poi（营地），铜鉴湖花海边，草坪开阔 云泉餐厅 双浦镇灵山村518号-1-203 ☎18106585920｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎18106585920 今天不上班 灵山中路108号 ☎18989891503｜池子 poi（休闲/营地），灵山景区内，有电话可问 漫步山丘露营咖啡团建 双浦镇灵山风景区 ☎13716512269｜池子 poi（营地咖啡），铜鉴湖西侧"><div class="thumb"><img src="travel/2026-10-16-浙江-杭州铜鉴湖带狗半日.png" alt="杭州铜鉴湖带狗半日 路线图" loading="lazy" onerror="this.style.display='none'"><span class="thumb-pet ask">☎ 2 处待确认</span></div><div class="trip-body"><h2 class="trip-title">杭州铜鉴湖带狗半日</h2><p class="trip-meta">杭州 · 2026-10-16 17:55 · 6 个点</p><div class="badges"><span class="b ">3.06 km</span><span class="b ">步行</span><span class="b ">41 分钟</span><span class="b ">🅿️ 停车</span><span class="dist" hidden></span><span class="prov-badge">浙江</span></div><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=营地 · 类型=休闲/营地 · 类型=营地咖啡</p><p class="why" hidden></p></div></a><a class="trip" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html" data-slug="2026-10-16-浙江-安吉小杭坑携宠露营" data-prov="浙江" data-prov-src="sidecar province" data-tags="camp park" data-pet="ask" data-dur="35.4" data-mode="driving" data-open="" data-gcj="119.457685,30.632757" data-q="安吉小杭坑携宠露营 湖州 浙江 高德驾车路径规划（真实路网） 小杭坑生态营地 孝丰镇夏阳村 ☎15381292658｜挂载命中（同名 high）＋小红书`6a0886a8`（c级ugc，未核验）：「#安吉宠物友好 #带着狗狗去户外 #户外露营 #小杭坑」 地面停车场 距「小杭坑生态营地」约32米（高德 poi 实搜）｜另有：地面停车场(91米)、地面停车场(287米)、小杭坑停车场(274米)｜距「小杭坑生态营地」约0.0 km 小杭坑露营公园 小杭坑露营公园游客接待中心西南侧｜池子 poi（风景名胜）；同篇小红书说「很好玩，很美，没有脏乱的地方，维护的很好，很开阔，适合带小狗撒欢」（c级ugc） 小杭坑2号营地 大关自然村1号 ☎17357211578｜池子 poi（营地），距生态营地 0.13 km，有电话可问营地规则 月慧餐馆·精品农家菜 045乡道与九七线交叉口西北20米 ☎13735159461｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎13735159461 安吉杉咖咔营地 杭垓镇缫舍村白石坞自然村13号 ☎18268236688｜池子 poi（营地），距小杭坑约 3.8 km，有电话可问营地规则"><div class="thumb"><img src="travel/2026-10-16-浙江-安吉小杭坑携宠露营.png" alt="安吉小杭坑携宠露营 路线图" loading="lazy" onerror="this.style.display='none'"><span class="thumb-pet ask">☎ 2 处待确认</span></div><div class="trip-body"><h2 class="trip-title">安吉小杭坑携宠露营</h2><p class="trip-meta">湖州 · 2026-10-16 17:55 · 6 个点</p><div class="badges"><span class="b ">17.69 km</span><span class="b ">驾车</span><span class="b ">35 分钟</span><span class="b ">🅿️ 停车</span><span class="dist" hidden></span><span class="prov-badge">浙江</span></div><div class="tagrow"><span class="tagp camp">⛺ 露营</span><span class="tagp park">🏞 风景/公园</span></div><p class="tag-ev">依据：UGC 原文含「露营」 · 类型=营地 · 类型=风景名胜</p><p class="why" hidden></p></div></a><a class="trip" href="trip-2026-10-14-杭州西湖西线-美食版.html" data-slug="2026-10-14-杭州西湖西线-美食版" data-prov="浙江" data-prov-src="sidecar province" data-tags="" data-pet="ask" data-dur="34.6" data-mode="walking" data-open="" data-gcj="120.128771,30.240296" data-q="杭州西湖西线·美食版 杭州 浙江 高德步行路径规划（真实路网） 茅家埠 杨公堤西侧，湖边步道起点，早上人少 茅家埠地面停车场 （高德搜「茅家埠地面停车场」）已封闭不能露营；评论区作者确认停车不受影响｜距「清溪余韵·花园餐厅(茅家埠店)」约0.1 km 清溪余韵·花园餐厅(茅家埠店) （高德搜「清溪余韵·花园餐厅(茅家埠店)」）茅家埠下茅家埠12号 ☎0571-87969617（点评未标可带宠物，需先电话确认） 乌龟潭 水杉倒影，清晨最佳 浴鹄湾 长廊倒影收尾"><div class="thumb"><img src="travel/2026-10-14-杭州西湖西线-美食版.png" alt="杭州西湖西线·美食版 路线图" loading="lazy" onerror="this.style.display='none'"><span class="thumb-pet ask">☎ 1 处待确认</span></div><div class="trip-body"><h2 class="trip-title">杭州西湖西线·美食版</h2><p class="trip-meta">杭州 · 2026-10-15 14:12 · 5 个点</p><div class="badges"><span class="b ">2.59 km</span><span class="b ">步行</span><span class="b ">35 分钟</span><span class="b ">🅿️ 停车</span><span class="dist" hidden></span><span class="prov-badge">浙江</span></div><p class="why" hidden></p></div></a></div></section><section class="pgroup" data-prov="辽宁"><h3 class="phead">辽宁<span class="n">1</span><span class="rule"></span><span class="src">依据：sidecar province</span></h3><div class="pcards"><a class="trip" href="trip-2026-10-16-大连烟台轮渡.html" data-slug="2026-10-16-大连烟台轮渡" data-prov="辽宁" data-prov-src="sidecar province" data-tags="" data-pet="other" data-dur="710.7" data-mode="driving" data-open="" data-gcj="121.710992,39.024510" data-q="大连-烟台 渤海轮渡 辽宁 高德驾车路径规划（真实路网） 辽渔大连湾航运中心 甘井子区大连湾街，导航&quot;辽渔大连航运中心&quot;；车辆登船口在右侧，11点15分前到 大连湾航运中心北停车场 中远路新港客运站｜距「辽渔大连湾航运中心」约29米（高德 poi 实搜）｜另有：大连湾航运中心南停车场(74米)、停车场(辽渔医院西南)(97米)、辽渔医院停车场(134米)｜距「辽渔大连湾航运中心」约0.0 km 烟台港客运站 芝罘区环海路2号，下船点，19点55分抵达"><div class="thumb"><img src="travel/2026-10-16-大连烟台轮渡.png" alt="大连-烟台 渤海轮渡 路线图" loading="lazy" onerror="this.style.display='none'"></div><div class="trip-body"><h2 class="trip-title">大连-烟台 渤海轮渡</h2><p class="trip-meta">2026-10-16 13:26 · 3 个点</p><div class="badges"><span class="b ">178.41 km</span><span class="b ">驾车</span><span class="b ">11 小时 51 分</span><span class="b ">🅿️ 停车</span><span class="dist" hidden></span><span class="prov-badge">辽宁</span></div><p class="why" hidden></p></div></a></div></section></div><div class="empty" id="trip-empty" hidden><div class="empty-mark">🐾</div><p>没有匹配的行程。换个关键词，或者把筛选切回「不限 / 全部」。</p></div><h2 class="sect">地点<span class="n" id="n-place">26</span><span class="rule"></span></h2><p class="legend"><span><i class="ok"></i>可带宠物</span><span><i class="ask"></i>待确认</span><span><i class="no"></i>未标注（默认）</span></p><div id="places"><article class="place" data-pet="other" data-tags="" data-q="莫干山橙月·黑胶唱片民宿 莫干山镇何村村方村坞26号 ☎13482824274｜小红书`6a0886a8`（c级ugc，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」 莫干山庾村携宠慢行 浙江"><div class="place-head"><h3 class="place-name">莫干山橙月·黑胶唱片民宿</h3><span class="status none">无宠物信息</span></div><p class="place-note">莫干山镇何村村方村坞26号 ☎<a class="tel" href="tel:13482824274">13482824274</a>｜小红书`6a0886a8`（C级UGC，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」</p><div class="place-foot"><span class="tag start">起点</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="other" data-tags="" data-q="庾信北街停车场 庾信北街25号｜**高德 poi 实搜**（池子里庾村片区没有停车场 poi，不许编；这条是真搜出来的）距庾村广场约 0.2 km｜距「omitohotel·莫干山」约0.2 km 莫干山庾村携宠慢行 浙江"><div class="place-head"><h3 class="place-name">庾信北街停车场</h3><span class="status none">无宠物信息</span></div><p class="place-note">庾信北街25号｜**高德 POI 实搜**（池子里庾村片区没有停车场 POI，不许编；这条是真搜出来的）距庾村广场约 0.2 km｜距「OmitoHotel·莫干山」约0.2 km</p><div class="place-foot"><span class="tag park">停车</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="ask" data-tags="" data-q="金鱼妈妈·山尖尖有面儿 莫干山镇燎原村后村68号 ☎0572-8212017｜小红书作者提到可带（c级ugc，未核验）☎0572-8212017｜原文：「▫️看完日落六点半 我们导航去了庾村 吃了“金鱼妈妈” 这里都是宠物友好👫 点评双人套餐又加了其他吃的」（笔记 69d63f45） 莫干山庾村携宠慢行 浙江"><div class="place-head"><h3 class="place-name">金鱼妈妈·山尖尖有面儿</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">莫干山镇燎原村后村68号 ☎<a class="tel" href="tel:05728212017">0572-8212017</a>｜小红书作者提到可带（C级UGC，未核验）☎<a class="tel" href="tel:05728212017">0572-8212017</a>｜原文：「▫️看完日落六点半 我们导航去了庾村 吃了“金鱼妈妈” 这里都是宠物友好👫 点评双人套餐又加了其他吃的」（笔记 69d63f45）</p><div class="place-foot"><span class="tag food">美食</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="other" data-tags="" data-q="omitohotel·莫干山 莫干山镇黄郛东路234号 ☎13362298098｜小红书评论（c级ugc，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d） 莫干山庾村携宠慢行 浙江"><div class="place-head"><h3 class="place-name">OmitoHotel·莫干山</h3><span class="status none">无宠物信息</span></div><p class="place-note">莫干山镇黄郛东路234号 ☎<a class="tel" href="tel:13362298098">13362298098</a>｜小红书评论（C级UGC，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d）</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="other" data-tags="" data-q="下渚湖·湿地公园 三合乡下渚湖 ☎0572-8484158｜小红书（c级ugc，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc） 莫干山庾村携宠慢行 浙江"><div class="place-head"><h3 class="place-name">下渚湖·湿地公园</h3><span class="status none">无宠物信息</span></div><p class="place-note">三合乡下渚湖 ☎<a class="tel" href="tel:05728484158">0572-8484158</a>｜小红书（C级UGC，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc）</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="other" data-tags="" data-q="大乐之野(莫干山庾村店) 莫干山镇黄郛西路85号 ☎17774158008｜庾村广场旁的备选落脚点（本阶段无来源可依） 莫干山庾村携宠慢行 浙江"><div class="place-head"><h3 class="place-name">大乐之野(莫干山庾村店)</h3><span class="status none">无宠物信息</span></div><p class="place-note">莫干山镇黄郛西路85号 ☎<a class="tel" href="tel:17774158008">17774158008</a>｜庾村广场旁的备选落脚点（本阶段无来源可依）</p><div class="place-foot"><span class="tag alt">备选</span><a class="trip-ref" href="trip-2026-10-16-浙江-莫干山庾村携宠慢行.html">莫干山庾村携宠慢行</a></div></article><article class="place" data-pet="ask" data-tags="" data-q="铜鉴湖公园 双浦镇灵山风景区 ☎18157198875｜挂载命中（逐字同名，high）＋小红书`69c4e173`（c级ugc，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准 杭州铜鉴湖带狗半日 浙江"><div class="place-head"><h3 class="place-name">铜鉴湖公园</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">双浦镇灵山风景区 ☎<a class="tel" href="tel:18157198875">18157198875</a>｜挂载命中（逐字同名，high）＋小红书`69c4e173`（C级UGC，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准</p><div class="place-foot"><span class="tag start">起点</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="other" data-tags="" data-q="铜鉴湖里湖p2停车场 铜鉴湖里湖公园｜**高德 poi 实搜**（池子该片区没有停车场 poi）距铜鉴湖公园约 0.46 km｜距「铜鉴湖公园」约0.5 km 杭州铜鉴湖带狗半日 浙江"><div class="place-head"><h3 class="place-name">铜鉴湖里湖P2停车场</h3><span class="status none">无宠物信息</span></div><p class="place-note">铜鉴湖里湖公园｜**高德 POI 实搜**（池子该片区没有停车场 POI）距铜鉴湖公园约 0.46 km｜距「铜鉴湖公园」约0.5 km</p><div class="place-foot"><span class="tag park">停车</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="other" data-tags="camp" data-q="铜鉴湖花海露营地 铜鉴湖花海西侧200米｜池子 poi（营地），铜鉴湖花海边，草坪开阔 杭州铜鉴湖带狗半日 浙江"><div class="place-head"><h3 class="place-name">铜鉴湖花海露营地</h3><span class="status none">无宠物信息</span></div><p class="place-note">铜鉴湖花海西侧200米｜池子 POI（营地），铜鉴湖花海边，草坪开阔</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=营地</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="ask" data-tags="" data-q="云泉餐厅 双浦镇灵山村518号-1-203 ☎18106585920｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎18106585920 杭州铜鉴湖带狗半日 浙江"><div class="place-head"><h3 class="place-name">云泉餐厅</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">双浦镇灵山村518号-1-203 ☎<a class="tel" href="tel:18106585920">18106585920</a>｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎<a class="tel" href="tel:18106585920">18106585920</a></p><div class="place-foot"><span class="tag food">美食</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="other" data-tags="camp" data-q="今天不上班 灵山中路108号 ☎18989891503｜池子 poi（休闲/营地），灵山景区内，有电话可问 杭州铜鉴湖带狗半日 浙江"><div class="place-head"><h3 class="place-name">今天不上班</h3><span class="status none">无宠物信息</span></div><p class="place-note">灵山中路108号 ☎<a class="tel" href="tel:18989891503">18989891503</a>｜池子 POI（休闲/营地），灵山景区内，有电话可问</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=休闲/营地</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="other" data-tags="camp" data-q="漫步山丘露营咖啡团建 双浦镇灵山风景区 ☎13716512269｜池子 poi（营地咖啡），铜鉴湖西侧 杭州铜鉴湖带狗半日 浙江"><div class="place-head"><h3 class="place-name">漫步山丘露营咖啡团建</h3><span class="status none">无宠物信息</span></div><p class="place-note">双浦镇灵山风景区 ☎<a class="tel" href="tel:13716512269">13716512269</a>｜池子 POI（营地咖啡），铜鉴湖西侧</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=营地咖啡</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-杭州铜鉴湖带狗半日.html">杭州铜鉴湖带狗半日</a></div></article><article class="place" data-pet="ask" data-tags="camp" data-q="小杭坑生态营地 孝丰镇夏阳村 ☎15381292658｜挂载命中（同名 high）＋小红书`6a0886a8`（c级ugc，未核验）：「#安吉宠物友好 #带着狗狗去户外 #户外露营 #小杭坑」 安吉小杭坑携宠露营 浙江"><div class="place-head"><h3 class="place-name">小杭坑生态营地</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">孝丰镇夏阳村 ☎<a class="tel" href="tel:15381292658">15381292658</a>｜挂载命中（同名 high）＋小红书`6a0886a8`（C级UGC，未核验）：「#安吉宠物友好 #带着狗狗去户外 #户外露营 #小杭坑」</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：UGC 原文含「露营」</p><div class="place-foot"><span class="tag start">起点</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="other" data-tags="" data-q="地面停车场 距「小杭坑生态营地」约32米（高德 poi 实搜）｜另有：地面停车场(91米)、地面停车场(287米)、小杭坑停车场(274米)｜距「小杭坑生态营地」约0.0 km 安吉小杭坑携宠露营 浙江"><div class="place-head"><h3 class="place-name">地面停车场</h3><span class="status none">无宠物信息</span></div><p class="place-note">距「小杭坑生态营地」约32米（高德 POI 实搜）｜另有：地面停车场(91米)、地面停车场(287米)、小杭坑停车场(274米)｜距「小杭坑生态营地」约0.0 km</p><div class="place-foot"><span class="tag park">停车</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="other" data-tags="park" data-q="小杭坑露营公园 小杭坑露营公园游客接待中心西南侧｜池子 poi（风景名胜）；同篇小红书说「很好玩，很美，没有脏乱的地方，维护的很好，很开阔，适合带小狗撒欢」（c级ugc） 安吉小杭坑携宠露营 浙江"><div class="place-head"><h3 class="place-name">小杭坑露营公园</h3><span class="status none">无宠物信息</span></div><p class="place-note">小杭坑露营公园游客接待中心西南侧｜池子 POI（风景名胜）；同篇小红书说「很好玩，很美，没有脏乱的地方，维护的很好，很开阔，适合带小狗撒欢」（C级UGC）</p><div class="tagrow"><span class="tagp park">🏞 风景/公园</span></div><p class="tag-ev">依据：类型=风景名胜</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="other" data-tags="camp" data-q="小杭坑2号营地 大关自然村1号 ☎17357211578｜池子 poi（营地），距生态营地 0.13 km，有电话可问营地规则 安吉小杭坑携宠露营 浙江"><div class="place-head"><h3 class="place-name">小杭坑2号营地</h3><span class="status none">无宠物信息</span></div><p class="place-note">大关自然村1号 ☎<a class="tel" href="tel:17357211578">17357211578</a>｜池子 POI（营地），距生态营地 0.13 km，有电话可问营地规则</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=营地</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="ask" data-tags="" data-q="月慧餐馆·精品农家菜 045乡道与九七线交叉口西北20米 ☎13735159461｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎13735159461 安吉小杭坑携宠露营 浙江"><div class="place-head"><h3 class="place-name">月慧餐馆·精品农家菜</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">045乡道与九七线交叉口西北20米 ☎<a class="tel" href="tel:13735159461">13735159461</a>｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎<a class="tel" href="tel:13735159461">13735159461</a></p><div class="place-foot"><span class="tag food">美食</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="other" data-tags="camp" data-q="安吉杉咖咔营地 杭垓镇缫舍村白石坞自然村13号 ☎18268236688｜池子 poi（营地），距小杭坑约 3.8 km，有电话可问营地规则 安吉小杭坑携宠露营 浙江"><div class="place-head"><h3 class="place-name">安吉杉咖咔营地</h3><span class="status none">无宠物信息</span></div><p class="place-note">杭垓镇缫舍村白石坞自然村13号 ☎<a class="tel" href="tel:18268236688">18268236688</a>｜池子 POI（营地），距小杭坑约 3.8 km，有电话可问营地规则</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=营地</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-浙江-安吉小杭坑携宠露营.html">安吉小杭坑携宠露营</a></div></article><article class="place" data-pet="other" data-tags="" data-q="辽渔大连湾航运中心 甘井子区大连湾街，导航&quot;辽渔大连航运中心&quot;；车辆登船口在右侧，11点15分前到 大连-烟台 渤海轮渡 辽宁"><div class="place-head"><h3 class="place-name">辽渔大连湾航运中心</h3><span class="status none">无宠物信息</span></div><p class="place-note">甘井子区大连湾街，导航&quot;辽渔大连航运中心&quot;；车辆登船口在右侧，11点15分前到</p><div class="place-foot"><span class="tag start">起点</span><a class="trip-ref" href="trip-2026-10-16-大连烟台轮渡.html">大连-烟台 渤海轮渡</a></div></article><article class="place" data-pet="other" data-tags="" data-q="大连湾航运中心北停车场 中远路新港客运站｜距「辽渔大连湾航运中心」约29米（高德 poi 实搜）｜另有：大连湾航运中心南停车场(74米)、停车场(辽渔医院西南)(97米)、辽渔医院停车场(134米)｜距「辽渔大连湾航运中心」约0.0 km 大连-烟台 渤海轮渡 辽宁"><div class="place-head"><h3 class="place-name">大连湾航运中心北停车场</h3><span class="status none">无宠物信息</span></div><p class="place-note">中远路新港客运站｜距「辽渔大连湾航运中心」约29米（高德 POI 实搜）｜另有：大连湾航运中心南停车场(74米)、停车场(辽渔医院西南)(97米)、辽渔医院停车场(134米)｜距「辽渔大连湾航运中心」约0.0 km</p><div class="place-foot"><span class="tag park">停车</span><a class="trip-ref" href="trip-2026-10-16-大连烟台轮渡.html">大连-烟台 渤海轮渡</a></div></article><article class="place" data-pet="other" data-tags="" data-q="烟台港客运站 芝罘区环海路2号，下船点，19点55分抵达 大连-烟台 渤海轮渡 辽宁"><div class="place-head"><h3 class="place-name">烟台港客运站</h3><span class="status none">无宠物信息</span></div><p class="place-note">芝罘区环海路2号，下船点，19点55分抵达</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-16-大连烟台轮渡.html">大连-烟台 渤海轮渡</a></div></article><article class="place" data-pet="other" data-tags="" data-q="茅家埠 杨公堤西侧，湖边步道起点，早上人少 杭州西湖西线·美食版 浙江"><div class="place-head"><h3 class="place-name">茅家埠</h3><span class="status none">无宠物信息</span></div><p class="place-note">杨公堤西侧，湖边步道起点，早上人少</p><div class="place-foot"><span class="tag start">起点</span><a class="trip-ref" href="trip-2026-10-14-杭州西湖西线-美食版.html">杭州西湖西线·美食版</a></div></article><article class="place" data-pet="other" data-tags="" data-q="茅家埠地面停车场 （高德搜「茅家埠地面停车场」）已封闭不能露营；评论区作者确认停车不受影响｜距「清溪余韵·花园餐厅(茅家埠店)」约0.1 km 杭州西湖西线·美食版 浙江"><div class="place-head"><h3 class="place-name">茅家埠地面停车场</h3><span class="status none">无宠物信息</span></div><p class="place-note">（高德搜「茅家埠地面停车场」）已封闭不能露营；评论区作者确认停车不受影响｜距「清溪余韵·花园餐厅(茅家埠店)」约0.1 km</p><div class="place-foot"><span class="tag park">停车</span><a class="trip-ref" href="trip-2026-10-14-杭州西湖西线-美食版.html">杭州西湖西线·美食版</a></div></article><article class="place" data-pet="ask" data-tags="" data-q="清溪余韵·花园餐厅(茅家埠店) （高德搜「清溪余韵·花园餐厅(茅家埠店)」）茅家埠下茅家埠12号 ☎0571-87969617（点评未标可带宠物，需先电话确认） 杭州西湖西线·美食版 浙江"><div class="place-head"><h3 class="place-name">清溪余韵·花园餐厅(茅家埠店)</h3><span class="status ask">☎ 待确认</span></div><p class="place-note">（高德搜「清溪余韵·花园餐厅(茅家埠店)」）茅家埠下茅家埠12号 ☎<a class="tel" href="tel:057187969617">0571-87969617</a>（点评未标可带宠物，需先电话确认）</p><div class="place-foot"><span class="tag food">美食</span><a class="trip-ref" href="trip-2026-10-14-杭州西湖西线-美食版.html">杭州西湖西线·美食版</a></div></article><article class="place" data-pet="other" data-tags="" data-q="乌龟潭 水杉倒影，清晨最佳 杭州西湖西线·美食版 浙江"><div class="place-head"><h3 class="place-name">乌龟潭</h3><span class="status none">无宠物信息</span></div><p class="place-note">水杉倒影，清晨最佳</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-14-杭州西湖西线-美食版.html">杭州西湖西线·美食版</a></div></article><article class="place" data-pet="other" data-tags="" data-q="浴鹄湾 长廊倒影收尾 杭州西湖西线·美食版 浙江"><div class="place-head"><h3 class="place-name">浴鹄湾</h3><span class="status none">无宠物信息</span></div><p class="place-note">长廊倒影收尾</p><div class="place-foot"><span class="tag sight">景点</span><a class="trip-ref" href="trip-2026-10-14-杭州西湖西线-美食版.html">杭州西湖西线·美食版</a></div></article></div><div class="empty" id="filter-empty" hidden><div class="empty-mark">🐾</div><p id="filter-empty-text"></p></div><div class="foot">加到主屏幕即可当 app 用（Safari / Chrome → 分享 → 添加到主屏幕）<br>每解读一条新视频，这里自动多一条</div><script id="empty-msgs" type="application/json">{"all": "还没有地点。", "ok": "目前没有「明确可带宠物」的地点。大众点评没给这些点打上可带宠物的标签——出发前照卡片里的电话问一句最稳。", "ask": "没有需要电话确认的地点。有宠物信息的点都已经判定完了。", "other": "没有「无宠物信息」的地点。", "spring": "没有地点带「🌸 春」的依据。季节标签只能来自客观 POI 类型（温泉酒店 / 滑雪场 / 赏花类）、行程或 UGC 原文里明确写出的季节、sidecar 的 season 字段——现在 26 个点里没有一个够得上。这里不标，也不猜（名字里带「汤」「莲」不算季节）。", "summer": "没有地点带「☀️ 夏」的依据。季节标签只能来自客观 POI 类型（温泉酒店 / 滑雪场 / 赏花类）、行程或 UGC 原文里明确写出的季节、sidecar 的 season 字段——现在 26 个点里没有一个够得上。这里不标，也不猜（名字里带「汤」「莲」不算季节）。", "autumn": "没有地点带「🍂 秋」的依据。季节标签只能来自客观 POI 类型（温泉酒店 / 滑雪场 / 赏花类）、行程或 UGC 原文里明确写出的季节、sidecar 的 season 字段——现在 26 个点里没有一个够得上。这里不标，也不猜（名字里带「汤」「莲」不算季节）。", "winter": "没有地点带「❄️ 冬」的依据。季节标签只能来自客观 POI 类型（温泉酒店 / 滑雪场 / 赏花类）、行程或 UGC 原文里明确写出的季节、sidecar 的 season 字段——现在 26 个点里没有一个够得上。这里不标，也不猜（名字里带「汤」「莲」不算季节）。", "camp": "没有地点带「⛺ 露营」的依据。玩法只认客观 POI 类型和 UGC 原文，不认地名（「小杭坑露营公园」的高德分类其实是风景名胜）。", "hotspring": "没有地点带「♨️ 温泉」的依据。玩法只认客观 POI 类型和 UGC 原文，不认地名（「小杭坑露营公园」的高德分类其实是风景名胜）。", "ski": "没有地点带「🎿 滑雪」的依据。玩法只认客观 POI 类型和 UGC 原文，不认地名（「小杭坑露营公园」的高德分类其实是风景名胜）。", "park": "没有地点带「🏞 风景/公园」的依据。玩法只认客观 POI 类型和 UGC 原文，不认地名（「小杭坑露营公园」的高德分类其实是风景名胜）。"}</script><script>
 (function(){
-var MSG={"all": "还没有地点。", "ok": "目前没有「明确可带宠物」的地点。大众点评没给这些点打上可带宠物的标签——出发前照卡片里的电话问一句最稳。", "ask": "没有需要电话确认的地点。有宠物信息的点都已经判定完了。", "other": "没有「无宠物信息」的地点。"};
-var chips=[].slice.call(document.querySelectorAll('.chip'));
+var EMPTY=JSON.parse(document.getElementById('empty-msgs').textContent);
+/* ---- WGS84 → GCJ-02（与 pigha-travel-map.py 的 wgs84_to_gcj02 同一套常数/公式）----
+   浏览器定位给的是 WGS84，我们数据是高德 GCJ-02，直接比会偏约 500 米。 */
+var PI=3.1415926535897932384626, AA=6378245.0, EE=0.00669342162296594323;
+function outOfChina(lng,lat){return !(lng>73.66&&lng<135.05&&lat>3.86&&lat<53.55);}
+function tLat(x,y){var r=-100+2*x+3*y+0.2*y*y+0.1*x*y+0.2*Math.sqrt(Math.abs(x));
+ r+=(20*Math.sin(6*x*PI)+20*Math.sin(2*x*PI))*2/3;
+ r+=(20*Math.sin(y*PI)+40*Math.sin(y/3*PI))*2/3;
+ r+=(160*Math.sin(y/12*PI)+320*Math.sin(y*PI/30))*2/3;return r;}
+function tLng(x,y){var r=300+x+2*y+0.1*x*x+0.1*x*y+0.1*Math.sqrt(Math.abs(x));
+ r+=(20*Math.sin(6*x*PI)+20*Math.sin(2*x*PI))*2/3;
+ r+=(20*Math.sin(x*PI)+40*Math.sin(x/3*PI))*2/3;
+ r+=(150*Math.sin(x/12*PI)+300*Math.sin(x/30*PI))*2/3;return r;}
+function wgs84ToGcj02(lng,lat){
+ if(outOfChina(lng,lat))return [lng,lat];
+ var dLat=tLat(lng-105,lat-35), dLng=tLng(lng-105,lat-35);
+ var rad=lat/180*PI, magic=1-EE*Math.sin(rad)*Math.sin(rad), sq=Math.sqrt(magic);
+ dLat=(dLat*180)/((AA*(1-EE))/(magic*sq)*PI);
+ dLng=(dLng*180)/(AA/sq*Math.cos(rad)*PI);
+ return [lng+dLng, lat+dLat];}
+function haversineKm(a,b){var R=6371, r=PI/180;
+ var dLat=(b[1]-a[1])*r, dLng=(b[0]-a[0])*r;
+ var h=Math.sin(dLat/2)*Math.sin(dLat/2)+
+       Math.cos(a[1]*r)*Math.cos(b[1]*r)*Math.sin(dLng/2)*Math.sin(dLng/2);
+ return 2*R*Math.asin(Math.min(1,Math.sqrt(h)));}
+
+var SEASON_CN={spring:'春',summer:'夏',autumn:'秋',winter:'冬'};
+var DAY_END=22*60;   /* 一天的收尾时间（估算）：没有营业时间时用它判断「今天还来不来得及」 */
+var DEFAULT_HINT=document.getElementById('sort-hint').textContent;
+function pad(n){return (n<10?'0':'')+n;}
+function fmtHM(m){return pad(Math.floor(m/60))+':'+pad(Math.round(m%60));}
+function fmtDur(m){var h=Math.floor(m/60), r=Math.round(m%60);
+ return h?(h+' 小时'+(r?(' '+r+' 分'):'')):(r+' 分');}
+function fmtKm(d){if(d<1)return Math.round(d*1000)+' m';
+ if(d<10)return (Math.round(d*10)/10).toFixed(1)+' km';return Math.round(d)+' km';}
+function escapeHtml(s){return String(s).replace(/[&<>"]/g,function(c){
+ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+/* 测试/复盘用：?at=2026-10-16T20:30 固定“现在”，不看本机时钟 */
+function nowDate(){var m=/[?&]at=([^&]+)/.exec(location.search);
+ if(m){var d=new Date(decodeURIComponent(m[1]));if(!isNaN(d.getTime()))return d;}
+ return new Date();}
+function monthSeason(d){var m=d.getMonth()+1;
+ if(m>=3&&m<=5)return 'spring'; if(m>=6&&m<=8)return 'summer';
+ if(m>=9&&m<=11)return 'autumn'; return 'winter';}
+
+var trips=[].slice.call(document.querySelectorAll('.trip'));
 var places=[].slice.call(document.querySelectorAll('.place'));
-var box=document.getElementById('filter-empty');
-var txt=document.getElementById('filter-empty-text');
-var live=document.getElementById('filter-count');
-function apply(f){
-  var shown=0;
-  places.forEach(function(p){
-    var hit=(f==='all'||p.getAttribute('data-pet')===f);
-    p.hidden=!hit; if(hit) shown++;
-  });
-  if(box){ box.hidden=(shown!==0); if(txt) txt.textContent=MSG[f]||MSG.all; }
-  if(live) live.textContent=(f==='all'?'共 '+shown+' 个地点':shown+' 个地点');
+var groups=[].slice.call(document.querySelectorAll('.pgroup'));
+var flat=document.getElementById('trip-flat');
+var tripsEmpty=document.getElementById('trip-empty');
+var placesEmpty=document.getElementById('filter-empty');
+var placesEmptyTxt=document.getElementById('filter-empty-text');
+var liveCount=document.getElementById('filter-count');
+var nTrip=document.getElementById('n-trip');
+var nPlace=document.getElementById('n-place');
+var chips=[].slice.call(document.querySelectorAll('.chip[data-f]'));
+var sortBtns=[].slice.call(document.querySelectorAll('.sorter button'));
+var searchBox=document.getElementById('search-box');
+var searchInput=document.getElementById('q');
+var searchHits=document.getElementById('search-hits');
+var locBtn=document.getElementById('loc-btn');
+var locClear=document.getElementById('loc-clear');
+var locPanel=document.getElementById('locate');
+var locNote=document.getElementById('loc-note');
+var locHead=document.getElementById('loc-head-txt');
+var sortHint=document.getElementById('sort-hint');
+var nearBtn=document.querySelector('.sorter button[data-s="near"]');
+var homeOrder={};
+groups.forEach(function(g){
+ homeOrder[g.getAttribute('data-prov')]=[].slice.call(g.querySelectorAll('.trip'));});
+var state={pet:'all',tag:'all',sort:'all',q:'',pos:null,posRaw:null};
+
+function tagsOf(c){var s=c.getAttribute('data-tags')||'';return s?s.split(' '):[];}
+function gcjOf(c){var s=c.getAttribute('data-gcj')||'';if(!s)return null;
+ var a=s.split(',');if(a.length!==2)return null;
+ var lng=parseFloat(a[0]),lat=parseFloat(a[1]);
+ return (isFinite(lng)&&isFinite(lat))?[lng,lat]:null;}
+function durOf(c){var v=parseFloat(c.getAttribute('data-dur')||'');return isFinite(v)?v:null;}
+function openOf(c){var s=c.getAttribute('data-open')||'';
+ var m=/^(\d{1,2}):(\d{2})-(\d{1,2}):(\d{2})$/.exec(s);if(!m)return null;
+ return {o:(+m[1])*60+(+m[2]),c:(+m[3])*60+(+m[4]),raw:s};}
+function matchQ(c,q){return !q||(c.getAttribute('data-q')||'').toLowerCase().indexOf(q)>=0;}
+function matchTag(c,t){return t==='all'||tagsOf(c).indexOf(t)>=0;}
+function matchPet(c,p){if(p==='all')return true;
+ var s=c.getAttribute('data-pet')||'other';
+ return p==='other'?(s!=='ok'&&s!=='ask'):(s===p);}
+
+/* 「当下最合适」只有三个客观键，顺序固定、可解释：
+   ① 季节有没有依据、当不当季 ② 今天来不来得及（营业时间→收尾时间 / 全程时长） ③ 距离
+   没有任何主观打分，卡面上把「为什么」原文写出来。 */
+function rank(c){
+ var d=nowDate(), nm=d.getHours()*60+d.getMinutes(), season=monthSeason(d);
+ var tags=tagsOf(c), seas=tags.filter(function(t){return !!SEASON_CN[t];});
+ var sr=0;
+ if(seas.indexOf(season)>=0)sr=1; else if(seas.length)sr=-1;
+ var dur=durOf(c), open=openOf(c), close=open?open.c:DAY_END;
+ var slack=null, closed=false;
+ if(dur!=null){slack=close-(nm+dur); closed=open?(nm>=open.c||nm<open.o):false;}
+ var dist=(typeof c.__dist==='number')?c.__dist:null;
+ var why='季节：'+(seas.length?((sr>0?'当季':'非当季')+'（'+(d.getMonth()+1)+' 月·'+
+        SEASON_CN[season]+'），依据 '+seas.map(function(t){return SEASON_CN[t];}).join('/'))
+        :'无依据（不猜）');
+ if(dur!=null){
+  if(closed)why+=' · 已过营业时间（'+open.raw+'）';
+  else if(slack>=0)why+=' · 今天来得及（'+(open?('营业到 '+open.raw.split('-')[1]):'按 22:00 收尾估')+
+        '，余 '+Math.round(slack)+' 分）';
+  else why+=' · 今天走不完（全程 '+fmtDur(dur)+'，'+
+        (open?('营业到 '+open.raw.split('-')[1]):'按 22:00 收尾估')+'）';
+ }else why+=' · 时长未知';
+ why+=(dist!=null?(' · 距你 '+fmtKm(dist)):' · 未定位');
+ return {sr:sr, feasible:(dur==null?0:(closed?0:(slack>=0?1:0))),
+         slack:(slack==null?-1e9:slack), dist:(dist==null?1e9:dist), why:why};}
+function cmp(mode){return function(a,b){
+ var ra=rank(a), rb=rank(b);
+ if(mode==='now'){
+  if(rb.sr!==ra.sr)return rb.sr-ra.sr;
+  if(rb.feasible!==ra.feasible)return rb.feasible-ra.feasible;
+ }
+ /* 「全部」看省份分组；两种排序都以「距离近的在前」收尾，再按余量排 */
+ if(ra.dist!==rb.dist)return ra.dist-rb.dist;
+ if(mode==='now'&&rb.slack!==ra.slack)return rb.slack-ra.slack;
+ return 0;};}
+
+function setSort(mode){
+ state.sort=mode;
+ if(mode==='all'){
+  flat.hidden=true; flat.innerHTML='';
+  groups.forEach(function(g){
+   g.classList.remove('gone');
+   var box=g.querySelector('.pcards');
+   (homeOrder[g.getAttribute('data-prov')]||[]).forEach(function(c){box.appendChild(c);});});
+  document.body.classList.remove('flat');
+  trips.forEach(function(c){var w=c.querySelector('.why');if(w)w.hidden=true;});
+ }else{
+  groups.forEach(function(g){g.classList.add('gone');});
+  flat.hidden=false;
+  trips.slice().sort(cmp(mode)).forEach(function(c){
+   var w=c.querySelector('.why');
+   if(w){if(mode==='now'){w.hidden=false;w.innerHTML='<b>为什么：</b>'+escapeHtml(rank(c).why);}
+         else{w.hidden=true;}}
+   flat.appendChild(c);});
+  document.body.classList.add('flat');
+ }
+ sortBtns.forEach(function(b){
+  var on=b.getAttribute('data-s')===mode;
+  b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');});
 }
+
+function refresh(){
+ var q=(state.q||'').trim().toLowerCase(), nT=0, nP=0;
+ trips.forEach(function(c){var hit=matchPet(c,state.pet)&&matchTag(c,state.tag)&&matchQ(c,q);
+  c.hidden=!hit; if(hit)nT++;});
+ places.forEach(function(c){var hit=matchPet(c,state.pet)&&matchTag(c,state.tag)&&matchQ(c,q);
+  c.hidden=!hit; if(hit)nP++;});
+ groups.forEach(function(g){
+  var vis=[].slice.call(g.querySelectorAll('.trip')).filter(function(c){return !c.hidden;});
+  var badge=g.querySelector('.phead .n'); if(badge)badge.textContent=vis.length;
+  if(state.sort==='all')g.classList.toggle('gone',vis.length===0);});
+ if(placesEmpty)placesEmpty.hidden=(nP!==0);
+ if(placesEmptyTxt){
+  if(q&&nP===0&&state.tag==='all'&&state.pet==='all')
+   placesEmptyTxt.textContent='没有匹配「'+state.q+'」的地点。换个词，或者点「全部 / 不限」清空筛选。';
+  else if(state.tag!=='all'&&state.pet!=='all'&&state.tag in EMPTY)
+   placesEmptyTxt.textContent=EMPTY[state.tag];
+  else placesEmptyTxt.textContent=EMPTY[state.pet!=='all'?state.pet:state.tag]||EMPTY.all;}
+ if(tripsEmpty)tripsEmpty.hidden=(nT!==0);
+ if(liveCount)liveCount.innerHTML='命中 行程 <b>'+nT+'</b> · 地点 <b>'+nP+'</b>'+
+   (q?'（搜索「'+escapeHtml(state.q)+'」）':'');
+ if(nTrip)nTrip.textContent=nT;
+ if(nPlace)nPlace.textContent=nP;
+ if(searchHits)searchHits.textContent=q?('🔍 '+nT+'/'+nP):'';
+ if(searchBox)searchBox.classList.toggle('has',!!q);
+}
+
+function setLoc(msg,cls){
+ if(locNote){locNote.textContent=msg||'';locNote.className='loc-note'+(cls?' '+cls:'');}
+ if(locPanel)locPanel.className='locate'+(cls==='ok'?' ok':(cls==='bad'?' bad':''));}
+
+function applyPos(pos){
+ state.pos=pos;
+ trips.forEach(function(c){
+  var g=gcjOf(c), el=c.querySelector('.dist');
+  if(!g){c.__dist=null;if(el)el.hidden=true;return;}
+  var d=haversineKm(pos,g);
+  c.__dist=d;
+  if(el){el.hidden=false;el.textContent='📍 距你 '+fmtKm(d);}});
+ if(nearBtn){nearBtn.disabled=false;nearBtn.removeAttribute('aria-disabled');nearBtn.classList.remove('needs');}
+ if(state.sort==='near'||state.sort==='now')setSort(state.sort);
+ refresh();}
+
+function doLocate(){
+ if(!navigator.geolocation){
+  setLoc('这台浏览器不支持定位（navigator.geolocation 不存在）。行程和地点照常浏览，不影响。','bad');
+  return;}
+ locBtn.disabled=true; locBtn.textContent='定位中…';
+ setLoc('正在向系统申请位置权限…（浏览器会弹一次授权框，只这一次）','');
+ var settled=false;
+ var timer=setTimeout(function(){if(settled)return;settled=true;
+  locBtn.disabled=false;locBtn.textContent='📍 用我的位置找附近';
+  setLoc('定位超时（10 秒）。没关系——行程和地点照常浏览，可以再点一次重试。','bad');},10000);
+ navigator.geolocation.getCurrentPosition(function(p){
+  if(settled)return;settled=true;clearTimeout(timer);
+  locBtn.disabled=false;locBtn.textContent='📍 重新定位';
+  var raw=[p.coords.longitude,p.coords.latitude];
+  var gcj=wgs84ToGcj02(raw[0],raw[1]);
+  state.posRaw=raw;
+  if(locClear)locClear.hidden=false;
+  if(locHead)locHead.textContent='已定位 · 距离按每条行程的起点算';
+  applyPos(gcj);
+  setLoc('GPS 原始坐标（WGS84）'+raw[0].toFixed(4)+','+raw[1].toFixed(4)+
+   ' → 换算成高德 GCJ-02 '+gcj[0].toFixed(4)+','+gcj[1].toFixed(4)+
+   '（两者相差 '+fmtKm(haversineKm(raw,gcj))+'；直接用 WGS84 比就会偏这么多）。'+
+   '精度 ±'+Math.round(p.coords.accuracy||0)+' m。','ok');
+ },function(err){
+  if(settled)return;settled=true;clearTimeout(timer);
+  locBtn.disabled=false;locBtn.textContent='📍 用我的位置找附近';
+  var msg={1:'你拒绝了定位授权（或系统里禁用了定位）。没关系——行程、搜索、筛选、季节标签都照常用，'+
+            '只是「📍 离我最近」用不了。',
+           2:'拿不到位置信号（飞行模式 / 无 GPS / 网络定位被挡）。行程和地点照常浏览。',
+           3:'定位超时。行程和地点照常浏览，可以再点一次重试。'}[err.code]||
+          ('定位失败（'+err.message+'）。行程和地点照常浏览。');
+  setLoc(msg,'bad');
+ },{enableHighAccuracy:true,timeout:9000,maximumAge:60000});}
+
+function clearPos(){
+ state.pos=null;state.posRaw=null;
+ trips.forEach(function(c){c.__dist=null;var el=c.querySelector('.dist');
+  if(el){el.hidden=true;el.textContent='';}});
+ if(nearBtn){nearBtn.setAttribute('aria-disabled','true');nearBtn.classList.add('needs');}
+ if(state.sort==='near')setSort('all');
+ if(locClear)locClear.hidden=true;
+ locBtn.textContent='📍 用我的位置找附近';
+ if(locHead)locHead.textContent='找附近：先拿你的位置';
+ if(sortHint)sortHint.textContent=DEFAULT_HINT;
+ setLoc('位置已清除。','');
+ refresh();}
+
+if(locBtn)locBtn.addEventListener('click',doLocate);
+if(locClear)locClear.addEventListener('click',clearPos);
+if(searchInput){
+ searchInput.addEventListener('input',function(){state.q=searchInput.value||'';refresh();});
+ searchInput.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();searchInput.blur();}});}
+var clrBtn=document.getElementById('q-clear');
+if(clrBtn)clrBtn.addEventListener('click',function(){
+ if(searchInput)searchInput.value='';state.q='';refresh();
+ if(searchInput)searchInput.focus();});
 chips.forEach(function(c){
-  c.addEventListener('click',function(){
-    chips.forEach(function(x){x.classList.remove('on');x.setAttribute('aria-pressed','false');});
-    c.classList.add('on'); c.setAttribute('aria-pressed','true');
-    apply(c.getAttribute('data-f'));
-  });
-});
+ c.addEventListener('click',function(){
+  var f=c.getAttribute('data-f')||'', i=f.indexOf(':'), grp=f.slice(0,i), val=f.slice(i+1);
+  chips.forEach(function(x){
+   if((x.getAttribute('data-f')||'').indexOf(grp+':')===0){
+    x.classList.remove('on');x.setAttribute('aria-pressed','false');}});
+  c.classList.add('on');c.setAttribute('aria-pressed','true');
+  if(grp==='pet')state.pet=val; else state.tag=val;
+  refresh();});});
+sortBtns.forEach(function(b){
+ b.addEventListener('click',function(){
+  var m=b.getAttribute('data-s');
+  if(m==='near'&&!state.pos){
+   setLoc('「离我最近」需要先点上面的「📍 用我的位置找附近」——不会自动弹权限框。','bad');
+   if(locBtn)locBtn.focus();
+   return;}
+  setSort(m);
+  if(sortHint){
+   if(m==='near')sortHint.textContent='按距**行程起点**的距离从近到远；坐标已从 WGS84 换算成 GCJ-02。';
+   else if(m==='now')sortHint.textContent='只用客观字段排序：季节有无依据 → 今天来不来得及（营业时间/全程时长）→ 距离。每张卡下面写了「为什么」。';
+   else sortHint.textContent=DEFAULT_HINT;}
+  refresh();});});
+
+/* 给验证脚本用：合成坐标、直接调排序/换算，不用真的弹权限框 */
+window.PIGHA={wgs84ToGcj02:wgs84ToGcj02,haversineKm:haversineKm,monthSeason:monthSeason,
+ fmtKm:fmtKm,rank:rank,setPos:applyPos,clearPos:clearPos,refresh:refresh,setSort:setSort,
+ state:state,nowLabel:function(){return nowDate().toString();}};
+refresh();
 })();
 </script></div></body></html>
