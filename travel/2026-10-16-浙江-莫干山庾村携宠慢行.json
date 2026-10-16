@@ -1,0 +1,136 @@
+{
+ "title": "莫干山庾村携宠慢行",
+ "city": "湖州",
+ "mode": "driving",
+ "generated": "2026-10-16 17:55",
+ "dist_km": 52.48,
+ "dur_min": 96.8,
+ "source": "高德驾车路径规划（真实路网）",
+ "span_km": 16.9,
+ "points": [
+  {
+   "type": "起点",
+   "name": "莫干山橙月·黑胶唱片民宿",
+   "note": "莫干山镇何村村方村坞26号 ☎13482824274｜小红书`6a0886a8`（C级UGC，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」",
+   "gcj": [
+    119.88298,
+    30.564815
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "停车",
+   "name": "庾信北街停车场",
+   "note": "庾信北街25号｜**高德 POI 实搜**（池子里庾村片区没有停车场 POI，不许编；这条是真搜出来的）距庾村广场约 0.2 km｜距「OmitoHotel·莫干山」约0.2 km",
+   "gcj": [
+    119.90198,
+    30.598463
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "美食",
+   "name": "金鱼妈妈·山尖尖有面儿",
+   "note": "莫干山镇燎原村后村68号 ☎0572-8212017｜小红书作者提到可带（C级UGC，未核验）☎0572-8212017｜原文：「▫️看完日落六点半 我们导航去了庾村 吃了“金鱼妈妈” 这里都是宠物友好👫 点评双人套餐又加了其他吃的」（笔记 69d63f45）",
+   "gcj": [
+    119.908716,
+    30.585394
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "景点",
+   "name": "OmitoHotel·莫干山",
+   "note": "莫干山镇黄郛东路234号 ☎13362298098｜小红书评论（C级UGC，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d）",
+   "gcj": [
+    119.90294,
+    30.596898
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "景点",
+   "name": "下渚湖·湿地公园",
+   "note": "三合乡下渚湖 ☎0572-8484158｜小红书（C级UGC，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc）",
+   "gcj": [
+    120.051336,
+    30.519303
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "备选",
+   "name": "大乐之野(莫干山庾村店)",
+   "note": "莫干山镇黄郛西路85号 ☎17774158008｜庾村广场旁的备选落脚点（本阶段无来源可依）",
+   "gcj": [
+    119.894158,
+    30.600119
+   ],
+   "src": "高德POI"
+  }
+ ],
+ "missing": [],
+ "links": [
+  {
+   "url": "https://uri.amap.com/navigation?from=119.882980%2C30.564815%2C%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&to=119.894158%2C30.600119%2C%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&mode=car&coordinate=gaode&callnative=1&via=119.901980%2C30.598463%2C%E5%BA%BE%E4%BF%A1%E5%8C%97%E8%A1%97%E5%81%9C%E8%BD%A6%E5%9C%BA%3B119.908716%2C30.585394%2C%E9%87%91%E9%B1%BC%E5%A6%88%E5%A6%88%C2%B7%E5%B1%B1%E5%B0%96%E5%B0%96%E6%9C%89%E9%9D%A2%E5%84%BF%3B119.902940%2C30.596898%2COmitoHotel%C2%B7%E8%8E%AB%E5%B9%B2%E5%B1%B1%3B120.051336%2C30.519303%2C%E4%B8%8B%E6%B8%9A%E6%B9%96%C2%B7%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD",
+   "label": "★ 打开高德（会自动唤起 App；到页面点「收藏」即存入账号）"
+  },
+  {
+   "url": "amapuri://route/plan/?sourceApplication=trip-book&dev=0&t=0&slat=30.564815&slon=119.882980&sname=%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&dlat=30.600119&dlon=119.894158&dname=%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&via=119.901980%2C30.598463%3B119.908716%2C30.585394%3B119.902940%2C30.596898%3B120.051336%2C30.519303",
+   "label": "📱 备用：原生 scheme 直接唤起（未验证，①不行时再试）"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=119.882980%2C30.564815&name=%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&coordinate=gaode&callnative=0",
+   "label": "标记：莫干山橙月·黑胶唱片民宿"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=119.901980%2C30.598463&name=%E5%BA%BE%E4%BF%A1%E5%8C%97%E8%A1%97%E5%81%9C%E8%BD%A6%E5%9C%BA&coordinate=gaode&callnative=0",
+   "label": "标记：庾信北街停车场"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=119.908716%2C30.585394&name=%E9%87%91%E9%B1%BC%E5%A6%88%E5%A6%88%C2%B7%E5%B1%B1%E5%B0%96%E5%B0%96%E6%9C%89%E9%9D%A2%E5%84%BF&coordinate=gaode&callnative=0",
+   "label": "标记：金鱼妈妈·山尖尖有面儿"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=119.902940%2C30.596898&name=OmitoHotel%C2%B7%E8%8E%AB%E5%B9%B2%E5%B1%B1&coordinate=gaode&callnative=0",
+   "label": "标记：OmitoHotel·莫干山"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=120.051336%2C30.519303&name=%E4%B8%8B%E6%B8%9A%E6%B9%96%C2%B7%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD&coordinate=gaode&callnative=0",
+   "label": "标记：下渚湖·湿地公园"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=119.894158%2C30.600119&name=%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&coordinate=gaode&callnative=0",
+   "label": "标记：大乐之野(莫干山庾村店)"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=119.882980%2C30.564815%2C%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&to=119.894158%2C30.600119%2C%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&mode=car&coordinate=gaode&callnative=0",
+   "label": "导航：莫干山橙月·黑胶唱片民宿 → 大乐之野(莫干山庾村店)"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=119.882980%2C30.564815%2C%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&to=119.901980%2C30.598463%2C%E5%BA%BE%E4%BF%A1%E5%8C%97%E8%A1%97%E5%81%9C%E8%BD%A6%E5%9C%BA&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：莫干山橙月·黑胶唱片民宿 → 庾信北街停车场"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=119.901980%2C30.598463%2C%E5%BA%BE%E4%BF%A1%E5%8C%97%E8%A1%97%E5%81%9C%E8%BD%A6%E5%9C%BA&to=119.908716%2C30.585394%2C%E9%87%91%E9%B1%BC%E5%A6%88%E5%A6%88%C2%B7%E5%B1%B1%E5%B0%96%E5%B0%96%E6%9C%89%E9%9D%A2%E5%84%BF&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：庾信北街停车场 → 金鱼妈妈·山尖尖有面儿"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=119.908716%2C30.585394%2C%E9%87%91%E9%B1%BC%E5%A6%88%E5%A6%88%C2%B7%E5%B1%B1%E5%B0%96%E5%B0%96%E6%9C%89%E9%9D%A2%E5%84%BF&to=119.902940%2C30.596898%2COmitoHotel%C2%B7%E8%8E%AB%E5%B9%B2%E5%B1%B1&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：金鱼妈妈·山尖尖有面儿 → OmitoHotel·莫干山"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=119.902940%2C30.596898%2COmitoHotel%C2%B7%E8%8E%AB%E5%B9%B2%E5%B1%B1&to=120.051336%2C30.519303%2C%E4%B8%8B%E6%B8%9A%E6%B9%96%C2%B7%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：OmitoHotel·莫干山 → 下渚湖·湿地公园"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=120.051336%2C30.519303%2C%E4%B8%8B%E6%B8%9A%E6%B9%96%C2%B7%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD&to=119.894158%2C30.600119%2C%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：下渚湖·湿地公园 → 大乐之野(莫干山庾村店)"
+  }
+ ],
+ "files": {
+  "png": "2026-10-16-浙江-莫干山庾村携宠慢行.png",
+  "html": "2026-10-16-浙江-莫干山庾村携宠慢行.html",
+  "md": "2026-10-16-浙江-莫干山庾村携宠慢行.md"
+ }
+}

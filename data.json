@@ -1,5 +1,416 @@
 [
  {
+  "slug": "2026-10-16-浙江-莫干山庾村携宠慢行",
+  "title": "莫干山庾村携宠慢行",
+  "city": "湖州",
+  "mode": "driving",
+  "generated": "2026-10-16 17:55",
+  "dist_km": 52.48,
+  "dur_min": 96.8,
+  "source": "高德驾车路径规划（真实路网）",
+  "span_km": 16.9,
+  "points": [
+   {
+    "type": "起点",
+    "name": "莫干山橙月·黑胶唱片民宿",
+    "note": "莫干山镇何村村方村坞26号 ☎13482824274｜小红书`6a0886a8`（C级UGC，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」",
+    "gcj": [
+     119.88298,
+     30.564815
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "停车",
+    "name": "庾信北街停车场",
+    "note": "庾信北街25号｜**高德 POI 实搜**（池子里庾村片区没有停车场 POI，不许编；这条是真搜出来的）距庾村广场约 0.2 km｜距「OmitoHotel·莫干山」约0.2 km",
+    "gcj": [
+     119.90198,
+     30.598463
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "美食",
+    "name": "金鱼妈妈·山尖尖有面儿",
+    "note": "莫干山镇燎原村后村68号 ☎0572-8212017｜小红书作者提到可带（C级UGC，未核验）☎0572-8212017｜原文：「▫️看完日落六点半 我们导航去了庾村 吃了“金鱼妈妈” 这里都是宠物友好👫 点评双人套餐又加了其他吃的」（笔记 69d63f45）",
+    "gcj": [
+     119.908716,
+     30.585394
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "OmitoHotel·莫干山",
+    "note": "莫干山镇黄郛东路234号 ☎13362298098｜小红书评论（C级UGC，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d）",
+    "gcj": [
+     119.90294,
+     30.596898
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "下渚湖·湿地公园",
+    "note": "三合乡下渚湖 ☎0572-8484158｜小红书（C级UGC，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc）",
+    "gcj": [
+     120.051336,
+     30.519303
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "备选",
+    "name": "大乐之野(莫干山庾村店)",
+    "note": "莫干山镇黄郛西路85号 ☎17774158008｜庾村广场旁的备选落脚点（本阶段无来源可依）",
+    "gcj": [
+     119.894158,
+     30.600119
+    ],
+    "src": "高德POI"
+   }
+  ],
+  "missing": [],
+  "links": [
+   {
+    "url": "https://uri.amap.com/navigation?from=119.882980%2C30.564815%2C%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&to=119.894158%2C30.600119%2C%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&mode=car&coordinate=gaode&callnative=1&via=119.901980%2C30.598463%2C%E5%BA%BE%E4%BF%A1%E5%8C%97%E8%A1%97%E5%81%9C%E8%BD%A6%E5%9C%BA%3B119.908716%2C30.585394%2C%E9%87%91%E9%B1%BC%E5%A6%88%E5%A6%88%C2%B7%E5%B1%B1%E5%B0%96%E5%B0%96%E6%9C%89%E9%9D%A2%E5%84%BF%3B119.902940%2C30.596898%2COmitoHotel%C2%B7%E8%8E%AB%E5%B9%B2%E5%B1%B1%3B120.051336%2C30.519303%2C%E4%B8%8B%E6%B8%9A%E6%B9%96%C2%B7%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD",
+    "label": "★ 打开高德（会自动唤起 App；到页面点「收藏」即存入账号）"
+   },
+   {
+    "url": "amapuri://route/plan/?sourceApplication=trip-book&dev=0&t=0&slat=30.564815&slon=119.882980&sname=%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&dlat=30.600119&dlon=119.894158&dname=%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&via=119.901980%2C30.598463%3B119.908716%2C30.585394%3B119.902940%2C30.596898%3B120.051336%2C30.519303",
+    "label": "📱 备用：原生 scheme 直接唤起（未验证，①不行时再试）"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.882980%2C30.564815&name=%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&coordinate=gaode&callnative=0",
+    "label": "标记：莫干山橙月·黑胶唱片民宿"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.901980%2C30.598463&name=%E5%BA%BE%E4%BF%A1%E5%8C%97%E8%A1%97%E5%81%9C%E8%BD%A6%E5%9C%BA&coordinate=gaode&callnative=0",
+    "label": "标记：庾信北街停车场"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.908716%2C30.585394&name=%E9%87%91%E9%B1%BC%E5%A6%88%E5%A6%88%C2%B7%E5%B1%B1%E5%B0%96%E5%B0%96%E6%9C%89%E9%9D%A2%E5%84%BF&coordinate=gaode&callnative=0",
+    "label": "标记：金鱼妈妈·山尖尖有面儿"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.902940%2C30.596898&name=OmitoHotel%C2%B7%E8%8E%AB%E5%B9%B2%E5%B1%B1&coordinate=gaode&callnative=0",
+    "label": "标记：OmitoHotel·莫干山"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.051336%2C30.519303&name=%E4%B8%8B%E6%B8%9A%E6%B9%96%C2%B7%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD&coordinate=gaode&callnative=0",
+    "label": "标记：下渚湖·湿地公园"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.894158%2C30.600119&name=%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&coordinate=gaode&callnative=0",
+    "label": "标记：大乐之野(莫干山庾村店)"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.882980%2C30.564815%2C%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&to=119.894158%2C30.600119%2C%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&mode=car&coordinate=gaode&callnative=0",
+    "label": "导航：莫干山橙月·黑胶唱片民宿 → 大乐之野(莫干山庾村店)"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.882980%2C30.564815%2C%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&to=119.901980%2C30.598463%2C%E5%BA%BE%E4%BF%A1%E5%8C%97%E8%A1%97%E5%81%9C%E8%BD%A6%E5%9C%BA&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：莫干山橙月·黑胶唱片民宿 → 庾信北街停车场"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.901980%2C30.598463%2C%E5%BA%BE%E4%BF%A1%E5%8C%97%E8%A1%97%E5%81%9C%E8%BD%A6%E5%9C%BA&to=119.908716%2C30.585394%2C%E9%87%91%E9%B1%BC%E5%A6%88%E5%A6%88%C2%B7%E5%B1%B1%E5%B0%96%E5%B0%96%E6%9C%89%E9%9D%A2%E5%84%BF&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：庾信北街停车场 → 金鱼妈妈·山尖尖有面儿"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.908716%2C30.585394%2C%E9%87%91%E9%B1%BC%E5%A6%88%E5%A6%88%C2%B7%E5%B1%B1%E5%B0%96%E5%B0%96%E6%9C%89%E9%9D%A2%E5%84%BF&to=119.902940%2C30.596898%2COmitoHotel%C2%B7%E8%8E%AB%E5%B9%B2%E5%B1%B1&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：金鱼妈妈·山尖尖有面儿 → OmitoHotel·莫干山"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.902940%2C30.596898%2COmitoHotel%C2%B7%E8%8E%AB%E5%B9%B2%E5%B1%B1&to=120.051336%2C30.519303%2C%E4%B8%8B%E6%B8%9A%E6%B9%96%C2%B7%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：OmitoHotel·莫干山 → 下渚湖·湿地公园"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.051336%2C30.519303%2C%E4%B8%8B%E6%B8%9A%E6%B9%96%C2%B7%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD&to=119.894158%2C30.600119%2C%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：下渚湖·湿地公园 → 大乐之野(莫干山庾村店)"
+   }
+  ],
+  "files": {
+   "png": "2026-10-16-浙江-莫干山庾村携宠慢行.png",
+   "html": "2026-10-16-浙江-莫干山庾村携宠慢行.html",
+   "md": "2026-10-16-浙江-莫干山庾村携宠慢行.md"
+  }
+ },
+ {
+  "slug": "2026-10-16-浙江-杭州铜鉴湖带狗半日",
+  "title": "杭州铜鉴湖带狗半日",
+  "city": "杭州",
+  "mode": "walking",
+  "generated": "2026-10-16 17:55",
+  "dist_km": 3.06,
+  "dur_min": 40.8,
+  "source": "高德步行路径规划（真实路网）",
+  "span_km": 2.24,
+  "points": [
+   {
+    "type": "起点",
+    "name": "铜鉴湖公园",
+    "note": "双浦镇灵山风景区 ☎18157198875｜挂载命中（逐字同名，high）＋小红书`69c4e173`（C级UGC，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准",
+    "gcj": [
+     120.06894,
+     30.126538
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "停车",
+    "name": "铜鉴湖里湖P2停车场",
+    "note": "铜鉴湖里湖公园｜**高德 POI 实搜**（池子该片区没有停车场 POI）距铜鉴湖公园约 0.46 km｜距「铜鉴湖公园」约0.5 km",
+    "gcj": [
+     120.068944,
+     30.122388
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "铜鉴湖花海露营地",
+    "note": "铜鉴湖花海西侧200米｜池子 POI（营地），铜鉴湖花海边，草坪开阔",
+    "gcj": [
+     120.069745,
+     30.117156
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "美食",
+    "name": "云泉餐厅",
+    "note": "双浦镇灵山村518号-1-203 ☎18106585920｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎18106585920",
+    "gcj": [
+     120.050337,
+     30.119846
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "今天不上班",
+    "note": "灵山中路108号 ☎18989891503｜池子 POI（休闲/营地），灵山景区内，有电话可问",
+    "gcj": [
+     120.053421,
+     30.116256
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "漫步山丘露营咖啡团建",
+    "note": "双浦镇灵山风景区 ☎13716512269｜池子 POI（营地咖啡），铜鉴湖西侧",
+    "gcj": [
+     120.046525,
+     30.120925
+    ],
+    "src": "高德POI"
+   }
+  ],
+  "missing": [],
+  "links": [
+   {
+    "url": "https://uri.amap.com/navigation?from=120.068940%2C30.126538%2C%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&to=120.046525%2C30.120925%2C%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&mode=walk&coordinate=gaode&callnative=1&via=120.068944%2C30.122388%2C%E9%93%9C%E9%89%B4%E6%B9%96%E9%87%8C%E6%B9%96P2%E5%81%9C%E8%BD%A6%E5%9C%BA%3B120.069745%2C30.117156%2C%E9%93%9C%E9%89%B4%E6%B9%96%E8%8A%B1%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0%3B120.050337%2C30.119846%2C%E4%BA%91%E6%B3%89%E9%A4%90%E5%8E%85%3B120.053421%2C30.116256%2C%E4%BB%8A%E5%A4%A9%E4%B8%8D%E4%B8%8A%E7%8F%AD",
+    "label": "★ 打开高德（会自动唤起 App；到页面点「收藏」即存入账号）"
+   },
+   {
+    "url": "amapuri://route/plan/?sourceApplication=trip-book&dev=0&t=2&slat=30.126538&slon=120.068940&sname=%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&dlat=30.120925&dlon=120.046525&dname=%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&via=120.068944%2C30.122388%3B120.069745%2C30.117156%3B120.050337%2C30.119846%3B120.053421%2C30.116256",
+    "label": "📱 备用：原生 scheme 直接唤起（未验证，①不行时再试）"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.068940%2C30.126538&name=%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&coordinate=gaode&callnative=0",
+    "label": "标记：铜鉴湖公园"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.068944%2C30.122388&name=%E9%93%9C%E9%89%B4%E6%B9%96%E9%87%8C%E6%B9%96P2%E5%81%9C%E8%BD%A6%E5%9C%BA&coordinate=gaode&callnative=0",
+    "label": "标记：铜鉴湖里湖P2停车场"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.069745%2C30.117156&name=%E9%93%9C%E9%89%B4%E6%B9%96%E8%8A%B1%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0&coordinate=gaode&callnative=0",
+    "label": "标记：铜鉴湖花海露营地"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.050337%2C30.119846&name=%E4%BA%91%E6%B3%89%E9%A4%90%E5%8E%85&coordinate=gaode&callnative=0",
+    "label": "标记：云泉餐厅"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.053421%2C30.116256&name=%E4%BB%8A%E5%A4%A9%E4%B8%8D%E4%B8%8A%E7%8F%AD&coordinate=gaode&callnative=0",
+    "label": "标记：今天不上班"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.046525%2C30.120925&name=%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&coordinate=gaode&callnative=0",
+    "label": "标记：漫步山丘露营咖啡团建"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.068940%2C30.126538%2C%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&to=120.046525%2C30.120925%2C%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&mode=car&coordinate=gaode&callnative=0",
+    "label": "导航：铜鉴湖公园 → 漫步山丘露营咖啡团建"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.068940%2C30.126538%2C%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&to=120.068944%2C30.122388%2C%E9%93%9C%E9%89%B4%E6%B9%96%E9%87%8C%E6%B9%96P2%E5%81%9C%E8%BD%A6%E5%9C%BA&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：铜鉴湖公园 → 铜鉴湖里湖P2停车场"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.068944%2C30.122388%2C%E9%93%9C%E9%89%B4%E6%B9%96%E9%87%8C%E6%B9%96P2%E5%81%9C%E8%BD%A6%E5%9C%BA&to=120.069745%2C30.117156%2C%E9%93%9C%E9%89%B4%E6%B9%96%E8%8A%B1%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：铜鉴湖里湖P2停车场 → 铜鉴湖花海露营地"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.069745%2C30.117156%2C%E9%93%9C%E9%89%B4%E6%B9%96%E8%8A%B1%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0&to=120.050337%2C30.119846%2C%E4%BA%91%E6%B3%89%E9%A4%90%E5%8E%85&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：铜鉴湖花海露营地 → 云泉餐厅"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.050337%2C30.119846%2C%E4%BA%91%E6%B3%89%E9%A4%90%E5%8E%85&to=120.053421%2C30.116256%2C%E4%BB%8A%E5%A4%A9%E4%B8%8D%E4%B8%8A%E7%8F%AD&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：云泉餐厅 → 今天不上班"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.053421%2C30.116256%2C%E4%BB%8A%E5%A4%A9%E4%B8%8D%E4%B8%8A%E7%8F%AD&to=120.046525%2C30.120925%2C%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：今天不上班 → 漫步山丘露营咖啡团建"
+   }
+  ],
+  "files": {
+   "png": "2026-10-16-浙江-杭州铜鉴湖带狗半日.png",
+   "html": "2026-10-16-浙江-杭州铜鉴湖带狗半日.html",
+   "md": "2026-10-16-浙江-杭州铜鉴湖带狗半日.md"
+  }
+ },
+ {
+  "slug": "2026-10-16-浙江-安吉小杭坑携宠露营",
+  "title": "安吉小杭坑携宠露营",
+  "city": "湖州",
+  "mode": "driving",
+  "generated": "2026-10-16 17:55",
+  "dist_km": 17.69,
+  "dur_min": 35.4,
+  "source": "高德驾车路径规划（真实路网）",
+  "span_km": 4.15,
+  "points": [
+   {
+    "type": "起点",
+    "name": "小杭坑生态营地",
+    "note": "孝丰镇夏阳村 ☎15381292658｜挂载命中（同名 high）＋小红书`6a0886a8`（C级UGC，未核验）：「#安吉宠物友好 #带着狗狗去户外 #户外露营 #小杭坑」",
+    "gcj": [
+     119.457685,
+     30.632757
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "停车",
+    "name": "地面停车场",
+    "note": "距「小杭坑生态营地」约32米（高德 POI 实搜）｜另有：地面停车场(91米)、地面停车场(287米)、小杭坑停车场(274米)｜距「小杭坑生态营地」约0.0 km",
+    "gcj": [
+     119.457568,
+     30.633034
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "小杭坑露营公园",
+    "note": "小杭坑露营公园游客接待中心西南侧｜池子 POI（风景名胜）；同篇小红书说「很好玩，很美，没有脏乱的地方，维护的很好，很开阔，适合带小狗撒欢」（C级UGC）",
+    "gcj": [
+     119.457079,
+     30.634954
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "小杭坑2号营地",
+    "note": "大关自然村1号 ☎17357211578｜池子 POI（营地），距生态营地 0.13 km，有电话可问营地规则",
+    "gcj": [
+     119.456495,
+     30.633361
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "美食",
+    "name": "月慧餐馆·精品农家菜",
+    "note": "045乡道与九七线交叉口西北20米 ☎13735159461｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎13735159461",
+    "gcj": [
+     119.419016,
+     30.615846
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "安吉杉咖咔营地",
+    "note": "杭垓镇缫舍村白石坞自然村13号 ☎18268236688｜池子 POI（营地），距小杭坑约 3.8 km，有电话可问营地规则",
+    "gcj": [
+     119.427689,
+     30.609753
+    ],
+    "src": "高德POI"
+   }
+  ],
+  "missing": [],
+  "links": [
+   {
+    "url": "https://uri.amap.com/navigation?from=119.457685%2C30.632757%2C%E5%B0%8F%E6%9D%AD%E5%9D%91%E7%94%9F%E6%80%81%E8%90%A5%E5%9C%B0&to=119.427689%2C30.609753%2C%E5%AE%89%E5%90%89%E6%9D%89%E5%92%96%E5%92%94%E8%90%A5%E5%9C%B0&mode=car&coordinate=gaode&callnative=1&via=119.457568%2C30.633034%2C%E5%9C%B0%E9%9D%A2%E5%81%9C%E8%BD%A6%E5%9C%BA%3B119.457079%2C30.634954%2C%E5%B0%8F%E6%9D%AD%E5%9D%91%E9%9C%B2%E8%90%A5%E5%85%AC%E5%9B%AD%3B119.456495%2C30.633361%2C%E5%B0%8F%E6%9D%AD%E5%9D%912%E5%8F%B7%E8%90%A5%E5%9C%B0%3B119.419016%2C30.615846%2C%E6%9C%88%E6%85%A7%E9%A4%90%E9%A6%86%C2%B7%E7%B2%BE%E5%93%81%E5%86%9C%E5%AE%B6%E8%8F%9C",
+    "label": "★ 打开高德（会自动唤起 App；到页面点「收藏」即存入账号）"
+   },
+   {
+    "url": "amapuri://route/plan/?sourceApplication=trip-book&dev=0&t=0&slat=30.632757&slon=119.457685&sname=%E5%B0%8F%E6%9D%AD%E5%9D%91%E7%94%9F%E6%80%81%E8%90%A5%E5%9C%B0&dlat=30.609753&dlon=119.427689&dname=%E5%AE%89%E5%90%89%E6%9D%89%E5%92%96%E5%92%94%E8%90%A5%E5%9C%B0&via=119.457568%2C30.633034%3B119.457079%2C30.634954%3B119.456495%2C30.633361%3B119.419016%2C30.615846",
+    "label": "📱 备用：原生 scheme 直接唤起（未验证，①不行时再试）"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.457685%2C30.632757&name=%E5%B0%8F%E6%9D%AD%E5%9D%91%E7%94%9F%E6%80%81%E8%90%A5%E5%9C%B0&coordinate=gaode&callnative=0",
+    "label": "标记：小杭坑生态营地"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.457568%2C30.633034&name=%E5%9C%B0%E9%9D%A2%E5%81%9C%E8%BD%A6%E5%9C%BA&coordinate=gaode&callnative=0",
+    "label": "标记：地面停车场"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.457079%2C30.634954&name=%E5%B0%8F%E6%9D%AD%E5%9D%91%E9%9C%B2%E8%90%A5%E5%85%AC%E5%9B%AD&coordinate=gaode&callnative=0",
+    "label": "标记：小杭坑露营公园"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.456495%2C30.633361&name=%E5%B0%8F%E6%9D%AD%E5%9D%912%E5%8F%B7%E8%90%A5%E5%9C%B0&coordinate=gaode&callnative=0",
+    "label": "标记：小杭坑2号营地"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.419016%2C30.615846&name=%E6%9C%88%E6%85%A7%E9%A4%90%E9%A6%86%C2%B7%E7%B2%BE%E5%93%81%E5%86%9C%E5%AE%B6%E8%8F%9C&coordinate=gaode&callnative=0",
+    "label": "标记：月慧餐馆·精品农家菜"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=119.427689%2C30.609753&name=%E5%AE%89%E5%90%89%E6%9D%89%E5%92%96%E5%92%94%E8%90%A5%E5%9C%B0&coordinate=gaode&callnative=0",
+    "label": "标记：安吉杉咖咔营地"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.457685%2C30.632757%2C%E5%B0%8F%E6%9D%AD%E5%9D%91%E7%94%9F%E6%80%81%E8%90%A5%E5%9C%B0&to=119.427689%2C30.609753%2C%E5%AE%89%E5%90%89%E6%9D%89%E5%92%96%E5%92%94%E8%90%A5%E5%9C%B0&mode=car&coordinate=gaode&callnative=0",
+    "label": "导航：小杭坑生态营地 → 安吉杉咖咔营地"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.457685%2C30.632757%2C%E5%B0%8F%E6%9D%AD%E5%9D%91%E7%94%9F%E6%80%81%E8%90%A5%E5%9C%B0&to=119.457568%2C30.633034%2C%E5%9C%B0%E9%9D%A2%E5%81%9C%E8%BD%A6%E5%9C%BA&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：小杭坑生态营地 → 地面停车场"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.457568%2C30.633034%2C%E5%9C%B0%E9%9D%A2%E5%81%9C%E8%BD%A6%E5%9C%BA&to=119.457079%2C30.634954%2C%E5%B0%8F%E6%9D%AD%E5%9D%91%E9%9C%B2%E8%90%A5%E5%85%AC%E5%9B%AD&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：地面停车场 → 小杭坑露营公园"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.457079%2C30.634954%2C%E5%B0%8F%E6%9D%AD%E5%9D%91%E9%9C%B2%E8%90%A5%E5%85%AC%E5%9B%AD&to=119.456495%2C30.633361%2C%E5%B0%8F%E6%9D%AD%E5%9D%912%E5%8F%B7%E8%90%A5%E5%9C%B0&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：小杭坑露营公园 → 小杭坑2号营地"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.456495%2C30.633361%2C%E5%B0%8F%E6%9D%AD%E5%9D%912%E5%8F%B7%E8%90%A5%E5%9C%B0&to=119.419016%2C30.615846%2C%E6%9C%88%E6%85%A7%E9%A4%90%E9%A6%86%C2%B7%E7%B2%BE%E5%93%81%E5%86%9C%E5%AE%B6%E8%8F%9C&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：小杭坑2号营地 → 月慧餐馆·精品农家菜"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=119.419016%2C30.615846%2C%E6%9C%88%E6%85%A7%E9%A4%90%E9%A6%86%C2%B7%E7%B2%BE%E5%93%81%E5%86%9C%E5%AE%B6%E8%8F%9C&to=119.427689%2C30.609753%2C%E5%AE%89%E5%90%89%E6%9D%89%E5%92%96%E5%92%94%E8%90%A5%E5%9C%B0&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：月慧餐馆·精品农家菜 → 安吉杉咖咔营地"
+   }
+  ],
+  "files": {
+   "png": "2026-10-16-浙江-安吉小杭坑携宠露营.png",
+   "html": "2026-10-16-浙江-安吉小杭坑携宠露营.html",
+   "md": "2026-10-16-浙江-安吉小杭坑携宠露营.md"
+  }
+ },
+ {
   "slug": "2026-10-16-大连烟台轮渡",
   "title": "大连-烟台 渤海轮渡",
   "city": "",

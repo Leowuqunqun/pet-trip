@@ -1,0 +1,136 @@
+{
+ "title": "杭州铜鉴湖带狗半日",
+ "city": "杭州",
+ "mode": "walking",
+ "generated": "2026-10-16 17:55",
+ "dist_km": 3.06,
+ "dur_min": 40.8,
+ "source": "高德步行路径规划（真实路网）",
+ "span_km": 2.24,
+ "points": [
+  {
+   "type": "起点",
+   "name": "铜鉴湖公园",
+   "note": "双浦镇灵山风景区 ☎18157198875｜挂载命中（逐字同名，high）＋小红书`69c4e173`（C级UGC，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准",
+   "gcj": [
+    120.06894,
+    30.126538
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "停车",
+   "name": "铜鉴湖里湖P2停车场",
+   "note": "铜鉴湖里湖公园｜**高德 POI 实搜**（池子该片区没有停车场 POI）距铜鉴湖公园约 0.46 km｜距「铜鉴湖公园」约0.5 km",
+   "gcj": [
+    120.068944,
+    30.122388
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "景点",
+   "name": "铜鉴湖花海露营地",
+   "note": "铜鉴湖花海西侧200米｜池子 POI（营地），铜鉴湖花海边，草坪开阔",
+   "gcj": [
+    120.069745,
+    30.117156
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "美食",
+   "name": "云泉餐厅",
+   "note": "双浦镇灵山村518号-1-203 ☎18106585920｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎18106585920",
+   "gcj": [
+    120.050337,
+    30.119846
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "景点",
+   "name": "今天不上班",
+   "note": "灵山中路108号 ☎18989891503｜池子 POI（休闲/营地），灵山景区内，有电话可问",
+   "gcj": [
+    120.053421,
+    30.116256
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "景点",
+   "name": "漫步山丘露营咖啡团建",
+   "note": "双浦镇灵山风景区 ☎13716512269｜池子 POI（营地咖啡），铜鉴湖西侧",
+   "gcj": [
+    120.046525,
+    30.120925
+   ],
+   "src": "高德POI"
+  }
+ ],
+ "missing": [],
+ "links": [
+  {
+   "url": "https://uri.amap.com/navigation?from=120.068940%2C30.126538%2C%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&to=120.046525%2C30.120925%2C%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&mode=walk&coordinate=gaode&callnative=1&via=120.068944%2C30.122388%2C%E9%93%9C%E9%89%B4%E6%B9%96%E9%87%8C%E6%B9%96P2%E5%81%9C%E8%BD%A6%E5%9C%BA%3B120.069745%2C30.117156%2C%E9%93%9C%E9%89%B4%E6%B9%96%E8%8A%B1%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0%3B120.050337%2C30.119846%2C%E4%BA%91%E6%B3%89%E9%A4%90%E5%8E%85%3B120.053421%2C30.116256%2C%E4%BB%8A%E5%A4%A9%E4%B8%8D%E4%B8%8A%E7%8F%AD",
+   "label": "★ 打开高德（会自动唤起 App；到页面点「收藏」即存入账号）"
+  },
+  {
+   "url": "amapuri://route/plan/?sourceApplication=trip-book&dev=0&t=2&slat=30.126538&slon=120.068940&sname=%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&dlat=30.120925&dlon=120.046525&dname=%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&via=120.068944%2C30.122388%3B120.069745%2C30.117156%3B120.050337%2C30.119846%3B120.053421%2C30.116256",
+   "label": "📱 备用：原生 scheme 直接唤起（未验证，①不行时再试）"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=120.068940%2C30.126538&name=%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&coordinate=gaode&callnative=0",
+   "label": "标记：铜鉴湖公园"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=120.068944%2C30.122388&name=%E9%93%9C%E9%89%B4%E6%B9%96%E9%87%8C%E6%B9%96P2%E5%81%9C%E8%BD%A6%E5%9C%BA&coordinate=gaode&callnative=0",
+   "label": "标记：铜鉴湖里湖P2停车场"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=120.069745%2C30.117156&name=%E9%93%9C%E9%89%B4%E6%B9%96%E8%8A%B1%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0&coordinate=gaode&callnative=0",
+   "label": "标记：铜鉴湖花海露营地"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=120.050337%2C30.119846&name=%E4%BA%91%E6%B3%89%E9%A4%90%E5%8E%85&coordinate=gaode&callnative=0",
+   "label": "标记：云泉餐厅"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=120.053421%2C30.116256&name=%E4%BB%8A%E5%A4%A9%E4%B8%8D%E4%B8%8A%E7%8F%AD&coordinate=gaode&callnative=0",
+   "label": "标记：今天不上班"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=120.046525%2C30.120925&name=%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&coordinate=gaode&callnative=0",
+   "label": "标记：漫步山丘露营咖啡团建"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=120.068940%2C30.126538%2C%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&to=120.046525%2C30.120925%2C%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&mode=car&coordinate=gaode&callnative=0",
+   "label": "导航：铜鉴湖公园 → 漫步山丘露营咖啡团建"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=120.068940%2C30.126538%2C%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&to=120.068944%2C30.122388%2C%E9%93%9C%E9%89%B4%E6%B9%96%E9%87%8C%E6%B9%96P2%E5%81%9C%E8%BD%A6%E5%9C%BA&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：铜鉴湖公园 → 铜鉴湖里湖P2停车场"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=120.068944%2C30.122388%2C%E9%93%9C%E9%89%B4%E6%B9%96%E9%87%8C%E6%B9%96P2%E5%81%9C%E8%BD%A6%E5%9C%BA&to=120.069745%2C30.117156%2C%E9%93%9C%E9%89%B4%E6%B9%96%E8%8A%B1%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：铜鉴湖里湖P2停车场 → 铜鉴湖花海露营地"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=120.069745%2C30.117156%2C%E9%93%9C%E9%89%B4%E6%B9%96%E8%8A%B1%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0&to=120.050337%2C30.119846%2C%E4%BA%91%E6%B3%89%E9%A4%90%E5%8E%85&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：铜鉴湖花海露营地 → 云泉餐厅"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=120.050337%2C30.119846%2C%E4%BA%91%E6%B3%89%E9%A4%90%E5%8E%85&to=120.053421%2C30.116256%2C%E4%BB%8A%E5%A4%A9%E4%B8%8D%E4%B8%8A%E7%8F%AD&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：云泉餐厅 → 今天不上班"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=120.053421%2C30.116256%2C%E4%BB%8A%E5%A4%A9%E4%B8%8D%E4%B8%8A%E7%8F%AD&to=120.046525%2C30.120925%2C%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：今天不上班 → 漫步山丘露营咖啡团建"
+  }
+ ],
+ "files": {
+  "png": "2026-10-16-浙江-杭州铜鉴湖带狗半日.png",
+  "html": "2026-10-16-浙江-杭州铜鉴湖带狗半日.html",
+  "md": "2026-10-16-浙江-杭州铜鉴湖带狗半日.md"
+ }
+}
