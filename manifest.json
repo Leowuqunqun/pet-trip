@@ -3,8 +3,8 @@
  "short_name": "宠物旅行",
  "start_url": "./index.html",
  "display": "standalone",
- "background_color": "#0f1115",
- "theme_color": "#0f1115",
+ "background_color": "#FBF6EF",
+ "theme_color": "#FBF6EF",
  "icons": [
   {
    "src": "icon-192.png",
