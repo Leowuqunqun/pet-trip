@@ -1,0 +1,82 @@
+{
+ "title": "大连-烟台 渤海轮渡",
+ "city": "",
+ "mode": "driving",
+ "generated": "2026-10-16 13:26",
+ "dist_km": 178.41,
+ "dur_min": 710.7,
+ "source": "高德驾车路径规划（真实路网）",
+ "span_km": 165.81,
+ "points": [
+  {
+   "type": "起点",
+   "name": "辽渔大连湾航运中心",
+   "note": "甘井子区大连湾街，导航\"辽渔大连航运中心\"；车辆登船口在右侧，11点15分前到",
+   "gcj": [
+    121.710992,
+    39.02451
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "停车",
+   "name": "大连湾航运中心北停车场",
+   "note": "中远路新港客运站｜距「辽渔大连湾航运中心」约29米（高德 POI 实搜）｜另有：大连湾航运中心南停车场(74米)、停车场(辽渔医院西南)(97米)、辽渔医院停车场(134米)｜距「辽渔大连湾航运中心」约0.0 km",
+   "gcj": [
+    121.711034,
+    39.02477
+   ],
+   "src": "高德POI"
+  },
+  {
+   "type": "景点",
+   "name": "烟台港客运站",
+   "note": "芝罘区环海路2号，下船点，19点55分抵达",
+   "gcj": [
+    121.377127,
+    37.556521
+   ],
+   "src": "高德POI"
+  }
+ ],
+ "missing": [],
+ "links": [
+  {
+   "url": "https://uri.amap.com/navigation?from=121.710992%2C39.024510%2C%E8%BE%BD%E6%B8%94%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83&to=121.377127%2C37.556521%2C%E7%83%9F%E5%8F%B0%E6%B8%AF%E5%AE%A2%E8%BF%90%E7%AB%99&mode=car&coordinate=gaode&callnative=1&via=121.711034%2C39.024770%2C%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83%E5%8C%97%E5%81%9C%E8%BD%A6%E5%9C%BA",
+   "label": "★ 打开高德（会自动唤起 App；到页面点「收藏」即存入账号）"
+  },
+  {
+   "url": "amapuri://route/plan/?sourceApplication=trip-book&dev=0&t=0&slat=39.024510&slon=121.710992&sname=%E8%BE%BD%E6%B8%94%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83&dlat=37.556521&dlon=121.377127&dname=%E7%83%9F%E5%8F%B0%E6%B8%AF%E5%AE%A2%E8%BF%90%E7%AB%99&via=121.711034%2C39.024770",
+   "label": "📱 备用：原生 scheme 直接唤起（未验证，①不行时再试）"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=121.710992%2C39.024510&name=%E8%BE%BD%E6%B8%94%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83&coordinate=gaode&callnative=0",
+   "label": "标记：辽渔大连湾航运中心"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=121.711034%2C39.024770&name=%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83%E5%8C%97%E5%81%9C%E8%BD%A6%E5%9C%BA&coordinate=gaode&callnative=0",
+   "label": "标记：大连湾航运中心北停车场"
+  },
+  {
+   "url": "https://uri.amap.com/marker?position=121.377127%2C37.556521&name=%E7%83%9F%E5%8F%B0%E6%B8%AF%E5%AE%A2%E8%BF%90%E7%AB%99&coordinate=gaode&callnative=0",
+   "label": "标记：烟台港客运站"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=121.710992%2C39.024510%2C%E8%BE%BD%E6%B8%94%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83&to=121.377127%2C37.556521%2C%E7%83%9F%E5%8F%B0%E6%B8%AF%E5%AE%A2%E8%BF%90%E7%AB%99&mode=car&coordinate=gaode&callnative=0",
+   "label": "导航：辽渔大连湾航运中心 → 烟台港客运站"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=121.710992%2C39.024510%2C%E8%BE%BD%E6%B8%94%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83&to=121.711034%2C39.024770%2C%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83%E5%8C%97%E5%81%9C%E8%BD%A6%E5%9C%BA&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：辽渔大连湾航运中心 → 大连湾航运中心北停车场"
+  },
+  {
+   "url": "https://uri.amap.com/navigation?from=121.711034%2C39.024770%2C%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83%E5%8C%97%E5%81%9C%E8%BD%A6%E5%9C%BA&to=121.377127%2C37.556521%2C%E7%83%9F%E5%8F%B0%E6%B8%AF%E5%AE%A2%E8%BF%90%E7%AB%99&mode=car&coordinate=gaode&callnative=0",
+   "label": "分段：大连湾航运中心北停车场 → 烟台港客运站"
+  }
+ ],
+ "files": {
+  "png": "2026-10-16-大连烟台轮渡.png",
+  "html": "2026-10-16-大连烟台轮渡.html",
+  "md": "2026-10-16-大连烟台轮渡.md"
+ }
+}

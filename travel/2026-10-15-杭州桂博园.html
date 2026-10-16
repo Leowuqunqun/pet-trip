@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>杭州桂博园赏桂</title><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>body{margin:0;font:15px/1.6 -apple-system,"Hiragino Sans GB",sans-serif}
+#map{height:72vh} .legend{padding:10px 14px;background:#fff}
+.legend div{margin:3px 0} .dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px}</style>
+</head><body>
+<div id="map"></div>
+<div class="legend"><b>杭州桂博园赏桂</b><div id="legend"></div><div id="links"></div></div>
+<script>
+const pts = [{"n": 1, "name": "杭州桂博园", "type": "起点", "note": "余杭区余杭街道义桥社区，导航\"杭州桂博园\"；门票成人30元", "ll": [30.302107, 119.879869], "c": "#1e88e5"}, {"n": 2, "name": "舟枕(公交站)", "type": "备选", "note": "479M路下车点，距园区约1.8公里，下车要走或打车", "ll": [30.296549, 119.897118], "c": "#757575"}];
+const route = [[30.302001, 119.879885], [30.302014, 119.879996], [30.302073, 119.880146], [30.302073, 119.880146], [30.301575, 119.880859], [30.300641, 119.882351], [30.300641, 119.882351], [30.300534, 119.882259], [30.300335, 119.882034], [30.300292, 119.882007], [30.300239, 119.88197], [30.299772, 119.881787], [30.299718, 119.881776], [30.299536, 119.881776], [30.299471, 119.881739], [30.299413, 119.881557], [30.299354, 119.881235], [30.299348, 119.881117], [30.299359, 119.880983], [30.299359, 119.880983], [30.29915, 119.880516], [30.29915, 119.880516], [30.298983, 119.880537], [30.2976, 119.880822], [30.2976, 119.880822], [30.297943, 119.881905], [30.298002, 119.88212], [30.298168, 119.882812], [30.298479, 119.884142], [30.298892, 119.885961], [30.299048, 119.886631], [30.299198, 119.887275], [30.299268, 119.887661], [30.299504, 119.888128], [30.299573, 119.888353], [30.299638, 119.888938], [30.299622, 119.890231], [30.2996, 119.890816], [30.299595, 119.8914], [30.299611, 119.89177], [30.299633, 119.893208], [30.299622, 119.895091], [30.29967, 119.895552], [30.29967, 119.895552], [30.298833, 119.895713], [30.298426, 119.89581], [30.297948, 119.895981], [30.297583, 119.89618], [30.297299, 119.896378], [30.297127, 119.896534], [30.296549, 119.897118]];
+const map = L.map('map');
+L.tileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}',
+  {subdomains:'1234', maxZoom:18, attribution:'© 高德地图'}).addTo(map);
+if (route.length) { L.polyline(route, {color:'#145ac8', weight:5, opacity:.75}).addTo(map); }
+const bounds = [];
+pts.forEach(p => {
+  const m = L.circleMarker(p.ll, {radius:13, color:'#fff', weight:3, fillColor:p.c, fillOpacity:1})
+    .addTo(map).bindPopup(`<b>${p.n}. [${p.type}] ${p.name}</b><br>${p.note||''}`);
+  m.bindTooltip(String(p.n), {permanent:true, direction:'center', className:'num'});
+  bounds.push(p.ll);
+  document.getElementById('legend').innerHTML +=
+    `<div><span class="dot" style="background:${p.c}"></span>${p.n}. [${p.type}] ${p.name}</div>`;
+});
+document.getElementById('links').innerHTML = ["<a href=\"https://uri.amap.com/navigation?from=119.879869%2C30.302107%2C%E6%9D%AD%E5%B7%9E%E6%A1%82%E5%8D%9A%E5%9B%AD&to=119.897118%2C30.296549%2C%E8%88%9F%E6%9E%95%28%E5%85%AC%E4%BA%A4%E7%AB%99%29&mode=car&coordinate=gaode&callnative=1\" target=\"_blank\">★ 整条路线一次打开（高德里点「收藏」即存入账号）</a>", "<a href=\"https://uri.amap.com/marker?position=119.879869%2C30.302107&name=%E6%9D%AD%E5%B7%9E%E6%A1%82%E5%8D%9A%E5%9B%AD&coordinate=gaode&callnative=0\" target=\"_blank\">标记：杭州桂博园</a>", "<a href=\"https://uri.amap.com/marker?position=119.897118%2C30.296549&name=%E8%88%9F%E6%9E%95%28%E5%85%AC%E4%BA%A4%E7%AB%99%29&coordinate=gaode&callnative=0\" target=\"_blank\">标记：舟枕(公交站)</a>", "<a href=\"https://uri.amap.com/navigation?from=119.879869%2C30.302107%2C%E6%9D%AD%E5%B7%9E%E6%A1%82%E5%8D%9A%E5%9B%AD&to=119.897118%2C30.296549%2C%E8%88%9F%E6%9E%95%28%E5%85%AC%E4%BA%A4%E7%AB%99%29&mode=car&coordinate=gaode&callnative=0\" target=\"_blank\">导航：杭州桂博园 → 舟枕(公交站)</a>", "<a href=\"https://uri.amap.com/navigation?from=119.879869%2C30.302107%2C%E6%9D%AD%E5%B7%9E%E6%A1%82%E5%8D%9A%E5%9B%AD&to=119.897118%2C30.296549%2C%E8%88%9F%E6%9E%95%28%E5%85%AC%E4%BA%A4%E7%AB%99%29&mode=car&coordinate=gaode&callnative=0\" target=\"_blank\">分段：杭州桂博园 → 舟枕(公交站)</a>"];
+if (bounds.length) map.fitBounds(bounds, {padding:[40,40]});
+</script></body></html>

@@ -1,0 +1,204 @@
+[
+ {
+  "slug": "2026-10-16-大连烟台轮渡",
+  "title": "大连-烟台 渤海轮渡",
+  "city": "",
+  "mode": "driving",
+  "generated": "2026-10-16 13:26",
+  "dist_km": 178.41,
+  "dur_min": 710.7,
+  "source": "高德驾车路径规划（真实路网）",
+  "span_km": 165.81,
+  "points": [
+   {
+    "type": "起点",
+    "name": "辽渔大连湾航运中心",
+    "note": "甘井子区大连湾街，导航\"辽渔大连航运中心\"；车辆登船口在右侧，11点15分前到",
+    "gcj": [
+     121.710992,
+     39.02451
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "停车",
+    "name": "大连湾航运中心北停车场",
+    "note": "中远路新港客运站｜距「辽渔大连湾航运中心」约29米（高德 POI 实搜）｜另有：大连湾航运中心南停车场(74米)、停车场(辽渔医院西南)(97米)、辽渔医院停车场(134米)｜距「辽渔大连湾航运中心」约0.0 km",
+    "gcj": [
+     121.711034,
+     39.02477
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "烟台港客运站",
+    "note": "芝罘区环海路2号，下船点，19点55分抵达",
+    "gcj": [
+     121.377127,
+     37.556521
+    ],
+    "src": "高德POI"
+   }
+  ],
+  "missing": [],
+  "links": [
+   {
+    "url": "https://uri.amap.com/navigation?from=121.710992%2C39.024510%2C%E8%BE%BD%E6%B8%94%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83&to=121.377127%2C37.556521%2C%E7%83%9F%E5%8F%B0%E6%B8%AF%E5%AE%A2%E8%BF%90%E7%AB%99&mode=car&coordinate=gaode&callnative=1&via=121.711034%2C39.024770%2C%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83%E5%8C%97%E5%81%9C%E8%BD%A6%E5%9C%BA",
+    "label": "★ 打开高德（会自动唤起 App；到页面点「收藏」即存入账号）"
+   },
+   {
+    "url": "amapuri://route/plan/?sourceApplication=trip-book&dev=0&t=0&slat=39.024510&slon=121.710992&sname=%E8%BE%BD%E6%B8%94%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83&dlat=37.556521&dlon=121.377127&dname=%E7%83%9F%E5%8F%B0%E6%B8%AF%E5%AE%A2%E8%BF%90%E7%AB%99&via=121.711034%2C39.024770",
+    "label": "📱 备用：原生 scheme 直接唤起（未验证，①不行时再试）"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=121.710992%2C39.024510&name=%E8%BE%BD%E6%B8%94%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83&coordinate=gaode&callnative=0",
+    "label": "标记：辽渔大连湾航运中心"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=121.711034%2C39.024770&name=%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83%E5%8C%97%E5%81%9C%E8%BD%A6%E5%9C%BA&coordinate=gaode&callnative=0",
+    "label": "标记：大连湾航运中心北停车场"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=121.377127%2C37.556521&name=%E7%83%9F%E5%8F%B0%E6%B8%AF%E5%AE%A2%E8%BF%90%E7%AB%99&coordinate=gaode&callnative=0",
+    "label": "标记：烟台港客运站"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=121.710992%2C39.024510%2C%E8%BE%BD%E6%B8%94%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83&to=121.377127%2C37.556521%2C%E7%83%9F%E5%8F%B0%E6%B8%AF%E5%AE%A2%E8%BF%90%E7%AB%99&mode=car&coordinate=gaode&callnative=0",
+    "label": "导航：辽渔大连湾航运中心 → 烟台港客运站"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=121.710992%2C39.024510%2C%E8%BE%BD%E6%B8%94%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83&to=121.711034%2C39.024770%2C%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83%E5%8C%97%E5%81%9C%E8%BD%A6%E5%9C%BA&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：辽渔大连湾航运中心 → 大连湾航运中心北停车场"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=121.711034%2C39.024770%2C%E5%A4%A7%E8%BF%9E%E6%B9%BE%E8%88%AA%E8%BF%90%E4%B8%AD%E5%BF%83%E5%8C%97%E5%81%9C%E8%BD%A6%E5%9C%BA&to=121.377127%2C37.556521%2C%E7%83%9F%E5%8F%B0%E6%B8%AF%E5%AE%A2%E8%BF%90%E7%AB%99&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：大连湾航运中心北停车场 → 烟台港客运站"
+   }
+  ],
+  "files": {
+   "png": "2026-10-16-大连烟台轮渡.png",
+   "html": "2026-10-16-大连烟台轮渡.html",
+   "md": "2026-10-16-大连烟台轮渡.md"
+  }
+ },
+ {
+  "slug": "2026-10-14-杭州西湖西线-美食版",
+  "title": "杭州西湖西线·美食版",
+  "city": "杭州",
+  "mode": "walking",
+  "generated": "2026-10-15 14:12",
+  "dist_km": 2.59,
+  "dur_min": 34.6,
+  "source": "高德步行路径规划（真实路网）",
+  "span_km": 1.7,
+  "points": [
+   {
+    "type": "起点",
+    "name": "茅家埠",
+    "note": "杨公堤西侧，湖边步道起点，早上人少",
+    "gcj": [
+     120.128771,
+     30.240296
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "停车",
+    "name": "茅家埠地面停车场",
+    "note": "（高德搜「茅家埠地面停车场」）已封闭不能露营；评论区作者确认停车不受影响｜距「清溪余韵·花园餐厅(茅家埠店)」约0.1 km",
+    "gcj": [
+     120.125594,
+     30.23924
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "美食",
+    "name": "清溪余韵·花园餐厅(茅家埠店)",
+    "note": "（高德搜「清溪余韵·花园餐厅(茅家埠店)」）茅家埠下茅家埠12号 ☎0571-87969617（点评未标可带宠物，需先电话确认）",
+    "gcj": [
+     120.1259,
+     30.239715
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "乌龟潭",
+    "note": "水杉倒影，清晨最佳",
+    "gcj": [
+     120.133476,
+     30.232185
+    ],
+    "src": "高德POI"
+   },
+   {
+    "type": "景点",
+    "name": "浴鹄湾",
+    "note": "长廊倒影收尾",
+    "gcj": [
+     120.13651,
+     30.226565
+    ],
+    "src": "高德POI"
+   }
+  ],
+  "missing": [],
+  "links": [
+   {
+    "url": "https://uri.amap.com/navigation?from=120.128771%2C30.240296%2C%E8%8C%85%E5%AE%B6%E5%9F%A0&to=120.136510%2C30.226565%2C%E6%B5%B4%E9%B9%84%E6%B9%BE&mode=walk&coordinate=gaode&callnative=1&via=120.125594%2C30.239240%2C%E8%8C%85%E5%AE%B6%E5%9F%A0%E5%9C%B0%E9%9D%A2%E5%81%9C%E8%BD%A6%E5%9C%BA%3B120.125900%2C30.239715%2C%E6%B8%85%E6%BA%AA%E4%BD%99%E9%9F%B5%C2%B7%E8%8A%B1%E5%9B%AD%E9%A4%90%E5%8E%85%28%E8%8C%85%E5%AE%B6%E5%9F%A0%E5%BA%97%29%3B120.133476%2C30.232185%2C%E4%B9%8C%E9%BE%9F%E6%BD%AD",
+    "label": "★ 打开高德（会自动唤起 App；到页面点「收藏」即存入账号）"
+   },
+   {
+    "url": "amapuri://route/plan/?sourceApplication=trip-book&dev=0&t=2&slat=30.240296&slon=120.128771&sname=%E8%8C%85%E5%AE%B6%E5%9F%A0&dlat=30.226565&dlon=120.136510&dname=%E6%B5%B4%E9%B9%84%E6%B9%BE&via=120.125594%2C30.239240%3B120.125900%2C30.239715%3B120.133476%2C30.232185",
+    "label": "📱 备用：原生 scheme 直接唤起（未验证，①不行时再试）"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.128771%2C30.240296&name=%E8%8C%85%E5%AE%B6%E5%9F%A0&coordinate=gaode&callnative=0",
+    "label": "标记：茅家埠"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.125594%2C30.239240&name=%E8%8C%85%E5%AE%B6%E5%9F%A0%E5%9C%B0%E9%9D%A2%E5%81%9C%E8%BD%A6%E5%9C%BA&coordinate=gaode&callnative=0",
+    "label": "标记：茅家埠地面停车场"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.125900%2C30.239715&name=%E6%B8%85%E6%BA%AA%E4%BD%99%E9%9F%B5%C2%B7%E8%8A%B1%E5%9B%AD%E9%A4%90%E5%8E%85%28%E8%8C%85%E5%AE%B6%E5%9F%A0%E5%BA%97%29&coordinate=gaode&callnative=0",
+    "label": "标记：清溪余韵·花园餐厅(茅家埠店)"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.133476%2C30.232185&name=%E4%B9%8C%E9%BE%9F%E6%BD%AD&coordinate=gaode&callnative=0",
+    "label": "标记：乌龟潭"
+   },
+   {
+    "url": "https://uri.amap.com/marker?position=120.136510%2C30.226565&name=%E6%B5%B4%E9%B9%84%E6%B9%BE&coordinate=gaode&callnative=0",
+    "label": "标记：浴鹄湾"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.128771%2C30.240296%2C%E8%8C%85%E5%AE%B6%E5%9F%A0&to=120.136510%2C30.226565%2C%E6%B5%B4%E9%B9%84%E6%B9%BE&mode=car&coordinate=gaode&callnative=0",
+    "label": "导航：茅家埠 → 浴鹄湾"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.128771%2C30.240296%2C%E8%8C%85%E5%AE%B6%E5%9F%A0&to=120.125594%2C30.239240%2C%E8%8C%85%E5%AE%B6%E5%9F%A0%E5%9C%B0%E9%9D%A2%E5%81%9C%E8%BD%A6%E5%9C%BA&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：茅家埠 → 茅家埠地面停车场"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.125594%2C30.239240%2C%E8%8C%85%E5%AE%B6%E5%9F%A0%E5%9C%B0%E9%9D%A2%E5%81%9C%E8%BD%A6%E5%9C%BA&to=120.125900%2C30.239715%2C%E6%B8%85%E6%BA%AA%E4%BD%99%E9%9F%B5%C2%B7%E8%8A%B1%E5%9B%AD%E9%A4%90%E5%8E%85%28%E8%8C%85%E5%AE%B6%E5%9F%A0%E5%BA%97%29&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：茅家埠地面停车场 → 清溪余韵·花园餐厅(茅家埠店)"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.125900%2C30.239715%2C%E6%B8%85%E6%BA%AA%E4%BD%99%E9%9F%B5%C2%B7%E8%8A%B1%E5%9B%AD%E9%A4%90%E5%8E%85%28%E8%8C%85%E5%AE%B6%E5%9F%A0%E5%BA%97%29&to=120.133476%2C30.232185%2C%E4%B9%8C%E9%BE%9F%E6%BD%AD&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：清溪余韵·花园餐厅(茅家埠店) → 乌龟潭"
+   },
+   {
+    "url": "https://uri.amap.com/navigation?from=120.133476%2C30.232185%2C%E4%B9%8C%E9%BE%9F%E6%BD%AD&to=120.136510%2C30.226565%2C%E6%B5%B4%E9%B9%84%E6%B9%BE&mode=car&coordinate=gaode&callnative=0",
+    "label": "分段：乌龟潭 → 浴鹄湾"
+   }
+  ],
+  "files": {
+   "png": "2026-10-14-杭州西湖西线-美食版.png",
+   "html": "2026-10-14-杭州西湖西线-美食版.html",
+   "md": "2026-10-14-杭州西湖西线-美食版.md"
+  }
+ }
+]
