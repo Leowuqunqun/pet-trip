@@ -109,19 +109,28 @@ svg.paw{width:20px;height:20px;fill:currentColor;display:block}
   transition:transform .22s var(--ease),box-shadow .22s var(--ease);
 }
 .trip:active{transform:scale(.985);box-shadow:var(--sh-3)}
+/* 缩略图：**按图片真实比例**自适应，不再固定 aspect-ratio 4/5。
+   旧写法（aspect-ratio:4/5 + object-fit:contain）在宽幅路线图上会上下各让出一大块
+   米色 mat（实测 941×687 的图在 4/5 盒子里上下各空约 100px），而 🐾 水印正好被
+   居中的不透明地图盖住——两个毛病同源。
+   现在：容器高度 = 10px mat + 图片按卡片宽度等比缩放后的真实高度；图片用
+   width:100% / height:auto（不是 cover），所以横图竖图都不留大幅空白，也**不裁**路线。 */
 .thumb{
-  position:relative;aspect-ratio:4/5;padding:10px;
+  position:relative;padding:10px;
   background:linear-gradient(150deg,#F4E9D9,#EBDCC6);
   overflow:hidden;
 }
+/* 🐾 水印移到图片右下角的小圆印：底图不透明、又不再有留白，居中水印必被盖住；
+   放角上 + 半透明米色底 + 细边，既不挡路线也一定看得见（与左下角的宠物徽章分居两侧） */
 .thumb::after{
-  content:"\1F43E";position:absolute;inset:0;display:grid;place-items:center;
-  font-size:32px;opacity:.2;
+  content:"\1F43E";position:absolute;right:17px;bottom:17px;z-index:2;
+  width:27px;height:27px;display:grid;place-items:center;font-size:14px;line-height:1;
+  border-radius:50%;background:rgba(255,253,249,.86);border:1px solid var(--line-2);
+  box-shadow:var(--sh-1);pointer-events:none;
 }
-/* 地图是竖幅的，用 contain 完整显示整条路线，不裁掉；留白落在暖色mat上 */
 .thumb img{
-  position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block;
-  background:transparent;
+  position:relative;z-index:1;width:100%;height:auto;max-height:72vh;display:block;
+  object-fit:contain;background:transparent;border-radius:var(--r-m);
 }
 .thumb-pet{
   position:absolute;z-index:2;left:14px;bottom:14px;display:inline-flex;align-items:center;
@@ -499,8 +508,8 @@ body.flat .prov-badge{display:inline-flex}
 .explain code{font-family:inherit;background:#F3EDE4;border-radius:5px;padding:1px 5px;font-size:11.5px}
 
 @media (min-width:720px){
-  /* 桌面端别让竖幅地图把卡片撑到 900px 高 */
-  .thumb{aspect-ratio:16/11;padding:14px}
+  /* 图片已按真实比例自适应，桌面端只需要更宽的 mat，不再锁比例 */
+  .thumb{padding:14px}
 }
 @media (max-width:400px){
   .lede{font-size:24px}
@@ -525,7 +534,7 @@ body.flat .prov-badge{display:inline-flex}
 <div class="mapframe"><iframe src="travel/2026-10-16-浙江-杭州铜鉴湖带狗半日.html" loading="lazy" title="交互地图"></iframe></div>
 <a class="map-hint" href="travel/2026-10-16-浙江-杭州铜鉴湖带狗半日.html" target="_blank" rel="noopener">地图可以拖动缩放；打不开就在新窗口打开原始页面 →</a>
 <h2 class="sect">点位<span class="n">6</span><span class="rule"></span></h2>
-<ol class="pts"><li class="pt" data-pet="ask"><span class="pt-ix">1</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">铜鉴湖公园</h3><span class="status ask">☎ 待确认</span></div><div class="pt-sub"><span class="tag start">起点</span><span class="pt-src">高德POI</span></div><p class="pt-note">双浦镇灵山风景区 ☎<a class="tel" href="tel:18157198875">18157198875</a>｜挂载命中（逐字同名，high）＋小红书`69c4e173`（C级UGC，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">2</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">铜鉴湖里湖P2停车场</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag park">停车</span><span class="pt-src">高德POI</span></div><p class="pt-note">铜鉴湖里湖公园｜**高德 POI 实搜**（池子该片区没有停车场 POI）距铜鉴湖公园约 0.46 km｜距「铜鉴湖公园」约0.5 km</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">3</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">铜鉴湖花海露营地</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag sight">景点</span><span class="pt-src">高德POI</span></div><p class="pt-note">铜鉴湖花海西侧200米｜池子 POI（营地），铜鉴湖花海边，草坪开阔</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=营地</p></div></li><li class="pt" data-pet="ask"><span class="pt-ix">4</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">云泉餐厅</h3><span class="status ask">☎ 待确认</span></div><div class="pt-sub"><span class="tag food">美食</span><span class="pt-src">高德POI</span></div><p class="pt-note">双浦镇灵山村518号-1-203 ☎<a class="tel" href="tel:18106585920">18106585920</a>｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎<a class="tel" href="tel:18106585920">18106585920</a></p></div></li><li class="pt" data-pet="other"><span class="pt-ix">5</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">今天不上班</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag sight">景点</span><span class="pt-src">高德POI</span></div><p class="pt-note">灵山中路108号 ☎<a class="tel" href="tel:18989891503">18989891503</a>｜池子 POI（休闲/营地），灵山景区内，有电话可问</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=休闲/营地</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">6</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">漫步山丘露营咖啡团建</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag sight">景点</span><span class="pt-src">高德POI</span></div><p class="pt-note">双浦镇灵山风景区 ☎<a class="tel" href="tel:13716512269">13716512269</a>｜池子 POI（营地咖啡），铜鉴湖西侧</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=营地咖啡</p></div></li></ol>
+<ol class="pts"><li class="pt" data-pet="ask"><span class="pt-ix">1</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">铜鉴湖公园</h3><span class="status ask">☎ 待确认</span></div><div class="pt-sub"><span class="tag start">起点</span><span class="pt-src">高德POI</span></div><p class="pt-note">双浦镇灵山风景区 ☎<a class="tel" href="tel:18157198875">18157198875</a>｜挂载命中（逐字同名，high）＋小红书`69c4e173`（C级UGC，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">2</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">铜鉴湖里湖P2停车场</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag park">停车</span><span class="pt-src">高德POI</span></div><p class="pt-note">铜鉴湖里湖公园｜<strong>高德 POI 实搜</strong>（池子该片区没有停车场 POI）距铜鉴湖公园约 0.46 km｜距「铜鉴湖公园」约0.5 km</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">3</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">铜鉴湖花海露营地</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag sight">景点</span><span class="pt-src">高德POI</span></div><p class="pt-note">铜鉴湖花海西侧200米｜池子 POI（营地），铜鉴湖花海边，草坪开阔</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=营地</p></div></li><li class="pt" data-pet="ask"><span class="pt-ix">4</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">云泉餐厅</h3><span class="status ask">☎ 待确认</span></div><div class="pt-sub"><span class="tag food">美食</span><span class="pt-src">高德POI</span></div><p class="pt-note">双浦镇灵山村518号-1-203 ☎<a class="tel" href="tel:18106585920">18106585920</a>｜本阶段未做点评核验、无宠物来源可依，需先电话确认 ☎<a class="tel" href="tel:18106585920">18106585920</a></p></div></li><li class="pt" data-pet="other"><span class="pt-ix">5</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">今天不上班</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag sight">景点</span><span class="pt-src">高德POI</span></div><p class="pt-note">灵山中路108号 ☎<a class="tel" href="tel:18989891503">18989891503</a>｜池子 POI（休闲/营地），灵山景区内，有电话可问</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=休闲/营地</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">6</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">漫步山丘露营咖啡团建</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag sight">景点</span><span class="pt-src">高德POI</span></div><p class="pt-note">双浦镇灵山风景区 ☎<a class="tel" href="tel:13716512269">13716512269</a>｜池子 POI（营地咖啡），铜鉴湖西侧</p><div class="tagrow"><span class="tagp camp">⛺ 露营</span></div><p class="tag-ev">依据：类型=营地咖啡</p></div></li></ol>
 
 <h2 class="sect">导航 / 存进高德<span class="rule"></span></h2>
 <a class="btn primary" href="https://uri.amap.com/navigation?from=120.068940%2C30.126538%2C%E9%93%9C%E9%89%B4%E6%B9%96%E5%85%AC%E5%9B%AD&amp;to=120.046525%2C30.120925%2C%E6%BC%AB%E6%AD%A5%E5%B1%B1%E4%B8%98%E9%9C%B2%E8%90%A5%E5%92%96%E5%95%A1%E5%9B%A2%E5%BB%BA&amp;mode=walk&amp;coordinate=gaode&amp;callnative=1&amp;via=120.068944%2C30.122388%2C%E9%93%9C%E9%89%B4%E6%B9%96%E9%87%8C%E6%B9%96P2%E5%81%9C%E8%BD%A6%E5%9C%BA%3B120.069745%2C30.117156%2C%E9%93%9C%E9%89%B4%E6%B9%96%E8%8A%B1%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0%3B120.050337%2C30.119846%2C%E4%BA%91%E6%B3%89%E9%A4%90%E5%8E%85%3B120.053421%2C30.116256%2C%E4%BB%8A%E5%A4%A9%E4%B8%8D%E4%B8%8A%E7%8F%AD"><span>★ 打开高德（会自动唤起 App；到页面点「收藏」即存入账号）</span></a>

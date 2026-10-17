@@ -109,19 +109,28 @@ svg.paw{width:20px;height:20px;fill:currentColor;display:block}
   transition:transform .22s var(--ease),box-shadow .22s var(--ease);
 }
 .trip:active{transform:scale(.985);box-shadow:var(--sh-3)}
+/* 缩略图：**按图片真实比例**自适应，不再固定 aspect-ratio 4/5。
+   旧写法（aspect-ratio:4/5 + object-fit:contain）在宽幅路线图上会上下各让出一大块
+   米色 mat（实测 941×687 的图在 4/5 盒子里上下各空约 100px），而 🐾 水印正好被
+   居中的不透明地图盖住——两个毛病同源。
+   现在：容器高度 = 10px mat + 图片按卡片宽度等比缩放后的真实高度；图片用
+   width:100% / height:auto（不是 cover），所以横图竖图都不留大幅空白，也**不裁**路线。 */
 .thumb{
-  position:relative;aspect-ratio:4/5;padding:10px;
+  position:relative;padding:10px;
   background:linear-gradient(150deg,#F4E9D9,#EBDCC6);
   overflow:hidden;
 }
+/* 🐾 水印移到图片右下角的小圆印：底图不透明、又不再有留白，居中水印必被盖住；
+   放角上 + 半透明米色底 + 细边，既不挡路线也一定看得见（与左下角的宠物徽章分居两侧） */
 .thumb::after{
-  content:"\1F43E";position:absolute;inset:0;display:grid;place-items:center;
-  font-size:32px;opacity:.2;
+  content:"\1F43E";position:absolute;right:17px;bottom:17px;z-index:2;
+  width:27px;height:27px;display:grid;place-items:center;font-size:14px;line-height:1;
+  border-radius:50%;background:rgba(255,253,249,.86);border:1px solid var(--line-2);
+  box-shadow:var(--sh-1);pointer-events:none;
 }
-/* 地图是竖幅的，用 contain 完整显示整条路线，不裁掉；留白落在暖色mat上 */
 .thumb img{
-  position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block;
-  background:transparent;
+  position:relative;z-index:1;width:100%;height:auto;max-height:72vh;display:block;
+  object-fit:contain;background:transparent;border-radius:var(--r-m);
 }
 .thumb-pet{
   position:absolute;z-index:2;left:14px;bottom:14px;display:inline-flex;align-items:center;
@@ -499,8 +508,8 @@ body.flat .prov-badge{display:inline-flex}
 .explain code{font-family:inherit;background:#F3EDE4;border-radius:5px;padding:1px 5px;font-size:11.5px}
 
 @media (min-width:720px){
-  /* 桌面端别让竖幅地图把卡片撑到 900px 高 */
-  .thumb{aspect-ratio:16/11;padding:14px}
+  /* 图片已按真实比例自适应，桌面端只需要更宽的 mat，不再锁比例 */
+  .thumb{padding:14px}
 }
 @media (max-width:400px){
   .lede{font-size:24px}
@@ -525,7 +534,7 @@ body.flat .prov-badge{display:inline-flex}
 <div class="mapframe"><iframe src="travel/2026-10-16-浙江-莫干山庾村携宠慢行.html" loading="lazy" title="交互地图"></iframe></div>
 <a class="map-hint" href="travel/2026-10-16-浙江-莫干山庾村携宠慢行.html" target="_blank" rel="noopener">地图可以拖动缩放；打不开就在新窗口打开原始页面 →</a>
 <h2 class="sect">点位<span class="n">6</span><span class="rule"></span></h2>
-<ol class="pts"><li class="pt" data-pet="other"><span class="pt-ix">1</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">莫干山橙月·黑胶唱片民宿</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag start">起点</span><span class="pt-src">高德POI</span></div><p class="pt-note">莫干山镇何村村方村坞26号 ☎<a class="tel" href="tel:13482824274">13482824274</a>｜小红书`6a0886a8`（C级UGC，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">2</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">庾信北街停车场</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag park">停车</span><span class="pt-src">高德POI</span></div><p class="pt-note">庾信北街25号｜**高德 POI 实搜**（池子里庾村片区没有停车场 POI，不许编；这条是真搜出来的）距庾村广场约 0.2 km｜距「OmitoHotel·莫干山」约0.2 km</p></div></li><li class="pt" data-pet="ask"><span class="pt-ix">3</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">金鱼妈妈·山尖尖有面儿</h3><span class="status ask">☎ 待确认</span></div><div class="pt-sub"><span class="tag food">美食</span><span class="pt-src">高德POI</span></div><p class="pt-note">莫干山镇燎原村后村68号 ☎<a class="tel" href="tel:05728212017">0572-8212017</a>｜小红书作者提到可带（C级UGC，未核验）☎<a class="tel" href="tel:05728212017">0572-8212017</a>｜原文：「▫️看完日落六点半 我们导航去了庾村 吃了“金鱼妈妈” 这里都是宠物友好👫 点评双人套餐又加了其他吃的」（笔记 69d63f45）</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">4</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">OmitoHotel·莫干山</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag sight">景点</span><span class="pt-src">高德POI</span></div><p class="pt-note">莫干山镇黄郛东路234号 ☎<a class="tel" href="tel:13362298098">13362298098</a>｜小红书评论（C级UGC，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d）</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">5</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">下渚湖·湿地公园</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag sight">景点</span><span class="pt-src">高德POI</span></div><p class="pt-note">三合乡下渚湖 ☎<a class="tel" href="tel:05728484158">0572-8484158</a>｜小红书（C级UGC，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc）</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">6</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">大乐之野(莫干山庾村店)</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag alt">备选</span><span class="pt-src">高德POI</span></div><p class="pt-note">莫干山镇黄郛西路85号 ☎<a class="tel" href="tel:17774158008">17774158008</a>｜庾村广场旁的备选落脚点（本阶段无来源可依）</p></div></li></ol>
+<ol class="pts"><li class="pt" data-pet="other"><span class="pt-ix">1</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">莫干山橙月·黑胶唱片民宿</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag start">起点</span><span class="pt-src">高德POI</span></div><p class="pt-note">莫干山镇何村村方村坞26号 ☎<a class="tel" href="tel:13482824274">13482824274</a>｜小红书`6a0886a8`（C级UGC，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">2</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">庾信北街停车场</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag park">停车</span><span class="pt-src">高德POI</span></div><p class="pt-note">庾信北街25号｜<strong>高德 POI 实搜</strong>（池子里庾村片区没有停车场 POI，不许编；这条是真搜出来的）距庾村广场约 0.2 km｜距「OmitoHotel·莫干山」约0.2 km</p></div></li><li class="pt" data-pet="ask"><span class="pt-ix">3</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">金鱼妈妈·山尖尖有面儿</h3><span class="status ask">☎ 待确认</span></div><div class="pt-sub"><span class="tag food">美食</span><span class="pt-src">高德POI</span></div><p class="pt-note">莫干山镇燎原村后村68号 ☎<a class="tel" href="tel:05728212017">0572-8212017</a>｜小红书作者提到可带（C级UGC，未核验）☎<a class="tel" href="tel:05728212017">0572-8212017</a>｜原文：「▫️看完日落六点半 我们导航去了庾村 吃了“金鱼妈妈” 这里都是宠物友好👫 点评双人套餐又加了其他吃的」（笔记 69d63f45）</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">4</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">OmitoHotel·莫干山</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag sight">景点</span><span class="pt-src">高德POI</span></div><p class="pt-note">莫干山镇黄郛东路234号 ☎<a class="tel" href="tel:13362298098">13362298098</a>｜小红书评论（C级UGC，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d）</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">5</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">下渚湖·湿地公园</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag sight">景点</span><span class="pt-src">高德POI</span></div><p class="pt-note">三合乡下渚湖 ☎<a class="tel" href="tel:05728484158">0572-8484158</a>｜小红书（C级UGC，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc）</p></div></li><li class="pt" data-pet="other"><span class="pt-ix">6</span><div class="pt-body"><div class="pt-head"><h3 class="pt-name">大乐之野(莫干山庾村店)</h3><span class="status none">无宠物信息</span></div><div class="pt-sub"><span class="tag alt">备选</span><span class="pt-src">高德POI</span></div><p class="pt-note">莫干山镇黄郛西路85号 ☎<a class="tel" href="tel:17774158008">17774158008</a>｜庾村广场旁的备选落脚点（本阶段无来源可依）</p></div></li></ol>
 
 <h2 class="sect">导航 / 存进高德<span class="rule"></span></h2>
 <a class="btn primary" href="https://uri.amap.com/navigation?from=119.882980%2C30.564815%2C%E8%8E%AB%E5%B9%B2%E5%B1%B1%E6%A9%99%E6%9C%88%C2%B7%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E6%B0%91%E5%AE%BF&amp;to=119.894158%2C30.600119%2C%E5%A4%A7%E4%B9%90%E4%B9%8B%E9%87%8E%28%E8%8E%AB%E5%B9%B2%E5%B1%B1%E5%BA%BE%E6%9D%91%E5%BA%97%29&amp;mode=car&amp;coordinate=gaode&amp;callnative=1&amp;via=119.901980%2C30.598463%2C%E5%BA%BE%E4%BF%A1%E5%8C%97%E8%A1%97%E5%81%9C%E8%BD%A6%E5%9C%BA%3B119.908716%2C30.585394%2C%E9%87%91%E9%B1%BC%E5%A6%88%E5%A6%88%C2%B7%E5%B1%B1%E5%B0%96%E5%B0%96%E6%9C%89%E9%9D%A2%E5%84%BF%3B119.902940%2C30.596898%2COmitoHotel%C2%B7%E8%8E%AB%E5%B9%B2%E5%B1%B1%3B120.051336%2C30.519303%2C%E4%B8%8B%E6%B8%9A%E6%B9%96%C2%B7%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD"><span>★ 打开高德（会自动唤起 App；到页面点「收藏」即存入账号）</span></a>

@@ -109,19 +109,28 @@ svg.paw{width:20px;height:20px;fill:currentColor;display:block}
   transition:transform .22s var(--ease),box-shadow .22s var(--ease);
 }
 .trip:active{transform:scale(.985);box-shadow:var(--sh-3)}
+/* 缩略图：**按图片真实比例**自适应，不再固定 aspect-ratio 4/5。
+   旧写法（aspect-ratio:4/5 + object-fit:contain）在宽幅路线图上会上下各让出一大块
+   米色 mat（实测 941×687 的图在 4/5 盒子里上下各空约 100px），而 🐾 水印正好被
+   居中的不透明地图盖住——两个毛病同源。
+   现在：容器高度 = 10px mat + 图片按卡片宽度等比缩放后的真实高度；图片用
+   width:100% / height:auto（不是 cover），所以横图竖图都不留大幅空白，也**不裁**路线。 */
 .thumb{
-  position:relative;aspect-ratio:4/5;padding:10px;
+  position:relative;padding:10px;
   background:linear-gradient(150deg,#F4E9D9,#EBDCC6);
   overflow:hidden;
 }
+/* 🐾 水印移到图片右下角的小圆印：底图不透明、又不再有留白，居中水印必被盖住；
+   放角上 + 半透明米色底 + 细边，既不挡路线也一定看得见（与左下角的宠物徽章分居两侧） */
 .thumb::after{
-  content:"\1F43E";position:absolute;inset:0;display:grid;place-items:center;
-  font-size:32px;opacity:.2;
+  content:"\1F43E";position:absolute;right:17px;bottom:17px;z-index:2;
+  width:27px;height:27px;display:grid;place-items:center;font-size:14px;line-height:1;
+  border-radius:50%;background:rgba(255,253,249,.86);border:1px solid var(--line-2);
+  box-shadow:var(--sh-1);pointer-events:none;
 }
-/* 地图是竖幅的，用 contain 完整显示整条路线，不裁掉；留白落在暖色mat上 */
 .thumb img{
-  position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block;
-  background:transparent;
+  position:relative;z-index:1;width:100%;height:auto;max-height:72vh;display:block;
+  object-fit:contain;background:transparent;border-radius:var(--r-m);
 }
 .thumb-pet{
   position:absolute;z-index:2;left:14px;bottom:14px;display:inline-flex;align-items:center;
@@ -499,8 +508,8 @@ body.flat .prov-badge{display:inline-flex}
 .explain code{font-family:inherit;background:#F3EDE4;border-radius:5px;padding:1px 5px;font-size:11.5px}
 
 @media (min-width:720px){
-  /* 桌面端别让竖幅地图把卡片撑到 900px 高 */
-  .thumb{aspect-ratio:16/11;padding:14px}
+  /* 图片已按真实比例自适应，桌面端只需要更宽的 mat，不再锁比例 */
+  .thumb{padding:14px}
 }
 @media (max-width:400px){
   .lede{font-size:24px}
