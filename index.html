@@ -86,6 +86,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   transition:background .16s var(--ease),border-color .16s var(--ease),color .16s var(--ease);
 }
 .chip:active{transform:scale(.97)}
+.more-note{padding:16px 14px 22px;text-align:center;color:var(--ink-3);font-size:12px;line-height:1.7;border-top:1px dashed var(--line);}
 .chip[aria-pressed="true"]{
   background:var(--ink);border-color:var(--ink);color:#FFF9F2;font-weight:500;
 }
@@ -375,6 +376,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       <label class="chip-wrap">单程 ≤ <b id="range-out">5.0</b>h
         <input type="range" id="range" min="1" max="6" step="0.5" value="5">
       </label>
+      <button class="chip" data-f="tier" aria-pressed="true">精选</button>
       <button class="chip" data-f="night" aria-pressed="false">能过夜</button>
       <button class="chip" data-f="dog" aria-pressed="false">已确认可带狗</button>
       <button class="chip" data-f="camp" aria-pressed="false">营地</button>
@@ -388,7 +390,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     <div class="sheet" id="sheet">
       <div class="grab" id="grab"><i></i></div>
       <div class="sheet-head">
-        <h2>按车程排</h2>
+        <h2>精选优先</h2>
         <div class="hint" id="list-hint"></div>
       </div>
       <div class="list" id="list"></div>
@@ -446,7 +448,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, kinds:{}, active:null};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, tier:true, kinds:{}, active:null};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -471,6 +473,7 @@ function isNight(s){var k=nightKey(s);return k==="official_camp"||k==="lodging"|
 
 /* ───────── 筛选 ───────── */
 function match(s){
+  if(STATE.tier && s.tier !== "A") return false;
   if(s.drive && s.drive.hours_oneway > STATE.hours) return false;
   if(!s.drive) return false;
   if(STATE.night && !isNight(s)) return false;
@@ -493,6 +496,12 @@ function match(s){
 /* ───────── 渲染列表 ───────── */
 function render(){
   var list = DATA.spots.filter(match);
+  /* 精选优先，同档按车程排——A 档本来就少，混在 1000 多个点里会沉底 */
+  list = list.slice().sort(function(a,b){
+    var ta = a.tier==="A"?0:1, tb = b.tier==="A"?0:1;
+    if(ta!==tb) return ta-tb;
+    return (a.drive.hours_oneway||99)-(b.drive.hours_oneway||99);
+  });
   el("count").textContent = list.length + " 个点";
   var hint = el("list-hint");
   hint.textContent = "单程 " + STATE.hours.toFixed(1) + "h 内";
@@ -503,11 +512,16 @@ function render(){
     syncMarkers(list);
     return;
   }
-  box.innerHTML = list.map(function(s){
+  var TOTAL = list.length, PAGE = 120;
+  var pageList = list.slice(0, PAGE);
+  box.innerHTML = pageList.map(function(s){
     var k = s.kind, col = KIND_COLOR[k]||"#9C8A76";
     var nk = nightKey(s), dk = dogKey(s);
-    var badges = tag(NIGHT_LABEL[nk][0], NIGHT_LABEL[nk][1]) +
-                 tag(DOG_LABEL[dk][0], DOG_LABEL[dk][1]);
+    /* 未知值不挂徽章：新增的 1300 多个点全是"未核实"，
+       每张卡都挂两个一样的灰标等于没传递任何信息。
+       详情页仍完整显示"未核实"，筛选器「已确认可带狗」是唯一的确认口径。 */
+    var badges = (nk==="unknown" ? "" : tag(NIGHT_LABEL[nk][0], NIGHT_LABEL[nk][1])) +
+                 (dk==="unknown" ? "" : tag(DOG_LABEL[dk][0], DOG_LABEL[dk][1]));
     var ph = s.photos && s.photos.length ? s.photos : null;
     /* 列表缩略图挑"看得出这是哪儿"的那张：
        小红书首图常是带大字封面的拼图或自拍，做缩略图很糟；
@@ -534,7 +548,10 @@ function render(){
         '</span>' +
         '<span class="card-meta" style="margin-top:6px;gap:5px">'+badges+'</span>' +
       '</span></button>';
-  }).join("");
+  }).join("") + (TOTAL > PAGE
+      ? '<div class="more-note">还有 ' + (TOTAL - PAGE) + ' 个点没列出来。<br>' +
+        '缩小范围看，或点上方「全部」。</div>'
+      : "");
   syncMarkers(list);
 }
 
@@ -624,17 +641,17 @@ function openDetail(id){
         var line = isXhs
           ? '<b>@'+esc(p.author || "小红书作者")+'</b>' +
             (p.title ? ' · '+esc(p.title.slice(0, 16)) : '')
-          : esc(p.poi_name || "高德地图");
+          : esc(p.poi_name || s.name);
         return '<figure>' +
                '<img src="'+esc(p.url)+'" alt="'+esc(s.name)+'" loading="lazy" ' +
                'referrerpolicy="no-referrer" onerror="__imgFail(this)">' +
                '<span class="src-tag'+(isXhs ? " xhs" : "")+'">' +
-                 (isXhs ? "小红书实拍" : "高德") + '</span>' +
+                 (isXhs ? "小红书实拍" : "实拍") + '</span>' +
                '<figcaption>'+line+'</figcaption></figure>';
       }).join("") + '</div></div>';
   } else {
     html += '<div class="sec" style="margin-top:4px"><div class="nophoto">' +
-      '这个点在高德没有商户照片 —— 不是加载失败，是本来就没有。<br>' +
+      '这个点还没有实拍图 —— 不是加载失败，是确实没找到。<br>' +
       '<span style="color:var(--ink-2)">去之前建议先搜一眼实拍，别只信名字。</span></div></div>';
   }
 
@@ -680,10 +697,14 @@ function openDetail(id){
   }
 
   /* 出处 */
+  /* 出处只说「这条线索从哪来」。查看的人不关心底图/坐标是哪家，
+     所以这里只显示渠道（小红书带狗笔记 / 抖音带狗行程），不出现地图厂商。 */
   var src = [];
-  if(s.geo_src) src.push("坐标：" + s.geo_src);
-  if(s.trips && s.trips.length) src.push("出自行程：" + s.trips.join("、"));
-  if(s.raw_note) src.push(s.raw_note);
+  if(s.origin) src.push(s.origin);
+  var tripNames = (s.trips || []).filter(function(t){
+    return t.indexOf("高德POI") !== 0 && t.indexOf("小红书-") !== 0; });
+  if(tripNames.length) src.push("出自：" + tripNames.join("、"));
+  if(s.raw_note) src.push("说明：" + s.raw_note);
   if(src.length){
     html += '<div class="sec"><div class="sec-t">出处</div><div class="panel"><div class="note-txt" style="font-size:12.5px;color:var(--ink-2)">'+
       src.map(esc).join("<br>")+'</div></div></div>';
@@ -694,7 +715,7 @@ function openDetail(id){
             "&name=" + encodeURIComponent(s.name) + "&src=pet-trip&coordinate=gaode&callnative=1";
   html += '<div class="actions">' +
     '<a class="btn" href="'+nav+'" target="_blank" rel="noopener">' +
-      '<svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>高德导航</a>' +
+      '<svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>导航</a>' +
     '<button class="btn ghost" id="d-fly">在地图上定位</button>' +
     '</div>' +
     '<div class="actions" style="margin-top:9px">' +
@@ -735,6 +756,7 @@ function bind(){
     b.setAttribute("aria-pressed", on ? "false" : "true");
     if(f==="night") STATE.night = !on;
     else if(f==="dog") STATE.dog = !on;
+    else if(f==="tier") STATE.tier = !on;
     else STATE.kinds[f] = !on;
     render();
   });
