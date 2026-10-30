@@ -174,6 +174,24 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   flex:none;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
   font-size:11.5px;font-weight:700;color:#FFF;letter-spacing:-.02em;
 }
+.card-thumb{
+  flex:none;width:66px;height:66px;border-radius:13px;position:relative;overflow:hidden;
+  background-color:var(--line);
+  box-shadow:inset 0 0 0 1px rgba(74,50,28,.07);
+}
+.card-thumb img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
+}
+.card-thumb .fb{
+  position:absolute;inset:0;display:grid;place-items:center;
+  font-size:11.5px;font-weight:700;color:#FFF;letter-spacing:-.02em;
+}
+.card-thumb .cnt{
+  position:absolute;right:3px;bottom:3px;font-size:9.5px;line-height:1.4;
+  padding:1px 5px;border-radius:6px;color:#FFF;
+  background:rgba(32,24,16,.66);backdrop-filter:blur(3px);
+  font-variant-numeric:tabular-nums;
+}
 .card-body{flex:1;min-width:0}
 .card-name{
   font-size:14.5px;font-weight:600;line-height:1.35;color:var(--ink);
@@ -264,6 +282,53 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .subpoi+.subpoi{border-top:1px solid var(--line)}
 .subpoi i{flex:none;width:5px;height:5px;border-radius:50%;background:var(--terra);margin-top:8px}
 
+/* ══════════ 照片 ══════════ */
+.gallery{
+  display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  margin:0 calc(-1 * var(--pad-r)) 0 calc(-1 * var(--pad-l));
+  padding:0 var(--pad-r) 6px var(--pad-l);
+}
+.gallery::-webkit-scrollbar{display:none}
+.gallery figure{margin:0;flex:none;scroll-snap-align:start;width:min(74vw,300px);position:relative}
+.src-tag{
+  position:absolute;left:7px;top:7px;font-size:9.5px;line-height:1.5;padding:2px 7px;
+  border-radius:7px;color:#FFF;background:rgba(32,24,16,.62);
+  backdrop-filter:blur(4px);letter-spacing:.02em;pointer-events:none;
+}
+.src-tag.xhs{background:rgba(226,40,64,.86)}
+.gallery img{
+  display:block;width:100%;height:172px;object-fit:cover;border-radius:var(--r-m);
+  border:1px solid var(--line);background:var(--line);cursor:zoom-in;
+}
+.gallery img.broken{
+  border-style:dashed;border-color:var(--line-2);cursor:default;
+  background:repeating-linear-gradient(135deg,#F6F1E9,#F6F1E9 9px,#EFE7DB 9px,#EFE7DB 18px);
+}
+.gallery figcaption{
+  font-size:11px;color:var(--ink-3);margin-top:5px;line-height:1.4;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.gallery figcaption b{color:var(--ink-2);font-weight:500}
+.nophoto{
+  font-size:12.5px;color:var(--ink-3);line-height:1.6;
+  padding:14px;background:#F6F1E9;border:1px dashed var(--line-2);
+  border-radius:var(--r-m);text-align:center;
+}
+.lightbox{
+  position:fixed;inset:0;z-index:2000;display:none;
+  align-items:center;justify-content:center;background:rgba(20,14,8,.95);
+  padding:env(safe-area-inset-top,0px) 8px env(safe-area-inset-bottom,0px);
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px}
+.lightbox .lb-close{
+  position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;
+  width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.16);
+  display:grid;place-items:center;color:#FFF;backdrop-filter:blur(6px);
+}
+.lightbox .lb-close svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.2;fill:none;stroke-linecap:round}
+
 /* ══════════ 桌面端 ══════════ */
 @media (min-width:860px){
   .stage{flex-direction:row;position:static;height:100%}
@@ -346,6 +411,13 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   </div>
 </div>
 
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lb-close" aria-label="关闭">
+    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img id="lb-img" alt="">
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script>
@@ -378,6 +450,17 @@ var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, k
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
+/* 在线图挂了不显示破图图标，改成"图没加载出来"的虚线占位 */
+window.__imgFail = function(img){
+  img.classList.add("broken");
+  img.removeAttribute("src");
+  var fig = img.parentNode.querySelector("figcaption");
+  if(fig && !fig.dataset.warn){
+    fig.dataset.warn = "1";
+    fig.innerHTML += ' · <span style="color:var(--ink-3)">图未加载</span>';
+  }
+};
+
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
   return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
 function hm(h){var t=Math.round(h*60);return Math.floor(t/60)+"h"+(t%60?String(t%60).padStart(2,"0"):"");}
@@ -425,8 +508,23 @@ function render(){
     var nk = nightKey(s), dk = dogKey(s);
     var badges = tag(NIGHT_LABEL[nk][0], NIGHT_LABEL[nk][1]) +
                  tag(DOG_LABEL[dk][0], DOG_LABEL[dk][1]);
+    var ph = s.photos && s.photos.length ? s.photos : null;
+    /* 列表缩略图挑"看得出这是哪儿"的那张：
+       小红书首图常是带大字封面的拼图或自拍，做缩略图很糟；
+       高德商户图通常是地点本身。都没有才退回小红书第 2 张（跳过封面）。 */
+    var thumbSrc = null;
+    if(ph){
+      var gd = ph.filter(function(p){ return p.src !== "小红书"; });
+      var xh = ph.filter(function(p){ return p.src === "小红书"; });
+      thumbSrc = (gd[0] || xh[1] || xh[0] || ph[0]).url;
+    }
+    var thumb = '<span class="card-thumb">' +
+        '<span class="fb" style="background:'+col+'">'+(KIND_ICON[k]||"·")+'</span>' +
+        (thumbSrc ? '<img src="'+esc(thumbSrc)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' +
+              (ph.length>1 ? '<span class="cnt">'+ph.length+'</span>' : '') : '') +
+      '</span>';
     return '<button class="card'+(STATE.active===s.id?" active":"")+'" data-id="'+esc(s.id)+'">' +
-      '<span class="card-badge" style="background:'+col+'">'+(KIND_ICON[k]||"·")+'</span>' +
+      thumb +
       '<span class="card-body">' +
         '<span class="card-name">'+esc(s.name)+'</span>' +
         '<span class="card-meta">' +
@@ -475,7 +573,12 @@ function syncMarkers(list){
   var layers = list.map(function(s){
     var mk = L.marker([s.gcj[1], s.gcj[0]], {icon:pinIcon(s), riseOnHover:true});
     var nk=nightKey(s), dk=dogKey(s);
+    var ph0 = (s.photos && s.photos[0])
+      ? '<img src="'+esc(s.photos[0].url)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" ' +
+        'style="width:100%;height:92px;object-fit:cover;border-radius:8px;margin-bottom:7px;display:block">'
+      : '';
     mk.bindPopup(
+      ph0 +
       '<div class="pop-t">'+esc(s.name)+'</div>' +
       '<div class="pop-row">单程 '+hm(s.drive.hours_oneway)+' · '+Math.round(s.drive.km)+' km · '+esc(KIND_LABEL[s.kind]||"其他")+'</div>' +
       '<div class="pop-row">'+esc(NIGHT_LABEL[nk][0])+' · '+esc(DOG_LABEL[dk][0])+'</div>'
@@ -512,6 +615,28 @@ function openDetail(id){
   var o = s.overnight||{}, dg = s.dog||{};
 
   var html = "";
+
+  /* 照片：先看图，再看结论——"长啥样"比指标更直觉 */
+  if(s.photos && s.photos.length){
+    html += '<div class="sec" style="margin-top:4px"><div class="gallery">' +
+      s.photos.map(function(p){
+        var isXhs = p.src === "小红书";
+        var line = isXhs
+          ? '<b>@'+esc(p.author || "小红书作者")+'</b>' +
+            (p.title ? ' · '+esc(p.title.slice(0, 16)) : '')
+          : esc(p.poi_name || "高德地图");
+        return '<figure>' +
+               '<img src="'+esc(p.url)+'" alt="'+esc(s.name)+'" loading="lazy" ' +
+               'referrerpolicy="no-referrer" onerror="__imgFail(this)">' +
+               '<span class="src-tag'+(isXhs ? " xhs" : "")+'">' +
+                 (isXhs ? "小红书实拍" : "高德") + '</span>' +
+               '<figcaption>'+line+'</figcaption></figure>';
+      }).join("") + '</div></div>';
+  } else {
+    html += '<div class="sec" style="margin-top:4px"><div class="nophoto">' +
+      '这个点在高德没有商户照片 —— 不是加载失败，是本来就没有。<br>' +
+      '<span style="color:var(--ink-2)">去之前建议先搜一眼实拍，别只信名字。</span></div></div>';
+  }
 
   /* 核心答案条：这地方能不能今晚睡 */
   html += '<div class="sec"><div class="panel" style="border-left:3px solid '+
@@ -629,6 +754,26 @@ function bind(){
   });
   el("grab").addEventListener("click", function(){
     el("sheet").classList.toggle("expanded");
+  });
+  /* 画廊点图 → 大图 */
+  el("d-body").addEventListener("click", function(e){
+    var img = e.target.closest(".gallery img");
+    if(!img || img.classList.contains("broken") || !img.getAttribute("src")) return;
+    el("lb-img").src = img.src;
+    el("lightbox").classList.add("open");
+  });
+  el("lb-close").addEventListener("click", function(){
+    el("lightbox").classList.remove("open");
+  });
+  el("lightbox").addEventListener("click", function(e){
+    if(e.target === el("lightbox")) el("lightbox").classList.remove("open");
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+      el("lightbox").classList.remove("open");
+      el("detail").classList.remove("open");
+      history.replaceState(null, "", location.pathname + location.search);
+    }
   });
 }
 
