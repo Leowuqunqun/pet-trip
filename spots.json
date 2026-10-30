@@ -1,0 +1,1410 @@
+{
+ "meta": {
+  "generated": "2026-10-30 09:56",
+  "origin": {
+   "name": "佘北家园丽雅苑",
+   "gcj": [
+    121.202138,
+    31.133318
+   ]
+  },
+  "schema_version": 1,
+  "count": 23,
+  "max_oneway_hours": 6.0,
+  "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
+ },
+ "spots": [
+  {
+   "id": "浙江-下渚湖湿地公园",
+   "name": "下渚湖湿地公园",
+   "kind": "park",
+   "tags": [
+    "收费景区",
+    "湿地",
+    "可散绳"
+   ],
+   "province": "浙江",
+   "city": "湖州",
+   "gcj": [
+    120.051336,
+    30.519303
+   ],
+   "drive": {
+    "hours_oneway": 1.99,
+    "km": 161.2,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:55"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6ac1d7bc）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "risk_hint": "UGC 说可以散绳，但景区规则会变；电话 0572-8484158 建议出发前确认"
+   },
+   "overnight": {
+    "status": "forbidden",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": true,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "收费景区，闭园后不可停留过夜",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "下渚湖·湿地公园",
+     "gcj": [
+      120.051336,
+      30.519303
+     ],
+     "note": "三合乡下渚湖 ☎0572-8484158｜小红书（C级UGC，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc）"
+    }
+   ],
+   "trips": [
+    "2026-10-16-浙江-莫干山庾村携宠慢行"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "三合乡下渚湖 ☎0572-8484158｜小红书（C级UGC，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc）"
+  },
+  {
+   "id": "浙江-OmitoHotel莫干山",
+   "name": "OmitoHotel·莫干山",
+   "kind": "lodging",
+   "tags": [
+    "宠物友好",
+    "住宿"
+   ],
+   "province": "浙江",
+   "city": "湖州",
+   "gcj": [
+    119.90294,
+    30.596898
+   ],
+   "drive": {
+    "hours_oneway": 2.04,
+    "km": 173.3,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:55"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书评论 C级UGC（笔记 6aaf924d）：「omito 为了这家酒店/专门带狗跑一趟」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "risk_hint": "评论说为带狗专程来，但宠物房型/加价政策要电话确认：13362298098"
+   },
+   "overnight": {
+    "status": "lodging",
+    "modes": [
+     "cabin"
+    ],
+    "fee": null,
+    "facilities": {
+     "toilet": true,
+     "water": true,
+     "power": true,
+     "signal": null
+    },
+    "note": "经营性住宿，你自己的备选是睡帐篷/车里，这里作雨天兜底用",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "OmitoHotel·莫干山",
+     "gcj": [
+      119.90294,
+      30.596898
+     ],
+     "note": "莫干山镇黄郛东路234号 ☎13362298098｜小红书评论（C级UGC，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d）"
+    }
+   ],
+   "trips": [
+    "2026-10-16-浙江-莫干山庾村携宠慢行"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "莫干山镇黄郛东路234号 ☎13362298098｜小红书评论（C级UGC，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d）"
+  },
+  {
+   "id": "浙江-大乐之野莫干山庾村店",
+   "name": "大乐之野·莫干山庾村店",
+   "kind": "lodging",
+   "tags": [
+    "住宿",
+    "庾村备选"
+   ],
+   "province": "浙江",
+   "city": "湖州",
+   "gcj": [
+    119.894158,
+    30.600119
+   ],
+   "drive": {
+    "hours_oneway": 2.11,
+    "km": 175.2,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:55"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "本阶段无来源可依，犬政策未核实；电话 17774158008"
+   },
+   "overnight": {
+    "status": "lodging",
+    "modes": [
+     "cabin"
+    ],
+    "fee": null,
+    "facilities": {
+     "toilet": true,
+     "water": true,
+     "power": true,
+     "signal": null
+    },
+    "note": "庾村广场旁的备选落脚点",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "大乐之野(莫干山庾村店)",
+     "gcj": [
+      119.894158,
+      30.600119
+     ],
+     "note": "莫干山镇黄郛西路85号 ☎17774158008｜庾村广场旁的备选落脚点（本阶段无来源可依）"
+    }
+   ],
+   "trips": [
+    "2026-10-16-浙江-莫干山庾村携宠慢行"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "莫干山镇黄郛西路85号 ☎17774158008｜庾村广场旁的备选落脚点（本阶段无来源可依）"
+  },
+  {
+   "id": "浙江-莫干山橙月黑胶唱片民宿",
+   "name": "莫干山橙月·黑胶唱片民宿",
+   "kind": "lodging",
+   "tags": [
+    "宠物友好",
+    "有狗泳池",
+    "住宿"
+   ],
+   "province": "浙江",
+   "city": "湖州",
+   "gcj": [
+    119.88298,
+    30.564815
+   ],
+   "drive": {
+    "hours_oneway": 2.11,
+    "km": 179.4,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:55"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6a0886a8）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "risk_hint": "有狗泳池/吹水机/狗餐食，是全批里宠物设施证据最强的一家；电话 13482824274 确认宠物加价"
+   },
+   "overnight": {
+    "status": "lodging",
+    "modes": [
+     "cabin"
+    ],
+    "fee": null,
+    "facilities": {
+     "toilet": true,
+     "water": true,
+     "power": true,
+     "signal": null
+    },
+    "note": "经营性民宿；带狗设施证据最全，适合天气差时改住店",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "莫干山橙月·黑胶唱片民宿",
+     "gcj": [
+      119.88298,
+      30.564815
+     ],
+     "note": "莫干山镇何村村方村坞26号 ☎13482824274｜小红书`6a0886a8`（C级UGC，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」"
+    }
+   ],
+   "trips": [
+    "2026-10-16-浙江-莫干山庾村携宠慢行"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "莫干山镇何村村方村坞26号 ☎13482824274｜小红书`6a0886a8`（C级UGC，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」"
+  },
+  {
+   "id": "浙江-乌龟潭",
+   "name": "乌龟潭",
+   "kind": "water",
+   "tags": [
+    "西湖西线",
+    "免费",
+    "清晨最佳"
+   ],
+   "province": "浙江",
+   "city": "杭州",
+   "gcj": [
+    120.133476,
+    30.232185
+   ],
+   "drive": {
+    "hours_oneway": 2.35,
+    "km": 167.5,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "西湖景区水域周边，犬只管理规定未核实；西湖风景名胜区对犬只通常要求牵绳且避开人流"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "市区公园绿地，不适合过夜",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "乌龟潭",
+     "gcj": [
+      120.133476,
+      30.232185
+     ],
+     "note": "水杉倒影，清晨最佳"
+    }
+   ],
+   "trips": [
+    "2026-10-14-杭州西湖西线-美食版"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "水杉倒影，清晨最佳",
+   "raw_note": "水杉倒影，清晨最佳"
+  },
+  {
+   "id": "浙江-浴鹄湾",
+   "name": "浴鹄湾",
+   "kind": "water",
+   "tags": [
+    "西湖西线",
+    "免费",
+    "长廊倒影"
+   ],
+   "province": "浙江",
+   "city": "杭州",
+   "gcj": [
+    120.13651,
+    30.226565
+   ],
+   "drive": {
+    "hours_oneway": 2.4,
+    "km": 168.9,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "西湖景区水域周边，犬只管理规定未核实"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "市区公园绿地，不适合过夜",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "浴鹄湾",
+     "gcj": [
+      120.13651,
+      30.226565
+     ],
+     "note": "长廊倒影收尾"
+    }
+   ],
+   "trips": [
+    "2026-10-14-杭州西湖西线-美食版"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "长廊倒影收尾",
+   "raw_note": "长廊倒影收尾"
+  },
+  {
+   "id": "浙江-茅家埠",
+   "name": "茅家埠",
+   "kind": "park",
+   "tags": [
+    "西湖西线",
+    "免费",
+    "早上人少"
+   ],
+   "province": "浙江",
+   "city": "杭州",
+   "gcj": [
+    120.128771,
+    30.240296
+   ],
+   "drive": {
+    "hours_oneway": 2.4,
+    "km": 168.0,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "西湖景区绿地，犬只规定未核实"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "市区，不适合过夜",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "茅家埠",
+     "gcj": [
+      120.128771,
+      30.240296
+     ],
+     "note": "杨公堤西侧，湖边步道起点，早上人少"
+    }
+   ],
+   "trips": [
+    "2026-10-14-杭州西湖西线-美食版"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "杨公堤西侧，湖边步道起点，早上人少",
+   "raw_note": "杨公堤西侧，湖边步道起点，早上人少"
+  },
+  {
+   "id": "浙江-安吉杉咖咔营地",
+   "name": "安吉杉咖咔营地",
+   "kind": "campground",
+   "tags": [
+    "营地",
+    "距小杭坑3.8km",
+    "可电话问"
+   ],
+   "province": "浙江",
+   "city": "湖州",
+   "gcj": [
+    119.427689,
+    30.609753
+   ],
+   "drive": {
+    "hours_oneway": 2.48,
+    "km": 218.1,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "营地规则未核实；电话 18268236688（可直接问能不能带狗、能不能过夜）"
+   },
+   "overnight": {
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "距小杭坑约 3.8 km，可作为主目的地的过夜兜底",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "安吉杉咖咔营地",
+     "gcj": [
+      119.427689,
+      30.609753
+     ],
+     "note": "杭垓镇缫舍村白石坞自然村13号 ☎18268236688｜池子 POI（营地），距小杭坑约 3.8 km，有电话可问营地规则"
+    }
+   ],
+   "trips": [
+    "2026-10-16-浙江-安吉小杭坑携宠露营"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "杭垓镇缫舍村白石坞自然村13号 ☎18268236688｜池子 POI（营地），距小杭坑约 3.8 km，有电话可问营地规则"
+  },
+  {
+   "id": "浙江-铜鉴湖花海露营地",
+   "name": "铜鉴湖花海露营地",
+   "kind": "campground",
+   "tags": [
+    "营地",
+    "草坪开阔",
+    "铜鉴湖"
+   ],
+   "province": "浙江",
+   "city": "杭州",
+   "gcj": [
+    120.069745,
+    30.117156
+   ],
+   "drive": {
+    "hours_oneway": 2.53,
+    "km": 202.6,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:55"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "营地规则未核实；草坪开阔适合狗跑，但要看营地是否允许散绳"
+   },
+   "overnight": {
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "铜鉴湖花海西侧 200 米，草坪开阔",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "铜鉴湖花海露营地",
+     "gcj": [
+      120.069745,
+      30.117156
+     ],
+     "note": "铜鉴湖花海西侧200米｜池子 POI（营地），铜鉴湖花海边，草坪开阔"
+    }
+   ],
+   "trips": [
+    "2026-10-16-浙江-杭州铜鉴湖带狗半日"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "铜鉴湖花海西侧200米｜池子 POI（营地），铜鉴湖花海边，草坪开阔"
+  },
+  {
+   "id": "浙江-今天不上班",
+   "name": "今天不上班（灵山）",
+   "kind": "other",
+   "tags": [
+    "灵山片区",
+    "可电话问"
+   ],
+   "province": "浙江",
+   "city": "杭州",
+   "gcj": [
+    120.053421,
+    30.116256
+   ],
+   "drive": {
+    "hours_oneway": 2.54,
+    "km": 203.8,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "POI 性质不明（名字像咖啡馆、分类像营地），有电话 18989891503 可直接问"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "性质未核实",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "今天不上班",
+     "gcj": [
+      120.053421,
+      30.116256
+     ],
+     "note": "灵山中路108号 ☎18989891503｜池子 POI（休闲/营地），灵山景区内，有电话可问"
+    }
+   ],
+   "trips": [
+    "2026-10-16-浙江-杭州铜鉴湖带狗半日"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "灵山中路108号 ☎18989891503｜池子 POI（休闲/营地），灵山景区内，有电话可问"
+  },
+  {
+   "id": "浙江-漫步山丘露营咖啡团建",
+   "name": "漫步山丘露营咖啡（团建）",
+   "kind": "campground",
+   "tags": [
+    "营地",
+    "铜鉴湖西侧",
+    "可电话问"
+   ],
+   "province": "浙江",
+   "city": "杭州",
+   "gcj": [
+    120.046525,
+    30.120925
+   ],
+   "drive": {
+    "hours_oneway": 2.57,
+    "km": 203.7,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:55"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "营地咖啡/团建场地，宠物规则未核实；电话 13716512269"
+   },
+   "overnight": {
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "经营性营地（POI 分类），过夜是否可散客/可带狗未核实",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "漫步山丘露营咖啡团建",
+     "gcj": [
+      120.046525,
+      30.120925
+     ],
+     "note": "双浦镇灵山风景区 ☎13716512269｜池子 POI（营地咖啡），铜鉴湖西侧"
+    }
+   ],
+   "trips": [
+    "2026-10-16-浙江-杭州铜鉴湖带狗半日"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "双浦镇灵山风景区 ☎13716512269｜池子 POI（营地咖啡），铜鉴湖西侧"
+  },
+  {
+   "id": "浙江-铜鉴湖公园",
+   "name": "铜鉴湖公园",
+   "kind": "park",
+   "tags": [
+    "免费公园",
+    "溜狗半日"
+   ],
+   "province": "浙江",
+   "city": "杭州",
+   "gcj": [
+    120.06894,
+    30.126538
+   ],
+   "drive": {
+    "hours_oneway": 2.6,
+    "km": 201.8,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "有一篇「杭州宠物友好保姆级攻略」（小红书 69c4e173）命中该关键词，但**正文没有单独写铜鉴湖**——不能据此判定可带狗",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（且未直接覆盖本点）",
+    "risk_hint": "证据是间接的，去前请以现场为准"
+   },
+   "overnight": {
+    "status": "forbidden",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": true,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "城市公园，不适合过夜",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "铜鉴湖公园",
+     "gcj": [
+      120.06894,
+      30.126538
+     ],
+     "note": "双浦镇灵山风景区 ☎18157198875｜挂载命中（逐字同名，high）＋小红书`69c4e173`（C级UGC，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准"
+    }
+   ],
+   "trips": [
+    "2026-10-16-浙江-杭州铜鉴湖带狗半日"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "双浦镇灵山风景区，电话 18157198875",
+   "raw_note": "双浦镇灵山风景区 ☎18157198875｜挂载命中（逐字同名，high）＋小红书`69c4e173`（C级UGC，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准"
+  },
+  {
+   "id": "浙江-小杭坑2号营地",
+   "name": "安吉小杭坑（营地群）",
+   "kind": "campground",
+   "tags": [
+    "营地群",
+    "带狗露营候选",
+    "可电话问"
+   ],
+   "province": "浙江",
+   "city": "湖州",
+   "gcj": [
+    119.456495,
+    30.633361
+   ],
+   "drive": {
+    "hours_oneway": 2.62,
+    "km": 211.7,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "曾作为「携宠露营」主题行程的目的地，但原始笔记未留下明确的犬只许可原话——不能算核实；电话 17357211578"
+   },
+   "overnight": {
+    "status": "official_camp",
+    "modes": [
+     "tent",
+     "car"
+    ],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "营地群含生态营地/露营公园/2号营地三个相邻营位，帐篷与车中泊都可能，需电话确认",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "小杭坑2号营地",
+     "gcj": [
+      119.456495,
+      30.633361
+     ],
+     "note": "大关自然村1号 ☎17357211578｜池子 POI（营地），距生态营地 0.13 km，有电话可问营地规则"
+    },
+    {
+     "name": "小杭坑生态营地",
+     "gcj": [
+      119.457685,
+      30.632757
+     ],
+     "note": "孝丰镇夏阳村 ☎15381292658｜挂载命中（同名 high）＋小红书`6a0886a8`（C级UGC，未核验）：「#安吉宠物友好 #带着狗狗去户外 #户外露营 #小杭坑」"
+    },
+    {
+     "name": "小杭坑露营公园",
+     "gcj": [
+      119.457079,
+      30.634954
+     ],
+     "note": "小杭坑露营公园游客接待中心西南侧｜池子 POI（风景名胜）；同篇小红书说「很好玩，很美，没有脏乱的地方，维护的很好，很开阔，适合带小狗撒欢」（C级UGC）"
+    }
+   ],
+   "trips": [
+    "2026-10-16-浙江-安吉小杭坑携宠露营"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "大关自然村1号 ☎17357211578｜池子 POI（营地），距生态营地 0.13 km，有电话可问营地规则"
+  },
+  {
+   "id": "x-深渡旅游码头",
+   "name": "深渡旅游码头",
+   "kind": "transit",
+   "tags": [
+    "新安江山水画廊",
+    "皖南"
+   ],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.617375,
+    29.862675
+   ],
+   "drive": {
+    "hours_oneway": 3.98,
+    "km": 375.7,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "游船码头，带狗上船通常受限，需现场问"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "游船码头，不适合过夜",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "深渡旅游码头",
+     "gcj": [
+      118.617375,
+      29.862675
+     ],
+     "note": "（高德搜「深渡旅游码头」）新安江山水画廊游船码头，图1-4 的江面、乌篷船、鸬鹚捕鱼都在这一段"
+    }
+   ],
+   "trips": [
+    "2026-10-23-徽州秋色"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "（高德搜「深渡旅游码头」）新安江山水画廊游船码头，图1-4 的江面、乌篷船、鸬鹚捕鱼都在这一段"
+  },
+  {
+   "id": "x-阳产土楼",
+   "name": "阳产土楼",
+   "kind": "village",
+   "tags": [
+    "皖南",
+    "晒秋",
+    "免费古村"
+   ],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.663488,
+    29.873218
+   ],
+   "drive": {
+    "hours_oneway": 4.15,
+    "km": 379.7,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "开放古村，村民散养犬多，需牵绳；村内住宿能否带狗未核实"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "村内有农家可住宿，带狗政策未核实",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "阳产土楼",
+     "gcj": [
+      118.663488,
+      29.873218
+     ],
+     "note": "歙县深渡镇，图5-8 的晒秋与土黄夯土房"
+    },
+    {
+     "name": "阳产土楼",
+     "gcj": [
+      118.663488,
+      29.873218
+     ],
+     "note": "歙县深渡镇，晒秋与土黄夯土房"
+    }
+   ],
+   "trips": [
+    "2026-10-23-徽州秋色",
+    "2026-10-23-皖南古村"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "歙县深渡镇，图5-8 的晒秋与土黄夯土房"
+  },
+  {
+   "id": "x-老街",
+   "name": "黄山屯溪老街",
+   "kind": "village",
+   "tags": [
+    "皖南",
+    "落脚点"
+   ],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.307044,
+    29.708173
+   ],
+   "drive": {
+    "hours_oneway": 4.26,
+    "km": 403.1,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "步行商业街，人多，犬只牵绳要求未核实"
+   },
+   "overnight": {
+    "status": "lodging",
+    "modes": [
+     "cabin"
+    ],
+    "fee": null,
+    "facilities": {
+     "toilet": true,
+     "water": true,
+     "power": true,
+     "signal": true
+    },
+    "note": "市区落脚点，住宿资源密集，作皖南多日行程的基地",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "老街",
+     "gcj": [
+      118.307044,
+      29.708173
+     ],
+     "note": "（高德搜「老街」）黄山市区的落脚点，从这儿出发去四个村子"
+    }
+   ],
+   "trips": [
+    "2026-10-23-皖南古村"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "（高德搜「老街」）黄山市区的落脚点，从这儿出发去四个村子"
+  },
+  {
+   "id": "x-灵山景区古建筑群",
+   "name": "灵山古村（呈坎镇）",
+   "kind": "village",
+   "tags": [
+    "皖南",
+    "古村梯田"
+   ],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.319046,
+    29.917546
+   ],
+   "drive": {
+    "hours_oneway": 4.4,
+    "km": 384.0,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:55"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "景区类古村，犬只政策未核实；国内同类景点多数禁宠，务必先问"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "未核实",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "灵山景区古建筑群",
+     "gcj": [
+      118.319046,
+      29.917546
+     ],
+     "note": "徽州区呈坎镇灵山村，古村与梯田"
+    }
+   ],
+   "trips": [
+    "2026-10-23-皖南古村"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "徽州区呈坎镇灵山村，古村与梯田"
+  },
+  {
+   "id": "x-塔川公交站",
+   "name": "塔川",
+   "kind": "village",
+   "tags": [
+    "皖南",
+    "秋色",
+    "收费观景点"
+   ],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.007126,
+    30.017813
+   ],
+   "drive": {
+    "hours_oneway": 4.58,
+    "km": 403.9,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "塔川秋色是收费观景区，犬只政策未核实"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "未核实",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "塔川(公交站)",
+     "gcj": [
+      118.007126,
+      30.017813
+     ],
+     "note": "（高德搜「塔川(公交站)」）黟县宏村镇，图11-12、16-17 的秋色稻田与村落"
+    },
+    {
+     "name": "塔川(公交站)",
+     "gcj": [
+      118.007126,
+      30.017813
+     ],
+     "note": "（高德搜「塔川(公交站)」）黟县宏村镇，红叶与观景台"
+    },
+    {
+     "name": "塔川(公交站)",
+     "gcj": [
+      118.007126,
+      30.017813
+     ],
+     "note": "（高德搜「塔川(公交站)」）乌桕红叶主场，一号观景台最经典"
+    }
+   ],
+   "trips": [
+    "2026-10-23-徽州秋色",
+    "2026-10-23-皖南古村",
+    "2026-10-25-黟县赏秋"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "（高德搜「塔川(公交站)」）黟县宏村镇，图11-12、16-17 的秋色稻田与村落"
+  },
+  {
+   "id": "x-宏村南门停车场",
+   "name": "宏村",
+   "kind": "village",
+   "tags": [
+    "皖南",
+    "世界遗产",
+    "收费景区"
+   ],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    117.991663,
+    30.000109
+   ],
+   "drive": {
+    "hours_oneway": 4.66,
+    "km": 406.6,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "世界文化遗产景区，**禁宠概率高**，务必先电话确认再出发"
+   },
+   "overnight": {
+    "status": "forbidden",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": true,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "景区停车场不留宿；村内客栈带狗政策未核实",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "宏村南门停车场",
+     "gcj": [
+      117.991663,
+      30.000109
+     ],
+     "note": "（高德搜「宏村南门停车场」）宏村南门外稻田，咖啡店门前是最佳机位"
+    }
+   ],
+   "trips": [
+    "2026-10-25-黟县赏秋"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "（高德搜「宏村南门停车场」）宏村南门外稻田，咖啡店门前是最佳机位"
+  },
+  {
+   "id": "x-卢村饭店",
+   "name": "卢村",
+   "kind": "village",
+   "tags": [
+    "皖南",
+    "木雕楼",
+    "小众"
+   ],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    117.976425,
+    30.013975
+   ],
+   "drive": {
+    "hours_oneway": 4.7,
+    "km": 408.3,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "收费古村，犬只政策未核实"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "未核实",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "卢村饭店",
+     "gcj": [
+      117.976425,
+      30.013975
+     ],
+     "note": "（高德搜「卢村饭店」）黟县宏村镇，图14-15、18 的木雕楼与村中溪桥"
+    },
+    {
+     "name": "卢村饭店",
+     "gcj": [
+      117.976425,
+      30.013975
+     ],
+     "note": "（高德搜「卢村饭店」）宏村往北两公里，后山观景台看全景"
+    }
+   ],
+   "trips": [
+    "2026-10-23-徽州秋色",
+    "2026-10-25-黟县赏秋"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "（高德搜「卢村饭店」）黟县宏村镇，图14-15、18 的木雕楼与村中溪桥"
+  },
+  {
+   "id": "x-奇墅湖",
+   "name": "奇墅湖",
+   "kind": "water",
+   "tags": [
+    "皖南",
+    "水杉晨雾",
+    "免费"
+   ],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.00161,
+    29.987383
+   ],
+   "drive": {
+    "hours_oneway": 4.76,
+    "km": 408.0,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "湖岸野地，无人管理：既是自由度最高也是**最不确定**的点"
+   },
+   "overnight": {
+    "status": "gray",
+    "modes": [
+     "tent",
+     "car"
+    ],
+    "fee": null,
+    "facilities": {
+     "toilet": false,
+     "water": null,
+     "power": false,
+     "signal": null
+    },
+    "note": "非经营性湖岸空地，能不能过夜没有官方依据（灰色地带），需现场判断",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "奇墅湖",
+     "gcj": [
+      118.00161,
+      29.987383
+     ],
+     "note": "Y066乡道进北岸，看水杉与晨雾"
+    }
+   ],
+   "trips": [
+    "2026-10-25-黟县赏秋"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "Y066乡道进北岸，看水杉与晨雾"
+  },
+  {
+   "id": "x-西递公交站",
+   "name": "西递",
+   "kind": "village",
+   "tags": [
+    "皖南",
+    "世界遗产",
+    "收费景区"
+   ],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    117.996255,
+    29.90495
+   ],
+   "drive": {
+    "hours_oneway": 4.82,
+    "km": 415.0,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "世界文化遗产景区，**禁宠概率高**，务必先电话确认"
+   },
+   "overnight": {
+    "status": "forbidden",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": true,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "景区不留宿",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "西递(公交站)",
+     "gcj": [
+      117.996255,
+      29.90495
+     ],
+     "note": "（高德搜「西递(公交站)」）黟县，图9-10 的白墙题字与村口水塘"
+    }
+   ],
+   "trips": [
+    "2026-10-23-徽州秋色"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "（高德搜「西递(公交站)」）黟县，图9-10 的白墙题字与村口水塘"
+  },
+  {
+   "id": "x-木梨硔停车场",
+   "name": "木梨硔",
+   "kind": "village",
+   "tags": [
+    "皖南",
+    "云端村落",
+    "需徒步"
+   ],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.007705,
+    29.648075
+   ],
+   "drive": {
+    "hours_oneway": 4.99,
+    "km": 447.0,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 09:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "risk_hint": "车到山下要徒步上山，**牵绳是硬要求**；犬只能否进村未核实"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "山下停车场+山上民宿，带狗上山政策未核实",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "木梨硔停车场",
+     "gcj": [
+      118.007705,
+      29.648075
+     ],
+     "note": "（高德搜「木梨硔停车场」）休宁县溪口镇，云端村落，车到山下要徒步"
+    }
+   ],
+   "trips": [
+    "2026-10-23-皖南古村"
+   ],
+   "geo_src": "高德POI",
+   "curation_note": "",
+   "raw_note": "（高德搜「木梨硔停车场」）休宁县溪口镇，云端村落，车到山下要徒步"
+  }
+ ],
+ "out_of_range": [
+  {
+   "name": "辽渔大连湾航运中心",
+   "city": "",
+   "hours_oneway": 13.98
+  },
+  {
+   "name": "烟台港客运站",
+   "city": "",
+   "hours_oneway": 9.68
+  }
+ ]
+}
