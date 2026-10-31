@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-10-31 21:21",
+  "generated": "2026-10-31 21:40",
   "origin": {
    "name": "上海人民广场",
    "gcj": [
@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 73,
+  "count": 78,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -1293,6 +1293,100 @@
    ]
   },
   {
+   "id": "x-无锡阳山桃花源景区",
+   "name": "无锡阳山桃花源景区",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "无锡",
+   "gcj": [
+    120.109902,
+    31.589605
+   ],
+   "drive": {
+    "hours_oneway": 2.13,
+    "km": 157.8,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-10-31 21:34"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6a6c4459，@猪咪不是猪）：「个导航过去是另外一个门口，大家不要跑错咯） 🅿️停路边就可以（节假日不能停，车多人多有管制） 🏨周边宠物友好住宿：推荐阳山花间堂/小筑沐野 - 📅行程安排 上午出发，带狗狗可以先去旁边的阳山地质火山公园吸氧爬山🧗（P4-7）会途径寺庙，新手」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "无锡阳山桃花源景区",
+     "gcj": [
+      120.109902,
+      31.589605
+     ],
+     "note": "无锡·阳山｜假期带狗吸氧爬山+水库玩水游嗨"
+    }
+   ],
+   "trips": [
+    "小红书-无锡"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "无锡·阳山｜假期带狗吸氧爬山+水库玩水游嗨",
+   "tier": "A",
+   "photos": [
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312108/dcf14ce16b3aed4086039e2e68bf2b40/notes_pre_post/1040g3k8324q2ps8ego805p8nt4bp5soaqvj70ag!nd_dft_wgth_webp_3",
+     "title": "无锡阳山宠物友好一日游｜带毛孩子去火山",
+     "author": "桃桃🌸",
+     "note_url": "https://www.xiaohongshu.com/explore/6a9e2af9000000002502e9f1?xsec_token=AByXlge8vJHy7HWA4M5Nd2UpVGLagi9ei_tsKGw33bTWU=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312108/544e312e78def93a22d55ed42f542457/1040g0083239d2au4n2005onbc0injr5vto8pu40!nd_dft_wlteh_webp_3",
+     "title": "无锡·阳山｜假期带狗吸氧爬山+水库玩水游嗨",
+     "author": "猪咪不是猪",
+     "note_url": "https://www.xiaohongshu.com/explore/6a6c44590000000026036235?xsec_token=ABaxRQUD3MvZPdcxnsnZGocr03lA6uItYJdLGSyK6c7rQ=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312108/dd14bdc5583ea85b1f9bef339b4aaf31/notes_uhdr/1040g3qo3239dhjn7ms705onbc0injr5v16euks0!nd_dft_wlteh_webp_3",
+     "title": "无锡·阳山｜假期带狗吸氧爬山+水库玩水游嗨",
+     "author": "猪咪不是猪",
+     "note_url": "https://www.xiaohongshu.com/explore/6a6c44590000000026036235?xsec_token=ABaxRQUD3MvZPdcxnsnZGocr03lA6uItYJdLGSyK6c7rQ=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312108/858c440e9363fa72e8993a1857c35a78/spectrum/1040g34o31vt66krgis205pas82sgmrn4h2qap68!nd_dft_wlteh_webp_3",
+     "title": "带着宠物去锡游！这次真到桃花源了！",
+     "author": "它公社",
+     "note_url": "https://www.xiaohongshu.com/explore/69fd7202000000001a02c267?xsec_token=ABnfByDJv-kQit0d-exO69soD3TdbfDufwaPzy_Mb0QTo=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312108/b10ed6a3b0bf55c3d357adef38245147/spectrum/1040g34o31vt66krgis005pas82sgmrn4f591ano!nd_dft_wlteh_webp_3",
+     "title": "带着宠物去锡游！这次真到桃花源了！",
+     "author": "它公社",
+     "note_url": "https://www.xiaohongshu.com/explore/69fd7202000000001a02c267?xsec_token=ABnfByDJv-kQit0d-exO69soD3TdbfDufwaPzy_Mb0QTo=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ]
+  },
+  {
    "id": "x-川步村",
    "name": "川步村",
    "kind": "village",
@@ -1892,8 +1986,8 @@
    ]
   },
   {
-   "id": "x-花筑入山民宿宜兴廿三湾店",
-   "name": "花筑·入山民宿(宜兴廿三湾店)",
+   "id": "x-花筑入山民宿",
+   "name": "花筑·入山民宿",
    "kind": "water",
    "tags": [],
    "province": "",
@@ -1931,7 +2025,7 @@
    },
    "sub_pois": [
     {
-     "name": "花筑·入山民宿(宜兴廿三湾店)",
+     "name": "花筑·入山民宿",
      "gcj": [
       119.806317,
       31.176073
@@ -2301,7 +2395,7 @@
    "kind": "village",
    "tags": [],
    "province": "",
-   "city": "安吉",
+   "city": "湖州",
    "gcj": [
     119.580811,
     30.597964
@@ -2395,6 +2489,73 @@
      "src": "小红书"
     }
    ]
+  },
+  {
+   "id": "x-安吉古城国家考古遗址公园",
+   "name": "安吉古城国家考古遗址公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "安吉",
+   "gcj": [
+    119.670214,
+    30.745278
+   ],
+   "drive": {
+    "hours_oneway": 2.6,
+    "km": 204.1,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-10-31 21:34"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 69fc7712，@钱大酱（暂时改名版））：「话题标签：宠物友好」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok_tag",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "安吉古城国家考古遗址公园",
+     "gcj": [
+      119.670214,
+      30.745278
+     ],
+     "note": "📍安吉 真的不缺好看的风景"
+    },
+    {
+     "name": "安吉九亩松风帐篷酒店",
+     "gcj": [
+      119.669387,
+      30.741662
+     ],
+     "note": "江浙沪难得人少且好看的遛狗地（建议别错过"
+    }
+   ],
+   "trips": [
+    "小红书-安吉",
+    "小红书-湖州"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "📍安吉 真的不缺好看的风景",
+   "tier": "A",
+   "photos": []
   },
   {
    "id": "x-善卷洞风景区",
@@ -3208,107 +3369,6 @@
      "title": "裸辞带狗自驾一周👉🏻桐庐/景德镇/莫干山",
      "author": "Shy",
      "note_url": "https://www.xiaohongshu.com/explore/6a91074c00000000260351cc?xsec_token=ABh8o1u_NkB-y36RIu2n8jHLigLvgylboXV8Dupqyc5CM=&xsec_source=pc_search",
-     "src": "小红书"
-    }
-   ]
-  },
-  {
-   "id": "x-安吉九亩松风帐篷酒店",
-   "name": "安吉九亩松风帐篷酒店",
-   "kind": "lodging",
-   "tags": [],
-   "province": "",
-   "city": "",
-   "gcj": [
-    119.669387,
-    30.741662
-   ],
-   "drive": {
-    "hours_oneway": 2.92,
-    "km": 210.6,
-    "source": "高德驾车路径规划 v5（真实路网）",
-    "computed_at": "2026-10-30 15:11"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 69b77905，@野蛮小奇）：「话题标签：宠物友好」",
-    "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null
-   },
-   "sub_pois": [
-    {
-     "name": "安吉九亩松风帐篷酒店",
-     "gcj": [
-      119.669387,
-      30.741662
-     ],
-     "note": "江浙沪难得人少且好看的遛狗地（建议别错过"
-    }
-   ],
-   "trips": [
-    "小红书-湖州"
-   ],
-   "geo_src": "xhs",
-   "origin": "小红书带狗笔记",
-   "curation_note": "",
-   "raw_note": "江浙沪难得人少且好看的遛狗地（建议别错过",
-   "tier": "A",
-   "photos": [
-    {
-     "url": "https://sns-webpic-qc.xhscdn.com/202610312106/9060d105963cd7421c9c55542f98a95a/notes_pre_post/1040g3k031reg70lag00044npvm1sifppr7rs8ig!nd_dft_wlteh_webp_3",
-     "title": "宠物友好 |出门就能上厕所的小狗快乐篷",
-     "author": "麦小糕",
-     "note_url": "https://www.xiaohongshu.com/explore/696b5405000000000d008a98?xsec_token=AB0kxl_2zWEzgmMzdN3bLsg-pvsZKEm8MxaCreOd3ua0c=&xsec_source=pc_search",
-     "src": "小红书"
-    },
-    {
-     "url": "https://sns-webpic-qc.xhscdn.com/202610312106/beeae4efa1e938c7c2839b0fd65a1197/notes_pre_post/1040g3k031reg70lag01g44npvm1sifppbuc78do!nd_dft_wlteh_webp_3",
-     "title": "宠物友好 |出门就能上厕所的小狗快乐篷",
-     "author": "麦小糕",
-     "note_url": "https://www.xiaohongshu.com/explore/696b5405000000000d008a98?xsec_token=AB0kxl_2zWEzgmMzdN3bLsg-pvsZKEm8MxaCreOd3ua0c=&xsec_source=pc_search",
-     "src": "小红书"
-    },
-    {
-     "url": "https://sns-webpic-qc.xhscdn.com/202610312106/dad2c1fe3a23a5a33016adaf21d8a5f8/note_pre_post_uhdr/1040g3r0320o8aja15m0048oeb824adu3bfs6ujo!nd_dft_wgth_webp_3",
-     "title": "带狗狗🐶住超大，超有好的帐篷酒店",
-     "author": "陈波妞的日常",
-     "note_url": "https://www.xiaohongshu.com/explore/6a192a1c000000000803ea5f?xsec_token=ABh7dQUI7t13mJgZvcvVv0xHtoiWXL-2mKQlNcaUxYJjc=&xsec_source=pc_search",
-     "src": "小红书"
-    },
-    {
-     "url": "https://sns-webpic-qc.xhscdn.com/202610312106/f5e224b3a31399445ff268ac0be1162f/note_pre_post_uhdr/1040g3r0320o8aja15m0g48oeb824adu32tqvjao!nd_dft_wgth_webp_3",
-     "title": "带狗狗🐶住超大，超有好的帐篷酒店",
-     "author": "陈波妞的日常",
-     "note_url": "https://www.xiaohongshu.com/explore/6a192a1c000000000803ea5f?xsec_token=ABh7dQUI7t13mJgZvcvVv0xHtoiWXL-2mKQlNcaUxYJjc=&xsec_source=pc_search",
-     "src": "小红书"
-    },
-    {
-     "url": "https://sns-webpic-qc.xhscdn.com/202610312106/e48eab5f7967039876e0f8a033d81392/notes_uhdr/1040g3qo324rm7oh82m705n47q9i5llluvl5vs20!nd_dft_wlteh_webp_3",
-     "title": "安吉九亩松风｜住进森林里的两天🌲",
-     "author": "HARUKI",
-     "note_url": "https://www.xiaohongshu.com/explore/6a9fbe7d000000002b0263b6?xsec_token=ABZ4VGo8RYUTS2CcQBoCFdknvWTVa02DUop_75zpbrDz8=&xsec_source=pc_search",
-     "src": "小红书"
-    },
-    {
-     "url": "https://sns-webpic-qc.xhscdn.com/202610312106/a05a3b3317668afe6153e1da0190ebd3/notes_uhdr/1040g3qo324rm7oh82m7g5n47q9i5lllukt5jag0!nd_dft_wlteh_webp_3",
-     "title": "安吉九亩松风｜住进森林里的两天🌲",
-     "author": "HARUKI",
-     "note_url": "https://www.xiaohongshu.com/explore/6a9fbe7d000000002b0263b6?xsec_token=ABZ4VGo8RYUTS2CcQBoCFdknvWTVa02DUop_75zpbrDz8=&xsec_source=pc_search",
      "src": "小红书"
     }
    ]
@@ -5541,6 +5601,122 @@
    ]
   },
   {
+   "id": "x-维也纳国际酒店",
+   "name": "维也纳国际酒店",
+   "kind": "lodging",
+   "tags": [],
+   "province": "",
+   "city": "宁波",
+   "gcj": [
+    121.934621,
+    29.419213
+   ],
+   "drive": {
+    "hours_oneway": 3.92,
+    "km": 295.7,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-10-31 21:34"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "小红书 C级UGC（笔记 6a6861b5，@Dun Dun）：「」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_dog_mention",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "维也纳国际酒店",
+     "gcj": [
+      121.934621,
+      29.419213
+     ],
+     "note": "不在三亚！在象山松兰山！太美太好拍！（附攻略"
+    }
+   ],
+   "trips": [
+    "小红书-象山"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "不在三亚！在象山松兰山！太美太好拍！（附攻略",
+   "tier": "B",
+   "photos": []
+  },
+  {
+   "id": "x-山风农场",
+   "name": "山风农场",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "建德",
+   "gcj": [
+    119.369708,
+    29.50297
+   ],
+   "drive": {
+    "hours_oneway": 4.1,
+    "km": 313.5,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-10-31 21:34"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 69ce8a30，@禾禾小朋友）：「📍地址：建德之江山风农场 🎫费用：营地是免·费的，吃喝另算。推荐他们家咖啡便宜好喝。窑炉面包松软香脆很好吃，每天现做。小朋友还可以自己动手做披萨。 \t 个人喜好，建德蕞值得一来的地方 美的得让人不敢相信 满眼的绿色 对半开的黄色 深沉的原木」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_veto_default",
+    "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "山风农场",
+     "gcj": [
+      119.369708,
+      29.50297
+     ],
+     "note": "真的不在国外 就在浙江四线小县城建德"
+    }
+   ],
+   "trips": [
+    "小红书-建德"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "真的不在国外 就在浙江四线小县城建德",
+   "tier": "A",
+   "photos": []
+  },
+  {
    "id": "x-深渡旅游码头",
    "name": "深渡旅游码头",
    "kind": "transit",
@@ -5662,7 +5838,7 @@
    },
    "dog": {
     "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 68709e88，@长腿仔仔🐾）：「太平湖！养宠人狂爱！！！ 周一周二去的太平湖，人不多，真的太舒服啦！ 住宿基本都是宠物友好，住的湖景房景色也很好，楼下就是超大草坪，小狗狂喜，闻不完根本闻不完，傍晚湖边有不少人，我们第二天起早遛狗湖边无人，稍微有点晒，但是」",
+    "evidence": "小红书 C级UGC（笔记 689df07b，@皮皮蛋蛋）：「宠物友好+美得离谱 | 安徽黄山太平湖 太美了，太美了！ 感觉在国内已经很少有如此人少又景色壮阔，并且完全宠物友好的地方！ \t ⚠️注意点」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
     "basis": "explicit_ok",
@@ -5688,7 +5864,7 @@
       117.945932,
       30.279724
      ],
-     "note": "太平湖！养宠人狂爱！！！"
+     "note": "宠物友好+美得离谱 | 安徽黄山太平湖"
     }
    ],
    "trips": [
@@ -5697,7 +5873,7 @@
    "geo_src": "xhs",
    "origin": "小红书带狗笔记",
    "curation_note": "",
-   "raw_note": "太平湖！养宠人狂爱！！！",
+   "raw_note": "宠物友好+美得离谱 | 安徽黄山太平湖",
    "tier": "A",
    "photos": [
     {
@@ -6482,8 +6658,109 @@
    ]
   },
   {
-   "id": "x-仙霞居民宿衢州仙霞湖店",
-   "name": "仙霞居民宿(衢州仙霞湖店)",
+   "id": "x-黄山太平湖景度假民宿",
+   "name": "黄山太平湖景度假民宿",
+   "kind": "water",
+   "tags": [],
+   "province": "",
+   "city": "黄山",
+   "gcj": [
+    118.000524,
+    30.330695
+   ],
+   "drive": {
+    "hours_oneway": 5.4,
+    "km": 398.0,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-10-31 21:34"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 68709e88，@长腿仔仔🐾）：「太平湖！养宠人狂爱！！！ 周一周二去的太平湖，人不多，真的太舒服啦！ 住宿基本都是宠物友好，住的湖景房景色也很好，楼下就是超大草坪，小狗狂喜，闻不完根本闻不完，傍晚湖边有不少人，我们第二天起早遛狗湖边无人，稍微有点晒，但是」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "黄山太平湖景度假民宿",
+     "gcj": [
+      118.000524,
+      30.330695
+     ],
+     "note": "太平湖！养宠人狂爱！！！"
+    }
+   ],
+   "trips": [
+    "小红书-黄山"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "太平湖！养宠人狂爱！！！",
+   "tier": "A",
+   "photos": [
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312114/a44f7d51031bd284c1f3cb9a97d55bdc/note_pre_post_uhdr/1040g3r8324vcq24rj6005pfgcqnh96funb77qgg!nd_dft_wlteh_webp_3",
+     "title": "遛狗人可以躺很平的皖南景点-太平湖度假区",
+     "author": "野蛮小奇",
+     "note_url": "https://www.xiaohongshu.com/explore/6aa38c3e0000000027014ed5?xsec_token=ABh0Rm0XTgpgu-R5gLmJbUxaeQgkFOwV4hdFqAfhgvL34=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312114/f9c5a3137fbd9d3196af26e066143b7f/note_pre_post_uhdr/1040g3r8324vcq24rj60g5pfgcqnh96fupugjcro!nd_dft_wlteh_webp_3",
+     "title": "遛狗人可以躺很平的皖南景点-太平湖度假区",
+     "author": "野蛮小奇",
+     "note_url": "https://www.xiaohongshu.com/explore/6aa38c3e0000000027014ed5?xsec_token=ABh0Rm0XTgpgu-R5gLmJbUxaeQgkFOwV4hdFqAfhgvL34=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312114/dc90b50e47955345855cfa41b0383355/1040g2sg326ive0gj56c05n99iadkgubm1cs8ev8!nd_dft_wlteh_webp_3",
+     "title": "太平湖｜小狗的30分钟快艇体验⚓️",
+     "author": "登登出没🐾",
+     "note_url": "https://www.xiaohongshu.com/explore/6ad82b980000000033036f5c?xsec_token=ABLnLuHgJOrDAPgbhwByvFY_3H_gP9FNL_BWOero4MBVM=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312114/f3a04c5665bddfa6acb65c0cefc2bec5/spectrum/1040g0k0326ip21tskc005n99iadkgubmuqg6om8!nd_dft_wlteh_webp_3",
+     "title": "太平湖｜小狗的30分钟快艇体验⚓️",
+     "author": "登登出没🐾",
+     "note_url": "https://www.xiaohongshu.com/explore/6ad82b980000000033036f5c?xsec_token=ABLnLuHgJOrDAPgbhwByvFY_3H_gP9FNL_BWOero4MBVM=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312114/208aee9fa6cf09d79590c0fa5d1a8509/notes_pre_post/1040g3k831vi1pcvp3qb046b6rotqb817hnc0k08!nd_dft_wlteh_webp_3",
+     "title": "小狗我呀也去过皖南了",
+     "author": "Vvvvin💫",
+     "note_url": "https://www.xiaohongshu.com/explore/69f20d06000000001b021d40?xsec_token=ABNNGSmjfcUbt9Oy2F6paGvft0VPhTj_WoxAad-nXMUgE=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "https://sns-webpic-qc.xhscdn.com/202610312114/f80f8f8a244b509e25b07e415a6d5346/note_pre_post_uhdr/1040g3r831vi228vuiicg46b6rotqb81703u7hng!nd_dft_wgth_webp_3",
+     "title": "小狗我呀也去过皖南了",
+     "author": "Vvvvin💫",
+     "note_url": "https://www.xiaohongshu.com/explore/69f20d06000000001b021d40?xsec_token=ABNNGSmjfcUbt9Oy2F6paGvft0VPhTj_WoxAad-nXMUgE=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ]
+  },
+  {
+   "id": "x-仙霞居民宿",
+   "name": "仙霞居民宿",
    "kind": "water",
    "tags": [],
    "province": "",
@@ -6521,7 +6798,7 @@
    },
    "sub_pois": [
     {
-     "name": "仙霞居民宿(衢州仙霞湖店)",
+     "name": "仙霞居民宿",
      "gcj": [
       118.864023,
       28.671245
@@ -6889,6 +7166,64 @@
      "src": "小红书"
     }
    ]
+  },
+  {
+   "id": "x-上坦村",
+   "name": "上坦村",
+   "kind": "village",
+   "tags": [],
+   "province": "",
+   "city": "婺源",
+   "gcj": [
+    118.034265,
+    29.414949
+   ],
+   "drive": {
+    "hours_oneway": 5.58,
+    "km": 477.9,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-10-31 21:34"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6910b3c9，@小天狼星✨）：「台阶 第三 村子我个人觉得差不多，所以没去漳村。 第四 打算带狗去三清山 三清山同样可以带狗坐缆车且宠物友好，8岁小狗所以想着把体力留到三清山，所以篁岭和漳村pass了。 \t 🛏️住宿： 瑶光·MYST法式风情｜奢野民宿（P6-P10) 💰」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "上坦村",
+     "gcj": [
+      118.034265,
+      29.414949
+     ],
+     "note": "‼️携宠自驾🚏第二站 江西婺源"
+    }
+   ],
+   "trips": [
+    "小红书-婺源"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "‼️携宠自驾🚏第二站 江西婺源",
+   "tier": "A",
+   "photos": []
   },
   {
    "id": "x-西递公交站",
