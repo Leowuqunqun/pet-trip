@@ -463,6 +463,13 @@ window.__imgFail = function(img){
   }
 };
 
+function srcLabel(s){
+  // 车程来自哪家服务商是**技术细节**，看的人不需要知道，更不该看到「高德」。
+  // 底图版权那一行保留高德是图源 ToS 要求，与数据来源无关。
+  if(!s) return '';
+  return /真实路网/.test(s) ? '真实路网驾车路径规划' : s;
+}
+
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
   return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
 function hm(h){var t=Math.round(h*60);return Math.floor(t/60)+"h"+(t%60?String(t%60).padStart(2,"0"):"");}
@@ -668,7 +675,7 @@ function openDetail(id){
   html += '<div class="sec"><div class="sec-t">从出发点</div><div class="panel">' +
     '<div class="kv"><div class="k">单程</div><div class="v">'+hm(d.hours_oneway)+' · '+Math.round(d.km)+' km</div></div>' +
     '<div class="kv"><div class="k">来回</div><div class="v">约 '+hm(d.hours_oneway*2)+'</div></div>' +
-    '<div class="kv"><div class="k">依据</div><div class="v" style="color:var(--ink-3);font-size:12px">'+esc(d.source)+'</div></div>' +
+    '<div class="kv"><div class="k">依据</div><div class="v" style="color:var(--ink-3);font-size:12px">'+esc(srcLabel(d.source))+'</div></div>' +
     '</div></div>';
 
   /* 犬政策 */
