@@ -376,7 +376,6 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       <label class="chip-wrap">单程 ≤ <b id="range-out">5.0</b>h
         <input type="range" id="range" min="1" max="6" step="0.5" value="5">
       </label>
-      <button class="chip" data-f="tier" aria-pressed="true">精选</button>
       <button class="chip" data-f="night" aria-pressed="false">能过夜</button>
       <button class="chip" data-f="dog" aria-pressed="false">已确认可带狗</button>
       <button class="chip" data-f="camp" aria-pressed="false">营地</button>
@@ -390,7 +389,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     <div class="sheet" id="sheet">
       <div class="grab" id="grab"><i></i></div>
       <div class="sheet-head">
-        <h2>精选优先</h2>
+        <h2>按车程排序</h2>
         <div class="hint" id="list-hint"></div>
       </div>
       <div class="list" id="list"></div>
@@ -448,7 +447,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, tier:true, kinds:{}, active:null};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, kinds:{}, active:null};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -474,13 +473,21 @@ function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
   return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
 function hm(h){var t=Math.round(h*60);return Math.floor(t/60)+"h"+(t%60?String(t%60).padStart(2,"0"):"");}
 function tag(txt,cls){return '<span class="tag '+cls+'">'+esc(txt)+'</span>';}
-function nightKey(s){return (s.overnight&&s.overnight.status)||"unknown";}
-function dogKey(s){return (s.dog&&s.dog.policy)||"unknown";}
+/* 数据里的值必须落在词表内，否则 NIGHT_LABEL[k] 是 undefined，
+   [0] 取标签时整页渲染直接抛异常、列表变成"数据加载失败"（实测踩过）。
+   这里兜一层：认不出来的值退化成"未核实"，不让一个数据笔误毁掉整个页面。 */
+function nightKey(s){
+  var k = (s.overnight && s.overnight.status) || "unknown";
+  return NIGHT_LABEL[k] ? k : "unknown";
+}
+function dogKey(s){
+  var k = (s.dog && s.dog.policy) || "unknown";
+  return DOG_LABEL[k] ? k : "unknown";
+}
 function isNight(s){var k=nightKey(s);return k==="official_camp"||k==="lodging"||k==="allowed_wild"||k==="gray";}
 
 /* ───────── 筛选 ───────── */
 function match(s){
-  if(STATE.tier && s.tier !== "A") return false;
   if(s.drive && s.drive.hours_oneway > STATE.hours) return false;
   if(!s.drive) return false;
   if(STATE.night && !isNight(s)) return false;
@@ -503,10 +510,8 @@ function match(s){
 /* ───────── 渲染列表 ───────── */
 function render(){
   var list = DATA.spots.filter(match);
-  /* 精选优先，同档按车程排——A 档本来就少，混在 1000 多个点里会沉底 */
+  /* 一律按单程车程由近到远 */
   list = list.slice().sort(function(a,b){
-    var ta = a.tier==="A"?0:1, tb = b.tier==="A"?0:1;
-    if(ta!==tb) return ta-tb;
     return (a.drive.hours_oneway||99)-(b.drive.hours_oneway||99);
   });
   el("count").textContent = list.length + " 个点";
@@ -668,7 +673,26 @@ function openDetail(id){
     '<div class="kv"><div class="k">今晚睡哪</div><div class="v"><b>'+esc(NIGHT_LABEL[nk][0])+'</b>'+
     (o.modes&&o.modes.length?' · '+o.modes.map(function(m){return {tent:"帐篷",car:"车中泊",cabin:"住店"}[m]||m;}).join("/"):"")+
     '</div></div>' +
+    (function(){
+      var f0 = o.facilities||{};
+      /* 卫生间单独拎出来问：到了地方发现没厕所，比没水更劝退 */
+      var t = f0.toilet;
+      var lbl = t===true ? '<b style="color:var(--green)">有</b>'
+              : t===false ? '<b style="color:var(--rose)">没有</b>'
+              : '<span style="color:var(--ink-3)">未核实</span>';
+      return '<div class="kv" style="margin-top:8px"><div class="k">卫生间</div><div class="v">'+lbl+'</div></div>';
+    })() +
     (o.note?'<div class="note-txt" style="margin-top:6px">'+esc(o.note)+'</div>':'') +
+    (function(){
+      var ev = o.evidence||[];
+      if(!ev.length) return "";
+      /* 结论下面是原话：别人到底怎么说的，读的人自己判断。
+         没有原话的结论等于二手转述，这个项目不这么干。 */
+      return '<div style="margin-top:8px">' + ev.slice(0,3).map(function(e){
+        return '<div class="quote cite" style="margin-top:6px">'+esc(e.quote||"")+
+               '<span style="color:var(--ink-3)"> —— @'+esc(e.author||"小红书")+'</span></div>';
+      }).join("") + '</div>';
+    })() +
     '</div></div>';
 
   /* 车程 */
@@ -763,8 +787,7 @@ function bind(){
     b.setAttribute("aria-pressed", on ? "false" : "true");
     if(f==="night") STATE.night = !on;
     else if(f==="dog") STATE.dog = !on;
-    else if(f==="tier") STATE.tier = !on;
-    else STATE.kinds[f] = !on;
+else STATE.kinds[f] = !on;
     render();
   });
   el("list").addEventListener("click", function(e){

@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-01 22:37",
+  "generated": "2026-11-02 07:54",
   "origin": {
    "name": "上海人民广场",
    "gcj": [
@@ -69,7 +69,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "上海【新添】遛狗大公园✨二十万方绿地·苏河源",
-   "tier": "A",
    "photos": [
     {
      "url": "images/dd070f633ed0/1.webp",
@@ -188,7 +187,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "上海遛狗｜宠物友好生态园✨青浦带狗玩《上篇》",
-   "tier": "A",
    "photos": [
     {
      "url": "images/977da4a96ac9/1.webp",
@@ -307,7 +305,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
-   "tier": "A",
    "photos": [
     {
      "url": "images/c1a5d7edd68f/1.webp",
@@ -426,7 +423,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "上海1h🚗苏州湾｜「海边」最适合遛狗",
-   "tier": "A",
    "photos": [
     {
      "url": "images/a26162eb9741/1.webp",
@@ -538,7 +534,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
-   "tier": "A",
    "photos": [
     {
      "url": "images/11246c802c8e/1.webp",
@@ -633,12 +628,21 @@
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "提到有水",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "water",
+      "quote": "景观很丰富，一进门就是二月兰，往里走还有水杉林、荷花池湖泊、湿地栈道、紫藤长廊、大草坪、游乐园，还能带狗看到梅花鹿",
+      "note_id": "681715530000000021019a3b",
+      "author": "超能绿绿姬嘎嘎子",
+      "note_url": "https://www.xiaohongshu.com/explore/681715530000000021019a3b"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -657,7 +661,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "崇明一日游怎么玩！人宠友好版！",
-   "tier": "A",
    "photos": [
     {
      "url": "images/63e6ced4e98b/1.webp",
@@ -776,7 +779,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
-   "tier": "A",
    "photos": [
     {
      "url": "images/a12f3d58fa75/1.webp",
@@ -895,7 +897,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
-   "tier": "A",
    "photos": [
     {
      "url": "images/b4305cdf0329/1.webp",
@@ -1014,7 +1015,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
-   "tier": "A",
    "photos": [
     {
      "url": "images/ac47c00b4a07/1.webp",
@@ -1102,12 +1102,21 @@
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "提到有水",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "water",
+      "quote": "🅿️定位 '丰义景区'，到达即为停车场，可充电，路边也可停",
+      "note_id": "6985834a0000000015033f34",
+      "author": "白白和糯米",
+      "note_url": "https://www.xiaohongshu.com/explore/6985834a0000000015033f34"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -1126,7 +1135,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "嘉兴沈荡»神仙湖»丰义 带🐶游玩攻略",
-   "tier": "A",
    "photos": [
     {
      "url": "images/2071970416fe/1.webp",
@@ -1214,12 +1222,21 @@
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "提到有水",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "water",
+      "quote": "🅿️定位 '丰义景区'，到达即为停车场，可充电，路边也可停",
+      "note_id": "6985834a0000000015033f34",
+      "author": "白白和糯米",
+      "note_url": "https://www.xiaohongshu.com/explore/6985834a0000000015033f34"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -1238,7 +1255,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "嘉兴沈荡»神仙湖»丰义 带🐶游玩攻略",
-   "tier": "A",
    "photos": [
     {
      "url": "images/d79c5c8c0427/1.webp",
@@ -1357,7 +1373,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
-   "tier": "A",
    "photos": [
     {
      "url": "images/a50d9e69216f/1.webp",
@@ -1469,7 +1484,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
-   "tier": "A",
    "photos": [
     {
      "url": "images/68f3ce36bc00/1.webp",
@@ -1588,7 +1602,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "tier": "A",
    "photos": [
     {
      "url": "images/f8f85f9785e1/1.webp",
@@ -1676,12 +1689,21 @@
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "提到有水",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "water",
+      "quote": "🅿️定位 '丰义景区'，到达即为停车场，可充电，路边也可停",
+      "note_id": "6985834a0000000015033f34",
+      "author": "白白和糯米",
+      "note_url": "https://www.xiaohongshu.com/explore/6985834a0000000015033f34"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -1700,7 +1722,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "嘉兴沈荡»神仙湖»丰义 带🐶游玩攻略",
-   "tier": "A",
    "photos": [
     {
      "url": "images/c85d3cc06168/1.webp",
@@ -1819,7 +1840,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
-   "tier": "A",
    "photos": [
     {
      "url": "images/6d92f70fc50e/1.webp",
@@ -1938,7 +1958,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "启东海边｜好朋狗一起去",
-   "tier": "A",
    "photos": [
     {
      "url": "images/552760b5f329/1.webp",
@@ -2057,7 +2076,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "tier": "B",
    "photos": [
     {
      "url": "images/73709f01cbb9/1.webp",
@@ -2129,17 +2147,42 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
-     "toilet": null,
+     "toilet": true,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜；写明有卫生间",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "✔️可以搭帐篷、可以钓小鱼，天热的时候还能淌淌水，我们4月份去的时候很多人已经在淌水捞鱼了",
+      "note_id": "6ac8e0c4000000001b02e366",
+      "author": "宠物友好推荐官冬爸队长",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac8e0c4000000001b02e366"
+     },
+     {
+      "kind": "toilet_yes",
+      "quote": "②停车场有洗手间，wc是方便的",
+      "note_id": "6ac8e0c4000000001b02e366",
+      "author": "宠物友好推荐官冬爸队长",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac8e0c4000000001b02e366"
+     },
+     {
+      "kind": "camp",
+      "quote": "③冬爸去的时候有看到有人搭帐篷，里面大草地蛮多的，想搭帐篷或者露营野餐的小伙伴可以的，不过明火烧烤应该就不行了哦",
+      "note_id": "6ac8e0c4000000001b02e366",
+      "author": "宠物友好推荐官冬爸队长",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac8e0c4000000001b02e366"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -2158,7 +2201,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "不在安吉在苏州！带小狗探秘巨大自然能量场",
-   "tier": "A",
    "photos": [
     {
      "url": "images/2ccda579616f/1.webp",
@@ -2248,17 +2290,49 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
-     "toilet": null,
+     "toilet": true,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜（有正规营地）；写明有卫生间",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "南北湖露营，看这篇就够了",
+      "note_id": "69f6ce92000000002301542f",
+      "author": "墨菲斯",
+      "note_url": "https://www.xiaohongshu.com/explore/69f6ce92000000002301542f"
+     },
+     {
+      "kind": "camp",
+      "quote": "南北湖露营可以过夜，可以带狗，部分区域可以车边露营，可以卡式炉，但不能烧烤",
+      "note_id": "69f6ce92000000002301542f",
+      "author": "墨菲斯",
+      "note_url": "https://www.xiaohongshu.com/explore/69f6ce92000000002301542f"
+     },
+     {
+      "kind": "official",
+      "quote": "这里足够大，即使是节假日也能找到露营位置",
+      "note_id": "69f6ce92000000002301542f",
+      "author": "墨菲斯",
+      "note_url": "https://www.xiaohongshu.com/explore/69f6ce92000000002301542f"
+     },
+     {
+      "kind": "camp",
+      "quote": "这里足够大，即使是节假日也能找到露营位置",
+      "note_id": "69f6ce92000000002301542f",
+      "author": "墨菲斯",
+      "note_url": "https://www.xiaohongshu.com/explore/69f6ce92000000002301542f"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -2277,7 +2351,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "南北湖露营，看这篇就够了",
-   "tier": "A",
    "photos": [
     {
      "url": "images/294b9511db55/1.webp",
@@ -2396,7 +2469,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "无锡·阳山｜假期带狗吸氧爬山+水库玩水游嗨",
-   "tier": "A",
    "photos": [
     {
      "url": "images/cdda55ec9667/1.webp",
@@ -2479,17 +2551,49 @@
     "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
-     "toilet": null,
+     "toilet": true,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜；写明有卫生间",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🔹从起点走约1公里，会经过一个露营园p5-6，里面有鸸鹋、孔雀、小奶牛、小猪等等，很多小动物，可以带小狗隔着围栏看看，给小狗丰容，超有趣",
+      "note_id": "69d5aeba000000001a031d42",
+      "author": "茶茶茶",
+      "note_url": "https://www.xiaohongshu.com/explore/69d5aeba000000001a031d42"
+     },
+     {
+      "kind": "toilet_yes",
+      "quote": "🔹1号停车场是码头，可租桨板皮划艇（可带小狗），有卫生间，有小卖部",
+      "note_id": "69d5aeba000000001a031d42",
+      "author": "茶茶茶",
+      "note_url": "https://www.xiaohongshu.com/explore/69d5aeba000000001a031d42"
+     },
+     {
+      "kind": "camp",
+      "quote": "🔹2号停车场是一小块露营地，旁边有小口可以到一片浅滩p13-14，我们在这里下的水，水库水质很棒",
+      "note_id": "69d5aeba000000001a031d42",
+      "author": "茶茶茶",
+      "note_url": "https://www.xiaohongshu.com/explore/69d5aeba000000001a031d42"
+     },
+     {
+      "kind": "camp",
+      "quote": "🔹4号停车场是玄果森林p17-18，有咖啡店和民宿，大片的草坪，和水杉林连在一起，小狗游完泳可以在这里跑一跑，晒晒太阳，可露营",
+      "note_id": "69d5aeba000000001a031d42",
+      "author": "茶茶茶",
+      "note_url": "https://www.xiaohongshu.com/explore/69d5aeba000000001a031d42"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -2508,7 +2612,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "遛茶｜📍湖州-川步村+桃花芥水库",
-   "tier": "A",
    "photos": [
     {
      "url": "images/ba8b44107165/1.webp",
@@ -2621,7 +2724,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全",
-   "tier": "A",
    "photos": [
     {
      "url": "images/ce49c02ece19/1.webp",
@@ -2722,7 +2824,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "tier": "B",
    "photos": [
     {
      "url": "images/f7fce83c6afc/1.webp",
@@ -2823,7 +2924,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "tier": "A",
    "photos": [
     {
      "url": "images/a6e4ffdd0136/1.webp",
@@ -2942,7 +3042,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全",
-   "tier": "A",
    "photos": [
     {
      "url": "images/70d24e8bec33/1.webp",
@@ -3061,7 +3160,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全",
-   "tier": "A",
    "photos": [
     {
      "url": "images/0a479e5ca1bf/1.webp",
@@ -3180,7 +3278,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全",
-   "tier": "A",
    "photos": [
     {
      "url": "images/d516bc191c89/1.webp",
@@ -3287,7 +3384,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全",
-   "tier": "A",
    "photos": [
     {
      "url": "images/9f1096bda8c0/1.webp",
@@ -3406,7 +3502,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B0KKMHF1RJ/comment/E67CFA08_0F62_476D_90E8_21EDE79C3491_L0_001_1179_157_1771917923104_17267843.jpg",
@@ -3483,7 +3578,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "必必必必须去‼️新晋遛狗🐕点，绝美水杉+1",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/096c1c14392371590000003224706853?type=pic",
@@ -3560,7 +3654,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/f7160625e0ffef92ef54ffc247551606",
@@ -3625,7 +3718,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "tier": "B",
    "photos": []
   },
   {
@@ -3683,7 +3775,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "小狗也觉得无锡的湿地公园超好玩的🥰",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B0FFGOPXCU/comment/content_media_external_images_media_1000169266_ss__1733214632363_58968897.jpg",
@@ -3731,8 +3822,10 @@
     "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -3740,8 +3833,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "随便找片有树遮荫的草坪[天幕R]铺个露营垫",
+      "note_id": "69fc7712000000003501d864",
+      "author": "钱大酱（暂时改名版）",
+      "note_url": "https://www.xiaohongshu.com/explore/69fc7712000000003501d864"
+     },
+     {
+      "kind": "camp",
+      "quote": "可以露营搭天幕、草坪散步、野餐发呆",
+      "note_id": "6a8442b20000000029032c42",
+      "author": "里里安",
+      "note_url": "https://www.xiaohongshu.com/explore/6a8442b20000000029032c42"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -3769,7 +3878,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "📍安吉 真的不缺好看的风景",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B0FFK9RSZZ/comment/8f85e916febba80d6509c97b78324b12_2048_2048_80.jpg",
@@ -3846,7 +3954,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/20e83c75b856a0fddf95938bfa60d3a4",
@@ -3894,8 +4001,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -3903,8 +4012,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🚘周六上海出发2.5h，导航“安吉五峰山运动村”或“五峰山国际青少年营地”，停车免费",
+      "note_id": "69b77905000000001a02f731",
+      "author": "野蛮小奇",
+      "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
+     },
+     {
+      "kind": "camp",
+      "quote": "运动村内停车点很多，可以往里开到青少年营地门口车位停车，进到营地继续往里走就是五峰山古道徒步入口（在左侧有入口指示牌），5km小环线，两步路有轨迹",
+      "note_id": "69b77905000000001a02f731",
+      "author": "野蛮小奇",
+      "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -3923,7 +4048,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "江浙沪难得人少且好看的遛狗地（建议别错过",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/448d1bd88f8052e4cb31eb22f1b1d27d",
@@ -4000,7 +4124,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "tier": "B",
    "photos": []
   },
   {
@@ -4058,7 +4181,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "tier": "B",
    "photos": []
   },
   {
@@ -4087,8 +4209,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -4096,8 +4220,38 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "挖到一处人超少、不商业化的临水野生露营地🌿",
+      "note_id": "6a1d4b09000000003700e24a",
+      "author": "松间雾",
+      "note_url": "https://www.xiaohongshu.com/explore/6a1d4b09000000003700e24a"
+     },
+     {
+      "kind": "camp",
+      "quote": "轿车直接开到水边，懒人轻露营直接冲💯",
+      "note_id": "6a1d4b09000000003700e24a",
+      "author": "松间雾",
+      "note_url": "https://www.xiaohongshu.com/explore/6a1d4b09000000003700e24a"
+     },
+     {
+      "kind": "camp",
+      "quote": "空间充足，搭天幕、拍照、遛娃玩水都合适，安全性超高",
+      "note_id": "6a1d4b09000000003700e24a",
+      "author": "松间雾",
+      "note_url": "https://www.xiaohongshu.com/explore/6a1d4b09000000003700e24a"
+     },
+     {
+      "kind": "camp",
+      "quote": "纯野生营地，无安保、无路灯、无配套",
+      "note_id": "6a1d4b09000000003700e24a",
+      "author": "松间雾",
+      "note_url": "https://www.xiaohongshu.com/explore/6a1d4b09000000003700e24a"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -4116,7 +4270,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "杭州小众露营✨车可直达！皮山坞水库太治愈",
-   "tier": "B",
    "photos": []
   },
   {
@@ -4178,7 +4331,6 @@
    "origin": "抖音带狗行程",
    "curation_note": "",
    "raw_note": "莫干山镇黄郛东路234号 ☎13362298098｜小红书评论（C级UGC，未核验）：「omito 为了这家酒店/专门带狗跑一趟」（笔记 6aaf924d）",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/866d44bcef9390983a7d6852de081123",
@@ -4258,7 +4410,6 @@
    "origin": "抖音带狗行程",
    "curation_note": "",
    "raw_note": "三合乡下渚湖 ☎0572-8484158｜小红书（C级UGC，未核验）：「第二天去了下渚湖，都是狗狗有好的，非常好逛也有可以散绳的地方」（笔记 6ac1d7bc）",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/08ed426487eb2e6245e99431a396f052",
@@ -4335,7 +4486,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "江浙沪国庆带狗出行功课一定要码住！",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/f4eac04ca5a21b0ca529d8a0e39aec8d",
@@ -4415,7 +4565,6 @@
    "origin": "抖音带狗行程",
    "curation_note": "",
    "raw_note": "莫干山镇黄郛西路85号 ☎17774158008｜庾村广场旁的备选落脚点（本阶段无来源可依）",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/8fb264babe620d9813135199f56f2ecb",
@@ -4492,7 +4641,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/fd51c7bea73d7cd4665f9f651cea0895",
@@ -4569,7 +4717,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "tier": "B",
    "photos": []
   },
   {
@@ -4632,7 +4779,6 @@
    "origin": "抖音带狗行程",
    "curation_note": "",
    "raw_note": "莫干山镇何村村方村坞26号 ☎13482824274｜小红书`6a0886a8`（C级UGC，未核验）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/d984817ba60594da95f3e28558102176",
@@ -4680,8 +4826,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -4689,8 +4837,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "有很大的草坪 适合遛狗也适合露营",
+      "note_id": "68ab3924000000001b03eb96",
+      "author": "Ivy_QYuan",
+      "note_url": "https://www.xiaohongshu.com/explore/68ab3924000000001b03eb96"
+     },
+     {
+      "kind": "camp",
+      "quote": "关键是真的很全面 既能户外徒步玩水露营 也能非常chill地在咖啡厅坐上半天 风景更是没得说了 度假氛围满满 狗子玩得尽兴 人也开心 吃好喝好住好还不累😃",
+      "note_id": "68ab3924000000001b03eb96",
+      "author": "Ivy_QYuan",
+      "note_url": "https://www.xiaohongshu.com/explore/68ab3924000000001b03eb96"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -4709,7 +4873,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "人和狗都超满意的东钱湖两日游🩵一定再来",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/41305cb7e3018969772ac471fd9490d3",
@@ -4786,7 +4949,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "tier": "B",
    "photos": []
   },
   {
@@ -4815,8 +4977,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -4824,8 +4988,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "短短的两小时里，茶田、营地、草坪、田野、山坡、小径、凉亭、水库，山景…",
+      "note_id": "69ecb694000000003502d71c",
+      "author": "巴尼in小碎步",
+      "note_url": "https://www.xiaohongshu.com/explore/69ecb694000000003502d71c"
+     },
+     {
+      "kind": "camp",
+      "quote": "📍风之谷星空露营基地（已废弃，放心玩）",
+      "note_id": "69ecb694000000003502d71c",
+      "author": "巴尼in小碎步",
+      "note_url": "https://www.xiaohongshu.com/explore/69ecb694000000003502d71c"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -4844,7 +5024,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "五一带狗玩【无人之境】✨只有风声的携宠徒步！",
-   "tier": "A",
    "photos": []
   },
   {
@@ -4873,8 +5052,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -4882,8 +5063,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🚘周六上海出发2.5h，导航“安吉五峰山运动村”或“五峰山国际青少年营地”，停车免费",
+      "note_id": "69b77905000000001a02f731",
+      "author": "野蛮小奇",
+      "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
+     },
+     {
+      "kind": "camp",
+      "quote": "运动村内停车点很多，可以往里开到青少年营地门口车位停车，进到营地继续往里走就是五峰山古道徒步入口（在左侧有入口指示牌），5km小环线，两步路有轨迹",
+      "note_id": "69b77905000000001a02f731",
+      "author": "野蛮小奇",
+      "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -4902,7 +5099,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "江浙沪难得人少且好看的遛狗地（建议别错过",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/a53d5298e785bc650000008094182126?type=pic",
@@ -4954,13 +5150,22 @@
     "modes": [],
     "fee": null,
     "facilities": {
-     "toilet": null,
+     "toilet": true,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "写明有卫生间",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "toilet_yes",
+      "quote": "中途经过贵门乡，有补给，有厕所，茶叶蛋才2元，甘蔗15元，鹿门书院藏在山坳里，青砖黛瓦映着银杏，带狗子在庭院里歇脚，感觉时间都慢下来了",
+      "note_id": "692eb056000000001d03da68",
+      "author": "汪仔",
+      "note_url": "https://www.xiaohongshu.com/explore/692eb056000000001d03da68"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -4979,7 +5184,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "更楼古道｜一组秋天徒步的暴击实况图",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-cdn-image.amap.com/sns/ugccomment/4c40e284-5f78-42ab-8f31-a4dcd75449ce.jpg",
@@ -5032,12 +5236,21 @@
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "提到有水",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "water",
+      "quote": "整个村都是宠物友好的，随处可见小狗立牌和适宠设施👍原来宠物拾便箱里是真的有拾便袋的，饮水器也是有水的我订的民宿就在这里，入住会送两份🥕可以去隔壁的农场喂小动物，可能是它们见多了小狗，看到我家小狗都特别淡定，除了叫火箭的小浣熊，小狗一定要注意别被咬鼻子",
+      "note_id": "6a20c3b20000000008003200",
+      "author": "钱钱的朋友圈🐾",
+      "note_url": "https://www.xiaohongshu.com/explore/6a20c3b20000000008003200"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -5056,7 +5269,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "小狗地图🗺️｜原来真的有一个宠物友好村🥹",
-   "tier": "A",
    "photos": []
   },
   {
@@ -5114,7 +5326,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "杭州|建议最近能量低的人都走一下这个路线",
-   "tier": "B",
    "photos": []
   },
   {
@@ -5172,7 +5383,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "南京1h直达｜亲子携宠撒欢，治愈感拉满",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/903c192ce58976500000005725316108?type=pic",
@@ -5249,7 +5459,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "🚗溧阳｜如此宠物友好！实现小狗自由🫶🏻",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B0FFFQ7F6L/comment/content_media_external_images_media_1000038250_ss__1763278713141_84522716.jpg",
@@ -5297,17 +5506,35 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
-     "toilet": null,
+     "toilet": true,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜；写明有卫生间",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "toilet_yes",
+      "quote": "[向右R]门票和停车费都是0元，一路都有卫生间（干净",
+      "note_id": "69465c00000000001f00cea2",
+      "author": "超能绿绿姬嘎嘎子",
+      "note_url": "https://www.xiaohongshu.com/explore/69465c00000000001f00cea2"
+     },
+     {
+      "kind": "camp",
+      "quote": "[向右R]导航：无想山景区牧心谷露营地",
+      "note_id": "69465c00000000001f00cea2",
+      "author": "超能绿绿姬嘎嘎子",
+      "note_url": "https://www.xiaohongshu.com/explore/69465c00000000001f00cea2"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -5326,7 +5553,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "📍南京！带狗出行一日赏秋可以这样玩",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/187368cf230855810000002379606908?type=pic",
@@ -5407,7 +5633,6 @@
    "origin": "抖音带狗行程",
    "curation_note": "",
    "raw_note": "杭垓镇缫舍村白石坞自然村13号 ☎18268236688｜池子 POI（营地），距小杭坑约 3.8 km，有电话可问营地规则",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/a047f7b0b8df73b3893eaae51a06ce02",
@@ -5484,7 +5709,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "无锡·阳山｜假期带狗吸氧爬山+水库玩水游嗨",
-   "tier": "A",
    "photos": [
     {
      "url": "images/cdda55ec9667/1.webp",
@@ -5571,13 +5795,36 @@
     "modes": [],
     "fee": null,
     "facilities": {
-     "toilet": null,
+     "toilet": false,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "写明没有卫生间",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "toilet_yes",
+      "quote": "✔ 起点没有卫生间，大概4公里处有卫生间",
+      "note_id": "6ace00af000000001802d5c1",
+      "author": "橙子喵喵",
+      "note_url": "https://www.xiaohongshu.com/explore/6ace00af000000001802d5c1"
+     },
+     {
+      "kind": "toilet_no",
+      "quote": "✔ 起点没有卫生间，大概4公里处有卫生间",
+      "note_id": "6ace00af000000001802d5c1",
+      "author": "橙子喵喵",
+      "note_url": "https://www.xiaohongshu.com/explore/6ace00af000000001802d5c1"
+     },
+     {
+      "kind": "toilet_yes",
+      "quote": "如果急需，自驾快到十字裤时，大岚老站（公交站）旁边也有卫生间",
+      "note_id": "6ace00af000000001802d5c1",
+      "author": "橙子喵喵",
+      "note_url": "https://www.xiaohongshu.com/explore/6ace00af000000001802d5c1"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -5596,7 +5843,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "余姚四明山｜小狗周末应该和秋天有个约会🍂",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B0G2F5ZK59/comment/content_media_external_images_media_100001457_1765534232580_63234692.jpg",
@@ -5644,8 +5890,10 @@
     "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -5653,8 +5901,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🔵 螺塘线：🆓，导航螺塘线露营基地，是一条沿海公路，风景超棒，沿途也有很多咖啡店",
+      "note_id": "696e131a000000001a02393c",
+      "author": "海尔弟弟",
+      "note_url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c"
+     },
+     {
+      "kind": "camp",
+      "quote": "4️⃣另外加一个点：马目山风车营地",
+      "note_id": "696e131a000000001a02393c",
+      "author": "海尔弟弟",
+      "note_url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -5673,7 +5937,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "舟山2.5天带狗逐海观山｜定海+朱家尖+岱山",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/default_poi/comment/587fd0742a6b6d58a450b3dd63fa6acb_2048_2048_80.jpg",
@@ -5738,7 +6001,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "上海自驾3h🐕岱山免费沙滩，超绝悬崖栈道",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/5cfa58ed63a2dcaf0000006259682070?type=pic",
@@ -5815,7 +6077,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "tier": "B",
    "photos": []
   },
   {
@@ -5895,7 +6156,6 @@
    "origin": "抖音带狗行程",
    "curation_note": "",
    "raw_note": "大关自然村1号 ☎17357211578｜池子 POI（营地），距生态营地 0.13 km，有电话可问营地规则",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/9fffd66c6c0be0f957c91772c40b0245",
@@ -5972,7 +6232,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "在扬州遛狗 是一件很幸福的事",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B0FFHOSW3U/comment/517CFD0C_074B_478A_9226_566EAD4071A2_L0_001_2000_150_1763809714497_52293727.jpg",
@@ -6049,7 +6308,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "带狗子去扬州｜抹茶森林🌿渌洋湖湿地公园",
-   "tier": "B",
    "photos": []
   },
   {
@@ -6107,7 +6365,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "携宠自驾游|皖南宣城泾县月亮湾",
-   "tier": "A",
    "photos": []
   },
   {
@@ -6165,7 +6422,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "tier": "B",
    "photos": []
   },
   {
@@ -6223,7 +6479,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "江浙沪独生狗度假⛱️staycation",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/9a7c74d5609be1da72672828a649feba",
@@ -6271,8 +6526,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -6280,8 +6537,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "南沙滩→东沙滩→礁石咖啡→中央沙滩→太极湾沙滩→白沙湾沙滩→青年与海营地→亚帆中心",
+      "note_id": "6a6861b5000000001d0208e5",
+      "author": "Dun Dun",
+      "note_url": "https://www.xiaohongshu.com/explore/6a6861b5000000001d0208e5"
+     },
+     {
+      "kind": "camp",
+      "quote": "✔️玩法：露营基地，可自带/租赁帐篷，赏晚霞，观星空",
+      "note_id": "6a6861b5000000001d0208e5",
+      "author": "Dun Dun",
+      "note_url": "https://www.xiaohongshu.com/explore/6a6861b5000000001d0208e5"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -6300,7 +6573,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "不在三亚！在象山松兰山！太美太好拍！（附攻略",
-   "tier": "B",
    "photos": []
   },
   {
@@ -6361,7 +6633,6 @@
    "origin": "抖音行程",
    "curation_note": "水杉倒影，清晨最佳",
    "raw_note": "水杉倒影，清晨最佳",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B0I0ARARW8/comment/content_media_external_file_15230_ss__1763355527420_70994923.jpg",
@@ -6438,7 +6709,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "象山超细软免费沙滩，人少小众，宠物友好",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B0FFG2I5IT/comment/8AEEF220_9E29_4182_8911_65F556B1F2D2_L0_001_2000_112_1759370696188_17250516.jpg",
@@ -6518,7 +6788,6 @@
    "origin": "抖音行程",
    "curation_note": "杨公堤西侧，湖边步道起点，早上人少",
    "raw_note": "杨公堤西侧，湖边步道起点，早上人少",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/3592bded7ac7ec2e0000005138352227?type=pic",
@@ -6598,7 +6867,6 @@
    "origin": "抖音行程",
    "curation_note": "长廊倒影收尾",
    "raw_note": "长廊倒影收尾",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/1f585b5f8168a4430000003089124312?type=pic",
@@ -6679,7 +6947,6 @@
    "origin": "抖音带狗行程",
    "curation_note": "",
    "raw_note": "双浦镇灵山风景区 ☎13716512269｜池子 POI（营地咖啡），铜鉴湖西侧",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/a2e4b9099c8c16b84cc874e0a0111005",
@@ -6757,7 +7024,6 @@
    "origin": "抖音带狗行程",
    "curation_note": "",
    "raw_note": "灵山中路108号 ☎18989891503｜池子 POI（休闲/营地），灵山景区内，有电话可问",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/c181bfe21dabf5441bafb008950df49a",
@@ -6805,8 +7071,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -6814,8 +7082,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "游览顺序：游客中心（出入口A）→乘船直下枫杨市集→森林乐园→河路桥（白马坑溪流秘境）→小岚山→撒欢儿营地（2号码头），要去哪站跟船夫说",
+      "note_id": "6a41f33d000000001603faf9",
+      "author": "鲨鱼小鲨鱼",
+      "note_url": "https://www.xiaohongshu.com/explore/6a41f33d000000001603faf9"
+     },
+     {
+      "kind": "camp",
+      "quote": "不建议全程徒步走完枫杨市集到撒欢儿营地全线，耗时久、比较费脚力",
+      "note_id": "6a41f33d000000001603faf9",
+      "author": "鲨鱼小鲨鱼",
+      "note_url": "https://www.xiaohongshu.com/explore/6a41f33d000000001603faf9"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -6834,7 +7118,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "带狗游平垣秘境（游览顺序建议版）",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/91f8d6e94ba926fec56baed10d11e6ec",
@@ -6913,7 +7196,6 @@
    "origin": "抖音带狗行程",
    "curation_note": "双浦镇灵山风景区，电话 18157198875",
    "raw_note": "双浦镇灵山风景区 ☎18157198875｜挂载命中（逐字同名，high）＋小红书`69c4e173`（C级UGC，未核验）：该篇是「杭州宠物友好保姆级攻略」，但正文没有单独写铜鉴湖，本点的宠物信息请以现场为准",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/fa7cd1e056697eac3a076b621c15d632",
@@ -6995,7 +7277,6 @@
    "origin": "抖音带狗行程",
    "curation_note": "",
    "raw_note": "铜鉴湖花海西侧200米｜池子 POI（营地），铜鉴湖花海边，草坪开阔",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B0J101TSKU/comment/4820C546_5C43_41F1_9762_939FE481CD9D_L0_001_1500_200_1751076221468_10303686.jpg",
@@ -7072,7 +7353,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "安徽省宣城市绩溪县·皖浙天路～",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B02330NRCC/comment/3CBC6347_553D_4C4D_BB03_1EB2F54B6D4A_L0_001_2016_1512_1767272206419_90512131.jpg",
@@ -7149,7 +7429,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "不在三亚！在象山松兰山！太美太好拍！（附攻略",
-   "tier": "B",
    "photos": []
   },
   {
@@ -7183,12 +7462,21 @@
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "提到有水",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "water",
+      "quote": "在水里扑腾、追桨板，玩累了旁边就有热水冲洗区，冲完还能吹得毛毛蓬蓬松松~",
+      "note_id": "6a2f57b900000000170294a5",
+      "author": "串串香香",
+      "note_url": "https://www.xiaohongshu.com/explore/6a2f57b900000000170294a5"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -7207,7 +7495,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "打卡江浙沪宠物友好酒店（下）",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/63c3fd7549d79a16578e5e095f21e62b",
@@ -7255,8 +7542,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -7264,8 +7553,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🔵 螺塘线：🆓，导航螺塘线露营基地，是一条沿海公路，风景超棒，沿途也有很多咖啡店",
+      "note_id": "696e131a000000001a02393c",
+      "author": "海尔弟弟",
+      "note_url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c"
+     },
+     {
+      "kind": "camp",
+      "quote": "4️⃣另外加一个点：马目山风车营地",
+      "note_id": "696e131a000000001a02393c",
+      "author": "海尔弟弟",
+      "note_url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -7284,7 +7589,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "攻略总结|总要带🐕去一趟舟山吧，我想",
-   "tier": "A",
    "photos": []
   },
   {
@@ -7313,8 +7617,10 @@
     "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -7322,8 +7628,31 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🎫费用：营地是免·费的，吃喝另算",
+      "note_id": "69ce8a300000000021004fe0",
+      "author": "禾禾小朋友",
+      "note_url": "https://www.xiaohongshu.com/explore/69ce8a300000000021004fe0"
+     },
+     {
+      "kind": "camp",
+      "quote": "没想到村子里藏了这么一家有品位的咖啡露营地",
+      "note_id": "69ce8a300000000021004fe0",
+      "author": "禾禾小朋友",
+      "note_url": "https://www.xiaohongshu.com/explore/69ce8a300000000021004fe0"
+     },
+     {
+      "kind": "camp",
+      "quote": "咖啡、饮品、窑炉烤面包、自己动手做披萨、田野卡丁车、小猫小狗好几只、拍照、露营，旁边10分钟路程内还有个免费大型儿童乐园、草莓采摘园、绿道骑行（自备车）等等，很有得玩",
+      "note_id": "69ce8a300000000021004fe0",
+      "author": "禾禾小朋友",
+      "note_url": "https://www.xiaohongshu.com/explore/69ce8a300000000021004fe0"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -7342,7 +7671,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "真的不在国外 就在浙江四线小县城建德",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/dcaed3bfa0e9b64dafe7448ec559ffc2",
@@ -7419,7 +7747,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "🐾仙居淡竹｜小狗吸氧staycation🏝️🧺",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/9674866ed575035aeb1bd56faebbaf7c",
@@ -7498,7 +7825,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "新安江山水画廊游船码头，图1-4 的江面、乌篷船、鸬鹚捕鱼都在这一段",
-   "tier": "A",
    "photos": []
   },
   {
@@ -7553,7 +7879,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "仙都晨雾牵牛机位，6:30-7:30 到",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B02420INKO/comment/5191BB0A_9B40_440E_946D_912FC90A6DB1_L0_001_2016_151_1773387928298_50396106.jpg",
@@ -7627,7 +7952,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "170 米石柱，仙都唯一 5A 核心",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/f33c30a9b1c364b93451bafae1455e36",
@@ -7704,7 +8028,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "宠物友好+美得离谱 | 安徽黄山太平湖",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-comment.amap.com/B0FFGZGYKJ/comment/content_media_external_file_100002904_1760152409587_53394018.jpg",
@@ -7781,7 +8104,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "歙县深渡镇，图5-8 的晒秋与土黄夯土房",
-   "tier": "A",
    "photos": [
     {
      "url": "https://aos-cdn-image.amap.com/sns/ugccomment/dd7878f3-c002-47c7-b03e-6b3d0952bb3d.jpg",
@@ -7862,7 +8184,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "黄山市区的落脚点，从这儿出发去四个村子",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/c4347d4837e1fc9a319d43e8f887b380",
@@ -7940,7 +8261,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "徽州区呈坎镇灵山村，古村与梯田",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/4d098c365a37339012b77af100912558",
@@ -8017,7 +8337,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "秋天要带小狗去农场撒欢！",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/87caf12d4660bbf6c50ead534df9c24b",
@@ -8094,7 +8413,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "上海出发｜带狗丽水五天四晚攻略来啦",
-   "tier": "A",
    "photos": []
   },
   {
@@ -8152,7 +8470,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "小狗开化玻璃水游玩体验～！",
-   "tier": "A",
    "photos": []
   },
   {
@@ -8230,7 +8547,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "」）黟县宏村镇，图11-12、16-17 的秋色稻田与村落",
-   "tier": "A",
    "photos": []
   },
   {
@@ -8288,7 +8604,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "太平湖！养宠人狂爱！！！",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/63d78f670f9532b42ada09e47803cc02",
@@ -8365,7 +8680,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "衢州仙霞居",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/ae97db646fe0f5740000008488384664?type=pic",
@@ -8444,7 +8758,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "宏村南门外稻田，咖啡店门前是最佳机位",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/953ad83187d5b8230000005419000708?type=pic",
@@ -8532,7 +8845,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "黟县宏村镇，图14-15、18 的木雕楼与村中溪桥",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/9d8bb12311ec4b13b9304357afe14ec9",
@@ -8609,7 +8921,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "Y066乡道进北岸，看水杉与晨雾",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/aee7a31fdf098a18226df45298c18f81",
@@ -8686,7 +8997,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "‼️携宠自驾🚏第二站 江西婺源",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/d1611f913273342b0000008009055000?type=pic",
@@ -8766,7 +9076,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "」）黟县，图9-10 的白墙题字与村口水塘",
-   "tier": "A",
    "photos": []
   },
   {
@@ -8824,7 +9133,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "周末逃离苏州之⛰️江西婺源（宠物友好版",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/b2e73f5ceb6fd4ec0000000973174339?type=pic",
@@ -8877,12 +9185,21 @@
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "提到有水",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "water",
+      "quote": "📝老板热情，门口可停车，可充电",
+      "note_id": "69d89601000000002300769c",
+      "author": "大地家族 大族长",
+      "note_url": "https://www.xiaohongshu.com/explore/69d89601000000002300769c"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -8901,7 +9218,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "江西遛狗 | 婺源➕景德镇（3天2晚版）1️⃣",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/88f3450df0530eab9b91f05701a0b541",
@@ -8975,7 +9291,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "松阳，江南布达拉宫，傍晚最美",
-   "tier": "A",
    "photos": []
   },
   {
@@ -9036,7 +9351,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "休宁县溪口镇，云端村落，车到山下要徒步",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/3db148ebf7aa66690000000891368155?type=pic",
@@ -9110,7 +9424,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "华东最大梯田群，10 月中金黄",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/fb467ecc9a36976bceeafabd6c4b2f00",
@@ -9184,7 +9497,6 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "遂昌，11 月中下旬红叶，10 月可省",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/d2cc872e9eb231b1ab7eea61c240563a",
@@ -9261,7 +9573,6 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "周末逃离苏州之⛰️江西婺源（宠物友好版",
-   "tier": "A",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/f18e83ea8084d17b81fde36e4df4dcb8",
