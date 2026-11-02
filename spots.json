@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-02 07:54",
+  "generated": "2026-11-02 08:55",
   "origin": {
    "name": "上海人民广场",
    "gcj": [
@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 110,
+  "count": 113,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -394,17 +394,50 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent",
+     "car"
+    ],
     "fee": null,
     "facilities": {
-     "toilet": null,
+     "toilet": true,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜（有正规营地）；写明有卫生间",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "✅仍可体验的项目：钓鱼🎣露营🏕️遛狗🦮",
+      "note_id": "6882f3b1000000002201c02b",
+      "author": "出发吧马斯克",
+      "note_url": "https://www.xiaohongshu.com/explore/6882f3b1000000002201c02b"
+     },
+     {
+      "kind": "camp",
+      "quote": "遛狗+野餐+露营一次搞定",
+      "note_id": "6882f3b1000000002201c02b",
+      "author": "出发吧马斯克",
+      "note_url": "https://www.xiaohongshu.com/explore/6882f3b1000000002201c02b"
+     },
+     {
+      "kind": "car",
+      "quote": "江浙沪床车✨0元过夜营地清单",
+      "note_id": "6961e0cb0000000021032795",
+      "author": "移动小窝日记",
+      "note_url": "https://www.xiaohongshu.com/explore/6961e0cb0000000021032795"
+     },
+     {
+      "kind": "camp",
+      "quote": "江浙沪床车✨0元过夜营地清单",
+      "note_id": "6961e0cb0000000021032795",
+      "author": "移动小窝日记",
+      "note_url": "https://www.xiaohongshu.com/explore/6961e0cb0000000021032795"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -623,8 +656,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -632,7 +667,7 @@
      "power": null,
      "signal": null
     },
-    "note": "提到有水",
+    "note": "笔记里有人在这过夜；提到有水",
     "verified_at": null,
     "evidence": [
      {
@@ -641,6 +676,27 @@
       "note_id": "681715530000000021019a3b",
       "author": "超能绿绿姬嘎嘎子",
       "note_url": "https://www.xiaohongshu.com/explore/681715530000000021019a3b"
+     },
+     {
+      "kind": "camp",
+      "quote": "途径丁字坝海岸线、黄金海岸露营点和崇明垦丁",
+      "note_id": "6a24fc440000000022014779",
+      "author": "CCCGGG",
+      "note_url": "https://www.xiaohongshu.com/explore/6a24fc440000000022014779"
+     },
+     {
+      "kind": "camp",
+      "quote": "🦋 第二站：东滩湿地公园·露营车漫游（带狗友好",
+      "note_id": "688580c90000000017037854",
+      "author": "小夏爱吃三明治",
+      "note_url": "https://www.xiaohongshu.com/explore/688580c90000000017037854"
+     },
+     {
+      "kind": "camp",
+      "quote": "我们带了露营车（可坐2人+宠物），我们在露营车上放了桌子直接暴改成小车车，我坐在小车车上，阿宸拉着我慢走，草叶上的风都是甜的～",
+      "note_id": "688580c90000000017037854",
+      "author": "小夏爱吃三明治",
+      "note_url": "https://www.xiaohongshu.com/explore/688580c90000000017037854"
      }
     ]
    },
@@ -868,8 +924,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -877,8 +935,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "·苏州：云杉湖公园、仙樱湖公园、莲池湖公园周边、吴江胜地公园、白鹭园露营地",
+      "note_id": "6976f56f000000000b00a45a",
+      "author": "蜻蜓队长",
+      "note_url": "https://www.xiaohongshu.com/explore/6976f56f000000000b00a45a"
+     },
+     {
+      "kind": "camp",
+      "quote": "·丽江：糊涂窝牧场、阿美泽营地",
+      "note_id": "6976f56f000000000b00a45a",
+      "author": "蜻蜓队长",
+      "note_url": "https://www.xiaohongshu.com/explore/6976f56f000000000b00a45a"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -1097,24 +1171,26 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": true,
+     "water": null,
      "power": null,
      "signal": null
     },
-    "note": "提到有水",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
     "evidence": [
      {
-      "kind": "water",
-      "quote": "🅿️定位 '丰义景区'，到达即为停车场，可充电，路边也可停",
-      "note_id": "6985834a0000000015033f34",
-      "author": "白白和糯米",
-      "note_url": "https://www.xiaohongshu.com/explore/6985834a0000000015033f34"
+      "kind": "camp",
+      "quote": "🏕️19:00夜间露营：枇杷咖啡后面/桨板附近/其他小红书找找/环湖骑行的时候顺便看看适合露营的地方",
+      "note_id": "6a943e940000000007007851",
+      "author": "Jackie.",
+      "note_url": "https://www.xiaohongshu.com/explore/6a943e940000000007007851"
      }
     ]
    },
@@ -1222,21 +1298,12 @@
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": true,
+     "water": null,
      "power": null,
      "signal": null
     },
-    "note": "提到有水",
-    "verified_at": null,
-    "evidence": [
-     {
-      "kind": "water",
-      "quote": "🅿️定位 '丰义景区'，到达即为停车场，可充电，路边也可停",
-      "note_id": "6985834a0000000015033f34",
-      "author": "白白和糯米",
-      "note_url": "https://www.xiaohongshu.com/explore/6985834a0000000015033f34"
-     }
-    ]
+    "note": "",
+    "verified_at": null
    },
    "sub_pois": [
     {
@@ -1684,16 +1751,18 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
-     "toilet": null,
+     "toilet": true,
      "water": true,
      "power": null,
      "signal": null
     },
-    "note": "提到有水",
+    "note": "笔记里有人在这过夜；写明有卫生间；提到有水",
     "verified_at": null,
     "evidence": [
      {
@@ -1702,6 +1771,20 @@
       "note_id": "6985834a0000000015033f34",
       "author": "白白和糯米",
       "note_url": "https://www.xiaohongshu.com/explore/6985834a0000000015033f34"
+     },
+     {
+      "kind": "toilet_yes",
+      "quote": "*广场左手边有洗手间，右手边是湖畔木栈道",
+      "note_id": "68cd1c830000000012023c12",
+      "author": "宠物友好推荐官冬爸队长",
+      "note_url": "https://www.xiaohongshu.com/explore/68cd1c830000000012023c12"
+     },
+     {
+      "kind": "camp",
+      "quote": "中国唯一山海湖一体的景区，景区免费，宠物友好，可以骑行环湖兜风、露营、爬山，可玩性很好",
+      "note_id": "69cde104000000001a0215c7",
+      "author": "蛋老大和溜小二",
+      "note_url": "https://www.xiaohongshu.com/explore/69cde104000000001a0215c7"
      }
     ]
    },
@@ -1784,6 +1867,63 @@
      "src": "高德POI"
     }
    ]
+  },
+  {
+   "id": "x-金山城市沙滩",
+   "name": "金山城市沙滩",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "",
+   "gcj": [
+    121.351801,
+    30.710884
+   ],
+   "drive": {
+    "hours_oneway": 1.66,
+    "km": 78.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 08:55"
+   },
+   "dog": {
+    "policy": "forbidden",
+    "evidence": "小红书 C级UGC（笔记 6a9c396b，@小缇子）：「泳期金山城市沙滩不能带狗下次一定去上」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_veto",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "金山城市沙滩",
+     "gcj": [
+      121.351801,
+      30.710884
+     ],
+     "note": "逃离城市，带小狗奔赴上海版阿勒泰"
+    }
+   ],
+   "trips": [
+    "小红书-带狗免费营地"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "逃离城市，带小狗奔赴上海版阿勒泰",
+   "photos": []
   },
   {
    "id": "x-南北湖风景区",
@@ -2290,49 +2430,17 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "official_camp",
-    "modes": [
-     "tent"
-    ],
+    "status": "unknown",
+    "modes": [],
     "fee": null,
     "facilities": {
-     "toilet": true,
+     "toilet": null,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "笔记里有人在这过夜（有正规营地）；写明有卫生间",
-    "verified_at": null,
-    "evidence": [
-     {
-      "kind": "camp",
-      "quote": "南北湖露营，看这篇就够了",
-      "note_id": "69f6ce92000000002301542f",
-      "author": "墨菲斯",
-      "note_url": "https://www.xiaohongshu.com/explore/69f6ce92000000002301542f"
-     },
-     {
-      "kind": "camp",
-      "quote": "南北湖露营可以过夜，可以带狗，部分区域可以车边露营，可以卡式炉，但不能烧烤",
-      "note_id": "69f6ce92000000002301542f",
-      "author": "墨菲斯",
-      "note_url": "https://www.xiaohongshu.com/explore/69f6ce92000000002301542f"
-     },
-     {
-      "kind": "official",
-      "quote": "这里足够大，即使是节假日也能找到露营位置",
-      "note_id": "69f6ce92000000002301542f",
-      "author": "墨菲斯",
-      "note_url": "https://www.xiaohongshu.com/explore/69f6ce92000000002301542f"
-     },
-     {
-      "kind": "camp",
-      "quote": "这里足够大，即使是节假日也能找到露营位置",
-      "note_id": "69f6ce92000000002301542f",
-      "author": "墨菲斯",
-      "note_url": "https://www.xiaohongshu.com/explore/69f6ce92000000002301542f"
-     }
-    ]
+    "note": "",
+    "verified_at": null
    },
    "sub_pois": [
     {
@@ -4021,13 +4129,6 @@
       "note_id": "69b77905000000001a02f731",
       "author": "野蛮小奇",
       "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
-     },
-     {
-      "kind": "camp",
-      "quote": "运动村内停车点很多，可以往里开到青少年营地门口车位停车，进到营地继续往里走就是五峰山古道徒步入口（在左侧有入口指示牌），5km小环线，两步路有轨迹",
-      "note_id": "69b77905000000001a02f731",
-      "author": "野蛮小奇",
-      "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
      }
     ]
    },
@@ -4826,10 +4927,8 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "allowed_wild",
-    "modes": [
-     "tent"
-    ],
+    "status": "unknown",
+    "modes": [],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -4837,24 +4936,8 @@
      "power": null,
      "signal": null
     },
-    "note": "笔记里有人在这过夜",
-    "verified_at": null,
-    "evidence": [
-     {
-      "kind": "camp",
-      "quote": "有很大的草坪 适合遛狗也适合露营",
-      "note_id": "68ab3924000000001b03eb96",
-      "author": "Ivy_QYuan",
-      "note_url": "https://www.xiaohongshu.com/explore/68ab3924000000001b03eb96"
-     },
-     {
-      "kind": "camp",
-      "quote": "关键是真的很全面 既能户外徒步玩水露营 也能非常chill地在咖啡厅坐上半天 风景更是没得说了 度假氛围满满 狗子玩得尽兴 人也开心 吃好喝好住好还不累😃",
-      "note_id": "68ab3924000000001b03eb96",
-      "author": "Ivy_QYuan",
-      "note_url": "https://www.xiaohongshu.com/explore/68ab3924000000001b03eb96"
-     }
-    ]
+    "note": "",
+    "verified_at": null
    },
    "sub_pois": [
     {
@@ -4977,10 +5060,8 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "allowed_wild",
-    "modes": [
-     "tent"
-    ],
+    "status": "unknown",
+    "modes": [],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -4988,24 +5069,8 @@
      "power": null,
      "signal": null
     },
-    "note": "笔记里有人在这过夜",
-    "verified_at": null,
-    "evidence": [
-     {
-      "kind": "camp",
-      "quote": "短短的两小时里，茶田、营地、草坪、田野、山坡、小径、凉亭、水库，山景…",
-      "note_id": "69ecb694000000003502d71c",
-      "author": "巴尼in小碎步",
-      "note_url": "https://www.xiaohongshu.com/explore/69ecb694000000003502d71c"
-     },
-     {
-      "kind": "camp",
-      "quote": "📍风之谷星空露营基地（已废弃，放心玩）",
-      "note_id": "69ecb694000000003502d71c",
-      "author": "巴尼in小碎步",
-      "note_url": "https://www.xiaohongshu.com/explore/69ecb694000000003502d71c"
-     }
-    ]
+    "note": "",
+    "verified_at": null
    },
    "sub_pois": [
     {
@@ -5069,13 +5134,6 @@
      {
       "kind": "camp",
       "quote": "🚘周六上海出发2.5h，导航“安吉五峰山运动村”或“五峰山国际青少年营地”，停车免费",
-      "note_id": "69b77905000000001a02f731",
-      "author": "野蛮小奇",
-      "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
-     },
-     {
-      "kind": "camp",
-      "quote": "运动村内停车点很多，可以往里开到青少年营地门口车位停车，进到营地继续往里走就是五峰山古道徒步入口（在左侧有入口指示牌），5km小环线，两步路有轨迹",
       "note_id": "69b77905000000001a02f731",
       "author": "野蛮小奇",
       "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
@@ -5236,21 +5294,12 @@
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": true,
+     "water": null,
      "power": null,
      "signal": null
     },
-    "note": "提到有水",
-    "verified_at": null,
-    "evidence": [
-     {
-      "kind": "water",
-      "quote": "整个村都是宠物友好的，随处可见小狗立牌和适宠设施👍原来宠物拾便箱里是真的有拾便袋的，饮水器也是有水的我订的民宿就在这里，入住会送两份🥕可以去隔壁的农场喂小动物，可能是它们见多了小狗，看到我家小狗都特别淡定，除了叫火箭的小浣熊，小狗一定要注意别被咬鼻子",
-      "note_id": "6a20c3b20000000008003200",
-      "author": "钱钱的朋友圈🐾",
-      "note_url": "https://www.xiaohongshu.com/explore/6a20c3b20000000008003200"
-     }
-    ]
+    "note": "",
+    "verified_at": null
    },
    "sub_pois": [
     {
@@ -5329,6 +5378,63 @@
    "photos": []
   },
   {
+   "id": "x-小蓝境咖啡",
+   "name": "小蓝境咖啡",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "",
+   "gcj": [
+    119.154785,
+    32.086054
+   ],
+   "drive": {
+    "hours_oneway": 3.17,
+    "km": 275.3,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-01 21:21"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6a570cee，@爆炸盐）：「里面很大 好多打卡拍照的地方 蓝色的湖面很美 很出片 \t 门票39/人 可以选一款咖啡 停车很方便 宠物友好，可以带狗狗哦」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "小蓝境咖啡",
+     "gcj": [
+      119.154785,
+      32.086054
+     ],
+     "note": "好天气就是适合去户外｜打卡南京小蓝境咖啡"
+    }
+   ],
+   "trips": [
+    "小红书-句容"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "好天气就是适合去户外｜打卡南京小蓝境咖啡",
+   "photos": []
+  },
+  {
    "id": "x-千华古村",
    "name": "千华古村",
    "kind": "village",
@@ -5358,13 +5464,22 @@
     "modes": [],
     "fee": null,
     "facilities": {
-     "toilet": null,
+     "toilet": true,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "写明有卫生间",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "toilet_yes",
+      "quote": "景区到处都有饮水区、休息位，还有专门的宠物公厕，连萌宠市集都有，毛孩子也能逛吃逛玩",
+      "note_id": "69f56ebe000000001a035a2e",
+      "author": "快乐遛娃日记",
+      "note_url": "https://www.xiaohongshu.com/explore/69f56ebe000000001a035a2e"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -5430,17 +5545,33 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
+    "status": "forbidden",
     "modes": [],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里提到不让过夜；提到有水",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "forbid",
+      "quote": "我们本来以为要被赶出去了，没想到他直接给我们开了一个包间，让我们两个人在包间里用餐，全程对狗狗也特别友善",
+      "note_id": "698d61e4000000001a01c850",
+      "author": "遛遛大顺",
+      "note_url": "https://www.xiaohongshu.com/explore/698d61e4000000001a01c850"
+     },
+     {
+      "kind": "water",
+      "quote": "风景也是特别棒有山有水，这家酒店附近就是竹海（也",
+      "note_id": "698d61e4000000001a01c850",
+      "author": "遛遛大顺",
+      "note_url": "https://www.xiaohongshu.com/explore/698d61e4000000001a01c850"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -5512,21 +5643,14 @@
     ],
     "fee": null,
     "facilities": {
-     "toilet": true,
+     "toilet": null,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "笔记里有人在这过夜；写明有卫生间",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
     "evidence": [
-     {
-      "kind": "toilet_yes",
-      "quote": "[向右R]门票和停车费都是0元，一路都有卫生间（干净",
-      "note_id": "69465c00000000001f00cea2",
-      "author": "超能绿绿姬嘎嘎子",
-      "note_url": "https://www.xiaohongshu.com/explore/69465c00000000001f00cea2"
-     },
      {
       "kind": "camp",
       "quote": "[向右R]导航：无想山景区牧心谷露营地",
@@ -5795,12 +5919,12 @@
     "modes": [],
     "fee": null,
     "facilities": {
-     "toilet": false,
+     "toilet": null,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "写明没有卫生间",
+    "note": "厕所有无说法不一致，需自行确认",
     "verified_at": null,
     "evidence": [
      {
@@ -5890,10 +6014,8 @@
     "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
    },
    "overnight": {
-    "status": "allowed_wild",
-    "modes": [
-     "tent"
-    ],
+    "status": "unknown",
+    "modes": [],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -5901,24 +6023,8 @@
      "power": null,
      "signal": null
     },
-    "note": "笔记里有人在这过夜",
-    "verified_at": null,
-    "evidence": [
-     {
-      "kind": "camp",
-      "quote": "🔵 螺塘线：🆓，导航螺塘线露营基地，是一条沿海公路，风景超棒，沿途也有很多咖啡店",
-      "note_id": "696e131a000000001a02393c",
-      "author": "海尔弟弟",
-      "note_url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c"
-     },
-     {
-      "kind": "camp",
-      "quote": "4️⃣另外加一个点：马目山风车营地",
-      "note_id": "696e131a000000001a02393c",
-      "author": "海尔弟弟",
-      "note_url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c"
-     }
-    ]
+    "note": "",
+    "verified_at": null
    },
    "sub_pois": [
     {
@@ -6336,8 +6442,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -6345,8 +6453,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "👉 青龙湾：可以乘坐游船游览，周边生态环境超好，随意一个地方就看见好多本地人露营玩水",
+      "note_id": "69ef69180000000035030292",
+      "author": "来个汉堡不加肉",
+      "note_url": "https://www.xiaohongshu.com/explore/69ef69180000000035030292"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -6454,13 +6571,22 @@
     "modes": [],
     "fee": null,
     "facilities": {
-     "toilet": null,
+     "toilet": true,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "写明有卫生间",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "toilet_yes",
+      "quote": "里面有围栏 厕所 一次性尿垫 碗🥣",
+      "note_id": "6a46e381000000000f0050de",
+      "author": "饼干饼饼🍪",
+      "note_url": "https://www.xiaohongshu.com/explore/6a46e381000000000f0050de"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -6542,17 +6668,10 @@
     "evidence": [
      {
       "kind": "camp",
-      "quote": "南沙滩→东沙滩→礁石咖啡→中央沙滩→太极湾沙滩→白沙湾沙滩→青年与海营地→亚帆中心",
-      "note_id": "6a6861b5000000001d0208e5",
-      "author": "Dun Dun",
-      "note_url": "https://www.xiaohongshu.com/explore/6a6861b5000000001d0208e5"
-     },
-     {
-      "kind": "camp",
-      "quote": "✔️玩法：露营基地，可自带/租赁帐篷，赏晚霞，观星空",
-      "note_id": "6a6861b5000000001d0208e5",
-      "author": "Dun Dun",
-      "note_url": "https://www.xiaohongshu.com/explore/6a6861b5000000001d0208e5"
+      "quote": "东钱湖边游玩建议早上9点前或下午4点后，带上露营垫直接导航📍cookiiicoffee，湖边都是大草坪，临近傍晚小飞虫有点多，有给小狗们的下水点，踩踩水消暑",
+      "note_id": "6a22b2c900000000220280b0",
+      "author": "钱大酱（暂时改名版）",
+      "note_url": "https://www.xiaohongshu.com/explore/6a22b2c900000000220280b0"
      }
     ]
    },
@@ -6680,8 +6799,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -6689,8 +6810,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "南沙滩→东沙滩→礁石咖啡→中央沙滩→太极湾沙滩→白沙湾沙滩→青年与海营地→亚帆中心",
+      "note_id": "6a6861b5000000001d0208e5",
+      "author": "Dun Dun",
+      "note_url": "https://www.xiaohongshu.com/explore/6a6861b5000000001d0208e5"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -7542,10 +7672,8 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "allowed_wild",
-    "modes": [
-     "tent"
-    ],
+    "status": "unknown",
+    "modes": [],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -7553,24 +7681,8 @@
      "power": null,
      "signal": null
     },
-    "note": "笔记里有人在这过夜",
-    "verified_at": null,
-    "evidence": [
-     {
-      "kind": "camp",
-      "quote": "🔵 螺塘线：🆓，导航螺塘线露营基地，是一条沿海公路，风景超棒，沿途也有很多咖啡店",
-      "note_id": "696e131a000000001a02393c",
-      "author": "海尔弟弟",
-      "note_url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c"
-     },
-     {
-      "kind": "camp",
-      "quote": "4️⃣另外加一个点：马目山风车营地",
-      "note_id": "696e131a000000001a02393c",
-      "author": "海尔弟弟",
-      "note_url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c"
-     }
-    ]
+    "note": "",
+    "verified_at": null
    },
    "sub_pois": [
     {
@@ -7767,6 +7879,63 @@
      "src": "高德POI"
     }
    ]
+  },
+  {
+   "id": "x-丰茂半岛",
+   "name": "丰茂半岛",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "",
+   "gcj": [
+    119.151356,
+    29.732312
+   ],
+   "drive": {
+    "hours_oneway": 4.67,
+    "km": 343.1,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 08:55"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "小红书 C级UGC（笔记 68ec7323，@徐徐闻之）：「」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_dog_mention",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "丰茂半岛",
+     "gcj": [
+      119.151356,
+      29.732312
+     ],
+     "note": "千岛湖床车露营就选这两个地方"
+    }
+   ],
+   "trips": [
+    "小红书-带狗露营水电"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "千岛湖床车露营就选这两个地方",
+   "photos": []
   },
   {
    "id": "x-深渡旅游码头",
@@ -9617,9 +9786,19 @@
    "hours_oneway": 9.98
   },
   {
+   "name": "柳园西支渠",
+   "city": "",
+   "hours_oneway": 24.54
+  },
+  {
    "name": "陶溪川酒店",
    "city": "",
    "hours_oneway": 6.16
+  },
+  {
+   "name": "冶勒湖",
+   "city": "",
+   "hours_oneway": 24.55
   },
   {
    "name": "南麂岛",
@@ -9635,6 +9814,11 @@
    "name": "水塔村",
    "city": "丽水",
    "hours_oneway": 6.07
+  },
+  {
+   "name": "灵山岛",
+   "city": "",
+   "hours_oneway": 11.77
   },
   {
    "name": "花鸟岛",

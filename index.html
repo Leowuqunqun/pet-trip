@@ -532,8 +532,13 @@ function render(){
     /* 未知值不挂徽章：新增的 1300 多个点全是"未核实"，
        每张卡都挂两个一样的灰标等于没传递任何信息。
        详情页仍完整显示"未核实"，筛选器「已确认可带狗」是唯一的确认口径。 */
+    /* 厕所直接上卡片：到了地方没厕所比没水更劝退，浏览时就该看得见。
+       只有笔记里写明了才显示，没查到的不挂灰标——一排「未核实」等于没信息。 */
+    var tf = (s.overnight && s.overnight.facilities) || {};
+    var tBadge = tf.toilet === true ? tag("有厕所","g")
+               : tf.toilet === false ? tag("无厕所","r") : "";
     var badges = (nk==="unknown" ? "" : tag(NIGHT_LABEL[nk][0], NIGHT_LABEL[nk][1])) +
-                 (dk==="unknown" ? "" : tag(DOG_LABEL[dk][0], DOG_LABEL[dk][1]));
+                 (dk==="unknown" ? "" : tag(DOG_LABEL[dk][0], DOG_LABEL[dk][1])) + tBadge;
     var ph = s.photos && s.photos.length ? s.photos : null;
     /* 列表缩略图挑"看得出这是哪儿"的那张：
        小红书首图常是带大字封面的拼图或自拍，做缩略图很糟；
