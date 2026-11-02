@@ -416,6 +416,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .pw-mid b{color:var(--amber-ink)}
 .pw-bad b{color:var(--rose)}
 .pw-pick{border-color:var(--terra);background:var(--terra-soft);box-shadow:0 0 0 1px var(--terra) inset}
+.plan-refreshing{font-size:12px;color:var(--amber-ink);background:var(--amber-soft);border-radius:9px;padding:6px 10px;margin:10px 0 4px}
+.plan-now{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);border-radius:9px;padding:6px 10px;margin-bottom:8px}
+.plan-now i{font-style:normal;color:var(--ink-3);margin-left:auto;font-size:11px}
 .plan-warn{font-size:12px;color:var(--rose);background:var(--rose-soft);border-radius:9px;padding:8px 10px;margin-bottom:10px;line-height:1.6}
 .plan-weather{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:12.5px;color:var(--ink-2);background:var(--amber-soft);border-radius:10px;padding:8px 10px;margin-bottom:10px}
 .plan-weather b{color:var(--amber-ink)}
@@ -514,7 +517,10 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     <h3>本周带狗去哪</h3>
     <div class="plan-sub" id="plan-sub">按当前筛选算的</div>
     <div id="plan-body"></div>
-    <div class="trip-actions"><button id="plan-close">关闭</button></div>
+    <div class="trip-actions">
+      <button id="plan-refresh" class="primary">重新查天气</button>
+      <button id="plan-close">关闭</button>
+    </div>
   </div>
 </div>
 
@@ -1136,7 +1142,11 @@ var SEASON_WORDS = {
 /* 周五 18:00 出发——这个时间是主人说的，写在面板上，不藏 */
 var DEPART_HOUR = 18;
 
-var PLAN = { state:"idle", plans:[], err:"", fetchedAt:"", pool:0, window:null };
+var PLAN = { state:"idle", plans:[], err:"", fetchedAt:"", pool:0, window:null, at:0 };
+/* 天气是实时数据，不能抓一次用到天荒地老。
+   超过这个时长就重抓：预报本身也是每小时更新的。 */
+var PLAN_TTL_MS = 5*60*1000;
+var PLAN_TIMER = null;
 
 function seasonOf(d){
   var m = d.getMonth()+1;
@@ -1265,6 +1275,7 @@ function weatherScore(tmax, tmin, pop){
 function fetchWeek(c){
   var u = "https://api.open-meteo.com/v1/forecast?latitude="+c[1].toFixed(4)+
           "&longitude="+c[0].toFixed(4)+
+          "&current=temperature_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m"+
           "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max"+
           "&timezone=Asia%2FShanghai&forecast_days=7";
   return fetch(u).then(function(r){
@@ -1361,6 +1372,7 @@ function buildPlans(){
     if(i>=picks.length) return Promise.resolve(picks);
     var p = picks[i++];
     return fetchWeek(p.centroid).then(function(w){
+      p.now = w.current || null;
       p.wFri = dayOf(w, wk.fri); p.wSat = dayOf(w, wk.sat); p.wSun = dayOf(w, wk.sun);
       p.week = ((w.daily||{}).time||[]).map(function(t){ return dayOf(w,t); });
       p.weatherOk = !!(p.wFri||p.wSat||p.wSun);
@@ -1465,7 +1477,17 @@ function planCardHTML(p, idx){
   var weather;
   if(p.weatherOk){
     var bad = (p.wSat && p.wSat.score<45) || (p.wSun && p.wSun.score<45);
-    weather = '<div class="plan-week">' +
+    /* 实时天气：抓取那一刻这个片区实际是多少度、体感多少、有没有在下雨 */
+    var nowHTML = '';
+    if(p.now && p.now.temperature_2m!=null){
+      nowHTML = '<div class="plan-now">现在 '+Math.round(p.now.temperature_2m)+
+        '℃（体感 '+Math.round(p.now.apparent_temperature)+'℃）'+
+        ' · '+esc(WMO[p.now.weather_code]||"—")+
+        ' · 风 '+Math.round(p.now.wind_speed_10m)+'km/h'+
+        (p.now.precipitation>0 ? ' · 正在下 '+p.now.precipitation+'mm' : '')+
+        '<i>Open-Meteo '+esc(String(p.now.time||"").slice(11,16))+' 实测</i></div>';
+    }
+    weather = nowHTML + '<div class="plan-week">' +
         wdayHTML(p.wFri, "周五夜") + wdayHTML(p.wSat, "周六") + wdayHTML(p.wSun, "周日") +
       '</div>' +
       (bad ? '<div class="plan-warn">这周末的天气不适合出门（上面对比着看）。硬要去就带好雨具，营地注意积水。</div>' : '');
@@ -1512,9 +1534,24 @@ function planCardHTML(p, idx){
   '</div>';
 }
 
+/* 数据多旧了，直接说人话 */
+function planAgeText(){
+  if(!PLAN.at) return "还没查过";
+  var s = Math.round((Date.now()-PLAN.at)/1000);
+  if(s < 60) return "刚刚";
+  if(s < 3600) return Math.round(s/60)+" 分钟前";
+  return Math.round(s/3600)+" 小时前";
+}
+
 function renderPlan(){
   var box = el("plan-body");
-  if(PLAN.state==="loading"){ box.innerHTML = '<div class="plan-loading">正在取天气、算路线…</div>'; return; }
+  if(PLAN.state==="loading"){
+    /* 已经有结果就别闪成"正在取"——自动刷新时保留旧内容，只在底下加一行提示 */
+    if(!PLAN.plans.length){
+      box.innerHTML = '<div class="plan-loading">正在取天气、算路线…</div>';
+      return;
+    }
+  }
   if(PLAN.err){ box.innerHTML = '<div class="plan-loading">没能生成推荐：'+esc(PLAN.err)+'</div>'; return; }
   if(!PLAN.plans.length){ box.innerHTML = '<div class="plan-loading">当前范围内凑不出 3 个点以上的片区。</div>'; return; }
 
@@ -1529,33 +1566,49 @@ function renderPlan(){
     '<div class="plan-note">' +
       '窗口按你说的：<b>周五 '+DEPART_HOUR+':00 出发，周日晚上回</b>。候选 <b>'+PLAN.pool+'</b> 个点' +
       '（单程 ≤'+STATE.hours.toFixed(1)+'h、排除明确禁狗）。' +
-      '天气来自 Open-Meteo，抓取于 '+esc(PLAN.fetchedAt)+'。' +
+      '天气每次打开都重新查（Open-Meteo 实时+7天预报），这次抓取于 '+esc(PLAN.fetchedAt)+
+      (PLAN.at ? '（'+planAgeText()+'）' : '')+'。' +
       '车程是真实路网算的；<b>站与站之间只给直线距离，不是车程</b>。' +
     '</div>';
   el("plan-sub").textContent = (w.fri ? (md(w.fri)+"–"+md(w.sun)+" · ") : "") + PLAN.plans.length + " 条路线";
   box.innerHTML = head + PLAN.plans.map(planCardHTML).join("") +
+    (PLAN.state==="loading" ? '<div class="plan-refreshing">正在重新查天气…（下面是 '+planAgeText()+' 的数据）</div>' : '') +
     '<div class="plan-foot">降水% 越低越好；出行指数 = 100 − 降水概率×0.9 − 体感温度惩罚（&lt;0℃ 扣 45、&lt;8℃ 扣 25、&lt;14℃ 扣 8、&gt;29℃ 扣 25）。权重写在这里，你可以不认同。</div>';
 }
 
-function openPlan(){
-  el("plan-panel").classList.add("open");
-  if(PLAN.state==="idle" || PLAN.state==="error"){
-    PLAN.state="loading"; PLAN.err=""; renderPlan();
-    buildPlans().then(function(list){
-      PLAN.plans = list; PLAN.state="done"; renderPlan();
-    }).catch(function(e){
-      PLAN.state="error"; PLAN.err=(e&&e.message)||"未知错误"; renderPlan();
-    });
-  } else {
+function loadPlans(){
+  PLAN.state="loading"; PLAN.err=""; renderPlan();
+  buildPlans().then(function(list){
+    PLAN.plans = list; PLAN.state="done";
+    PLAN.at = Date.now();
     renderPlan();
-  }
+  }).catch(function(e){
+    PLAN.state="error"; PLAN.err=(e&&e.message)||"未知错误"; renderPlan();
+  });
 }
 
-function closePlan(){ el("plan-panel").classList.remove("open"); }
+function planAgeMs(){ return PLAN.at ? (Date.now()-PLAN.at) : Infinity; }
+function planStale(){ return PLAN.state!=="done" || planAgeMs() > PLAN_TTL_MS; }
+
+function openPlan(){
+  el("plan-panel").classList.add("open");
+  if(planStale()) loadPlans(); else renderPlan();
+  /* 面板开着的时候每 5 分钟自动重查一次，天气变了不用手动点 */
+  if(PLAN_TIMER) clearInterval(PLAN_TIMER);
+  PLAN_TIMER = setInterval(function(){
+    if(el("plan-panel").classList.contains("open")) loadPlans();
+  }, PLAN_TTL_MS);
+}
+
+function closePlan(){
+  el("plan-panel").classList.remove("open");
+  if(PLAN_TIMER){ clearInterval(PLAN_TIMER); PLAN_TIMER=null; }
+}
 
 function bindPlan(){
   var b = el("plan-open"); if(b) b.addEventListener("click", openPlan);
   var c = el("plan-close"); if(c) c.addEventListener("click", closePlan);
+  var r = el("plan-refresh"); if(r) r.addEventListener("click", loadPlans);
   var p = el("plan-panel");
   if(p) p.addEventListener("click", function(e){
     if(e.target===p){ closePlan(); return; }
