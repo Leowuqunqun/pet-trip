@@ -66,7 +66,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.4,
+   "rating_src": "碧云体育公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-苏河源体育公园",
@@ -184,7 +190,13 @@
      "poi_name": "苏河源体育公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.3,
+   "rating_src": "苏河源体育公园",
+   "heat": {
+    "notes": 1,
+    "likes": 504
+   }
   },
   {
    "id": "x-浦江森林公园",
@@ -259,7 +271,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "推荐一个露营地",
-   "photos": []
+   "photos": [],
+   "rating": 4.5,
+   "rating_src": "浦江森林公园",
+   "heat": {
+    "notes": 1,
+    "likes": 422
+   }
   },
   {
    "id": "x-九科绿洲公园",
@@ -316,7 +334,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "松江也有自己的阿勒泰｜人少、宠物友好🐩",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "九科绿洲公园",
+   "heat": {
+    "notes": 1,
+    "likes": 542
+   }
   },
   {
    "id": "x-旗忠公园",
@@ -373,7 +397,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "上海遛狗秘境：超大草坪+超美湖泊+0门票",
-   "photos": []
+   "photos": [],
+   "rating": 4.2,
+   "rating_src": "旗忠公园",
+   "heat": {
+    "notes": 1,
+    "likes": 292
+   }
   },
   {
    "id": "x-上海联怡枇杷乐园",
@@ -491,7 +521,13 @@
      "poi_name": "上海联怡枇杷乐园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "上海联怡枇杷乐园",
+   "heat": {
+    "notes": 2,
+    "likes": 806
+   }
   },
   {
    "id": "x-广富林郊野公园",
@@ -545,7 +581,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "广富林郊野公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-黄姑塘生态湿地",
@@ -599,7 +641,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.3,
+   "rating_src": "黄姑塘生态湿地",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-上海水务海洋执法码头",
@@ -656,7 +704,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "大学生崇明岛自驾极简攻略",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 615
+   }
   },
   {
    "id": "x-西塘古镇景区",
@@ -783,7 +837,13 @@
      "poi_name": "西塘古镇",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 376
+   }
   },
   {
    "id": "x-泖港湿地",
@@ -837,7 +897,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 493
+   }
   },
   {
    "id": "x-苏州湾体育公园",
@@ -948,7 +1014,13 @@
      "poi_name": "苏州湾体育公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.7,
+   "rating_src": "苏州湾体育公园",
+   "heat": {
+    "notes": 1,
+    "likes": 659
+   }
   },
   {
    "id": "x-穆湖森林公园",
@@ -1066,7 +1138,13 @@
      "poi_name": "穆湖森林公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "穆湖森林公园",
+   "heat": {
+    "notes": 1,
+    "likes": 376
+   }
   },
   {
    "id": "x-泖田湿地",
@@ -1148,7 +1226,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "上海遛狗天花板🐶免费小众宠物友好秘境",
-   "photos": []
+   "photos": [],
+   "rating": 4.4,
+   "rating_src": "泖田湿地",
+   "heat": {
+    "notes": 1,
+    "likes": 632
+   }
   },
   {
    "id": "x-崇明岛",
@@ -1284,7 +1368,13 @@
      "poi_name": "崇明岛",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.0,
+   "rating_src": "崇明岛",
+   "heat": {
+    "notes": 4,
+    "likes": 2786
+   }
   },
   {
    "id": "x-姚家荡公园",
@@ -1402,7 +1492,13 @@
      "poi_name": "姚家荡公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "姚家荡公园",
+   "heat": {
+    "notes": 1,
+    "likes": 376
+   }
   },
   {
    "id": "x-仙樱湖公园",
@@ -1456,7 +1552,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "仙樱湖公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-嘉兴植物园",
@@ -1574,7 +1676,13 @@
      "poi_name": "嘉兴植物园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.7,
+   "rating_src": "嘉兴植物园",
+   "heat": {
+    "notes": 1,
+    "likes": 376
+   }
   },
   {
    "id": "x-莲池湖公园",
@@ -1628,7 +1736,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "莲池湖公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-苏州湾东太湖城市营地",
@@ -1685,7 +1799,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "上海🚗1h直达｜东太湖免费露营天花板",
-   "photos": []
+   "photos": [],
+   "rating": 4.7,
+   "rating_src": "苏州湾东太湖城市营地",
+   "heat": {
+    "notes": 1,
+    "likes": 273
+   }
   },
   {
    "id": "x-胜地生态公园",
@@ -1750,7 +1870,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "胜地生态公园",
+   "heat": {
+    "notes": 1,
+    "likes": 2799
+   }
   },
   {
    "id": "x-马家浜考古遗址公园",
@@ -1861,7 +1987,13 @@
      "poi_name": "马家浜考古遗址公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.3,
+   "rating_src": "马家浜考古遗址公园",
+   "heat": {
+    "notes": 1,
+    "likes": 376
+   }
   },
   {
    "id": "x-云杉湖公园",
@@ -1915,7 +2047,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.2,
+   "rating_src": "云杉湖公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-虎丘湿地",
@@ -1969,7 +2107,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 690
+   }
   },
   {
    "id": "x-东太湖生态园",
@@ -2026,7 +2170,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "苏州这个公园也太chill了吧！",
-   "photos": []
+   "photos": [],
+   "rating": 4.8,
+   "rating_src": "东太湖生态园",
+   "heat": {
+    "notes": 1,
+    "likes": 2054
+   }
   },
   {
    "id": "x-沈荡古镇",
@@ -2148,7 +2298,13 @@
      "poi_name": "沈荡古镇",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "沈荡古镇",
+   "heat": {
+    "notes": 1,
+    "likes": 515
+   }
   },
   {
    "id": "x-苏州湾黄金湖岸旅游区",
@@ -2205,7 +2361,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "苏州这个公园也太chill了吧！",
-   "photos": []
+   "photos": [],
+   "rating": 4.7,
+   "rating_src": "苏州湾黄金湖岸旅游区",
+   "heat": {
+    "notes": 1,
+    "likes": 2054
+   }
   },
   {
    "id": "x-濮院时尚古镇游客中心",
@@ -2323,7 +2485,13 @@
      "poi_name": "濮院时尚古镇游客中心",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 515
+   }
   },
   {
    "id": "x-小镇湿地公园",
@@ -2434,7 +2602,13 @@
      "poi_name": "小镇湿地公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.2,
+   "rating_src": "小镇湿地公园",
+   "heat": {
+    "notes": 1,
+    "likes": 376
+   }
   },
   {
    "id": "x-桐乡市庆北生态公园",
@@ -2552,7 +2726,13 @@
      "poi_name": "庆北生态公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 376
+   }
   },
   {
    "id": "x-漕湖湿地公园",
@@ -2606,7 +2786,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "漕湖湿地公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-上海东滩湿地公园",
@@ -2717,7 +2903,13 @@
      "poi_name": "上海东滩湿地公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.1,
+   "rating_src": "上海东滩湿地公园",
+   "heat": {
+    "notes": 1,
+    "likes": 432
+   }
   },
   {
    "id": "x-丰义景区",
@@ -2835,7 +3027,13 @@
      "poi_name": "丰义景区",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "丰义景区",
+   "heat": {
+    "notes": 1,
+    "likes": 515
+   }
   },
   {
    "id": "x-金山城市沙滩",
@@ -2901,7 +3099,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "逃离城市，带小狗奔赴上海版阿勒泰",
-   "photos": []
+   "photos": [],
+   "rating": 4.4,
+   "rating_src": "金山城市沙滩",
+   "heat": {
+    "notes": 1,
+    "likes": 247
+   }
   },
   {
    "id": "x-诺贝尔湖公园",
@@ -2955,7 +3159,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "诺贝尔湖公园",
+   "heat": {
+    "notes": 1,
+    "likes": 690
+   }
   },
   {
    "id": "x-南北湖风景区",
@@ -3073,7 +3283,13 @@
      "poi_name": "南北湖风景名胜区东门停车场",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.7,
+   "rating_src": "南北湖风景名胜区",
+   "heat": {
+    "notes": 1,
+    "likes": 376
+   }
   },
   {
    "id": "x-东部海堤黑沙滩",
@@ -3191,7 +3407,13 @@
      "poi_name": "东部海堤黑沙滩",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.3,
+   "rating_src": "东部海堤黑沙滩",
+   "heat": {
+    "notes": 1,
+    "likes": 590
+   }
   },
   {
    "id": "x-濮院古镇-游览车站点",
@@ -3248,7 +3470,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "嘉兴濮院时尚古镇 两天一晚 旅游攻略",
-   "photos": []
+   "photos": [],
+   "rating": 3.8,
+   "rating_src": "濮院古镇-游览车站点",
+   "heat": {
+    "notes": 1,
+    "likes": 247
+   }
   },
   {
    "id": "x-梅园开原寺",
@@ -3348,7 +3576,13 @@
      "note_url": "https://www.xiaohongshu.com/explore/6a3897000000000015024b71?xsec_token=ABEKUcDQrMkUGZ-h1SicIj8KY5avp1FmVPW9NGDbuPkw8=&xsec_source=pc_search",
      "src": "小红书"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 236
+   }
   },
   {
    "id": "x-彩石湖公园",
@@ -3466,7 +3700,13 @@
      "poi_name": "彩石湖公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "彩石湖公园",
+   "heat": {
+    "notes": 2,
+    "likes": 1380
+   }
   },
   {
    "id": "x-南北湖风景名胜区",
@@ -3584,7 +3824,13 @@
      "poi_name": "南北湖风景名胜区",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.7,
+   "rating_src": "南北湖风景名胜区",
+   "heat": {
+    "notes": 2,
+    "likes": 1095
+   }
   },
   {
    "id": "x-北里湖湿地公园",
@@ -3641,7 +3887,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "2026.9.16嘉兴南北湖（养狗人一定要去啊！）",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 257
+   }
   },
   {
    "id": "x-无锡阳山桃花源景区",
@@ -3752,7 +4004,13 @@
      "poi_name": "阳山桃花源景区",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 169
+   }
   },
   {
    "id": "x-金沙湖公园",
@@ -3806,7 +4064,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.7,
+   "rating_src": "金沙湖公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-川步村",
@@ -3950,7 +4214,13 @@
      "poi_name": "川步村村委会",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 443
+   }
   },
   {
    "id": "x-上坝村",
@@ -4050,7 +4320,13 @@
      "note_url": "https://www.xiaohongshu.com/explore/6a6ac55a000000001d00d60f?xsec_token=ABPJenXEkdwme4MNxhV_vpvBrEmvw_kPPSraAy_nPTLQk=&xsec_source=pc_search",
      "src": "小红书"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 331
+   }
   },
   {
    "id": "x-芳茂山公园",
@@ -4104,7 +4380,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.5,
+   "rating_src": "芳茂山公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-牧城公园",
@@ -4204,7 +4486,13 @@
      "note_url": "https://www.xiaohongshu.com/explore/6a6703a2000000001d00c529?xsec_token=ABK8-oCSIUWM2jUkH4n4P_8vTBfkcrzrynibDcR9HAgi8=&xsec_source=pc_search",
      "src": "小红书"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "牧城公园",
+   "heat": {
+    "notes": 1,
+    "likes": 236
+   }
   },
   {
    "id": "x-杭州沿江湿地公园-西区",
@@ -4322,7 +4610,13 @@
      "poi_name": "杭州沿江湿地公园-西区",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.4,
+   "rating_src": "杭州沿江湿地公园-西区",
+   "heat": {
+    "notes": 2,
+    "likes": 1114
+   }
   },
   {
    "id": "x-阅湖农场",
@@ -4440,7 +4734,13 @@
      "poi_name": "阅湖农场",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 331
+   }
   },
   {
    "id": "x-张公洞",
@@ -4558,7 +4858,13 @@
      "poi_name": "张公洞",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "张公洞",
+   "heat": {
+    "notes": 2,
+    "likes": 495
+   }
   },
   {
    "id": "x-邵东村",
@@ -4664,7 +4970,13 @@
      "poi_name": "邵东村警务室",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 2,
+    "likes": 495
+   }
   },
   {
    "id": "x-花筑入山民宿",
@@ -4782,7 +5094,13 @@
      "poi_name": "花筑·入山(宜兴二十三湾店)",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 2,
+    "likes": 613
+   }
   },
   {
    "id": "x-雅达阳羡小镇游客中心",
@@ -4867,7 +5185,13 @@
      "poi_name": "雅达阳羡小镇游客中心",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 331
+   }
   },
   {
    "id": "x-凤凰山考古遗址公园",
@@ -4943,7 +5267,13 @@
      "poi_name": "凤凰山考古遗址公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "凤凰山考古遗址公园",
+   "heat": {
+    "notes": 1,
+    "likes": 448
+   }
   },
   {
    "id": "x-龙池山自行车公园",
@@ -5007,7 +5337,13 @@
      "poi_name": "龙池山自行车公园东门停车场",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "龙池山自行车公园",
+   "heat": {
+    "notes": 1,
+    "likes": 331
+   }
   },
   {
    "id": "x-黄桥古镇",
@@ -5064,7 +5400,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "黄桥古镇",
+   "heat": {
+    "notes": 1,
+    "likes": 236
+   }
   },
   {
    "id": "x-尚贤河湿地游客中心",
@@ -5140,7 +5482,13 @@
      "poi_name": "尚贤河湿地游客中心",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 168
+   }
   },
   {
    "id": "x-安吉古城国家考古遗址公园",
@@ -5243,7 +5591,13 @@
      "poi_name": "安吉古城国家考古遗址公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.4,
+   "rating_src": "安吉古城国家考古遗址公园",
+   "heat": {
+    "notes": 2,
+    "likes": 5816
+   }
   },
   {
    "id": "x-善卷洞风景区",
@@ -5319,7 +5673,13 @@
      "poi_name": "善卷洞风景区",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "善卷洞风景区",
+   "heat": {
+    "notes": 1,
+    "likes": 331
+   }
   },
   {
    "id": "x-五峰山国际青少年营地",
@@ -5395,7 +5755,13 @@
      "poi_name": "五峰山国际青少年营地",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.4,
+   "rating_src": "五峰山国际青少年营地",
+   "heat": {
+    "notes": 1,
+    "likes": 481
+   }
   },
   {
    "id": "x-黄桥小南湖",
@@ -5452,7 +5818,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 236
+   }
   },
   {
    "id": "x-白马湖公园",
@@ -5506,7 +5878,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.7,
+   "rating_src": "白马湖公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-溱湖湿地农业生态园",
@@ -5563,7 +5941,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "photos": []
+   "photos": [],
+   "rating": 4.0,
+   "rating_src": "溱湖湿地农业生态园",
+   "heat": {
+    "notes": 1,
+    "likes": 236
+   }
   },
   {
    "id": "x-皮山坞水库",
@@ -5620,7 +6004,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "杭州小众露营✨车可直达！皮山坞水库太治愈",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 443
+   }
   },
   {
    "id": "浙江-OmitoHotel莫干山",
@@ -5700,7 +6090,10 @@
      "poi_name": "OmitoHotel·莫干山",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.9,
+   "rating_src": "OmitoHotel·莫干山",
+   "heat": null
   },
   {
    "id": "浙江-下渚湖湿地公园",
@@ -5779,7 +6172,10 @@
      "poi_name": "下渚湖·湿地公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-天目湖御水温泉竹溪谷酒店",
@@ -5855,7 +6251,13 @@
      "poi_name": "天目湖御水温泉·竹溪谷酒店",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.7,
+   "rating_src": "天目湖御水温泉·竹溪谷酒店",
+   "heat": {
+    "notes": 1,
+    "likes": 486
+   }
   },
   {
    "id": "浙江-大乐之野莫干山庾村店",
@@ -5934,7 +6336,10 @@
      "poi_name": "大乐之野(莫干山庾村店)",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-云湖风景区",
@@ -6010,7 +6415,13 @@
      "poi_name": "云湖风景区-飞瀑榭",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "云湖风景区",
+   "heat": {
+    "notes": 1,
+    "likes": 331
+   }
   },
   {
    "id": "x-天德湖公园",
@@ -6067,7 +6478,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "photos": []
+   "photos": [],
+   "rating": 4.7,
+   "rating_src": "天德湖公园",
+   "heat": {
+    "notes": 1,
+    "likes": 236
+   }
   },
   {
    "id": "浙江-莫干山橙月黑胶唱片民宿",
@@ -6148,7 +6565,10 @@
      "poi_name": "莫干山橙月·黑胶唱片民宿",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.9,
+   "rating_src": "莫干山橙月·黑胶唱片民宿",
+   "heat": null
   },
   {
    "id": "x-老石坎水库",
@@ -6202,7 +6622,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 1914
+   }
   },
   {
    "id": "x-东钱湖风景名胜区",
@@ -6278,7 +6704,13 @@
      "poi_name": "东钱湖风景名胜区-小普陀",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.8,
+   "rating_src": "东钱湖风景名胜区",
+   "heat": {
+    "notes": 4,
+    "likes": 887
+   }
   },
   {
    "id": "x-溱潼古镇旅游区",
@@ -6335,7 +6767,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "溱潼古镇旅游区",
+   "heat": {
+    "notes": 1,
+    "likes": 236
+   }
   },
   {
    "id": "x-马山湿地",
@@ -6407,7 +6845,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.0,
+   "rating_src": "马山公园",
+   "heat": {
+    "notes": 1,
+    "likes": 301
+   }
   },
   {
    "id": "x-岩头古村",
@@ -6472,7 +6916,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.5,
+   "rating_src": "岩头古村",
+   "heat": {
+    "notes": 1,
+    "likes": 214
+   }
   },
   {
    "id": "x-丹家村",
@@ -6529,7 +6979,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "五一带狗玩【无人之境】✨只有风声的携宠徒步！",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 361
+   }
   },
   {
    "id": "x-安吉五峰山运动村",
@@ -6605,7 +7061,13 @@
      "poi_name": "安吉五峰山运动村",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "安吉五峰山运动村",
+   "heat": {
+    "notes": 1,
+    "likes": 481
+   }
   },
   {
    "id": "x-南山水库",
@@ -6690,7 +7152,13 @@
      "poi_name": "南山水库",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 224
+   }
   },
   {
    "id": "x-石塘村",
@@ -6747,7 +7215,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "小狗地图🗺️｜原来真的有一个宠物友好村🥹",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 2,
+    "likes": 524
+   }
   },
   {
    "id": "x-万市杨家村古银杏文化保护主题公园",
@@ -6804,7 +7278,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "杭州|建议最近能量低的人都走一下这个路线",
-   "photos": []
+   "photos": [],
+   "rating": 4.5,
+   "rating_src": "万市杨家村古银杏文化保护主题公园",
+   "heat": {
+    "notes": 1,
+    "likes": 2141
+   }
   },
   {
    "id": "x-小蓝境咖啡",
@@ -6861,7 +7341,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "好天气就是适合去户外｜打卡南京小蓝境咖啡",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 137
+   }
   },
   {
    "id": "x-风之谷星空露营基地",
@@ -6915,7 +7401,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.2,
+   "rating_src": "风之谷星空露营基地",
+   "heat": {
+    "notes": 1,
+    "likes": 361
+   }
   },
   {
    "id": "x-千华古村",
@@ -7000,7 +7492,13 @@
      "poi_name": "千华古村",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "千华古村",
+   "heat": {
+    "notes": 1,
+    "likes": 407
+   }
   },
   {
    "id": "x-天目湖",
@@ -7085,7 +7583,13 @@
      "poi_name": "天目湖",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.7,
+   "rating_src": "天目湖旅游度假区",
+   "heat": {
+    "notes": 1,
+    "likes": 153
+   }
   },
   {
    "id": "x-无想山景区牧心谷露营地",
@@ -7161,7 +7665,13 @@
      "poi_name": "无想山景区牧心谷露营地",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.1,
+   "rating_src": "无想山景区牧心谷露营地",
+   "heat": {
+    "notes": 1,
+    "likes": 108
+   }
   },
   {
    "id": "浙江-安吉杉咖咔营地",
@@ -7241,7 +7751,10 @@
      "poi_name": "安吉杉咖咔营地",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "安吉杉咖咔营地",
+   "heat": null
   },
   {
    "id": "x-阳山桃花源景区",
@@ -7352,7 +7865,10 @@
      "poi_name": "阳山桃花源景区",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "阳山桃花源景区",
+   "heat": null
   },
   {
    "id": "x-安基山水库",
@@ -7406,7 +7922,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 624
+   }
   },
   {
    "id": "x-四明山",
@@ -7505,7 +8027,13 @@
      "poi_name": "四明山",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 2,
+    "likes": 307
+   }
   },
   {
    "id": "x-岱山岛",
@@ -7569,7 +8097,13 @@
      "poi_name": "岱山岛",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.2,
+   "rating_src": "岱山岛",
+   "heat": {
+    "notes": 4,
+    "likes": 1293
+   }
   },
   {
    "id": "x-中国海岬公园",
@@ -7654,7 +8188,13 @@
      "poi_name": "中国海岬公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "中国海岬公园",
+   "heat": {
+    "notes": 2,
+    "likes": 310
+   }
   },
   {
    "id": "x-石臼湖骆山花火露营公园",
@@ -7708,7 +8248,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 624
+   }
   },
   {
    "id": "x-千垛景区",
@@ -7765,7 +8311,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "千垛景区",
+   "heat": {
+    "notes": 1,
+    "likes": 236
+   }
   },
   {
    "id": "浙江-小杭坑2号营地",
@@ -7863,7 +8415,10 @@
      "poi_name": "小杭坑1号营地",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-瘦西湖",
@@ -7939,7 +8494,13 @@
      "poi_name": "瘦西湖",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 128
+   }
   },
   {
    "id": "x-渌洋湖湿地公园",
@@ -7996,7 +8557,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "带狗子去扬州｜抹茶森林🌿渌洋湖湿地公园",
-   "photos": []
+   "photos": [],
+   "rating": 4.0,
+   "rating_src": "渌洋湖湿地公园",
+   "heat": {
+    "notes": 1,
+    "likes": 228
+   }
   },
   {
    "id": "x-金钱松森林公园",
@@ -8061,7 +8628,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 458
+   }
   },
   {
    "id": "x-香茗湖体育公园",
@@ -8115,7 +8688,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.1,
+   "rating_src": "香茗湖体育公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-月亮湾",
@@ -8183,7 +8762,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "携宠自驾游|皖南宣城泾县月亮湾",
-   "photos": []
+   "photos": [],
+   "rating": 4.7,
+   "rating_src": "月亮湾风景区",
+   "heat": {
+    "notes": 1,
+    "likes": 209
+   }
   },
   {
    "id": "x-沙沟古镇景区",
@@ -8240,7 +8825,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "泰州带狗旅行 | 超全宠物友好景点地图！",
-   "photos": []
+   "photos": [],
+   "rating": 4.5,
+   "rating_src": "沙沟古镇景区",
+   "heat": {
+    "notes": 1,
+    "likes": 236
+   }
   },
   {
    "id": "x-固城水岸滨湖公园",
@@ -8294,7 +8885,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.4,
+   "rating_src": "固城水岸滨湖公园",
+   "heat": {
+    "notes": 1,
+    "likes": 624
+   }
   },
   {
    "id": "x-蟹蚶口水库",
@@ -8366,7 +8963,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 83
+   }
   },
   {
    "id": "x-宁波宁海假日度假酒店",
@@ -8451,7 +9054,13 @@
      "poi_name": "宁波宁海假日度假酒店",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.9,
+   "rating_src": "宁波宁海假日度假酒店",
+   "heat": {
+    "notes": 1,
+    "likes": 251
+   }
   },
   {
    "id": "x-松兰山",
@@ -8519,7 +9128,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "不在三亚！在象山松兰山！太美太好拍！（附攻略",
-   "photos": []
+   "photos": [],
+   "rating": 3.5,
+   "rating_src": "松兰山景区",
+   "heat": {
+    "notes": 1,
+    "likes": 752
+   }
   },
   {
    "id": "浙江-乌龟潭",
@@ -8598,7 +9213,10 @@
      "poi_name": "乌龟潭",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-白沙湾沙滩",
@@ -8674,7 +9292,13 @@
      "poi_name": "白沙湾沙滩",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "白沙湾沙滩",
+   "heat": {
+    "notes": 1,
+    "likes": 1009
+   }
   },
   {
    "id": "x-九条凹水库",
@@ -8728,7 +9352,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 624
+   }
   },
   {
    "id": "浙江-茅家埠",
@@ -8807,7 +9437,10 @@
      "poi_name": "茅家埠(公交站)",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-天姥山",
@@ -8861,7 +9494,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "天姥山景区",
+   "heat": {
+    "notes": 1,
+    "likes": 300
+   }
   },
   {
    "id": "浙江-浴鹄湾",
@@ -8940,7 +9579,10 @@
      "poi_name": "浴鹄湾(公交站)",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-三桥湿地公园",
@@ -8994,7 +9636,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.6,
+   "rating_src": "三桥湿地公园",
+   "heat": {
+    "notes": 1,
+    "likes": 624
+   }
   },
   {
    "id": "x-平垣秘境",
@@ -9059,7 +9707,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.3,
+   "rating_src": "平垣秘境",
+   "heat": {
+    "notes": 1,
+    "likes": 602
+   }
   },
   {
    "id": "x-牛轭山观海公园",
@@ -9113,7 +9767,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.5,
+   "rating_src": "牛轭山观海公园",
+   "heat": {
+    "notes": 1,
+    "likes": 256
+   }
   },
   {
    "id": "浙江-漫步山丘露营咖啡团建",
@@ -9193,7 +9853,10 @@
      "poi_name": "漫步山丘露营咖啡团建",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "浙江-今天不上班",
@@ -9270,7 +9933,10 @@
      "poi_name": "今天不上班",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-山泊隐世酒店",
@@ -9346,7 +10012,13 @@
      "poi_name": "山泊隐世酒店",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "山泊隐世酒店",
+   "heat": {
+    "notes": 1,
+    "likes": 602
+   }
   },
   {
    "id": "浙江-铜鉴湖公园",
@@ -9424,7 +10096,10 @@
      "poi_name": "铜鉴湖公园",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.7,
+   "rating_src": "铜鉴湖公园",
+   "heat": null
   },
   {
    "id": "浙江-铜鉴湖花海露营地",
@@ -9505,7 +10180,10 @@
      "poi_name": "铜鉴湖花海露营地",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "铜鉴湖花海露营地",
+   "heat": null
   },
   {
    "id": "x-太极湾沙滩",
@@ -9559,7 +10237,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 752
+   }
   },
   {
    "id": "x-大马沟公园",
@@ -9613,7 +10297,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-地藏大峡谷",
@@ -9689,7 +10379,13 @@
      "poi_name": "地藏大峡谷",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "地藏大峡谷",
+   "heat": {
+    "notes": 1,
+    "likes": 430
+   }
   },
   {
    "id": "x-中央沙滩",
@@ -9743,7 +10439,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.4,
+   "rating_src": "中央沙滩",
+   "heat": {
+    "notes": 1,
+    "likes": 752
+   }
   },
   {
    "id": "x-维也纳国际酒店",
@@ -9800,7 +10502,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "不在三亚！在象山松兰山！太美太好拍！（附攻略",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 752
+   }
   },
   {
    "id": "x-佛手湖郊野公园",
@@ -9854,7 +10562,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 624
+   }
   },
   {
    "id": "x-吽唬沙滩",
@@ -9908,7 +10622,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.1,
+   "rating_src": "吽唬沙滩",
+   "heat": {
+    "notes": 1,
+    "likes": 256
+   }
   },
   {
    "id": "x-桐庐香榧基地",
@@ -9997,7 +10717,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "在江浙沪找到了一个不废腿且安全的露营点⛺️",
-   "photos": []
+   "photos": [],
+   "rating": 4.5,
+   "rating_src": "桐庐香榧基地",
+   "heat": {
+    "notes": 1,
+    "likes": 272
+   }
   },
   {
    "id": "x-桐庐语山水叙旧民宿",
@@ -10082,7 +10808,13 @@
      "poi_name": "桐庐语山水·叙旧民宿",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "桐庐语山水·叙旧民宿",
+   "heat": {
+    "notes": 2,
+    "likes": 405
+   }
   },
   {
    "id": "x-大青山",
@@ -10139,7 +10871,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "攻略总结|总要带🐕去一趟舟山吧，我想",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 256
+   }
   },
   {
    "id": "x-山风农场",
@@ -10240,7 +10978,13 @@
      "poi_name": "山风农场",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "山风农场",
+   "heat": {
+    "notes": 1,
+    "likes": 1034
+   }
   },
   {
    "id": "x-东海郊野公园",
@@ -10294,7 +11038,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 4.3,
+   "rating_src": "东海郊野公园",
+   "heat": {
+    "notes": 1,
+    "likes": 256
+   }
   },
   {
    "id": "x-融悦翠堰民宿",
@@ -10370,7 +11120,13 @@
      "poi_name": "融悦·翠堰民宿(神仙居店)",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 607
+   }
   },
   {
    "id": "x-丰茂半岛",
@@ -10460,7 +11216,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "千岛湖床车露营就选这两个地方",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 532
+   }
   },
   {
    "id": "x-深渡旅游码头",
@@ -10519,7 +11281,10 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "新安江山水画廊游船码头，图1-4 的江面、乌篷船、鸬鹚捕鱼都在这一段",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-朱潭山",
@@ -10592,7 +11357,10 @@
      "poi_name": "朱潭山",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.7,
+   "rating_src": "朱潭山",
+   "heat": null
   },
   {
    "id": "x-鼎湖峰",
@@ -10665,7 +11433,10 @@
      "poi_name": "鼎湖峰",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.7,
+   "rating_src": "鼎湖峰",
+   "heat": null
   },
   {
    "id": "x-太平湖",
@@ -10729,7 +11500,13 @@
      "poi_name": "太平湖钓场",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 275
+   }
   },
   {
    "id": "x-阳产土楼",
@@ -10817,7 +11594,10 @@
      "poi_name": "阳产土楼",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.7,
+   "rating_src": "阳产土楼",
+   "heat": null
   },
   {
    "id": "x-里运河滨水公园",
@@ -10871,7 +11651,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": 3.9,
+   "rating_src": "里运河滨水公园",
+   "heat": {
+    "notes": 1,
+    "likes": 990
+   }
   },
   {
    "id": "x-林坑古村",
@@ -10925,7 +11711,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 421
+   }
   },
   {
    "id": "x-老街",
@@ -11005,7 +11797,10 @@
      "poi_name": "黄山屯溪老街徽舍民宿",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-灵山景区古建筑群",
@@ -11082,7 +11877,10 @@
      "poi_name": "竹月公馆(呈坎镇灵山村店)",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-碧山村",
@@ -11158,7 +11956,13 @@
      "poi_name": "碧山村(公交站)",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 306
+   }
   },
   {
    "id": "x-松庄村",
@@ -11215,7 +12019,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "上海出发｜带狗丽水五天四晚攻略来啦",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 168
+   }
   },
   {
    "id": "x-王山水库",
@@ -11272,7 +12082,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "小狗开化玻璃水游玩体验～！",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 44
+   }
   },
   {
    "id": "x-塔川公交站",
@@ -11349,7 +12165,10 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "」）黟县宏村镇，图11-12、16-17 的秋色稻田与村落",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-黄山太平湖景度假民宿",
@@ -11425,7 +12244,13 @@
      "poi_name": "黄山太平湖景度假民宿(水上娱乐中心店)",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 334
+   }
   },
   {
    "id": "x-仙霞居民宿",
@@ -11501,7 +12326,13 @@
      "poi_name": "仙霞居民宿(衢州仙霞湖店)",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 357
+   }
   },
   {
    "id": "x-龙湾潭国家森林公园",
@@ -11555,7 +12386,13 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 421
+   }
   },
   {
    "id": "x-宏村南门停车场",
@@ -11633,7 +12470,10 @@
      "poi_name": "宏村-万宅",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.8,
+   "rating_src": "宏村",
+   "heat": null
   },
   {
    "id": "x-卢村饭店",
@@ -11714,7 +12554,10 @@
      "poi_name": "卢村饭店",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-奇墅湖",
@@ -11796,7 +12639,10 @@
      "poi_name": "奇墅湖",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.4,
+   "rating_src": "奇墅湖",
+   "heat": null
   },
   {
    "id": "x-上坦村",
@@ -11872,7 +12718,13 @@
      "poi_name": "上坦村浤溪板凳桥",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 127
+   }
   },
   {
    "id": "x-西递公交站",
@@ -11932,7 +12784,10 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "」）黟县，图9-10 的白墙题字与村口水塘",
-   "photos": []
+   "photos": [],
+   "rating": null,
+   "rating_src": null,
+   "heat": null
   },
   {
    "id": "x-庆源古村",
@@ -12008,7 +12863,13 @@
      "poi_name": "庆源古村",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.6,
+   "rating_src": "庆源古村",
+   "heat": {
+    "notes": 1,
+    "likes": 58
+   }
   },
   {
    "id": "x-察关村",
@@ -12084,7 +12945,13 @@
      "poi_name": "婺里古村民宿",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 2,
+    "likes": 160
+   }
   },
   {
    "id": "x-杨家堂村史馆",
@@ -12138,7 +13005,10 @@
    "origin": "抖音行程",
    "curation_note": "",
    "raw_note": "松阳，江南布达拉宫，傍晚最美",
-   "photos": []
+   "photos": [],
+   "rating": 4.0,
+   "rating_src": "杨家堂村史馆",
+   "heat": null
   },
   {
    "id": "x-木梨硔停车场",
@@ -12217,7 +13087,10 @@
      "poi_name": "木梨硔",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "木梨硔",
+   "heat": null
   },
   {
    "id": "x-云和梯田景区",
@@ -12290,7 +13163,10 @@
      "poi_name": "云和梯田景区",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.8,
+   "rating_src": "云和梯田景区",
+   "heat": null
   },
   {
    "id": "x-南尖岩景区",
@@ -12363,7 +13239,10 @@
      "poi_name": "南尖岩景区",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": 4.5,
+   "rating_src": "南尖岩景区",
+   "heat": null
   },
   {
    "id": "x-卧龙谷景区",
@@ -12439,7 +13318,13 @@
      "poi_name": "大鄣山卧龙谷",
      "src": "高德POI"
     }
-   ]
+   ],
+   "rating": null,
+   "rating_src": null,
+   "heat": {
+    "notes": 1,
+    "likes": 58
+   }
   }
  ],
  "out_of_range": [
