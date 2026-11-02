@@ -793,11 +793,8 @@ function syncMarkers(list){
   if(list.length && !STATE.active) fitAll(list);
 }
 
-var AUTO_FIT = true, LAST_FIT_LIST = null;
-
 function fitAll(list){
   if(!MAP || !list.length) return;
-  LAST_FIT_LIST = list;
   MAP.invalidateSize();                       /* 容器尺寸刚定下来时 fitBounds 会算偏，先刷一次 */
   var pts = list.map(function(s){return [s.gcj[1], s.gcj[0]];});
   pts.push(DATA.meta.origin.gcj.slice().reverse());
@@ -1433,7 +1430,11 @@ function buildPlans(){
        用整个片区的最高分会出现"显示 4.6、综合按 4.9 算"的不一致。 */
     var built = shortlist.map(function(c){
       var pl = composePlan(kindOf(c), c, wk, season);
-      var rs = pl.stops.map(function(x){ return ratingOf(x.s); }).filter(function(x){ return x!=null; });
+      /* 只用"能玩的站"算评分：酒店 4.9 说明住得好，不说明这趟好玩，
+         而且卡片标题本来就是挑能玩的站当门面，两边必须同一个口径。 */
+      var playStops = pl.stops.filter(function(x){ return !sleepKind(x.s) && x.s.kind!=="lodging"; });
+      var rs = (playStops.length ? playStops : pl.stops).map(function(x){ return ratingOf(x.s); })
+                 .filter(function(x){ return x!=null; });
       pl.rating = rs.length ? Math.max.apply(null, rs) : null;
       pl.weather = c.weather;
       var base = pl.rating != null ? ratingScore({rating:pl.rating}) : 0;
@@ -1576,7 +1577,9 @@ function planCardHTML(p, idx){
   });
 
   /* 评分、热度、天气三个数字都摆出来，综合分是评分和天气乘出来的 */
-  var ratedStops = p.stops.map(function(x){ return x.s; }).filter(function(s){ return ratingOf(s) != null; });
+  var playStops = p.stops.filter(function(x){ return !sleepKind(x.s) && x.s.kind!=="lodging"; });
+  var ratedStops = (playStops.length ? playStops : p.stops).map(function(x){ return x.s; })
+                     .filter(function(s){ return ratingOf(s) != null; });
   var topStop = ratedStops.sort(function(a,b){ return ratingOf(b)-ratingOf(a); })[0] || null;
   var h = null;
   p.stops.forEach(function(x){
@@ -1712,22 +1715,7 @@ fetch("spots.json", {cache:"no-cache"})
     render();
     /* 布局稳定后再算 fitBounds：立刻算会把容器尺寸算小，点位挤到屏幕外 */
     setTimeout(function(){ if(d.spots.length) fitAll(d.spots); }, 80);
-    /* 容器宽度定下来之前 fitBounds 会按错误的尺寸算，结果整张图停在很远的缩放级别。
-       监听容器真实尺寸：只要用户还没自己拖过地图，尺寸一变就重算一次。
-       用户一旦手动缩放过，就不再自动摆布他的视图。 */
-    MAP.on("dragstart zoomstart", function(){ AUTO_FIT = false; });
-    if(window.ResizeObserver){
-      var ro = new ResizeObserver(function(){
-        if(!AUTO_FIT || !LAST_FIT_LIST) return;
-        MAP.invalidateSize();
-        fitAll(LAST_FIT_LIST);
-      });
-      ro.observe(document.getElementById("map"));
-    }
-    window.addEventListener("resize", function(){
-      MAP.invalidateSize();
-      if(AUTO_FIT && LAST_FIT_LIST) fitAll(LAST_FIT_LIST);
-    });
+    window.addEventListener("resize", function(){ MAP.invalidateSize(); });
     window.addEventListener("orientationchange", function(){
       setTimeout(function(){ MAP.invalidateSize(); }, 260);
     });
