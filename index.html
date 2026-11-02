@@ -365,7 +365,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 /* ── 图例：图标和类型的对应关系，横排小字 ── */
 .legend{display:flex;gap:10px;margin:0 12px 8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
 .legend::-webkit-scrollbar{display:none}
-.legend span{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ink-2);white-space:nowrap}
+.legend .lg{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ink-2);white-space:nowrap;cursor:pointer;padding:3px 7px;border-radius:999px;border:1px solid transparent;user-select:none}
+.legend .lg[aria-pressed="true"]{background:var(--paper-2);border-color:var(--line-2);color:var(--ink);font-weight:600}
+.legend .lg[aria-pressed="false"]{opacity:.42}
 .legend i{width:15px;height:15px;border-radius:50%;display:grid;place-items:center;flex:none}
 .legend i svg{width:9px;height:9px}
 /* ── 行程条 ── */
@@ -536,23 +538,39 @@ function dogKey(s){
 function isNight(s){var k=nightKey(s);return k==="official_camp"||k==="lodging"||k==="allowed_wild"||k==="gray";}
 
 /* ───────── 筛选 ───────── */
+/* 筛选项有两种粒度：chip 是"桶"（公园/水域合一个），图例是"具体类型"。
+   两者都写进 STATE.kinds，判定时统一展开，避免两套逻辑各说各话。 */
+var BUCKETS = {
+  camp:["campground"], park:["park","water"], village:["village","scenic"], lodging:["lodging"]
+};
+function selectedKinds(){
+  return Object.keys(STATE.kinds).filter(function(k){ return STATE.kinds[k]; });
+}
+function kindActive(kind){
+  var sel = selectedKinds();
+  if(!sel.length) return true;
+  return sel.some(function(k){
+    return (BUCKETS[k] || [k]).indexOf(kind) >= 0;
+  });
+}
+/* chip 的按下状态 = 这个桶被选中；图例的按下状态 = 这个具体类型被选中 */
+function syncFilterUI(){
+  Array.prototype.forEach.call(document.querySelectorAll(".chip[data-f]"), function(b){
+    var f = b.getAttribute("data-f");
+    if(f === "night" || f === "dog") return;
+    b.setAttribute("aria-pressed", STATE.kinds[f] ? "true" : "false");
+  });
+  Array.prototype.forEach.call(document.querySelectorAll(".legend [data-kind]"), function(b){
+    b.setAttribute("aria-pressed", kindActive(b.getAttribute("data-kind")) ? "true" : "false");
+  });
+}
+
 function match(s){
   if(s.drive && s.drive.hours_oneway > STATE.hours) return false;
   if(!s.drive) return false;
   if(STATE.night && !isNight(s)) return false;
   if(STATE.dog && dogKey(s)!=="allowed") return false;
-  var kinds=Object.keys(STATE.kinds).filter(function(k){return STATE.kinds[k];});
-  if(kinds.length){
-    var bucket = s.kind;
-    var ok = kinds.some(function(k){
-      if(k==="camp") return bucket==="campground";
-      if(k==="park") return bucket==="park"||bucket==="water";
-      if(k==="village") return bucket==="village"||bucket==="scenic";
-      if(k==="lodging") return bucket==="lodging";
-      return false;
-    });
-    if(!ok) return false;
-  }
+  if(!kindActive(s.kind)) return false;
   return true;
 }
 
@@ -635,11 +653,9 @@ function initMap(){
     radius:7, color:"#B85C38", weight:2.5, fillColor:"#FFF9F2", fillOpacity:1
   }).addTo(MAP).bindPopup('<div class="pop-t">出发点</div><div class="pop-row">'+esc(o.name)+'</div>');
 
-  /* 不做聚合：聚合出来的数字气泡会把"类型"信息整个吃掉，
-     而这张图的核心就是靠图标形状分类型。点之间靠缩放自己让开。 */
   CLUSTER = L.markerClusterGroup({
     showCoverageOnHover:false, spiderfyOnMaxZoom:true, zoomToBoundsOnClick:true,
-    maxClusterRadius:0, disableClusteringAtZoom:1, chunkedLoading:true,
+    maxClusterRadius:46, disableClusteringAtZoom:13, chunkedLoading:true,
     spiderfyDistanceMultiplier:1.5
   });
   MAP.addLayer(CLUSTER);
@@ -648,12 +664,12 @@ function initMap(){
 /* 一张地图上放所有点，靠**形状**分类型——光靠颜色在缩略图上分不出来。
    帐篷=能睡的营地，树=公园，水波=水域，房子=古村，山=景区，床=住宿。 */
 var KIND_GLYPH = {
-  campground:'<path d="M12 4.5 20.5 20H3.5z"/><path d="M12 20v-6"/>',
+  campground:'<path d="M12 5 20.5 20H3.5z"/><path d="M9.2 20 12 13.2 14.8 20"/>',
   lodging:'<path d="M3 19v-8h18v8"/><path d="M3 11V6.5"/><path d="M7 11V8.5h5V11"/>',
   park:'<path d="M12 20v-5"/><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/>',
   water:'<path d="M3 9.5c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2"/><path d="M3 15.5c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2"/>',
   village:'<path d="M4 11 12 5l8 6"/><path d="M6 11v9h12v-9"/>',
-  scenic:'<path d="M3 19l6-9 4 6 2-3 6 6z"/><circle cx="17.5" cy="6.5" r="2"/>',
+  scenic:'<path d="M3 19.5l6.5-9.5 4 6 2-3 6 6.5z"/><circle cx="18" cy="6" r="2.4"/>',
   transit:'<rect x="5" y="4" width="14" height="11" rx="2.5"/><path d="M5 15v3M19 15v3M5 9.5h14"/>',
   food:'<path d="M7 4v7M5 4v6.5a2 2 0 0 0 4 0V4"/><path d="M15 4c2 0 3 1.6 3 4.2s-1 4.2-3 4.2V20"/>',
   other:'<circle cx="12" cy="12" r="3.2"/>'
@@ -682,7 +698,8 @@ function renderLegend(){
   box.innerHTML = Object.keys(KIND_LABEL).filter(function(k){
     return k !== "other" && k !== "food";
   }).map(function(k){
-    return '<span><i style="background:'+(KIND_COLOR[k]||"#9C8A76")+'">'+svgFor(k)+'</i>'+
+    return '<span class="lg" data-kind="'+esc(k)+'" role="button" tabindex="0" aria-pressed="true">'+
+           '<i style="background:'+(KIND_COLOR[k]||"#9C8A76")+'">'+svgFor(k)+'</i>'+
            esc(KIND_LABEL[k])+'</span>';
   }).join("");
 }
@@ -882,7 +899,8 @@ function bind(){
     b.setAttribute("aria-pressed", on ? "false" : "true");
     if(f==="night") STATE.night = !on;
     else if(f==="dog") STATE.dog = !on;
-else STATE.kinds[f] = !on;
+    else STATE.kinds[f] = !on;
+    syncFilterUI();
     render();
   });
   el("list").addEventListener("click", function(e){
@@ -994,6 +1012,17 @@ function renderTrip(){
   else { bar.classList.add("on"); el("trip-count").textContent = STATE.trip.length; }
   if(el("trip-panel").classList.contains("open")) renderTripPanel();
 }
+function bindLegend(){
+  var box = el("legend"); if(!box) return;
+  box.addEventListener("click", function(e){
+    var b = e.target.closest("[data-kind]"); if(!b) return;
+    var k = b.getAttribute("data-kind");
+    STATE.kinds[k] = !STATE.kinds[k];
+    syncFilterUI();
+    render();
+  });
+}
+
 function bindTrip(){
   el("trip-open").addEventListener("click", function(){
     renderTripPanel(); el("trip-panel").classList.add("open");
@@ -1031,6 +1060,7 @@ fetch("spots.json", {cache:"no-cache"})
     bind();
     bindTrip();
     renderLegend();
+    bindLegend();
     STATE.trip = loadTrip();
     renderTrip();
     render();
