@@ -391,6 +391,51 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .trip-actions{display:flex;gap:8px;margin-top:16px}
 .trip-actions button{flex:1;border:1px solid var(--line-2);background:var(--paper-2);color:var(--ink);font:inherit;font-size:13px;font-weight:600;padding:10px 0;border-radius:10px;cursor:pointer}
 .trip-actions .primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+/* ─── 本周推荐 ─── */
+.plan-panel{position:fixed;inset:0;display:none;z-index:1400;background:rgba(42,32,24,.38)}
+.plan-panel.open{display:block}
+.plan-sheet{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(680px,94vw);max-height:88vh;overflow:auto;background:var(--paper);border-radius:var(--r-l);padding:20px;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.plan-sheet h3{margin:0 0 4px;font-size:17px;font-family:var(--font-display)}
+.plan-sub{color:var(--ink-3);font-size:12px;margin-bottom:12px}
+.plan-note{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-s);padding:10px 12px;font-size:12px;color:var(--ink-2);line-height:1.7;margin-bottom:14px}
+.plan-card{border:1px solid var(--line);border-radius:var(--r-m);background:var(--card);padding:14px;margin-bottom:14px;box-shadow:var(--sh-1)}
+.plan-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.plan-head h4{margin:0;font-size:15px}
+.plan-tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.pt-2d{background:var(--terra-soft);color:var(--terra-2)}
+.pt-1d{background:var(--green-soft);color:var(--green)}
+.pt-hd{background:var(--slate-soft);color:var(--slate)}
+.plan-maxh{margin-left:auto;font-size:11.5px;color:var(--ink-3)}
+.pw-note{font-size:11px;color:var(--amber-ink);opacity:.9}
+.plan-week{display:flex;gap:6px;margin:0 0 10px;overflow-x:auto;padding-bottom:2px}
+.pw-day{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:1px;padding:5px 8px;border-radius:9px;border:1px solid var(--line);background:var(--paper-2);font-size:10.5px;line-height:1.35;color:var(--ink-2)}
+.pw-day i{font-style:normal;color:var(--ink-3)}
+.pw-day b{font-size:12px}
+.pw-day s{text-decoration:none;color:var(--ink-3)}
+.pw-good b{color:var(--green)}
+.pw-mid b{color:var(--amber-ink)}
+.pw-bad b{color:var(--rose)}
+.pw-pick{border-color:var(--terra);background:var(--terra-soft);box-shadow:0 0 0 1px var(--terra) inset}
+.plan-warn{font-size:12px;color:var(--rose);background:var(--rose-soft);border-radius:9px;padding:8px 10px;margin-bottom:10px;line-height:1.6}
+.plan-weather{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:12.5px;color:var(--ink-2);background:var(--amber-soft);border-radius:10px;padding:8px 10px;margin-bottom:10px}
+.plan-weather b{color:var(--amber-ink)}
+.pw-score{margin-left:auto;font-weight:700;color:var(--amber-ink)}
+.pw-fail{background:var(--rose-soft);color:var(--rose)}
+.plan-stops{list-style:none;margin:0;padding:0}
+.plan-stop{padding:9px 0;border-bottom:1px dashed var(--line);cursor:pointer}
+.plan-stop:last-child{border-bottom:0}
+.plan-daymark{list-style:none;margin:10px 0 2px;padding:3px 0;font-size:11.5px;font-weight:700;color:var(--ink-3);letter-spacing:.04em;border-top:1px solid var(--line-2)}
+.plan-stop:hover .ps-name{color:var(--terra)}
+.ps-name{font-weight:600;font-size:14px}
+.ps-meta{color:var(--ink-3);font-size:12px;margin-top:2px}
+.ps-why{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.ps-why span{font-size:11.5px;background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:var(--ink-2)}
+.ps-why i{font-style:normal;color:var(--ink-3);margin-left:4px}
+.plan-line{font-size:12.5px;color:var(--ink-2);margin-top:7px;line-height:1.65}
+.plan-line b{color:var(--ink);margin-right:4px}
+.plan-foot{font-size:11.5px;color:var(--ink-3);line-height:1.7;padding:6px 2px 0}
+.plan-loading{text-align:center;color:var(--ink-3);font-size:13px;padding:40px 0}
+.plan-btn{border:1px solid var(--terra);background:var(--terra-soft);color:var(--terra-2);font:inherit;font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px;cursor:pointer;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -403,6 +448,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
         <div class="brand-sub" id="origin-line">从上海出发 · 加载中</div>
       </div>
       <div class="count-pill" id="count">—</div>
+      <button class="plan-btn" id="plan-open">本周推荐</button>
     </div>
     <div class="filters" id="filters">
       <label class="chip-wrap">单程 ≤ <b id="range-out">5.0</b>h
@@ -460,6 +506,15 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       <button id="trip-clear">清空</button>
       <button id="trip-close">关闭</button>
     </div>
+  </div>
+</div>
+
+<div class="plan-panel" id="plan-panel">
+  <div class="plan-sheet">
+    <h3>本周带狗去哪</h3>
+    <div class="plan-sub" id="plan-sub">按当前筛选算的</div>
+    <div id="plan-body"></div>
+    <div class="trip-actions"><button id="plan-close">关闭</button></div>
   </div>
 </div>
 
@@ -1054,6 +1109,462 @@ function bindTrip(){
   });
 }
 
+/* ═════════════════ 本周推荐 ═════════════════
+   出行窗口是固定的：**周五晚上出发、周日晚上回**，其他时间没空。
+   所以这里不是"在 7 天里挑最好的天"，而是"这个周末去哪最合适"。
+
+   三个输入都是真数据：
+   1) 车程 / 犬政策 / 过夜 / 卫生间 —— 取 spots.json 里已核对的字段，有原话的连原话一起给。
+   2) 站与站之间的距离 —— **只算直线**，我没有逐段跑过路网车程，写成"直线距离"不冒充车程。
+   3) 天气 —— Open-Meteo 7 天预报，周五夜 / 周六 / 周日三天分别打分，原始数字照抄。
+      取不到就说取不到。
+   4) 排序 —— 周五夜先到能睡的点；周六在附近玩；周日玩完，**最后一站选离上海最近的**，
+      免得玩完还要横穿半个省再回家。规则写在面板上。
+*/
+var WMO = {0:"晴",1:"晴间多云",2:"多云",3:"阴",45:"雾",48:"雾凇",51:"毛毛雨",53:"小雨",
+  55:"中雨",56:"冻雨",57:"冻雨",61:"小雨",63:"中雨",65:"大雨",66:"冻雨",67:"冻雨",
+  71:"小雪",73:"中雪",75:"大雪",77:"米雪",80:"阵雨",81:"阵雨",82:"强阵雨",
+  85:"阵雪",86:"强阵雪",95:"雷阵雨",96:"雷阵雨伴冰雹",99:"雷暴"};
+
+var SEASON_WORDS = {
+  "春":["樱花","油菜花","桃花","踏青","挖野菜","春笋","野餐"],
+  "夏":["玩水","溯溪","游泳","避暑","荷花","桨板","皮划艇","淌水","下水"],
+  "秋":["银杏","红叶","秋色","桂花","芦苇","粉黛","落叶","秋日"],
+  "冬":["温泉","雪景","雾凇","围炉"]
+};
+
+/* 周五 18:00 出发——这个时间是主人说的，写在面板上，不藏 */
+var DEPART_HOUR = 18;
+
+var PLAN = { state:"idle", plans:[], err:"", fetchedAt:"", pool:0, window:null };
+
+function seasonOf(d){
+  var m = d.getMonth()+1;
+  return m>=3&&m<=5 ? "春" : m>=6&&m<=8 ? "夏" : m>=9&&m<=11 ? "秋" : "冬";
+}
+
+function isoDate(d){
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+
+/* 这个周末：周五 / 周六 / 周日。今天就是周五的话就用今天 */
+function thisWeekend(){
+  var now = new Date();
+  var d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  var add = (5 - d.getDay() + 7) % 7;
+  var fri = new Date(d.getTime() + add*86400000);
+  var sat = new Date(fri.getTime() + 86400000);
+  var sun = new Date(sat.getTime() + 86400000);
+  return { fri:isoDate(fri), sat:isoDate(sat), sun:isoDate(sun) };
+}
+
+function haversineKm(a,b){
+  var R=6371, toR=Math.PI/180;
+  var dLat=(b[1]-a[1])*toR, dLng=(b[0]-a[0])*toR;
+  var la1=a[1]*toR, la2=b[1]*toR;
+  var h=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(la1)*Math.cos(la2)*Math.sin(dLng/2)*Math.sin(dLng/2);
+  return 2*R*Math.asin(Math.min(1,Math.sqrt(h)));
+}
+
+function spotCoord(s){ var g=s.gcj; return (g&&g.length===2)?g:null; }
+function spotH(s){ var d=s.drive||{}; return typeof d.hours_oneway==="number"?d.hours_oneway:null; }
+function sleepKind(s){
+  var k = nightKey(s);
+  return (k==="allowed_wild"||k==="official_camp"||k==="lodging") ? k : null;
+}
+
+function firstQuote(txt){
+  var m = String(txt||"").match(/「([^」]{8,70})」/);
+  return m ? m[1] : "";
+}
+
+function scoreSpot(s, season){
+  var sc = 0, why = [];
+  var dog = s.dog||{}, on = s.overnight||{}, fac = on.facilities||{};
+  if(spotH(s)==null) return null;
+
+  if(dog.policy==="allowed"){ sc+=3; why.push({t:"笔记写明可带狗", s:"犬政策"}); }
+  if(dog.policy==="forbidden"){ sc-=20; }
+
+  var ev = on.evidence||[];
+  if(ev.length){ sc+=3; why.push({t:"过夜有笔记原话", s:"过夜"}); }
+  if(fac.toilet===true){ sc+=1; why.push({t:"写明有卫生间", s:"设施"}); }
+  if((s.photos||[]).length){ sc+=1; why.push({t:"有实拍图 "+s.photos.length+" 张", s:"图"}); }
+
+  var text = String(dog.evidence||"") + " " +
+             ev.map(function(e){ return String(e&&e.quote||""); }).join(" ");
+  var hit = (SEASON_WORDS[season]||[]).filter(function(w){ return text.indexOf(w)>=0; })[0];
+  if(hit){ sc+=2; why.push({t:"原话提到「"+hit+"」，"+season+"季正合适", s:"笔记"}); }
+
+  sc -= Math.max(0, spotH(s)-1.5) * 0.7;
+  return { score:sc, why:why };
+}
+
+function clusterSpots(list, km){
+  var cs = [];
+  list.forEach(function(s){
+    var c = spotCoord(s); if(!c) return;
+    for(var i=0;i<cs.length;i++){
+      if(haversineKm(cs[i].centroid, c) <= km){
+        var g = cs[i]; g.spots.push(s);
+        g.sum[0]+=c[0]; g.sum[1]+=c[1];
+        g.centroid=[g.sum[0]/g.spots.length, g.sum[1]/g.spots.length];
+        return;
+      }
+    }
+    cs.push({ centroid:[c[0],c[1]], sum:[c[0],c[1]], spots:[s] });
+  });
+  return cs;
+}
+
+/* 只写城市会撞名：两条路线都叫"上海一带"，看不出区别。
+   所以用"城市 · 代表点位"——代表点位取这条线里分值最高的那一站。 */
+function clusterName(stops){
+  var cnt={}, best="", n=0;
+  stops.forEach(function(s){
+    var k=s.city||s.province||"";
+    if(!k) return; cnt[k]=(cnt[k]||0)+1;
+    if(cnt[k]>n){ n=cnt[k]; best=k; }
+  });
+  var top = stops.slice().sort(function(a,b){
+    return ((b.__p&&b.__p.score)||0) - ((a.__p&&a.__p.score)||0);
+  })[0];
+  var base = best ? best.replace(/市$/,"") : "未命名";
+  if(!top) return base + "一带";
+  /* "上海 · 上海东滩湿地公园" 这种重复前缀要去掉 */
+  var nm = top.name;
+  if(base && nm.indexOf(base)===0) nm = nm.slice(base.length);
+  return base + " · " + nm.slice(0,10);
+}
+
+/* 从起点出发，每次走直线最近的一站 */
+function nearestChain(start, pool, max){
+  var out=[], cur=start, left=pool.slice();
+  while(left.length && out.length<max){
+    var cc = spotCoord(cur), bi=0, bd=1e9;
+    for(var i=0;i<left.length;i++){
+      var pc = spotCoord(left[i]);
+      if(!pc || !cc) continue;
+      var d = haversineKm(cc, pc);
+      if(d<bd){ bd=d; bi=i; }
+    }
+    cur = left.splice(bi,1)[0];
+    out.push(cur);
+  }
+  return out;
+}
+
+function weatherScore(tmax, tmin, pop){
+  var mid=(tmax+tmin)/2, s=100;
+  s -= Math.min(60, pop*0.9);
+  if(mid<0) s-=45; else if(mid<8) s-=25; else if(mid<14) s-=8;
+  else if(mid<=24) s+=0; else if(mid<=29) s-=10; else s-=25;
+  return Math.round(s);
+}
+
+function fetchWeek(c){
+  var u = "https://api.open-meteo.com/v1/forecast?latitude="+c[1].toFixed(4)+
+          "&longitude="+c[0].toFixed(4)+
+          "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max"+
+          "&timezone=Asia%2FShanghai&forecast_days=7";
+  return fetch(u).then(function(r){
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    return r.json();
+  });
+}
+
+function dayOf(w, iso){
+  var d=(w&&w.daily)||{}, times=d.time||[], i=times.indexOf(iso);
+  if(i<0) return null;
+  var pop = d.precipitation_probability_max[i]; if(pop==null) pop=0;
+  return { date:iso, code:d.weather_code[i],
+           tmax:d.temperature_2m_max[i], tmin:d.temperature_2m_min[i], pop:pop,
+           score:weatherScore(d.temperature_2m_max[i], d.temperature_2m_min[i], pop) };
+}
+
+function md(iso){ var p=String(iso||"").split("-"); return p.length===3 ? (parseInt(p[1],10)+"/"+parseInt(p[2],10)) : iso; }
+function wd(iso){ return ["日","一","二","三","四","五","六"][new Date(iso+"T00:00:00").getDay()]; }
+function clock(hoursFloat){
+  var t = DEPART_HOUR*60 + Math.round(hoursFloat*60);
+  var hh = Math.floor(t/60)%24, mm = t%60;
+  return String(hh).padStart(2,"0")+":"+String(mm).padStart(2,"0");
+}
+
+/* ─── 组路线 ─── */
+function buildPlans(){
+  var season = seasonOf(new Date());
+  var wk = thisWeekend();
+  PLAN.window = wk;
+  var lim = STATE.hours;
+
+  var pool = DATA.spots.filter(function(s){
+    var h = spotH(s);
+    if(h==null || h>lim) return false;
+    if(spotCoord(s)==null) return false;
+    if(((s.dog||{}).policy)==="forbidden") return false;
+    /* 交通点不是"去玩"的地方。光看 kind 不够——"上海水务海洋执法码头"
+       被标成了 scenic，所以名字也要拦一道。 */
+    if(s.kind==="transit") return false;
+    if(/码头|停车场|公交|地铁|客运站|收费站|服务区|执法/.test(s.name)) return false;
+    var r = scoreSpot(s, season);
+    if(!r) return false;
+    s.__p = r;
+    return true;
+  });
+  PLAN.pool = pool.length;
+
+  /* 半径 35km：55km 会把整个上海并成一块，"片区"就没意义了。
+     小一点才能分出浦东/松江/昆山这种真正能当一条线走的范围。 */
+  var clusters = clusterSpots(pool, 35).filter(function(c){ return c.spots.length>=3; });
+  clusters.forEach(function(c){
+    c.sleeps = c.spots.filter(sleepKind).sort(function(a,b){ return b.__p.score-a.__p.score; });
+    /* 住宿可以是"睡哪"，但不适合当"玩哪"——没订房进不去 */
+    c.plays  = c.spots.filter(function(s){ return !sleepKind(s) && s.kind!=="lodging"; })
+                      .sort(function(a,b){ return b.__p.score-a.__p.score; });
+    c.maxH = Math.max.apply(null, c.spots.map(spotH));
+  });
+
+  /* 两晚路线：周五夜到得了、而且有能睡的点 */
+  /* 两晚三天只考虑单程 ≥1h 的片区：家门口的公园不需要"周五赶过去住两晚" */
+  var overnight = clusters.filter(function(c){ return c.sleeps.length && c.maxH<=4.5 && c.maxH>=1.0; })
+    .sort(function(a,b){
+      return (b.sleeps[0].__p.score + b.plays.length*0.4) - (a.sleeps[0].__p.score + a.plays.length*0.4);
+    }).slice(0,2);
+
+  /* 周六来回：单程 ≤2.5h（来回开车 5h，还得留够玩的时间） */
+  var daytrip = clusters.filter(function(c){ return c.maxH<=2.5 && c.plays.length>=2; })
+    .sort(function(a,b){
+      var sa = Math.max.apply(null, a.spots.map(function(s){ return s.__p.score; }));
+      var sb = Math.max.apply(null, b.spots.map(function(s){ return s.__p.score; }));
+      return sb-sa;
+    }).slice(0,2);
+
+  /* 三条路线必须落在**不同的片区**，否则会出现两条都叫"嘉兴一带"、
+     还共用同一批点位的情况。按顺序挑，用过一个片区就跳过。 */
+  var picks = [], used = [];
+  function take(kind, c){
+    if(!c || used.indexOf(c)>=0 || picks.length>=3) return;
+    used.push(c); picks.push({ kind:kind, c:c });
+  }
+  if(overnight.length) take("两晚三天", overnight[0]);
+  if(daytrip.length)   take("周六来回", daytrip[0]);
+  if(overnight.length>1) take("两晚三天", overnight[1]);
+  if(daytrip.length>1)   take("周六来回", daytrip[1]);
+  if(picks.length<3){
+    overnight.concat(daytrip).forEach(function(c){ if(picks.length<3) take("两晚三天", c); });
+  }
+
+  picks = picks.map(function(p){ return composePlan(p.kind, p.c, wk, season); });
+
+  var i = 0;
+  function next(){
+    if(i>=picks.length) return Promise.resolve(picks);
+    var p = picks[i++];
+    return fetchWeek(p.centroid).then(function(w){
+      p.wFri = dayOf(w, wk.fri); p.wSat = dayOf(w, wk.sat); p.wSun = dayOf(w, wk.sun);
+      p.week = ((w.daily||{}).time||[]).map(function(t){ return dayOf(w,t); });
+      p.weatherOk = !!(p.wFri||p.wSat||p.wSun);
+      if(!p.weatherOk) p.weatherErr = "预报里没有这几天";
+    }).catch(function(e){
+      p.wFri=p.wSat=p.wSun=null; p.week=[]; p.weatherOk=false;
+      p.weatherErr = e.message || "取不到";
+    }).then(next);
+  }
+  return next().then(function(){
+    PLAN.fetchedAt = new Date().toLocaleString("zh-CN", {hour12:false});
+    /* 有天气的先上：窗口是死的，天气是唯一没法自己控制的因素 */
+    /* 排序看**玩的那天**（周六）的天气，不是周五夜——周五只要不下雨都能开。 */
+    picks.sort(function(a,b){
+      var sa = a.weatherOk && a.wSat ? a.wSat.score : -1;
+      var sb = b.weatherOk && b.wSat ? b.wSat.score : -1;
+      return sb-sa;
+    });
+    return picks;
+  });
+}
+
+/* 组一条具体路线 */
+function composePlan(kind, c, wk, season){
+  var sleep = c.sleeps[0] || null;
+  var stops = [], legs = [];
+
+  if(kind==="两晚三天"){
+    /* 周五夜：直接到能睡的点。周六：附近玩。周日：玩完最后一站靠上海。 */
+    stops.push({ s:sleep, day:0 });
+    var plays = c.plays.filter(function(s){ return s!==sleep; })
+                       .sort(function(a,b){ return b.__p.score-a.__p.score; });
+    var d1 = nearestChain(sleep, plays.slice(0,5), 2);
+    d1.forEach(function(s){ stops.push({ s:s, day:1 }); });
+    var used = d1;
+    var rest = plays.filter(function(s){ return used.indexOf(s)<0; });
+    if(rest.length){
+      /* 第二天最后一站：不是单纯"离上海最近"，而是**从上一站过去 + 再回家**总路程最短，
+         否则会出现"为了靠家，先往反方向开 43km"的情况。 */
+      var home = (DATA.meta&&DATA.meta.origin&&DATA.meta.origin.gcj) || [121.473701,31.230416];
+      var prevC = spotCoord(stops[stops.length-1].s);
+      var last = rest.slice().sort(function(a,b){
+        var ca=spotCoord(a), cb=spotCoord(b);
+        var ca2 = (prevC&&ca) ? haversineKm(prevC,ca)+haversineKm(ca,home) : spotH(a)*80;
+        var cb2 = (prevC&&cb) ? haversineKm(prevC,cb)+haversineKm(cb,home) : spotH(b)*80;
+        return ca2-cb2;
+      })[0];
+      var mid = nearestChain(stops[stops.length-1].s, rest.filter(function(s){ return s!==last; }), 1);
+      mid.forEach(function(s){ stops.push({ s:s, day:2 }); });
+      stops.push({ s:last, day:2 });
+    }
+  } else {
+    /* 周六来回：一天玩 3 个，按最近邻排 */
+    var start = c.plays[0] || c.spots[0];
+    var chain = [start].concat(nearestChain(start, c.plays.filter(function(s){ return s!==start; }).slice(0,6), 2));
+    chain.forEach(function(s){ stops.push({ s:s, day:1 }); });
+  }
+
+  for(var i=1;i<stops.length;i++){
+    var a=spotCoord(stops[i-1].s), b=spotCoord(stops[i].s);
+    legs.push(a&&b ? haversineKm(a,b) : null);
+  }
+
+  var maxH = Math.max.apply(null, stops.map(function(x){ return spotH(x.s); }));
+  return {
+    kind:kind, season:season,
+    stops:stops, legs:legs, maxH:maxH,
+    sleepIdx: stops.findIndex(function(x){ return x.day===0; }),
+    centroid: c.centroid,
+    name: clusterName(stops.map(function(x){ return x.s; }))
+  };
+}
+
+/* ─── 渲染 ─── */
+function planStopHTML(s, leg, dayLabel){
+  var p = s.__p || {why:[]};
+  var meta = "单程 " + hm(spotH(s));
+  if(leg!=null) meta += " · 与上一站直线 " + leg.toFixed(1) + "km";
+  return '<li class="plan-stop" data-id="'+esc(s.id)+'">' +
+      (dayLabel ? '<div class="plan-daymark">'+esc(dayLabel)+'</div>' : '') +
+      '<div class="ps-name">'+esc(s.name)+'</div>' +
+      '<div class="ps-meta">'+esc(meta)+'</div>' +
+      (p.why.length ? '<div class="ps-why">'+p.why.slice(0,3).map(function(w){
+          return '<span>'+esc(w.t)+'<i>· '+esc(w.s)+'</i></span>';
+        }).join("")+'</div>' : '') +
+    '</li>';
+}
+
+function wdayHTML(d, label){
+  if(!d) return '<div class="pw-day pw-bad"><i>'+esc(label)+'</i><b>无</b><s>—</s></div>';
+  var cls = d.score>=70 ? "pw-good" : d.score>=45 ? "pw-mid" : "pw-bad";
+  return '<div class="pw-day '+cls+'"><i>'+esc(label)+' '+md(d.date)+'</i>'+
+    '<b>'+Math.round(d.pop)+'%</b><s>'+Math.round(d.tmin)+'~'+Math.round(d.tmax)+'°</s></div>';
+}
+
+function planCardHTML(p, idx){
+  var head = '<div class="plan-head"><span class="plan-tag '+
+    (p.kind==="两晚三天"?"pt-2d":"pt-1d")+'">'+esc(p.kind)+'</span>'+
+    '<h4>'+(idx+1)+'. '+esc(p.name)+'</h4>'+
+    '<span class="plan-maxh">最远单程 '+esc(hm(p.maxH))+'</span></div>';
+
+  var weather;
+  if(p.weatherOk){
+    var bad = (p.wSat && p.wSat.score<45) || (p.wSun && p.wSun.score<45);
+    weather = '<div class="plan-week">' +
+        wdayHTML(p.wFri, "周五夜") + wdayHTML(p.wSat, "周六") + wdayHTML(p.wSun, "周日") +
+      '</div>' +
+      (bad ? '<div class="plan-warn">这周末的天气不适合出门（上面对比着看）。硬要去就带好雨具，营地注意积水。</div>' : '');
+  } else {
+    weather = '<div class="plan-warn">天气没取到（'+esc(p.weatherErr||"网络不可用")+
+      '）—— 出发前自己看一眼预报，别按这条定日子。</div>';
+  }
+
+  var flat = p.legs.filter(function(x){ return x!=null; });
+  var spanTxt = flat.length ? ("整条路线直线跨度约 " + flat.reduce(function(a,b){return a+b;},0).toFixed(0) + "km") : "";
+
+  var body;
+  if(p.kind==="两晚三天" && p.sleepIdx>=0){
+    var sp = p.stops[p.sleepIdx].s;
+    var q = ((sp.overnight||{}).evidence||[])[0];
+    body =
+      p.stops.map(function(x,i){
+        var label = i===0 ? "周五晚 · "+clock(spotH(x.s))+" 到（"+DEPART_HOUR+":00 出发）"
+                  : (x.day===1 ? (p.stops[i-1].day!==1 ? "周六" : "") : (p.stops[i-1].day!==2 ? "周日（玩完直接回上海）" : ""));
+        return planStopHTML(x.s, i===0?null:p.legs[i-1], label);
+      }).join("") +
+      '<div class="plan-line"><b>过夜</b>周五、周六两晚都睡「'+esc(sp.name)+'」'+esc(NIGHT_LABEL[nightKey(sp)][0])+
+        (q ? '，原话：「'+esc(String(q.quote||"").slice(0,40))+'」' : '，这一步没有笔记原话，属人工判断')+'。</div>' +
+      '<div class="plan-line"><b>怎么走</b>周五夜直接到睡的地方；周六在附近玩；周日玩完，'+
+        '最后一站特意挑离上海最近的那个'+(spanTxt?'，'+esc(spanTxt):'')+'。</div>';
+  } else {
+    body = p.stops.map(function(x,i){
+        return planStopHTML(x.s, i===0?null:p.legs[i-1], i===0 ? "周六早上出发" : "");
+      }).join("") +
+      '<div class="plan-line"><b>怎么走</b>周六一早出发，一天玩这 '+p.stops.length+' 站，晚上回上海'+
+        (spanTxt?'，'+esc(spanTxt):'')+'。</div>' +
+      (PLAN.plans.some(function(q){ return q.kind==='两晚三天'; })
+        ? '<div class="plan-line"><b>过夜</b>当天来回，不用带帐篷。想住一晚的话看上面那条两晚的。</div>'
+        : '<div class="plan-line"><b>过夜</b>当天来回，不用带帐篷。</div>');
+  }
+
+  var anySeason = p.stops.some(function(x){
+    return (x.s.__p.why||[]).some(function(w){ return w.s==="笔记"; });
+  });
+
+  return '<div class="plan-card">' + head + weather + '<ol class="plan-stops">' + body + '</ol>' +
+    '<div class="plan-line"><b>季节</b>现在是'+p.season+'季，'+
+      (anySeason ? '上面有点位的原话提到了当季景象。' : '笔记里没有明确的季节描述，这里不硬编。')+'</div>' +
+  '</div>';
+}
+
+function renderPlan(){
+  var box = el("plan-body");
+  if(PLAN.state==="loading"){ box.innerHTML = '<div class="plan-loading">正在取天气、算路线…</div>'; return; }
+  if(PLAN.err){ box.innerHTML = '<div class="plan-loading">没能生成推荐：'+esc(PLAN.err)+'</div>'; return; }
+  if(!PLAN.plans.length){ box.innerHTML = '<div class="plan-loading">当前范围内凑不出 3 个点以上的片区。</div>'; return; }
+
+  var w = PLAN.window || {};
+  var sat = PLAN.plans.map(function(p){ return p.weatherOk&&p.wSat ? p.wSat.score : null; })
+                     .filter(function(x){ return x!=null; });
+  var allBad = sat.length && Math.max.apply(null, sat) < 50;
+  var head = (allBad ? '<div class="plan-warn" style="margin-bottom:12px">'+
+      '这个周六，我查到的几个片区降水都在 '+Math.min.apply(null, PLAN.plans.filter(function(p){return p.wSat;})
+        .map(function(p){ return Math.round(p.wSat.pop); }))+'% 以上，没有哪个片区是合适的。'+
+      '下面的路线是"如果非得去，去哪相对好一点"，不建议这周出发。</div>' : '') +
+    '<div class="plan-note">' +
+      '窗口按你说的：<b>周五 '+DEPART_HOUR+':00 出发，周日晚上回</b>。候选 <b>'+PLAN.pool+'</b> 个点' +
+      '（单程 ≤'+STATE.hours.toFixed(1)+'h、排除明确禁狗）。' +
+      '天气来自 Open-Meteo，抓取于 '+esc(PLAN.fetchedAt)+'。' +
+      '车程是真实路网算的；<b>站与站之间只给直线距离，不是车程</b>。' +
+    '</div>';
+  el("plan-sub").textContent = (w.fri ? (md(w.fri)+"–"+md(w.sun)+" · ") : "") + PLAN.plans.length + " 条路线";
+  box.innerHTML = head + PLAN.plans.map(planCardHTML).join("") +
+    '<div class="plan-foot">降水% 越低越好；出行指数 = 100 − 降水概率×0.9 − 体感温度惩罚（&lt;0℃ 扣 45、&lt;8℃ 扣 25、&lt;14℃ 扣 8、&gt;29℃ 扣 25）。权重写在这里，你可以不认同。</div>';
+}
+
+function openPlan(){
+  el("plan-panel").classList.add("open");
+  if(PLAN.state==="idle" || PLAN.state==="error"){
+    PLAN.state="loading"; PLAN.err=""; renderPlan();
+    buildPlans().then(function(list){
+      PLAN.plans = list; PLAN.state="done"; renderPlan();
+    }).catch(function(e){
+      PLAN.state="error"; PLAN.err=(e&&e.message)||"未知错误"; renderPlan();
+    });
+  } else {
+    renderPlan();
+  }
+}
+
+function closePlan(){ el("plan-panel").classList.remove("open"); }
+
+function bindPlan(){
+  var b = el("plan-open"); if(b) b.addEventListener("click", openPlan);
+  var c = el("plan-close"); if(c) c.addEventListener("click", closePlan);
+  var p = el("plan-panel");
+  if(p) p.addEventListener("click", function(e){
+    if(e.target===p){ closePlan(); return; }
+    var li = e.target.closest ? e.target.closest(".plan-stop") : null;
+    if(li && li.dataset.id){ closePlan(); openDetail(li.dataset.id); }
+  });
+}
+
+
 /* ───────── 启动 ───────── */
 fetch("spots.json", {cache:"no-cache"})
   .then(function(r){ return r.json(); })
@@ -1065,6 +1576,7 @@ fetch("spots.json", {cache:"no-cache"})
     bindTrip();
     renderLegend();
     bindLegend();
+    bindPlan();
     STATE.trip = loadTrip();
     renderTrip();
     render();
