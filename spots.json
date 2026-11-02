@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-02 08:55",
+  "generated": "2026-11-02 10:44",
   "origin": {
    "name": "上海人民广场",
    "gcj": [
@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 113,
+  "count": 128,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -133,6 +133,177 @@
    ]
   },
   {
+   "id": "x-浦江森林公园",
+   "name": "浦江森林公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "",
+   "gcj": [
+    121.517438,
+    31.047124
+   ],
+   "drive": {
+    "hours_oneway": 0.61,
+    "km": 23.8,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 69bbeba8，@西郊在逃饲养员）：「[星R]BD导航:芦影桥，车子可以直接开进去有停车位免费。位于闵浦浦锦街道丰收村。 [星R]这里是浦江郊野公园一期，人不多比较安静，适合家庭露营，可以搭帐篷、绑睡袋、溜宠物，有厕所很干净，还可以骑自行车，钓鱼，挖野菜，我看到好多阿姨挖野菜[」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_veto_default",
+    "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "浦江森林公园",
+     "gcj": [
+      121.517438,
+      31.047124
+     ],
+     "note": "推荐一个露营地"
+    }
+   ],
+   "trips": [
+    "小红书-带狗露营基地"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "推荐一个露营地",
+   "photos": []
+  },
+  {
+   "id": "x-九科绿洲公园",
+   "name": "九科绿洲公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "",
+   "gcj": [
+    121.327739,
+    31.107692
+   ],
+   "drive": {
+    "hours_oneway": 0.74,
+    "km": 29.8,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6a8d8ad1，@文森特的摄影日志）：「松江也有自己的阿勒泰｜人少、宠物友好🐩 在松江挖到这片治愈系城市旷野，人少清净，而且维护的特别好。 \t ⛺️里面有一大片草坪、树荫也足够，一张野餐布就可以席地而坐，很干」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "九科绿洲公园",
+     "gcj": [
+      121.327739,
+      31.107692
+     ],
+     "note": "松江也有自己的阿勒泰｜人少、宠物友好🐩"
+    }
+   ],
+   "trips": [
+    "小红书-带狗营地推荐"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "松江也有自己的阿勒泰｜人少、宠物友好🐩",
+   "photos": []
+  },
+  {
+   "id": "x-旗忠公园",
+   "name": "旗忠公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "",
+   "gcj": [
+    121.349801,
+    31.058127
+   ],
+   "drive": {
+    "hours_oneway": 0.75,
+    "km": 29.3,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 69f9e886，@Susu~）：「话题标签：可以带狗」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok_tag",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "旗忠公园",
+     "gcj": [
+      121.349801,
+      31.058127
+     ],
+     "note": "上海遛狗秘境：超大草坪+超美湖泊+0门票"
+    }
+   ],
+   "trips": [
+    "小红书-带狗营地推荐"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "上海遛狗秘境：超大草坪+超美湖泊+0门票",
+   "photos": []
+  },
+  {
    "id": "x-上海联怡枇杷乐园",
    "name": "上海联怡枇杷乐园",
    "kind": "scenic",
@@ -251,6 +422,63 @@
    ]
   },
   {
+   "id": "x-上海水务海洋执法码头",
+   "name": "上海水务海洋执法码头",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "上海",
+   "gcj": [
+    121.777832,
+    31.466089
+   ],
+   "drive": {
+    "hours_oneway": 1.04,
+    "km": 60.9,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "小红书 C级UGC（笔记 6a0310df，@巴萨不拿欧冠不改名📷）：「」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_dog_mention",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "上海水务海洋执法码头",
+     "gcj": [
+      121.777832,
+      31.466089
+     ],
+     "note": "大学生崇明岛自驾极简攻略"
+    }
+   ],
+   "trips": [
+    "小红书-上海东滩湿地公园"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "大学生崇明岛自驾极简攻略",
+   "photos": []
+  },
+  {
    "id": "x-西塘古镇景区",
    "name": "西塘古镇景区",
    "kind": "village",
@@ -296,10 +524,19 @@
       30.94402
      ],
      "note": "📍湘家荡 你简直美好得不像话😭"
+    },
+    {
+     "name": "西塘古镇",
+     "gcj": [
+      120.893704,
+      30.942938
+     ],
+     "note": "西塘古镇宝藏免费停车场 步行5分钟到景区！"
     }
    ],
    "trips": [
-    "小红书-嘉兴"
+    "小红书-嘉兴",
+    "小红书-西塘古镇"
    ],
    "geo_src": "xhs",
    "origin": "小红书带狗笔记",
@@ -631,6 +868,63 @@
    ]
   },
   {
+   "id": "x-泖田湿地",
+   "name": "泖田湿地",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "",
+   "gcj": [
+    121.125533,
+    30.922936
+   ],
+   "drive": {
+    "hours_oneway": 1.26,
+    "km": 64.9,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6954fa9a，@独居饲养员少卿）：「上海遛狗天花板🐶免费小众宠物友好秘境 2025 最后一期宝藏遛狗地来了！松江区的泖田湿地，人少景美还不要门票，带狗露营发呆真的太爽了✨ 上海宠物友好绿地测评・第十八」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "泖田湿地",
+     "gcj": [
+      121.125533,
+      30.922936
+     ],
+     "note": "上海遛狗天花板🐶免费小众宠物友好秘境"
+    }
+   ],
+   "trips": [
+    "小红书-马家浜考古遗址公园"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "上海遛狗天花板🐶免费小众宠物友好秘境",
+   "photos": []
+  },
+  {
    "id": "x-崇明岛",
    "name": "崇明岛",
    "kind": "scenic",
@@ -649,11 +943,11 @@
    },
    "dog": {
     "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 68171553，@超能绿绿姬嘎嘎子）：「。景观很丰富，一进门就是二月兰，往里走还有水杉林、荷花池湖泊、湿地栈道、紫藤长廊、大草坪、游乐园，还能带狗看到梅花鹿。有些地方安静得只能听到虫鸣，人和狗都超级放松！还在里面第一次看到了这么多颜色的郁金香。我们在里面走了4个多小时，完全不觉得」",
+    "evidence": "小红书 C级UGC（笔记 68171553，@超能绿绿姬嘎嘎子）：「。景观很丰富，一进门就是二月兰，往里走还有水杉林、荷花池湖泊、湿地栈道、紫藤长廊、大草坪、游乐园，还能带狗看到梅花鹿。有些地方安静得只能听到虫鸣，人和狗都超级放松！还在里面第一次看到了这么多颜色的郁金香。我们在里面走了4个多小时，完全不觉得」；另 3 篇同地笔记",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "explicit_ok,no_dog_mention,no_veto_default",
+    "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
    },
    "overnight": {
     "status": "allowed_wild",
@@ -1035,6 +1329,63 @@
    ]
   },
   {
+   "id": "x-苏州湾东太湖城市营地",
+   "name": "苏州湾东太湖城市营地",
+   "kind": "campground",
+   "tags": [],
+   "province": "",
+   "city": "苏州",
+   "gcj": [
+    120.602779,
+    31.155131
+   ],
+   "drive": {
+    "hours_oneway": 1.34,
+    "km": 96.3,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "小红书 C级UGC（笔记 69c60c96，@忽爸不着家）：「」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_dog_mention",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "苏州湾东太湖城市营地",
+     "gcj": [
+      120.602779,
+      31.155131
+     ],
+     "note": "上海🚗1h直达｜东太湖免费露营天花板"
+    }
+   ],
+   "trips": [
+    "小红书-带狗露营过夜推荐"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "上海🚗1h直达｜东太湖免费露营天花板",
+   "photos": []
+  },
+  {
    "id": "x-马家浜考古遗址公园",
    "name": "马家浜考古遗址公园",
    "kind": "park",
@@ -1144,6 +1495,63 @@
      "src": "高德POI"
     }
    ]
+  },
+  {
+   "id": "x-东太湖生态园",
+   "name": "东太湖生态园",
+   "kind": "water",
+   "tags": [],
+   "province": "",
+   "city": "苏州",
+   "gcj": [
+    120.598503,
+    31.148862
+   ],
+   "drive": {
+    "hours_oneway": 1.41,
+    "km": 97.8,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 69073ba2，@海尔弟弟）：「话题标签：宠物友好」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok_tag",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "东太湖生态园",
+     "gcj": [
+      120.598503,
+      31.148862
+     ],
+     "note": "苏州这个公园也太chill了吧！"
+    }
+   ],
+   "trips": [
+    "小红书-苏州湾体育公园"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "苏州这个公园也太chill了吧！",
+   "photos": []
   },
   {
    "id": "x-沈荡古镇",
@@ -1266,6 +1674,63 @@
      "src": "高德POI"
     }
    ]
+  },
+  {
+   "id": "x-苏州湾黄金湖岸旅游区",
+   "name": "苏州湾黄金湖岸旅游区",
+   "kind": "water",
+   "tags": [],
+   "province": "",
+   "city": "苏州",
+   "gcj": [
+    120.586047,
+    31.135846
+   ],
+   "drive": {
+    "hours_oneway": 1.47,
+    "km": 100.0,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 69073ba2，@海尔弟弟）：「话题标签：宠物友好」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok_tag",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "苏州湾黄金湖岸旅游区",
+     "gcj": [
+      120.586047,
+      31.135846
+     ],
+     "note": "苏州这个公园也太chill了吧！"
+    }
+   ],
+   "trips": [
+    "小红书-苏州湾体育公园"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "苏州这个公园也太chill了吧！",
+   "photos": []
   },
   {
    "id": "x-濮院时尚古镇游客中心",
@@ -2162,6 +2627,63 @@
    ]
   },
   {
+   "id": "x-濮院古镇-游览车站点",
+   "name": "濮院古镇-游览车站点",
+   "kind": "village",
+   "tags": [],
+   "province": "",
+   "city": "",
+   "gcj": [
+    120.626206,
+    30.679302
+   ],
+   "drive": {
+    "hours_oneway": 1.97,
+    "km": 122.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "小红书 C级UGC（笔记 6a3793df，@琑0805*1005）：「」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_dog_mention",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "濮院古镇-游览车站点",
+     "gcj": [
+      120.626206,
+      30.679302
+     ],
+     "note": "嘉兴濮院时尚古镇 两天一晚 旅游攻略"
+    }
+   ],
+   "trips": [
+    "小红书-濮院时尚古镇游客中心"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "嘉兴濮院时尚古镇 两天一晚 旅游攻略",
+   "photos": []
+  },
+  {
    "id": "x-梅园开原寺",
    "name": "梅园开原寺",
    "kind": "scenic",
@@ -2422,11 +2944,11 @@
     "computed_at": "2026-11-01 21:21"
    },
    "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 69f6ce92，@墨菲斯）：「南北湖露营，看这篇就够了 南北湖露营可以过夜，可以带狗，部分区域可以车边露营，可以卡式炉，但不能烧烤。这里足够大，即使是节假日也能找到露营位置；配套成熟，有国内景区最豪华干净的厕所，有味」",
+    "policy": "forbidden",
+    "evidence": "小红书 C级UGC（笔记 69f6ce92，@墨菲斯）：「南北湖露营，看这篇就够了 南北湖露营可以过夜，可以带狗，部分区域可以车边露营，可以卡式炉，但不能烧烤。这里足够大，即使是节假日也能找到露营位置；配套成熟，有国内景区最豪华干净的厕所，有味」；另 1 篇同地笔记",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
+    "basis": "explicit_ok,explicit_veto",
     "risk_hint": ""
    },
    "overnight": {
@@ -2521,6 +3043,63 @@
      "src": "高德POI"
     }
    ]
+  },
+  {
+   "id": "x-北里湖湿地公园",
+   "name": "北里湖湿地公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "",
+   "gcj": [
+    120.863256,
+    30.382242
+   ],
+   "drive": {
+    "hours_oneway": 2.12,
+    "km": 145.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6aab8df1，@妞妞宝）：「意别让小狗靠太近。小鹿营地也是在这里，不过我们没进去。 \t 📍桔子海coffee（p11-p13）是宠物友好咖啡店，店后面有一个封闭草坪，但是比较小，个人感觉没必要进去，店外就有超大草坪和花海。 \t 📍全境骑咖（p14-p18）小狗黄包车我」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "北里湖湿地公园",
+     "gcj": [
+      120.863256,
+      30.382242
+     ],
+     "note": "2026.9.16嘉兴南北湖（养狗人一定要去啊！）"
+    }
+   ],
+   "trips": [
+    "小红书-西塘古镇景区"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "2026.9.16嘉兴南北湖（养狗人一定要去啊！）",
+   "photos": []
   },
   {
    "id": "x-无锡阳山桃花源景区",
@@ -2996,11 +3575,11 @@
    },
    "dog": {
     "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 6a0ecebf，@俞大喜）：「海崇明 你糊涂啊 这漂亮地儿 不好好宣传～ 地址：东滩湿地公园 距离：徐汇自驾1.5h 优点：人少 宠物友好 天气好的话尊嘟很美 缺点：巨大 费腿 [笑哭R]」",
+    "evidence": "小红书 C级UGC（笔记 6a0ecebf，@俞大喜）：「海崇明 你糊涂啊 这漂亮地儿 不好好宣传～ 地址：东滩湿地公园 距离：徐汇自驾1.5h 优点：人少 宠物友好 天气好的话尊嘟很美 缺点：巨大 费腿 [笑哭R]」；另 1 篇同地笔记",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "explicit_ok,no_veto_default",
+    "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
    },
    "overnight": {
     "status": "unknown",
@@ -4902,6 +5481,60 @@
    ]
   },
   {
+   "id": "x-老石坎水库",
+   "name": "老石坎水库",
+   "kind": "water",
+   "tags": [],
+   "province": "",
+   "city": "湖州",
+   "gcj": [
+    119.455943,
+    30.530665
+   ],
+   "drive": {
+    "hours_oneway": 2.95,
+    "km": 241.2,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "老石坎水库",
+     "gcj": [
+      119.455943,
+      30.530665
+     ],
+     "note": ""
+    }
+   ],
+   "trips": [
+    "小红书-营地 · 1 篇"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "",
+   "photos": []
+  },
+  {
    "id": "x-东钱湖风景名胜区",
    "name": "东钱湖风景名胜区",
    "kind": "water",
@@ -5432,6 +6065,60 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "好天气就是适合去户外｜打卡南京小蓝境咖啡",
+   "photos": []
+  },
+  {
+   "id": "x-风之谷星空露营基地",
+   "name": "风之谷星空露营基地",
+   "kind": "other",
+   "tags": [],
+   "province": "",
+   "city": "绍兴",
+   "gcj": [
+    120.719797,
+    29.709127
+   ],
+   "drive": {
+    "hours_oneway": 3.18,
+    "km": 225.7,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "风之谷星空露营基地",
+     "gcj": [
+      120.719797,
+      29.709127
+     ],
+     "note": ""
+    }
+   ],
+   "trips": [
+    "小红书-营地 · 1 篇"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "",
    "photos": []
   },
   {
@@ -6007,10 +6694,10 @@
    },
    "dog": {
     "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 6a94efcb，@鲨鱼小鲨鱼）：「台风过境后的舟山，海变黄泥汤，着实有点伤到我了[笑哭R] anyway来都来了，放宽心好好游玩，小狗照样交到新朋友，肆意奔跑撒欢。 💡2.5天的行程见最底部💬区的图释 \t 🗺第一天 主要行程在朱家尖，p2整理了热门景点，给大家做个参考。 这」；另 2 篇同地笔记",
+    "evidence": "小红书 C级UGC（笔记 6a94efcb，@鲨鱼小鲨鱼）：「台风过境后的舟山，海变黄泥汤，着实有点伤到我了[笑哭R] anyway来都来了，放宽心好好游玩，小狗照样交到新朋友，肆意奔跑撒欢。 💡2.5天的行程见最底部💬区的图释 \t 🗺第一天 主要行程在朱家尖，p2整理了热门景点，给大家做个参考。 这」；另 3 篇同地笔记",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok,no_veto_default",
+    "basis": "explicit_ok,no_dog_mention,no_veto_default",
     "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
    },
    "overnight": {
@@ -6940,6 +7627,60 @@
    ]
   },
   {
+   "id": "x-天姥山",
+   "name": "天姥山",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "绍兴",
+   "gcj": [
+    120.995398,
+    29.374959
+   ],
+   "drive": {
+    "hours_oneway": 3.72,
+    "km": 271.5,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "天姥山",
+     "gcj": [
+      120.995398,
+      29.374959
+     ],
+     "note": ""
+    }
+   ],
+   "trips": [
+    "小红书-营地 · 1 篇"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "",
+   "photos": []
+  },
+  {
    "id": "浙江-浴鹄湾",
    "name": "浴鹄湾",
    "kind": "water",
@@ -7017,6 +7758,60 @@
      "src": "高德POI"
     }
    ]
+  },
+  {
+   "id": "x-平垣秘境",
+   "name": "平垣秘境",
+   "kind": "other",
+   "tags": [],
+   "province": "",
+   "city": "宣城",
+   "gcj": [
+    118.344662,
+    30.598846
+   ],
+   "drive": {
+    "hours_oneway": 3.76,
+    "km": 340.1,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "平垣秘境",
+     "gcj": [
+      118.344662,
+      30.598846
+     ],
+     "note": ""
+    }
+   ],
+   "trips": [
+    "小红书-营地 · 1 篇"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "",
+   "photos": []
   },
   {
    "id": "浙江-漫步山丘露营咖啡团建",
@@ -7559,6 +8354,63 @@
    "origin": "小红书带狗笔记",
    "curation_note": "",
    "raw_note": "不在三亚！在象山松兰山！太美太好拍！（附攻略",
+   "photos": []
+  },
+  {
+   "id": "x-桐庐香榧基地",
+   "name": "桐庐香榧基地",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "桐庐",
+   "gcj": [
+    119.583797,
+    29.755661
+   ],
+   "drive": {
+    "hours_oneway": 3.98,
+    "km": 294.0,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-02 10:44"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "小红书 C级UGC（笔记 6a27931c，@Haharu）：「」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_dog_mention",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "桐庐香榧基地",
+     "gcj": [
+      119.583797,
+      29.755661
+     ],
+     "note": "在江浙沪找到了一个不废腿且安全的露营点⛺️"
+    }
+   ],
+   "trips": [
+    "小红书-带狗露营过夜推荐"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书带狗笔记",
+   "curation_note": "",
+   "raw_note": "在江浙沪找到了一个不废腿且安全的露营点⛺️",
    "photos": []
   },
   {
@@ -9779,6 +10631,11 @@
    "name": "百山祖国家公园",
    "city": "",
    "hours_oneway": 6.1
+  },
+  {
+   "name": "历史文化名镇",
+   "city": "",
+   "hours_oneway": 11.9
   },
   {
    "name": "烟台港客运站",

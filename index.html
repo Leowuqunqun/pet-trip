@@ -134,10 +134,12 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 /* 地图标记 */
 .pin{
   display:grid;place-items:center;width:100%;height:100%;
-  font-size:11px;font-weight:700;color:#FFF;border-radius:50%;
-  border:2px solid #FFF;box-shadow:0 2px 8px rgba(50,34,20,.28);
-  font-family:var(--font-sans);letter-spacing:-.02em;
+  border-radius:50%;border:2px solid #FFF;
+  box-shadow:0 2px 8px rgba(50,34,20,.28);
 }
+.pin svg{width:14px;height:14px;display:block}
+.pin-lg{box-shadow:0 3px 12px rgba(46,125,83,.45)}
+.pin-lg svg{width:17px;height:17px}
 
 /* ══════════ 底部列表（移动端抽屉式） ══════════ */
 .sheet{
@@ -359,6 +361,34 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
 }
+
+/* ── 图例：图标和类型的对应关系，横排小字 ── */
+.legend{display:flex;gap:10px;margin:0 12px 8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.legend::-webkit-scrollbar{display:none}
+.legend span{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ink-2);white-space:nowrap}
+.legend i{width:15px;height:15px;border-radius:50%;display:grid;place-items:center;flex:none}
+.legend i svg{width:9px;height:9px}
+/* ── 行程条 ── */
+.tripbar{display:none;align-items:center;gap:8px;margin:0 12px 8px;padding:9px 12px;background:var(--ink);color:#fff;border-radius:12px;font-size:13px}
+.tripbar.on{display:flex}
+.tripbar .tb-btn{margin-left:auto;background:rgba(255,255,255,.18);border:0;color:#fff;font:inherit;font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;cursor:pointer}
+.tripbtn{width:100%;border:1px dashed var(--line-2);background:var(--paper-2);color:var(--ink);font:inherit;font-size:14px;font-weight:600;padding:11px 0;border-radius:12px;cursor:pointer}
+.tripbtn.on{border-style:solid;border-color:var(--green);background:var(--green-soft);color:var(--green)}
+/* ── 行程面板 ── */
+.trip-panel{position:fixed;inset:0;display:none;z-index:1300;background:rgba(42,32,24,.35)}
+.trip-panel.open{display:block}
+.trip-sheet{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(560px,92vw);max-height:82vh;overflow:auto;background:var(--paper);border-radius:var(--r-l);padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+.trip-sheet h3{margin:0 0 4px;font-size:16px}
+.trip-sub{color:var(--ink-3);font-size:12px;margin-bottom:10px}
+.trip-item{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}
+.trip-item:last-child{border-bottom:0}
+.trip-item .ti-n{flex:1;min-width:0}
+.trip-item .ti-t{font-weight:600;font-size:14px}
+.trip-item .ti-m{color:var(--ink-2);font-size:12px;margin-top:3px}
+.trip-item .ti-x{border:0;background:transparent;color:var(--ink-3);font-size:20px;line-height:1;cursor:pointer;padding:0 4px}
+.trip-actions{display:flex;gap:8px;margin-top:16px}
+.trip-actions button{flex:1;border:1px solid var(--line-2);background:var(--paper-2);color:var(--ink);font:inherit;font-size:13px;font-weight:600;padding:10px 0;border-radius:10px;cursor:pointer}
+.trip-actions .primary{background:var(--ink);color:#fff;border-color:var(--ink)}
 </style>
 </head>
 <body>
@@ -383,13 +413,19 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       <button class="chip" data-f="village" aria-pressed="false">古村</button>
       <button class="chip" data-f="lodging" aria-pressed="false">住宿</button>
     </div>
+    <!-- 一张图上全都有，靠图标分类型：帐篷=能睡的营地，树=公园… -->
+    <div class="legend" id="legend"></div>
+    <div class="tripbar" id="tripbar">
+      <span>行程 <b id="trip-count">0</b> 个点</span>
+      <button class="tb-btn" id="trip-open">查看</button>
+    </div>
   </header>
 
   <div class="main-row">
     <div class="sheet" id="sheet">
       <div class="grab" id="grab"><i></i></div>
       <div class="sheet-head">
-        <h2>按车程排序</h2>
+        <h2 id="sheet-title">按车程排序</h2>
         <div class="hint" id="list-hint"></div>
       </div>
       <div class="list" id="list"></div>
@@ -409,6 +445,19 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       </div>
     </div>
     <div id="d-body"></div>
+  </div>
+</div>
+
+<div class="trip-panel" id="trip-panel">
+  <div class="trip-sheet">
+    <h3>我的行程</h3>
+    <div class="trip-sub" id="trip-sub"></div>
+    <div id="trip-list"></div>
+    <div class="trip-actions">
+      <button id="trip-copy" class="primary">复制行程</button>
+      <button id="trip-clear">清空</button>
+      <button id="trip-close">关闭</button>
+    </div>
   </div>
 </div>
 
@@ -447,7 +496,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, kinds:{}, active:null};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, kinds:{}, active:null, trip:[]};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -586,20 +635,56 @@ function initMap(){
     radius:7, color:"#B85C38", weight:2.5, fillColor:"#FFF9F2", fillOpacity:1
   }).addTo(MAP).bindPopup('<div class="pop-t">出发点</div><div class="pop-row">'+esc(o.name)+'</div>');
 
+  /* 不做聚合：聚合出来的数字气泡会把"类型"信息整个吃掉，
+     而这张图的核心就是靠图标形状分类型。点之间靠缩放自己让开。 */
   CLUSTER = L.markerClusterGroup({
     showCoverageOnHover:false, spiderfyOnMaxZoom:true, zoomToBoundsOnClick:true,
-    maxClusterRadius:46, disableClusteringAtZoom:13, chunkedLoading:true,
+    maxClusterRadius:0, disableClusteringAtZoom:1, chunkedLoading:true,
     spiderfyDistanceMultiplier:1.5
   });
   MAP.addLayer(CLUSTER);
 }
 
+/* 一张地图上放所有点，靠**形状**分类型——光靠颜色在缩略图上分不出来。
+   帐篷=能睡的营地，树=公园，水波=水域，房子=古村，山=景区，床=住宿。 */
+var KIND_GLYPH = {
+  campground:'<path d="M12 4.5 20.5 20H3.5z"/><path d="M12 20v-6"/>',
+  lodging:'<path d="M3 19v-8h18v8"/><path d="M3 11V6.5"/><path d="M7 11V8.5h5V11"/>',
+  park:'<path d="M12 20v-5"/><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/>',
+  water:'<path d="M3 9.5c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2"/><path d="M3 15.5c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2"/>',
+  village:'<path d="M4 11 12 5l8 6"/><path d="M6 11v9h12v-9"/>',
+  scenic:'<path d="M3 19l6-9 4 6 2-3 6 6z"/><circle cx="17.5" cy="6.5" r="2"/>',
+  transit:'<rect x="5" y="4" width="14" height="11" rx="2.5"/><path d="M5 15v3M19 15v3M5 9.5h14"/>',
+  food:'<path d="M7 4v7M5 4v6.5a2 2 0 0 0 4 0V4"/><path d="M15 4c2 0 3 1.6 3 4.2s-1 4.2-3 4.2V20"/>',
+  other:'<circle cx="12" cy="12" r="3.2"/>'
+};
+function glyphOf(kind){
+  return KIND_GLYPH[kind] || KIND_GLYPH.other;
+}
+function svgFor(kind){
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" '+
+         'stroke-linecap="round" stroke-linejoin="round">'+glyphOf(kind)+'</svg>';
+}
 function pinIcon(s){
   var col = KIND_COLOR[s.kind]||"#9C8A76";
+  /* 营地放大一圈：它是"今晚睡哪"的答案，不该和普通点一样大 */
+  var lg = s.kind === "campground";
+  var sz = lg ? 32 : 26;
   return L.divIcon({
-    className:"", iconSize:[28,28], iconAnchor:[14,14], popupAnchor:[0,-14],
-    html:'<div class="pin" style="background:'+col+'">'+(KIND_ICON[s.kind]||"·")+'</div>'
+    className:"", iconSize:[sz,sz], iconAnchor:[sz/2,sz/2], popupAnchor:[0,-sz/2],
+    html:'<div class="pin'+(lg?' pin-lg':'')+'" style="background:'+col+'">'+svgFor(s.kind)+'</div>'
   });
+}
+
+/* 图例从同一套字形生成，保证"图上看到的"和"图例写的"永远一致 */
+function renderLegend(){
+  var box = el("legend"); if(!box) return;
+  box.innerHTML = Object.keys(KIND_LABEL).filter(function(k){
+    return k !== "other" && k !== "food";
+  }).map(function(k){
+    return '<span><i style="background:'+(KIND_COLOR[k]||"#9C8A76")+'">'+svgFor(k)+'</i>'+
+           esc(KIND_LABEL[k])+'</span>';
+  }).join("");
 }
 
 function syncMarkers(list){
@@ -649,6 +734,11 @@ function openDetail(id){
   var o = s.overnight||{}, dg = s.dog||{};
 
   var html = "";
+
+  /* 加入行程放在最上面：先决定"去不去"，再看细节 */
+  var inT = inTrip(s.id);
+  html += '<div class="sec" style="margin-top:2px"><button class="tripbtn' + (inT ? " on" : "") +
+          '" data-trip="' + esc(s.id) + '">' + (inT ? "✓ 已在行程 · 点击移除" : "＋ 加入行程") + '</button></div>';
 
   /* 照片：先看图，再看结论——"长啥样"比指标更直觉 */
   if(s.photos && s.photos.length){
@@ -814,6 +904,8 @@ else STATE.kinds[f] = !on;
   });
   /* 画廊点图 → 大图 */
   el("d-body").addEventListener("click", function(e){
+    var tb = e.target.closest("[data-trip]");
+    if(tb){ e.preventDefault(); toggleTrip(tb.getAttribute("data-trip")); return; }
     var img = e.target.closest(".gallery img");
     if(!img || img.classList.contains("broken") || !img.getAttribute("src")) return;
     el("lb-img").src = img.src;
@@ -834,6 +926,101 @@ else STATE.kinds[f] = !on;
   });
 }
 
+/* ───────── 行程 ───────── */
+var TRIP_KEY = "pp-trip-v1";
+function loadTrip(){
+  try{
+    var a = JSON.parse(localStorage.getItem(TRIP_KEY) || "[]");
+    if(!Array.isArray(a)) return [];
+    // 点位会随数据更新出现/消失，加载时把已经不存在的 id 滤掉
+    return a.filter(function(id){ return !!findSpot(id); });
+  }catch(e){ return []; }
+}
+function saveTrip(){ try{ localStorage.setItem(TRIP_KEY, JSON.stringify(STATE.trip)); }catch(e){} }
+function inTrip(id){ return STATE.trip.indexOf(id) >= 0; }
+function toggleTrip(id){
+  var i = STATE.trip.indexOf(id);
+  if(i >= 0) STATE.trip.splice(i, 1); else STATE.trip.push(id);
+  saveTrip(); renderTrip();
+  if(STATE.active) openDetail(STATE.active);
+}
+function fallbackCopy(t){
+  var ta = document.createElement("textarea");
+  ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand("copy"); }catch(e){}
+  document.body.removeChild(ta);
+}
+function tripText(){
+  var lines = ["带狗出行 · " + STATE.trip.length + " 个点"];
+  STATE.trip.forEach(function(id, i){
+    var s = findSpot(id); if(!s) return;
+    var f = (s.overnight || {}).facilities || {};
+    var bits = ["单程 " + hm(s.drive.hours_oneway)];
+    bits.push(NIGHT_LABEL[nightKey(s)][0]);
+    if(f.toilet === true) bits.push("有厕所");
+    else if(f.toilet === false) bits.push("无厕所");
+    if(dogKey(s) === "allowed") bits.push("可带狗");
+    lines.push((i + 1) + ". " + s.name + "（" + bits.join(" · ") + "）");
+  });
+  return lines.join("\n");
+}
+function renderTripPanel(){
+  var box = el("trip-list"), sub = el("trip-sub");
+  if(!STATE.trip.length){
+    sub.textContent = "";
+    box.innerHTML = '<div style="padding:26px 0;text-align:center;color:var(--ink-3);font-size:13px">还没选地方。<br>点开任意一个点，按「＋ 加入行程」。</div>';
+    return;
+  }
+  /* 只报"最远单程"：把每个点的单程加起来不是真实路线，
+     报一个假的总时长不如不报。 */
+  var maxH = 0;
+  box.innerHTML = STATE.trip.map(function(id, i){
+    var sp = findSpot(id); if(!sp) return "";
+    var d = sp.drive, f = (sp.overnight || {}).facilities || {};
+    if(d.hours_oneway > maxH) maxH = d.hours_oneway;
+    return '<div class="trip-item"><div class="ti-n">' +
+      '<div class="ti-t">' + (i + 1) + '. ' + esc(sp.name) + '</div>' +
+      '<div class="ti-m">单程 ' + hm(d.hours_oneway) + ' · ' + Math.round(d.km) + ' km · ' +
+      esc(NIGHT_LABEL[nightKey(sp)][0]) +
+      (f.toilet === true ? ' · 有厕所' : (f.toilet === false ? ' · 无厕所' : '')) +
+      '</div></div><button class="ti-x" data-rm="' + esc(id) + '" aria-label="移除">×</button></div>';
+  }).join("");
+  sub.textContent = "最远单程 " + hm(maxH) + " · 点之间怎么串由你定";
+}
+function renderTrip(){
+  var bar = el("tripbar");
+  if(!STATE.trip.length){ bar.classList.remove("on"); }
+  else { bar.classList.add("on"); el("trip-count").textContent = STATE.trip.length; }
+  if(el("trip-panel").classList.contains("open")) renderTripPanel();
+}
+function bindTrip(){
+  el("trip-open").addEventListener("click", function(){
+    renderTripPanel(); el("trip-panel").classList.add("open");
+  });
+  el("trip-close").addEventListener("click", function(){ el("trip-panel").classList.remove("open"); });
+  el("trip-panel").addEventListener("click", function(e){
+    if(e.target === el("trip-panel")) el("trip-panel").classList.remove("open");
+  });
+  el("trip-list").addEventListener("click", function(e){
+    var b = e.target.closest("[data-rm]"); if(!b) return;
+    toggleTrip(b.getAttribute("data-rm"));
+  });
+  el("trip-clear").addEventListener("click", function(){
+    STATE.trip = []; saveTrip(); renderTrip(); renderTripPanel();
+  });
+  el("trip-copy").addEventListener("click", function(){
+    var btn = el("trip-copy"), t = tripText();
+    var done = function(){
+      btn.textContent = "已复制 ✓";
+      setTimeout(function(){ btn.textContent = "复制行程"; }, 1600);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(done).catch(function(){ fallbackCopy(t); done(); });
+    } else { fallbackCopy(t); done(); }
+  });
+}
+
 /* ───────── 启动 ───────── */
 fetch("spots.json", {cache:"no-cache"})
   .then(function(r){ return r.json(); })
@@ -842,6 +1029,10 @@ fetch("spots.json", {cache:"no-cache"})
     el("origin-line").textContent = "从" + d.meta.origin.name + "出发 · 单程上限可调";
     initMap();
     bind();
+    bindTrip();
+    renderLegend();
+    STATE.trip = loadTrip();
+    renderTrip();
     render();
     /* 布局稳定后再算 fitBounds：立刻算会把容器尺寸算小，点位挤到屏幕外 */
     setTimeout(function(){ if(d.spots.length) fitAll(d.spots); }, 80);
