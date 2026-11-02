@@ -795,6 +795,10 @@ function openDetail(id){
       return '<div class="kv" style="margin-top:8px"><div class="k">卫生间</div><div class="v">'+lbl+'</div></div>';
     })() +
     (o.note?'<div class="note-txt" style="margin-top:6px">'+esc(o.note)+'</div>':'') +
+    /* 有结论但一条原话都没有时，必须说清楚这是人工判断而不是笔记依据，
+       否则"可扎营"看起来和"有人拿原话证明过"一样可信 */
+    ((nk!=="unknown" && !(o.evidence||[]).length)
+      ? '<div class="note-txt" style="margin-top:6px;color:var(--amber-ink)">这条没有笔记原话，是人工判断，出发前建议先打电话确认。</div>' : '') +
     (function(){
       var ev = o.evidence||[];
       if(!ev.length) return "";
