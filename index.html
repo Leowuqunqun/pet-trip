@@ -187,8 +187,8 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 }
 .card-thumb .fb{
   position:absolute;inset:0;display:grid;place-items:center;
-  font-size:11.5px;font-weight:700;color:#FFF;letter-spacing:-.02em;
 }
+.card-thumb .fb svg{width:52%;height:52%;opacity:.92}
 .card-thumb .cnt{
   position:absolute;right:3px;bottom:3px;font-size:9.5px;line-height:1.4;
   padding:1px 5px;border-radius:6px;color:#FFF;
@@ -354,10 +354,15 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   }
   .d-top{border-radius:var(--r-xl) var(--r-xl) 0 0}
 }
-@media (max-width:859px){
-  .shell{display:flex;flex-direction:column;height:100%}
-  .main-row{flex:1;min-height:0;display:flex;flex-direction:column}
+/* 横滑行的提示：右边留一道渐隐，滑到头自动消失。
+   之前这两行能滑但看不出来右边还有东西（实测筛选条宽 727、可视 390）。 */
+.scrollfade{
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%);
+  mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%);
 }
+.scrollfade.at-end{-webkit-mask-image:none;mask-image:none}
+
+
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
 }
@@ -394,10 +399,20 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 /* ─── 本周推荐 ─── */
 .plan-panel{position:fixed;inset:0;display:none;z-index:1400;background:rgba(42,32,24,.38)}
 .plan-panel.open{display:block}
-.plan-sheet{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(680px,94vw);max-height:88vh;overflow:auto;background:var(--paper);border-radius:var(--r-l);padding:20px;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.plan-sheet{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(680px,94vw);max-height:88vh;background:var(--paper);border-radius:var(--r-l);
+  box-shadow:0 24px 60px rgba(0,0,0,.3);display:flex;flex-direction:column;overflow:hidden}
+.plan-top{flex:none;padding:20px 20px 0}
+.plan-scroll{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;padding:0 20px}
 .plan-sheet h3{margin:0 0 4px;font-size:17px;font-family:var(--font-display)}
 .plan-sub{color:var(--ink-3);font-size:12px;margin-bottom:12px}
 .plan-note{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-s);padding:10px 12px;font-size:12px;color:var(--ink-2);line-height:1.7;margin-bottom:14px}
+.plan-note summary{cursor:pointer;list-style:none;outline:none}
+.plan-note summary::-webkit-details-marker{display:none}
+.plan-note summary::after{content:"展开说明 ›";float:right;color:var(--terra-2);font-weight:600;margin-left:8px}
+.plan-note[open] summary::after{content:"收起 ⌄"}
+.plan-note .pn-body{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
 .plan-card{border:1px solid var(--line);border-radius:var(--r-m);background:var(--card);padding:14px;margin-bottom:14px;box-shadow:var(--sh-1)}
 .plan-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .plan-head h4{margin:0;font-size:15px}
@@ -451,6 +466,56 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .plan-foot{font-size:11.5px;color:var(--ink-3);line-height:1.7;padding:6px 2px 0}
 .plan-loading{text-align:center;color:var(--ink-3);font-size:13px;padding:40px 0}
 .plan-btn{border:1px solid var(--terra);background:var(--terra-soft);color:var(--terra-2);font:inherit;font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px;cursor:pointer;white-space:nowrap}
+@media (max-width:859px){
+  .shell{display:flex;flex-direction:column;height:100%}
+  /* 手机上是地图在上、列表在下（原来是列表在上、地图被压到屏幕底部，
+     圆角也朝上——不像地图应用）。column-reverse 只改视觉顺序，不动 DOM。 */
+  .main-row{flex:1;min-height:0;display:flex;flex-direction:column-reverse}
+
+  /* 标题行：副标题原本会折成两行，白占一行高度 */
+  .brand-sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand-name{font-size:15.5px}
+  .topbar{padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+  /* 触控目标：34px 偏小，抬到 40px（配 8px 间隔） */
+  .chip,.chip-wrap{height:40px;font-size:13px}
+  .chip{padding:0 12px}
+  .plan-btn{height:40px;padding:0 14px;font-size:13px}
+  .count-pill{padding:5px 9px}
+  .filters{padding-top:8px;padding-bottom:9px;gap:6px}
+  .filters .chip-wrap input[type=range]{width:72px}
+  .legend{margin:0 12px 6px}
+  .legend .lg{padding:6px 8px;font-size:11.5px}
+  .legend i{width:17px;height:17px}
+  .legend i svg{width:10px;height:10px}
+  /* 行程条浮在地图上方，不再占标题栏的高度（有行程时白占 56px） */
+  .tripbar{position:absolute;left:12px;right:12px;bottom:-60px;margin:0;padding:9px 12px;
+    box-shadow:0 10px 24px -12px rgba(42,32,24,.55)}
+  .tripbar .tb-btn{padding:8px 14px}
+
+  /* 缩略图放大，点得准也看得清 */
+  .card-thumb{width:72px;height:72px;border-radius:14px}
+  .card-name{font-size:15px}
+
+  /* 缩放按钮挪到地图左下角：原来在左上，正好压着聚合圆点 */
+  .leaflet-top.leaflet-left{top:auto;bottom:16px}
+  .leaflet-top .leaflet-control{margin-left:10px;margin-top:0}
+  .leaflet-control-zoom a{width:38px;height:38px;line-height:38px;font-size:19px}
+
+  /* 推荐面板全屏，头部固定、内容自己滚、按钮钉在底部 */
+  .plan-panel{background:var(--paper)}
+  .plan-sheet{left:0;top:0;transform:none;width:100%;height:100%;max-height:100%;
+    border-radius:0;box-shadow:none}
+  .plan-top{padding:calc(14px + env(safe-area-inset-top,0px)) 16px 0}
+  .plan-top h3{font-size:18px}
+  .plan-weeks{gap:6px}
+  .plan-weeks button{flex:1;min-width:0;padding:6px 4px;font-size:12px;line-height:1.35}
+  .plan-weeks button i{display:block;margin-left:0;font-size:10.5px}
+  .plan-scroll{padding:0 16px}
+  .plan-sheet .trip-actions{flex:none;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));
+    border-top:1px solid var(--line);background:var(--paper)}
+  .plan-sheet .trip-actions button{min-height:46px}
+}
 </style>
 </head>
 <body>
@@ -470,11 +535,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
         <input type="range" id="range" min="1" max="6" step="0.5" value="5">
       </label>
       <button class="chip" data-f="night" aria-pressed="false">能过夜</button>
-      <button class="chip" data-f="dog" aria-pressed="false">已确认可带狗</button>
-      <button class="chip" data-f="camp" aria-pressed="false">营地</button>
-      <button class="chip" data-f="park" aria-pressed="false">公园/水域</button>
-      <button class="chip" data-f="village" aria-pressed="false">古村</button>
-      <button class="chip" data-f="lodging" aria-pressed="false">住宿</button>
+      <button class="chip" data-f="dog" aria-pressed="false">确认可带狗</button>
     </div>
     <!-- 一张图上全都有，靠图标分类型：帐篷=能睡的营地，树=公园… -->
     <div class="legend" id="legend"></div>
@@ -526,9 +587,11 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 
 <div class="plan-panel" id="plan-panel">
   <div class="plan-sheet">
-    <h3>本周带狗去哪</h3>
-    <div class="plan-sub" id="plan-sub">按当前筛选算的</div>
-    <div id="plan-body"></div>
+    <div class="plan-top">
+      <h3>本周带狗去哪</h3>
+      <div class="plan-sub" id="plan-sub">按当前筛选算的</div>
+    </div>
+    <div id="plan-body" class="plan-scroll"></div>
     <div class="trip-actions">
       <button id="plan-refresh" class="primary">重新查天气</button>
       <button id="plan-close">关闭</button>
@@ -690,7 +753,7 @@ function render(){
       thumbSrc = (gd[0] || xh[1] || xh[0] || ph[0]).url;
     }
     var thumb = '<span class="card-thumb">' +
-        '<span class="fb" style="background:'+col+'">'+(KIND_ICON[k]||"·")+'</span>' +
+        '<span class="fb" style="background:'+col+'">'+svgFor(k)+'</span>' +
         (thumbSrc ? '<img src="'+esc(thumbSrc)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' +
               (ph.length>1 ? '<span class="cnt">'+ph.length+'</span>' : '') : '') +
       '</span>';
@@ -766,6 +829,19 @@ function pinIcon(s){
 }
 
 /* 图例从同一套字形生成，保证"图上看到的"和"图例写的"永远一致 */
+/* 横滑行：滑到头就把渐隐去掉，避免"右边被裁掉"的错觉 */
+function scrollFade(row){
+  if(!row) return;
+  row.classList.add("scrollfade");
+  function upd(){
+    var atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 2;
+    row.classList.toggle("at-end", atEnd);
+  }
+  row.addEventListener("scroll", upd, {passive:true});
+  window.addEventListener("resize", upd);
+  upd();
+}
+
 function renderLegend(){
   var box = el("legend"); if(!box) return;
   box.innerHTML = Object.keys(KIND_LABEL).filter(function(k){
@@ -775,6 +851,7 @@ function renderLegend(){
            '<i style="background:'+(KIND_COLOR[k]||"#9C8A76")+'">'+svgFor(k)+'</i>'+
            esc(KIND_LABEL[k])+'</span>';
   }).join("");
+  scrollFade(box);
 }
 
 function syncMarkers(list){
@@ -1606,8 +1683,11 @@ function weekBarHTML(){
   var out = '<div class="plan-weeks">';
   for(var i=0;i<3;i++){
     var w = thisWeekend(i);
+    /* 手机上三个按钮要挤在一行：日期只留"月/日–日"，省掉后面重复的月份 */
+    var endDay = String(w.sun).slice(-2).replace(/^0/,"");
+    var span = md(w.fri) + "–" + endDay;
     out += '<button class="pw'+(PLAN.weekOffset===i?' on':'')+'" data-off="'+i+'">'+
-           names[i]+'<i>'+md(w.fri)+'–'+md(w.sun)+'</i></button>';
+           names[i]+'<i>'+span+'</i></button>';
   }
   return out + '</div>';
 }
@@ -1636,20 +1716,26 @@ function renderPlan(){
         ? '<div class="plan-warn" style="margin-bottom:12px">'+
           '这个周末超出了天气预报的范围（Open-Meteo 最多给 16 天），<b>还没出预报</b>。'+
           '所以下面的排序只按"这地方有多热"，天气这一项没有参与。</div>' : '') +
-      '<div class="plan-note">' +
-      '窗口按你说的：<b>周五 '+DEPART_HOUR+':00 出发，周日晚上回</b>。候选 <b>'+PLAN.pool+'</b> 个点' +
-      '（单程 ≤'+STATE.hours.toFixed(1)+'h、排除明确禁狗）。' +
-      '天气每次打开都重新查（Open-Meteo 实时+7天预报），这次抓取于 '+esc(PLAN.fetchedAt)+
+      '<details class="plan-note" id="plan-note">' +
+      '<summary>窗口 <b>周五 '+DEPART_HOUR+':00 出发 · 周日晚回</b> · 候选 '+PLAN.pool+' 个点 · 排序＝热度×天气</summary>' +
+      '<div class="pn-body">' +
+      '候选点 = 单程 ≤'+STATE.hours.toFixed(1)+'h、排除明确禁狗，共 '+PLAN.pool+' 个。' +
+      '天气每次打开都重新查（Open-Meteo 实时预报），这次抓取于 '+esc(PLAN.fetchedAt)+
       (PLAN.at ? '（'+planAgeText()+'）' : '')+'。' +
       '车程是真实路网算的；<b>站与站之间只给直线距离，不是车程</b>。<br>' +
       '<b>排序只看两样：这地方现在有多热、去的那天天气怎么样</b>。' +
       '"热"是指小红书上这段时间有多少人在发这个地方——发的人越多、看的人越多，说明越值得去；' +
       '天气取周六的实时预报。犬政策、有没有原话、有没有厕所只用来当理由和挑营地，不参与排序。' +
-    '</div>';
+      '</div></details>';
   el("plan-sub").textContent = (w.fri ? (md(w.fri)+"–"+md(w.sun)+" · ") : "") + PLAN.plans.length + " 条路线";
   box.innerHTML = weekBarHTML() + head + PLAN.plans.map(planCardHTML).join("") +
     (PLAN.state==="loading" ? '<div class="plan-refreshing">正在重新查天气…（下面是 '+planAgeText()+' 的数据）</div>' : '') +
     '<div class="plan-foot">降水% 越低越好；出行指数 = 100 − 降水概率×0.9 − 体感温度惩罚（&lt;0℃ 扣 45、&lt;8℃ 扣 25、&lt;14℃ 扣 8、&gt;29℃ 扣 25）。权重写在这里，你可以不认同。</div>';
+  Array.prototype.forEach.call(box.querySelectorAll(".plan-week"), scrollFade);
+  var pn = document.getElementById("plan-note");
+  /* 手机上默认收起：不收起时第一屏全被说明文字占满，看不到路线 */
+  if(pn) pn.open = window.matchMedia("(min-width:860px)").matches;
+  if(box.scrollTop) box.scrollTop = 0;
 }
 
 function loadPlans(){
@@ -1715,6 +1801,7 @@ fetch("spots.json", {cache:"no-cache"})
     bindTrip();
     renderLegend();
     bindLegend();
+    scrollFade(el("filters"));
     bindPlan();
     STATE.trip = loadTrip();
     renderTrip();
