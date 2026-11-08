@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-08 12:58",
+  "generated": "2026-11-08 13:12",
   "origin": {
    "name": "上海人民广场",
    "gcj": [
@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 405,
+  "count": 407,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -35339,6 +35339,148 @@
     "likes": 469
    },
    "heat_basis": "小红书点名搜索 10 条相关笔记"
+  },
+  {
+   "id": "x-美兰湖风景区",
+   "name": "美兰湖风景区",
+   "kind": "water",
+   "tags": [],
+   "province": "",
+   "city": "上海",
+   "gcj": [
+    121.355448,
+    31.399361
+   ],
+   "drive": {
+    "hours_oneway": 0.69,
+    "km": 27.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 13:12"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 683ec05b）：「🍃特色：依水而建的开放式公园，有大片草坪，湖边风景优美，有北欧风情街可拍照，狗狗可以下水游玩儿。 宠物友好程度：周末有很多狗狗，周边还有狗狗友好型星巴克 \t 2⃣️神仙湖 🚗地址：嘉兴海宁 📍导航：神」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "美兰湖景区",
+     "gcj": [
+      121.355448,
+      31.399361
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 23,
+    "likes": 1311,
+    "basis": "小红书点名搜索 23 条相关笔记"
+   },
+   "heat": {
+    "notes": 23,
+    "likes": 1311
+   },
+   "heat_basis": "小红书点名搜索 23 条相关笔记"
+  },
+  {
+   "id": "x-信澜天地云居酒店",
+   "name": "信澜天地云居酒店",
+   "kind": "lodging",
+   "tags": [],
+   "province": "",
+   "city": "上海",
+   "gcj": [
+    121.863152,
+    31.501772
+   ],
+   "drive": {
+    "hours_oneway": 1.07,
+    "km": 62.2,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 13:12"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 683ec05b）：「🍃特色：依水而建的开放式公园，有大片草坪，湖边风景优美，有北欧风情街可拍照，狗狗可以下水游玩儿。 宠物友好程度：周末有很多狗狗，周边还有狗狗友好型星巴克 \t 2⃣️神仙湖 🚗地址：嘉兴海宁 📍导航：神」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "上海崇明信澜天地云居酒店",
+     "gcj": [
+      121.863152,
+      31.501772
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 1,
+    "likes": 9,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat": {
+    "notes": 1,
+    "likes": 9
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   }
  ],
  "out_of_range": [
