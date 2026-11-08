@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-06 22:52",
+  "generated": "2026-11-08 11:34",
   "origin": {
    "name": "上海人民广场",
    "gcj": [
@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 384,
+  "count": 387,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -26652,7 +26652,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 0,
@@ -26720,7 +26722,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 22,
     "likes": 1894,
@@ -26790,7 +26795,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 25,
     "likes": 2763,
@@ -26860,7 +26868,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -26927,7 +26938,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -26994,7 +27008,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 6,
     "likes": 178,
@@ -27064,7 +27081,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 1,
     "likes": 1,
@@ -27134,7 +27154,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -27201,7 +27224,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 4,
     "likes": 68,
@@ -27271,7 +27297,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 9,
     "likes": 68,
@@ -27341,7 +27370,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 2,
     "likes": 100,
@@ -27411,7 +27443,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 35,
     "likes": 4440,
@@ -27481,7 +27516,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 3,
     "likes": 159,
@@ -27552,7 +27590,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 17,
@@ -27623,7 +27663,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 7,
     "likes": 131,
@@ -27693,7 +27736,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 4,
     "likes": 16,
@@ -27764,7 +27810,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 10,
@@ -27835,7 +27883,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -27902,7 +27953,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 4,
     "likes": 292,
@@ -27972,7 +28026,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 3,
     "likes": 6,
@@ -28042,7 +28099,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 30,
     "likes": 4733,
@@ -28112,7 +28172,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 8,
     "likes": 545,
@@ -28183,7 +28246,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 2,
@@ -28254,7 +28319,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 14,
     "likes": 325,
@@ -28325,7 +28393,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 24,
@@ -28396,7 +28466,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 1,
     "likes": 1083,
@@ -28466,7 +28539,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 22,
     "likes": 315,
@@ -28536,7 +28612,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 3,
     "likes": 253,
@@ -28606,7 +28685,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 7,
     "likes": 159,
@@ -28676,7 +28758,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -28743,7 +28828,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -28810,7 +28898,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 13,
     "likes": 294,
@@ -28880,7 +28971,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 1,
     "likes": 135,
@@ -28951,7 +29045,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 4,
@@ -29022,7 +29118,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 22,
     "likes": 1471,
@@ -29092,7 +29191,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 10,
     "likes": 218,
@@ -29162,7 +29264,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 2,
     "likes": 6,
@@ -29233,7 +29338,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 8,
@@ -29304,7 +29411,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 13,
     "likes": 103,
@@ -29374,7 +29484,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 8,
     "likes": 158,
@@ -29444,7 +29557,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 6,
     "likes": 92,
@@ -29515,7 +29631,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 3,
@@ -29586,7 +29704,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 6,
     "likes": 140,
@@ -29656,7 +29777,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 13,
     "likes": 1617,
@@ -29726,7 +29850,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -29793,7 +29920,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -29860,7 +29990,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 2,
     "likes": 9,
@@ -29931,7 +30064,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 5,
@@ -30002,7 +30137,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 30,
     "likes": 1801,
@@ -30072,7 +30210,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 10,
     "likes": 87,
@@ -30142,7 +30283,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 13,
     "likes": 180,
@@ -30212,7 +30356,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -30279,7 +30426,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -30346,7 +30496,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 14,
     "likes": 452,
@@ -30416,7 +30569,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 29,
     "likes": 746,
@@ -30486,7 +30642,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -30553,7 +30712,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 1,
     "likes": 87,
@@ -30623,7 +30785,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -30690,7 +30855,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 20,
     "likes": 224,
@@ -30760,7 +30928,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 1,
     "likes": 0,
@@ -30830,7 +31001,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 3,
     "likes": 22,
@@ -30900,7 +31074,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 20,
     "likes": 630,
@@ -30970,7 +31147,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 20,
     "likes": 422,
@@ -31040,7 +31220,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 31,
     "likes": 2345,
@@ -31110,7 +31293,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 13,
     "likes": 212,
@@ -31180,7 +31366,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 4,
     "likes": 53,
@@ -31250,7 +31439,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 10,
     "likes": 212,
@@ -31320,7 +31512,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 21,
     "likes": 173,
@@ -31390,7 +31585,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 5,
     "likes": 78,
@@ -31460,7 +31658,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 8,
     "likes": 517,
@@ -31530,7 +31731,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 5,
     "likes": 30,
@@ -31600,7 +31804,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -31667,7 +31874,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 23,
     "likes": 689,
@@ -31737,7 +31947,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 2,
     "likes": 22,
@@ -31807,7 +32020,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 14,
     "likes": 367,
@@ -31877,7 +32093,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 6,
     "likes": 137,
@@ -31948,7 +32167,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 1,
@@ -32019,7 +32240,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 2,
     "likes": 52,
@@ -32089,7 +32313,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 5,
     "likes": 155,
@@ -32159,7 +32386,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 29,
     "likes": 4622,
@@ -32229,7 +32459,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 22,
     "likes": 1898,
@@ -32299,7 +32532,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -32366,7 +32602,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 17,
     "likes": 645,
@@ -32436,7 +32675,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 20,
     "likes": 1079,
@@ -32506,7 +32748,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 3,
     "likes": 164,
@@ -32577,7 +32822,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 0,
@@ -32646,7 +32893,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 1,
@@ -32717,7 +32966,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 21,
     "likes": 1286,
@@ -32787,7 +33039,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 13,
     "likes": 260,
@@ -32857,7 +33112,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 24,
     "likes": 222,
@@ -32927,7 +33185,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 2,
     "likes": 93,
@@ -32997,7 +33258,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -33064,7 +33328,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 7,
     "likes": 75,
@@ -33135,7 +33402,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 17,
@@ -33206,7 +33475,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 23,
     "likes": 664,
@@ -33276,7 +33548,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 6,
     "likes": 415,
@@ -33347,7 +33622,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 0,
@@ -33416,7 +33693,9 @@
    "raw_note": "",
    "photos": [],
    "pending": [
-    "dog"
+    "dog",
+    "overnight",
+    "photos"
    ],
    "pop": {
     "notes": 0,
@@ -33484,7 +33763,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 6,
     "likes": 381,
@@ -33554,7 +33836,10 @@
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
    "raw_note": "",
    "photos": [],
-   "pending": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
    "pop": {
     "notes": 12,
     "likes": 476,
@@ -33567,6 +33852,220 @@
    "heat_basis": "小红书点名搜索 12 条相关笔记",
    "rating": null,
    "rating_src": null
+  },
+  {
+   "id": "x-天鹅岛",
+   "name": "天鹅岛",
+   "kind": "water",
+   "tags": [],
+   "province": "",
+   "city": "苏州",
+   "gcj": [
+    120.582651,
+    31.171494
+   ],
+   "drive": {
+    "hours_oneway": 1.41,
+    "km": 96.6,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 11:34"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6a2cf3fe000000002202a90b）：「避雷｜最烂宠物友好：银杏天鹅岛 欢迎全世界的狗狗来玩？ 超过十公里的狗狗都不值得去玩[微笑R] 周六，特地从上海过来，除了进园有一个保安，全程没有见到」",
+    "verified_at": null,
+    "evidence_level": "",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "江苏省苏州市吴中区天鹅岛",
+     "gcj": [
+      120.582651,
+      31.171494
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap+nearest_city",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 23,
+    "likes": 374,
+    "basis": "小红书点名搜索 23 条相关笔记"
+   },
+   "heat": {
+    "notes": 23,
+    "likes": 374
+   },
+   "heat_basis": "小红书点名搜索 23 条相关笔记"
+  },
+  {
+   "id": "x-响堂桃源谷",
+   "name": "响堂桃源谷",
+   "kind": "scenic",
+   "tags": [],
+   "province": "江苏",
+   "city": "南京",
+   "gcj": [
+    118.5811,
+    32.080329
+   ],
+   "drive": {
+    "hours_oneway": 4.01,
+    "km": 329.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 11:34"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6a4dfc84）：「在有风的山谷，一键清空工作日班味🍃 南京藏在老山的治愈秘境——浦口响堂桃源谷 遛狗遛娃双适配，村子氛围感直接拉满 大片草坪自由露营、山间咖啡店发呆、不定期山野音乐会 风吹山林，耳边只有鸟鸣，烦恼全吹散」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_veto_default",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "响堂桃源谷",
+     "gcj": [
+      118.5811,
+      32.080329
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 4,
+    "likes": 334,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat": {
+    "notes": 4,
+    "likes": 334
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
+  },
+  {
+   "id": "x-城南河广场",
+   "name": "城南河广场",
+   "kind": "scenic",
+   "tags": [],
+   "province": "江苏",
+   "city": "南京",
+   "gcj": [
+    118.663604,
+    32.038475
+   ],
+   "drive": {
+    "hours_oneway": 3.84,
+    "km": 320.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 11:34"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "evidence_level": "",
+    "basis": "",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "城南河广场",
+     "gcj": [
+      118.663604,
+      32.038475
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "dog",
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 2,
+    "likes": 27,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat": {
+    "notes": 2,
+    "likes": 27
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   }
  ],
  "out_of_range": [
