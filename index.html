@@ -182,6 +182,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 }
 .card{
   display:flex;gap:11px;align-items:flex-start;width:100%;text-align:left;
+  font:inherit;color:inherit;cursor:pointer;
   background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
   padding:11px 13px;box-shadow:var(--sh-1);flex:none;
   transition:border-color .16s var(--ease),box-shadow .16s var(--ease),transform .12s var(--ease);
@@ -211,6 +212,11 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   font-variant-numeric:tabular-nums;
 }
 .card-body{flex:1;min-width:0}
+/* 来源链接：放在卡片最底下，小而不抢眼，但每个点都必须有 */
+.card-src{display:flex;gap:10px;margin-top:7px;font-size:11.5px;flex-wrap:wrap}
+.card-src a{color:var(--slate);text-decoration:none;border-bottom:1px dotted var(--line-2)}
+.card-src a:hover{color:var(--terra-2);border-bottom-color:var(--terra)}
+.src-link{color:var(--terra-2);text-decoration:none;border-bottom:1px solid var(--terra-soft)}
 .card-name{
   font-size:14.5px;font-weight:600;line-height:1.35;color:var(--ink);
   display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;
@@ -857,18 +863,49 @@ function match(s){
 }
 
 /* ───────── 渲染列表 ───────── */
-function render(){
-  var list = DATA.spots.filter(match);
-  /* 一律按单程车程由近到远 */
-  list = list.slice().sort(function(a,b){
+function sortedFiltered(){
+  return DATA.spots.filter(match).slice().sort(function(a,b){
+    /* 一律按单程车程由近到远 */
     return (a.drive.hours_oneway||99)-(b.drive.hours_oneway||99);
   });
+}
+
+/* 列表跟地图视口走：用户把地图移到哪片，左边就列哪片。
+   注意标记**不能**跟着视口走——标记一删，平移走再回来就空了。
+   所以 render() 重建标记用全部筛选结果，renderNear() 只重排卡片。 */
+function inView(s){
+  if(!MAP) return true;
+  return MAP.getBounds().contains([s.gcj[1], s.gcj[0]]);
+}
+
+function render(){
+  var all = sortedFiltered();
+  syncMarkers(all);
+  renderCards(all);
+}
+
+function renderNear(){
+  if(!MAP) return;
+  var all = sortedFiltered();
+  renderCards(all.filter(inView), all.length);
+}
+
+function renderCards(list, totalAll){
+  var scoped = (totalAll != null && totalAll !== list.length);
   el("count").textContent = list.length + " 个点";
   var hint = el("list-hint");
-  hint.textContent = "单程 " + STATE.hours.toFixed(1) + "h 内";
+  hint.textContent = scoped
+    ? "地图范围内 · 单程 ≤" + STATE.hours.toFixed(1) + "h（共 " + totalAll + " 个符合筛选）"
+    : "单程 " + STATE.hours.toFixed(1) + "h 内";
 
   var box = el("list");
   if(!list.length){
+    if(scoped){
+      /* 这一片没点 ≠ 筛得太狠，别让用户去改筛选条件 */
+      box.innerHTML = '<div class="empty">地图上这一片没有点。<br>' +
+                      '把地图缩小一点，或拖回长三角看看。</div>';
+      return;
+    }
     var hints = [];
     if(selectedScenes().length) hints.push("取消场景筛选");
     if(selectedKinds().length) hints.push("取消类型筛选");
@@ -877,7 +914,6 @@ function render(){
     box.innerHTML = '<div class="empty">这个条件下没有点。<br>试试' +
                     (hints.length > 1 ? hints.slice(0,-1).join("、") + "，或" : "") +
                     hints[hints.length-1] + "。</div>";
-    syncMarkers(list);
     return;
   }
   var TOTAL = list.length, PAGE = 120;
@@ -926,7 +962,19 @@ function render(){
         (thumbSrc ? '<img src="'+esc(thumbSrc)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' +
               (ph.length>1 ? '<span class="cnt">'+ph.length+'</span>' : '') : '') +
       '</span>';
-    return '<button class="card'+(STATE.active===s.id?" active":"")+'" data-id="'+esc(s.id)+'">' +
+    /* 卡片从 <button> 改成 <div role=button>：链接不能嵌在 button 里，嵌了点了不跳。
+       来源链接是主人明确要的：每张卡都要能点到原始出处。 */
+    var srcAll = s.sources || [];
+    var xhsSrc = srcAll.filter(function(x){ return x.platform==="xhs"; });
+    var amapSrc = srcAll.filter(function(x){ return x.platform==="amap"; })[0];
+    var srcRow = (xhsSrc.length || amapSrc)
+      ? '<span class="card-src">' +
+          (xhsSrc.length ? '<a href="'+esc(xhsSrc[0].url)+'" target="_blank" rel="noopener noreferrer">' +
+            '小红书' + (xhsSrc.length>1 ? ' · '+xhsSrc.length+' 篇' : '原文') + '</a>' : '') +
+          (amapSrc ? '<a href="'+esc(amapSrc.url)+'" target="_blank" rel="noopener noreferrer">高德地图</a>' : '') +
+        '</span>'
+      : '';
+    return '<div class="card'+(STATE.active===s.id?" active":"")+'" role="button" tabindex="0" data-id="'+esc(s.id)+'">' +
       thumb +
       '<span class="card-body">' +
         '<span class="card-name">'+esc(s.name)+'</span>' +
@@ -936,12 +984,12 @@ function render(){
           '<span class="sep">·</span><span>'+esc(s.city||"")+'</span>' +
         '</span>' +
         '<span class="card-meta" style="margin-top:6px;gap:5px">'+badges+'</span>' +
-      '</span></button>';
+        srcRow +
+      '</span></div>';
   }).join("") + (TOTAL > PAGE
       ? '<div class="more-note">还有 ' + (TOTAL - PAGE) + ' 个点没列出来。<br>' +
         '缩小范围看，或点上方「全部」。</div>'
       : "");
-  syncMarkers(list);
 }
 
 /* ───────── 地图 ───────── */
@@ -957,6 +1005,12 @@ function initMap(){
   L.circleMarker([o.gcj[1], o.gcj[0]], {
     radius:7, color:"#B85C38", weight:2.5, fillColor:"#FFF9F2", fillOpacity:1
   }).addTo(MAP).bindPopup('<div class="pop-t">出发点</div><div class="pop-row">'+esc(o.name)+'</div>');
+
+  /* 平移/缩放后重排左侧列表。防抖 180ms：拖动过程中每帧都算一遍会卡。 */
+  MAP.on("moveend zoomend", function(){
+    clearTimeout(STATE._nearT);
+    STATE._nearT = setTimeout(renderNear, 180);
+  });
 
   CLUSTER = L.markerClusterGroup({
     showCoverageOnHover:false, spiderfyOnMaxZoom:true, zoomToBoundsOnClick:true,
@@ -1195,6 +1249,22 @@ function openDetail(id){
       src.map(esc).join("<br>")+'</div></div></div>';
   }
 
+  /* 来源：卡片上只放能点的链接，详情里把每条出处摊开——
+     "凭哪句话得出这个结论"比"有九个赞"重要得多。 */
+  var srcs = s.sources || [];
+  if(srcs.length){
+    html += '<div class="sec"><div class="kv"><div class="k">来源</div><div class="v">' +
+      srcs.map(function(x){
+        var name = x.platform === "xhs"
+          ? ("小红书" + (x.why ? ' · ' + x.why : ''))
+          : "高德地图";
+        var t = x.title ? '：' + esc(String(x.title).slice(0, 26)) : '';
+        var who = x.author ? ' <span style="color:var(--ink-3)">@' + esc(x.author) + '</span>' : '';
+        return '<div style="margin-top:4px"><a class="src-link" href="' + esc(x.url) +
+               '" target="_blank" rel="noopener noreferrer">' + esc(name) + '</a>' + t + who + '</div>';
+      }).join("") + '</div></div></div>';
+  }
+
   /* 动作 */
   var nav = "https://uri.amap.com/marker?position=" + s.gcj[0] + "," + s.gcj[1] +
             "&name=" + encodeURIComponent(s.name) + "&src=pet-trip&coordinate=gaode&callnative=1";
@@ -1272,6 +1342,7 @@ function bind(){
   el("filters").addEventListener("click", onChipClick);
   el("fpanel").addEventListener("click", onChipClick);
   el("list").addEventListener("click", function(e){
+    if(e.target.closest("a")) return;        /* 点来源链接就跳链接，别顺手弹详情 */
     var c = e.target.closest(".card"); if(!c) return;
     openDetail(c.getAttribute("data-id"));
   });
