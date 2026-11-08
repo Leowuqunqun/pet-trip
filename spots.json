@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-08 11:34",
+  "generated": "2026-11-08 11:52",
   "origin": {
    "name": "上海人民广场",
    "gcj": [
@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 387,
+  "count": 388,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -34066,6 +34066,78 @@
     "likes": 27
    },
    "heat_basis": "小红书点名搜索 2 条相关笔记"
+  },
+  {
+   "id": "x-楠溪江狮子岩风景区",
+   "name": "楠溪江狮子岩风景区",
+   "kind": "water",
+   "tags": [],
+   "province": "",
+   "city": "温州",
+   "gcj": [
+    120.742804,
+    28.299138
+   ],
+   "drive": {
+    "hours_oneway": 5.19,
+    "km": 433.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 11:52"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "evidence_level": "",
+    "basis": "",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "楠溪江狮子岩风景区",
+     "gcj": [
+      120.742804,
+      28.299138
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "dog",
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 9,
+    "likes": 363,
+    "basis": "小红书点名搜索 9 条相关笔记"
+   },
+   "heat": {
+    "notes": 9,
+    "likes": 363
+   },
+   "heat_basis": "小红书点名搜索 9 条相关笔记"
   }
  ],
  "out_of_range": [
