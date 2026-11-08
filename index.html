@@ -236,13 +236,6 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .fact.dog.a{color:var(--amber-ink)}
 .fact.dog.r{color:var(--rose)}
 .fact.dog.n{color:var(--ink-3)}
-/* 卡片上只放一个来源链接：有原文跳原文，没有跳地图 */
-.card-src{
-  font-size:var(--t-xs);color:var(--ink-3);
-  text-decoration:none;white-space:nowrap;
-}
-.card-src::after{content:" ↗";font-size:var(--t-xs)}
-.card-src:hover,.card-src:active{color:var(--terra-2)}
 /* 行程按钮：小、靠右，点一下就进去，不用打开详情 */
 /* ＋ 浮在缩略图右上角：塞进文字行会被长事实挤走，且和第二行的车程抢位置 */
 .card-trip{
@@ -267,9 +260,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   margin-top:5px;font-size:var(--t-s);color:var(--ink-3);
   display:flex;gap:0;flex-wrap:wrap;align-items:baseline;line-height:1.5;
 }
-.card-meta > *:not(.card-acts) + *:not(.card-acts)::before{content:"·";margin:0 6px;color:var(--ink-3)}
-/* 来源链接与"加入行程"固定在第二行右端，事实行再长也挤不掉它们 */
-.card-acts{margin-left:auto;display:inline-flex;align-items:center;gap:9px}
+.card-meta > * + *::before{content:"·";margin:0 6px;color:var(--ink-3)}
 .card-meta .sep{color:var(--line-2)}
 .tag{
   display:inline-block;font-size:10.5px;padding:1.5px 7px;border-radius:999px;
@@ -1036,17 +1027,6 @@ function renderCards(list, totalAll){
       '</span>';
     /* 卡片从 <button> 改成 <div role=button>：链接不能嵌在 button 里，嵌了点了不跳。
        来源链接是主人明确要的：每张卡都要能点到原始出处。 */
-    var srcAll = s.sources || [];
-    var xhsSrc = srcAll.filter(function(x){ return x.platform==="xhs"; });
-    var amapSrc = srcAll.filter(function(x){ return x.platform==="amap"; })[0];
-    /* 卡片上只放一个来源：有小红书原文就跳原文，没有就跳高德。
-       两条并排会把第三行挤爆；全部来源在详情里摊开。 */
-    var oneSrc = xhsSrc[0] || amapSrc;
-    var srcRow = oneSrc
-      ? '<a class="card-src" href="'+esc(oneSrc.url)+'" target="_blank" rel="noopener noreferrer"' +
-        ' title="' + (xhsSrc[0] ? "打开小红书原文" : "在高德地图打开") + '">' +
-        (xhsSrc[0] ? "小红书原文" : "地图位置") + '</a>'
-      : '';
     return '<div class="card'+(STATE.active===s.id?" active":"")+'" role="button" tabindex="0" data-id="'+esc(s.id)+'">' +
       thumb +
       '<span class="card-body">' +
@@ -1055,7 +1035,6 @@ function renderCards(list, totalAll){
           '<b class="drive">单程 '+hmCN(s.drive.hours_oneway)+'</b>' +
           '<span>'+Math.round(s.drive.km)+' km</span>' +
           '<span>'+esc(s.city||"")+'</span>' +
-          '<span class="card-acts">' + srcRow + '</span>' +
         '</span>' +
         '<span class="card-facts">' + facts.join("") + '</span>' +
       '</span></div>';
@@ -1331,7 +1310,8 @@ function openDetail(id){
         var name = x.platform === "xhs"
           ? ("小红书" + (x.why ? ' · ' + x.why : ''))
           : "高德地图";
-        var t = x.title ? '：' + esc(String(x.title).slice(0, 26)) : '';
+        /* 高德那条的 title 本来就是"在高德地图查看位置"，再拼一次会重复 */
+        var t = (x.title && x.platform !== "amap") ? '：' + esc(String(x.title).slice(0, 26)) : '';
         var who = x.author ? ' <span style="color:var(--ink-3)">@' + esc(x.author) + '</span>' : '';
         return '<div style="margin-top:4px"><a class="src-link" href="' + esc(x.url) +
                '" target="_blank" rel="noopener noreferrer">' + esc(name) + '</a>' + t + who + '</div>';
