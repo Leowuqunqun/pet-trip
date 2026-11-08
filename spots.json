@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-08 11:52",
+  "generated": "2026-11-08 12:23",
   "origin": {
    "name": "上海人民广场",
    "gcj": [
@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 388,
+  "count": 404,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -34138,6 +34138,1135 @@
     "likes": 363
    },
    "heat_basis": "小红书点名搜索 9 条相关笔记"
+  },
+  {
+   "id": "x-汽车公园",
+   "name": "太仓汽车公园",
+   "kind": "park",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.124649,
+    31.428265
+   ],
+   "drive": {
+    "hours_oneway": 0.99,
+    "km": 54.1,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "太仓汽车公园",
+     "gcj": [
+      121.124649,
+      31.428265
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 27 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 27 条笔记，无一条标题带该地名"
+  },
+  {
+   "id": "x-浏河古镇",
+   "name": "浏河古镇",
+   "kind": "village",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.26624,
+    31.506761
+   ],
+   "drive": {
+    "hours_oneway": 1.03,
+    "km": 49.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "浏河古镇",
+     "gcj": [
+      121.26624,
+      31.506761
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 16,
+    "likes": 400,
+    "basis": "小红书点名搜索 16 条相关笔记"
+   },
+   "heat": {
+    "notes": 16,
+    "likes": 400
+   },
+   "heat_basis": "小红书点名搜索 16 条相关笔记"
+  },
+  {
+   "id": "x-霍比特庄园",
+   "name": "霍比特庄园",
+   "kind": "scenic",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.064855,
+    31.502825
+   ],
+   "drive": {
+    "hours_oneway": 1.05,
+    "km": 62.8,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "霍比特庄园(生态营地)",
+     "gcj": [
+      121.064855,
+      31.502825
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 9,
+    "likes": 464,
+    "basis": "小红书点名搜索 9 条相关笔记"
+   },
+   "heat": {
+    "notes": 9,
+    "likes": 464
+   },
+   "heat_basis": "小红书点名搜索 9 条相关笔记"
+  },
+  {
+   "id": "x-七丫口郊野湿地",
+   "name": "七丫口郊野湿地",
+   "kind": "water",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.235602,
+    31.603447
+   ],
+   "drive": {
+    "hours_oneway": 1.44,
+    "km": 56.2,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "七丫口郊野湿地",
+     "gcj": [
+      121.235602,
+      31.603447
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 4,
+    "likes": 57,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat": {
+    "notes": 4,
+    "likes": 57
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
+  },
+  {
+   "id": "x-七浦塘生态公园",
+   "name": "七浦塘生态公园",
+   "kind": "park",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.226631,
+    31.605403
+   ],
+   "drive": {
+    "hours_oneway": 1.41,
+    "km": 54.8,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "七浦塘生态公园",
+     "gcj": [
+      121.226631,
+      31.605403
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 5,
+    "likes": 379,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat": {
+    "notes": 5,
+    "likes": 379
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
+  },
+  {
+   "id": "x-塘滨水公园",
+   "name": "塘滨水公园",
+   "kind": "park",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.02378,
+    31.397279
+   ],
+   "drive": {
+    "hours_oneway": 1.07,
+    "km": 57.9,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "江苏省苏州市昆山市太仓塘滨水公园",
+     "gcj": [
+      121.02378,
+      31.397279
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 6,
+    "likes": 37,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat": {
+    "notes": 6,
+    "likes": 37
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
+  },
+  {
+   "id": "x-海运仓遗址",
+   "name": "海运仓遗址",
+   "kind": "scenic",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.123273,
+    31.431784
+   ],
+   "drive": {
+    "hours_oneway": 0.99,
+    "km": 54.1,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "太仓海运仓遗址",
+     "gcj": [
+      121.123273,
+      31.431784
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 4,
+    "likes": 27,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat": {
+    "notes": 4,
+    "likes": 27
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
+  },
+  {
+   "id": "x-电站村",
+   "name": "电站村",
+   "kind": "village",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.077275,
+    31.506575
+   ],
+   "drive": {
+    "hours_oneway": 1.0,
+    "km": 61.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "城厢镇电站村生态园",
+     "gcj": [
+      121.077275,
+      31.506575
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 10,
+    "likes": 420,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat": {
+    "notes": 10,
+    "likes": 420
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
+  },
+  {
+   "id": "x-雁月湖公园",
+   "name": "雁月湖公园",
+   "kind": "park",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.106876,
+    31.637801
+   ],
+   "drive": {
+    "hours_oneway": 1.24,
+    "km": 73.2,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "雁月湖公园",
+     "gcj": [
+      121.106876,
+      31.637801
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 3,
+    "likes": 61,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat": {
+    "notes": 3,
+    "likes": 61
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
+  },
+  {
+   "id": "x-城北湿地公园",
+   "name": "城北湿地公园",
+   "kind": "park",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.112805,
+    31.469022
+   ],
+   "drive": {
+    "hours_oneway": 0.94,
+    "km": 53.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "城北湿地公园",
+     "gcj": [
+      121.112805,
+      31.469022
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 5,
+    "likes": 15,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat": {
+    "notes": 5,
+    "likes": 15
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
+  },
+  {
+   "id": "x-民公园",
+   "name": "太仓市民公园",
+   "kind": "park",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.134681,
+    31.453993
+   ],
+   "drive": {
+    "hours_oneway": 0.91,
+    "km": 50.9,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "市民公园",
+     "gcj": [
+      121.134681,
+      31.453993
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 3,
+    "likes": 231,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat": {
+    "notes": 3,
+    "likes": 231
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
+  },
+  {
+   "id": "x-太丰生态园",
+   "name": "太丰生态园",
+   "kind": "scenic",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.07081,
+    31.430083
+   ],
+   "drive": {
+    "hours_oneway": 1.04,
+    "km": 61.2,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "太丰生态园",
+     "gcj": [
+      121.07081,
+      31.430083
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 1,
+    "likes": 41,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat": {
+    "notes": 1,
+    "likes": 41
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
+  },
+  {
+   "id": "x-西庐园风景区",
+   "name": "西庐园风景区",
+   "kind": "scenic",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    121.070557,
+    31.429166
+   ],
+   "drive": {
+    "hours_oneway": 1.01,
+    "km": 60.6,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:02"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "西庐园风景区",
+     "gcj": [
+      121.070557,
+      31.429166
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 4,
+    "likes": 107,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat": {
+    "notes": 4,
+    "likes": 107
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
+  },
+  {
+   "id": "x-塘源村",
+   "name": "塘源村",
+   "kind": "village",
+   "tags": [],
+   "province": "",
+   "city": "丽水",
+   "gcj": [
+    119.092397,
+    27.646881
+   ],
+   "drive": {
+    "hours_oneway": 7.05,
+    "km": 604.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:23"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 6a3129a2）：「最不费狗腿也不费人腿的玩水点，开车直达，水域超大超清，小狗下水有楼梯，超友好～玩好水可以带小狗去金村门口的瓯江绿道溜达溜达跑跑干（p4）」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_veto_default",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "濛州街道大塘源村村卫生室(医保定点结算)",
+     "gcj": [
+      119.092397,
+      27.646881
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 6,
+    "likes": 388,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat": {
+    "notes": 6,
+    "likes": 388
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
+  },
+  {
+   "id": "x-蝴蝶谷水乐园",
+   "name": "蝴蝶谷水乐园",
+   "kind": "park",
+   "tags": [],
+   "province": "浙江",
+   "city": "金华",
+   "gcj": [
+    119.837775,
+    29.620875
+   ],
+   "drive": {
+    "hours_oneway": 4.13,
+    "km": 299.1,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:23"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书 UGC（笔记 68397d28）：「📍蝴蝶谷水乐园 定位到了继续往前开一分钟不到吧就能看见“蝴蝶谷土菜馆”右手边是个岔路写着“停车场”开下去就能看见水潭了 我是平时去的 无人 包场状态 也没人管 有村民看见无人驱赶且还逗狗了 这个水潭是」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "no_veto_default",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "蝴蝶谷水乐园",
+     "gcj": [
+      119.837775,
+      29.620875
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 27 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 27 条笔记，无一条标题带该地名"
+  },
+  {
+   "id": "x-深澳古镇",
+   "name": "深澳古镇",
+   "kind": "village",
+   "tags": [],
+   "province": "浙江",
+   "city": "杭州",
+   "gcj": [
+    119.839215,
+    29.851168
+   ],
+   "drive": {
+    "hours_oneway": 3.29,
+    "km": 256.3,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 12:23"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "evidence_level": "",
+    "basis": "",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "深澳古村景区",
+     "gcj": [
+      119.839215,
+      29.851168
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "dog",
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 3,
+    "likes": 8,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat": {
+    "notes": 3,
+    "likes": 8
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   }
  ],
  "out_of_range": [
