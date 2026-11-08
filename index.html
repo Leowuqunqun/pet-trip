@@ -873,8 +873,15 @@ function sortedFiltered(){
 /* 列表跟地图视口走：用户把地图移到哪片，左边就列哪片。
    注意标记**不能**跟着视口走——标记一删，平移走再回来就空了。
    所以 render() 重建标记用全部筛选结果，renderNear() 只重排卡片。 */
+/* 地图不可见（手机推荐页 display:none）时容器是 0×0，getBounds() 退化成空范围，
+   那样会把所有点判成"不在视口内"，列表直接空掉。必须先确认地图有尺寸。 */
+function mapUsable(){
+  if(!MAP) return false;
+  var sz = MAP.getSize();
+  return !!(sz && sz.x > 40 && sz.y > 40);
+}
 function inView(s){
-  if(!MAP) return true;
+  if(!mapUsable()) return true;
   return MAP.getBounds().contains([s.gcj[1], s.gcj[0]]);
 }
 
@@ -885,7 +892,7 @@ function render(){
 }
 
 function renderNear(){
-  if(!MAP) return;
+  if(!mapUsable()) return;
   var all = sortedFiltered();
   renderCards(all.filter(inView), all.length);
 }
@@ -2105,7 +2112,11 @@ function setView(v){
   });
   if(v === "map"){
     /* 地图刚从 display:none 出来，尺寸是 0，必须让它重算一次 */
-    setTimeout(function(){ if(MAP) MAP.invalidateSize(); }, 40);
+    setTimeout(function(){
+      if(!MAP) return;
+      MAP.invalidateSize();
+      renderNear();     /* 地图有尺寸了才谈得上"视口内有哪些点" */
+    }, 40);
   }else{
     if(planStale()) loadPlans(); else renderPlan();
   }
