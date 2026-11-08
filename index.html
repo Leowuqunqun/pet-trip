@@ -78,6 +78,21 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   padding-left:var(--pad-l);padding-right:var(--pad-r);
 }
 .filters::-webkit-scrollbar{display:none}
+/* 筛选面板默认收起。三排胶囊并排列在屏幕上不是"精细"，是"乱"——
+   而且场景和类型大面积重复（草坪遛弯≈公园、古村古镇≈古村），
+   摆两排只会让人以为是两个维度。要点才展开。 */
+.fpanel{display:none;flex-wrap:wrap;gap:7px;padding:2px 0 11px}
+.fpanel.open{display:flex}
+.fpanel .fp-title{
+  width:100%;font-size:11px;color:var(--ink-3);letter-spacing:.04em;
+  margin:6px 0 -1px;
+}
+.fsum{
+  display:inline-flex;align-items:center;gap:5px;height:32px;padding:0 10px;
+  border-radius:999px;border:1px solid var(--terra);background:var(--terra-soft);
+  color:var(--terra-2);font-size:12.5px;font-weight:600;cursor:pointer;flex:none;
+}
+.fsum .x{opacity:.55;font-size:14px;line-height:1}
 .chip{
   flex:none;display:inline-flex;align-items:center;gap:6px;
   height:34px;padding:0 13px;border-radius:999px;
@@ -482,6 +497,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   .shell[data-view="plan"] .main-row{display:none}
   /* 筛选条和图例只服务于"浏览地图"，推荐页上它们是噪音，占 90px */
   .shell[data-view="plan"] .filters,
+  .shell[data-view="plan"] .fpanel,
   .shell[data-view="plan"] .legend,
   .shell[data-view="plan"] .tripbar{display:none}
   .shell[data-view="plan"] .topbar{padding-bottom:8px}
@@ -604,12 +620,19 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
         <input type="range" id="range" min="1" max="6" step="0.5" value="5">
       </label>
       <button class="chip" data-f="night" aria-pressed="false">能过夜</button>
-      <!-- 犬政策拆两档：「明确友好」是笔记/园区明说可以带，「默认允许」是现场没禁止标识。
-           两者风险不同，混在一个按钮里等于把判断推回给用户。 -->
+      <button class="chip" id="fpanel-toggle" aria-pressed="false" aria-expanded="false">筛选 <b id="fpanel-n"></b></button>
+      <span id="fsum"></span>
+    </div>
+    <!-- 面板里的两组：想干什么（场景）+ 带不带狗（政策分档）。
+         犬政策拆两档是因为风险不同：「明确友好」是笔记/园区明说可以带，
+         「默认允许」只是现场没有禁止标识，去之前得自己确认。 -->
+    <div class="fpanel" id="fpanel">
+      <div class="fp-title">想干什么</div>
+      <div id="fpanel-scenes" style="display:contents"></div>
+      <div class="fp-title">带狗</div>
       <button class="chip" data-dog="explicit" aria-pressed="false">明确友好</button>
       <button class="chip" data-dog="default" aria-pressed="false">默认允许</button>
     </div>
-    <div class="filters scene-bar" id="scenebar"></div>
     <!-- 一张图上全都有，靠图标分类型：帐篷=能睡的营地，树=公园… -->
     <div class="legend" id="legend"></div>
     <div class="tripbar" id="tripbar">
@@ -779,7 +802,29 @@ function sceneActive(list){
   return sel.some(function(k){ return list.indexOf(k) >= 0; });
 }
 /* chip 的按下状态 = 这个桶被选中；图例的按下状态 = 这个具体类型被选中 */
+/* 面板收起后，已选的筛选必须以 chip 形式留在第一排——
+   否则用户看到"52 个点"却看不到原因，只会以为数据丢了。点一下就能取消。 */
+function syncSummary(){
+  var out = [];
+  Object.keys(STATE.scenes).forEach(function(k){
+    if(STATE.scenes[k]) out.push('<button class="fsum" data-clear-scene="'+esc(k)+'">'+esc(k)+'<span class="x">✕</span></button>');
+  });
+  Object.keys(STATE.dogTier).forEach(function(k){
+    if(STATE.dogTier[k]){
+      var lb = k === "explicit" ? "明确友好" : "默认允许";
+      out.push('<button class="fsum" data-clear-dog="'+esc(k)+'">'+lb+'<span class="x">✕</span></button>');
+    }
+  });
+  Object.keys(STATE.kinds).forEach(function(k){
+    if(STATE.kinds[k]) out.push('<button class="fsum" data-clear-kind="'+esc(k)+'">'+esc(KIND_LABEL[k]||k)+'<span class="x">✕</span></button>');
+  });
+  el("fsum").innerHTML = out.join("");
+  var n = out.length;
+  el("fpanel-n").textContent = n ? String(n) : "";
+}
+
 function syncFilterUI(){
+  syncSummary();
   Array.prototype.forEach.call(document.querySelectorAll(".chip[data-f]"), function(b){
     var f = b.getAttribute("data-f");
     if(f === "night") return;
@@ -854,8 +899,17 @@ function render(){
     var ac = s.access || {};
     var acBadges = (ac.fee === "免费" ? tag("免费","g") : ac.fee ? tag("收费","a") : "") +
                    (ac.water ? tag("有水源","s") : "");
+    /* 犬徽章按分档写，不再笼统写「可带狗」：
+       明确友好（232）= 笔记/园区明说可以带；默认允许（67）= 只是现场没禁止标识。
+       两者风险不同，卡片上就该看出来。 */
+    var tier = s.dog_tier || "unknown";
+    var dogBadge = tier==="explicit" ? tag("明确友好","g")
+                 : tier==="default"  ? tag("默认允许","a")
+                 : tier==="veto"     ? tag("禁入","r")
+                 : tier==="restricted" ? tag("部分受限","a")
+                 : (dk==="unknown" ? "" : tag(DOG_LABEL[dk][0], DOG_LABEL[dk][1]));
     var badges = (nk==="unknown" ? "" : tag(NIGHT_LABEL[nk][0], NIGHT_LABEL[nk][1])) +
-                 (dk==="unknown" ? "" : tag(DOG_LABEL[dk][0], DOG_LABEL[dk][1])) + tBadge +
+                 dogBadge + tBadge +
                  scBadges + acBadges;
     var ph = s.photos && s.photos.length ? s.photos : null;
     /* 列表缩略图挑"看得出这是哪儿"的那张：
@@ -973,8 +1027,7 @@ function renderSceneBar(){
     return '<button class="chip" data-scene="'+esc(k)+'" aria-pressed="false">'+
              esc(k)+' <b style="font-weight:600;opacity:.6">'+(counts[k]||0)+'</b></button>';
   }).join("");
-  el("scenebar").innerHTML = html;
-  el("scenebar").style.display = html ? "" : "none";
+  el("fpanel-scenes").innerHTML = html;
 }
 
 function renderLegend(){
@@ -1185,6 +1238,21 @@ function bind(){
   /* 筛选条有两条（硬条件 + 玩法场景），监听必须挂在两条上。
      只挂第一条时，场景 chip 点了毫无反应——实测抓到的第三个"看起来做了其实没做"。 */
   function onChipClick(e){
+    /* 已选摘要 chip：点一下取消那一条 */
+    var sum = e.target.closest(".fsum");
+    if(sum){
+      if(sum.hasAttribute("data-clear-scene")) STATE.scenes[sum.getAttribute("data-clear-scene")] = false;
+      if(sum.hasAttribute("data-clear-dog")) STATE.dogTier[sum.getAttribute("data-clear-dog")] = false;
+      if(sum.hasAttribute("data-clear-kind")) STATE.kinds[sum.getAttribute("data-clear-kind")] = false;
+      PLAN.dirty = true; syncFilterUI(); render(); return;
+    }
+    var tg = e.target.closest("#fpanel-toggle");
+    if(tg){
+      var open = el("fpanel").classList.toggle("open");
+      tg.setAttribute("aria-expanded", open ? "true" : "false");
+      tg.setAttribute("aria-pressed", open ? "true" : "false");
+      return;
+    }
     var b = e.target.closest(".chip"); if(!b) return;
     var on = b.getAttribute("aria-pressed") === "true";
     b.setAttribute("aria-pressed", on ? "false" : "true");
@@ -1202,7 +1270,7 @@ function bind(){
     render();
   }
   el("filters").addEventListener("click", onChipClick);
-  el("scenebar").addEventListener("click", onChipClick);
+  el("fpanel").addEventListener("click", onChipClick);
   el("list").addEventListener("click", function(e){
     var c = e.target.closest(".card"); if(!c) return;
     openDetail(c.getAttribute("data-id"));
@@ -2008,6 +2076,7 @@ fetch("spots.json", {cache:"no-cache"})
     renderSceneBar();
     bindLegend();
     scrollFade(el("filters"));
+    scrollFade(el("legend"));
     bindPlan();
     STATE.trip = loadTrip();
     renderTrip();
