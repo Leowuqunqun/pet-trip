@@ -408,6 +408,13 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .tripbar{display:none;align-items:center;gap:8px;margin:0 12px 8px;padding:9px 12px;background:var(--ink);color:#fff;border-radius:12px;font-size:13px}
 .tripbar.on{display:flex}
 .tripbar .tb-btn{margin-left:auto;background:rgba(255,255,255,.18);border:0;color:#fff;font:inherit;font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;cursor:pointer}
+.toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%) translateY(10px);
+  background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;font-size:13px;
+  display:flex;gap:10px;align-items:center;opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .2s;z-index:9999;max-width:calc(100vw - 40px)}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
+.toast button{flex:none;background:rgba(255,255,255,.22);border:0;color:#fff;font:inherit;
+  font-size:12px;font-weight:600;padding:5px 10px;border-radius:7px;cursor:pointer}
 .tripbtn{width:100%;border:1px dashed var(--line-2);background:var(--paper-2);color:var(--ink);font:inherit;font-size:14px;font-weight:600;padding:11px 0;border-radius:12px;cursor:pointer}
 .tripbtn.on{border-style:solid;border-color:var(--green);background:var(--green-soft);color:var(--green)}
 /* ── 行程面板 ── */
@@ -651,6 +658,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     <div class="legend" id="legend"></div>
     <div class="tripbar" id="tripbar">
       <span>行程 <b id="trip-count">0</b> 个点</span>
+      <button class="tb-btn" id="trip-share">分享</button>
       <button class="tb-btn" id="trip-open">查看</button>
     </div>
   </header>
@@ -696,7 +704,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     <div class="trip-sub" id="trip-sub"></div>
     <div id="trip-list"></div>
     <div class="trip-actions">
-      <button id="trip-copy" class="primary">复制行程</button>
+      <button id="trip-share-panel" class="primary">分享行程</button>
       <button id="trip-clear">清空</button>
       <button id="trip-close">关闭</button>
     </div>
@@ -1457,6 +1465,98 @@ function tripText(){
   });
   return lines.join("\n");
 }
+/* 提示条：分享结果、分享链接载入都要给反馈，否则用户不知道点没点上 */
+var __toastT;
+function toast(msg, opt){
+  opt = opt || {};
+  var t = el("toast");
+  if(!t){ t = document.createElement("div"); t.id = "toast"; t.className = "toast"; document.body.appendChild(t); }
+  t.innerHTML = '<span>' + esc(msg) + '</span>';
+  if(opt.label){
+    var b = document.createElement("button");
+    b.textContent = opt.label;
+    b.addEventListener("click", function(){
+      t.classList.remove("on");
+      if(opt.onTap) opt.onTap();
+    });
+    t.appendChild(b);
+  }
+  t.classList.add("on");
+  clearTimeout(__toastT);
+  __toastT = setTimeout(function(){ t.classList.remove("on"); }, opt.stay || 3800);
+}
+
+/* 分享的是一条**能打开**的链接，不是一段文字：
+   收的人点开就看到同一份行程，而不是自己照着念一遍去搜。 */
+/* 点位 id 是「x-中文名」，直接塞进 query 会被百分号转义成 3 倍长
+   （10 个点 677 字符，粘到聊天里很难看）。base64url 压到约四成。 */
+function b64e(str){
+  var bytes = new TextEncoder().encode(str), bin = "";
+  for(var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function b64d(s){
+  s = s.replace(/-/g, "+").replace(/_/g, "/");
+  while(s.length % 4) s += "=";
+  var bin = atob(s), bytes = new Uint8Array(bin.length);
+  for(var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder().decode(bytes);
+}
+
+function tripUrl(){
+  var base = location.origin + location.pathname;
+  return base + "?trip=" + b64e(STATE.trip.join("\n"));
+}
+
+function shareTrip(){
+  if(!STATE.trip.length){ toast("行程还是空的，先挑几个点"); return; }
+  var text = tripText();
+  var url = tripUrl();
+  var fallback = function(){
+    var all = text + "\n" + url;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(all).then(
+        function(){ toast("行程链接已复制，粘贴给朋友就行"); },
+        function(){ fallbackCopy(all); toast("行程链接已复制"); });
+    } else { fallbackCopy(all); toast("行程链接已复制"); }
+  };
+  if(navigator.share){
+    navigator.share({ title: "带狗出行 · " + STATE.trip.length + " 个点", text: text, url: url })
+      .catch(function(err){ if(err && err.name === "AbortError") return; fallback(); });
+  } else { fallback(); }
+}
+
+/* 打开别人分享的链接：不静默覆盖你自己已有的行程 */
+function loadSharedTrip(){
+  var m = /[?&]trip=([^&]+)/.exec(location.search);
+  if(!m) return;
+  /* 新格式是 base64url；老格式（逗号分隔、百分号转义）也认，
+     免得之前发出去的链接点开是空的。 */
+  var raw = m[1], ids = [];
+  var tryAdd = function(id){
+    if(id && findSpot(id) && ids.indexOf(id) < 0) ids.push(id);
+  };
+  try {
+    b64d(raw).split("\n").forEach(tryAdd);
+  } catch(e) { /* 不是 base64，按老格式解析 */ }
+  if(!ids.length){
+    decodeURIComponent(raw).split(",").forEach(tryAdd);
+  }
+  if(!ids.length){ toast("这条分享链接里的点位已经不在了"); return; }
+  ids = ids.slice(0, 40);          /* 手改链接塞几百个也不至于卡死 */
+  var prev = STATE.trip.slice();
+  STATE.trip = ids;
+  saveTrip(); renderTrip();
+  if(prev.length && prev.join(",") !== ids.join(",")){
+    toast("已载入分享的行程 · " + ids.length + " 个点", {
+      label: "恢复我的", stay: 7000,
+      onTap: function(){ STATE.trip = prev; saveTrip(); renderTrip(); renderTripPanel(); toast("已恢复你原来的行程"); }
+    });
+  } else {
+    toast("已载入分享的行程 · " + ids.length + " 个点");
+  }
+}
+
 function renderTripPanel(){
   var box = el("trip-list"), sub = el("trip-sub");
   if(!STATE.trip.length){
@@ -1513,16 +1613,8 @@ function bindTrip(){
   el("trip-clear").addEventListener("click", function(){
     STATE.trip = []; saveTrip(); renderTrip(); renderTripPanel();
   });
-  el("trip-copy").addEventListener("click", function(){
-    var btn = el("trip-copy"), t = tripText();
-    var done = function(){
-      btn.textContent = "已复制 ✓";
-      setTimeout(function(){ btn.textContent = "复制行程"; }, 1600);
-    };
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(t).then(done).catch(function(){ fallbackCopy(t); done(); });
-    } else { fallbackCopy(t); done(); }
-  });
+  el("trip-share").addEventListener("click", shareTrip);
+  el("trip-share-panel").addEventListener("click", shareTrip);
 }
 
 /* ═════════════════ 本周推荐 ═════════════════
@@ -2189,6 +2281,7 @@ fetch("spots.json", {cache:"no-cache"})
     scrollFade(el("legend"));
     bindPlan();
     STATE.trip = loadTrip();
+    loadSharedTrip();        /* 带 ?trip= 的链接优先，且不静默覆盖已有行程 */
     renderTrip();
     render();
     /* 手机打开就是推荐页，不用点"本周推荐" */
