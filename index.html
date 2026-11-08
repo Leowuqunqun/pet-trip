@@ -216,6 +216,13 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .card-src{display:flex;gap:10px;margin-top:7px;font-size:11.5px;flex-wrap:wrap}
 .card-src a{color:var(--slate);text-decoration:none;border-bottom:1px dotted var(--line-2)}
 .card-src a:hover{color:var(--terra-2);border-bottom-color:var(--terra)}
+/* 行程按钮：小、靠右，点一下就进去，不用打开详情 */
+.card-trip{
+  margin-left:auto;flex:none;height:24px;padding:0 9px;border-radius:999px;
+  border:1px solid var(--line-2);background:var(--card);color:var(--ink-2);
+  font-size:11.5px;font-weight:600;cursor:pointer;line-height:1;
+}
+.card-trip.on{background:var(--terra-soft);border-color:var(--terra);color:var(--terra-2)}
 .src-link{color:var(--terra-2);text-decoration:none;border-bottom:1px solid var(--terra-soft)}
 .card-name{
   font-size:14.5px;font-weight:600;line-height:1.35;color:var(--ink);
@@ -974,13 +981,18 @@ function renderCards(list, totalAll){
     var srcAll = s.sources || [];
     var xhsSrc = srcAll.filter(function(x){ return x.platform==="xhs"; });
     var amapSrc = srcAll.filter(function(x){ return x.platform==="amap"; })[0];
-    var srcRow = (xhsSrc.length || amapSrc)
-      ? '<span class="card-src">' +
+    /* 加入行程按钮直接上卡片：用户在列表里决定"这个要去"，不该先点进详情再点一次。
+       放在来源行右侧，不额外占高度。 */
+    var inT = inTrip(s.id);
+    var tripBtn = '<button class="card-trip' + (inT ? " on" : "") + '" data-trip="' + esc(s.id) + '"' +
+                  ' title="' + (inT ? "从行程移除" : "加入行程") + '">' +
+                  (inT ? "✓ 行程" : "＋ 行程") + '</button>';
+    var srcRow = '<span class="card-src">' +
           (xhsSrc.length ? '<a href="'+esc(xhsSrc[0].url)+'" target="_blank" rel="noopener noreferrer">' +
             '小红书' + (xhsSrc.length>1 ? ' · '+xhsSrc.length+' 篇' : '原文') + '</a>' : '') +
           (amapSrc ? '<a href="'+esc(amapSrc.url)+'" target="_blank" rel="noopener noreferrer">高德地图</a>' : '') +
-        '</span>'
-      : '';
+          tripBtn +
+        '</span>';
     return '<div class="card'+(STATE.active===s.id?" active":"")+'" role="button" tabindex="0" data-id="'+esc(s.id)+'">' +
       thumb +
       '<span class="card-body">' +
@@ -1349,6 +1361,19 @@ function bind(){
   el("filters").addEventListener("click", onChipClick);
   el("fpanel").addEventListener("click", onChipClick);
   el("list").addEventListener("click", function(e){
+    /* 三层分流：行程按钮 → 来源链接 → 卡片本体。
+       顺序不能反，否则点"＋ 行程"会顺带弹详情。 */
+    var tb = e.target.closest("[data-trip]");
+    if(tb){
+      e.preventDefault();
+      var id = tb.getAttribute("data-trip");
+      toggleTrip(id);
+      var now = inTrip(id);
+      tb.classList.toggle("on", now);
+      tb.textContent = now ? "✓ 行程" : "＋ 行程";
+      tb.setAttribute("title", now ? "从行程移除" : "加入行程");
+      return;
+    }
     if(e.target.closest("a")) return;        /* 点来源链接就跳链接，别顺手弹详情 */
     var c = e.target.closest(".card"); if(!c) return;
     openDetail(c.getAttribute("data-id"));
