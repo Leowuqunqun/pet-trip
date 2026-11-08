@@ -708,7 +708,7 @@ var NIGHT_LABEL = {
 };
 var DOG_LABEL = {
   allowed:["可带狗","g"], leash:["需牵绳","a"], fee:["收费","a"],
-  forbidden:["禁入","r"], unknown:["犬政策未核实","n"]
+  forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
 var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, kinds:{}, active:null, trip:[]};
@@ -1711,8 +1711,21 @@ function planCardHTML(p, idx, quiet){
       '）—— 出发前自己看一眼预报，别按这条定日子。</div>';
   }
 
-  var flat = p.legs.filter(function(x){ return x!=null; });
-  var spanTxt = flat.length ? ("整条路线直线跨度约 " + flat.reduce(function(a,b){return a+b;},0).toFixed(0) + "km") : "";
+  /* 「跨度」原来是各段距离求和，语义就错了：两站 1.4km 相加仍是 1.4，
+     toFixed(0) 又变成"约 1km"，和下面显示的 1.4km 自相矛盾。
+     跨度 = 任意两站之间的最远直线距离，才配叫跨度。 */
+  var spanTxt = "";
+  if(p.stops.length>1){
+    var mx=0, ca, cb;
+    for(var si=0;si<p.stops.length;si++){
+      for(var sj=si+1;sj<p.stops.length;sj++){
+        ca=spotCoord(p.stops[si].s); cb=spotCoord(p.stops[sj].s);
+        var d=(ca&&cb)?haversineKm(ca,cb):null;
+        if(d!=null&&d>mx) mx=d;
+      }
+    }
+    if(mx>0) spanTxt = "站与站最远直线 " + mx.toFixed(1) + "km（不是车程）";
+  }
 
   var body;
   if(p.kind==="两晚三天" && p.sleepIdx>=0){
