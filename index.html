@@ -604,8 +604,12 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
         <input type="range" id="range" min="1" max="6" step="0.5" value="5">
       </label>
       <button class="chip" data-f="night" aria-pressed="false">能过夜</button>
-      <button class="chip" data-f="dog" aria-pressed="false">确认可带狗</button>
+      <!-- 犬政策拆两档：「明确友好」是笔记/园区明说可以带，「默认允许」是现场没禁止标识。
+           两者风险不同，混在一个按钮里等于把判断推回给用户。 -->
+      <button class="chip" data-dog="explicit" aria-pressed="false">明确友好</button>
+      <button class="chip" data-dog="default" aria-pressed="false">默认允许</button>
     </div>
+    <div class="filters scene-bar" id="scenebar"></div>
     <!-- 一张图上全都有，靠图标分类型：帐篷=能睡的营地，树=公园… -->
     <div class="legend" id="legend"></div>
     <div class="tripbar" id="tripbar">
@@ -711,7 +715,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, kinds:{}, active:null, trip:[]};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, kinds:{}, scenes:{}, dogTier:{}, active:null, trip:[]};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -753,25 +757,39 @@ function isNight(s){var k=nightKey(s);return k==="official_camp"||k==="lodging"|
 /* ───────── 筛选 ───────── */
 /* 筛选项有两种粒度：chip 是"桶"（公园/水域合一个），图例是"具体类型"。
    两者都写进 STATE.kinds，判定时统一展开，避免两套逻辑各说各话。 */
-var BUCKETS = {
-  camp:["campground"], park:["park","water"], village:["village","scenic"], lodging:["lodging"]
-};
+/* 不再合并桶。以前 village+scenic 合成一个桶、park+water 合成一个桶，
+   点「古村」会把景区一起带出来——用户抱怨"筛选不精细"有一半来自这里。
+   现在 kind 有真实来源（高德 POI 类型 + 名字规则），可以精确筛。 */
 function selectedKinds(){
   return Object.keys(STATE.kinds).filter(function(k){ return STATE.kinds[k]; });
 }
 function kindActive(kind){
   var sel = selectedKinds();
   if(!sel.length) return true;
-  return sel.some(function(k){
-    return (BUCKETS[k] || [k]).indexOf(kind) >= 0;
-  });
+  return sel.indexOf(kind) >= 0;
+}
+/* 场景是"想干什么"，与设施类型正交：一个水库既是水域，也是玩水点、可能还能露营。 */
+function selectedScenes(){
+  return Object.keys(STATE.scenes).filter(function(k){ return STATE.scenes[k]; });
+}
+function sceneActive(list){
+  var sel = selectedScenes();
+  if(!sel.length) return true;
+  list = list || [];
+  return sel.some(function(k){ return list.indexOf(k) >= 0; });
 }
 /* chip 的按下状态 = 这个桶被选中；图例的按下状态 = 这个具体类型被选中 */
 function syncFilterUI(){
   Array.prototype.forEach.call(document.querySelectorAll(".chip[data-f]"), function(b){
     var f = b.getAttribute("data-f");
-    if(f === "night" || f === "dog") return;
+    if(f === "night") return;
     b.setAttribute("aria-pressed", STATE.kinds[f] ? "true" : "false");
+  });
+  Array.prototype.forEach.call(document.querySelectorAll(".chip[data-scene]"), function(b){
+    b.setAttribute("aria-pressed", STATE.scenes[b.getAttribute("data-scene")] ? "true" : "false");
+  });
+  Array.prototype.forEach.call(document.querySelectorAll(".chip[data-dog]"), function(b){
+    b.setAttribute("aria-pressed", STATE.dogTier[b.getAttribute("data-dog")] ? "true" : "false");
   });
   Array.prototype.forEach.call(document.querySelectorAll(".legend [data-kind]"), function(b){
     b.setAttribute("aria-pressed", kindActive(b.getAttribute("data-kind")) ? "true" : "false");
@@ -782,7 +800,13 @@ function match(s){
   if(s.drive && s.drive.hours_oneway > STATE.hours) return false;
   if(!s.drive) return false;
   if(STATE.night && !isNight(s)) return false;
-  if(STATE.dog && dogKey(s)!=="allowed") return false;
+  var dt = Object.keys(STATE.dogTier).filter(function(k){ return STATE.dogTier[k]; });
+  if(dt.length){
+    var tier = s.dog_tier || "unknown";
+    /* 两档都选 = 不限制；只选一档就按档筛。veto/unknown 不在任何一档里，自然被排除。 */
+    if(dt.indexOf(tier) < 0) return false;
+  }
+  if(!sceneActive(s.scenes)) return false;
   if(!kindActive(s.kind)) return false;
   return true;
 }
@@ -800,7 +824,14 @@ function render(){
 
   var box = el("list");
   if(!list.length){
-    box.innerHTML = '<div class="empty">这个条件下没有点。<br>试试把单程时长拉长，或取消筛选。</div>';
+    var hints = [];
+    if(selectedScenes().length) hints.push("取消场景筛选");
+    if(selectedKinds().length) hints.push("取消类型筛选");
+    if(Object.keys(STATE.dogTier).some(function(k){ return STATE.dogTier[k]; })) hints.push("放宽犬政策要求");
+    hints.push("把单程时长拉长");
+    box.innerHTML = '<div class="empty">这个条件下没有点。<br>试试' +
+                    (hints.length > 1 ? hints.slice(0,-1).join("、") + "，或" : "") +
+                    hints[hints.length-1] + "。</div>";
     syncMarkers(list);
     return;
   }
@@ -817,8 +848,15 @@ function render(){
     var tf = (s.overnight && s.overnight.facilities) || {};
     var tBadge = tf.toilet === true ? tag("有厕所","g")
                : tf.toilet === false ? tag("无厕所","r") : "";
+    /* 场景徽章放在政策徽章后面：用户扫卡片时先看"能不去"，再看"去干什么"。
+       最多两个——文字长了卡片会挤成一团。 */
+    var scBadges = (s.scenes||[]).slice(0,2).map(function(x){ return tag(x,"s"); }).join("");
+    var ac = s.access || {};
+    var acBadges = (ac.fee === "免费" ? tag("免费","g") : ac.fee ? tag("收费","a") : "") +
+                   (ac.water ? tag("有水源","s") : "");
     var badges = (nk==="unknown" ? "" : tag(NIGHT_LABEL[nk][0], NIGHT_LABEL[nk][1])) +
-                 (dk==="unknown" ? "" : tag(DOG_LABEL[dk][0], DOG_LABEL[dk][1])) + tBadge;
+                 (dk==="unknown" ? "" : tag(DOG_LABEL[dk][0], DOG_LABEL[dk][1])) + tBadge +
+                 scBadges + acBadges;
     var ph = s.photos && s.photos.length ? s.photos : null;
     /* 列表缩略图挑"看得出这是哪儿"的那张：
        小红书首图常是带大字封面的拼图或自拍，做缩略图很糟；
@@ -917,6 +955,26 @@ function scrollFade(row){
   row.addEventListener("scroll", upd, {passive:true});
   window.addEventListener("resize", upd);
   upd();
+}
+
+/* 场景筛选条。规则：覆盖不足 20 个点的场景**不进筛选条**（只在卡片上显示），
+   一个点不动就筛出 3 个结果的按钮，等于把"精细"做成了"难用"。
+   「过夜」已经是一排的硬条件，这里不重复。 */
+var SCENE_ORDER = ["草坪遛弯","玩水","溯溪","露营","古村古镇","山野徒步","人文古迹"];
+var SCENE_MIN = 20;
+function renderSceneBar(){
+  var counts = {};
+  (DATA.spots||[]).forEach(function(s){
+    (s.scenes||[]).forEach(function(x){ counts[x] = (counts[x]||0) + 1; });
+  });
+  var html = SCENE_ORDER.filter(function(k){
+    return (counts[k]||0) >= SCENE_MIN && k !== "过夜";
+  }).map(function(k){
+    return '<button class="chip" data-scene="'+esc(k)+'" aria-pressed="false">'+
+             esc(k)+' <b style="font-weight:600;opacity:.6">'+(counts[k]||0)+'</b></button>';
+  }).join("");
+  el("scenebar").innerHTML = html;
+  el("scenebar").style.display = html ? "" : "none";
 }
 
 function renderLegend(){
@@ -1124,18 +1182,27 @@ function bind(){
     PLAN.dirty = true;
     render();
   });
-  el("filters").addEventListener("click", function(e){
+  /* 筛选条有两条（硬条件 + 玩法场景），监听必须挂在两条上。
+     只挂第一条时，场景 chip 点了毫无反应——实测抓到的第三个"看起来做了其实没做"。 */
+  function onChipClick(e){
     var b = e.target.closest(".chip"); if(!b) return;
-    var f = b.getAttribute("data-f");
     var on = b.getAttribute("aria-pressed") === "true";
     b.setAttribute("aria-pressed", on ? "false" : "true");
-    if(f==="night") STATE.night = !on;
-    else if(f==="dog") STATE.dog = !on;
-    else STATE.kinds[f] = !on;
+    if(b.hasAttribute("data-scene")){
+      STATE.scenes[b.getAttribute("data-scene")] = !on;
+    } else if(b.hasAttribute("data-dog")){
+      STATE.dogTier[b.getAttribute("data-dog")] = !on;
+    } else {
+      var f = b.getAttribute("data-f");
+      if(f==="night") STATE.night = !on;
+      else STATE.kinds[f] = !on;
+    }
     PLAN.dirty = true;
     syncFilterUI();
     render();
-  });
+  }
+  el("filters").addEventListener("click", onChipClick);
+  el("scenebar").addEventListener("click", onChipClick);
   el("list").addEventListener("click", function(e){
     var c = e.target.closest(".card"); if(!c) return;
     openDetail(c.getAttribute("data-id"));
@@ -1938,6 +2005,7 @@ fetch("spots.json", {cache:"no-cache"})
     bind();
     bindTrip();
     renderLegend();
+    renderSceneBar();
     bindLegend();
     scrollFade(el("filters"));
     bindPlan();
