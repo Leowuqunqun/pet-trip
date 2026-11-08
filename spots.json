@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-08 13:12",
+  "generated": "2026-11-08 13:25",
   "origin": {
    "name": "上海人民广场",
    "gcj": [
@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 407,
+  "count": 408,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -35481,6 +35481,74 @@
     "likes": 9
    },
    "heat_basis": "小红书点名搜索 1 条相关笔记"
+  },
+  {
+   "id": "x-草山岗星空之城露营",
+   "name": "草山岗星空之城露营",
+   "kind": "scenic",
+   "tags": [],
+   "province": "浙江",
+   "city": "杭州",
+   "gcj": [
+    119.634363,
+    30.413036
+   ],
+   "drive": {
+    "hours_oneway": 3.97,
+    "km": 249.0,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-08 13:25"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "evidence_level": "",
+    "basis": "",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null
+   },
+   "sub_pois": [
+    {
+     "name": "龙门秘境草山岗星空之城露营",
+     "gcj": [
+      119.634363,
+      30.413036
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
+   "trips": [
+    "小红书-带狗"
+   ],
+   "geo_src": "amap",
+   "origin": "发现批次（关键词矩阵搜索）",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "raw_note": "",
+   "photos": [],
+   "pending": [
+    "dog",
+    "overnight",
+    "photos"
+   ],
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 27 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 27 条笔记，无一条标题带该地名"
   }
  ],
  "out_of_range": [
