@@ -25,6 +25,9 @@
   --green:#2E7D53; --green-soft:#E3F1E7;
   --slate:#57687A; --slate-soft:#E9EEF4;
   --rose:#B4646B; --rose-soft:#F7E6E7;
+  /* 字号只留五档。之前页面里并存 19 种字号（12/12.5/11.5/13/11/13.5…），
+     差半号的字号看不出层级，只会显得乱。 */
+  --t-xs:11px; --t-s:12px; --t-m:14px; --t-l:17px; --t-xl:22px;
   --r-s:12px; --r-m:16px; --r-l:22px; --r-xl:28px;
   --sh-1:0 1px 2px rgba(74,50,28,.05);
   --sh-2:0 2px 10px rgba(74,50,28,.06),0 1px 2px rgba(74,50,28,.04);
@@ -74,7 +77,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 /* ══════════ 筛选条 ══════════ */
 .filters{
   display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;
-  padding:10px 0 11px;margin:0 calc(-1 * var(--pad-r)) 0 calc(-1 * var(--pad-l));
+  padding:4px 0 6px;margin:0 calc(-1 * var(--pad-r)) 0 calc(-1 * var(--pad-l));
   padding-left:var(--pad-l);padding-right:var(--pad-r);
 }
 .filters::-webkit-scrollbar{display:none}
@@ -93,23 +96,24 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   color:var(--terra-2);font-size:12.5px;font-weight:600;cursor:pointer;flex:none;
 }
 .fsum .x{opacity:.55;font-size:14px;line-height:1}
+/* 常驻筛选不做成一排白胶囊：只有"选了"才有底色，没选就是一句话 */
 .chip{
   flex:none;display:inline-flex;align-items:center;gap:6px;
-  height:34px;padding:0 13px;border-radius:999px;
-  background:var(--paper-2);border:1px solid var(--line-2);
-  font-size:13.5px;color:var(--ink-2);white-space:nowrap;
-  transition:background .16s var(--ease),border-color .16s var(--ease),color .16s var(--ease);
+  height:34px;padding:0 11px;border-radius:9px;
+  background:transparent;border:0;
+  font-size:var(--t-s);color:var(--ink-2);white-space:nowrap;
+  transition:background .16s var(--ease),color .16s var(--ease);
 }
 .chip:active{transform:scale(.97)}
 .more-note{padding:16px 14px 22px;text-align:center;color:var(--ink-3);font-size:12px;line-height:1.7;border-top:1px dashed var(--line);}
 .chip[aria-pressed="true"]{
-  background:var(--ink);border-color:var(--ink);color:#FFF9F2;font-weight:500;
+  background:var(--ink);color:#FFF9F2;font-weight:500;
 }
 .chip .dot{width:7px;height:7px;border-radius:50%;flex:none}
 .chip-wrap{
-  flex:none;display:flex;align-items:center;height:34px;padding:0 12px;
-  border-radius:999px;background:var(--paper-2);border:1px solid var(--line-2);
-  font-size:13.5px;color:var(--ink-2);gap:8px;white-space:nowrap;
+  flex:none;display:flex;align-items:center;height:34px;padding:0 2px;
+  border-radius:9px;background:transparent;border:0;
+  font-size:var(--t-s);color:var(--ink-2);gap:8px;white-space:nowrap;
 }
 .chip-wrap input[type=range]{
   -webkit-appearance:none;appearance:none;width:96px;height:3px;border-radius:2px;
@@ -180,13 +184,19 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   padding:0 var(--pad-r) calc(18px + env(safe-area-inset-bottom,0px)) var(--pad-l);
   display:flex;flex-direction:column;gap:9px;
 }
+/* 卡片不再是一张"框"：去掉描边和投影，靠留白与分隔线分组。
+   一屏里 20 张带框的卡片，框线本身就成了噪音。 */
 .card{
-  display:flex;gap:11px;align-items:flex-start;width:100%;text-align:left;
+  display:flex;gap:13px;align-items:flex-start;width:100%;text-align:left;
   font:inherit;color:inherit;cursor:pointer;
-  background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
-  padding:11px 13px;box-shadow:var(--sh-1);flex:none;
-  transition:border-color .16s var(--ease),box-shadow .16s var(--ease),transform .12s var(--ease);
+  background:transparent;border:0;border-radius:0;
+  padding:13px 2px;flex:none;
+  border-bottom:1px solid var(--line);
+  transition:background .14s var(--ease);
 }
+.card:last-child{border-bottom:0}
+.card:active{background:var(--paper-2)}
+.card.active{background:var(--terra-soft)}
 .card:active{transform:scale(.994)}
 .card.active{border-color:var(--terra);box-shadow:0 0 0 2px var(--terra-soft),var(--sh-2)}
 .card-badge{
@@ -194,9 +204,8 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   font-size:11.5px;font-weight:700;color:#FFF;letter-spacing:-.02em;
 }
 .card-thumb{
-  flex:none;width:66px;height:66px;border-radius:13px;position:relative;overflow:hidden;
+  flex:none;width:78px;height:78px;border-radius:12px;position:relative;overflow:hidden;
   background-color:var(--line);
-  box-shadow:inset 0 0 0 1px rgba(74,50,28,.07);
 }
 .card-thumb img{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
@@ -212,27 +221,55 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   font-variant-numeric:tabular-nums;
 }
 .card-body{flex:1;min-width:0}
-/* 来源链接：放在卡片最底下，小而不抢眼，但每个点都必须有 */
-.card-src{display:flex;gap:10px;margin-top:7px;font-size:11.5px;flex-wrap:wrap}
-.card-src a{color:var(--slate);text-decoration:none;border-bottom:1px dotted var(--line-2)}
-.card-src a:hover{color:var(--terra-2);border-bottom-color:var(--terra)}
-/* 行程按钮：小、靠右，点一下就进去，不用打开详情 */
-.card-trip{
-  margin-left:auto;flex:none;width:26px;height:26px;padding:0;border-radius:999px;
-  border:1px solid var(--line-2);background:var(--card);color:var(--ink-2);
-  font-size:15px;font-weight:600;cursor:pointer;line-height:1;
-  display:inline-flex;align-items:center;justify-content:center;
+/* 车程是这一屏里唯一该被"读出大小"的数字 */
+.card-meta .drive{color:var(--terra-2);font-size:var(--t-m);font-weight:700}
+/* 第三行：犬政策·过夜·场景，用间隔点串起来，不做胶囊。
+   胶囊一多，一屏十几个框，眼睛找不到重点。 */
+.card-facts{
+  display:flex;align-items:center;flex-wrap:wrap;margin-top:7px;
+  font-size:var(--t-xs);color:var(--ink-2);line-height:1.7;
 }
-.card-trip.on{background:var(--terra-soft);border-color:var(--terra);color:var(--terra-2)}
+.card-facts .fact + .fact::before{content:"·";margin:0 7px;color:var(--ink-3)}
+.fact.dog{display:inline-flex;align-items:center;font-weight:600}
+.fact.dog::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;margin-right:5px}
+.fact.dog.g{color:var(--green)}
+.fact.dog.a{color:var(--amber-ink)}
+.fact.dog.r{color:var(--rose)}
+.fact.dog.n{color:var(--ink-3)}
+/* 卡片上只放一个来源链接：有原文跳原文，没有跳地图 */
+.card-src{
+  font-size:var(--t-xs);color:var(--ink-3);
+  text-decoration:none;white-space:nowrap;
+}
+.card-src::after{content:" ↗";font-size:var(--t-xs)}
+.card-src:hover,.card-src:active{color:var(--terra-2)}
+/* 行程按钮：小、靠右，点一下就进去，不用打开详情 */
+/* ＋ 浮在缩略图右上角：塞进文字行会被长事实挤走，且和第二行的车程抢位置 */
+.card-trip{
+  position:absolute;right:4px;top:4px;z-index:2;
+  width:24px;height:24px;padding:0;border-radius:999px;
+  border:0;background:rgba(255,255,255,.88);color:var(--ink-2);
+  font-size:15px;font-weight:500;cursor:pointer;line-height:1;
+  display:inline-flex;align-items:center;justify-content:center;
+  box-shadow:0 1px 3px rgba(74,50,28,.18);
+  transition:background .14s,color .14s;
+}
+.card-trip:active{transform:scale(.94)}
+.card-trip.on{background:var(--terra);color:#FFF6F1}
 .src-link{color:var(--terra-2);text-decoration:none;border-bottom:1px solid var(--terra-soft)}
+/* 地名用宋体：这是一份"周末去哪儿"的清单，纸感比无衬线更贴题 */
 .card-name{
-  font-size:14.5px;font-weight:600;line-height:1.35;color:var(--ink);
+  font-family:var(--font-display);
+  font-size:var(--t-l);font-weight:600;line-height:1.3;color:var(--ink);
   display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;
 }
 .card-meta{
-  margin-top:3px;font-size:11.5px;color:var(--ink-3);
-  display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+  margin-top:5px;font-size:var(--t-s);color:var(--ink-3);
+  display:flex;gap:0;flex-wrap:wrap;align-items:baseline;line-height:1.5;
 }
+.card-meta > *:not(.card-acts) + *:not(.card-acts)::before{content:"·";margin:0 6px;color:var(--ink-3)}
+/* 来源链接与"加入行程"固定在第二行右端，事实行再长也挤不掉它们 */
+.card-acts{margin-left:auto;display:inline-flex;align-items:center;gap:9px}
 .card-meta .sep{color:var(--line-2)}
 .tag{
   display:inline-block;font-size:10.5px;padding:1.5px 7px;border-radius:999px;
@@ -397,10 +434,10 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 }
 
 /* ── 图例：图标和类型的对应关系，横排小字 ── */
-.legend{display:flex;gap:10px;margin:0 12px 8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.legend{display:flex;gap:12px;margin:0 12px 4px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
 .legend::-webkit-scrollbar{display:none}
 .legend .lg{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ink-2);white-space:nowrap;cursor:pointer;padding:3px 7px;border-radius:999px;border:1px solid transparent;user-select:none}
-.legend .lg[aria-pressed="true"]{background:var(--paper-2);border-color:var(--line-2);color:var(--ink);font-weight:600}
+.legend .lg[aria-pressed="true"]{background:transparent;border-color:transparent;color:var(--ink-2)}
 .legend .lg[aria-pressed="false"]{opacity:.42}
 .legend i{width:15px;height:15px;border-radius:50%;display:grid;place-items:center;flex:none}
 .legend i svg{width:9px;height:9px}
@@ -785,7 +822,22 @@ function srcLabel(s){
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
   return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
 function hm(h){var t=Math.round(h*60);return Math.floor(t/60)+"h"+(t%60?String(t%60).padStart(2,"0"):"");}
+/* 卡片上的车程用中文读法：0h27 是机器写法，27 分 才是人话 */
+function hmCN(h){
+  var t = Math.round(h * 60), hh = Math.floor(t / 60), mm = t % 60;
+  if(hh && mm) return hh + " 小时 " + mm + " 分";
+  if(hh) return hh + " 小时";
+  return mm + " 分";
+}
 function tag(txt,cls){return '<span class="tag '+cls+'">'+esc(txt)+'</span>';}
+/* 卡片上的「加入行程」按钮：浮在缩略图右上角，不占文字行 */
+function tripBtnHTML(id){
+  var on = inTrip(id);
+  return '<button class="card-trip' + (on ? " on" : "") + '" data-trip="' + esc(id) + '"' +
+         ' title="' + (on ? "从行程移除" : "加入行程") + '"' +
+         ' aria-label="' + (on ? "从行程移除" : "加入行程") + '">' +
+         (on ? "✓" : "＋") + '</button>';
+}
 /* 数据里的值必须落在词表内，否则 NIGHT_LABEL[k] 是 undefined，
    [0] 取标签时整页渲染直接抛异常、列表变成"数据加载失败"（实测踩过）。
    这里兜一层：认不出来的值退化成"未核实"，不让一个数据笔误毁掉整个页面。 */
@@ -949,27 +1001,23 @@ function renderCards(list, totalAll){
        详情页仍完整显示"未核实"，筛选器「已确认可带狗」是唯一的确认口径。 */
     /* 厕所直接上卡片：到了地方没厕所比没水更劝退，浏览时就该看得见。
        只有笔记里写明了才显示，没查到的不挂灰标——一排「未核实」等于没信息。 */
-    var tf = (s.overnight && s.overnight.facilities) || {};
-    var tBadge = tf.toilet === true ? tag("有厕所","g")
-               : tf.toilet === false ? tag("无厕所","r") : "";
-    /* 场景徽章放在政策徽章后面：用户扫卡片时先看"能不去"，再看"去干什么"。
-       最多两个——文字长了卡片会挤成一团。 */
-    var scBadges = (s.scenes||[]).slice(0,2).map(function(x){ return tag(x,"s"); }).join("");
-    var ac = s.access || {};
-    var acBadges = (ac.fee === "免费" ? tag("免费","g") : ac.fee ? tag("收费","a") : "") +
-                   (ac.water ? tag("有水源","s") : "");
+    /* 卡片只留三个"扫一眼就能判断去不去"的事实：犬政策、能不能睡、去干什么。
+       厕所/收费/水源挪进详情——一屏六七个胶囊，等于没有重点。 */
+    var facts = [];
     /* 犬徽章按分档写，不再笼统写「可带狗」：
        明确友好（232）= 笔记/园区明说可以带；默认允许（67）= 只是现场没禁止标识。
        两者风险不同，卡片上就该看出来。 */
     var tier = s.dog_tier || "unknown";
-    var dogBadge = tier==="explicit" ? tag("明确友好","g")
-                 : tier==="default"  ? tag("默认允许","a")
-                 : tier==="veto"     ? tag("禁入","r")
-                 : tier==="restricted" ? tag("部分受限","a")
-                 : (dk==="unknown" ? "" : tag(DOG_LABEL[dk][0], DOG_LABEL[dk][1]));
-    var badges = (nk==="unknown" ? "" : tag(NIGHT_LABEL[nk][0], NIGHT_LABEL[nk][1])) +
-                 dogBadge + tBadge +
-                 scBadges + acBadges;
+    var dogTxt = tier==="explicit"   ? ["明确友好","g"]
+               : tier==="default"    ? ["默认允许","a"]
+               : tier==="veto"       ? ["禁入","r"]
+               : tier==="restricted" ? ["部分受限","a"]
+               : (dk==="unknown" ? null : [DOG_LABEL[dk][0], DOG_LABEL[dk][1] || "n"]);
+    if(dogTxt) facts.push('<span class="fact dog '+dogTxt[1]+'">'+esc(dogTxt[0])+'</span>');
+    if(nk !== "unknown") facts.push('<span class="fact">'+esc(NIGHT_LABEL[nk][0])+'</span>');
+    (s.scenes||[]).slice(0,2).forEach(function(x){
+      facts.push('<span class="fact">'+esc(x)+'</span>');
+    });
     var ph = s.photos && s.photos.length ? s.photos : null;
     /* 列表缩略图挑"看得出这是哪儿"的那张：
        小红书首图常是带大字封面的拼图或自拍，做缩略图很糟；
@@ -981,6 +1029,7 @@ function renderCards(list, totalAll){
       thumbSrc = (gd[0] || xh[1] || xh[0] || ph[0]).url;
     }
     var thumb = '<span class="card-thumb">' +
+        tripBtnHTML(s.id) +
         '<span class="fb" style="background:'+col+'">'+svgFor(k)+'</span>' +
         (thumbSrc ? '<img src="'+esc(thumbSrc)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' +
               (ph.length>1 ? '<span class="cnt">'+ph.length+'</span>' : '') : '') +
@@ -990,30 +1039,25 @@ function renderCards(list, totalAll){
     var srcAll = s.sources || [];
     var xhsSrc = srcAll.filter(function(x){ return x.platform==="xhs"; });
     var amapSrc = srcAll.filter(function(x){ return x.platform==="amap"; })[0];
-    /* 加入行程按钮直接上卡片：用户在列表里决定"这个要去"，不该先点进详情再点一次。
-       放在来源行右侧，不额外占高度。 */
-    var inT = inTrip(s.id);
-    var tripBtn = '<button class="card-trip' + (inT ? " on" : "") + '" data-trip="' + esc(s.id) + '"' +
-                  ' title="' + (inT ? "从行程移除" : "加入行程") + '"' +
-                  ' aria-label="' + (inT ? "从行程移除" : "加入行程") + '">' +
-                  (inT ? "✓" : "＋") + '</button>';
-    var srcRow = '<span class="card-src">' +
-          (xhsSrc.length ? '<a href="'+esc(xhsSrc[0].url)+'" target="_blank" rel="noopener noreferrer">' +
-            '小红书' + (xhsSrc.length>1 ? ' · '+xhsSrc.length+' 篇' : '原文') + '</a>' : '') +
-          (amapSrc ? '<a href="'+esc(amapSrc.url)+'" target="_blank" rel="noopener noreferrer">高德地图</a>' : '') +
-          tripBtn +
-        '</span>';
+    /* 卡片上只放一个来源：有小红书原文就跳原文，没有就跳高德。
+       两条并排会把第三行挤爆；全部来源在详情里摊开。 */
+    var oneSrc = xhsSrc[0] || amapSrc;
+    var srcRow = oneSrc
+      ? '<a class="card-src" href="'+esc(oneSrc.url)+'" target="_blank" rel="noopener noreferrer"' +
+        ' title="' + (xhsSrc[0] ? "打开小红书原文" : "在高德地图打开") + '">' +
+        (xhsSrc[0] ? "小红书原文" : "地图位置") + '</a>'
+      : '';
     return '<div class="card'+(STATE.active===s.id?" active":"")+'" role="button" tabindex="0" data-id="'+esc(s.id)+'">' +
       thumb +
       '<span class="card-body">' +
         '<span class="card-name">'+esc(s.name)+'</span>' +
         '<span class="card-meta">' +
-          '<span style="color:'+(col)+';font-weight:600">单程 '+hm(s.drive.hours_oneway)+'</span>' +
-          '<span class="sep">·</span><span>'+Math.round(s.drive.km)+' km</span>' +
-          '<span class="sep">·</span><span>'+esc(s.city||"")+'</span>' +
+          '<b class="drive">单程 '+hmCN(s.drive.hours_oneway)+'</b>' +
+          '<span>'+Math.round(s.drive.km)+' km</span>' +
+          '<span>'+esc(s.city||"")+'</span>' +
+          '<span class="card-acts">' + srcRow + '</span>' +
         '</span>' +
-        '<span class="card-meta" style="margin-top:6px;gap:5px">'+badges+'</span>' +
-        srcRow +
+        '<span class="card-facts">' + facts.join("") + '</span>' +
       '</span></div>';
   }).join("") + (TOTAL > PAGE
       ? '<div class="more-note">还有 ' + (TOTAL - PAGE) + ' 个点没列出来。<br>' +
