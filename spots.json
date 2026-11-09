@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 424,
+  "count": 426,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -50677,6 +50677,148 @@
    "rating": null,
    "rating_src": null,
    "heat": null
+  },
+  {
+   "id": "x-花园酒店(铁山东路店)",
+   "name": "花园酒店(铁山东路店)",
+   "kind": "lodging",
+   "tags": [],
+   "province": "安徽",
+   "city": "宁国",
+   "gcj": [
+    117.913675,
+    31.300825
+   ],
+   "drive": {
+    "hours_oneway": 4.47,
+    "km": 401.1,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 11:04"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "最近去了宁国玩，发现是一个很近的宝藏小城。风景好，吃的也惯，还很近。玩水村咖看风景，非常适合带孩子去玩，大人也可以得到放松，关键人还不多，体验感超级棒！一只船和望望呆这两家都是强推，单独写了笔记。 📷",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "no_veto_default",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "宝藏小城 宁国 两天一夜行程",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a1288c60000000035021353?xsec_source=pc_search",
+     "title": "宝藏小城 宁国 两天一夜行程"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.913675,31.300825",
+     "poi": "花园酒店(铁山东路店)"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "山野徒步"
+   ],
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-黄山太平湖·望湖山舍度假民宿",
+   "name": "黄山太平湖·望湖山舍度假民宿",
+   "kind": "lodging",
+   "tags": [],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.093363,
+    30.408158
+   ],
+   "drive": {
+    "hours_oneway": 4.36,
+    "km": 381.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 11:04"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "太平湖 给铲屎官整理了超详细的携宠路线+玩水+住宿攻略，全程亲测，直接照着走就行！🐶 🚗 自驾路线（宠物友好，好开不绕路） 直接导航太平湖旅游码头/水上运动中心 • 合肥出发：约2.5h，高速直达，路",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "安徽黄山｜太平湖 芙蓉谷｜带小狗出游",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6991dbef0000000015031c19?xsec_source=pc_search",
+     "title": "安徽黄山｜太平湖 芙蓉谷｜带小狗出游"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a2cc8c6000000000803cfba?xsec_source=pc_search",
+     "title": "黄山太平湖|皮划艇➕溯溪➕看日出，小狗玩疯啦"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.093363,30.408158",
+     "poi": "黄山太平湖·望湖山舍度假民宿"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "玩水",
+    "山野徒步"
+   ],
+   "access": {},
+   "dog_tier": "explicit"
   }
  ],
  "out_of_range": [
