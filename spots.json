@@ -67575,8 +67575,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -67584,9 +67586,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "骑行➕露营➕小黄鸭乐园，能在户外待上一整天",
+      "note_id": "6a3f7fb200000000210160d8",
+      "author": "吸一口奶昔",
+      "note_url": "https://www.xiaohongshu.com/explore/6a3f7fb200000000210160d8"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -67607,7 +67618,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 1,
     "likes": 52
