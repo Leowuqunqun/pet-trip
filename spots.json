@@ -8760,9 +8760,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 39 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 39 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [
     "overnight"
    ],
@@ -69540,7 +69540,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 54
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -69550,7 +69553,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 8,
+    "likes": 54,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-西施故里",
