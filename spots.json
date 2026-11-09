@@ -67628,8 +67628,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -67637,9 +67639,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这住店",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "📍大田湾牛轭山观海公园，风景不错，有不少人露营",
+      "note_id": "69296641000000001e003543",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/69296641000000001e003543"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
