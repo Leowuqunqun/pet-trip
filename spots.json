@@ -57163,7 +57163,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 1131
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -57173,7 +57176,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 5,
+    "likes": 1131,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-水口禅寺",
@@ -60167,7 +60176,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 1138
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -60177,7 +60189,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 8,
+    "likes": 1138,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-金匮公园",
@@ -60240,7 +60258,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 6,
+    "likes": 178
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -60250,7 +60271,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 6,
+    "likes": 178,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
   },
   {
    "id": "x-白鹭园露营地",
@@ -73634,7 +73661,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 11,
+    "likes": 303
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -73644,7 +73674,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 11,
+    "likes": 303,
+    "basis": "小红书点名搜索 11 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 11 条相关笔记"
   },
   {
    "id": "x-长广溪湿地公园",
