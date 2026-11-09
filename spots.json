@@ -76417,8 +76417,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -76426,9 +76428,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🏕️露营治愈篇（宠物友好版）",
+      "note_id": "6a015a4f00000000350200bb",
+      "author": "妈妈咪呀我是Vera.G",
+      "note_url": "https://www.xiaohongshu.com/explore/6a015a4f00000000350200bb"
+     },
+     {
+      "kind": "camp",
+      "quote": "👉🏻橙色计划No.1露营咖啡",
+      "note_id": "6a015a4f00000000350200bb",
+      "author": "妈妈咪呀我是Vera.G",
+      "note_url": "https://www.xiaohongshu.com/explore/6a015a4f00000000350200bb"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -77276,8 +77294,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -77285,9 +77305,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "车位充足🅿️地下停车场，封顶30足够，大草坪可以露营野餐",
+      "note_id": "6aca5dc4000000001301bfff",
+      "author": "花晨月夕",
+      "note_url": "https://www.xiaohongshu.com/explore/6aca5dc4000000001301bfff"
+     },
+     {
+      "kind": "camp",
+      "quote": "3. 大草坪可以搭帐篷，禁止明火，但是点外卖很方便",
+      "note_id": "6aca5dc4000000001301bfff",
+      "author": "花晨月夕",
+      "note_url": "https://www.xiaohongshu.com/explore/6aca5dc4000000001301bfff"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -77350,8 +77386,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -77359,9 +77397,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "村边靠水的位置也很多，钓鱼、露营、亲子散步都挺舒服",
+      "note_id": "6aa7b81a000000002803aa4d",
+      "author": "大长金金金",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa7b81a000000002803aa4d"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -77423,8 +77470,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -77432,9 +77481,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "姑且不论在公共资源处非法搭建营地与盈利设施设备能不能，如果有租用露营帐篷桌椅以及游乐设施收费也不是不能原谅，或者针对低素质乱扔丢弃垃圾的人收取卫生费用也可以支持，无差别一刀切无凭无据的收费是真的让人难以接受，公共资源属于大家所共有，不是个别人利欲熏心的牟利工具",
+      "note_id": "6a0157440000000007022a66",
+      "author": "是俊俊吖",
+      "note_url": "https://www.xiaohongshu.com/explore/6a0157440000000007022a66"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
