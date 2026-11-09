@@ -73651,10 +73651,10 @@
     "computed_at": "2026-11-09 13:13"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
+    "policy": "allowed",
+    "evidence": "小红书笔记（69a7e852000000002603d9c0）：「青岛公园｜我愿称之为十大遛狗胜地🥹🩵🌠🐶 春天来啦，推荐给大家做参考！这些是我觉得真正宠物友好的地方！去的小狗脾气也都蛮好的，主人们也比较有素质🥹 \t 以后这个系列会持续更新，公园之外还会有一些商场和吃饭、喝咖啡的地方✌️」",
+    "evidence_level": "同篇笔记提及",
+    "basis": "离线回扫已采笔记",
     "risk_hint": "",
     "verified_at": null
    },
@@ -73710,7 +73710,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "explicit"
   },
   {
    "id": "x-和平公园",
@@ -75521,10 +75521,10 @@
     "computed_at": "2026-11-09 13:16"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
+    "policy": "allowed",
+    "evidence": "小红书笔记（69ecfcbe0000000035025b93）：「宠物友好景区大汇总 全国宠物友好景区有哪些呢？大家实地去过的可以分享一下吗？方便计划带宠出游。我先来几个： 内蒙古乌兰察布辉腾锡勒草原黄花沟」",
+    "evidence_level": "同篇笔记提及",
+    "basis": "离线回扫已采笔记",
     "risk_hint": "",
     "verified_at": null
    },
@@ -75575,7 +75575,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "explicit"
   },
   {
    "id": "x-鱼山古村",
