@@ -128,6 +128,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 /* ══════════ 主体：地图 + 列表 ══════════ */
 .stage{position:absolute;inset:0;display:flex;flex-direction:column}
 #map{flex:1;min-height:0;background:#EDE6DA;z-index:1}
+/* 底图瓦片失败时的提示：贴在容器左上，不挡地图操作 */
+.tile-warn{position:absolute;left:12px;top:12px;max-width:min(420px,72vw);z-index:900;font-size:12.5px;line-height:1.6;color:#7A3B2E;background:#FBEFE6;border:1px solid #E3C3AE;border-radius:10px;padding:9px 11px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.tile-warn b{color:#B85C38}
 .leaflet-container{font:inherit;background:#EDE6DA}
 .leaflet-control-attribution{font-size:9px!important;background:rgba(251,246,239,.88)!important;
   padding:1px 5px!important;border-radius:6px 0 0 0}
@@ -1168,10 +1171,27 @@ function buildOriginPanel(){
 function initMap(){
   MAP = L.map("map", {zoomControl:true, attributionControl:true, preferCanvas:false})
         .setView(ORIGIN.gcj.slice().reverse(), 7);
-  L.tileLayer("https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}", {
+  var tileURL = "https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}";
+  var tiles = L.tileLayer(tileURL, {
     subdomains:["1","2","3","4"], maxZoom:18, minZoom:5,
     attribution:'底图 &copy; 高德地图 · 数据自建'
   }).addTo(MAP);
+  /* 底图挂了要有话说。2026-11-10 用 CDP 拦掉 *.is.autonavi.com 实测：
+     瓦片全失败、只剩 2 个气泡、背景是一片米色，而页面照样写着"616 个点"，
+     一句提示都没有——用户会以为地图坏了或数据没了。
+     点位数据本身没丢（在 data/图例里都还在），所以提示要讲清"只是底图没出来"。 */
+  var tileWarned = false;
+  tiles.on("tileerror", function(){
+    if(tileWarned) return;
+    tileWarned = true;
+    var box = document.getElementById("map");
+    if(!box) return;
+    var d = document.createElement("div");
+    d.className = "tile-warn";
+    d.innerHTML = '<b>底图没加载出来</b>（网络或瓦片服务不通）。点位数据都在，'+
+                  '点气泡仍能看详情；也可以先把上面筛选收窄再找。';
+    box.appendChild(d);
+  });
 
   ORIGIN_MARKER = L.circleMarker([ORIGIN.gcj[1], ORIGIN.gcj[0]], {
     radius:7, color:"#B85C38", weight:2.5, fillColor:"#FFF9F2", fillOpacity:1
