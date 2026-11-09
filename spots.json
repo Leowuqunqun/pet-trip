@@ -55828,18 +55828,36 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "南京周边最美露营地——常州神女之心",
+      "note_id": "6911f4ac000000000402815e",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6911f4ac000000000402815e"
+     },
+     {
+      "kind": "camp",
+      "quote": "本来想去六合的大泉湖池杉林 但是听说被村民挖了大坑 还是希望大家做到无痕露营 不留垃圾呀",
+      "note_id": "6911f4ac000000000402815e",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6911f4ac000000000402815e"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -55865,7 +55883,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 5,
     "likes": 312
@@ -55878,7 +55899,9 @@
     "kind"
    ],
    "kind_src": "poi_type:风景名胜",
-   "access": {},
+   "access": {
+    "water": true
+   },
    "dog_tier": "default",
    "pop": {
     "notes": 5,
@@ -61191,18 +61214,29 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "周六下午在南山风景区，虽然不属于三山一渡名单中，没有它们名气大，但胜在免费景点多面积大，有山有水有林，种类齐全，适合节假日闲逛露营，亲近自然，地上有小猫，天上有鸽子，那天在景区走了两万步",
+      "note_id": "6aa36fd2000000001203f03d",
+      "author": "别熬夜啦（许嵩见过版）",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa36fd2000000001203f03d"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -61224,6 +61258,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": {
@@ -61238,7 +61274,9 @@
     "kind"
    ],
    "kind_src": "name",
-   "access": {},
+   "access": {
+    "water": true
+   },
    "dog_tier": "restricted",
    "pop": {
     "notes": 6,
@@ -68883,8 +68921,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -68892,9 +68932,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "房车自驾—宁波东钱湖小加州",
+      "note_id": "6946c3ef000000001e020f1a",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6946c3ef000000001e020f1a"
+     },
+     {
+      "kind": "camp",
+      "quote": "回程的选择了房车露营在宁波东钱湖小加州停车场",
+      "note_id": "6946c3ef000000001e020f1a",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6946c3ef000000001e020f1a"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -68916,7 +68972,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -73147,8 +73205,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -73156,9 +73216,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "山脚下就是紫云涧，附近有小型露营场地，今天走了一条之前没走过的路线（另一条路线是从图7左边下山，可以参考我之前发过的无锡阳山那篇），整体不累，新手友好，不能爬台阶的慎行[举手R]",
+      "note_id": "6ad451a4000000002a02c9b8",
+      "author": "倔强的马尾",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad451a4000000002a02c9b8"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -73180,6 +73249,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": {
