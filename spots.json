@@ -11921,7 +11921,7 @@
       "note_url": "https://www.xiaohongshu.com/explore/6aa50ca0000000002900ed1c"
      }
     ],
-    "evidence_level": "笔记原话",
+    "evidence_level": "人工核对原文",
     "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
@@ -11983,6 +11983,8 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -13004,7 +13006,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -13494,7 +13496,7 @@
     "古村古镇"
    ],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "amap",
@@ -13988,7 +13990,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -22311,7 +22313,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -27245,7 +27247,7 @@
    "access": {
     "water": true
    },
-   "dog_tier": "unknown",
+   "dog_tier": "restricted",
    "sources": [
     {
      "platform": "xhs",
@@ -33165,7 +33167,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "restricted",
    "sources": [
     {
      "platform": "xhs",
@@ -34197,7 +34199,7 @@
       "note_url": "https://www.xiaohongshu.com/explore/684ae9ef000000000f03beb3"
      }
     ],
-    "evidence_level": "笔记原话",
+    "evidence_level": "人工核对原文",
     "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
@@ -34254,7 +34256,10 @@
    "poi_name": "见峦山民宿(西津野渡葛洪仙居码头店)",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:住宿服务",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "unknown",
    "sources": [
@@ -36681,7 +36686,7 @@
       "note_url": "https://www.xiaohongshu.com/explore/6ae336460000000035023c53"
      }
     ],
-    "evidence_level": "笔记原话",
+    "evidence_level": "人工核对原文",
     "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
@@ -36741,7 +36746,10 @@
    "poi_name": "温州园博园",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:风景名胜",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -43938,7 +43946,7 @@
     "人文古迹"
    ],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -44448,7 +44456,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -45499,7 +45507,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -54097,7 +54105,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 7,
     "likes": 43,
@@ -56189,7 +56197,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 15,
     "likes": 325,
@@ -56924,7 +56932,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 3,
     "likes": 38,
@@ -57366,8 +57374,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -57375,9 +57385,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "体量比桃花岕更小，但优势非常明确：水杉林离岸极近，岸上就能露营",
+      "note_id": "6aead90a000000001a02426d",
+      "author": "5天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6aead90a000000001a02426d"
+     },
+     {
+      "kind": "camp",
+      "quote": "路边有免费停车位，卫生间近在咫尺，对带装备、带娃、带宠物的露营党极度友好",
+      "note_id": "6aead90a000000001a02426d",
+      "author": "5天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6aead90a000000001a02426d"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -57405,6 +57431,8 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": null,
@@ -58972,7 +59000,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 3,
     "likes": 28,
@@ -60679,7 +60707,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "restricted",
    "pop": {
     "notes": 3,
     "likes": 41,
@@ -60761,7 +60789,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "restricted",
    "pop": {
     "notes": 6,
     "likes": 355,
@@ -61652,7 +61680,7 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 3,
     "likes": 45,
@@ -62845,7 +62873,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "default"
   },
   {
    "id": "x-徽州府衙",
@@ -65255,8 +65283,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -65264,9 +65294,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "屁大点地方就是骗进来收费的，草坪不可以坐，露营150，就是要钱，第一次见识，没来的千万别来了",
+      "note_id": "6933d8b0000000001f0097de",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6933d8b0000000001f0097de"
+     },
+     {
+      "kind": "camp",
+      "quote": "哦对进来还要收5块钱停车费#开车直达露营地[话题]# 镇江露营地",
+      "note_id": "6933d8b0000000001f0097de",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6933d8b0000000001f0097de"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -65289,6 +65335,8 @@
    "tier": "B",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": null,
@@ -65677,8 +65725,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -65686,9 +65736,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "三都九姓渔村 春江郊野营地 杭州建德，宝藏地推荐",
+      "note_id": "69cf199c000000001d01ae13",
+      "author": "陆探长来了",
+      "note_url": "https://www.xiaohongshu.com/explore/69cf199c000000001d01ae13"
+     },
+     {
+      "kind": "camp",
+      "quote": "免费打卡，大草坪，露营，钓鱼，秋千，蹦床，水上婚礼",
+      "note_id": "69cf199c000000001d01ae13",
+      "author": "陆探长来了",
+      "note_url": "https://www.xiaohongshu.com/explore/69cf199c000000001d01ae13"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -65710,6 +65776,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "heat": {
@@ -68780,8 +68848,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -68789,9 +68859,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "沿途发现一个超适合遛狗露营的地方",
+      "note_id": "6ac9f7c7000000001500124f",
+      "author": "是知鱼耶",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac9f7c7000000001500124f"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -68813,7 +68892,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -70780,7 +70861,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "default"
   },
   {
    "id": "x-九华山德懋堂酒店",
@@ -73070,18 +73151,36 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "美兰西湖公园丨上海碳烤宝藏露营地",
+      "note_id": "6a0940eb000000000702265d",
+      "author": "是小yiyi呀！",
+      "note_url": "https://www.xiaohongshu.com/explore/6a0940eb000000000702265d"
+     },
+     {
+      "kind": "camp",
+      "quote": "有湖，有水上摩托艇等活动",
+      "note_id": "6a0940eb000000000702265d",
+      "author": "是小yiyi呀！",
+      "note_url": "https://www.xiaohongshu.com/explore/6a0940eb000000000702265d"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -73104,7 +73203,9 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -73115,7 +73216,9 @@
     "kind"
    ],
    "kind_src": "name",
-   "access": {},
+   "access": {
+    "water": true
+   },
    "dog_tier": "unknown"
   },
   {
@@ -75311,7 +75414,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 2,
     "likes": 15,
@@ -76086,7 +76189,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "default"
   },
   {
    "id": "x-蒙山人家景区",
@@ -76400,7 +76503,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "default"
   },
   {
    "id": "x-白云禅寺",
@@ -76556,7 +76659,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "default"
   },
   {
    "id": "x-城西湿地公园",
@@ -76700,7 +76803,7 @@
    ],
    "kind_src": "poi_type:地名地址类",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "explicit"
   },
   {
    "id": "x-橙色计划No.1露营咖啡",
