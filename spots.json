@@ -34199,7 +34199,7 @@
       "note_url": "https://www.xiaohongshu.com/explore/684ae9ef000000000f03beb3"
      }
     ],
-    "evidence_level": "笔记原话",
+    "evidence_level": "人工核对原文",
     "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
@@ -34256,7 +34256,10 @@
    "poi_name": "见峦山民宿(西津野渡葛洪仙居码头店)",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:住宿服务",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "unknown",
    "sources": [
