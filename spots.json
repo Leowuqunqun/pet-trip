@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 730,
+  "count": 728,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -8335,7 +8335,7 @@
    ],
    "geo_src": "xhs",
    "origin": "小红书带狗笔记",
-   "curation_note": "",
+   "curation_note": " ｜ 已并入「安吉古城遗址博物馆」(386 米，博物馆在遗址公园里，同一次出行)",
    "raw_note": "📍安吉 真的不缺好看的风景",
    "photos": [
     {
@@ -8406,6 +8406,16 @@
      "url": "https://uri.amap.com/marker?position=119.670214,30.745278&name=%E5%AE%89%E5%90%89%E5%8F%A4%E5%9F%8E%E5%9B%BD%E5%AE%B6%E8%80%83%E5%8F%A4%E9%81%97%E5%9D%80%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69eee91e00000000350320d5",
+     "title": "浙江湖州｜安吉古城国家考古遗址公园"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.673602,30.747176",
+     "poi": "安吉古城遗址博物馆"
     }
    ]
   },
@@ -33467,11 +33477,11 @@
    },
    "dog": {
     "policy": "allowed",
-    "evidence": "小红书 UGC（笔记 691409e1）：「盘点一下皖南宠物友好的景点🐕 今年已经带狗去皖南玩了两次了，可以说，是非常宠物友好，以后还去[哇R]，汇总一下我们去过的景点： \t 🌟宣城宁国 📍真也天」",
-    "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "合集笔记（未点名该地点）",
-    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
+    "evidence": "带小狗过一个温\"皖\"春节！第五站，黄山脚下！ #宠物友好出行计划[话题]# #带着狗狗去户外[话题]# #西递[话题]# #南屏[话题]# #黄山秀里[话题]# #好好过年大赏[话题]#",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
    },
    "overnight": {
     "status": "unknown",
@@ -33501,7 +33511,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「胡氏宗祠」(349 米，胡氏宗祠就在龙川景区内，去龙川看的就是这个祠堂)",
    "raw_note": "",
    "photos": [
     {
@@ -33545,7 +33555,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "default",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -33561,6 +33571,21 @@
      "url": "https://uri.amap.com/marker?position=118.667261,30.075152&name=%E9%BE%99%E5%B7%9D%E6%99%AF%E5%8C%BA&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6997aff30000000015038163",
+     "title": "带小狗过一个温\"皖\"春节！第五站，黄山脚下！"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69e78401000000001a026fa7",
+     "title": "安徽西递｜皖南天花板古村游玩攻略"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.670606,30.076381",
+     "poi": "胡氏宗祠"
     }
    ]
   },
@@ -58503,84 +58528,6 @@
    "dog_tier": "explicit"
   },
   {
-   "id": "x-胡氏宗祠",
-   "name": "胡氏宗祠",
-   "kind": "scenic",
-   "tags": [],
-   "province": "安徽",
-   "city": "绩溪",
-   "gcj": [
-    118.670606,
-    30.076381
-   ],
-   "drive": {
-    "hours_oneway": 4.4,
-    "km": 362.2,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:56"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "带小狗过一个温\"皖\"春节！第五站，黄山脚下！ #宠物友好出行计划[话题]# #带着狗狗去户外[话题]# #西递[话题]# #南屏[话题]# #黄山秀里[话题]# #好好过年大赏[话题]#",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "胡氏宗祠",
-   "poi_type": "风景名胜;风景名胜;寺庙道观",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6997aff30000000015038163",
-     "title": "带小狗过一个温\"皖\"春节！第五站，黄山脚下！"
-    },
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/69e78401000000001a026fa7",
-     "title": "安徽西递｜皖南天花板古村游玩攻略"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=118.670606,30.076381",
-     "poi": "胡氏宗祠"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "人文古迹"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "poi_type:寺庙道观",
-   "access": {},
-   "dog_tier": "explicit"
-  },
-  {
    "id": "x-齐云山度假区",
    "name": "齐云山度假区",
    "kind": "scenic",
@@ -60906,7 +60853,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 13,
+    "likes": 502
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -60916,7 +60866,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 13,
+    "likes": 502,
+    "basis": "小红书点名搜索 13 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 13 条相关笔记"
   },
   {
    "id": "x-下渚湖·奇幻谷",
@@ -61069,79 +61025,6 @@
    "kind_src": "name",
    "access": {},
    "dog_tier": "explicit"
-  },
-  {
-   "id": "x-安吉古城遗址博物馆",
-   "name": "安吉古城遗址博物馆",
-   "kind": "scenic",
-   "tags": [],
-   "province": "浙江",
-   "city": "安吉",
-   "gcj": [
-    119.673602,
-    30.747176
-   ],
-   "drive": {
-    "hours_oneway": 2.54,
-    "km": 208.0,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:56"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "❌博物馆和越王陵内小狗是不能进的 ，外面草坪随便玩",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "安吉古城遗址博物馆",
-   "poi_type": "科教文化服务;博物馆;博物馆",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/69eee91e00000000350320d5",
-     "title": "浙江湖州｜安吉古城国家考古遗址公园"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=119.673602,30.747176",
-     "poi": "安吉古城遗址博物馆"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "人文古迹"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "default"
   },
   {
    "id": "x-湖州小镰仓",
