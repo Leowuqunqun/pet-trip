@@ -64898,8 +64898,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -64907,9 +64909,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🚗上海露营丨1h开车直达湖边大草原🏕️➕🆓",
+      "note_id": "6915d6bb000000000500289a",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6915d6bb000000000500289a"
+     },
+     {
+      "kind": "camp",
+      "quote": "🌞现在的天气真的太适合露营了",
+      "note_id": "6915d6bb000000000500289a",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6915d6bb000000000500289a"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -64932,7 +64949,8 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -66714,8 +66732,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -66723,9 +66743,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "正是露营好季节，滚草皮营地真的是铲屎官福音，营地宠物友好，场地开阔，草坪平整，亲子游玩、宠物露营两不误",
+      "note_id": "6accdcf2000000001b0214cb",
+      "author": "爱美食的饱饱羊",
+      "note_url": "https://www.xiaohongshu.com/explore/6accdcf2000000001b0214cb"
+     },
+     {
+      "kind": "camp",
+      "quote": "比较打动我的地方就是营地有好几个区域划分，",
+      "note_id": "6accdcf2000000001b0214cb",
+      "author": "爱美食的饱饱羊",
+      "note_url": "https://www.xiaohongshu.com/explore/6accdcf2000000001b0214cb"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -66747,7 +66782,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -71503,7 +71539,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 16
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -71513,7 +71552,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 3,
+    "likes": 16,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-阳山水库",
