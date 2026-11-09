@@ -34199,7 +34199,7 @@
       "note_url": "https://www.xiaohongshu.com/explore/684ae9ef000000000f03beb3"
      }
     ],
-    "evidence_level": "人工核对原文",
+    "evidence_level": "笔记原话",
     "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
@@ -34256,10 +34256,7 @@
    "poi_name": "见峦山民宿(西津野渡葛洪仙居码头店)",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:住宿服务",
-   "scenes": [
-    "露营",
-    "过夜"
-   ],
+   "scenes": [],
    "access": {},
    "dog_tier": "unknown",
    "sources": [
@@ -71923,8 +71920,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -71932,9 +71931,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "📌小预告：看官微说13–15号有花木露营节（7号口进），估计会很热闹吧~",
+      "note_id": "6af16859000000003a020753",
+      "author": "7小时前",
+      "note_url": "https://www.xiaohongshu.com/explore/6af16859000000003a020753"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -71961,7 +71969,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 17,
