@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 722,
+  "count": 728,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -74367,7 +74367,7 @@
    "name": "泰山风景名胜区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "山东",
    "city": "泰安",
    "gcj": [
     117.109135,
@@ -74440,7 +74440,7 @@
    "name": "徂徕山国家森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "山东",
    "city": "泰安",
    "gcj": [
     117.237187,
@@ -74514,7 +74514,7 @@
    "name": "腊山国家森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "山东",
    "city": "泰安",
    "gcj": [
     116.170668,
@@ -74588,7 +74588,7 @@
    "name": "汶河湿地公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "山东",
    "city": "临沂",
    "gcj": [
     117.994708,
@@ -74661,7 +74661,7 @@
    "name": "春秋古镇",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "山东",
    "city": "泰安",
    "gcj": [
     116.725992,
@@ -74734,7 +74734,7 @@
    "name": "云湖公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.925967,
@@ -74808,7 +74808,7 @@
    "name": "鱼山古村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "山东",
    "city": "泰安",
    "gcj": [
     116.781887,
@@ -74876,6 +74876,446 @@
    "kind_src": "name",
    "access": {},
    "dog_tier": "unknown"
+  },
+  {
+   "id": "x-琅琊古城",
+   "name": "琅琊古城",
+   "kind": "scenic",
+   "tags": [],
+   "province": "山东",
+   "city": "临沂",
+   "gcj": [
+    118.403498,
+    35.130108
+   ],
+   "drive": {
+    "hours_oneway": 6.65,
+    "km": 572.4,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 13:29"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "好客山东，宠物友好 两天一夜携宠游临沂琅琊古城和沂蒙山天蒙景区圆满落幕 ⏰徐州出发2.5小时车程到琅琊古城 因为是携宠游，以狗为本，考虑到狗狗体力，所",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "琅琊古城",
+   "poi_type": "旅游景点:风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/691b06ab00000000070325b0",
+     "title": "好客山东，宠物友好 徐州💛-庭院式🏡家庭寄养"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/699965950000000015020bc4",
+     "title": "临沂！宠物友好城市天花板！"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.403498,35.130108",
+     "poi": "琅琊古城"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:风景名胜",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-民俗文化村",
+   "name": "民俗文化村",
+   "kind": "village",
+   "tags": [],
+   "province": "安徽",
+   "city": "铜陵",
+   "gcj": [
+    117.802406,
+    30.950571
+   ],
+   "drive": {
+    "hours_oneway": 4.35,
+    "km": 379.9,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 13:29"
+   },
+   "dog": {
+    "policy": "forbidden",
+    "evidence": "路线二：小火车体验游（推荐给想体验特色交通、且有一定体力者）这个小火车跟我在瑞士做的是一样的，然后跟南山竹海的也是一样的，但是南山竹海的是不能带狗狗的",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "民俗文化村",
+   "poi_type": "餐饮服务;餐饮相关场所;餐饮相关",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/68e0e1a6000000000301dc77",
+     "title": "沂蒙山晒秋🏮全程宠物修狗也能坐缆车啦！ 丫丫孤单不孤独"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.802406,30.950571",
+     "poi": "民俗文化村"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "古村古镇"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "veto"
+  },
+  {
+   "id": "x-蒙山人家景区",
+   "name": "蒙山人家景区",
+   "kind": "scenic",
+   "tags": [],
+   "province": "山东",
+   "city": "临沂",
+   "gcj": [
+    117.882609,
+    35.543716
+   ],
+   "drive": {
+    "hours_oneway": 7.86,
+    "km": 676.3,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 13:29"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "山玩水好去处 🍃五一过后带着小猫小狗一起去了沂蒙山！ 在山里过了几天非常惬意的日子 攻略来啦 \t 👉宠物友好景点 🔹龟蒙山 本来想说带着小狗就不去了，但来都来了还是去一下吧，没想到非常宠物友好，观光车和缆车都可以带小狗，走路的路程也不多，小",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "蒙山人家景区",
+   "poi_type": "旅游景点:风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a00765b000000003701df88",
+     "title": "徐州周边2h🚗小狗友好的游山玩水好去处"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.882609,35.543716",
+     "poi": "蒙山人家景区"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-跋山水库",
+   "name": "跋山水库",
+   "kind": "water",
+   "tags": [],
+   "province": "山东",
+   "city": "临沂",
+   "gcj": [
+    118.522654,
+    35.894756
+   ],
+   "drive": {
+    "hours_oneway": 7.56,
+    "km": 649.4,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 13:29"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "山水库） 🚗路程：青岛自驾大约2小时，全程好开，轿车无压力 💰费用：完全免费，无门票，停车不花钱 🐶宠物友好：✅不限犬种、可以放开牵引、湖边浅滩能下水 游玩亮点 1. 超大环湖草坪，树林阴凉充足，夏天不怕晒，狗狗随便跑、打滚 2. 湖边浅水",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "跋山水库",
+   "poi_type": "地名地址:自然地名:河流",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a49ea00000000000f029e14",
+     "title": "✅逃离城市｜青岛自驾2h 小狗快乐老家"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.522654,35.894756",
+     "poi": "跋山水库"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-中国兰陵压油沟风景区",
+   "name": "中国兰陵压油沟风景区",
+   "kind": "scenic",
+   "tags": [],
+   "province": "山东",
+   "city": "临沂",
+   "gcj": [
+    117.96709,
+    34.927501
+   ],
+   "drive": {
+    "hours_oneway": 6.8,
+    "km": 590.0,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 13:29"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "号白天从连云港出发自驾1.5h抵达临沂·兰陵县 \t 玩🦮： 📍兰溪公园（P7-P8） 免费的大公园 宠物友好 人少 有大草坪 📍兰陵压油沟风景区（P1-P6） 🎫49.9/人 🫘上的团购，压油沟是此行的目的地，选在第二天早8点30顶门进🌝超",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "中国兰陵压油沟风景区",
+   "poi_type": "旅游景点:国家级景点",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a02a7ff000000000803c7a6",
+     "title": "小狗地图🗺️｜我宣布兰陵压油沟是小狗天堂"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.96709,34.927501",
+     "poi": "中国兰陵压油沟风景区"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "人文古迹"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-彩虹小镇",
+   "name": "彩虹小镇",
+   "kind": "village",
+   "tags": [],
+   "province": "山东",
+   "city": "临沂",
+   "gcj": [
+    118.689787,
+    35.785339
+   ],
+   "drive": {
+    "hours_oneway": 7.25,
+    "km": 630.6,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 13:29"
+   },
+   "dog": {
+    "policy": "forbidden",
+    "evidence": "来临沂怎么可以不吃炒鸡呢，路过一家网红炒鸡店，我妈妈说肯定不允许带狗狗，我说要不还是问问试试看，所以我蹑手蹑脚进去，像做错事的人一样小心翼翼询问是否可以带狗狗，工作人员：嗯",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "彩虹小镇",
+   "poi_type": "旅游景点:风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/699965950000000015020bc4",
+     "title": "临沂！宠物友好城市天花板！"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.689787,35.785339",
+     "poi": "彩虹小镇"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "veto"
   }
  ],
  "out_of_range": [
