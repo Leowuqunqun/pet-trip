@@ -833,15 +833,15 @@
    "rating": 4.6,
    "rating_src": "上海联怡枇杷乐园",
    "heat": {
-    "notes": 2,
-    "likes": 806
+    "notes": 1,
+    "likes": 15
    },
    "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 38 条笔记，无一条标题带该地名"
+    "notes": 1,
+    "likes": 15,
+    "basis": "小红书点名搜索 1 条相关笔记"
    },
-   "heat_basis": "点名搜索 38 条笔记，无一条标题带该地名",
+   "heat_basis": "小红书点名搜索 1 条相关笔记",
    "pending": [
     "overnight"
    ],
@@ -1204,9 +1204,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 38 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 38 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [
     "dog",
     "overnight"
@@ -2173,8 +2173,8 @@
     "evidence": "小红书 C级UGC（笔记 69d280d7，@1414141414）：「话题标签：可以带狗」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -2291,7 +2291,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -2470,8 +2470,8 @@
     "evidence": "小红书 C级UGC（笔记 69d280d7，@1414141414）：「话题标签：可以带狗」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -2586,7 +2586,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -2832,9 +2832,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 40 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 40 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [
     "dog",
     "overnight"
@@ -3013,8 +3013,8 @@
     "evidence": "小红书 C级UGC（笔记 69d280d7，@1414141414）：「话题标签：可以带狗」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -3125,7 +3125,7 @@
     "人文古迹"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -3809,9 +3809,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 35 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 35 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [
     "overnight"
    ],
@@ -3970,9 +3970,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 39 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 39 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [
     "overnight"
    ],
@@ -4131,9 +4131,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 36 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 36 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [
     "overnight"
    ],
@@ -4312,9 +4312,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 38 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 38 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [
     "overnight"
    ],
@@ -4631,9 +4631,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 37 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 37 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [
     "overnight"
    ],
@@ -7758,8 +7758,8 @@
     "evidence": "小红书 C级UGC（笔记 6a1ae591，@宠物友好推荐官冬爸队长）：「宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全 📍宜兴，真的是上海、南京、杭州、苏州周边非常宝藏的宠物友好小城！ [哇R]这里有连绵的青山和大竹海，有丰沛的水线和溯溪点，有可以带小狗探险乘凉的溶洞，有开阔舒朗的大草地，有唯美的太湖美景 [」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "allowed_wild",
@@ -7862,7 +7862,7 @@
     "过夜"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -8031,8 +8031,8 @@
     "evidence": "小红书 C级UGC（笔记 6a1ae591，@宠物友好推荐官冬爸队长）：「宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全 📍宜兴，真的是上海、南京、杭州、苏州周边非常宝藏的宠物友好小城！ [哇R]这里有连绵的青山和大竹海，有丰沛的水线和溯溪点，有可以带小狗探险乘凉的溶洞，有开阔舒朗的大草地，有唯美的太湖美景 [」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -8096,7 +8096,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -9764,8 +9764,8 @@
     "evidence": "小红书 C级UGC（笔记 6a1ae591，@宠物友好推荐官冬爸队长）：「宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全 📍宜兴，真的是上海、南京、杭州、苏州周边非常宝藏的宠物友好小城！ [哇R]这里有连绵的青山和大竹海，有丰沛的水线和溯溪点，有可以带小狗探险乘凉的溶洞，有开阔舒朗的大草地，有唯美的太湖美景 [」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -9840,7 +9840,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -10835,8 +10835,8 @@
     "evidence": "小红书 C级UGC（笔记 69b77905，@野蛮小奇）：「话题标签：宠物友好」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -10912,7 +10912,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -13346,8 +13346,8 @@
     "evidence": "小红书 C级UGC（笔记 69d8822e，@天长与地久无关）：「话题标签：可以带狗」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "allowed_wild",
@@ -13433,7 +13433,7 @@
     "过夜"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -18591,8 +18591,8 @@
     "evidence": "小红书 C级UGC（笔记 6aa7677a，@Kiokio）：「合小狗撒欢 中午直接在农场吃火锅 工作人员也很热情 还给我们品尝农场种的葡萄 整个黟县碧山的景区都挺宠物友好的 但是村里会有散养的小狗狗 一定要注意牵绳」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -18668,7 +18668,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -23384,8 +23384,8 @@
     "evidence": "小红书 UGC（笔记 69c00900）：「话题标签：可以带狗」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -23457,7 +23457,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -23498,8 +23498,8 @@
     "evidence": "小红书 UGC（笔记 69c00900）：「话题标签：可以带狗」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -23574,7 +23574,7 @@
     "古村古镇"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -23615,8 +23615,8 @@
     "evidence": "小红书 UGC（笔记 69d280d7）：「话题标签：可以带狗」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -23691,7 +23691,7 @@
     "古村古镇"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -23732,8 +23732,8 @@
     "evidence": "小红书 UGC（笔记 69d280d7）：「话题标签：可以带狗」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -23808,7 +23808,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -25904,8 +25904,8 @@
     "evidence": "小红书 UGC（笔记 69c00900）：「话题标签：可以带狗」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok_tag",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -25980,7 +25980,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -28307,8 +28307,8 @@
     "evidence": "小红书 UGC（笔记 67505727）：「本篇笔记主要列了湖州市内以及市内附近遛狗的点。不包括安吉，安吉太多了需要另写✍🏻️。以下几处点，均为宠物友好，大狗友好，且免费🆓无门票。 \t ✅太湖观景台p9，导航直达。推荐看日出。 \t ✅桃花岕水库」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -28383,7 +28383,7 @@
     "古村古镇"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -30227,8 +30227,8 @@
     "evidence": "小红书 UGC（笔记 6a1ae591）：「宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全 📍宜兴，真的是上海、南京、杭州、苏州周边非常宝藏的宠物友好小城！ [哇R]这里有连绵的青山和大竹海，有丰沛的水线和溯溪点，有可以带小狗探险乘凉的溶洞，有」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -30300,7 +30300,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -33500,8 +33500,8 @@
     "evidence": "小红书 UGC（笔记 691409e1）：「盘点一下皖南宠物友好的景点🐕 今年已经带狗去皖南玩了两次了，可以说，是非常宠物友好，以后还去[哇R]，汇总一下我们去过的景点： \t 🌟宣城宁国 📍真也天」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -33578,7 +33578,7 @@
     "溯溪"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -33619,8 +33619,8 @@
     "evidence": "小红书 UGC（笔记 691409e1）：「盘点一下皖南宠物友好的景点🐕 今年已经带狗去皖南玩了两次了，可以说，是非常宠物友好，以后还去[哇R]，汇总一下我们去过的景点： \t 🌟宣城宁国 📍真也天」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -33692,7 +33692,7 @@
    "kind_src": "兜底",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -33733,8 +33733,8 @@
     "evidence": "小红书 UGC（笔记 691409e1）：「盘点一下皖南宠物友好的景点🐕 今年已经带狗去皖南玩了两次了，可以说，是非常宠物友好，以后还去[哇R]，汇总一下我们去过的景点： \t 🌟宣城宁国 📍真也天」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -33808,7 +33808,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -33849,8 +33849,8 @@
     "evidence": "小红书 UGC（笔记 691409e1）：「盘点一下皖南宠物友好的景点🐕 今年已经带狗去皖南玩了两次了，可以说，是非常宠物友好，以后还去[哇R]，汇总一下我们去过的景点： \t 🌟宣城宁国 📍真也天」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -33924,7 +33924,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -33965,8 +33965,8 @@
     "evidence": "小红书 UGC（笔记 691409e1）：「盘点一下皖南宠物友好的景点🐕 今年已经带狗去皖南玩了两次了，可以说，是非常宠物友好，以后还去[哇R]，汇总一下我们去过的景点： \t 🌟宣城宁国 📍真也天」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -34023,7 +34023,7 @@
     "古村古镇"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -34064,8 +34064,8 @@
     "evidence": "小红书 UGC（笔记 691409e1）：「盘点一下皖南宠物友好的景点🐕 今年已经带狗去皖南玩了两次了，可以说，是非常宠物友好，以后还去[哇R]，汇总一下我们去过的景点： \t 🌟宣城宁国 📍真也天」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -34141,7 +34141,7 @@
     "古村古镇"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -36991,8 +36991,8 @@
     "evidence": "小红书 UGC（笔记 6acf43ad）：「🐕🐈铲屎官必看！温州宠物友好地大合集 温州的宠物友好浓度正在持续上升～ 温温整理了一批宠物友好公园和景区 快带毛孩子出门交友、撒欢放风吧！ \t 🆓宠物友好公园」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -37071,7 +37071,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -37112,8 +37112,8 @@
     "evidence": "小红书 UGC（笔记 6acf43ad）：「🐕🐈铲屎官必看！温州宠物友好地大合集 温州的宠物友好浓度正在持续上升～ 温温整理了一批宠物友好公园和景区 快带毛孩子出门交友、撒欢放风吧！ \t 🆓宠物友好公园」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -37190,7 +37190,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -37369,8 +37369,8 @@
     "evidence": "小红书 UGC（笔记 6acf43ad）：「🐕🐈铲屎官必看！温州宠物友好地大合集 温州的宠物友好浓度正在持续上升～ 温温整理了一批宠物友好公园和景区 快带毛孩子出门交友、撒欢放风吧！ \t 🆓宠物友好公园」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -37444,7 +37444,7 @@
    "kind_src": "poi_type:风景名胜",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -37485,8 +37485,8 @@
     "evidence": "小红书 UGC（笔记 6acf43ad）：「🐕🐈铲屎官必看！温州宠物友好地大合集 温州的宠物友好浓度正在持续上升～ 温温整理了一批宠物友好公园和景区 快带毛孩子出门交友、撒欢放风吧！ \t 🆓宠物友好公园」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -37563,7 +37563,7 @@
     "溯溪"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -37604,8 +37604,8 @@
     "evidence": "小红书 UGC（笔记 6acf43ad）：「🐕🐈铲屎官必看！温州宠物友好地大合集 温州的宠物友好浓度正在持续上升～ 温温整理了一批宠物友好公园和景区 快带毛孩子出门交友、撒欢放风吧！ \t 🆓宠物友好公园」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -37682,7 +37682,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -42337,8 +42337,8 @@
     "evidence": "小红书 UGC（笔记 68bec1ce）：「上海周边2h！嘉兴宠物友好游玩地大全‼️ [坏笑R]人！上海周边2小时带小狗游玩，你是不是还不知道可以去哪里呢？ 热爱生活的冬冬公主给大家做了上海周边宠物友好」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -42414,7 +42414,7 @@
     "人文古迹"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -42455,8 +42455,8 @@
     "evidence": "小红书 UGC（笔记 68bec1ce）：「上海周边2h！嘉兴宠物友好游玩地大全‼️ [坏笑R]人！上海周边2小时带小狗游玩，你是不是还不知道可以去哪里呢？ 热爱生活的冬冬公主给大家做了上海周边宠物友好」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -42530,7 +42530,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -42571,8 +42571,8 @@
     "evidence": "小红书 UGC（笔记 68bec1ce）：「上海周边2h！嘉兴宠物友好游玩地大全‼️ [坏笑R]人！上海周边2小时带小狗游玩，你是不是还不知道可以去哪里呢？ 热爱生活的冬冬公主给大家做了上海周边宠物友好」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -42645,7 +42645,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -42686,8 +42686,8 @@
     "evidence": "小红书 UGC（笔记 68bec1ce）：「上海周边2h！嘉兴宠物友好游玩地大全‼️ [坏笑R]人！上海周边2小时带小狗游玩，你是不是还不知道可以去哪里呢？ 热爱生活的冬冬公主给大家做了上海周边宠物友好」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -42758,7 +42758,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -42945,8 +42945,8 @@
     "evidence": "小红书 UGC（笔记 68bec1ce）：「上海周边2h！嘉兴宠物友好游玩地大全‼️ [坏笑R]人！上海周边2小时带小狗游玩，你是不是还不知道可以去哪里呢？ 热爱生活的冬冬公主给大家做了上海周边宠物友好」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -43020,7 +43020,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -43061,8 +43061,8 @@
     "evidence": "小红书 UGC（笔记 68bec1ce）：「上海周边2h！嘉兴宠物友好游玩地大全‼️ [坏笑R]人！上海周边2小时带小狗游玩，你是不是还不知道可以去哪里呢？ 热爱生活的冬冬公主给大家做了上海周边宠物友好」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -43114,7 +43114,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -43155,8 +43155,8 @@
     "evidence": "小红书 UGC（笔记 68bec1ce）：「上海周边2h！嘉兴宠物友好游玩地大全‼️ [坏笑R]人！上海周边2小时带小狗游玩，你是不是还不知道可以去哪里呢？ 热爱生活的冬冬公主给大家做了上海周边宠物友好」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -43232,7 +43232,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -43557,8 +43557,8 @@
     "evidence": "小红书 UGC（笔记 68bec1ce）：「上海周边2h！嘉兴宠物友好游玩地大全‼️ [坏笑R]人！上海周边2小时带小狗游玩，你是不是还不知道可以去哪里呢？ 热爱生活的冬冬公主给大家做了上海周边宠物友好」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -43634,7 +43634,7 @@
     "古村古镇"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -43814,8 +43814,8 @@
     "evidence": "小红书 UGC（笔记 68bec1ce）：「上海周边2h！嘉兴宠物友好游玩地大全‼️ [坏笑R]人！上海周边2小时带小狗游玩，你是不是还不知道可以去哪里呢？ 热爱生活的冬冬公主给大家做了上海周边宠物友好」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -43891,7 +43891,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -46200,8 +46200,8 @@
     "evidence": "小红书 UGC（笔记 682bfe29）：「🐶9大绍兴宠物友好景区！撒欢攻略来啦～ 1. 安昌古镇 | 坐乌篷船游江南水乡 \t 📍地址：绍兴市柯桥区安昌镇 🚗导航：定位“安昌古镇停车场” 🐾宠物」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -46275,7 +46275,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "amap",
@@ -49125,8 +49125,8 @@
     "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -49196,7 +49196,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -49240,8 +49240,8 @@
     "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -49315,7 +49315,7 @@
     "古村古镇"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -49358,8 +49358,8 @@
     "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -49431,7 +49431,7 @@
    "kind_src": "poi_type:其余",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -49620,8 +49620,8 @@
     "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -49695,7 +49695,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -49738,8 +49738,8 @@
     "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -49813,7 +49813,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -49856,8 +49856,8 @@
     "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -49932,7 +49932,7 @@
     "人文古迹"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -50341,8 +50341,8 @@
     "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -50397,7 +50397,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -50440,8 +50440,8 @@
     "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -50513,7 +50513,7 @@
    "kind_src": "poi_type:风景名胜",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -50556,8 +50556,8 @@
     "evidence": "小红书 UGC（笔记 6aa682cc）：「太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
    },
    "overnight": {
     "status": "unknown",
@@ -50629,7 +50629,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -53651,8 +53651,8 @@
     "policy": "allowed",
     "evidence": "一些和小狗无法复刻的旅行瞬间 🎞️ 回顾去年一整年，竟然和无所谓一起去了26座城市50多个宠物友好地点，拍摄了2w+的视频和照片（虽然偷懒大部份都没剪 [汗颜R]  回顾这一年感觉到处都留下了快乐的印记 [红色心形R] \t 📒 以",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -53706,7 +53706,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "default",
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -54549,7 +54549,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-安昌古镇",
@@ -54627,7 +54633,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-四明山观景台",
@@ -54706,7 +54718,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-长江林场探险公园",
@@ -54784,7 +54802,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-镜湖公园",
@@ -54807,8 +54831,8 @@
     "policy": "allowed",
     "evidence": "话题标签：宠物友好",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -54863,7 +54887,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-鲁迅故里",
@@ -54886,8 +54916,8 @@
     "policy": "allowed",
     "evidence": "🐶9大绍兴宠物友好景区！撒欢攻略来啦～ 1. 安昌古镇 | 坐乌篷船游江南水乡 \t 📍地址：绍兴市柯桥区安昌镇 🚗导航：定位“安昌古镇停车场” 🐾宠物",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -54939,7 +54969,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-烟雨长廊",
@@ -55015,7 +55051,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "veto",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-星空营地",
@@ -55104,7 +55146,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-湘家荡旅游度假区",
@@ -55180,7 +55228,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-油车水库",
@@ -55258,7 +55312,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-大草坪露营地",
@@ -55355,7 +55415,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-星空露营基地",
@@ -55451,7 +55517,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-青奥森林公园",
@@ -55530,7 +55602,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-安吉湿地",
@@ -55606,7 +55684,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-神女之心",
@@ -55629,8 +55713,8 @@
     "policy": "allowed",
     "evidence": "溧阳‼️带狗旅行游玩点大全！附3天2晚攻略 在江浙沪的各小城里，📍溧阳，简直是宠物友好的模范！ 这是一座被🎋竹海、🏔青山、🏞大湖、大草地所覆盖的生态之城 [点赞R]重点是：【✔️南山竹海】和【✔️天目湖山水园】两大5A",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -55682,7 +55766,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-劳岭水库",
@@ -56796,8 +56886,8 @@
     "policy": "allowed",
     "evidence": "溧阳‼️带狗旅行游玩点大全！附3天2晚攻略 在江浙沪的各小城里，📍溧阳，简直是宠物友好的模范！ 这是一座被🎋竹海、🏔青山、🏞大湖、大草地所覆盖的生态之城 [点赞R]重点是：【✔️南山竹海】和【✔️天目湖山水园】两大5A",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -56849,7 +56939,7 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-向阳水库",
@@ -57340,8 +57430,8 @@
     "policy": "allowed",
     "evidence": "快🐴住｜杭州宠物撒欢地图！闯入绿野仙踪 趁着周末和假期不想人从众 特别定制了 杭州专属「宠物友好公园地图」 闪亮登场💥 西湖边人多？那就带毛孩子去这些宝藏绿地吧～ - 📍杭州宠物友好景点清单（部分） 西湖区｜满觉陇、铜鉴湖公园",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -57396,7 +57486,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-钱江世纪公园",
@@ -57419,8 +57509,8 @@
     "policy": "allowed",
     "evidence": "快🐴住｜杭州宠物撒欢地图！闯入绿野仙踪 趁着周末和假期不想人从众 特别定制了 杭州专属「宠物友好公园地图」 闪亮登场💥 西湖边人多？那就带毛孩子去这些宝藏绿地吧～ - 📍杭州宠物友好景点清单（部分） 西湖区｜满觉陇、铜鉴湖公园",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -57474,7 +57564,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-梅干岭观景台",
@@ -59428,8 +59518,8 @@
     "policy": "allowed",
     "evidence": "一些和小狗无法复刻的旅行瞬间 🎞️ 回顾去年一整年，竟然和无所谓一起去了26座城市50多个宠物友好地点，拍摄了2w+的视频和照片（虽然偷懒大部份都没剪 [汗颜R]  回顾这一年感觉到处都留下了快乐的印记 [红色心形R] \t 📒 以",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -59479,7 +59569,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-西山国家森林公园",
@@ -59502,8 +59592,8 @@
     "policy": "allowed",
     "evidence": "一些和小狗无法复刻的旅行瞬间 🎞️ 回顾去年一整年，竟然和无所谓一起去了26座城市50多个宠物友好地点，拍摄了2w+的视频和照片（虽然偷懒大部份都没剪 [汗颜R]  回顾这一年感觉到处都留下了快乐的印记 [红色心形R] \t 📒 以",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -59553,7 +59643,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-禹山坞水库",
@@ -59576,8 +59666,8 @@
     "policy": "allowed",
     "evidence": "一些和小狗无法复刻的旅行瞬间 🎞️ 回顾去年一整年，竟然和无所谓一起去了26座城市50多个宠物友好地点，拍摄了2w+的视频和照片（虽然偷懒大部份都没剪 [汗颜R]  回顾这一年感觉到处都留下了快乐的印记 [红色心形R] \t 📒 以",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -59627,7 +59717,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-象鼻水库",
@@ -59650,8 +59740,8 @@
     "policy": "allowed",
     "evidence": "一些和小狗无法复刻的旅行瞬间 🎞️ 回顾去年一整年，竟然和无所谓一起去了26座城市50多个宠物友好地点，拍摄了2w+的视频和照片（虽然偷懒大部份都没剪 [汗颜R]  回顾这一年感觉到处都留下了快乐的印记 [红色心形R] \t 📒 以",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -59700,7 +59790,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-大溪港湿地公园",
@@ -59798,8 +59888,8 @@
     "policy": "allowed",
     "evidence": "小红书笔记（6985bff2000000002800accc）：「话题标签：宠物友好」",
     "evidence_level": "同篇笔记提及",
-    "basis": "离线回扫已采笔记",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -59849,7 +59939,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-锡惠公园",
@@ -60018,8 +60108,8 @@
     "policy": "allowed",
     "evidence": "2025年度宠物友好地年终总结 2025年小狗依旧精彩，我们仍翻阅着中国这本书，期待2026年继续新篇章~ 5️⃣分 ·烟台：金沙滩海滨公园、郁金香花园",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -60079,7 +60169,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-海滨公园",
@@ -61611,8 +61701,8 @@
     "policy": "allowed",
     "evidence": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全 📍宜兴，真的是上海、南京、杭州、苏州周边非常宝藏的宠物友好小城！ [哇R]这里有连绵的青山和大竹海，有丰沛的水线和溯溪点，有可以带小狗探险乘凉的溶洞，有开阔舒朗的大草地，有唯美的太湖美景 [",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -61661,7 +61751,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-大潮山小长城",
@@ -61684,8 +61774,8 @@
     "policy": "allowed",
     "evidence": "宜兴带狗旅行 | 2-3日保姆攻略！附游玩大全 📍宜兴，真的是上海、南京、杭州、苏州周边非常宝藏的宠物友好小城！ [哇R]这里有连绵的青山和大竹海，有丰沛的水线和溯溪点，有可以带小狗探险乘凉的溶洞，有开阔舒朗的大草地，有唯美的太湖美景 [",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -61734,7 +61824,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-竺山湖湿地",
@@ -61904,8 +61994,8 @@
     "policy": "allowed",
     "evidence": "快🐴住｜杭州宠物撒欢地图！闯入绿野仙踪 趁着周末和假期不想人从众 特别定制了 杭州专属「宠物友好公园地图」 闪亮登场💥 西湖边人多？那就带毛孩子去这些宝藏绿地吧～ - 📍杭州宠物友好景点清单（部分） 西湖区｜满觉陇、铜鉴湖公园",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -61955,7 +62045,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-白云源景区",
@@ -61978,8 +62068,8 @@
     "policy": "allowed",
     "evidence": "快🐴住｜杭州宠物撒欢地图！闯入绿野仙踪 趁着周末和假期不想人从众 特别定制了 杭州专属「宠物友好公园地图」 闪亮登场💥 西湖边人多？那就带毛孩子去这些宝藏绿地吧～ - 📍杭州宠物友好景点清单（部分） 西湖区｜满觉陇、铜鉴湖公园",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -62026,7 +62116,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-冷坞水库",
@@ -62049,8 +62139,8 @@
     "policy": "allowed",
     "evidence": "快🐴住｜杭州宠物撒欢地图！闯入绿野仙踪 趁着周末和假期不想人从众 特别定制了 杭州专属「宠物友好公园地图」 闪亮登场💥 西湖边人多？那就带毛孩子去这些宝藏绿地吧～ - 📍杭州宠物友好景点清单（部分） 西湖区｜满觉陇、铜鉴湖公园",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -62099,7 +62189,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-剪二水库",
@@ -62122,8 +62212,8 @@
     "policy": "allowed",
     "evidence": "快🐴住｜杭州宠物撒欢地图！闯入绿野仙踪 趁着周末和假期不想人从众 特别定制了 杭州专属「宠物友好公园地图」 闪亮登场💥 西湖边人多？那就带毛孩子去这些宝藏绿地吧～ - 📍杭州宠物友好景点清单（部分） 西湖区｜满觉陇、铜鉴湖公园",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -62172,7 +62262,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-五常湿地",
@@ -62195,8 +62285,8 @@
     "policy": "allowed",
     "evidence": "快🐴住｜杭州宠物撒欢地图！闯入绿野仙踪 趁着周末和假期不想人从众 特别定制了 杭州专属「宠物友好公园地图」 闪亮登场💥 西湖边人多？那就带毛孩子去这些宝藏绿地吧～ - 📍杭州宠物友好景点清单（部分） 西湖区｜满觉陇、铜鉴湖公园",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -62243,7 +62333,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-象山水库",
@@ -63821,8 +63911,8 @@
     "policy": "allowed",
     "evidence": "话题标签：宠物友好",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -63872,7 +63962,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-苏州公园",
@@ -63895,8 +63985,8 @@
     "policy": "allowed",
     "evidence": "话题标签：宠物友好",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -63945,7 +64035,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-丹湫谷度假民宿",
@@ -65475,8 +65565,8 @@
     "policy": "allowed",
     "evidence": "一去再去 ✨分享几个小狗在蓝星球的点滴✨ - 建德，千岛湖和桐庐之间拥美而低调的小城， 好吃好玩，对宠物友好宽容。 我们去了不下五次。 - 可带宠物玩的地方： 🐕1800年历史的严州古城。历史气息浓厚，吃玩住方便，四季皆宜； 🐕三都九姓渔村",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -65534,7 +65624,7 @@
    ],
    "kind_src": "poi_type:住宿服务",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-三都九姓渔村",
@@ -65995,8 +66085,8 @@
     "policy": "allowed",
     "evidence": "的公园遛狗，因为哈喽的性格适合单独打野。工作日的上午，市外公园人也会更少一些。 \t 整理了嘉兴的几个宠物友好公园： （排名不分先后） 🔲穆湖森林公园。入口处就是超级大的草地！没人的时间会很安逸，人多的话就牵着绳往里溜溜。 \t 🔲中央公园。好",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -66046,7 +66136,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-月河历史街区",
@@ -66069,8 +66159,8 @@
     "policy": "allowed",
     "evidence": "的公园遛狗，因为哈喽的性格适合单独打野。工作日的上午，市外公园人也会更少一些。 \t 整理了嘉兴的几个宠物友好公园： （排名不分先后） 🔲穆湖森林公园。入口处就是超级大的草地！没人的时间会很安逸，人多的话就牵着绳往里溜溜。 \t 🔲中央公园。好",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -66117,7 +66207,7 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-凤城河风景区",
@@ -66796,8 +66886,8 @@
     "policy": "allowed",
     "evidence": "宝阁 - ⚠️小贴士：村里有不少古宅改建了咖啡馆酒吧，住一晚推荐班马家民宿，中式园林风格，早餐丰盛且宠物友好 #倒影里的春天[话题]# #江浙沪周边游[话题]# #小众古村落[话题]# #历史文化名镇[话题]# #古村落拍照[话题]# #永",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -66846,7 +66936,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-大唐贡茶院",
@@ -66869,8 +66959,8 @@
     "policy": "allowed",
     "evidence": "宝阁 - ⚠️小贴士：村里有不少古宅改建了咖啡馆酒吧，住一晚推荐班马家民宿，中式园林风格，早餐丰盛且宠物友好 #倒影里的春天[话题]# #江浙沪周边游[话题]# #小众古村落[话题]# #历史文化名镇[话题]# #古村落拍照[话题]# #永",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -66917,7 +67007,7 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-天空的茶",
@@ -66940,8 +67030,8 @@
     "policy": "allowed",
     "evidence": "宝阁 - ⚠️小贴士：村里有不少古宅改建了咖啡馆酒吧，住一晚推荐班马家民宿，中式园林风格，早餐丰盛且宠物友好 #倒影里的春天[话题]# #江浙沪周边游[话题]# #小众古村落[话题]# #历史文化名镇[话题]# #古村落拍照[话题]# #永",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -66988,7 +67078,7 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-壕股塔院",
@@ -67319,8 +67409,8 @@
     "policy": "allowed",
     "evidence": "处溜达了🐕🐕‍🦺 即使是冬天也基本保持了一周两次的「撒野」频率 今天就先分享一下在杭州和小狗去过的「宠物友好」遛狗地～ 🙋我的标准：人一定要少！！一定范围内可以松绳撒欢；缓坡为主，台阶越少越好。 \t 1️⃣大洋坞水库 水库（不能下水）旁边有",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -67380,7 +67470,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-大洋坞水库",
@@ -67476,8 +67566,8 @@
     "policy": "allowed",
     "evidence": "处溜达了🐕🐕‍🦺 即使是冬天也基本保持了一周两次的「撒野」频率 今天就先分享一下在杭州和小狗去过的「宠物友好」遛狗地～ 🙋我的标准：人一定要少！！一定范围内可以松绳撒欢；缓坡为主，台阶越少越好。 \t 1️⃣大洋坞水库 水库（不能下水）旁边有",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -67526,7 +67616,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-光明寺水库",
@@ -68134,8 +68224,8 @@
     "policy": "allowed",
     "evidence": "面三个地方都不近，但从岱山自驾出来顺路的 \t - \t 定海区： 🏯定海古城，🆓 ☕️AND YOU（可以带狗） ☕️来晚了coffee（没带小狗喝了就走了） \t - \t 🍜：导航🧭乐一烘焙店，在它隔壁 生理期不能吃海鲜☹️，不过这家面条出乎",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -68195,7 +68285,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-朱家尖景区",
@@ -68218,8 +68308,8 @@
     "policy": "allowed",
     "evidence": "面三个地方都不近，但从岱山自驾出来顺路的 \t - \t 定海区： 🏯定海古城，🆓 ☕️AND YOU（可以带狗） ☕️来晚了coffee（没带小狗喝了就走了） \t - \t 🍜：导航🧭乐一烘焙店，在它隔壁 生理期不能吃海鲜☹️，不过这家面条出乎",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -68266,7 +68356,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-定海古城",
@@ -68879,8 +68969,8 @@
     "policy": "allowed",
     "evidence": "很多，拍照也超出片，图3-5 \t Day2· 南山竹海+天目湖观景平台 1️⃣南山竹海 江浙沪出名的宠物友好5a级景区，除了地缆和熊猫馆不可以去，其他狗狗都可以体验。 🅿️离入口最近的停车场是A区，小轿车15元/次 🎫门票：提前一天线上购买",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -68930,7 +69020,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-报恩禅寺",
@@ -68953,8 +69043,8 @@
     "policy": "allowed",
     "evidence": "很多，拍照也超出片，图3-5 \t Day2· 南山竹海+天目湖观景平台 1️⃣南山竹海 江浙沪出名的宠物友好5a级景区，除了地缆和熊猫馆不可以去，其他狗狗都可以体验。 🅿️离入口最近的停车场是A区，小轿车15元/次 🎫门票：提前一天线上购买",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -69003,7 +69093,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-九龙湖公园",
@@ -69318,8 +69408,8 @@
     "policy": "allowed",
     "evidence": "太仓‼️宠物友好游玩点大合集！附3日攻略 [得意R]上海不远，又可以带狗狗旅行撒欢，那么： 📌太仓，真的是养宠人的遛狗和旅行好去处！这是一座集欧式风",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -69368,7 +69458,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-新市古镇",
@@ -71171,8 +71261,8 @@
     "policy": "allowed",
     "evidence": "带着狗狗，安徽自驾深度，10天八城26景，小结！ #宠物友好出行计划[话题]# #安徽自驾[话题]# #带着狗狗去旅行[话题]# #带着宠物去玩耍[话题]# #安徽旅游[话题]# #宠物友好景",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -71221,7 +71311,7 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-马头老街",
@@ -71244,8 +71334,8 @@
     "policy": "allowed",
     "evidence": "带着狗狗，安徽自驾深度，10天八城26景，小结！ #宠物友好出行计划[话题]# #安徽自驾[话题]# #带着狗狗去旅行[话题]# #带着宠物去玩耍[话题]# #安徽旅游[话题]# #宠物友好景",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -71294,7 +71384,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-芜湖古城",
@@ -71317,8 +71407,8 @@
     "policy": "allowed",
     "evidence": "带着狗狗，安徽自驾深度，10天八城26景，小结！ #宠物友好出行计划[话题]# #安徽自驾[话题]# #带着狗狗去旅行[话题]# #带着宠物去玩耍[话题]# #安徽旅游[话题]# #宠物友好景",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -71367,7 +71457,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-红石咀公园",
@@ -71756,8 +71846,8 @@
     "policy": "allowed",
     "evidence": "快🐴住｜杭州宠物撒欢地图！闯入绿野仙踪 趁着周末和假期不想人从众 特别定制了 杭州专属「宠物友好公园地图」 闪亮登场💥 西湖边人多？那就带毛孩子去这些宝藏绿地吧～ - 📍杭州宠物友好景点清单（部分） 西湖区｜满觉陇、铜鉴湖公园",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -71811,7 +71901,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-巡塘古镇",
@@ -74636,8 +74726,8 @@
     "policy": "allowed",
     "evidence": "带着狗狗，安徽自驾深度，10天八城26景，小结！ #宠物友好出行计划[话题]# #安徽自驾[话题]# #带着狗狗去旅行[话题]# #带着宠物去玩耍[话题]# #安徽旅游[话题]# #宠物友好景",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -74686,7 +74776,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-天堂寨风景区",
@@ -75524,8 +75614,8 @@
     "policy": "allowed",
     "evidence": "小红书笔记（69ecfcbe0000000035025b93）：「宠物友好景区大汇总 全国宠物友好景区有哪些呢？大家实地去过的可以分享一下吗？方便计划带宠出游。我先来几个： 内蒙古乌兰察布辉腾锡勒草原黄花沟」",
     "evidence_level": "同篇笔记提及",
-    "basis": "离线回扫已采笔记",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -75575,7 +75665,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-鱼山古村",
@@ -76559,8 +76649,8 @@
     "policy": "allowed",
     "evidence": "宠物友好景区大汇总 全国宠物友好景区有哪些呢？大家实地去过的可以分享一下吗？方便计划带宠出游。我先来几个： 内蒙古乌兰察布辉腾锡勒草原黄花沟",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -76611,7 +76701,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-南阳古镇",
@@ -76634,8 +76724,8 @@
     "policy": "allowed",
     "evidence": "宠物友好景区大汇总 全国宠物友好景区有哪些呢？大家实地去过的可以分享一下吗？方便计划带宠出游。我先来几个： 内蒙古乌兰察布辉腾锡勒草原黄花沟",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -76684,7 +76774,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-岩马水库",
@@ -76707,8 +76797,8 @@
     "policy": "allowed",
     "evidence": "宠物友好景区大汇总 全国宠物友好景区有哪些呢？大家实地去过的可以分享一下吗？方便计划带宠出游。我先来几个： 内蒙古乌兰察布辉腾锡勒草原黄花沟",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -76757,7 +76847,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   },
   {
    "id": "x-滨河公园",
@@ -76780,8 +76870,8 @@
     "policy": "allowed",
     "evidence": "宠物友好景区大汇总 全国宠物友好景区有哪些呢？大家实地去过的可以分享一下吗？方便计划带宠出游。我先来几个： 内蒙古乌兰察布辉腾锡勒草原黄花沟",
     "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
+    "basis": "合集笔记（未点名该地点）",
+    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
     "verified_at": null
    },
    "overnight": {
@@ -76830,7 +76920,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "default"
   }
  ],
  "out_of_range": [
