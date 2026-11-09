@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 738,
+  "count": 748,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -76091,6 +76091,16 @@
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=117.96709,34.927501",
      "poi": "中国兰陵压油沟风景区"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69eda067000000003601fd6e",
+     "title": "带狗逛遍整个景区｜兰陵压油沟遛狗天花板"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.968942,34.926285",
+     "poi": "兰陵压油沟风景区"
     }
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
@@ -76921,6 +76931,767 @@
    "kind_src": "name",
    "access": {},
    "dog_tier": "default"
+  },
+  {
+   "id": "x-文笔塔公园",
+   "name": "文笔塔公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "厦门",
+   "gcj": [
+    118.16248,
+    24.726837
+   ],
+   "drive": {
+    "hours_oneway": 11.29,
+    "km": 992.8,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "文笔塔公园",
+   "poi_type": "OSM:bus_stop",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698df28d000000001b0167c4",
+     "title": "在厦门遛狗真的很难抑郁吧😭"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.16248,24.726837",
+     "poi": "文笔塔公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "人文古迹"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-马銮湾生态三岛公园",
+   "name": "马銮湾生态三岛公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "厦门",
+   "gcj": [
+    118.026242,
+    24.539029
+   ],
+   "drive": {
+    "hours_oneway": 11.47,
+    "km": 1013.1,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "马銮湾生态三岛公园",
+   "poi_type": "OSM:park",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698df28d000000001b0167c4",
+     "title": "在厦门遛狗真的很难抑郁吧😭"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.026242,24.539029",
+     "poi": "马銮湾生态三岛公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-大屏山郊野公园",
+   "name": "大屏山郊野公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "厦门",
+   "gcj": [
+    118.052632,
+    24.497106
+   ],
+   "drive": {
+    "hours_oneway": 11.53,
+    "km": 1016.9,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "大屏山郊野公园",
+   "poi_type": "OSM:park",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698df28d000000001b0167c4",
+     "title": "在厦门遛狗真的很难抑郁吧😭"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.052632,24.497106",
+     "poi": "大屏山郊野公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-蔡尖尾山",
+   "name": "蔡尖尾山",
+   "kind": "scenic",
+   "tags": [],
+   "province": "福建",
+   "city": "厦门",
+   "gcj": [
+    118.008984,
+    24.504322
+   ],
+   "drive": {
+    "hours_oneway": 11.78,
+    "km": 1023.8,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "蔡尖尾山",
+   "poi_type": "OSM:peak",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/694179b8000000001b0313a1",
+     "title": "一起恭喜这位小狗集齐了闽ABCD的夜景🌃🤏 1414141414"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.008984,24.504322",
+     "poi": "蔡尖尾山"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-苏颂公园",
+   "name": "苏颂公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "厦门",
+   "gcj": [
+    118.158122,
+    24.719408
+   ],
+   "drive": {
+    "hours_oneway": 11.26,
+    "km": 997.2,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "苏颂公园",
+   "poi_type": "OSM:park",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698df28d000000001b0167c4",
+     "title": "在厦门遛狗真的很难抑郁吧😭"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6984bcba000000002102ae70",
+     "title": "厦门 你真的别太好遛狗了真的😭"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.158122,24.719408",
+     "poi": "苏颂公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-玉湖环湖公园",
+   "name": "玉湖环湖公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "莆田",
+   "gcj": [
+    119.044082,
+    25.420247
+   ],
+   "drive": {
+    "hours_oneway": 9.83,
+    "km": 862.5,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "玉湖环湖公园",
+   "poi_type": "OSM:park",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.044082,25.420247",
+     "poi": "玉湖环湖公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-眉力水库",
+   "name": "眉力水库",
+   "kind": "water",
+   "tags": [],
+   "province": "福建",
+   "city": "漳州",
+   "gcj": [
+    117.764348,
+    24.149988
+   ],
+   "drive": {
+    "hours_oneway": 12.19,
+    "km": 1077.0,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "眉力水库",
+   "poi_type": "OSM:water",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69944008000000001b01d5fd",
+     "title": "🐕漳州带狗旅游也太好玩了吧！🥳"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.764348,24.149988",
+     "poi": "眉力水库"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-蔡尖尾山天语舟气象公园",
+   "name": "蔡尖尾山天语舟气象公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "厦门",
+   "gcj": [
+    118.008154,
+    24.502991
+   ],
+   "drive": {
+    "hours_oneway": 11.77,
+    "km": 1023.6,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "蔡尖尾山天语舟气象公园",
+   "poi_type": "OSM:park",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698df28d000000001b0167c4",
+     "title": "在厦门遛狗真的很难抑郁吧😭"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.008154,24.502991",
+     "poi": "蔡尖尾山天语舟气象公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-曾溪水库",
+   "name": "曾溪水库",
+   "kind": "water",
+   "tags": [],
+   "province": "福建",
+   "city": "厦门",
+   "gcj": [
+    118.295211,
+    24.73553
+   ],
+   "drive": {
+    "hours_oneway": 11.33,
+    "km": 991.0,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "曾溪水库",
+   "poi_type": "OSM:reservoir",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a5347ff0000000011019541",
+     "title": "厦门小阿勒泰｜牛马+小狗同框太出片啦🐎"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.295211,24.73553",
+     "poi": "曾溪水库"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水",
+    "溯溪"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-龙川大峡谷",
+   "name": "龙川大峡谷",
+   "kind": "scenic",
+   "tags": [],
+   "province": "福建",
+   "city": "武夷山",
+   "gcj": [
+    117.798973,
+    27.667854
+   ],
+   "drive": {
+    "hours_oneway": 7.64,
+    "km": 637.1,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:56"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "龙川大峡谷",
+   "poi_type": "OSM:attraction",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ab40c80000000000a022c9d",
+     "title": "武夷山——养狗人的天堂！！🏞️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.798973,27.667854",
+     "poi": "龙川大峡谷"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:其余",
+   "access": {},
+   "dog_tier": "unknown"
   }
  ],
  "out_of_range": [
