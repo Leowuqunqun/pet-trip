@@ -7602,8 +7602,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -7612,7 +7614,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -7712,7 +7722,9 @@
    "poi_name": "花筑·入山(宜兴二十三湾店)",
    "poi_type_dist_m": 32,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -9511,8 +9523,10 @@
     "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -9521,7 +9535,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -9581,7 +9603,8 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
-    "溯溪"
+    "溯溪",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -13815,24 +13838,25 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
-     "toilet": true,
+     "toilet": null,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "写明有卫生间",
+    "note": "",
     "verified_at": null,
     "evidence": [
      {
-      "kind": "toilet_yes",
-      "quote": "里面有围栏 厕所 一次性尿垫 碗🥣",
-      "note_id": "6a46e381000000000f0050de",
-      "author": "饼干饼饼🍪",
-      "note_url": "https://www.xiaohongshu.com/explore/6a46e381000000000f0050de"
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
      }
     ]
    },
@@ -13893,11 +13917,10 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
-   "access": {
-    "toilet": true
-   },
+   "access": {},
    "dog_tier": "explicit",
    "sources": [
     {
@@ -15450,8 +15473,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -15460,7 +15485,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -15518,7 +15551,9 @@
    "poi_name": "山泊隐世酒店",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -16222,8 +16257,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -16232,7 +16269,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -16295,7 +16340,9 @@
    "heat_basis": "小红书点名搜索 9 条相关笔记",
    "poi_type_missing": true,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "default",
    "sources": [
@@ -17227,8 +17274,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -17237,7 +17286,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -17295,7 +17352,9 @@
    "poi_name": "融悦·翠堰民宿(神仙居店)",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -19041,8 +19100,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -19051,7 +19112,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -19110,7 +19179,8 @@
    "poi_type_dist_m": 1,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -19149,8 +19219,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -19159,7 +19231,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -19217,7 +19297,9 @@
    "poi_name": "仙霞居民宿(衢州仙霞湖店)",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -22394,8 +22476,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -22404,7 +22488,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -22462,7 +22554,9 @@
    "poi_name": "费尔蒙酒店北楼",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -24177,8 +24271,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -24187,7 +24283,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -24243,6 +24347,7 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "过夜",
     "人文古迹"
    ],
    "access": {},
@@ -29307,8 +29412,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -29317,7 +29424,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -29375,7 +29490,9 @@
    "poi_name": "长兴阿那度(Anadu)橄榄庄园",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:住宿服务",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -33138,8 +33255,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -33148,7 +33267,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -33207,7 +33334,9 @@
    "poi_name": "宁国城西湖希尔顿花园酒店",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "default",
    "sources": [
@@ -33245,8 +33374,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -33255,7 +33386,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -33316,7 +33455,8 @@
    "poi_type_dist_m": 165,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "unknown",
@@ -34767,8 +34907,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -34777,7 +34919,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -34833,7 +34983,9 @@
    "poi_name": "莫干山VISAYA意境民宿",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -35153,8 +35305,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -35163,7 +35317,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -35222,7 +35384,9 @@
    "poi_name": "杭州富春芳草地度假酒店-大堂",
    "poi_type_dist_m": 3,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -35497,8 +35661,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -35507,7 +35673,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -35567,7 +35741,9 @@
    "poi_name": "建德云水庐民宿",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "unknown",
    "sources": [
@@ -39211,8 +39387,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -39221,7 +39399,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -39278,7 +39464,9 @@
    "rating_src": null,
    "poi_type_missing": true,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -39937,8 +40125,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -39947,7 +40137,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -40007,7 +40205,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -40193,8 +40392,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -40203,7 +40404,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -40243,7 +40452,8 @@
    "poi_type_missing": true,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -41795,8 +42005,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -41805,7 +42017,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -41865,7 +42085,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -51036,8 +51257,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -51046,7 +51269,15 @@
      "signal": null
     },
     "note": "",
-    "verified_at": null
+    "verified_at": null,
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -51103,7 +51334,9 @@
    "poi_name": "上海崇明信澜天地云居酒店",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -51290,8 +51523,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -51301,7 +51536,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [
@@ -51346,7 +51588,8 @@
    "pending": false,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -51926,8 +52169,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -51937,7 +52182,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [
@@ -51984,6 +52236,7 @@
    "scenes": [
     "玩水",
     "溯溪",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -52024,8 +52277,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -52035,7 +52290,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [
@@ -52080,7 +52342,8 @@
    "pending": false,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -52784,8 +53047,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -52795,7 +53060,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [
@@ -52820,7 +53092,9 @@
    ],
    "pending": false,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "default",
    "rating": null,
@@ -52859,8 +53133,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -52870,7 +53146,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [
@@ -52901,7 +53184,8 @@
    "pending": false,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -57975,8 +58259,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -57986,7 +58272,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -58012,7 +58305,9 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -58127,8 +58422,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -58138,7 +58435,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -58164,7 +58468,9 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -59773,8 +60079,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "帐篷/房车"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -59784,7 +60092,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：名字/类型为营地（有人经营）",
+      "basis": "类型推断：名字/类型为营地（有人经营）"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -59806,7 +60121,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -60960,8 +61276,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "帐篷/房车"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -60971,7 +61289,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：名字/类型为营地（有人经营）",
+      "basis": "类型推断：名字/类型为营地（有人经营）"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -60993,7 +61318,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -61033,8 +61359,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -61044,7 +61372,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -61067,6 +61402,7 @@
    "tier": "B",
    "scenes": [
     "玩水",
+    "过夜",
     "古村古镇"
    ],
    "heat": null,
@@ -62127,8 +62463,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "帐篷/房车"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -62138,7 +62476,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：名字/类型为营地（有人经营）",
+      "basis": "类型推断：名字/类型为营地（有人经营）"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -62162,7 +62507,8 @@
    "scenes": [
     "玩水",
     "溯溪",
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -62493,8 +62839,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -62504,7 +62852,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -62525,7 +62880,9 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -63514,8 +63871,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -63525,7 +63884,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -63546,7 +63912,9 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -64532,8 +64900,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -64543,7 +64913,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -64565,6 +64942,7 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "过夜",
     "古村古镇"
    ],
    "heat": null,
@@ -64825,8 +65203,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "帐篷/房车"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -64836,7 +65216,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：名字/类型为营地（有人经营）",
+      "basis": "类型推断：名字/类型为营地（有人经营）"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -64858,7 +65245,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -64990,8 +65378,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -65001,7 +65391,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -65022,7 +65419,9 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -66823,8 +67222,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "帐篷/房车"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -66834,7 +67235,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：名字/类型为营地（有人经营）",
+      "basis": "类型推断：名字/类型为营地（有人经营）"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -66857,6 +67265,7 @@
    "tier": "B",
    "scenes": [
     "露营",
+    "过夜",
     "古村古镇"
    ],
    "heat": null,
@@ -67671,7 +68080,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -67855,8 +68265,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "帐篷/房车"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -67866,7 +68278,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：名字/类型为营地（有人经营）",
+      "basis": "类型推断：名字/类型为营地（有人经营）"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -67888,7 +68307,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -69677,8 +70097,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -69688,7 +70110,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -69710,7 +70139,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -70041,8 +70471,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -70052,7 +70484,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -70073,7 +70512,9 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -70112,8 +70553,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -70123,7 +70566,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -70144,7 +70594,9 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -71958,8 +72410,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "帐篷/房车"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -71969,7 +72423,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：名字/类型为营地（有人经营）",
+      "basis": "类型推断：名字/类型为营地（有人经营）"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -71992,7 +72453,8 @@
    "tier": "B",
    "scenes": [
     "玩水",
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -72032,8 +72494,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -72043,7 +72507,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -72065,6 +72536,7 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "过夜",
     "古村古镇"
    ],
    "heat": null,
@@ -72105,8 +72577,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "帐篷/房车"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -72116,7 +72590,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：名字/类型为营地（有人经营）",
+      "basis": "类型推断：名字/类型为营地（有人经营）"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -72140,6 +72621,7 @@
    "scenes": [
     "玩水",
     "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": null,
@@ -73227,8 +73709,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -73238,7 +73722,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -73259,7 +73750,9 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -73588,8 +74081,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "帐篷/房车"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -73599,7 +74094,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：名字/类型为营地（有人经营）",
+      "basis": "类型推断：名字/类型为营地（有人经营）"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -73622,7 +74124,8 @@
    "tier": "B",
    "scenes": [
     "玩水",
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -73883,8 +74386,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -73894,7 +74399,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -73915,7 +74427,9 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -74317,8 +74831,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "住宿"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -74328,7 +74844,14 @@
     },
     "note": "",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "platform": "internal",
+      "url": "",
+      "quote": "类型推断：本点被判定为住宿设施",
+      "basis": "类型推断：本点被判定为住宿设施"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -74350,6 +74873,7 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "过夜",
     "古村古镇"
    ],
    "heat": null,
