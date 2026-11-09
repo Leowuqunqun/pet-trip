@@ -9876,9 +9876,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 40 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 40 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [],
    "poi_type": "住宿服务;旅馆招待所;旅馆招待所",
    "poi_name": "莫干山橙月·黑胶唱片民宿",
@@ -11210,9 +11210,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 39 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 39 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [
     "overnight",
     "coord_suspect"
@@ -27751,16 +27751,16 @@
     "overnight"
    ],
    "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 40 条笔记，无一条标题带该地名"
+    "notes": 4,
+    "likes": 566,
+    "basis": "小红书点名搜索 4 条相关笔记"
    },
-   "heat_basis": "点名搜索 40 条笔记，无一条标题带该地名",
+   "heat_basis": "小红书点名搜索 4 条相关笔记",
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 0,
-    "likes": 0
+    "notes": 4,
+    "likes": 566
    },
    "poi_type": "体育休闲服务;体育休闲服务场所;体育休闲服务场所",
    "poi_name": "森夏·莫干山溯溪营地",
@@ -46312,9 +46312,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 38 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 38 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": {
@@ -55782,8 +55782,8 @@
     "过夜"
    ],
    "heat": {
-    "notes": 0,
-    "likes": 0
+    "notes": 5,
+    "likes": 494
    },
    "rating": null,
    "photos": [],
@@ -55796,11 +55796,11 @@
    "access": {},
    "dog_tier": "explicit",
    "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+    "notes": 5,
+    "likes": 494,
+    "basis": "小红书点名搜索 5 条相关笔记"
    },
-   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-神女之心",
@@ -57040,7 +57040,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 142
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -57050,7 +57053,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 3,
+    "likes": 142,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-最美天路",
@@ -57680,7 +57689,10 @@
     "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 235
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -57690,7 +57702,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 4,
+    "likes": 235,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-水杉林水上森林公园",
@@ -58142,7 +58160,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 14,
+    "likes": 578
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -58152,7 +58173,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 14,
+    "likes": 578,
+    "basis": "小红书点名搜索 14 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 14 条相关笔记"
   },
   {
    "id": "x-基督教堂",
@@ -58687,7 +58714,10 @@
     "草坪遛弯",
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 7,
+    "likes": 801
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -58697,7 +58727,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 7,
+    "likes": 801,
+    "basis": "小红书点名搜索 7 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 7 条相关笔记"
   },
   {
    "id": "x-吕庄水库",
@@ -60164,7 +60200,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 6,
+    "likes": 37
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -60174,7 +60213,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 6,
+    "likes": 37,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
   },
   {
    "id": "x-禹山坞水库",
@@ -62702,7 +62747,10 @@
     "草坪遛弯",
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 6,
+    "likes": 74
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -62712,7 +62760,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 6,
+    "likes": 74,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
   },
   {
    "id": "x-白云源景区",
@@ -64062,7 +64116,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 66
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -64072,7 +64129,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 3,
+    "likes": 66,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-红色古道",
@@ -64135,7 +64198,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 12,
+    "likes": 161
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -64145,7 +64211,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 12,
+    "likes": 161,
+    "basis": "小红书点名搜索 12 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 12 条相关笔记"
   },
   {
    "id": "x-庙前村景区",
@@ -64575,7 +64647,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 15,
+    "likes": 2848
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -64585,7 +64660,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 15,
+    "likes": 2848,
+    "basis": "小红书点名搜索 15 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 15 条相关笔记"
   },
   {
    "id": "x-南京夫子庙",
@@ -68470,7 +68551,10 @@
     "过夜",
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -68480,7 +68564,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-大洋坞水库",
@@ -68563,7 +68653,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 16
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -68573,7 +68666,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 2,
+    "likes": 16,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-龙坞水库",
@@ -68957,7 +69056,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 13,
+    "likes": 194
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -68967,7 +69069,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 13,
+    "likes": 194,
+    "basis": "小红书点名搜索 13 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 13 条相关笔记"
   },
   {
    "id": "x-日湖公园",
@@ -69051,7 +69159,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 9,
+    "likes": 156
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -69061,7 +69172,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 9,
+    "likes": 156,
+    "basis": "小红书点名搜索 9 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 9 条相关笔记"
   },
   {
    "id": "x-东钱湖风景名胜区-小普陀",
@@ -69226,7 +69343,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 710
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -69236,7 +69356,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 4,
+    "likes": 710,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-慈城古县城",
@@ -69777,7 +69903,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 104
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -69787,7 +69916,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 104,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-云顶草原",
@@ -69928,7 +70063,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 10,
+    "likes": 203
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -69938,7 +70076,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 10,
+    "likes": 203,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
   },
   {
    "id": "x-浙江兰湖旅游度假区",
@@ -73489,7 +73633,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 15
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -73499,7 +73646,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 2,
+    "likes": 15,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-阳山桃花源景区",
@@ -77970,7 +78123,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 48
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -77980,7 +78136,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 3,
+    "likes": 48,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-城西湿地公园",
