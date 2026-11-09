@@ -53263,7 +53263,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 11,
+    "likes": 532
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -53273,7 +53276,13 @@
    ],
    "kind_src": "poi_type:公园广场",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 11,
+    "likes": 532,
+    "basis": "小红书点名搜索 11 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 11 条相关笔记"
   },
   {
    "id": "x-马岭古道",
@@ -53341,7 +53350,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 969
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -53351,7 +53363,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 5,
+    "likes": 969,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-徽州古城",
@@ -53417,7 +53435,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 92
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -53427,7 +53448,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 1,
+    "likes": 92,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-白水冲瀑布",
@@ -53496,7 +53523,10 @@
     "玩水",
     "溯溪"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 11
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -53506,7 +53536,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 1,
+    "likes": 11,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-锦溪古镇",
@@ -53586,7 +53622,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-四明湖红杉林",
@@ -53664,7 +53706,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-大溪水库",
@@ -53743,7 +53791,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-严子陵钓台",
@@ -53821,7 +53875,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-南湖公园",
@@ -53900,7 +53960,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-古树公园",
@@ -53978,7 +54044,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-周庄古镇",
@@ -54056,7 +54128,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-山湖公园",
@@ -54136,7 +54214,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "veto",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-溱湖湾森林动物王国",
@@ -54215,7 +54299,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-仙居淡竹",
@@ -54291,7 +54381,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-石井水库",
@@ -54369,7 +54465,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-蜀山古南街",
