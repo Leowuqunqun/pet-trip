@@ -77806,7 +77806,7 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "allowed_wild",
+    "status": "gray",
     "modes": [
      "tent"
     ],
@@ -77817,7 +77817,7 @@
      "power": null,
      "signal": null
     },
-    "note": "笔记里有人在这过夜",
+    "note": "引文是一段关于「公共资源处非法搭建营地」的抱怨，既没说这里能搭、也没说不能；按没有明确许可处理，不判能野营",
     "verified_at": null,
     "evidence": [
      {
@@ -77828,7 +77828,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/6a0157440000000007022a66"
      }
     ],
-    "evidence_level": "笔记原话"
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [],
    "trips": [],
