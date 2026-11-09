@@ -21276,9 +21276,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 57 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 57 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": null,
@@ -27003,9 +27003,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 40 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 40 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": null,
@@ -40077,9 +40077,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 38 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 38 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": null,
@@ -55308,7 +55308,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 134
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -55320,11 +55323,11 @@
    "access": {},
    "dog_tier": "unknown",
    "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+    "notes": 8,
+    "likes": 134,
+    "basis": "小红书点名搜索 8 条相关笔记"
    },
-   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-大草坪露营地",
@@ -56011,7 +56014,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-天主教堂",
@@ -56944,7 +56953,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 7,
+    "likes": 308
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -56954,7 +56966,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 7,
+    "likes": 308,
+    "basis": "小红书点名搜索 7 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 7 条相关笔记"
   },
   {
    "id": "x-向阳水库",
@@ -64953,7 +64971,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 33
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -64963,7 +64984,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 1,
+    "likes": 33,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-巴城生态湿地公园-夕露园",
@@ -65036,7 +65063,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-犁桥水镇",
@@ -65420,7 +65453,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-湖州影视城",
@@ -69322,7 +69361,10 @@
     "草坪遛弯",
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 11,
+    "likes": 701
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -69332,7 +69374,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 11,
+    "likes": 701,
+    "basis": "小红书点名搜索 11 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 11 条相关笔记"
   },
   {
    "id": "x-狮山公园",
@@ -70204,7 +70252,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 3
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -70214,7 +70265,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 1,
+    "likes": 3,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-海宁神仙岛",
@@ -72530,7 +72587,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 17,
+    "likes": 4522
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72540,7 +72600,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 17,
+    "likes": 4522,
+    "basis": "小红书点名搜索 17 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 17 条相关笔记"
   },
   {
    "id": "x-青龙湾原生态旅游度假区",
@@ -73448,7 +73514,10 @@
    "scenes": [
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 15,
+    "likes": 294
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -73458,7 +73527,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 15,
+    "likes": 294,
+    "basis": "小红书点名搜索 15 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 15 条相关笔记"
   },
   {
    "id": "x-荣氏梅园",
