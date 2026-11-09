@@ -11928,7 +11928,7 @@
       "note_url": "https://www.xiaohongshu.com/explore/6aa50ca0000000002900ed1c"
      }
     ],
-    "evidence_level": "人工核对原文",
+    "evidence_level": "笔记原话",
     "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
@@ -11990,8 +11990,6 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
-    "露营",
-    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -21284,9 +21282,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 40 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 40 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": null,
@@ -36464,7 +36462,7 @@
       "note_url": "https://www.xiaohongshu.com/explore/6ae336460000000035023c53"
      }
     ],
-    "evidence_level": "人工核对原文",
+    "evidence_level": "笔记原话",
     "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
@@ -36524,10 +36522,7 @@
    "poi_name": "温州园博园",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:风景名胜",
-   "scenes": [
-    "露营",
-    "过夜"
-   ],
+   "scenes": [],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -54725,7 +54720,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 43
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -54737,11 +54735,11 @@
    "access": {},
    "dog_tier": "veto",
    "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+    "notes": 5,
+    "likes": 43,
+    "basis": "小红书点名搜索 5 条相关笔记"
    },
-   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-星空营地",
@@ -64135,7 +64133,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 4
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -64145,7 +64146,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 3,
+    "likes": 4,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-漫港·等风来",
