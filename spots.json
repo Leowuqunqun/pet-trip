@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 408,
+  "count": 420,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -19,7 +19,7 @@
    "name": "碧云体育公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.583268,
@@ -134,7 +134,7 @@
    "name": "苏河源体育公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.352059,
@@ -302,7 +302,7 @@
    "name": "浦江森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.517438,
@@ -431,7 +431,7 @@
    "name": "九科绿洲公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.327739,
@@ -557,7 +557,7 @@
    "name": "旗忠公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.349801,
@@ -667,7 +667,7 @@
    "name": "上海联怡枇杷乐园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.122389,
@@ -835,7 +835,7 @@
    "name": "广富林郊野公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.183497,
@@ -950,7 +950,7 @@
    "name": "黄姑塘生态湿地",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     121.148965,
@@ -1072,7 +1072,7 @@
    "name": "上海水务海洋执法码头",
    "kind": "transit",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.777832,
@@ -1190,7 +1190,7 @@
    "name": "西塘古镇景区",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.89319,
@@ -1369,7 +1369,7 @@
    "name": "苏州湾体育公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.599848,
@@ -1540,7 +1540,7 @@
    "name": "穆湖森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.749079,
@@ -1719,7 +1719,7 @@
    "name": "泖田湿地",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.125533,
@@ -1867,7 +1867,7 @@
    "name": "崇明岛",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.635058,
@@ -2054,7 +2054,7 @@
    "name": "姚家荡公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.733542,
@@ -2222,7 +2222,7 @@
    "name": "仙樱湖公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.757717,
@@ -2338,7 +2338,7 @@
    "name": "嘉兴植物园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.768266,
@@ -2504,7 +2504,7 @@
    "name": "莲池湖公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.777457,
@@ -2620,7 +2620,7 @@
    "name": "苏州湾东太湖城市营地",
    "kind": "campground",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.602779,
@@ -2741,7 +2741,7 @@
    "name": "胜地生态公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.650494,
@@ -2859,7 +2859,7 @@
    "name": "马家浜考古遗址公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.705337,
@@ -3021,7 +3021,7 @@
    "name": "云杉湖公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.785799,
@@ -3137,7 +3137,7 @@
    "name": "虎丘湿地",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.571201,
@@ -3250,7 +3250,7 @@
    "name": "东太湖生态园",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.598503,
@@ -3394,7 +3394,7 @@
    "name": "沈荡古镇",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.821089,
@@ -3566,7 +3566,7 @@
    "name": "苏州湾黄金湖岸旅游区",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.586047,
@@ -3683,7 +3683,7 @@
    "name": "濮院时尚古镇游客中心",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.632894,
@@ -3833,7 +3833,7 @@
    "name": "小镇湿地公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.574762,
@@ -3994,7 +3994,7 @@
    "name": "桐乡市庆北生态公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.542865,
@@ -4162,7 +4162,7 @@
    "name": "漕湖湿地公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.597574,
@@ -4287,7 +4287,7 @@
    "name": "上海东滩湿地公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.951233,
@@ -4431,7 +4431,7 @@
    "name": "丰义景区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.889781,
@@ -4597,7 +4597,7 @@
    "name": "金山城市沙滩",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.351801,
@@ -4744,7 +4744,7 @@
    "name": "诺贝尔湖公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.434286,
@@ -4860,7 +4860,7 @@
    "name": "南北湖风景区",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.858371,
@@ -5033,7 +5033,7 @@
    "name": "东部海堤黑沙滩",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "南通",
    "gcj": [
     121.833749,
@@ -5192,7 +5192,7 @@
    "name": "濮院古镇-游览车站点",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.626206,
@@ -5301,7 +5301,7 @@
    "name": "梅园开原寺",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "无锡",
    "gcj": [
     120.219585,
@@ -5433,7 +5433,7 @@
    "name": "彩石湖公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.4289,
@@ -5593,7 +5593,7 @@
    "name": "北里湖湿地公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "嘉兴",
    "gcj": [
     120.863256,
@@ -5699,7 +5699,7 @@
    "name": "无锡阳山桃花源景区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "无锡",
    "gcj": [
     120.109902,
@@ -5830,7 +5830,7 @@
    "name": "金沙湖公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "杭州",
    "gcj": [
     120.319745,
@@ -5946,7 +5946,7 @@
    "name": "川步村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "湖州",
    "gcj": [
     119.852403,
@@ -6124,7 +6124,7 @@
    "name": "上坝村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "宜兴",
    "gcj": [
     119.87489,
@@ -6274,7 +6274,7 @@
    "name": "芳茂山公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "常州",
    "gcj": [
     120.105869,
@@ -6390,7 +6390,7 @@
    "name": "牧城公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "泰州",
    "gcj": [
     120.30862,
@@ -6531,7 +6531,7 @@
    "name": "杭州沿江湿地公园-西区",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "杭州",
    "gcj": [
     120.354734,
@@ -6690,7 +6690,7 @@
    "name": "阅湖农场",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "宜兴",
    "gcj": [
     119.901955,
@@ -6849,7 +6849,7 @@
    "name": "张公洞",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "宜兴",
    "gcj": [
     119.783865,
@@ -7017,7 +7017,7 @@
    "name": "邵东村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "宜兴",
    "gcj": [
     119.807528,
@@ -7182,7 +7182,7 @@
    "name": "花筑·入山民宿",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "宜兴",
    "gcj": [
     119.806317,
@@ -7332,7 +7332,7 @@
    "name": "雅达阳羡小镇游客中心",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "宜兴",
    "gcj": [
     119.761922,
@@ -7456,7 +7456,7 @@
    "name": "凤凰山考古遗址公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "绍兴",
    "gcj": [
     120.822947,
@@ -7584,7 +7584,7 @@
    "name": "龙池山自行车公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "宜兴",
    "gcj": [
     119.72891,
@@ -7690,7 +7690,7 @@
    "name": "黄桥古镇",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "泰州",
    "gcj": [
     120.231195,
@@ -7807,7 +7807,7 @@
    "name": "尚贤河湿地游客中心",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "无锡",
    "gcj": [
     120.315407,
@@ -7922,7 +7922,7 @@
    "name": "安吉古城国家考古遗址公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "安吉",
    "gcj": [
     119.670214,
@@ -8076,7 +8076,7 @@
    "name": "善卷洞风景区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "宜兴",
    "gcj": [
     119.669968,
@@ -8184,7 +8184,7 @@
    "name": "五峰山国际青少年营地",
    "kind": "campground",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "湖州",
    "gcj": [
     119.577154,
@@ -8311,7 +8311,7 @@
    "name": "黄桥小南湖",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "泰州",
    "gcj": [
     120.280525,
@@ -8410,7 +8410,7 @@
    "name": "白马湖公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "杭州",
    "gcj": [
     120.209234,
@@ -8526,7 +8526,7 @@
    "name": "溱湖湿地农业生态园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "泰州",
    "gcj": [
     120.067056,
@@ -8643,7 +8643,7 @@
    "name": "皮山坞水库",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "杭州",
    "gcj": [
     119.759928,
@@ -8996,7 +8996,7 @@
    "name": "天目湖御水温泉·竹溪谷酒店",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "溧阳",
    "gcj": [
     119.53308,
@@ -9230,7 +9230,7 @@
    "name": "云湖风景区",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "宜兴",
    "gcj": [
     119.562433,
@@ -9347,7 +9347,7 @@
    "name": "天德湖公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "泰州",
    "gcj": [
     119.922079,
@@ -9578,7 +9578,7 @@
    "name": "老石坎水库",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "湖州",
    "gcj": [
     119.455943,
@@ -9693,7 +9693,7 @@
    "name": "东钱湖风景名胜区",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "宁波",
    "gcj": [
     121.670591,
@@ -9801,7 +9801,7 @@
    "name": "溱潼古镇旅游区",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "泰州",
    "gcj": [
     120.097681,
@@ -9909,7 +9909,7 @@
    "name": "马山湿地",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "宁波",
    "gcj": [
     121.675467,
@@ -10043,7 +10043,7 @@
    "name": "岩头古村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "宁波",
    "gcj": [
     121.232245,
@@ -10161,7 +10161,7 @@
    "name": "丹家村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "绍兴",
    "gcj": [
     120.716893,
@@ -10260,7 +10260,7 @@
    "name": "安吉五峰山运动村",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "安吉",
    "gcj": [
     119.581106,
@@ -10378,7 +10378,7 @@
    "name": "南山水库",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "绍兴",
    "gcj": [
     120.595902,
@@ -10498,7 +10498,7 @@
    "name": "石塘村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "溧阳",
    "gcj": [
     119.242986,
@@ -10610,7 +10610,7 @@
    "name": "万市杨家村古银杏文化保护主题公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "富阳",
    "gcj": [
     119.490351,
@@ -10729,7 +10729,7 @@
    "name": "风之谷星空露营基地",
    "kind": "campground",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "绍兴",
    "gcj": [
     120.719797,
@@ -10864,7 +10864,7 @@
    "name": "千华古村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "镇江",
    "gcj": [
     119.09575,
@@ -11001,7 +11001,7 @@
    "name": "天目湖",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "常州",
    "gcj": [
     119.424006,
@@ -11138,7 +11138,7 @@
    "name": "无想山景区牧心谷露营地",
    "kind": "campground",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "南京",
    "gcj": [
     119.02,
@@ -11378,7 +11378,7 @@
    "name": "安基山水库",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "南京",
    "gcj": [
     119.070571,
@@ -11494,7 +11494,7 @@
    "name": "四明山",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "余姚",
    "gcj": [
     121.095786,
@@ -11638,7 +11638,7 @@
    "name": "岱山岛",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "舟山",
    "gcj": [
     122.180299,
@@ -11734,7 +11734,7 @@
    "name": "中国海岬公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "舟山",
    "gcj": [
     122.192489,
@@ -11872,7 +11872,7 @@
    "name": "石臼湖骆山花火露营公园",
    "kind": "campground",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "南京",
    "gcj": [
     118.973347,
@@ -11990,7 +11990,7 @@
    "name": "千垛景区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "泰州",
    "gcj": [
     119.823834,
@@ -12231,7 +12231,7 @@
    "name": "瘦西湖",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "扬州",
    "gcj": [
     119.418211,
@@ -12339,7 +12339,7 @@
    "name": "渌洋湖湿地公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "扬州",
    "gcj": [
     119.519168,
@@ -12466,7 +12466,7 @@
    "name": "金钱松森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "湖州",
    "gcj": [
     119.64389,
@@ -12602,7 +12602,7 @@
    "name": "香茗湖体育公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "扬州",
    "gcj": [
     119.351161,
@@ -12700,7 +12700,7 @@
    "name": "月亮湾",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.93631,
@@ -12828,7 +12828,7 @@
    "name": "沙沟古镇景区",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "泰州",
    "gcj": [
     119.725635,
@@ -12936,7 +12936,7 @@
    "name": "固城水岸滨湖公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "南京",
    "gcj": [
     118.924875,
@@ -13052,7 +13052,7 @@
    "name": "蟹蚶口水库",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "宁波",
    "gcj": [
     121.493959,
@@ -13168,7 +13168,7 @@
    "name": "宁波宁海假日度假酒店",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "宁波",
    "gcj": [
     121.319689,
@@ -13287,7 +13287,7 @@
    "name": "松兰山",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "象山",
    "gcj": [
     121.971732,
@@ -13545,7 +13545,7 @@
    "name": "白沙湾沙滩",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "象山",
    "gcj": [
     121.978343,
@@ -13655,7 +13655,7 @@
    "name": "九条凹水库",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "南京",
    "gcj": [
     118.899529,
@@ -13899,7 +13899,7 @@
    "name": "天姥山",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "绍兴",
    "gcj": [
     120.995398,
@@ -14126,7 +14126,7 @@
    "name": "三桥湿地公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "南京",
    "gcj": [
     118.651586,
@@ -14250,7 +14250,7 @@
    "name": "平垣秘境",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.344662,
@@ -14375,7 +14375,7 @@
    "name": "牛轭山观海公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "舟山",
    "gcj": [
     122.213215,
@@ -14711,7 +14711,7 @@
    "name": "山泊隐世酒店",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.366146,
@@ -15053,7 +15053,7 @@
    "name": "太极湾沙滩",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "宁波",
    "gcj": [
     121.976152,
@@ -15159,7 +15159,7 @@
    "name": "大马沟公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "盐城",
    "gcj": [
     120.108856,
@@ -15265,7 +15265,7 @@
    "name": "地藏大峡谷",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "绩溪",
    "gcj": [
     118.89554,
@@ -15373,7 +15373,7 @@
    "name": "中央沙滩",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "宁波",
    "gcj": [
     121.970858,
@@ -15479,7 +15479,7 @@
    "name": "维也纳国际酒店",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "宁波",
    "gcj": [
     121.934621,
@@ -15590,7 +15590,7 @@
    "name": "佛手湖郊野公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "南京",
    "gcj": [
     118.659292,
@@ -15715,7 +15715,7 @@
    "name": "吽唬沙滩",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "舟山",
    "gcj": [
     122.182764,
@@ -15821,7 +15821,7 @@
    "name": "桐庐香榧基地",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "桐庐",
    "gcj": [
     119.583797,
@@ -15969,7 +15969,7 @@
    "name": "桐庐语山水·叙旧民宿",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "桐庐",
    "gcj": [
     119.338708,
@@ -16106,7 +16106,7 @@
    "name": "大青山",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "临海",
    "gcj": [
     121.114616,
@@ -16205,7 +16205,7 @@
    "name": "山风农场",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "建德",
    "gcj": [
     119.369708,
@@ -16338,7 +16338,7 @@
    "name": "东海郊野公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "舟山",
    "gcj": [
     122.225,
@@ -16445,7 +16445,7 @@
    "name": "融悦·翠堰民宿",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "台州",
    "gcj": [
     120.582441,
@@ -16551,7 +16551,7 @@
    "name": "丰茂半岛",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "杭州",
    "gcj": [
     119.151356,
@@ -16807,7 +16807,7 @@
    "name": "朱潭山",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "丽水",
    "gcj": [
     120.139917,
@@ -16915,7 +16915,7 @@
    "name": "鼎湖峰",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "丽水",
    "gcj": [
     120.143671,
@@ -17022,7 +17022,7 @@
    "name": "太平湖",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "黄山",
    "gcj": [
     117.945932,
@@ -17246,7 +17246,7 @@
    "name": "里运河滨水公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "淮安",
    "gcj": [
     119.09332,
@@ -17361,7 +17361,7 @@
    "name": "林坑古村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     120.702548,
@@ -17703,7 +17703,7 @@
    "name": "碧山村",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "黟县",
    "gcj": [
     117.914158,
@@ -17821,7 +17821,7 @@
    "name": "松庄村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "丽水",
    "gcj": [
     119.575303,
@@ -17941,7 +17941,7 @@
    "name": "王山水库",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "衢州",
    "gcj": [
     118.110032,
@@ -18188,7 +18188,7 @@
    "name": "黄山太平湖景度假民宿",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "黄山",
    "gcj": [
     118.000524,
@@ -18297,7 +18297,7 @@
    "name": "仙霞居民宿",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "衢州",
    "gcj": [
     118.864023,
@@ -18403,7 +18403,7 @@
    "name": "龙湾潭国家森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     120.882295,
@@ -18859,7 +18859,7 @@
    "name": "上坦村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江西",
    "city": "婺源",
    "gcj": [
     118.034265,
@@ -19077,7 +19077,7 @@
    "name": "庆源古村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江西",
    "city": "婺源",
    "gcj": [
     118.005201,
@@ -19185,7 +19185,7 @@
    "name": "察关村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "江西",
    "city": "婺源",
    "gcj": [
     117.895475,
@@ -19293,7 +19293,7 @@
    "name": "杨家堂村史馆",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "丽水",
    "gcj": [
     119.547075,
@@ -19488,7 +19488,7 @@
    "name": "云和梯田景区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "丽水",
    "gcj": [
     119.487375,
@@ -19592,7 +19592,7 @@
    "name": "南尖岩景区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "丽水",
    "gcj": [
     119.086422,
@@ -19696,7 +19696,7 @@
    "name": "卧龙谷景区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "江西",
    "city": "婺源",
    "gcj": [
     117.756385,
@@ -19802,7 +19802,7 @@
    "name": "森兰无界公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.592251,
@@ -19937,7 +19937,7 @@
    "name": "世博文化园狗go乐园",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.473071,
@@ -20040,7 +20040,7 @@
    "name": "青浦蔡浜村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     120.946678,
@@ -20139,7 +20139,7 @@
    "name": "海湾国家森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.690609,
@@ -20269,7 +20269,7 @@
    "name": "浦东 纯新村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.701887,
@@ -20632,7 +20632,7 @@
    "name": "百家村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.285088,
@@ -20869,7 +20869,7 @@
    "name": "淀山湖",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     120.952459,
@@ -24390,7 +24390,7 @@
    "name": "后滩公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.472766,
@@ -24508,7 +24508,7 @@
    "name": "来野营地",
    "kind": "campground",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.287007,
@@ -25193,7 +25193,7 @@
    "name": "绩溪障山大峡谷",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.766896,
@@ -27654,7 +27654,7 @@
    "name": "义皋古村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "湖州",
    "gcj": [
     120.291852,
@@ -29679,7 +29679,7 @@
    "name": "河桥古镇",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "杭州",
    "gcj": [
     119.220304,
@@ -29922,7 +29922,7 @@
    "name": "高明村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "杭州",
    "gcj": [
     119.924046,
@@ -31039,7 +31039,7 @@
    "name": "盱眙象山矿山",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "淮安",
    "gcj": [
     118.503164,
@@ -31663,7 +31663,7 @@
    "name": "龙门古镇",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "杭州",
    "gcj": [
     119.950754,
@@ -31753,7 +31753,7 @@
    "name": "希尔顿花园酒店",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.96166,
@@ -31841,7 +31841,7 @@
    "name": "储家滩民宿",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.885348,
@@ -31941,7 +31941,7 @@
    "name": "水墨汀溪",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.621952,
@@ -32041,7 +32041,7 @@
    "name": "绿林谷",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     119.335322,
@@ -32136,7 +32136,7 @@
    "name": "龙川景区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.667261,
@@ -32233,7 +32233,7 @@
    "name": "仁里景区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.609428,
@@ -32330,7 +32330,7 @@
    "name": "磡头村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.816261,
@@ -32429,7 +32429,7 @@
    "name": "关麓村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "黄山",
    "gcj": [
     117.869917,
@@ -32528,7 +32528,7 @@
    "name": "西津野渡葛洪仙居码头",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     118.903528,
@@ -32627,7 +32627,7 @@
    "name": "郎溪大佛山养心谷",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "安徽",
    "city": "宣城",
    "gcj": [
     119.300884,
@@ -33030,7 +33030,7 @@
    "name": "中坡山森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "宁波",
    "gcj": [
     121.261164,
@@ -34423,7 +34423,7 @@
    "name": "真际寺",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     121.097115,
@@ -34522,7 +34522,7 @@
    "name": "温州园博园",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     120.580541,
@@ -34628,7 +34628,7 @@
    "name": "寨寮溪风景区花岩国家森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     120.351467,
@@ -34718,7 +34718,7 @@
    "name": "寨寮溪风景区九珠潭景区",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     120.312214,
@@ -34806,7 +34806,7 @@
    "name": "永嘉五星潭森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     120.624834,
@@ -34908,7 +34908,7 @@
    "name": "文成铜铃山森林公园景区",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     119.857091,
@@ -35008,7 +35008,7 @@
    "name": "顺溪景区知音涧景区",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     120.175481,
@@ -35105,7 +35105,7 @@
    "name": "泰顺廊桥文化园",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     119.996634,
@@ -35202,7 +35202,7 @@
    "name": "南浦溪风景区",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     119.939774,
@@ -35302,7 +35302,7 @@
    "name": "玉苍山国家森林公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     120.302998,
@@ -35402,7 +35402,7 @@
    "name": "雁荡山",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     121.033716,
@@ -35510,7 +35510,7 @@
    "name": "雁荡山方洞",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     121.079306,
@@ -35609,7 +35609,7 @@
    "name": "顺溪古镇",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     120.207722,
@@ -35718,7 +35718,7 @@
    "name": "堰头村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "丽水",
    "gcj": [
     120.102198,
@@ -35808,7 +35808,7 @@
    "name": "县崇头镇",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "丽水",
    "gcj": [
     119.492527,
@@ -35905,7 +35905,7 @@
    "name": "西沙湿地公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.235192,
@@ -36014,7 +36014,7 @@
    "name": "西沙国家湿地公园-游客接待中心",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.239286,
@@ -36110,7 +36110,7 @@
    "name": "岛郊野公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.709779,
@@ -36200,7 +36200,7 @@
    "name": "荷花博览园",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.24483,
@@ -36288,7 +36288,7 @@
    "name": "滴水湖",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.910286,
@@ -36387,7 +36387,7 @@
    "name": "九棵树艺术公园",
    "kind": "park",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.480436,
@@ -36486,7 +36486,7 @@
    "name": "福善塔",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.619738,
@@ -36586,7 +36586,7 @@
    "name": "滨海大草原",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.369602,
@@ -36685,7 +36685,7 @@
    "name": "东厍村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.035843,
@@ -36785,7 +36785,7 @@
    "name": "度假酒店",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.013293,
@@ -36880,7 +36880,7 @@
    "name": "金泽古镇",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     120.921377,
@@ -37673,7 +37673,7 @@
    "name": "上海影视乐园",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.311644,
@@ -40349,7 +40349,7 @@
    "name": "明月山塘景区",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.16477,
@@ -44254,7 +44254,7 @@
    "name": "天鹅岛",
    "kind": "scenic",
    "tags": [],
-   "province": "",
+   "province": "江苏",
    "city": "苏州",
    "gcj": [
     120.582651,
@@ -44551,7 +44551,7 @@
    "name": "楠溪江狮子岩风景区",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "温州",
    "gcj": [
     120.742804,
@@ -45901,7 +45901,7 @@
    "name": "塘源村",
    "kind": "village",
    "tags": [],
-   "province": "",
+   "province": "浙江",
    "city": "丽水",
    "gcj": [
     119.092397,
@@ -46285,7 +46285,7 @@
    "name": "美兰湖风景区",
    "kind": "water",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.355448,
@@ -46382,7 +46382,7 @@
    "name": "信澜天地云居酒店",
    "kind": "lodging",
    "tags": [],
-   "province": "",
+   "province": "上海",
    "city": "上海",
    "gcj": [
     121.863152,
@@ -46566,6 +46566,807 @@
      "why": "坐标来源"
     }
    ]
+  },
+  {
+   "id": "x-宁国城西湖希尔顿花园酒店",
+   "name": "宁国城西湖希尔顿花园酒店",
+   "kind": "lodging",
+   "tags": [],
+   "province": "安徽",
+   "city": "宁国",
+   "gcj": [
+    118.96166,
+    30.612751
+   ],
+   "drive": {
+    "hours_oneway": 3.58,
+    "km": 292.8,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "最近去了宁国玩，发现是一个很近的宝藏小城。风景好，吃的也惯，还很近。玩水村咖看风景，非常适合带孩子去玩，大人也可以得到放松，关键人还不多，体验感超级棒！一只船和望望呆这两家都是强推，单独写了笔记。 📷",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "no_veto_default",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "宝藏小城 宁国 两天一夜行程",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a1288c60000000035021353?xsec_source=pc_search",
+     "title": "宝藏小城 宁国 两天一夜行程"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.96166,30.612751",
+     "poi": "宁国城西湖希尔顿花园酒店"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "玩水"
+   ],
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-落羽杉湿地公园",
+   "name": "落羽杉湿地公园",
+   "kind": "park",
+   "tags": [],
+   "province": "安徽",
+   "city": "宁国",
+   "gcj": [
+    118.749296,
+    30.471367
+   ],
+   "drive": {
+    "hours_oneway": 4.71,
+    "km": 336.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "amap",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "一年仅20天！皖南水上红杉美到不敢呼吸🍁",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.749296,30.471367",
+     "poi": "落羽杉湿地公园"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-白石岭",
+   "name": "白石岭",
+   "kind": "scenic",
+   "tags": [],
+   "province": "安徽",
+   "city": "宁国",
+   "gcj": [
+    116.975976,
+    29.860872
+   ],
+   "drive": {
+    "hours_oneway": 6.26,
+    "km": 558.3,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "接到最美的水潭～ 📍下午：打鼓岭景区 ✅瀑布群超凉爽，台阶平缓对小狗友好 🏠夜宿景区内民宿（提前确认宠物友好！我们住在景区内，带小院很宽敞） \t 🌟Day 2 📍上午：继续打鼓岭徒步（第二天人少包场！",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "带狗玩皖南｜4天3晚小众路线，玩透玻璃水～",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/68b4f6dc000000001d01b94c?xsec_source=pc_search",
+     "title": "带狗玩皖南｜4天3晚小众路线，玩透玻璃水～"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=116.975976,29.860872",
+     "poi": "白石岭"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "山野徒步"
+   ],
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-石潭村",
+   "name": "石潭村",
+   "kind": "water",
+   "tags": [],
+   "province": "安徽",
+   "city": "宁国",
+   "gcj": [
+    118.669605,
+    29.934595
+   ],
+   "drive": {
+    "hours_oneway": 4.41,
+    "km": 349.6,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "这次五人一狗的皖南行 安排在了端午之后，错峰出行 苏州开车到宁国，3小时车程 入住的民宿旁边就是小溪流，清澈见底p11-p14 \t 其实每年都会来皖南两三次，但每次都会有不同的惊喜 \t 这次的惊喜一，",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "no_veto_default",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "关于皖南｜随便一停都是无人之境",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/684703dc0000000021004ed6?xsec_source=pc_search",
+     "title": "关于皖南｜随便一停都是无人之境"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.669605,29.934595",
+     "poi": "石潭村"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "玩水",
+    "溯溪",
+    "古村古镇"
+   ],
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-皖南川藏线",
+   "name": "皖南川藏线",
+   "kind": "scenic",
+   "tags": [],
+   "province": "安徽",
+   "city": "宁国",
+   "gcj": [
+    118.456952,
+    30.659844
+   ],
+   "drive": {
+    "hours_oneway": 3.86,
+    "km": 328.8,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "amap",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "皖南川藏线溯溪💦东入口15min的小九寨沟‼️",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.456952,30.659844",
+     "poi": "皖南川藏线"
+    }
+   ],
+   "pending": false,
+   "kind_src": "兜底",
+   "scenes": [],
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-红旗水库",
+   "name": "红旗水库",
+   "kind": "water",
+   "tags": [],
+   "province": "安徽",
+   "city": "广德",
+   "gcj": [
+    116.651523,
+    30.827589
+   ],
+   "drive": {
+    "hours_oneway": 5.86,
+    "km": 518.2,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "在皖南一个小城，看到了阿勒泰风光，看到了茶山之美，看到了古老银杏下的壁画艺术！一路游山玩水，登高望湖，去南漪湖追逐日落！旅途中人很少，体验感拉满！ \t 自驾路线 D1：伍员山→养心谷→南漪湖 D2：盛",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "no_veto_default",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "皖南郎溪自驾游·人少冷门，但像童话世界！",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/68ae5389000000001b037a08?xsec_source=pc_search",
+     "title": "皖南郎溪自驾游·人少冷门，但像童话世界！"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=116.651523,30.827589",
+     "poi": "红旗水库"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "玩水"
+   ],
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-黄山魔宿·三棵树景区",
+   "name": "黄山魔宿·三棵树景区",
+   "kind": "scenic",
+   "tags": [],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.079425,
+    29.972753
+   ],
+   "drive": {
+    "hours_oneway": 4.85,
+    "km": 414.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "途经有很多农家乐，不用准备路餐 \t 📍秀里鱼灯 🚗导航：域见秀里·水镇地上停车场 🎫门票：十元一人，宠物友好 🎏鱼灯：晚上18:18开始，可以提前到拍照。⚠️有鱼灯巡游、旋转铁花、烟花表演，注意最好抱",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "沪狗的黟县落地签（周末速通版 番茄不吃饭饭",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ae80c4c0000000015008a61?xsec_source=pc_search",
+     "title": "沪狗的黟县落地签（周末速通版 番茄不吃饭饭"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.079425,29.972753",
+     "poi": "黄山魔宿·三棵树景区"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "山野徒步"
+   ],
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-汉庭酒店(黄山屯溪老街店)",
+   "name": "汉庭酒店(黄山屯溪老街店)",
+   "kind": "lodging",
+   "tags": [],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.314714,
+    29.710606
+   ],
+   "drive": {
+    "hours_oneway": 4.75,
+    "km": 421.6,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "途经有很多农家乐，不用准备路餐 \t 📍秀里鱼灯 🚗导航：域见秀里·水镇地上停车场 🎫门票：十元一人，宠物友好 🎏鱼灯：晚上18:18开始，可以提前到拍照。⚠️有鱼灯巡游、旋转铁花、烟花表演，注意最好抱",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "沪狗的黟县落地签（周末速通版 番茄不吃饭饭",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ae80c4c0000000015008a61?xsec_source=pc_search",
+     "title": "沪狗的黟县落地签（周末速通版 番茄不吃饭饭"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.314714,29.710606",
+     "poi": "汉庭酒店(黄山屯溪老街店)"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "玩水",
+    "溯溪",
+    "古村古镇",
+    "山野徒步"
+   ],
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-黄山太平湖漫泽度假民宿",
+   "name": "黄山太平湖漫泽度假民宿",
+   "kind": "lodging",
+   "tags": [],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.028995,
+    30.349378
+   ],
+   "drive": {
+    "hours_oneway": 4.73,
+    "km": 396.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "春节带小狗自驾游第一站，黄山。 一脚油门1242公里直奔📍黄山太平湖。 \t 🔹太平湖（图1-12） 导航📍漫泽度假酒店。 大草坪确实够大，旁边就是太平湖。早上有点凉没让小狗下水，浅浅踩了踩。水很清很适",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "no_veto_default",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "安徽黄山｜太平湖 芙蓉谷｜带小狗出游",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6991dbef0000000015031c19?xsec_source=pc_search",
+     "title": "安徽黄山｜太平湖 芙蓉谷｜带小狗出游"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.028995,30.349378",
+     "poi": "黄山太平湖漫泽度假民宿"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "玩水",
+    "山野徒步"
+   ],
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-谢裕大茶博园",
+   "name": "谢裕大茶博园",
+   "kind": "scenic",
+   "tags": [],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.326456,
+    29.86464
+   ],
+   "drive": {
+    "hours_oneway": 4.68,
+    "km": 401.9,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "🐶住进徽派小院，2天1夜版 接上一篇 看完鱼灯烟花🎆后 \t 🏠第一晚：入住-黄山紫园客栈 想找一个：宠物友好➕有充电桩➕遛狗方便➕不能木地板（狗走路有声音怕吵着楼下）➕不走山路➕最好有个小院儿 找到了",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "徽州遛狗 | 带🐶住进徽派小院，2天1夜版 大地家族",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6963ab7b000000001a0372f1?xsec_source=pc_search",
+     "title": "徽州遛狗 | 带🐶住进徽派小院，2天1夜版 大地家族"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.326456,29.86464",
+     "poi": "谢裕大茶博园"
+    }
+   ],
+   "pending": false,
+   "kind_src": "兜底",
+   "scenes": [],
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-白鹇谷",
+   "name": "白鹇谷",
+   "kind": "scenic",
+   "tags": [],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.239146,
+    30.208407
+   ],
+   "drive": {
+    "hours_oneway": 4.92,
+    "km": 386.5,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "就是孩子的专属摄影师 只要能出片 上刀山下火海都可以 📍安徽省黄山市白鹇谷 🔺夏天旺季不要带🐕去了 🔺沿途都有水潭 图片水潭需要爬到顶 大约20分钟 有台阶有爬升 🔺水潭石头很滑 小心 [萌萌哒R]",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "no_veto_default",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "每一个养宠的女人都是合格的站姐🤳",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a06fa590000000035028bcc?xsec_source=pc_search",
+     "title": "每一个养宠的女人都是合格的站姐🤳"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.239146,30.208407",
+     "poi": "白鹇谷"
+    }
+   ],
+   "pending": false,
+   "kind_src": "兜底",
+   "scenes": [],
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-黄山-野生猴谷",
+   "name": "黄山-野生猴谷",
+   "kind": "scenic",
+   "tags": [],
+   "province": "安徽",
+   "city": "黄山",
+   "gcj": [
+    118.158098,
+    30.070475
+   ],
+   "drive": {
+    "hours_oneway": 5.33,
+    "km": 395.9,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:07"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-安徽"
+   ],
+   "geo_src": "amap",
+   "origin": "小红书发现-安徽",
+   "curation_note": "",
+   "raw_note": "比起爬黄山⛰️更喜欢黄山脚下的小众无人景点",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.158098,30.070475",
+     "poi": "黄山-野生猴谷"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "山野徒步"
+   ],
+   "access": {},
+   "dog_tier": "unknown"
   }
  ],
  "out_of_range": [
