@@ -72666,8 +72666,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -72675,9 +72677,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "合肥岸上草原游玩露营攻略",
+      "note_id": "69b2a237000000000600c4e5",
+      "author": "camping露营集合",
+      "note_url": "https://www.xiaohongshu.com/explore/69b2a237000000000600c4e5"
+     },
+     {
+      "kind": "camp",
+      "quote": "厕所🚾：如图标记各区域都有洗手间",
+      "note_id": "69b2a237000000000600c4e5",
+      "author": "camping露营集合",
+      "note_url": "https://www.xiaohongshu.com/explore/69b2a237000000000600c4e5"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -72698,7 +72716,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -75748,8 +75769,11 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent",
+     "car"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -75757,9 +75781,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "上海上海自驾山东🌊日照3个宝藏床车过夜",
+      "note_id": "6a375ca3000000001603c403",
+      "author": "刘大白｜床车路书",
+      "note_url": "https://www.xiaohongshu.com/explore/6a375ca3000000001603c403"
+     },
+     {
+      "kind": "camp",
+      "quote": "2️⃣露营公园海水浴场‑西侧地上停车场",
+      "note_id": "6a375ca3000000001603c403",
+      "author": "刘大白｜床车路书",
+      "note_url": "https://www.xiaohongshu.com/explore/6a375ca3000000001603c403"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -75782,6 +75822,8 @@
    "tier": "B",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": null,
