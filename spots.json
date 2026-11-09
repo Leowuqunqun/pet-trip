@@ -441,6 +441,11 @@
    "dog_tier": "default",
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/69bbeba8000000001a02a507",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=121.517438,31.047124&name=%E6%B5%A6%E6%B1%9F%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
@@ -2994,6 +2999,11 @@
    "access": {},
    "dog_tier": "explicit",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/699534f3000000001a0297b0",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=120.650494,31.082684&name=%E8%83%9C%E5%9C%B0%E7%94%9F%E6%80%81%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
@@ -6321,6 +6331,11 @@
    },
    "dog_tier": "default",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/69d5aeba000000001a031d42",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=119.852403,31.059767&name=%E5%B7%9D%E6%AD%A5%E6%9D%91&src=pet-trip&coordinate=gaode&callnative=0",
@@ -10602,6 +10617,11 @@
    "dog_tier": "explicit",
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/69eda7a30000000035039474",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=121.232245,29.596556&name=%E5%B2%A9%E5%A4%B4%E5%8F%A4%E6%9D%91&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
@@ -10952,6 +10972,11 @@
    },
    "dog_tier": "default",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/692eb056000000001d03da68",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=120.595902,29.406000&name=%E5%8D%97%E5%B1%B1%E6%B0%B4%E5%BA%93&src=pet-trip&coordinate=gaode&callnative=0",
@@ -15155,6 +15180,11 @@
    "dog_tier": "explicit",
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=122.213215,30.220945&name=%E7%89%9B%E8%BD%AD%E5%B1%B1%E8%A7%82%E6%B5%B7%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
@@ -15861,6 +15891,11 @@
    "dog_tier": "explicit",
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6976f56f000000000b00a45a",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=120.108856,33.312449&name=%E5%A4%A7%E9%A9%AC%E6%B2%9F%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
@@ -16078,6 +16113,11 @@
    "dog_tier": "explicit",
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/697098cb000000002203b5ad",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=121.970858,29.437868&name=%E4%B8%AD%E5%A4%AE%E6%B2%99%E6%BB%A9&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
@@ -16201,6 +16241,11 @@
    "access": {},
    "dog_tier": "default",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/69a7deb3000000000e00e1e1",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=121.934621,29.419213&name=%E7%BB%B4%E4%B9%9F%E7%BA%B3%E5%9B%BD%E9%99%85%E9%85%92%E5%BA%97&src=pet-trip&coordinate=gaode&callnative=0",
@@ -16456,6 +16501,11 @@
    "access": {},
    "dog_tier": "explicit",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=122.182764,30.164186&name=%E5%90%BD%E5%94%AC%E6%B2%99%E6%BB%A9&src=pet-trip&coordinate=gaode&callnative=0",
@@ -16991,6 +17041,11 @@
    "dog_tier": "default",
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/69ce8a300000000021004fe0",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=119.369708,29.502970&name=%E5%B1%B1%E9%A3%8E%E5%86%9C%E5%9C%BA&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
@@ -17100,6 +17155,11 @@
    "access": {},
    "dog_tier": "explicit",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/696e131a000000001a02393c",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=122.225000,30.303394&name=%E4%B8%9C%E6%B5%B7%E9%83%8A%E9%87%8E%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
@@ -19260,6 +19320,11 @@
    "dog_tier": "explicit",
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/67fba2a2000000001d01bef5",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=120.882295,28.338996&name=%E9%BE%99%E6%B9%BE%E6%BD%AD%E5%9B%BD%E5%AE%B6%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
@@ -21067,6 +21132,11 @@
    "dog_tier": "explicit",
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/69b6a854000000001b001823",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=121.690609,30.861518&name=%E6%B5%B7%E6%B9%BE%E5%9B%BD%E5%AE%B6%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
@@ -21173,6 +21243,11 @@
    "access": {},
    "dog_tier": "explicit",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/68cd5992000000001201d685",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=121.701887,31.140646&name=%E6%B5%A6%E4%B8%9C%20%E7%BA%AF%E6%96%B0%E6%9D%91&src=pet-trip&coordinate=gaode&callnative=0",
@@ -32274,6 +32349,11 @@
    "dog_tier": "unknown",
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/68b6f57d000000001b0210a3",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=119.391351,30.105816&name=%E6%B1%90%E9%81%87%E6%B0%91%E5%AE%BF&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
@@ -34264,6 +34344,11 @@
    "dog_tier": "unknown",
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/684ae9ef000000000f03beb3",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=118.903528,30.592577&name=%E8%A5%BF%E6%B4%A5%E9%87%8E%E6%B8%A1%E8%91%9B%E6%B4%AA%E4%BB%99%E5%B1%85%E7%A0%81%E5%A4%B4&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
@@ -34470,6 +34555,11 @@
    "access": {},
    "dog_tier": "default",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/69d4bd010000000023005091",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=121.062453,29.950518&name=%E9%87%8E%E7%94%9F%E4%B9%90%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
@@ -51709,6 +51799,11 @@
    ],
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6a3de42e0000000021008d1e",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=118.749296,30.471367",
      "poi": "落羽杉湿地公园"
@@ -51961,6 +52056,11 @@
     }
    ],
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6a3de42e0000000021008d1e",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=118.456952,30.659844",
@@ -52653,6 +52753,11 @@
    ],
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6a3de42e0000000021008d1e",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=118.158098,30.070475",
      "poi": "黄山-野生猴谷"
@@ -52744,6 +52849,11 @@
    ],
    "sources": [
     {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6a3de42e0000000021008d1e",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=121.518305,29.823471",
      "poi": "欢乐体育公园"
@@ -52834,6 +52944,11 @@
     }
    ],
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6a3de42e0000000021008d1e",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=119.605687,33.397707",
@@ -52944,6 +53059,11 @@
     }
    ],
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6a3de42e0000000021008d1e",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=119.071997,32.262357",
