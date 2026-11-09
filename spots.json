@@ -9097,7 +9097,8 @@
     "evidence": "小红书评论 C级UGC（笔记 6aaf924d）：「omito 为了这家酒店/专门带狗跑一趟」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "risk_hint": "评论说为带狗专程来，但宠物房型/加价政策要电话确认：13362298098"
+    "risk_hint": "评论说为带狗专程来，但宠物房型/加价政策要电话确认：13362298098",
+    "basis": "人工核对原文"
    },
    "overnight": {
     "status": "lodging",
@@ -9178,7 +9179,7 @@
     "water": true,
     "power": true
    },
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "amap",
@@ -9810,7 +9811,8 @@
     "evidence": "小红书 C级UGC（笔记 6a0886a8）：「小庄园内露天泳池，小狗泳池小狗吹水机小狗餐食都有」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "risk_hint": "有狗泳池/吹水机/狗餐食，是全批里宠物设施证据最强的一家；电话 13482824274 确认宠物加价"
+    "risk_hint": "有狗泳池/吹水机/狗餐食，是全批里宠物设施证据最强的一家；电话 13482824274 确认宠物加价",
+    "basis": "人工核对原文"
    },
    "overnight": {
     "status": "lodging",
@@ -9890,7 +9892,7 @@
     "water": true,
     "power": true
    },
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "amap",
@@ -12588,7 +12590,8 @@
     "evidence": "小红书 C级UGC（笔记 6ad4e040，@汤圆Daisy）：「听说清晨有机会遇到云海，但我们没去，也不好评价。 草坪撒欢：飞盘、风筝、遛狗，2号营地还能近距离接触小羊。 溪边玩水：浅滩溪流平缓，适合娃踩水。 \t 📌 注意❗️ 节假日人很多：十一区的，停车也难停，营地要预约，觉得」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "risk_hint": "笔记把「遛狗」列为草坪活动之一，属间接表明可带狗，非明确的准入声明；订位时电话确认：17357211578"
+    "risk_hint": "笔记把「遛狗」列为草坪活动之一，属间接表明可带狗，非明确的准入声明；订位时电话确认：17357211578",
+    "basis": "合集笔记"
    },
    "overnight": {
     "status": "official_camp",
@@ -12698,7 +12701,7 @@
     "过夜"
    ],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "amap",
@@ -13972,7 +13975,8 @@
     "evidence": "小红书 C级UGC（笔记 68bc0edb，@梁百万是只瑞牧）：「，天气刚好，水深合适，河水干净[赞R]我宣布，此地就是西湖边小狗游泳的最佳地点[捂嘴笑R][捂嘴笑R][捂嘴笑R]在水里玩累了，还可以在旁边的草坪上跑跑，稍作休息，而且有坐的横椅，非常合适遛狗人士咯[天幕R]推荐推荐～」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "risk_hint": "潭里可让狗游泳；但同篇笔记写明「西湖边带狗坐船失败，现在规定不能带狗」——坐船别指望"
+    "risk_hint": "潭里可让狗游泳；但同篇笔记写明「西湖边带狗坐船失败，现在规定不能带狗」——坐船别指望",
+    "basis": "人工核对原文"
    },
    "overnight": {
     "status": "unknown",
@@ -14048,7 +14052,7 @@
     "溯溪"
    ],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "amap",
@@ -14339,7 +14343,8 @@
     "evidence": "小红书 C级UGC（笔记 692f9aed，@玫玫CITYWALK）：「✅ 优势： 杨公堤宽阔步道，清晨7点前人少，可远眺西湖全景 茅家埠湿地有专门的林间小道，适合小型犬撒欢（需牵绳） 沿途有宠物休息区，提供饮水点和便袋箱 ⏰ 最佳时段：工作日6:30-8:00 💰 费用：免费，停车10[钱袋R]」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "risk_hint": "⚠ 需牵绳；同样受晚 7 点至早 7 点时段限制；宠物不能接触西湖水域"
+    "risk_hint": "⚠ 需牵绳；同样受晚 7 点至早 7 点时段限制；宠物不能接触西湖水域",
+    "basis": "人工核对原文"
    },
    "overnight": {
     "status": "allowed_wild",
@@ -14428,7 +14433,7 @@
     "过夜"
    ],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -15487,7 +15492,8 @@
     "evidence": "小红书 C级UGC（笔记 6ad20069，@修巴赫）：「杭州遛狗好去处 富阳铜鉴湖公园 \t 下午四点到的，逛一圈一小时左右，赶在五点半日落前和狗子一起享受蓝调时刻。 公园里有很多点位可以租自行车，也有带拖斗的助」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "risk_hint": "公园免费开放，但露营地/花海区域规则不同，分区域确认"
+    "risk_hint": "公园免费开放，但露营地/花海区域规则不同，分区域确认",
+    "basis": "人工核对原文"
    },
    "overnight": {
     "status": "forbidden",
@@ -15564,7 +15570,7 @@
    "access": {
     "toilet": true
    },
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "amap",
@@ -19490,11 +19496,12 @@
     "computed_at": "2026-10-30 15:11"
    },
    "dog": {
-    "policy": "allowed",
+    "policy": "restricted",
     "evidence": "小红书 C级UGC（笔记 69edc9ee，@超能绿绿姬嘎嘎子）：「庐的大奇山（人少版），全程游玩时间大概2h。 美中不足的就是只有第一个潭子允许狗狗下去玩，其他只能泡泡脚。另外就是台阶有点多，介意慎选。 凤凰源线上购票是可以看到当天入园人数的，建议周末和节假日出行的家长们可以提前看看，只有人少」",
     "verified_at": null,
     "evidence_level": "C 级 UGC（未经官方核实）",
-    "risk_hint": "只有第一个潭子允许狗下水；台阶较多"
+    "risk_hint": "只有第一个潭子允许狗下水；台阶较多",
+    "basis": "人工核对原文"
    },
    "overnight": {
     "status": "gray",
@@ -19571,7 +19578,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "restricted",
    "sources": [
     {
      "platform": "amap",
@@ -54433,8 +54440,8 @@
     "玩水"
    ],
    "heat": {
-    "notes": 0,
-    "likes": 0
+    "notes": 15,
+    "likes": 465
    },
    "rating": null,
    "photos": [],
@@ -54447,11 +54454,11 @@
    "access": {},
    "dog_tier": "explicit",
    "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+    "notes": 15,
+    "likes": 465,
+    "basis": "小红书点名搜索 15 条相关笔记"
    },
-   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   "heat_basis": "小红书点名搜索 15 条相关笔记"
   },
   {
    "id": "x-蜀山古南街",
@@ -67850,8 +67857,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -67859,9 +67868,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "❌水库岸边临水区不允许临水露营、明火烧烤",
+      "note_id": "6a6cb3cb0000000022010901",
+      "author": "一剑飞雪",
+      "note_url": "https://www.xiaohongshu.com/explore/6a6cb3cb0000000022010901"
+     },
+     {
+      "kind": "camp",
+      "quote": "坝下空地可以简单野餐、搭天幕，无痕游玩",
+      "note_id": "6a6cb3cb0000000022010901",
+      "author": "一剑飞雪",
+      "note_url": "https://www.xiaohongshu.com/explore/6a6cb3cb0000000022010901"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -67883,7 +67908,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
