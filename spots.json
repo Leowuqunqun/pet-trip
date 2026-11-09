@@ -66644,10 +66644,10 @@
     "computed_at": "2026-11-09 10:18"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6ae6f26d000000001200c143）：「明明快到立冬了 但是慈溪还揣着一整个盛夏的温柔阳光☀️ 爸爸难得的休息日 想说去个远一些的出行地 四明山、杭州湾湿地、观海卫瓦窑头挨个犹豫 最后懒人选择妥协👉就近冲家门口的森林公园！ 解锁了极简露营新认知！ 原来一张野餐垫，就可以拥有满分快」",
     "evidence_level": "未核实",
-    "basis": "",
+    "basis": "no_veto_default",
     "risk_hint": "",
     "verified_at": null
    },
@@ -66716,7 +66716,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -70481,10 +70481,10 @@
     "computed_at": "2026-11-09 10:20"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6ac3ebe4000000001901e0f8）：「十一期间去了位于浙江湖州的新市古镇，可以坐高铁到德清站，再打车约半小时就到 \t 新市古镇比较小，3-4小时就能逛完。但为了躲国庆人潮，我们住了三天两夜，体验当地人的慢节奏生活。这里商业化还不严重，很多本地人都住在小镇上，会自己做些有趣的小手」",
     "evidence_level": "未核实",
-    "basis": "",
+    "basis": "no_veto_default",
     "risk_hint": "",
     "verified_at": null
    },
@@ -70537,7 +70537,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 14,
     "likes": 180,
@@ -74570,10 +74570,10 @@
     "computed_at": "2026-11-09 12:59"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
+    "policy": "forbidden",
+    "evidence": "小红书 C级UGC（笔记 6ad1c94a00000000180393ef）：「▪️禁止携带宠物，拍文物不要开闪光灯」",
     "evidence_level": "未核实",
-    "basis": "",
+    "basis": "explicit_veto",
     "risk_hint": "",
     "verified_at": null
    },
@@ -74626,7 +74626,7 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "veto",
    "pop": {
     "notes": 15,
     "likes": 294,
@@ -74732,10 +74732,10 @@
     "computed_at": "2026-11-09 12:59"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 69cde815000000002103ade6）：「灵山胜境之宠物友好日🐶 无意间刷到灵山胜境三月周末做宠物友好，最后一个周末必须带着栗子狗出发🐶🐶🐶 🎫一人一宠199💰提前团 停车场🎫小车15/次，还」",
     "evidence_level": "未核实",
-    "basis": "",
+    "basis": "explicit_ok",
     "risk_hint": "",
     "verified_at": null
    },
@@ -74788,7 +74788,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "pop": {
     "notes": 6,
     "likes": 161,
@@ -78541,10 +78541,10 @@
     "computed_at": "2026-11-09 15:56"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6932be21000000001f004361）：「最近的厦门天气都很不错 趁工作日没什么人来海沧遛遛 根据导航位置停车 从底下沿岸路走过桥就可以到达三岛公园 全是三角梅 海上还有白鹭 挺漂亮的 也有草坪给小狗跑跑（无人情况下浅浅跑了10分钟左右） 除了桥上其他地方没啥台阶 工作日人少体验感」",
     "evidence_level": "未核实",
-    "basis": "",
+    "basis": "no_veto_default",
     "risk_hint": "",
     "verified_at": null
    },
@@ -78600,7 +78600,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "default"
   },
   {
    "id": "x-大屏山郊野公园",
@@ -78699,10 +78699,10 @@
     "computed_at": "2026-11-09 15:56"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6ae71eab000000000e02c9c6）：「，节奏很友好 \t 📌路线信息 全程9km｜爬升约480m｜耗时3–4h 难度⭐⭐ 进阶入门，小朋友、宠物友好，亲子首选 起点：湖掘水库停车场，场内收费，路边免费停车 终点：同起点，可以开车回。 \t ✨看点 天语舟气象塔俯瞰海沧湾、石峰岩寺、」",
     "evidence_level": "未核实",
-    "basis": "",
+    "basis": "explicit_ok",
     "risk_hint": "",
     "verified_at": null
    },
@@ -78767,7 +78767,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "explicit"
   },
   {
    "id": "x-苏颂公园",
