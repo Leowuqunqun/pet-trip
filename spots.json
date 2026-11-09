@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 728,
+  "count": 738,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -76090,6 +76090,747 @@
    "kind_src": "name",
    "access": {},
    "dog_tier": "veto"
+  },
+  {
+   "id": "x-白云禅寺",
+   "name": "白云禅寺",
+   "kind": "scenic",
+   "tags": [],
+   "province": "安徽",
+   "city": "宁国",
+   "gcj": [
+    118.722899,
+    30.555893
+   ],
+   "drive": {
+    "hours_oneway": 3.97,
+    "km": 337.3,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:36"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "福建宠物友好总结（2025年版） 带我的小狗来福建啦🍵💐 分享一下宠物友好地吧🍃 \t 📍武夷山： 1️⃣建窑遗址【图1.2】 下午17点后去，有",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "白云禅寺",
+   "poi_type": "风景名胜;风景名胜;寺庙道观",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6846fdfd0000000022006386",
+     "title": "福建宠物友好总结（2025年版）"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69ce7bef0000000023024837",
+     "title": "『武夷山』答应小狗 夏天我们再来"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.722899,30.555893",
+     "poi": "白云禅寺"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "人文古迹"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-坂头水库",
+   "name": "坂头水库",
+   "kind": "water",
+   "tags": [],
+   "province": "浙江",
+   "city": "绍兴",
+   "gcj": [
+    120.602708,
+    29.609809
+   ],
+   "drive": {
+    "hours_oneway": 3.14,
+    "km": 256.3,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:36"
+   },
+   "dog": {
+    "policy": "forbidden",
+    "evidence": "💡得知十里长堤 不能带狗 本来想带14看日落",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "坂头水库",
+   "poi_type": "地名地址信息;自然地名;湖泊",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698df28d000000001b0167c4",
+     "title": "在厦门遛狗真的很难抑郁吧😭"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698e026b000000001b01d948",
+     "title": "我确定这就是厦门最好的徒步路线！🙌"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.602708,29.609809",
+     "poi": "坂头水库"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "veto"
+  },
+  {
+   "id": "x-城西湿地公园",
+   "name": "城西湿地公园",
+   "kind": "park",
+   "tags": [],
+   "province": "浙江",
+   "city": "绍兴",
+   "gcj": [
+    120.798689,
+    29.576407
+   ],
+   "drive": {
+    "hours_oneway": 2.71,
+    "km": 229.3,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:36"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "二刷了 爱惨了 草坪还是绿时 大太阳 太出片了 这次去冬天了 黄了 还是阴天 出片率低 但是不影响遛狗 太好遛了😭好权威的地方😭 \t 📍泉州植物园 🉑带狗 福建省泉州市洛江区河市镇山边村俞大猷公园旁 💡还会再三刷四刷的程度！！！！！！！ \t",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "城西湿地公园",
+   "poi_type": "风景名胜;公园广场;公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.798689,29.576407",
+     "poi": "城西湿地公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-古城西街",
+   "name": "古城西街",
+   "kind": "other",
+   "tags": [],
+   "province": "山东",
+   "city": "泰安",
+   "gcj": [
+    116.722624,
+    36.182192
+   ],
+   "drive": {
+    "hours_oneway": 9.06,
+    "km": 791.4,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:36"
+   },
+   "dog": {
+    "policy": "forbidden",
+    "evidence": "发现泉州这边养狗的人不多，但是带狗进店大家都非常淡定，并没有网传的宠物不友好",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "古城西街",
+   "poi_type": "地名地址:道路名",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6989c9c300000000280087de",
+     "title": "2026携宠福建自驾游|第二站:泉州"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=116.722624,36.182192",
+     "poi": "古城西街"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:地名地址类",
+   "access": {},
+   "dog_tier": "veto"
+  },
+  {
+   "id": "x-橙色计划No.1露营咖啡",
+   "name": "橙色计划No.1露营咖啡",
+   "kind": "campground",
+   "tags": [],
+   "province": "江苏",
+   "city": "苏州",
+   "gcj": [
+    120.334918,
+    31.044723
+   ],
+   "drive": {
+    "hours_oneway": 1.66,
+    "km": 129.4,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:36"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "以免费入内。 🏕️绝大多数都是四点多过来等日落，我们去的那天天阴就没啥效果。整体布置还是很度假风的，宠物友好，大片草地可以给小狗撒欢。而且正对着太湖，超惬意～里面还有设置射箭的区域，可以免费使用。 \t 3️⃣ 陆巷古村（图8-12） 🅿️导",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "橙色计划No.1露营咖啡",
+   "poi_type": "体育休闲服务;体育休闲服务场所;体育休闲服务场所",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/68d22039000000000b010729",
+     "title": "带着小狗去远行1️⃣2️⃣｜苏州东山岛自驾🚗 酷酷小卡"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.334918,31.044723",
+     "poi": "橙色计划No.1露营咖啡"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "露营"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-谷山水库",
+   "name": "谷山水库",
+   "kind": "water",
+   "tags": [],
+   "province": "山东",
+   "city": "枣庄",
+   "gcj": [
+    117.506279,
+    34.922762
+   ],
+   "drive": {
+    "hours_oneway": 7.41,
+    "km": 632.8,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:36"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "枣庄这个季节真的适合多出去走走，天蓝水清阳光暖 今天和小狗又去了最喜欢去的水库[赞R] 这个水库好适合观🐦，有很多白鹭飞来飞去 推荐大家可以去夹谷山看看攀岩，然后往下去水库走走 \t 地址：谷山水库(导航夹谷山，但是不要上山，顺着公路一直往下",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "谷山水库",
+   "poi_type": "地名地址:自然地名:湖泊",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69ecc1a3000000002003897f",
+     "title": "枣庄周末去哪1.0"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.506279,34.922762",
+     "poi": "谷山水库"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-日照海滨国家森林公园",
+   "name": "日照海滨国家森林公园",
+   "kind": "park",
+   "tags": [],
+   "province": "山东",
+   "city": "日照",
+   "gcj": [
+    119.62933,
+    35.54336
+   ],
+   "drive": {
+    "hours_oneway": 6.94,
+    "km": 597.8,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:36"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "宠物友好景区大汇总 全国宠物友好景区有哪些呢？大家实地去过的可以分享一下吗？方便计划带宠出游。我先来几个： 内蒙古乌兰察布辉腾锡勒草原黄花沟",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "日照海滨国家森林公园",
+   "poi_type": "旅游景点:国家级景点",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69ecfcbe0000000035025b93",
+     "title": "宠物友好景区大汇总"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.62933,35.54336",
+     "poi": "日照海滨国家森林公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "玩水",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-南阳古镇",
+   "name": "南阳古镇",
+   "kind": "village",
+   "tags": [],
+   "province": "山东",
+   "city": "济宁",
+   "gcj": [
+    116.677465,
+    35.092594
+   ],
+   "drive": {
+    "hours_oneway": 8.37,
+    "km": 753.6,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:36"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "宠物友好景区大汇总 全国宠物友好景区有哪些呢？大家实地去过的可以分享一下吗？方便计划带宠出游。我先来几个： 内蒙古乌兰察布辉腾锡勒草原黄花沟",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "南阳古镇",
+   "poi_type": "旅游景点:国家级景点",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69ecfcbe0000000035025b93",
+     "title": "宠物友好景区大汇总"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=116.677465,35.092594",
+     "poi": "南阳古镇"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "古村古镇"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-岩马水库",
+   "name": "岩马水库",
+   "kind": "water",
+   "tags": [],
+   "province": "山东",
+   "city": "枣庄",
+   "gcj": [
+    117.363553,
+    35.209371
+   ],
+   "drive": {
+    "hours_oneway": 7.82,
+    "km": 686.8,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:36"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "宠物友好景区大汇总 全国宠物友好景区有哪些呢？大家实地去过的可以分享一下吗？方便计划带宠出游。我先来几个： 内蒙古乌兰察布辉腾锡勒草原黄花沟",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "岩马水库",
+   "poi_type": "地名地址:自然地名:湖泊",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69ecfcbe0000000035025b93",
+     "title": "宠物友好景区大汇总"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.363553,35.209371",
+     "poi": "岩马水库"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-滨河公园",
+   "name": "滨河公园",
+   "kind": "park",
+   "tags": [],
+   "province": "江苏",
+   "city": "太仓",
+   "gcj": [
+    121.13246,
+    31.440939
+   ],
+   "drive": {
+    "hours_oneway": 0.7,
+    "km": 49.2,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 15:36"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "宠物友好景区大汇总 全国宠物友好景区有哪些呢？大家实地去过的可以分享一下吗？方便计划带宠出游。我先来几个： 内蒙古乌兰察布辉腾锡勒草原黄花沟",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "滨河公园",
+   "poi_type": "风景名胜;公园广场;公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69ecfcbe0000000035025b93",
+     "title": "宠物友好景区大汇总"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=121.13246,31.440939",
+     "poi": "滨河公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
   }
  ],
  "out_of_range": [
