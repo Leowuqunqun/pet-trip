@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 701,
+  "count": 692,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -1300,7 +1300,7 @@
    ],
    "geo_src": "xhs",
    "origin": "小红书带狗笔记",
-   "curation_note": "",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
    "photos": [
     {
@@ -1414,8 +1414,24 @@
      "url": "https://uri.amap.com/marker?position=120.893190,30.944020&name=%E8%A5%BF%E5%A1%98%E5%8F%A4%E9%95%87%E6%99%AF%E5%8C%BA&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a0abc8a0000000038023fa1",
+     "title": "上海1h🚗嘉兴｜'江南小洱海' 祥符荡美爆了"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/68fa2983000000000700de99",
+     "title": "上海周边！江南六大古镇宠物友好大合集‼️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.893704,30.942938",
+     "poi": "西塘古镇"
     }
-   ]
+   ],
+   "tier": "B"
   },
   {
    "id": "x-苏州湾体育公园",
@@ -3301,7 +3317,7 @@
    ],
    "geo_src": "xhs",
    "origin": "小红书带狗笔记",
-   "curation_note": "",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "raw_note": "",
    "photos": [
     {
@@ -3342,7 +3358,9 @@
    "poi_name": "虎丘湿地公园",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "草坪遛弯"
+   ],
    "access": {},
    "dog_tier": "default",
    "sources": [
@@ -3360,8 +3378,24 @@
      "url": "https://uri.amap.com/marker?position=120.571201,31.365051&name=%E8%99%8E%E4%B8%98%E6%B9%BF%E5%9C%B0&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a871e21000000001d01fa46",
+     "title": "溱湖湿地公园  纯照骗and很拉胯"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a1e55df0000000022017fc7",
+     "title": "苏州公园合集｜遛狗人专用（附排名"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.571201,31.365051",
+     "poi": "虎丘湿地公园"
     }
-   ]
+   ],
+   "tier": "B"
   },
   {
    "id": "x-东太湖生态园",
@@ -4204,7 +4238,7 @@
    ],
    "geo_src": "xhs",
    "origin": "小红书带狗笔记",
-   "curation_note": "",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
    "photos": [
     {
@@ -4318,8 +4352,19 @@
      "url": "https://uri.amap.com/marker?position=120.542865,30.655455&name=%E6%A1%90%E4%B9%A1%E5%B8%82%E5%BA%86%E5%8C%97%E7%94%9F%E6%80%81%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69d280d700000000210135ed",
+     "title": "📍湘家荡 你简直美好得不像话😭"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.540486,30.654469",
+     "poi": "庆北生态公园"
     }
-   ]
+   ],
+   "tier": "B"
   },
   {
    "id": "x-漕湖湿地公园",
@@ -18243,7 +18288,7 @@
    ],
    "geo_src": "高德POI",
    "origin": "抖音行程",
-   "curation_note": "",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "raw_note": "黄山市区的落脚点，从这儿出发去四个村子",
    "photos": [
     {
@@ -18276,7 +18321,10 @@
     "likes": 29,
     "basis": "小红书点名搜索 2 条相关笔记"
    },
-   "pending": [],
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
    "heat_basis": "小红书点名搜索 2 条相关笔记",
    "poi_type": "地名地址信息;交通地名;道路名",
    "poi_name": "老街",
@@ -18301,8 +18349,24 @@
      "url": "https://uri.amap.com/marker?position=118.307044,29.708173&name=%E9%BB%84%E5%B1%B1%E5%B1%AF%E6%BA%AA%E8%80%81%E8%A1%97&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a016b00000000003502d839",
+     "title": "带狗旅行 | 青岛出发皖南五天四晚攻略"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/672b5e25000000003c017cc5",
+     "title": "📍黄山 西递➕太平湖又是宠物友好的两天两夜 1414141414"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.304186,29.707814",
+     "poi": "屯溪老街"
     }
-   ]
+   ],
+   "tier": "B"
   },
   {
    "id": "x-灵山景区古建筑群",
@@ -22013,8 +22077,19 @@
      "url": "https://uri.amap.com/marker?position=120.170324,30.864627&name=%E8%A5%BF%E5%B1%B1%E6%BC%BE%E6%B9%BF%E5%9C%B0&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6965e7e7000000001a0232fc",
+     "title": "一些和小狗无法复刻的旅行瞬间 🎞️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.170324,30.864627",
+     "poi": "西山漾湿地景区"
     }
-   ]
+   ],
+   "tier": "B"
   },
   {
    "id": "x-金鸡湖",
@@ -25225,7 +25300,10 @@
      "src": "高德POI"
     }
    ],
-   "pending": [],
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
    "pop": {
     "notes": 36,
     "likes": 8544,
@@ -25273,8 +25351,19 @@
      "url": "https://uri.amap.com/marker?position=119.055172,29.545082&name=%E5%8D%83%E5%B2%9B%E6%B9%96&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6965e7e7000000001a0232fc",
+     "title": "一些和小狗无法复刻的旅行瞬间 🎞️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.055172,29.545082",
+     "poi": "千岛湖风景区"
     }
-   ]
+   ],
+   "tier": "B"
   },
   {
    "id": "x-后滩公园",
@@ -26310,8 +26399,24 @@
      "url": "https://uri.amap.com/marker?position=120.982719,30.778673&name=%E5%B9%B3%E6%B9%96%E7%A2%A7%E4%BA%91%E8%8A%B1%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/691892300000000004011470",
+     "title": "浙江“小阿勒泰”太好遛狗了🐕"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6905f53d00000000040296c7",
+     "title": "嘉兴遛狗｜超级丰富的遛狗大大大场地！✌🏻 大地家族 大族长"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.986462,30.780893",
+     "poi": "碧云花园"
     }
-   ]
+   ],
+   "tier": "B"
   },
   {
    "id": "x-冶春园",
@@ -34470,8 +34575,19 @@
      "url": "https://uri.amap.com/marker?position=121.296973,29.910320&name=%E6%B5%99%E4%B8%9C%E5%B0%8F%E4%B9%9D%E5%AF%A8%E6%99%AF%E5%8C%BA&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a6b4a720000000033034edc",
+     "title": "上海自驾｜2.5h闯入绿野仙踪🌿浙东小九寨"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=121.296973,29.91032",
+     "poi": "浙东小九寨"
     }
-   ]
+   ],
+   "tier": "B"
   },
   {
    "id": "x-中坡山森林公园",
@@ -45914,8 +46030,24 @@
      "url": "https://uri.amap.com/marker?position=120.585740,30.008014&name=%E4%B9%A6%E5%9C%A3%E6%95%85%E9%87%8C%E6%99%AF%E5%8C%BA&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/682bfe290000000023003079",
+     "title": "🐶9大绍兴宠物友好景区！撒欢攻略来啦～ 小白GO宠物攻略局"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69075d8f000000000503184c",
+     "title": "本周遛狗地推荐：去绍兴爬山坐船赏夜景啦～ 大兔和大胡子"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.58574,30.008014",
+     "poi": "书圣故里"
     }
-   ]
+   ],
+   "tier": "B"
   },
   {
    "id": "x-瓜渚湖—东岸公园",
@@ -52758,84 +52890,6 @@
    "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
-   "id": "x-西塘古镇",
-   "name": "西塘古镇",
-   "kind": "village",
-   "tags": [],
-   "province": "浙江",
-   "city": "嘉兴",
-   "gcj": [
-    120.893704,
-    30.942938
-   ],
-   "drive": {
-    "hours_oneway": 1.39,
-    "km": 83.9,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:55"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "有个小路可停 \t 🗺地图在P18，供参考 \t ‼️夏天建议早到或者晚去，比较晒，做好防晒 🔍附近其他宠物友好，5km的西塘古镇，2km的良壤有机农场",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "西塘古镇",
-   "poi_type": "风景名胜;风景名胜;国家级景点",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a0abc8a0000000038023fa1",
-     "title": "上海1h🚗嘉兴｜'江南小洱海' 祥符荡美爆了"
-    },
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/68fa2983000000000700de99",
-     "title": "上海周边！江南六大古镇宠物友好大合集‼️"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=120.893704,30.942938",
-     "poi": "西塘古镇"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "古村古镇"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "explicit"
-  },
-  {
    "id": "x-黄公望隐居地",
    "name": "黄公望隐居地",
    "kind": "park",
@@ -53299,82 +53353,6 @@
     "kind"
    ],
    "kind_src": "name",
-   "access": {},
-   "dog_tier": "explicit"
-  },
-  {
-   "id": "x-碧云花园",
-   "name": "碧云花园",
-   "kind": "scenic",
-   "tags": [],
-   "province": "浙江",
-   "city": "嘉善",
-   "gcj": [
-    120.986462,
-    30.780893
-   ],
-   "drive": {
-    "hours_oneway": 1.45,
-    "km": 84.0,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:55"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "周末get～浙江“阿勒泰”名不虚传，草坪、花海、羊羔、小鹿，随手拍拍拍[自拍R][自拍R] \t 🦮 宠物友好buff拉满 整个园区对狗狗超包容！毛孩子可以在大草坪撒欢儿，园区内有很多用南瓜🎃摆放的拍照点，随手一拍就是秋日大片🍁 🌿 超大草坪",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "碧云花园",
-   "poi_type": "风景名胜;风景名胜;风景名胜",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/691892300000000004011470",
-     "title": "浙江“小阿勒泰”太好遛狗了🐕"
-    },
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6905f53d00000000040296c7",
-     "title": "嘉兴遛狗｜超级丰富的遛狗大大大场地！✌🏻 大地家族 大族长"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=120.986462,30.780893",
-     "poi": "碧云花园"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "poi_type:风景名胜",
    "access": {},
    "dog_tier": "explicit"
   },
@@ -54472,82 +54450,6 @@
     "kind"
    ],
    "kind_src": "name",
-   "access": {},
-   "dog_tier": "explicit"
-  },
-  {
-   "id": "x-书圣故里",
-   "name": "书圣故里",
-   "kind": "scenic",
-   "tags": [],
-   "province": "浙江",
-   "city": "绍兴",
-   "gcj": [
-    120.58574,
-    30.008014
-   ],
-   "drive": {
-    "hours_oneway": 2.65,
-    "km": 191.8,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:56"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "🐶9大绍兴宠物友好景区！撒欢攻略来啦～ 1. 安昌古镇 | 坐乌篷船游江南水乡 \t 📍地址：绍兴市柯桥区安昌镇 🚗导航：定位“安昌古镇停车场” 🐾宠物",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "书圣故里",
-   "poi_type": "风景名胜;风景名胜;纪念馆",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/682bfe290000000023003079",
-     "title": "🐶9大绍兴宠物友好景区！撒欢攻略来啦～ 小白GO宠物攻略局"
-    },
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/69075d8f000000000503184c",
-     "title": "本周遛狗地推荐：去绍兴爬山坐船赏夜景啦～ 大兔和大胡子"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=120.58574,30.008014",
-     "poi": "书圣故里"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "poi_type:风景名胜",
    "access": {},
    "dog_tier": "explicit"
   },
@@ -56088,84 +55990,6 @@
    "scenes": [
     "草坪遛弯",
     "玩水"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "explicit"
-  },
-  {
-   "id": "x-虎丘湿地公园",
-   "name": "虎丘湿地公园",
-   "kind": "park",
-   "tags": [],
-   "province": "江苏",
-   "city": "苏州",
-   "gcj": [
-    120.571201,
-    31.365051
-   ],
-   "drive": {
-    "hours_oneway": 1.38,
-    "km": 96.5,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-02 11:53"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "话题标签：宠物友好",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "虎丘湿地公园",
-   "poi_type": "风景名胜;风景名胜;风景名胜",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a871e21000000001d01fa46",
-     "title": "溱湖湿地公园  纯照骗and很拉胯"
-    },
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a1e55df0000000022017fc7",
-     "title": "苏州公园合集｜遛狗人专用（附排名"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=120.571201,31.365051",
-     "poi": "虎丘湿地公园"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "草坪遛弯"
    ],
    "heat": null,
    "rating": null,
@@ -58281,86 +58105,6 @@
    "dog_tier": "explicit"
   },
   {
-   "id": "x-屯溪老街",
-   "name": "屯溪老街",
-   "kind": "village",
-   "tags": [],
-   "province": "安徽",
-   "city": "黄山",
-   "gcj": [
-    118.304186,
-    29.707814
-   ],
-   "drive": {
-    "hours_oneway": 4.89,
-    "km": 422.3,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:56"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "溪南） 上午：芙蓉谷玩水、拍照 下午：呈坎八卦村（约80km/1h），晚上可以看鱼灯表演，虽然呈坎是宠物友好但是不建议带狗去看表演，因为放烟花小狗会害怕 \t 住花筑·黄山懿德堂民宿(呈坎店)（不是很推荐） \t Day4 5月6号呈坎 → 西",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "屯溪老街",
-   "poi_type": "购物服务;特色商业街;特色商业街",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a016b00000000003502d839",
-     "title": "带狗旅行 | 青岛出发皖南五天四晚攻略"
-    },
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/672b5e25000000003c017cc5",
-     "title": "📍黄山 西递➕太平湖又是宠物友好的两天两夜 1414141414"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=118.304186,29.707814",
-     "poi": "屯溪老街"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "玩水",
-    "溯溪",
-    "古村古镇"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "explicit"
-  },
-  {
    "id": "x-黄山市太平湖风景区",
    "name": "黄山市太平湖风景区",
    "kind": "water",
@@ -59183,79 +58927,6 @@
    "dog_tier": "explicit"
   },
   {
-   "id": "x-庆北生态公园",
-   "name": "庆北生态公园",
-   "kind": "park",
-   "tags": [],
-   "province": "浙江",
-   "city": "嘉兴",
-   "gcj": [
-    120.540486,
-    30.654469
-   ],
-   "drive": {
-    "hours_oneway": 2.05,
-    "km": 136.8,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:56"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "话题标签：可以带狗",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "庆北生态公园",
-   "poi_type": "风景名胜;公园广场;公园",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/69d280d700000000210135ed",
-     "title": "📍湘家荡 你简直美好得不像话😭"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=120.540486,30.654469",
-     "poi": "庆北生态公园"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "草坪遛弯"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "explicit"
-  },
-  {
    "id": "x-太平湖国家湿地公园",
    "name": "太平湖国家湿地公园",
    "kind": "park",
@@ -59390,152 +59061,6 @@
    "scenes": [
     "草坪遛弯",
     "山野徒步"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "explicit"
-  },
-  {
-   "id": "x-西山漾湿地景区",
-   "name": "西山漾湿地景区",
-   "kind": "park",
-   "tags": [],
-   "province": "浙江",
-   "city": "湖州",
-   "gcj": [
-    120.170324,
-    30.864627
-   ],
-   "drive": {
-    "hours_oneway": 2.17,
-    "km": 150.5,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:56"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "一些和小狗无法复刻的旅行瞬间 🎞️ 回顾去年一整年，竟然和无所谓一起去了26座城市50多个宠物友好地点，拍摄了2w+的视频和照片（虽然偷懒大部份都没剪 [汗颜R]  回顾这一年感觉到处都留下了快乐的印记 [红色心形R] \t 📒 以",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "西山漾湿地景区",
-   "poi_type": "风景名胜;风景名胜;风景名胜",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6965e7e7000000001a0232fc",
-     "title": "一些和小狗无法复刻的旅行瞬间 🎞️"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=120.170324,30.864627",
-     "poi": "西山漾湿地景区"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "山野徒步"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "explicit"
-  },
-  {
-   "id": "x-千岛湖风景区",
-   "name": "千岛湖风景区",
-   "kind": "water",
-   "tags": [],
-   "province": "浙江",
-   "city": "杭州",
-   "gcj": [
-    119.055172,
-    29.545082
-   ],
-   "drive": {
-    "hours_oneway": 4.18,
-    "km": 345.0,
-    "source": "tencent 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 10:18"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "一些和小狗无法复刻的旅行瞬间 🎞️ 回顾去年一整年，竟然和无所谓一起去了26座城市50多个宠物友好地点，拍摄了2w+的视频和照片（虽然偷懒大部份都没剪 [汗颜R]  回顾这一年感觉到处都留下了快乐的印记 [红色心形R] \t 📒 以",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "千岛湖风景区",
-   "poi_type": "风景名胜;风景名胜;国家级景点",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6965e7e7000000001a0232fc",
-     "title": "一些和小狗无法复刻的旅行瞬间 🎞️"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=119.055172,29.545082",
-     "poi": "千岛湖风景区"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "玩水"
    ],
    "heat": null,
    "rating": null,
@@ -62980,77 +62505,6 @@
     "kind"
    ],
    "kind_src": "name",
-   "access": {},
-   "dog_tier": "unknown"
-  },
-  {
-   "id": "x-浙东小九寨",
-   "name": "浙东小九寨",
-   "kind": "scenic",
-   "tags": [],
-   "province": "浙江",
-   "city": "宁波",
-   "gcj": [
-    121.296973,
-    29.91032
-   ],
-   "drive": {
-    "hours_oneway": 3.3,
-    "km": 212.7,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 10:19"
-   },
-   "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "浙东小九寨",
-   "poi_type": "风景名胜;风景名胜;省级景点",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a6b4a720000000033034edc",
-     "title": "上海自驾｜2.5h闯入绿野仙踪🌿浙东小九寨"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=121.296973,29.91032",
-     "poi": "浙东小九寨"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "poi_type:风景名胜",
    "access": {},
    "dog_tier": "unknown"
   },
