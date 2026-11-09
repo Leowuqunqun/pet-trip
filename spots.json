@@ -12981,11 +12981,11 @@
     "computed_at": "2026-11-01 20:36"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 C级UGC（笔记 6ac32674，@贝塔小小历险记）：「▫️如果打算同时逛扬州园林，可以把渌洋湖放在上午，下午去市区（园林不能带狗）」",
+    "policy": "allowed",
+    "evidence": "禁令句「（园林不能带狗）」指的是扬州园林；同一篇笔记对小渌洋湖写的是「宠物友好！安排」｜原文：「如果打算同时逛扬州园林，可以把渌洋湖放在上午…（园林不能带狗）」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -13062,7 +13062,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -13470,11 +13470,11 @@
     "computed_at": "2026-11-01 21:21"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 C级UGC（笔记 69088a4e，@宠物友好推荐官冬爸队长）：「❌不可携宠：」",
+    "policy": "allowed",
+    "evidence": "该点在泰州笔记的宠物友好段，不在禁用段；抽取时因名字多了「景区」二字没匹配上，跌到就近的禁用标记｜原文：「📍沙沟古镇（湖荡特色）」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -13550,7 +13550,7 @@
     "古村古镇"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "amap",
@@ -13949,11 +13949,11 @@
     "computed_at": "2026-10-30 16:45"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 C级UGC（笔记 6a6ac809000000001303cdc5）：「作为常年带毛孩子出游的铲屎官，踩过无数“宠物禁入”的海滩雷，这次亲自实测象山松兰山，真的是宠物友好满分💯，完全是小狗的快乐天堂」",
+    "policy": "allowed",
+    "evidence": "原文本身是正面评价，被误判成禁令｜原文：「亲自实测象山松兰山，真的是宠物友好满分💯，完全是小狗的快乐天堂」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -14040,7 +14040,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -22353,11 +22353,11 @@
     "computed_at": "2026-11-06 10:25"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 UGC（笔记 6aca3def）：「以西塘河路为界，东边的虎丘景区不能带狗，西侧的虎丘湿地萌宠乐园可以带狗（📌图17）」",
+    "policy": "allowed",
+    "evidence": "同一句里禁的是东边的虎丘景区，本点位在西侧且明确可带｜原文：「东边的虎丘景区不能带狗，西侧的虎丘湿地萌宠乐园可以带狗」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -22431,7 +22431,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -27157,11 +27157,11 @@
     "computed_at": "2026-11-06 10:39"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 UGC（笔记 69088a4e）：「❌不可携宠：」",
+    "policy": "restricted",
+    "evidence": "友好段里点名「限小型」，属于限制而非禁止；名字带「·」导致抽取时没匹配上｜原文：「📍爱情海·欢乐田园（限小型）」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -27259,7 +27259,7 @@
    "access": {
     "water": true
    },
-   "dog_tier": "veto",
+   "dog_tier": "restricted",
    "sources": [
     {
      "platform": "xhs",
@@ -33002,11 +33002,11 @@
     "computed_at": "2026-11-06 12:03"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 C级UGC（笔记 6a6b6fd5000000002903360d）：「水滑道禁止宠物，规划好下山路线」",
+    "policy": "restricted",
+    "evidence": "禁的是水滑道这一设施，不是整座山｜原文：「水滑道禁止宠物，规划好下山路线」",
     "verified_at": null,
-    "evidence_level": "",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -33083,7 +33083,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "restricted",
    "sources": [
     {
      "platform": "xhs",
@@ -43928,11 +43928,11 @@
     "computed_at": "2026-11-06 19:53"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 UGC（笔记 69219a86）：「本日落爱好者一直很想去安吉那个陈×山可是那不能带狗，这里就很完美，还是免费没有门票，现在可能季节原因没有滑翔伞的工作人员，山顶面积不大不小吧能找到无人角度 但是人也不少」",
+    "policy": "allowed",
+    "evidence": "禁的是安吉陈×山，本寺是被当作替代推荐的地点｜原文：「很想去安吉那个陈×山可是那不能带狗，这里就很完美」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -44010,7 +44010,7 @@
     "人文古迹"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -44439,11 +44439,11 @@
     "computed_at": "2026-11-06 20:07"
    },
    "dog": {
-    "policy": "restricted",
-    "evidence": "小红书 UGC（笔记 69be8173）：「P6📍中华麋鹿园❌避雷🙅‍♀️保安原话“一直都不允许带狗的” 争执半天 遇到一家带着小泰迪的刚玩结束 原来是针对中大型犬不友好啊😅」",
+    "policy": "allowed",
+    "evidence": "原文讲的是中华麋鹿园不让带狗，不是本海滩｜原文：「中华麋鹿园❌避雷…保安原话「一直都不允许带狗的」」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "area_or_large_dog",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -44520,7 +44520,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "restricted",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -45488,11 +45488,11 @@
     "computed_at": "2026-11-06 20:27"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 UGC（笔记 68303830）：「乌镇分为东栅、西栅、南栅和北栅，西栅的景点比较多大家都去这但是不能带狗哦[鄙视R]」",
+    "policy": "allowed",
+    "evidence": "禁令针对西栅，本条目是南栅｜原文：「西栅的景点比较多大家都去这但是不能带狗哦」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -45567,7 +45567,7 @@
    "kind_src": "name",
    "scenes": [],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "xhs",
@@ -54154,10 +54154,10 @@
     "computed_at": "2026-11-09 12:55"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "以西塘河路为界，东边的虎丘景区不能带狗，西侧的虎丘湿地萌宠乐园可以带狗（📌图17）",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "证据句讲的是虎丘景区与西侧萌宠乐园，没有针对本公园的表述｜原文：「东边的虎丘景区不能带狗，西侧的虎丘湿地萌宠乐园可以带狗」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -54214,7 +54214,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "default",
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -56177,10 +56177,10 @@
     "computed_at": "2026-11-09 12:56"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "大多数的回答会是’不好意思，不能带狗’，所以我想分享带狗子真实住过的酒店民宿，这些都是我无数个电话沟通后的珍贵成果呀",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "同上一句，说的是打电话问民宿的结果，不是古镇｜原文：「大多数的回答会是'不好意思，不能带狗'，所以我想分享…酒店民宿」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -56237,7 +56237,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "default"
   },
   {
    "id": "x-独城生态公园",
@@ -56959,10 +56959,10 @@
     "computed_at": "2026-11-09 12:56"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "好吃到不能带狗我也原谅了，绝世美味",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "「好吃到不能带狗」说的是餐馆菜好吃，与犬政策无关｜原文：「好吃到不能带狗我也原谅了，绝世美味」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -57017,7 +57017,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "default"
   },
   {
    "id": "x-金家水库",
@@ -59004,10 +59004,10 @@
     "computed_at": "2026-11-09 12:56"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "大多数的回答会是’不好意思，不能带狗’，所以我想分享带狗子真实住过的酒店民宿，这些都是我无数个电话沟通后的珍贵成果呀",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "原文讲的是民宿订房经验，没有针对本馆的禁令｜原文：「大多数的回答会是'不好意思，不能带狗'，所以我想分享带狗子真实住过的酒店民宿」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -59057,7 +59057,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "default"
   },
   {
    "id": "x-观潮胜地公园",
@@ -60567,10 +60567,10 @@
     "computed_at": "2026-11-09 12:56"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "（Tips：收费区域宠物不能进入哦～）",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "restricted",
+    "evidence": "只禁收费区域，街区本身可走｜原文：「（Tips：收费区域宠物不能进入哦～）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -60620,7 +60620,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "restricted"
   },
   {
    "id": "x-南山风景区",
@@ -60640,10 +60640,10 @@
     "computed_at": "2026-11-09 10:19"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "（Tips：收费区域宠物不能进入哦～）",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "restricted",
+    "evidence": "只禁收费区域，同一条笔记的通用提示｜原文：「（Tips：收费区域宠物不能进入哦～）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -60693,7 +60693,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "restricted"
   },
   {
    "id": "x-西津湾江文化公园",
@@ -61627,10 +61627,10 @@
     "computed_at": "2026-11-09 12:56"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "好吃到不能带狗我也原谅了，绝世美味",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "同一句餐馆玩笑，与点位无关｜原文：「好吃到不能带狗我也原谅了，绝世美味」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -61678,7 +61678,7 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "default"
   },
   {
    "id": "x-大有秋一期竺山",
@@ -62732,10 +62732,10 @@
     "computed_at": "2026-11-09 10:19"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "⚠️带狗家庭重大注意：西津野渡竹筏❌不能带狗狗上船",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "禁的是西津野渡竹筏，不是本路段｜原文：「西津野渡竹筏❌不能带狗狗上船」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -62786,7 +62786,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "default"
   },
   {
    "id": "x-徽州府衙",
@@ -70655,10 +70655,10 @@
     "computed_at": "2026-11-09 12:57"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "❌住山下只能非节假日自驾上山，大巴不允许带狗",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "禁的是上山大巴，非住宿本身；自驾可上｜原文：「只能非节假日自驾上山，大巴不允许带狗」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -70717,7 +70717,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "default"
   },
   {
    "id": "x-九华山德懋堂酒店",
@@ -75015,10 +75015,10 @@
     "computed_at": "2026-11-09 13:13"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "度假村内有个小动物园（不能带狗），有散养的鹿，可以喂鱼喂鸟",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "禁的是度假村里的小动物园，不是度假村｜原文：「度假村内有个小动物园（不能带狗）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -75078,7 +75078,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "default"
   },
   {
    "id": "x-泰山风景名胜区-红门",
@@ -75835,10 +75835,10 @@
     "computed_at": "2026-11-09 13:29"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "路线二：小火车体验游（推荐给想体验特色交通、且有一定体力者）这个小火车跟我在瑞士做的是一样的，然后跟南山竹海的也是一样的，但是南山竹海的是不能带狗狗的",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "禁的是南山竹海的小火车，不是本村｜原文：「南山竹海的是不能带狗狗的」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -75888,7 +75888,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "default"
   },
   {
    "id": "x-蒙山人家景区",
@@ -76138,10 +76138,10 @@
     "computed_at": "2026-11-09 13:29"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "来临沂怎么可以不吃炒鸡呢，路过一家网红炒鸡店，我妈妈说肯定不允许带狗狗，我说要不还是问问试试看，所以我蹑手蹑脚进去，像做错事的人一样小心翼翼询问是否可以带狗狗，工作人员：嗯",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "问的是路边炒鸡店能否带狗，不是小镇本身｜原文：「路过一家网红炒鸡店…询问是否可以带狗狗」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -76189,7 +76189,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "default"
   },
   {
    "id": "x-白云禅寺",
@@ -76287,10 +76287,10 @@
     "computed_at": "2026-11-09 15:36"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "💡得知十里长堤 不能带狗 本来想带14看日落",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "禁的是十里长堤，不是本水库｜原文：「得知十里长堤 不能带狗」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -76345,7 +76345,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "default"
   },
   {
    "id": "x-城西湿地公园",
@@ -76438,10 +76438,10 @@
     "computed_at": "2026-11-09 15:36"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "发现泉州这边养狗的人不多，但是带狗进店大家都非常淡定，并没有网传的宠物不友好",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "原文是反驳「宠物不友好」的正面表述｜原文：「带狗进店大家都非常淡定，并没有网传的宠物不友好」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -76489,7 +76489,7 @@
    ],
    "kind_src": "poi_type:地名地址类",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "explicit"
   },
   {
    "id": "x-橙色计划No.1露营咖啡",
