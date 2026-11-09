@@ -939,8 +939,12 @@ function match(s){
   var dt = Object.keys(STATE.dogTier).filter(function(k){ return STATE.dogTier[k]; });
   if(dt.length){
     var tier = s.dog_tier || "unknown";
-    /* 两档都选 = 不限制；只选一档就按档筛。veto/unknown 不在任何一档里，自然被排除。 */
-    if(dt.indexOf(tier) < 0) return false;
+    /* 主人的规则是「没明确说不让带，就按能带来算」——所以"犬政策未核实"必须算进
+       「默认允许」，否则勾了这一档就会把这 124 个点整批藏掉，跟规则相反。
+       "未核实"在卡片上仍如实标注，只是不因为没查到就把它排除。 */
+    var hit = dt.indexOf(tier) >= 0 ||
+              (tier === "unknown" && dt.indexOf("default") >= 0);
+    if(!hit) return false;
   }
   if(!sceneActive(s.scenes)) return false;
   if(!kindActive(s.kind)) return false;
