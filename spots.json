@@ -7703,9 +7703,7 @@
    "poi_name": "花筑·入山(宜兴二十三湾店)",
    "poi_type_dist_m": 32,
    "kind_src": "name",
-   "scenes": [
-    "山野徒步"
-   ],
+   "scenes": [],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -10039,8 +10037,7 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "过夜",
-    "山野徒步"
+    "过夜"
    ],
    "access": {
     "toilet": true,
@@ -15494,9 +15491,7 @@
    "poi_name": "山泊隐世酒店",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [
-    "山野徒步"
-   ],
+   "scenes": [],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -16784,8 +16779,7 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "过夜",
-    "山野徒步"
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -19074,8 +19068,7 @@
    "poi_type_dist_m": 1,
    "kind_src": "name",
    "scenes": [
-    "玩水",
-    "山野徒步"
+    "玩水"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -22424,9 +22417,7 @@
    "poi_name": "费尔蒙酒店北楼",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [
-    "山野徒步"
-   ],
+   "scenes": [],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -24207,7 +24198,6 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "山野徒步",
     "人文古迹"
    ],
    "access": {},
@@ -34798,9 +34788,7 @@
    "poi_name": "莫干山VISAYA意境民宿",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [
-    "山野徒步"
-   ],
+   "scenes": [],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -51951,8 +51939,7 @@
    "scenes": [
     "玩水",
     "溯溪",
-    "古村古镇",
-    "山野徒步"
+    "古村古镇"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -52048,8 +52035,7 @@
    "pending": false,
    "kind_src": "name",
    "scenes": [
-    "玩水",
-    "山野徒步"
+    "玩水"
    ],
    "access": {},
    "dog_tier": "default",
@@ -52789,9 +52775,7 @@
    ],
    "pending": false,
    "kind_src": "name",
-   "scenes": [
-    "山野徒步"
-   ],
+   "scenes": [],
    "access": {},
    "dog_tier": "default",
    "rating": null,
@@ -52872,8 +52856,7 @@
    "pending": false,
    "kind_src": "name",
    "scenes": [
-    "玩水",
-    "山野徒步"
+    "玩水"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -54629,8 +54612,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -54638,9 +54623,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "明镜荡星空营地不可能再来了",
+      "note_id": "6936a3cd000000001d03cc93",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6936a3cd000000001d03cc93"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -54667,7 +54660,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -54861,8 +54855,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -54870,9 +54866,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "打卡车边露营地（持续记录）",
+      "note_id": "6ac6791a000000001b02ddcd",
+      "author": "吱吱吱",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac6791a000000001b02ddcd"
+     },
+     {
+      "kind": "camp",
+      "quote": "带着小朋友大包小包属实不方便，搜罗各种网上车边露营地，跟着大家的👣走走",
+      "note_id": "6ac6791a000000001b02ddcd",
+      "author": "吱吱吱",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac6791a000000001b02ddcd"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -54900,7 +54911,8 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -54940,8 +54952,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -54949,9 +54963,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "星空＋露营＋毛孩子=人生值得的秋夜🍃",
+      "note_id": "6aa22354000000000b037aa8",
+      "author": "爱吃面包的小可",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa22354000000000b037aa8"
+     },
+     {
+      "kind": "camp",
+      "quote": "✔宠物友好✔露营烧烤✔晚霞星空",
+      "note_id": "6aa22354000000000b037aa8",
+      "author": "爱吃面包的小可",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa22354000000000b037aa8"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -54978,7 +55007,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -59540,8 +59570,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -59549,9 +59581,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "上海周边最喜欢的周末露营地",
+      "note_id": "6ae746a4000000002501a102",
+      "author": "郭不聒噪（只做情绪版）",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae746a4000000002501a102"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -59573,7 +59613,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -60565,8 +60606,11 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent",
+     "car"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -60574,9 +60618,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "[一R]这个位置露营位置相对较多，在芦苇区外的断头路上可以一路排开",
+      "note_id": "69368295000000001f008b72",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/69368295000000001f008b72"
+     },
+     {
+      "kind": "camp",
+      "quote": "搬家露营的朋友小心裤子和鞋子",
+      "note_id": "69368295000000001f008b72",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/69368295000000001f008b72"
+     }
+    ]
    },
    "sub_pois": [],
    "trips": [],
@@ -60598,7 +60657,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -64460,8 +64520,7 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "古村古镇",
-    "山野徒步"
+    "古村古镇"
    ],
    "heat": null,
    "rating": null,
@@ -67521,8 +67580,7 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水",
-    "山野徒步"
+    "玩水"
    ],
    "heat": null,
    "rating": null,
@@ -69561,8 +69619,7 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水",
-    "山野徒步"
+    "玩水"
    ],
    "heat": null,
    "rating": null,
@@ -69925,9 +69982,7 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [
-    "山野徒步"
-   ],
+   "scenes": [],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -69998,9 +70053,7 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [
-    "山野徒步"
-   ],
+   "scenes": [],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -71912,8 +71965,7 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "古村古镇",
-    "山野徒步"
+    "古村古镇"
    ],
    "heat": null,
    "rating": null,
@@ -73107,9 +73159,7 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [
-    "山野徒步"
-   ],
+   "scenes": [],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -73765,9 +73815,7 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [
-    "山野徒步"
-   ],
+   "scenes": [],
    "heat": null,
    "rating": null,
    "photos": [],
