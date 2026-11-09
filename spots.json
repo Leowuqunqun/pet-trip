@@ -12058,7 +12058,7 @@
       "note_url": "https://www.xiaohongshu.com/explore/6aa50ca0000000002900ed1c"
      }
     ],
-    "evidence_level": "人工核对原文",
+    "evidence_level": "笔记原话",
     "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
@@ -12120,8 +12120,6 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
-    "露营",
-    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -36804,7 +36802,7 @@
       "note_url": "https://www.xiaohongshu.com/explore/6ae336460000000035023c53"
      }
     ],
-    "evidence_level": "人工核对原文",
+    "evidence_level": "笔记原话",
     "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
@@ -36864,10 +36862,7 @@
    "poi_name": "温州园博园",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:风景名胜",
-   "scenes": [
-    "露营",
-    "过夜"
-   ],
+   "scenes": [],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -41969,9 +41964,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 39 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 39 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": null,
@@ -54065,7 +54060,10 @@
    "scenes": [
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 15,
+    "likes": 999
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -54077,11 +54075,11 @@
    "access": {},
    "dog_tier": "explicit",
    "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+    "notes": 15,
+    "likes": 999,
+    "basis": "小红书点名搜索 15 条相关笔记"
    },
-   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   "heat_basis": "小红书点名搜索 15 条相关笔记"
   },
   {
    "id": "x-南湖公园",
@@ -56150,7 +56148,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 12,
+    "likes": 129
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -56160,7 +56161,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 12,
+    "likes": 129,
+    "basis": "小红书点名搜索 12 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 12 条相关笔记"
   },
   {
    "id": "x-太仓湿地公园",
@@ -61550,7 +61557,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-新港口灯塔",
@@ -63181,7 +63194,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 445
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -63191,7 +63207,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 2,
+    "likes": 445,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-西溪里咖啡露营地",
@@ -64702,7 +64724,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-唐田幸福水库",
@@ -66375,7 +66403,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 12
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -66385,7 +66416,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 3,
+    "likes": 12,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-杭州湾国家湿地公园",
@@ -66679,7 +66716,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-嘉善大云旅游度假区",
@@ -68828,7 +68871,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-宁波东钱湖小加州",
@@ -70129,7 +70178,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-水杉林湿地",
@@ -72745,7 +72800,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 17,
+    "likes": 1880
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72755,7 +72813,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 17,
+    "likes": 1880,
+    "basis": "小红书点名搜索 17 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 17 条相关笔记"
   },
   {
    "id": "x-巡塘古镇",
@@ -76636,7 +76700,10 @@
     "草坪遛弯",
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 6,
+    "likes": 863
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -76646,7 +76713,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 6,
+    "likes": 863,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
   },
   {
    "id": "x-鱼山古村",
