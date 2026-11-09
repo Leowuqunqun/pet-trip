@@ -6747,11 +6747,11 @@
     "computed_at": "2026-11-01 21:21"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 C级UGC（笔记 69088a4e，@宠物友好推荐官冬爸队长）：「❌不可携宠：」",
+    "policy": "allowed",
+    "evidence": "宠物友好段：有湖有岛有草坪，好遛狗） 📍溱湖湿地农业生态园（生态游） 📍牧城公园（很适合狗狗跑跑） 📍黄桥小南湖 📍黄桥古镇（明清建筑群，烧饼特色） 📍",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "C 级 UGC（原文段落位置核实）",
+    "basis": "小红书笔记（原文段落位置核实）",
     "risk_hint": ""
    },
    "overnight": {
@@ -6851,7 +6851,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -8133,11 +8133,11 @@
     "computed_at": "2026-11-01 21:21"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 C级UGC（笔记 69088a4e，@宠物友好推荐官冬爸队长）：「❌不可携宠：」",
+    "policy": "allowed",
+    "evidence": "宠物友好段：园（生态游） 📍牧城公园（很适合狗狗跑跑） 📍黄桥小南湖 📍黄桥古镇（明清建筑群，烧饼特色） 📍长江湿地公园（人少好遛狗） 📍爱情海·欢乐田",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "C 级 UGC（原文段落位置核实）",
+    "basis": "小红书笔记（原文段落位置核实）",
     "risk_hint": ""
    },
    "overnight": {
@@ -8213,7 +8213,7 @@
     "古村古镇"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -8787,11 +8787,11 @@
     "computed_at": "2026-11-01 21:21"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 C级UGC（笔记 69088a4e，@宠物友好推荐官冬爸队长）：「❌不可携宠：」",
+    "policy": "allowed",
+    "evidence": "宠物友好段：湖湿地农业生态园（生态游） 📍牧城公园（很适合狗狗跑跑） 📍黄桥小南湖 📍黄桥古镇（明清建筑群，烧饼特色） 📍长江湿地公园（人少好遛狗） 📍",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "C 级 UGC（原文段落位置核实）",
+    "basis": "小红书笔记（原文段落位置核实）",
     "risk_hint": ""
    },
    "overnight": {
@@ -8849,7 +8849,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -9025,11 +9025,11 @@
     "computed_at": "2026-11-01 21:21"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 C级UGC（笔记 69088a4e，@宠物友好推荐官冬爸队长）：「❌不可携宠：」",
+    "policy": "allowed",
+    "evidence": "宠物友好段：子黑熊鳄鱼麋鹿） 📍天德湖公园（有湖有岛有草坪，好遛狗） 📍溱湖湿地农业生态园（生态游） 📍牧城公园（很适合狗狗跑跑） 📍黄桥小南湖 📍黄桥",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "C 级 UGC（原文段落位置核实）",
+    "basis": "小红书笔记（原文段落位置核实）",
     "risk_hint": ""
    },
    "overnight": {
@@ -9105,7 +9105,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -9877,11 +9877,11 @@
     "computed_at": "2026-11-01 21:21"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 C级UGC（笔记 69088a4e，@宠物友好推荐官冬爸队长）：「❌不可携宠：」",
+    "policy": "allowed",
+    "evidence": "宠物友好段：物王国（宠物友好动物园，可以带狗狗看小狮子黑熊鳄鱼麋鹿） 📍天德湖公园（有湖有岛有草坪，好遛狗） 📍溱湖湿地农业生态园（生态游） 📍牧城公园",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "C 级 UGC（原文段落位置核实）",
+    "basis": "小红书笔记（原文段落位置核实）",
     "risk_hint": ""
    },
    "overnight": {
@@ -9958,7 +9958,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -27043,11 +27043,11 @@
     "computed_at": "2026-11-06 10:39"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 UGC（笔记 69088a4e）：「❌不可携宠：」",
+    "policy": "allowed",
+    "evidence": "宠物友好段：跑跑） 📍黄桥小南湖 📍黄桥古镇（明清建筑群，烧饼特色） 📍长江湿地公园（人少好遛狗） 📍爱情海·欢乐田园（限小型） 📍古银杏森林公园 📍沙",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "C 级 UGC（原文段落位置核实）",
+    "basis": "小红书笔记（原文段落位置核实）",
     "risk_hint": ""
    },
    "overnight": {
@@ -27120,7 +27120,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -27296,11 +27296,11 @@
     "computed_at": "2026-11-06 10:39"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 UGC（笔记 69088a4e）：「❌不可携宠：」",
+    "policy": "allowed",
+    "evidence": "宠物友好段：长江湿地公园（人少好遛狗） 📍爱情海·欢乐田园（限小型） 📍古银杏森林公园 📍沙沟古镇（湖荡特色） 📍金东门老街（宠物要抱或推车） . ❌不",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "C 级 UGC（原文段落位置核实）",
+    "basis": "小红书笔记（原文段落位置核实）",
     "risk_hint": ""
    },
    "overnight": {
@@ -27377,7 +27377,7 @@
     "山野徒步"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
