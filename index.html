@@ -2279,7 +2279,18 @@ function planBodyHTML(){
   var sat = PLAN.plans.map(function(p){ return p.weatherOk&&p.wSat ? p.wSat.score : null; })
                      .filter(function(x){ return x!=null; });
   var allBad = sat.length && Math.max.apply(null, sat) < 50;
-  var head = (allBad ? '<div class="plan-warn" style="margin-bottom:12px">'+
+  /* 天气一条都没取到：以前这里什么都不说，汇总行照样写"抓取于 xx:xx（刚刚）"，
+     等于**在没拿到数据时宣称刚查过**。2026-11-10 用 CDP 拦掉 open-meteo 实测：
+     卡片里一个降水数字都没有、页面没有任何提示、时间行却显示"刚刚"。
+     取不到就说取不到，并且说清排序退化成只看热度。 */
+  var wFail = (sat.length===0 && PLAN.weekOffset===0);
+  var wMiss = PLAN.plans.length - sat.length;
+  var head = (wFail ? '<div class="plan-warn" style="margin-bottom:12px">'+
+      '这次<b>没取到天气</b>（Open-Meteo 请求失败或网络不通）。下面的排序<b>只按热度</b>，'+
+      '出发前请自己再确认一次天气。</div>' : '') +
+      ((wMiss>0 && !wFail) ? '<div class="plan-warn" style="margin-bottom:12px">'+
+      '有 '+wMiss+' 条路线没取到天气，那几条按热度保底排序，不代表当天天气好。</div>' : '') +
+      (allBad ? '<div class="plan-warn" style="margin-bottom:12px">'+
       '周六几个片区降水都在 '+Math.min.apply(null, PLAN.plans.filter(function(p){return p.wSat;})
         .map(function(p){ return Math.round(p.wSat.pop); }))+'% 以上，这周不建议出发。</div>' : '') +
       ((!sat.length && PLAN.weekOffset>0)
@@ -2290,8 +2301,9 @@ function planBodyHTML(){
       '<summary>窗口 <b>周五 '+DEPART_HOUR+':00 出发 · 周日晚回</b> · 候选 '+PLAN.pool+' 个点 · 排序＝热度×天气</summary>' +
       '<div class="pn-body">' +
       '候选点 = 单程 ≤'+STATE.hours.toFixed(1)+'h、排除明确禁狗，共 '+PLAN.pool+' 个。' +
-      '天气每次打开都重新查（Open-Meteo 实时预报），这次抓取于 '+esc(PLAN.fetchedAt)+
-      (PLAN.at ? '（'+planAgeText()+'）' : '')+'。' +
+      (sat.length ? '天气每次打开都重新查（Open-Meteo 实时预报），这次抓取于 '+esc(PLAN.fetchedAt)+
+      (PLAN.at ? '（'+planAgeText()+'）' : '')+'。'
+        : '天气这次<b>没取到</b>（尝试于 '+esc(PLAN.fetchedAt)+'），所以排序里没有天气这一项。') +
       '车程是真实路网算的；<b>站与站之间只给直线距离，不是车程</b>。<br>' +
       '<b>排序只看两样：这地方现在有多热、去的那天天气怎么样</b>。' +
       '"热"是指小红书上这段时间有多少人在发这个地方——发的人越多、看的人越多，说明越值得去；' +
