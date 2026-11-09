@@ -221,6 +221,31 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   font-variant-numeric:tabular-nums;
 }
 .card-body{flex:1;min-width:0}
+/* 出发地可点：真实路网车程只对上海存在，换地方就只能按直线估 */
+.origin-btn{
+  display:inline-flex;align-items:center;gap:4px;background:none;border:0;padding:0;
+  font-family:inherit;font-weight:inherit;color:inherit;text-align:left;cursor:pointer;
+  max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.origin-btn::after{content:"⌄";font-size:11px;opacity:.55;transform:translateY(-1px)}
+.origin-panel{
+  position:fixed;left:50%;bottom:0;transform:translateX(-50%) translateY(110%);
+  width:100%;max-width:460px;background:var(--paper);border-radius:18px 18px 0 0;
+  box-shadow:0 -12px 40px -16px rgba(74,50,28,.4);padding:16px 16px calc(18px + env(safe-area-inset-bottom,0px));
+  z-index:1500;transition:transform .26s var(--ease);
+}
+.origin-panel.open{transform:translateX(-50%) translateY(0)}
+.origin-panel h4{
+  margin:0 0 12px;font-size:var(--t-l);font-weight:600;font-family:var(--font-display);
+}
+.origin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.origin-grid button{
+  padding:10px 6px;border-radius:10px;border:1px solid var(--line-2);background:var(--paper-2);
+  font:inherit;font-size:var(--t-s);color:var(--ink-2);cursor:pointer;
+}
+.origin-grid button[aria-pressed="true"]{background:var(--ink);color:#FFF9F2;border-color:var(--ink);font-weight:600}
+.origin-note{margin-top:12px;font-size:var(--t-xs);color:var(--ink-3);line-height:1.7}
+.origin-close{position:absolute;right:12px;top:10px;border:0;background:none;font-size:20px;color:var(--ink-3);cursor:pointer}
 /* 车程是这一屏里唯一该被"读出大小"的数字 */
 .card-meta .drive{color:var(--terra-2);font-size:var(--t-m);font-weight:700}
 /* 第三行：犬政策·过夜·场景，用间隔点串起来，不做胶囊。
@@ -655,7 +680,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       <div class="brand-mark"><svg viewBox="0 0 24 24"><path d="M12 12.6c-1.7 0-3.3 1-4.2 2.4-.5.8-.3 1.8.4 2.3.6.4 1.3.4 1.9.1.6-.3 1.2-.5 1.9-.5s1.3.2 1.9.5c.6.3 1.3.3 1.9-.1.7-.5.9-1.5.4-2.3-.9-1.4-2.5-2.4-4.2-2.4zM6.5 12.2c1.1 0 2-1.1 2-2.5s-.9-2.5-2-2.5-2 1.1-2 2.5.9 2.5 2 2.5zm11 0c1.1 0 2-1.1 2-2.5s-.9-2.5-2-2.5-2 1.1-2 2.5.9 2.5 2 2.5zM9.2 8.1c1 0 1.8-1.1 1.8-2.4S10.2 3.3 9.2 3.3 7.4 4.4 7.4 5.7s.8 2.4 1.8 2.4zm5.6 0c1 0 1.8-1.1 1.8-2.4s-.8-2.4-1.8-2.4-1.8 1.1-1.8 2.4.8 2.4 1.8 2.4z"/></svg></div>
       <div class="brand-txt">
         <div class="brand-name">带狗去哪儿</div>
-        <div class="brand-sub" id="origin-line">从上海出发 · 加载中</div>
+        <button class="brand-sub origin-btn" id="origin-line" aria-haspopup="dialog">从上海出发 · 加载中</button>
       </div>
       <div class="count-pill" id="count">—</div>
       <div class="viewtabs" id="viewtabs" role="tablist">
@@ -907,8 +932,9 @@ function syncFilterUI(){
 }
 
 function match(s){
-  if(s.drive && s.drive.hours_oneway > STATE.hours) return false;
-  if(!s.drive) return false;
+  var dr = driveInfo(s);
+  if(dr && dr.hours_oneway > STATE.hours) return false;
+  if(!dr) return false;
   if(STATE.night && !isNight(s)) return false;
   var dt = Object.keys(STATE.dogTier).filter(function(k){ return STATE.dogTier[k]; });
   if(dt.length){
@@ -925,7 +951,7 @@ function match(s){
 function sortedFiltered(){
   return DATA.spots.filter(match).slice().sort(function(a,b){
     /* 一律按单程车程由近到远 */
-    return (a.drive.hours_oneway||99)-(b.drive.hours_oneway||99);
+    return ((driveInfo(a)||{}).hours_oneway||99)-((driveInfo(b)||{}).hours_oneway||99);
   });
 }
 
@@ -971,6 +997,17 @@ function renderCards(list, totalAll){
       box.innerHTML = '<div class="empty">地图上这一片没有点。<br>' +
                       '把地图缩小一点，或拖回长三角看看。</div>';
       return;
+    }
+    /* 换了出发地之后一个点都没有：大概率不是筛选问题，是那个城市周边还没采。
+       这种时候让用户去拉滑块是骗人——全国的点还在采集中。 */
+    if(ORIGIN && ORIGIN.custom){
+      var total = sortedFiltered().length;
+      if(!total){
+        box.innerHTML = '<div class="empty">' + esc(ORIGIN.name) + '出发 ' + STATE.hours.toFixed(1) +
+          ' 小时内还没有点位。<br>全国的点还在采集中，先把单程上限拉大看看，' +
+          '或者点左上角换回上海。</div>';
+        return;
+      }
     }
     var hints = [];
     if(selectedScenes().length) hints.push("取消场景筛选");
@@ -1032,8 +1069,8 @@ function renderCards(list, totalAll){
       '<span class="card-body">' +
         '<span class="card-name">'+esc(s.name)+'</span>' +
         '<span class="card-meta">' +
-          '<b class="drive">单程 '+hmCN(s.drive.hours_oneway)+'</b>' +
-          '<span>'+Math.round(s.drive.km)+' km</span>' +
+          (function(d){ return '<b class="drive">'+(d.est?'约 ':'单程 ')+hmCN(d.hours_oneway)+'</b>' +
+          '<span>'+Math.round(d.km)+' km</span>'; })(driveInfo(s)) +
           '<span>'+esc(s.city||"")+'</span>' +
         '</span>' +
         '<span class="card-facts">' + facts.join("") + '</span>' +
@@ -1044,19 +1081,97 @@ function renderCards(list, totalAll){
       : "");
 }
 
+/* ───────── 出发点 ───────── */
+/* 库里 drive 字段的真实路网车程，只对「上海人民广场」算过。
+   换出发地时用直线距离换算，系数是实测标定出来的：
+   408 个点上 车程(小时)/直线(km) 中位 0.0169，四分位 0.0152~0.0207 ——
+   即误差约 ±15%，所以换地方后界面一律写「约」。 */
+var EST_H_PER_KM = 0.0169, EST_ROAD = 1.215;
+var ORIGIN = null, ORIGIN_MARKER = null;
+var ORIGIN_PRESETS = [
+  ["上海人民广场", [121.473701, 31.230416], false],
+  ["北京", [116.4074, 39.9042], true],
+  ["成都", [104.0665, 30.5723], true],
+  ["广州", [113.2644, 23.1291], true],
+  ["深圳", [114.0579, 22.5431], true],
+  ["杭州", [120.1551, 30.2741], true],
+  ["南京", [118.7969, 32.0603], true],
+  ["武汉", [114.3055, 30.5928], true],
+  ["西安", [108.9398, 34.3416], true]
+];
+function havKm(a, b){
+  var R = 6371, p1 = a[1]*Math.PI/180, p2 = b[1]*Math.PI/180;
+  var dp = p2-p1, dl = (b[0]-a[0])*Math.PI/180;
+  var h = Math.sin(dp/2)*Math.sin(dp/2) + Math.cos(p1)*Math.cos(p2)*Math.sin(dl/2)*Math.sin(dl/2);
+  return 2*R*Math.asin(Math.min(1, Math.sqrt(h)));
+}
+function initOrigin(){
+  var saved = null;
+  try{ saved = JSON.parse(localStorage.getItem("pp-origin-v1") || "null"); }catch(e){}
+  ORIGIN = (saved && saved.gcj && saved.gcj.length === 2)
+    ? {name: saved.name, gcj: saved.gcj, custom: !!saved.custom}
+    : {name: DATA.meta.origin.name, gcj: DATA.meta.origin.gcj.slice(), custom: false};
+  paintOrigin();
+}
+function paintOrigin(){
+  /* 头部一行放不下「从上海人民广场出发」，只留城市；全名在面板和地图气泡里 */
+  var shortName = ORIGIN.name.replace("人民广场", "");
+  el("origin-line").textContent = "从" + shortName + "出发" + (ORIGIN.custom ? " · 估算" : "");
+}
+/* 每个点的有效车程：默认上海用真实路网，其他出发地按直线换算 */
+function driveInfo(s){
+  if(!ORIGIN || !ORIGIN.custom || !s.gcj) return s.drive || null;
+  var straight = havKm(ORIGIN.gcj, s.gcj);
+  return {hours_oneway: straight * EST_H_PER_KM, km: straight * EST_ROAD, est: true};
+}
+function setOrigin(name, gcj, custom){
+  ORIGIN = {name: name, gcj: gcj.slice(), custom: !!custom};
+  try{ localStorage.setItem("pp-origin-v1", JSON.stringify(ORIGIN)); }catch(e){}
+  paintOrigin();
+  if(MAP) MAP.setView([gcj[1], gcj[0]], MAP.getZoom());
+  if(ORIGIN_MARKER){
+    ORIGIN_MARKER.setLatLng([gcj[1], gcj[0]]);
+    ORIGIN_MARKER.setPopupContent('<div class="pop-t">出发点</div><div class="pop-row">'+esc(name)+'</div>');
+  }
+  closeOriginPanel();
+  render();
+  toast(custom ? "已换成" + name + "出发 · 车程按直线估算" : "已回到" + name + "出发 · 真实路网车程");
+}
+function openOriginPanel(){ el("origin-panel").classList.add("open"); }
+function closeOriginPanel(){ el("origin-panel").classList.remove("open"); }
+function buildOriginPanel(){
+  var box = document.createElement("div");
+  box.className = "origin-panel"; box.id = "origin-panel";
+  box.innerHTML = '<button class="origin-close" id="origin-close" aria-label="关闭">×</button>' +
+    '<h4>从哪儿出发</h4>' +
+    '<div class="origin-grid" id="origin-grid"></div>' +
+    '<div class="origin-note">上海人民广场是按真实路网算的车程；换其他地方按直线距离换算，' +
+    '实测误差约 ±15%，所以写「约」。滑块只负责过滤，不决定收录。</div>';
+  document.body.appendChild(box);
+  var grid = box.querySelector("#origin-grid");
+  ORIGIN_PRESETS.forEach(function(p){
+    var b = document.createElement("button");
+    b.textContent = p[0] === "上海人民广场" ? "上海" : p[0];
+    b.setAttribute("aria-pressed", ORIGIN.name === p[0] ? "true" : "false");
+    b.onclick = function(){ setOrigin(p[0], p[1], p[2]); };
+    grid.appendChild(b);
+  });
+  box.querySelector("#origin-close").onclick = closeOriginPanel;
+  box.onclick = function(e){ if(e.target === box) closeOriginPanel(); };
+}
+
 /* ───────── 地图 ───────── */
 function initMap(){
   MAP = L.map("map", {zoomControl:true, attributionControl:true, preferCanvas:false})
-        .setView(DATA.meta.origin.gcj.slice().reverse(), 7);
+        .setView(ORIGIN.gcj.slice().reverse(), 7);
   L.tileLayer("https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}", {
     subdomains:["1","2","3","4"], maxZoom:18, minZoom:5,
     attribution:'底图 &copy; 高德地图 · 数据自建'
   }).addTo(MAP);
 
-  var o = DATA.meta.origin;
-  L.circleMarker([o.gcj[1], o.gcj[0]], {
+  ORIGIN_MARKER = L.circleMarker([ORIGIN.gcj[1], ORIGIN.gcj[0]], {
     radius:7, color:"#B85C38", weight:2.5, fillColor:"#FFF9F2", fillOpacity:1
-  }).addTo(MAP).bindPopup('<div class="pop-t">出发点</div><div class="pop-row">'+esc(o.name)+'</div>');
+  }).addTo(MAP).bindPopup('<div class="pop-t">出发点</div><div class="pop-row">'+esc(ORIGIN.name)+'</div>');
 
   /* 平移/缩放后重排左侧列表。防抖 180ms：拖动过程中每帧都算一遍会卡。 */
   MAP.on("moveend zoomend", function(){
@@ -1160,7 +1275,7 @@ function syncMarkers(list){
     mk.bindPopup(
       ph0 +
       '<div class="pop-t">'+esc(s.name)+'</div>' +
-      '<div class="pop-row">单程 '+hm(s.drive.hours_oneway)+' · '+Math.round(s.drive.km)+' km · '+esc(KIND_LABEL[s.kind]||"其他")+'</div>' +
+      '<div class="pop-row">'+(function(d){return (d.est?'约 ':'单程 ')+hm(d.hours_oneway)+' · '+Math.round(d.km)+' km';})(driveInfo(s)||{hours_oneway:0,km:0})+' · '+esc(KIND_LABEL[s.kind]||"其他")+'</div>' +
       '<div class="pop-row">'+esc(NIGHT_LABEL[nk][0])+' · '+esc(DOG_LABEL[dk][0])+'</div>'
     );
     mk.on("click", function(){ openDetail(s.id); });
@@ -1191,7 +1306,7 @@ function openDetail(id){
   el("d-title").textContent = s.name;
   el("d-loc").textContent = [s.province, s.city, KIND_LABEL[s.kind]||"其他"].filter(Boolean).join(" · ");
 
-  var nk=nightKey(s), dk=dogKey(s), d=s.drive;
+  var nk=nightKey(s), dk=dogKey(s), d=driveInfo(s)||{};
   var o = s.overnight||{}, dg = s.dog||{};
 
   var html = "";
@@ -1480,7 +1595,8 @@ function tripText(){
   STATE.trip.forEach(function(id, i){
     var s = findSpot(id); if(!s) return;
     var f = (s.overnight || {}).facilities || {};
-    var bits = ["单程 " + hm(s.drive.hours_oneway)];
+    var drv = driveInfo(s) || {};
+    var bits = [(drv.est?"约 ":"单程 ") + hm(drv.hours_oneway)];
     bits.push(NIGHT_LABEL[nightKey(s)][0]);
     if(f.toilet === true) bits.push("有厕所");
     else if(f.toilet === false) bits.push("无厕所");
@@ -1593,7 +1709,7 @@ function renderTripPanel(){
   var maxH = 0;
   box.innerHTML = STATE.trip.map(function(id, i){
     var sp = findSpot(id); if(!sp) return "";
-    var d = sp.drive, f = (sp.overnight || {}).facilities || {};
+    var d = driveInfo(sp) || {}, f = (sp.overnight || {}).facilities || {};
     if(d.hours_oneway > maxH) maxH = d.hours_oneway;
     return '<div class="trip-item"><div class="ti-n">' +
       '<div class="ti-t">' + (i + 1) + '. ' + esc(sp.name) + '</div>' +
@@ -1727,7 +1843,7 @@ function haversineKm(a,b){
 }
 
 function spotCoord(s){ var g=s.gcj; return (g&&g.length===2)?g:null; }
-function spotH(s){ var d=s.drive||{}; return typeof d.hours_oneway==="number"?d.hours_oneway:null; }
+function spotH(s){ var d=driveInfo(s)||{}; return typeof d.hours_oneway==="number"?d.hours_oneway:null; }
 function sleepKind(s){
   var k = nightKey(s);
   return (k==="allowed_wild"||k==="official_camp"||k==="lodging") ? k : null;
@@ -2294,7 +2410,9 @@ fetch("spots.json", {cache:"no-cache"})
   .then(function(r){ return r.json(); })
   .then(function(d){
     DATA = d;
-    el("origin-line").textContent = "从" + d.meta.origin.name + "出发 · 单程上限可调";
+    initOrigin();
+    buildOriginPanel();
+    el("origin-line").onclick = openOriginPanel;
     initMap();
     bind();
     bindTrip();
