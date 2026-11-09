@@ -371,7 +371,8 @@
       "author": "西郊在逃饲养员",
       "note_url": "https://www.xiaohongshu.com/explore/69bbeba8000000001a02a507"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -1877,7 +1878,8 @@
       "author": "独居饲养员少卿",
       "note_url": "https://www.xiaohongshu.com/explore/6954fa9a000000001e0109c2"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -2018,7 +2020,8 @@
       "author": "CCCGGG",
       "note_url": "https://www.xiaohongshu.com/explore/6a24fc440000000022014779"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -2917,7 +2920,8 @@
       "author": "出发吧马斯克",
       "note_url": "https://www.xiaohongshu.com/explore/6882f3b1000000002201c02b"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -3452,7 +3456,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/698b52b30000000015039215"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -3589,7 +3594,8 @@
       "author": "Jackie.",
       "note_url": "https://www.xiaohongshu.com/explore/6a943e940000000007007851"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -5155,7 +5161,8 @@
      "signal": null
     },
     "note": "原话：南北湖露营可以过夜，部分区域可以车边露营，可以卡式炉，但不能烧烤；配套成熟，有国内景区最豪华干净的厕所",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "笔记原话（存于 note）"
    },
    "sub_pois": [
     {
@@ -6333,7 +6340,8 @@
       "author": "茶茶茶",
       "note_url": "https://www.xiaohongshu.com/explore/69d5aeba000000001a031d42"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -7622,7 +7630,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -7847,9 +7856,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 40 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 40 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "pending": [
     "overnight"
    ],
@@ -8415,7 +8424,8 @@
       "author": "里里安",
       "note_url": "https://www.xiaohongshu.com/explore/6a8442b20000000029032c42"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -9312,7 +9322,8 @@
      "signal": null
     },
     "note": "经营性住宿，你自己的备选是睡帐篷/车里，这里作雨天兜底用",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -9424,7 +9435,8 @@
      "signal": null
     },
     "note": "收费景区，闭园后不可停留过夜",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -9543,7 +9555,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -9657,7 +9670,8 @@
      "signal": null
     },
     "note": "庾村广场旁的备选落脚点",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -10018,7 +10032,8 @@
      "signal": null
     },
     "note": "经营性民宿；带狗设施证据最全，适合天气差时改住店",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -10497,7 +10512,8 @@
       "author": "Ivy_QYuan",
       "note_url": "https://www.xiaohongshu.com/explore/68ab3924000000001b03eb96"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -10627,7 +10643,8 @@
       "author": "小阮的白日梦想",
       "note_url": "https://www.xiaohongshu.com/explore/68415224000000002002a315"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -11891,7 +11908,8 @@
      "signal": null
     },
     "note": "距小杭坑约 3.8 km，可作为主目的地的过夜兜底",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -12147,7 +12165,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/69524098000000001e028730"
      }
     ],
-    "note": "笔记里有人在这过夜；写明没有卫生间"
+    "note": "笔记里有人在这过夜；写明没有卫生间",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -12771,7 +12790,8 @@
      "signal": null
     },
     "note": "营地群含生态营地/露营公园/2号营地三个相邻营位，帐篷与车中泊都可能，需电话确认",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -13135,7 +13155,8 @@
       "author": "哈瑞的浪漫旅程",
       "note_url": "https://www.xiaohongshu.com/explore/6916bc190000000019025a73"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -13371,7 +13392,8 @@
       "author": "来个汉堡不加肉",
       "note_url": "https://www.xiaohongshu.com/explore/69ef69180000000035030292"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -13748,7 +13770,8 @@
       "author": "阿呆",
       "note_url": "https://www.xiaohongshu.com/explore/69ccfc260000000023017884"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -13858,7 +13881,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -13978,7 +14002,8 @@
       "author": "钱大酱（暂时改名版）",
       "note_url": "https://www.xiaohongshu.com/explore/6a22b2c900000000220280b0"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -15015,7 +15040,8 @@
       "author": "早睡睡饱饱",
       "note_url": "https://www.xiaohongshu.com/explore/6acdbaa1000000000b0057e2"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -15247,7 +15273,8 @@
      "signal": null
     },
     "note": "经营性营地（POI 分类），过夜是否可散客/可带狗未核实",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -15493,7 +15520,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -15612,7 +15640,8 @@
      "signal": null
     },
     "note": "城市公园，不适合过夜",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -15727,7 +15756,8 @@
      "signal": null
     },
     "note": "铜鉴湖花海西侧 200 米，草坪开阔",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -16277,7 +16307,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -16676,7 +16707,8 @@
       "author": "Haharu",
       "note_url": "https://www.xiaohongshu.com/explore/6a27931c000000001c02739a"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -17066,7 +17098,8 @@
       "author": "禾禾小朋友",
       "note_url": "https://www.xiaohongshu.com/explore/69ce8a300000000021004fe0"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -17294,7 +17327,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -17435,7 +17469,8 @@
       "author": "徐徐闻之",
       "note_url": "https://www.xiaohongshu.com/explore/68ec73230000000004000616"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -18364,7 +18399,8 @@
      "signal": true
     },
     "note": "市区落脚点，住宿资源密集，作皖南多日行程的基地",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -19120,7 +19156,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -19239,7 +19276,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -19461,7 +19499,8 @@
      "signal": null
     },
     "note": "景区停车场不留宿；村内客栈带狗政策未核实",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -19700,7 +19739,8 @@
      "signal": null
     },
     "note": "非经营性湖岸空地，能不能过夜没有官方依据（灰色地带），需现场判断",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -19918,7 +19958,8 @@
      "signal": null
     },
     "note": "景区不留宿",
-    "verified_at": null
+    "verified_at": null,
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [
     {
@@ -20770,7 +20811,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/69e4dbeb000000002100527c"
      }
     ],
-    "note": "笔记里有人在这过夜（有正规营地）"
+    "note": "笔记里有人在这过夜（有正规营地）",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -21120,7 +21162,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/69b6a854000000001b001823"
      }
     ],
-    "note": "笔记里有人在这过夜；写明有卫生间"
+    "note": "笔记里有人在这过夜；写明有卫生间",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -21250,7 +21293,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/68cd5992000000001201d685"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -21773,7 +21817,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/6824073d0000000022026efb"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -22496,7 +22541,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -22622,7 +22668,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/69bf64010000000021006250"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -22750,7 +22797,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/68de802f00000000040069b6"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -23883,7 +23931,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/69633f4c000000001a02a7bb"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -24291,7 +24340,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -25150,7 +25200,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/69cf70520000000022001690"
      }
     ],
-    "note": "笔记里有人在这过夜；提到有水"
+    "note": "笔记里有人在这过夜；提到有水",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -25399,7 +25450,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/69bbdc4f000000002301edcf"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -27953,7 +28005,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/69cf5c700000000022001c7c"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -29048,7 +29101,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/69231e08000000001e036eb0"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -29432,7 +29486,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -30486,7 +30541,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/69f98a52000000003703469a"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -31626,7 +31682,8 @@
       "author": "小红薯_4102",
       "note_url": "https://www.xiaohongshu.com/explore/69f8672f00000000230068f9"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -32129,7 +32186,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/68b6f57d000000001b0210a3"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -32629,7 +32687,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/68ef5c85000000000402a4a1"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -32764,7 +32823,8 @@
       "note_url": "https://www.xiaohongshu.com/explore/6889235a0000000025029d50"
      }
     ],
-    "note": "笔记里有人在这过夜"
+    "note": "笔记里有人在这过夜",
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -32892,7 +32952,8 @@
       "author": "nguc_cj",
       "note_url": "https://www.xiaohongshu.com/explore/68ca7359000000001301a5ac"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -33275,7 +33336,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -33394,7 +33456,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -34207,7 +34270,8 @@
       "author": "苏苏去哪块",
       "note_url": "https://www.xiaohongshu.com/explore/684ae9ef000000000f03beb3"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -34927,7 +34991,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -35325,7 +35390,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -35681,7 +35747,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -39407,7 +39474,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -40145,7 +40213,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -40412,7 +40481,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -42025,7 +42095,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -51277,7 +51348,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -51543,7 +51615,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [
@@ -52189,7 +52262,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [
@@ -52297,7 +52371,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [
@@ -53070,7 +53145,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [
@@ -53156,7 +53232,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [
@@ -58609,7 +58686,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -58772,7 +58850,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -60510,7 +60589,8 @@
       "quote": "类型推断：名字/类型为营地（有人经营）",
       "basis": "类型推断：名字/类型为营地（有人经营）"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -61761,7 +61841,8 @@
       "quote": "类型推断：名字/类型为营地（有人经营）",
       "basis": "类型推断：名字/类型为营地（有人经营）"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -61844,7 +61925,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -63017,7 +63099,8 @@
       "quote": "类型推断：名字/类型为营地（有人经营）",
       "basis": "类型推断：名字/类型为营地（有人经营）"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -63402,7 +63485,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -64443,7 +64527,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -65165,7 +65250,10 @@
     "玩水",
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 7
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -65175,7 +65263,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 1,
+    "likes": 7,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-正仪生态湿地公园",
@@ -65529,7 +65623,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -65856,7 +65951,8 @@
       "quote": "类型推断：名字/类型为营地（有人经营）",
       "basis": "类型推断：名字/类型为营地（有人经营）"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -66040,7 +66136,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -67956,7 +68053,8 @@
       "quote": "类型推断：名字/类型为营地（有人经营）",
       "basis": "类型推断：名字/类型为营地（有人经营）"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -68999,7 +69097,8 @@
       "quote": "类型推断：名字/类型为营地（有人经营）",
       "basis": "类型推断：名字/类型为营地（有人经营）"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -70909,7 +71008,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -71283,7 +71383,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -71365,7 +71466,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -73255,7 +73357,8 @@
       "quote": "类型推断：名字/类型为营地（有人经营）",
       "basis": "类型推断：名字/类型为营地（有人经营）"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -73339,7 +73442,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -73428,7 +73532,8 @@
       "quote": "类型推断：名字/类型为营地（有人经营）",
       "basis": "类型推断：名字/类型为营地（有人经营）"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -74632,7 +74737,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -75004,7 +75110,8 @@
       "quote": "类型推断：名字/类型为营地（有人经营）",
       "basis": "类型推断：名字/类型为营地（有人经营）"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -75309,7 +75416,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -75754,7 +75862,8 @@
       "quote": "类型推断：本点被判定为住宿设施",
       "basis": "类型推断：本点被判定为住宿设施"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
