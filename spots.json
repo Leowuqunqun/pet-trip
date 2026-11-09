@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 679,
+  "count": 701,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -71572,6 +71572,1631 @@
     "草坪遛弯",
     "玩水",
     "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-世纪公园",
+   "name": "世纪公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "衢州",
+   "gcj": [
+    118.891979,
+    28.937963
+   ],
+   "drive": {
+    "hours_oneway": 4.93,
+    "km": 405.5,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "快🐴住｜杭州宠物撒欢地图！闯入绿野仙踪 趁着周末和假期不想人从众 特别定制了 杭州专属「宠物友好公园地图」 闪亮登场💥 西湖边人多？那就带毛孩子去这些宝藏绿地吧～ - 📍杭州宠物友好景点清单（部分） 西湖区｜满觉陇、铜鉴湖公园",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "世纪公园",
+   "poi_type": "风景名胜;公园广场;公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a06913e00000000350312e9",
+     "title": "快🐴住｜杭州宠物撒欢地图！闯入绿野仙踪"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad9d69c000000002c01fb50",
+     "title": "秋日撒欢🐾杭州14个免费遛狗的大草坪！"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.891979,28.937963",
+     "poi": "世纪公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-巡塘古镇",
+   "name": "巡塘古镇",
+   "kind": "village",
+   "tags": [],
+   "province": "",
+   "city": "无锡",
+   "gcj": [
+    120.317249,
+    31.479954
+   ],
+   "drive": {
+    "hours_oneway": 1.83,
+    "km": 133.0,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "话题标签：宠物友好",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "巡塘古镇",
+   "poi_type": "风景名胜;风景名胜;风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6985bff2000000002800accc",
+     "title": "小狗也觉得无锡的湿地公园超好玩的🥰"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad32d4e000000001b032293",
+     "title": "大家帮我看下还有没有要补充的？"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.317249,31.479954",
+     "poi": "巡塘古镇"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "古村古镇"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-运河公园",
+   "name": "运河公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "溧阳",
+   "gcj": [
+    119.448742,
+    31.446377
+   ],
+   "drive": {
+    "hours_oneway": 3.08,
+    "km": 249.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "运河公园",
+   "poi_type": "风景名胜;公园广场;公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad088410000000015006ef0",
+     "title": "通州70天深度游攻略"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad32d4e000000001b032293",
+     "title": "大家帮我看下还有没有要补充的？"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.448742,31.446377",
+     "poi": "运河公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-幸福水库",
+   "name": "幸福水库",
+   "kind": "water",
+   "tags": [],
+   "province": "",
+   "city": "义乌",
+   "gcj": [
+    120.10244,
+    29.790945
+   ],
+   "drive": {
+    "hours_oneway": 3.15,
+    "km": 231.5,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "话题标签：宠物友好",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "幸福水库",
+   "poi_type": "地名地址信息;自然地名;河流",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/691c050a000000001e036ee0",
+     "title": "和小狗在四明山感受五彩斑斓的秋 🍁"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.10244,29.790945",
+     "poi": "幸福水库"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-阳山桃花源景区",
+   "name": "阳山桃花源景区",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "无锡",
+   "gcj": [
+    120.118582,
+    31.589848
+   ],
+   "drive": {
+    "hours_oneway": 3.23,
+    "km": 155.8,
+    "source": "高德驾车路径规划 v5（真实路网）",
+    "computed_at": "2026-10-30 15:11"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "个导航过去是另外一个门口，大家不要跑错咯） 🅿️停路边就可以（节假日不能停，车多人多有管制） 🏨周边宠物友好住宿：推荐阳山花间堂/小筑沐野 - 📅行程安排 上午出发，带狗狗可以先去旁边的阳山地质火山公园吸氧爬山🧗（P4-7）会途径寺庙，新手",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "阳山桃花源景区",
+   "poi_type": "风景名胜;风景名胜;风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a6c44590000000026036235",
+     "title": "无锡·阳山｜假期带狗吸氧爬山+水库玩水游嗨"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.118582,31.589848",
+     "poi": "阳山桃花源景区"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-阳山水库",
+   "name": "阳山水库",
+   "kind": "water",
+   "tags": [],
+   "province": "",
+   "city": "常州",
+   "gcj": [
+    119.34342,
+    31.834689
+   ],
+   "drive": {
+    "hours_oneway": 3.04,
+    "km": 248.3,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "个导航过去是另外一个门口，大家不要跑错咯） 🅿️停路边就可以（节假日不能停，车多人多有管制） 🏨周边宠物友好住宿：推荐阳山花间堂/小筑沐野 - 📅行程安排 上午出发，带狗狗可以先去旁边的阳山地质火山公园吸氧爬山🧗（P4-7）会途径寺庙，新手",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "阳山水库",
+   "poi_type": "地名地址信息;自然地名;湖泊",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a6c44590000000026036235",
+     "title": "无锡·阳山｜假期带狗吸氧爬山+水库玩水游嗨"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.34342,31.834689",
+     "poi": "阳山水库"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-梧桐大道",
+   "name": "梧桐大道",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "泰州",
+   "gcj": [
+    119.907091,
+    32.392869
+   ],
+   "drive": {
+    "hours_oneway": 2.91,
+    "km": 237.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "梧桐大道",
+   "poi_type": "风景名胜;风景名胜;风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/682938ab00000000220079ec",
+     "title": "自驾南京，这个绝佳露营地你一定要知道……"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.907091,32.392869",
+     "poi": "梧桐大道"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:风景名胜",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-青龙湾原生态旅游度假区",
+   "name": "青龙湾原生态旅游度假区",
+   "kind": "water",
+   "tags": [],
+   "province": "",
+   "city": "宁国",
+   "gcj": [
+    118.826729,
+    30.509266
+   ],
+   "drive": {
+    "hours_oneway": 4.57,
+    "km": 329.0,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "这两个地方都可以带🐶，狗狗开心得还去游了个泳～回杭路上还可以顺便去宁国市区喝杯卡旺卡",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "青龙湾原生态旅游度假区",
+   "poi_type": "风景名胜;风景名胜;风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69369bc6000000000d03df0a",
+     "title": "皖南的秋天太美了🍂"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.826729,30.509266",
+     "poi": "青龙湾原生态旅游度假区"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-坎头古村落",
+   "name": "坎头古村落",
+   "kind": "village",
+   "tags": [],
+   "province": "",
+   "city": "绩溪",
+   "gcj": [
+    118.816208,
+    30.23698
+   ],
+   "drive": {
+    "hours_oneway": 4.17,
+    "km": 349.0,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "『皖浙天路』主要就是『家朋乡』跟『荆州乡』两个乡之间的一条条盘山公路，而荆州乡段又与浙江杭州临安区相邻。 - 按以下顺序矫正路线导航： 1、【中国石化金沙加油站】 加油站东面能看到一块红色大牌写着〖皖浙天路入口〗。 - 2、【坎头古村落】 ",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "坎头古村落",
+   "poi_type": "风景名胜;风景名胜相关;旅游景点",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69a38d9a000000002801e958",
+     "title": "安徽省宣城市绩溪县·皖浙天路～"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.816208,30.23698",
+     "poi": "坎头古村落"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "古村古镇"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-豺狗狼尖",
+   "name": "豺狗狼尖",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "绩溪",
+   "gcj": [
+    118.820999,
+    30.203299
+   ],
+   "drive": {
+    "hours_oneway": 4.71,
+    "km": 360.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "『皖浙天路』主要就是『家朋乡』跟『荆州乡』两个乡之间的一条条盘山公路，而荆州乡段又与浙江杭州临安区相邻。 - 按以下顺序矫正路线导航： 1、【中国石化金沙加油站】 加油站东面能看到一块红色大牌写着〖皖浙天路入口〗。 - 2、【坎头古村落】 ",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "豺狗狼尖",
+   "poi_type": "风景名胜;风景名胜;风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69a38d9a000000002801e958",
+     "title": "安徽省宣城市绩溪县·皖浙天路～"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.820999,30.203299",
+     "poi": "豺狗狼尖"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:风景名胜",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-青年与海营地",
+   "name": "青年与海营地",
+   "kind": "campground",
+   "tags": [],
+   "province": "",
+   "city": "宁波",
+   "gcj": [
+    121.988964,
+    29.445039
+   ],
+   "drive": {
+    "hours_oneway": 4.07,
+    "km": 296.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "青年与海营地",
+   "poi_type": "体育休闲服务;体育休闲服务场所;体育休闲服务场所",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a6861b5000000001d0208e5",
+     "title": "不在三亚！在象山松兰山！太美太好拍！（附攻略"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=121.988964,29.445039",
+     "poi": "青年与海营地"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水",
+    "露营"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-句容茅山清境田园度假村",
+   "name": "句容茅山清境田园度假村",
+   "kind": "lodging",
+   "tags": [],
+   "province": "",
+   "city": "镇江",
+   "gcj": [
+    119.223082,
+    31.882931
+   ],
+   "drive": {
+    "hours_oneway": 3.22,
+    "km": 262.3,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "狗去旅游第二站-镇江 🏠住宿：句容茅山清境田园度假村 在句容茅山镇，环境不错且有让小狗狂喜的大草坪！宠物友好，不收宠物清洁费才是真友好[哇R]，唯一不太好的是民宿隔音一般，谁懂啊有两个哨兵小狗[失望R] day1️⃣行程：句容镇上吃了锅盖面",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "句容茅山清境田园度假村",
+   "poi_type": "住宿服务;住宿服务相关;住宿服务相关",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/681a1cd6000000002300e7b1",
+     "title": "🚗带着小狗去旅游第二站-镇江"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.223082,31.882931",
+     "poi": "句容茅山清境田园度假村"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "古村古镇",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-淀山湖西岸露营地",
+   "name": "淀山湖西岸露营地",
+   "kind": "campground",
+   "tags": [],
+   "province": "",
+   "city": "昆山",
+   "gcj": [
+    120.96288,
+    31.152732
+   ],
+   "drive": {
+    "hours_oneway": 1.16,
+    "km": 62.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:17"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "边露营舒适又省心，省去装备搬运烦恼 \t 🉑露营、🉑天幕、🉑帐篷 🉑烧烤、🉑钓鱼、🉑过夜 🉑看日落、🉑带宠物、🉑车边露营 \t 🏕️tips： 1、水系交错，一侧是宽阔的湖面，另一侧开阔的草坪，人少景美 2、草地平整，轿车、suv、mpv皆可进",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "淀山湖西岸露营地",
+   "poi_type": "体育休闲服务;休闲场所;露营地",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69cdf701000000001a02c818",
+     "title": "🚗上海1h丨开车直怼湖边大草坪露营🏕️🆓"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.96288,31.152732",
+     "poi": "淀山湖西岸露营地"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水",
+    "露营",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-濮院时尚古镇",
+   "name": "濮院时尚古镇",
+   "kind": "village",
+   "tags": [],
+   "province": "",
+   "city": "嘉兴",
+   "gcj": [
+    120.632671,
+    30.683528
+   ],
+   "drive": {
+    "hours_oneway": 1.99,
+    "km": 120.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:19"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "濮院时尚古镇",
+   "poi_type": "风景名胜;风景名胜;风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a3793df00000000220082bf",
+     "title": "嘉兴濮院时尚古镇 两天一晚 旅游攻略"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.632671,30.683528",
+     "poi": "濮院时尚古镇"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "古村古镇"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-西湖公园",
+   "name": "西湖公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "建德",
+   "gcj": [
+    119.49809,
+    29.538986
+   ],
+   "drive": {
+    "hours_oneway": 3.96,
+    "km": 311.1,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "西湖公园",
+   "poi_type": "风景名胜;公园广场;公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad088410000000015006ef0",
+     "title": "通州70天深度游攻略"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.49809,29.538986",
+     "poi": "西湖公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-金牛山公园",
+   "name": "金牛山公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "镇江",
+   "gcj": [
+    119.394133,
+    32.180141
+   ],
+   "drive": {
+    "hours_oneway": 3.05,
+    "km": 252.5,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "金牛山公园",
+   "poi_type": "风景名胜;公园广场;公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad07bb70000000015009f1f",
+     "title": "北京顺义 35 日深度游，还有什么要补充吗"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.394133,32.180141",
+     "poi": "金牛山公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-长广溪湿地公园",
+   "name": "长广溪湿地公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "无锡",
+   "gcj": [
+    120.263661,
+    31.478772
+   ],
+   "drive": {
+    "hours_oneway": 2.2,
+    "km": 139.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "长广溪湿地公园",
+   "poi_type": "风景名胜;公园广场;公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad32d4e000000001b032293",
+     "title": "大家帮我看下还有没有要补充的？"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.263661,31.478772",
+     "poi": "长广溪湿地公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "玩水",
+    "溯溪"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-蠡湖大桥公园",
+   "name": "蠡湖大桥公园",
+   "kind": "park",
+   "tags": [],
+   "province": "",
+   "city": "无锡",
+   "gcj": [
+    120.27357,
+    31.513751
+   ],
+   "drive": {
+    "hours_oneway": 1.83,
+    "km": 142.3,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "蠡湖大桥公园",
+   "poi_type": "风景名胜;公园广场;公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad32d4e000000001b032293",
+     "title": "大家帮我看下还有没有要补充的？"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.27357,31.513751",
+     "poi": "蠡湖大桥公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-无锡博物院",
+   "name": "无锡博物院",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "无锡",
+   "gcj": [
+    120.306084,
+    31.549849
+   ],
+   "drive": {
+    "hours_oneway": 1.88,
+    "km": 135.0,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "无锡博物院",
+   "poi_type": "科教文化服务;博物馆;博物馆",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad32d4e000000001b032293",
+     "title": "大家帮我看下还有没有要补充的？"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.306084,31.549849",
+     "poi": "无锡博物院"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "人文古迹"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:其余",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-荣氏梅园",
+   "name": "荣氏梅园",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "无锡",
+   "gcj": [
+    120.224356,
+    31.554432
+   ],
+   "drive": {
+    "hours_oneway": 2.18,
+    "km": 144.2,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "荣氏梅园",
+   "poi_type": "风景名胜;风景名胜;国家级景点",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad32d4e000000001b032293",
+     "title": "大家帮我看下还有没有要补充的？"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.224356,31.554432",
+     "poi": "荣氏梅园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:风景名胜",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-灵山胜境",
+   "name": "灵山胜境",
+   "kind": "scenic",
+   "tags": [],
+   "province": "",
+   "city": "无锡",
+   "gcj": [
+    120.100925,
+    31.42592
+   ],
+   "drive": {
+    "hours_oneway": 2.1,
+    "km": 160.3,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 12:59"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "灵山胜境",
+   "poi_type": "风景名胜;风景名胜;国家级景点",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad32d4e000000001b032293",
+     "title": "大家帮我看下还有没有要补充的？"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.100925,31.42592",
+     "poi": "灵山胜境"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-梅里古镇",
+   "name": "梅里古镇",
+   "kind": "village",
+   "tags": [],
+   "province": "",
+   "city": "无锡",
+   "gcj": [
+    120.436211,
+    31.542052
+   ],
+   "drive": {
+    "hours_oneway": 1.75,
+    "km": 120.9,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:20"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "梅里古镇",
+   "poi_type": "风景名胜;风景名胜;风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad32d4e000000001b032293",
+     "title": "大家帮我看下还有没有要补充的？"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.436211,31.542052",
+     "poi": "梅里古镇"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "古村古镇"
    ],
    "heat": null,
    "rating": null,
