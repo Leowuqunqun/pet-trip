@@ -90,8 +90,8 @@
    "rating": 4.4,
    "rating_src": "碧云体育公园",
    "heat": {
-    "notes": 1,
-    "likes": 990
+    "notes": 3,
+    "likes": 20
    },
    "pop": {
     "notes": 3,
@@ -155,8 +155,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -164,8 +166,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "苏州河畔新晋带娃露营地🌿苏河源体育公园",
+      "note_id": "6ae71e47000000001e0165b2",
+      "author": "5天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae71e47000000001e0165b2"
+     },
+     {
+      "kind": "camp",
+      "quote": "这周末天气刚刚好，带娃打卡刚开放不久的苏河源体育公园，搭个帐篷露营🏕️",
+      "note_id": "6ae71e47000000001e0165b2",
+      "author": "5天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae71e47000000001e0165b2"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -249,8 +267,8 @@
    "rating": 4.4,
    "rating_src": "苏河源体育公园",
    "heat": {
-    "notes": 1,
-    "likes": 504
+    "notes": 18,
+    "likes": 1271
    },
    "pop": {
     "notes": 18,
@@ -266,7 +284,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -393,8 +413,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 422
+    "notes": 7,
+    "likes": 108
    },
    "pop": {
     "notes": 7,
@@ -452,8 +472,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -461,8 +483,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "找了块草地搭了天幕，铺了露营毯",
+      "note_id": "6ad3299a000000000a01f071",
+      "author": "小狼",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad3299a000000000a01f071"
+     },
+     {
+      "kind": "camp",
+      "quote": "2. 帐篷这个我特意问了，西区不是专门的露营区，不过露营的人也不少",
+      "note_id": "6ad3299a000000000a01f071",
+      "author": "小狼",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad3299a000000000a01f071"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -504,8 +542,8 @@
    "rating": 4.6,
    "rating_src": "九科绿洲公园",
    "heat": {
-    "notes": 1,
-    "likes": 542
+    "notes": 13,
+    "likes": 158
    },
    "pop": {
     "notes": 13,
@@ -521,7 +559,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -630,8 +670,8 @@
    "rating": 4.2,
    "rating_src": "旗忠公园",
    "heat": {
-    "notes": 1,
-    "likes": 292
+    "notes": 2,
+    "likes": 16
    },
    "pop": {
     "notes": 2,
@@ -688,8 +728,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -697,8 +739,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "没想到这个地方在外面看着不大，开进来别有洞天：有餐饮店：枇杷园，还有可以住宿的木屋和房车，有大片的枇杷林，有一家咖啡店，甚至还有一座园子",
+      "note_id": "691be75600000000190245b0",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/691be75600000000190245b0"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -799,7 +850,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:公园广场",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -906,8 +959,8 @@
    "rating": 4.6,
    "rating_src": "广富林郊野公园",
    "heat": {
-    "notes": 1,
-    "likes": 990
+    "notes": 21,
+    "likes": 407
    },
    "pop": {
     "notes": 21,
@@ -1022,7 +1075,7 @@
    "rating_src": "黄姑塘生态湿地",
    "heat": {
     "notes": 1,
-    "likes": 990
+    "likes": 12
    },
    "pop": {
     "notes": 1,
@@ -1314,8 +1367,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 376
+    "notes": 12,
+    "likes": 416
    },
    "pop": {
     "notes": 12,
@@ -1390,8 +1443,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -1399,8 +1454,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "整个公园补给点还是多的，还有专门的公交车，卖矿泉水的点只在门口进来的地方看见一个，公园是真大，逛不动了，想租个车，好贵啊，里面露营的人超级多，真的很惬意",
+      "note_id": "6ac8f6f3000000001b023a67",
+      "author": "恩",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac8f6f3000000001b023a67"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -1477,8 +1541,8 @@
    "rating": 4.7,
    "rating_src": "苏州湾体育公园",
    "heat": {
-    "notes": 1,
-    "likes": 659
+    "notes": 16,
+    "likes": 1048
    },
    "pop": {
     "notes": 16,
@@ -1495,7 +1559,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -1561,8 +1627,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -1570,8 +1638,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "超多家庭搭帐篷、铺野餐垫露营",
+      "note_id": "6ad4c68b0000000029010f1a",
+      "author": "大敏",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad4c68b0000000029010f1a"
+     },
+     {
+      "kind": "camp",
+      "quote": "散步露营、捞鱼观鸟、秋日拍照一站式搞定",
+      "note_id": "6ad4c68b0000000029010f1a",
+      "author": "大敏",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad4c68b0000000029010f1a"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -1655,8 +1739,8 @@
    "rating": 4.6,
    "rating_src": "穆湖森林公园",
    "heat": {
-    "notes": 1,
-    "likes": 376
+    "notes": 4,
+    "likes": 16
    },
    "pop": {
     "notes": 4,
@@ -1674,6 +1758,8 @@
    "scenes": [
     "草坪遛弯",
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -1817,8 +1903,8 @@
    "rating": 4.4,
    "rating_src": "泖田湿地",
    "heat": {
-    "notes": 1,
-    "likes": 632
+    "notes": 15,
+    "likes": 586
    },
    "pop": {
     "notes": 15,
@@ -2000,8 +2086,8 @@
    "rating": 4.0,
    "rating_src": "崇明岛",
    "heat": {
-    "notes": 4,
-    "likes": 2786
+    "notes": 20,
+    "likes": 6236
    },
    "pop": {
     "notes": 20,
@@ -2169,8 +2255,8 @@
    "rating": 4.6,
    "rating_src": "姚家荡公园",
    "heat": {
-    "notes": 1,
-    "likes": 376
+    "notes": 4,
+    "likes": 15
    },
    "pop": {
     "notes": 4,
@@ -2241,8 +2327,10 @@
     "basis": "explicit_ok"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -2250,8 +2338,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "4. 配套齐全体验好：免费开放、停车便宜，园内有卫生间、休息区，周边有露营地，周末遛狗一整天都舒服",
+      "note_id": "6a1054fe00000000380377ca",
+      "author": "苏州带狗玩",
+      "note_url": "https://www.xiaohongshu.com/explore/6a1054fe00000000380377ca"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -2293,8 +2390,8 @@
    "rating": 4.6,
    "rating_src": "仙樱湖公园",
    "heat": {
-    "notes": 1,
-    "likes": 990
+    "notes": 2,
+    "likes": 18
    },
    "pop": {
     "notes": 2,
@@ -2311,7 +2408,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -2453,8 +2552,8 @@
    "rating": 4.7,
    "rating_src": "嘉兴植物园",
    "heat": {
-    "notes": 1,
-    "likes": 376
+    "notes": 8,
+    "likes": 64
    },
    "pop": {
     "notes": 8,
@@ -2575,8 +2674,8 @@
    "rating": 4.6,
    "rating_src": "莲池湖公园",
    "heat": {
-    "notes": 1,
-    "likes": 990
+    "notes": 4,
+    "likes": 39
    },
    "pop": {
     "notes": 4,
@@ -2641,8 +2740,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -2650,8 +2751,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "上海🚗1h直达｜东太湖免费露营天花板",
+      "note_id": "69c60c96000000002101311f",
+      "author": "忽爸不着家",
+      "note_url": "https://www.xiaohongshu.com/explore/69c60c96000000002101311f"
+     },
+     {
+      "kind": "camp",
+      "quote": "每年4到11月，当上海迎来最适合露营的季节，",
+      "note_id": "69c60c96000000002101311f",
+      "author": "忽爸不着家",
+      "note_url": "https://www.xiaohongshu.com/explore/69c60c96000000002101311f"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -2712,7 +2829,8 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
-    "露营"
+    "露营",
+    "过夜"
    ],
    "access": {
     "fee": "免"
@@ -2822,8 +2940,8 @@
    "rating": 4.6,
    "rating_src": "胜地生态公园",
    "heat": {
-    "notes": 1,
-    "likes": 2799
+    "notes": 2,
+    "likes": 46
    },
    "pop": {
     "notes": 2,
@@ -2967,8 +3085,8 @@
    "rating": 4.3,
    "rating_src": "马家浜考古遗址公园",
    "heat": {
-    "notes": 1,
-    "likes": 376
+    "notes": 3,
+    "likes": 19
    },
    "pop": {
     "notes": 3,
@@ -3092,8 +3210,8 @@
    "rating": 4.3,
    "rating_src": "云杉湖公园",
    "heat": {
-    "notes": 1,
-    "likes": 990
+    "notes": 5,
+    "likes": 101
    },
    "pop": {
     "notes": 5,
@@ -3208,8 +3326,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 690
+    "notes": 24,
+    "likes": 1182
    },
    "pop": {
     "notes": 24,
@@ -3341,8 +3459,8 @@
    "rating": 4.8,
    "rating_src": "东太湖生态园",
    "heat": {
-    "notes": 1,
-    "likes": 2054
+    "notes": 10,
+    "likes": 665
    },
    "pop": {
     "notes": 10,
@@ -3513,8 +3631,8 @@
    "rating": 4.6,
    "rating_src": "沈荡古镇",
    "heat": {
-    "notes": 1,
-    "likes": 515
+    "notes": 16,
+    "likes": 231
    },
    "pop": {
     "notes": 16,
@@ -3587,8 +3705,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -3596,8 +3716,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "露营人的烤肉香飘过来，给自带的卡拉OK伴舞",
+      "note_id": "6a354900000000001702b25b",
+      "author": "海斯阿",
+      "note_url": "https://www.xiaohongshu.com/explore/6a354900000000001702b25b"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -3656,7 +3785,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -3854,8 +3985,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -3863,8 +3996,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "✅可露营、可野餐、可放风筝",
+      "note_id": "6aec02d60000000016006a14",
+      "author": "1天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6aec02d60000000016006a14"
+     },
+     {
+      "kind": "camp",
+      "quote": "白天在东湖吸氧散步、露营拍照、感受治愈湖景",
+      "note_id": "6aec02d60000000016006a14",
+      "author": "1天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6aec02d60000000016006a14"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -3958,7 +4107,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -4015,8 +4166,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -4024,8 +4177,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "此行主要是捡落叶和骑行，所以没有带露营装备，但是满公园都是露营的人，算是给下次露营位踩点了",
+      "note_id": "6acb886e0000000018007e04",
+      "author": "豆了个豆",
+      "note_url": "https://www.xiaohongshu.com/explore/6acb886e0000000018007e04"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -4126,7 +4288,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -4181,8 +4345,10 @@
     "basis": "explicit_ok"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -4190,8 +4356,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "苏州漕湖湿地公园｜露营太舒服了✨",
+      "note_id": "6aa28075000000001103b72c",
+      "author": "季忆糖哇",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa28075000000001103b72c"
+     },
+     {
+      "kind": "camp",
+      "quote": "不用花一分钱，就能安排一场躺平式露营🌿",
+      "note_id": "6aa28075000000001103b72c",
+      "author": "季忆糖哇",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa28075000000001103b72c"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -4233,8 +4415,8 @@
    "rating": 4.6,
    "rating_src": "漕湖湿地公园",
    "heat": {
-    "notes": 1,
-    "likes": 990
+    "notes": 8,
+    "likes": 52
    },
    "pop": {
     "notes": 8,
@@ -4251,7 +4433,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -4452,8 +4636,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -4461,8 +4647,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "▪️还有烧烤露营区，生活除了诗和远方，还有烧烤和啤酒🍻",
+      "note_id": "6ae7dd74000000000300bb2f",
+      "author": "赞",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae7dd74000000000300bb2f"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -4546,8 +4741,8 @@
    "rating": 4.6,
    "rating_src": "丰义景区",
    "heat": {
-    "notes": 1,
-    "likes": 515
+    "notes": 7,
+    "likes": 50
    },
    "pop": {
     "notes": 7,
@@ -4562,7 +4757,10 @@
    "poi_name": "丰义景区",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -4618,24 +4816,26 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
-     "toilet": true,
+     "toilet": null,
      "water": null,
      "power": null,
      "signal": null
     },
-    "note": "写明有卫生间",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
     "evidence": [
      {
-      "kind": "toilet_yes",
-      "quote": "可以放风筝骑行，还有咖啡和卫生间",
-      "note_id": "6a9c396b00000000270141ea",
-      "author": "小缇子",
-      "note_url": "https://www.xiaohongshu.com/explore/6a9c396b00000000270141ea"
+      "kind": "camp",
+      "quote": "沙滩上可以搭帐篷、撑天幕，现在淡季人少",
+      "note_id": "692e586d000000000d00ddf9",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/692e586d000000000d00ddf9"
      }
     ]
    },
@@ -4679,8 +4879,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 247
+    "notes": 22,
+    "likes": 1771
    },
    "pop": {
     "notes": 22,
@@ -4697,11 +4897,11 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
-   "access": {
-    "toilet": true
-   },
+   "access": {},
    "dog_tier": "veto",
    "sources": [
     {
@@ -4762,8 +4962,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -4771,8 +4973,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "✅大片平整大草坪，好多人搭帐篷露营，跑跳放风筝都没问题",
+      "note_id": "6ac642d6000000001b0337ec",
+      "author": "三皮行记📸",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac642d6000000001b0337ec"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -4814,8 +5025,8 @@
    "rating": 4.6,
    "rating_src": "诺贝尔湖公园",
    "heat": {
-    "notes": 1,
-    "likes": 690
+    "notes": 4,
+    "likes": 34
    },
    "pop": {
     "notes": 4,
@@ -4833,7 +5044,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "unknown",
@@ -4978,8 +5191,8 @@
    "rating": 4.7,
    "rating_src": "南北湖风景名胜区",
    "heat": {
-    "notes": 1,
-    "likes": 376
+    "notes": 31,
+    "likes": 3657
    },
    "pop": {
     "notes": 31,
@@ -5148,8 +5361,8 @@
    "rating": 4.3,
    "rating_src": "东部海堤黑沙滩",
    "heat": {
-    "notes": 1,
-    "likes": 590
+    "notes": 12,
+    "likes": 194
    },
    "pop": {
     "notes": 12,
@@ -5398,8 +5611,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 236
+    "notes": 3,
+    "likes": 22
    },
    "pop": {
     "notes": 3,
@@ -5454,8 +5667,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -5463,8 +5678,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "适合带小孩放电、约朋友露营晒太阳",
+      "note_id": "6ac48ad8000000001203a0ee",
+      "author": "别管我是谁",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac48ad8000000001203a0ee"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -5548,8 +5772,8 @@
    "rating": 4.6,
    "rating_src": "彩石湖公园",
    "heat": {
-    "notes": 2,
-    "likes": 1380
+    "notes": 17,
+    "likes": 569
    },
    "pop": {
     "notes": 17,
@@ -5566,7 +5790,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -5614,8 +5840,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -5623,8 +5851,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "小鹿营地也是在这里，不过我们没进去",
+      "note_id": "6aab8df1000000002b001fc5",
+      "author": "妞妞宝",
+      "note_url": "https://www.xiaohongshu.com/explore/6aab8df1000000002b001fc5"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -5672,7 +5909,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -5720,8 +5959,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -5729,8 +5970,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "山脚下就是紫云涧，附近有小型露营场地，今天走了一条之前没走过的路线（另一条路线是从图7左边下山，可以参考我之前发过的无锡阳山那篇），整体不累，新手友好，不能爬台阶的慎行[举手R]",
+      "note_id": "6ad451a4000000002a02c9b8",
+      "author": "倔强的马尾",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad451a4000000002a02c9b8"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -5803,6 +6053,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -5848,8 +6100,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -5857,8 +6111,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "沙滩+露营+乐园+书屋，一站式遛娃可以玩一整天✨",
+      "note_id": "6ac4df9900000000180175c4",
+      "author": "我就是呆呆辰（杭州游玩🎡遛娃攻略）",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac4df9900000000180175c4"
+     },
+     {
+      "kind": "camp",
+      "quote": "✅露营定位📍金沙湖一期公园",
+      "note_id": "6ac4df9900000000180175c4",
+      "author": "我就是呆呆辰（杭州游玩🎡遛娃攻略）",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac4df9900000000180175c4"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -5900,8 +6170,8 @@
    "rating": 4.7,
    "rating_src": "金沙湖公园",
    "heat": {
-    "notes": 1,
-    "likes": 990
+    "notes": 17,
+    "likes": 836
    },
    "pop": {
     "notes": 17,
@@ -5919,7 +6189,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "unknown",
@@ -6087,8 +6359,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 443
+    "notes": 19,
+    "likes": 1066
    },
    "pop": {
     "notes": 19,
@@ -6145,8 +6417,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -6154,8 +6428,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "第一次来的比较晚只是带小狗周边逛逛玩玩水，去了野色营地咖啡，碰到了好多好朋狗🐕，玩到天黑才回家[笑哭R]也是因为金师傅太喜欢玩水，加上这家咖啡店真的很友好，饮品好喝，也没爬乌峰岭，所以这次心念念二刷啦[派对R]",
+      "note_id": "69f8cdf30000000035027a5e",
+      "author": "猪咪不是猪",
+      "note_url": "https://www.xiaohongshu.com/explore/69f8cdf30000000035027a5e"
+     },
+     {
+      "kind": "camp",
+      "quote": "🚗导航｜上坝茶场🍵（停车场🅿️有厕所）",
+      "note_id": "69f8cdf30000000035027a5e",
+      "author": "猪咪不是猪",
+      "note_url": "https://www.xiaohongshu.com/explore/69f8cdf30000000035027a5e"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -6221,8 +6511,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 331
+    "notes": 16,
+    "likes": 254
    },
    "pop": {
     "notes": 16,
@@ -6238,6 +6528,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -6345,8 +6637,8 @@
    "rating": 4.5,
    "rating_src": "芳茂山公园",
    "heat": {
-    "notes": 1,
-    "likes": 990
+    "notes": 6,
+    "likes": 81
    },
    "pop": {
     "notes": 6,
@@ -6487,8 +6779,8 @@
    "rating": 4.6,
    "rating_src": "牧城公园",
    "heat": {
-    "notes": 1,
-    "likes": 236
+    "notes": 8,
+    "likes": 54
    },
    "pop": {
     "notes": 8,
@@ -6552,8 +6844,10 @@
     "risk_hint": "按「无明确禁止即视为可带」判定，未电话核实"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -6561,8 +6855,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "图2图3是去往公园的路上经过的河边草坪，很多人露营且满地垃圾，赶紧跑",
+      "note_id": "6ae42564000000001100e4c0",
+      "author": "妞妞宝",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae42564000000001100e4c0"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -6663,7 +6966,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -6711,8 +7016,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -6720,8 +7027,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "10.6，今日份宜兴阅湖农场露营",
+      "note_id": "6ac4bfca0000000014003509",
+      "author": "OldONE不对焦",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac4bfca0000000014003509"
+     },
+     {
+      "kind": "camp",
+      "quote": "长假即将结束，天气不错，微风正好，约上三俩好友一起露营",
+      "note_id": "6ac4bfca0000000014003509",
+      "author": "OldONE不对焦",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac4bfca0000000014003509"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -6805,8 +7128,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 331
+    "notes": 4,
+    "likes": 102
    },
    "pop": {
     "notes": 4,
@@ -6822,7 +7145,9 @@
    "poi_type_dist_m": 13,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -6964,8 +7289,8 @@
    "rating": 4.5,
    "rating_src": "张公洞",
    "heat": {
-    "notes": 2,
-    "likes": 495
+    "notes": 17,
+    "likes": 1215
    },
    "pop": {
     "notes": 17,
@@ -7038,17 +7363,35 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "下午我们是快四点出发，六点左右到，结果差点没直接回去，错付了，因为现在好像不是这边的雨季，台风还没有来，水量比较小，所以就导致坝鱼鳞坝上光秃秃的没有水，然后只有一部分那种平整的地方有水，水也不是说不清也挺清的，但因为水比较少，所以它就不是活水嘛，唉",
+      "note_id": "6a6e9b8b00000000240268ec",
+      "author": "Sunny",
+      "note_url": "https://www.xiaohongshu.com/explore/6a6e9b8b00000000240268ec"
+     },
+     {
+      "kind": "camp",
+      "quote": "但是来都来了，我的过路费不能白掏了，于是乎我俩决定还是在这儿过一夜吧，于是乎就把装的装备拿出来收拾收拾过夜了，这里倒是也能过夜，因为有一个免费的停车场，停车场旁边有厕所和洗漱的地方",
+      "note_id": "6a6e9b8b00000000240268ec",
+      "author": "Sunny",
+      "note_url": "https://www.xiaohongshu.com/explore/6a6e9b8b00000000240268ec"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -7120,8 +7463,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 2,
-    "likes": 495
+    "notes": 8,
+    "likes": 1563
    },
    "pop": {
     "notes": 8,
@@ -7137,9 +7480,13 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
-   "access": {},
+   "access": {
+    "water": true
+   },
    "dog_tier": "explicit",
    "sources": [
     {
@@ -7353,8 +7700,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -7362,8 +7711,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🚘周六上海出发2.5h，导航“安吉五峰山运动村”或“五峰山国际青少年营地”，停车免费",
+      "note_id": "69b77905000000001a02f731",
+      "author": "野蛮小奇",
+      "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
+     },
+     {
+      "kind": "camp",
+      "quote": "运动村内停车点很多，可以往里开到青少年营地门口车位停车，进到营地继续往里走就是五峰山古道徒步入口（在左侧有入口指示牌），5km小环线，两步路有轨迹",
+      "note_id": "69b77905000000001a02f731",
+      "author": "野蛮小奇",
+      "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -7430,7 +7795,10 @@
    "poi_name": "雅达阳羡小镇游客中心",
    "poi_type_dist_m": 222,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -7529,8 +7897,8 @@
    "rating": 4.5,
    "rating_src": "凤凰山考古遗址公园",
    "heat": {
-    "notes": 1,
-    "likes": 448
+    "notes": 9,
+    "likes": 67
    },
    "pop": {
     "notes": 9,
@@ -7645,8 +8013,8 @@
    "rating": 4.6,
    "rating_src": "龙池山自行车公园",
    "heat": {
-    "notes": 1,
-    "likes": 331
+    "notes": 16,
+    "likes": 1517
    },
    "pop": {
     "notes": 16,
@@ -7763,8 +8131,8 @@
    "rating": 4.6,
    "rating_src": "黄桥古镇",
    "heat": {
-    "notes": 1,
-    "likes": 236
+    "notes": 20,
+    "likes": 145
    },
    "pop": {
     "notes": 20,
@@ -7828,8 +8196,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -7837,8 +8207,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "观景台咖啡厅（进大门之后走几步就到）[向右R]景观稻田[向右R]稻田小火车[向右R]樱花长廊[向右R]湖畔露营大草地[向右R]松鼠乐园[向右R]长田漾",
+      "note_id": "6ad369bb000000001500fdf6",
+      "author": "宠物友好推荐官冬爸队长",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad369bb000000001500fdf6"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -7896,7 +8275,10 @@
    "poi_name": "尚贤河湿地游客中心",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -8022,8 +8404,8 @@
    "rating": 4.4,
    "rating_src": "安吉古城国家考古遗址公园",
    "heat": {
-    "notes": 2,
-    "likes": 5816
+    "notes": 3,
+    "likes": 12
    },
    "pop": {
     "notes": 3,
@@ -8149,8 +8531,8 @@
    "rating": 4.5,
    "rating_src": "善卷洞风景区",
    "heat": {
-    "notes": 1,
-    "likes": 331
+    "notes": 19,
+    "likes": 327
    },
    "pop": {
     "notes": 19,
@@ -8205,8 +8587,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -8214,8 +8598,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "我们直接导航到了五峰山青少年营地，在门口停了车从营地里出发走的五峰山古道",
+      "note_id": "6ab1dded0000000038001f05",
+      "author": "傻狗肉包",
+      "note_url": "https://www.xiaohongshu.com/explore/6ab1dded0000000038001f05"
+     },
+     {
+      "kind": "camp",
+      "quote": "（营地里就有大片的草坪，如果不想徒步也可以就在营地里玩）",
+      "note_id": "6ab1dded0000000038001f05",
+      "author": "傻狗肉包",
+      "note_url": "https://www.xiaohongshu.com/explore/6ab1dded0000000038001f05"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -8275,6 +8675,7 @@
    "kind_src": "name",
    "scenes": [
     "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -8366,7 +8767,7 @@
    "rating_src": null,
    "heat": {
     "notes": 1,
-    "likes": 236
+    "likes": 1
    },
    "pop": {
     "notes": 1,
@@ -8428,8 +8829,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -8437,8 +8840,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "好几片大草坪随便搭天幕/帐篷",
+      "note_id": "6acb9fff000000001b022ef8",
+      "author": "燕小A的遛娃日记",
+      "note_url": "https://www.xiaohongshu.com/explore/6acb9fff000000001b022ef8"
+     },
+     {
+      "kind": "camp",
+      "quote": "搭帐篷是娃的最爱，能玩半天",
+      "note_id": "6acb9fff000000001b022ef8",
+      "author": "燕小A的遛娃日记",
+      "note_url": "https://www.xiaohongshu.com/explore/6acb9fff000000001b022ef8"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -8480,8 +8899,8 @@
    "rating": 4.7,
    "rating_src": "白马湖公园",
    "heat": {
-    "notes": 1,
-    "likes": 990
+    "notes": 20,
+    "likes": 251
    },
    "pop": {
     "notes": 20,
@@ -8499,7 +8918,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "unknown",
@@ -8664,8 +9085,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -8673,8 +9096,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "皮山坞水库露营｜自驾直达免费茶山秘境⛰️",
+      "note_id": "6a39116c00000000220167da",
+      "author": "阿辉走不动",
+      "note_url": "https://www.xiaohongshu.com/explore/6a39116c00000000220167da"
+     },
+     {
+      "kind": "camp",
+      "quote": "🅿️里面有两处营地可以露营，地方不算很大总共可容纳十来辆车",
+      "note_id": "6a39116c00000000220167da",
+      "author": "阿辉走不动",
+      "note_url": "https://www.xiaohongshu.com/explore/6a39116c00000000220167da"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -8716,8 +9155,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 443
+    "notes": 6,
+    "likes": 641
    },
    "pop": {
     "notes": 6,
@@ -8735,6 +9174,8 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -9303,8 +9744,8 @@
    "rating": 4.5,
    "rating_src": "云湖风景区",
    "heat": {
-    "notes": 1,
-    "likes": 331
+    "notes": 5,
+    "likes": 43
    },
    "pop": {
     "notes": 5,
@@ -9420,8 +9861,8 @@
    "rating": 4.7,
    "rating_src": "天德湖公园",
    "heat": {
-    "notes": 1,
-    "likes": 236
+    "notes": 6,
+    "likes": 108
    },
    "pop": {
     "notes": 6,
@@ -9596,8 +10037,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -9605,8 +10048,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "周末短途自驾直接封神🏞️ 全程门票｜露营｜停车全免费",
+      "note_id": "6a7671130000000024024046",
+      "author": "上海爷叔的山海",
+      "note_url": "https://www.xiaohongshu.com/explore/6a7671130000000024024046"
+     },
+     {
+      "kind": "camp",
+      "quote": "玩水、桨板、露营、烧烤、徒步一站式解锁，性价比直接拉满🔥",
+      "note_id": "6a7671130000000024024046",
+      "author": "上海爷叔的山海",
+      "note_url": "https://www.xiaohongshu.com/explore/6a7671130000000024024046"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -9648,8 +10107,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 1914
+    "notes": 6,
+    "likes": 126
    },
    "pop": {
     "notes": 6,
@@ -9666,7 +10125,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "unknown",
@@ -9766,8 +10227,8 @@
    "rating": 4.8,
    "rating_src": "东钱湖风景名胜区",
    "heat": {
-    "notes": 4,
-    "likes": 887
+    "notes": 32,
+    "likes": 14098
    },
    "pop": {
     "notes": 32,
@@ -9997,8 +10458,8 @@
    "rating": 4.0,
    "rating_src": "马山公园",
    "heat": {
-    "notes": 1,
-    "likes": 301
+    "notes": 4,
+    "likes": 29
    },
    "pop": {
     "notes": 4,
@@ -10124,8 +10585,8 @@
    "rating": 4.5,
    "rating_src": "岩头古村",
    "heat": {
-    "notes": 1,
-    "likes": 214
+    "notes": 12,
+    "likes": 106
    },
    "pop": {
     "notes": 12,
@@ -10182,8 +10643,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -10191,8 +10654,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "丹家村是二刷了，今天解锁了一条小径，偶遇一间视野超绝的民宿（非广，因为我不知道叫啥），从p10营地旁的小路，可以延山间一直走到p12，有一间正对山谷、外表极其朴素的小屋，只有一个房间和一个视野超赞的露台，没看到房间啥样，凭这个露台，绝对秒杀网上一众网红民宿",
+      "note_id": "6a48cbfb00000000220193a8",
+      "author": "曹",
+      "note_url": "https://www.xiaohongshu.com/explore/6a48cbfb00000000220193a8"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -10215,8 +10687,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 361
+    "notes": 12,
+    "likes": 212
    },
    "pop": {
     "notes": 12,
@@ -10233,6 +10705,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -10334,7 +10808,7 @@
    "rating_src": "安吉五峰山运动村",
    "heat": {
     "notes": 1,
-    "likes": 481
+    "likes": 9
    },
    "pop": {
     "notes": 1,
@@ -10460,8 +10934,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 224
+    "notes": 2,
+    "likes": 28
    },
    "pop": {
     "notes": 2,
@@ -10552,8 +11026,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 2,
-    "likes": 524
+    "notes": 23,
+    "likes": 1163
    },
    "pop": {
     "notes": 23,
@@ -10748,17 +11222,35 @@
     "basis": "no_veto_default"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "自搭营位388元/晚，含2张畅玩票（价值168元/张，共336元）",
+      "note_id": "69fb08730000000037037617",
+      "author": "邓咚咚",
+      "note_url": "https://www.xiaohongshu.com/explore/69fb08730000000037037617"
+     },
+     {
+      "kind": "camp",
+      "quote": "👉 营地成本 = 388 - 336 = 52元（五一期间每晚要再加50元，我看后面所有日期包括周末都不加价了）",
+      "note_id": "69fb08730000000037037617",
+      "author": "邓咚咚",
+      "note_url": "https://www.xiaohongshu.com/explore/69fb08730000000037037617"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -10819,9 +11311,12 @@
    "poi_type_missing": true,
    "kind_src": "name",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
-   "access": {},
+   "access": {
+    "water": true
+   },
    "dog_tier": "default",
    "sources": [
     {
@@ -10946,8 +11441,8 @@
    "rating": 4.6,
    "rating_src": "千华古村",
    "heat": {
-    "notes": 1,
-    "likes": 407
+    "notes": 20,
+    "likes": 762
    },
    "pop": {
     "notes": 20,
@@ -11083,8 +11578,8 @@
    "rating": 4.7,
    "rating_src": "天目湖旅游度假区",
    "heat": {
-    "notes": 1,
-    "likes": 153
+    "notes": 25,
+    "likes": 2325
    },
    "pop": {
     "notes": 25,
@@ -11159,8 +11654,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -11168,8 +11665,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "牧心谷，江浙沪森林徒步露营天花板",
+      "note_id": "690eabee0000000005031c76",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/690eabee0000000005031c76"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -11229,6 +11735,7 @@
    "kind_src": "name",
    "scenes": [
     "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -11396,8 +11903,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -11405,8 +11914,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "⚠️注意：属于备用水源，禁止下水游泳、明火露营",
+      "note_id": "6aa50ca0000000002900ed1c",
+      "author": "阿柚好物集",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa50ca0000000002900ed1c"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -11448,8 +11966,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 624
+    "notes": 18,
+    "likes": 428
    },
    "pop": {
     "notes": 18,
@@ -11467,6 +11985,8 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -11585,8 +12105,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 2,
-    "likes": 307
+    "notes": 30,
+    "likes": 5214
    },
    "pop": {
     "notes": 30,
@@ -11699,8 +12219,8 @@
    "rating": 4.2,
    "rating_src": "岱山岛",
    "heat": {
-    "notes": 4,
-    "likes": 1293
+    "notes": 15,
+    "likes": 768
    },
    "pop": {
     "notes": 15,
@@ -11755,8 +12275,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -11764,8 +12286,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "- 休闲娱乐 ：园内设有咖啡店、户外营地，可供休憩、烧烤团建",
+      "note_id": "69c8afb50000000023005f62",
+      "author": "人生加油",
+      "note_url": "https://www.xiaohongshu.com/explore/69c8afb50000000023005f62"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -11816,8 +12347,8 @@
    "rating": 4.5,
    "rating_src": "中国海岬公园",
    "heat": {
-    "notes": 2,
-    "likes": 310
+    "notes": 7,
+    "likes": 25
    },
    "pop": {
     "notes": 7,
@@ -11834,7 +12365,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {
     "fee": "免"
@@ -11890,8 +12423,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -11899,8 +12434,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "海上列车→爱心树拍照→候鸟咖啡→栈桥日落→东岸日落餐厅→花火露营",
+      "note_id": "6a76dfe500000000330193a8",
+      "author": "南京生活研究所",
+      "note_url": "https://www.xiaohongshu.com/explore/6a76dfe500000000330193a8"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -11963,6 +12507,7 @@
     "草坪遛弯",
     "玩水",
     "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -12063,8 +12608,8 @@
    "rating": 4.6,
    "rating_src": "千垛景区",
    "heat": {
-    "notes": 1,
-    "likes": 236
+    "notes": 6,
+    "likes": 50
    },
    "pop": {
     "notes": 6,
@@ -12304,8 +12849,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 128
+    "notes": 22,
+    "likes": 1085
    },
    "pop": {
     "notes": 22,
@@ -12412,8 +12957,8 @@
    "rating": 4.0,
    "rating_src": "渌洋湖湿地公园",
    "heat": {
-    "notes": 1,
-    "likes": 228
+    "notes": 10,
+    "likes": 746
    },
    "pop": {
     "notes": 10,
@@ -12548,8 +13093,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 458
+    "notes": 35,
+    "likes": 881
    },
    "pop": {
     "notes": 35,
@@ -12655,7 +13200,7 @@
    "rating_src": "香茗湖体育公园",
    "heat": {
     "notes": 1,
-    "likes": 990
+    "likes": 5
    },
    "pop": {
     "notes": 1,
@@ -12784,8 +13329,8 @@
    "rating": 4.7,
    "rating_src": "月亮湾风景区",
    "heat": {
-    "notes": 1,
-    "likes": 209
+    "notes": 25,
+    "likes": 2200
    },
    "pop": {
     "notes": 25,
@@ -12901,8 +13446,8 @@
    "rating": 4.5,
    "rating_src": "沙沟古镇景区",
    "heat": {
-    "notes": 1,
-    "likes": 236
+    "notes": 12,
+    "likes": 132
    },
    "pop": {
     "notes": 12,
@@ -12954,8 +13499,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -12963,8 +13510,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "抓住2026露营的尾巴🏕️",
+      "note_id": "6ae1aa100000000023010792",
+      "author": "苏苏去哪块",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae1aa100000000023010792"
+     },
+     {
+      "kind": "camp",
+      "quote": "再不露营就冷啦[叹气R]",
+      "note_id": "6ae1aa100000000023010792",
+      "author": "苏苏去哪块",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae1aa100000000023010792"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -13025,7 +13588,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "unknown",
@@ -13250,8 +13815,8 @@
    "rating": 4.9,
    "rating_src": "宁波宁海假日度假酒店",
    "heat": {
-    "notes": 1,
-    "likes": 251
+    "notes": 6,
+    "likes": 66
    },
    "pop": {
     "notes": 6,
@@ -13371,8 +13936,8 @@
    "rating": 3.5,
    "rating_src": "松兰山景区",
    "heat": {
-    "notes": 1,
-    "likes": 752
+    "notes": 20,
+    "likes": 5955
    },
    "pop": {
     "notes": 20,
@@ -13618,8 +14183,8 @@
    "rating": 4.5,
    "rating_src": "白沙湾沙滩",
    "heat": {
-    "notes": 1,
-    "likes": 1009
+    "notes": 3,
+    "likes": 102
    },
    "pop": {
     "notes": 3,
@@ -13674,8 +14239,10 @@
     "basis": "no_veto_default"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -13683,8 +14250,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "这里露营真的很不错，看了红书姐妹的推荐，带娃冲冲冲，车子可以开到湖边，能钓鱼还能烧烤，简直是露营天堂，假期里人人头多，去晚了就没有湖景位置了",
+      "note_id": "69f9fa67000000001a037329",
+      "author": "皮夹克麻麻📷",
+      "note_url": "https://www.xiaohongshu.com/explore/69f9fa67000000001a037329"
+     },
+     {
+      "kind": "camp",
+      "quote": "大家记得做到无痕露营哦，走的时候垃圾都清理干净哈",
+      "note_id": "69f9fa67000000001a037329",
+      "author": "皮夹克麻麻📷",
+      "note_url": "https://www.xiaohongshu.com/explore/69f9fa67000000001a037329"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -13743,7 +14326,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -13803,8 +14388,10 @@
     "risk_hint": "⚠ 需牵绳；同样受晚 7 点至早 7 点时段限制；宠物不能接触西湖水域"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -13812,8 +14399,17 @@
      "power": null,
      "signal": null
     },
-    "note": "市区，不适合过夜",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "主页还有更多杭州游玩攻略，老少皆宜，西湖，茶山，溯溪露营，遛娃，你需要的这里也许都有，有任何问题都可以评论区留言，点个关注不迷路",
+      "note_id": "6a09ceb10000000006033295",
+      "author": "十一麻麻杭州遛娃攻略",
+      "note_url": "https://www.xiaohongshu.com/explore/6a09ceb10000000006033295"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -13872,7 +14468,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:湖泊",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "unknown",
@@ -13917,8 +14515,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -13926,8 +14526,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "天姥山露营基地：海拔800米的云端帐篷",
+      "note_id": "6a7d473a0000000033019b74",
+      "author": "潇梅",
+      "note_url": "https://www.xiaohongshu.com/explore/6a7d473a0000000033019b74"
+     },
+     {
+      "kind": "camp",
+      "quote": "终于打卡了天姥山露营基地",
+      "note_id": "6a7d473a0000000033019b74",
+      "author": "潇梅",
+      "note_url": "https://www.xiaohongshu.com/explore/6a7d473a0000000033019b74"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -13969,8 +14585,8 @@
    "rating": 4.6,
    "rating_src": "天姥山景区",
    "heat": {
-    "notes": 1,
-    "likes": 300
+    "notes": 27,
+    "likes": 1278
    },
    "pop": {
     "notes": 27,
@@ -13987,6 +14603,8 @@
    "poi_type_dist_m": 2900,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -14145,8 +14763,10 @@
     "basis": "no_veto_default"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -14154,8 +14774,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "南京露营宝藏地 ｜ 三桥湿地公园",
+      "note_id": "6adeabff00000000150380a5",
+      "author": "南京小丸子",
+      "note_url": "https://www.xiaohongshu.com/explore/6adeabff00000000150380a5"
+     },
+     {
+      "kind": "camp",
+      "quote": "爱上露营这几年，三桥湿地公园一直是我的心头好",
+      "note_id": "6adeabff00000000150380a5",
+      "author": "南京小丸子",
+      "note_url": "https://www.xiaohongshu.com/explore/6adeabff00000000150380a5"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -14197,8 +14833,8 @@
    "rating": 4.6,
    "rating_src": "三桥湿地公园",
    "heat": {
-    "notes": 1,
-    "likes": 624
+    "notes": 12,
+    "likes": 283
    },
    "pop": {
     "notes": 12,
@@ -14214,7 +14850,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -14332,8 +14970,8 @@
    "rating": 4.3,
    "rating_src": "平垣秘境",
    "heat": {
-    "notes": 1,
-    "likes": 602
+    "notes": 32,
+    "likes": 2041
    },
    "pop": {
     "notes": 32,
@@ -14445,8 +15083,8 @@
    "rating": 4.5,
    "rating_src": "牛轭山观海公园",
    "heat": {
-    "notes": 1,
-    "likes": 256
+    "notes": 17,
+    "likes": 106
    },
    "pop": {
     "notes": 17,
@@ -14617,8 +15255,10 @@
     "risk_hint": "小红书笔记里只出现「#这里可以带狗玩#」这类话题标签，不是明确陈述——标签不能当证据；犬政策待核实"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -14626,8 +15266,17 @@
      "power": null,
      "signal": null
     },
-    "note": "性质未核实",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "节假日如果不能十点半之前到就别去了，好点的露营位置就没了，再晚一点路边都没位置了",
+      "note_id": "6addfb8f000000002d007cdc",
+      "author": "有点东西",
+      "note_url": "https://www.xiaohongshu.com/explore/6addfb8f000000002d007cdc"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -14684,6 +15333,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -14784,8 +15435,8 @@
    "rating": 4.5,
    "rating_src": "山泊隐世酒店",
    "heat": {
-    "notes": 1,
-    "likes": 602
+    "notes": 4,
+    "likes": 560
    },
    "pop": {
     "notes": 4,
@@ -15123,8 +15774,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 752
+    "notes": 3,
+    "likes": 21
    },
    "pop": {
     "notes": 3,
@@ -15229,8 +15880,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 990
+    "notes": 2,
+    "likes": 83
    },
    "pop": {
     "notes": 2,
@@ -15338,8 +15989,8 @@
    "rating": 4.5,
    "rating_src": "地藏大峡谷",
    "heat": {
-    "notes": 1,
-    "likes": 430
+    "notes": 3,
+    "likes": 3
    },
    "pop": {
     "notes": 3,
@@ -15444,7 +16095,7 @@
    "rating_src": "中央沙滩",
    "heat": {
     "notes": 1,
-    "likes": 752
+    "likes": 633
    },
    "pop": {
     "notes": 1,
@@ -15552,8 +16203,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 752
+    "notes": 9,
+    "likes": 1097
    },
    "pop": {
     "notes": 9,
@@ -15609,8 +16260,10 @@
     "basis": "explicit_ok"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -15618,8 +16271,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🕒游玩时间：全天可进，如果露营可以早一点去",
+      "note_id": "6ac3c8f90000000018004395",
+      "author": "先先贝麻麻",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac3c8f90000000018004395"
+     },
+     {
+      "kind": "camp",
+      "quote": "这里真的是南京露营遛娃好去处了",
+      "note_id": "6ac3c8f90000000018004395",
+      "author": "先先贝麻麻",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac3c8f90000000018004395"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -15661,8 +16330,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 624
+    "notes": 16,
+    "likes": 362
    },
    "pop": {
     "notes": 16,
@@ -15679,7 +16348,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -15785,8 +16456,8 @@
    "rating": 4.1,
    "rating_src": "吽唬沙滩",
    "heat": {
-    "notes": 1,
-    "likes": 256
+    "notes": 6,
+    "likes": 140
    },
    "pop": {
     "notes": 6,
@@ -15927,7 +16598,7 @@
    "rating_src": "桐庐香榧基地",
    "heat": {
     "notes": 1,
-    "likes": 272
+    "likes": 2
    },
    "pop": {
     "notes": 1,
@@ -15990,24 +16661,26 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": true,
+     "water": null,
      "power": null,
      "signal": null
     },
-    "note": "提到有水",
+    "note": "笔记里有人在这住店",
     "verified_at": null,
     "evidence": [
      {
-      "kind": "water",
-      "quote": "在水里扑腾、追桨板，玩累了旁边就有热水冲洗区，冲完还能吹得毛毛蓬蓬松松~",
-      "note_id": "6a2f57b900000000170294a5",
-      "author": "串串香香",
-      "note_url": "https://www.xiaohongshu.com/explore/6a2f57b900000000170294a5"
+      "kind": "camp",
+      "quote": "我们占地很大，整个民宿占地10来亩，有3500平的平坦大草坪，有600平的狗狗专属封闭草坪，有茶山，有吊桥，有营地",
+      "note_id": "686aa7b1000000002400d1d7",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/686aa7b1000000002400d1d7"
      }
     ]
    },
@@ -16051,8 +16724,8 @@
    "rating": 4.6,
    "rating_src": "桐庐语山水·叙旧民宿",
    "heat": {
-    "notes": 2,
-    "likes": 405
+    "notes": 1,
+    "likes": 3
    },
    "pop": {
     "notes": 1,
@@ -16068,11 +16741,10 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "过夜",
     "山野徒步"
    ],
-   "access": {
-    "water": true
-   },
+   "access": {},
    "dog_tier": "explicit",
    "sources": [
     {
@@ -16127,8 +16799,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -16136,8 +16810,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "为了有一个观赏日出日落的绝佳位置🌅，选择在了环线十公里地势偏高，避风且视野开阔的地方扎营，清晨拉开帐篷就可以看到第一缕阳光打过来🌞",
+      "note_id": "6ab3ace6000000001b03158e",
+      "author": "Jolly",
+      "note_url": "https://www.xiaohongshu.com/explore/6ab3ace6000000001b03158e"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -16160,8 +16843,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 256
+    "notes": 29,
+    "likes": 2847
    },
    "pop": {
     "notes": 29,
@@ -16178,6 +16861,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -16303,8 +16988,8 @@
    "rating": 4.5,
    "rating_src": "山风农场",
    "heat": {
-    "notes": 1,
-    "likes": 1034
+    "notes": 5,
+    "likes": 153
    },
    "pop": {
     "notes": 5,
@@ -16408,8 +17093,8 @@
    "rating": 4.3,
    "rating_src": "东海郊野公园",
    "heat": {
-    "notes": 1,
-    "likes": 256
+    "notes": 6,
+    "likes": 55
    },
    "pop": {
     "notes": 6,
@@ -16645,8 +17330,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 532
+    "notes": 3,
+    "likes": 164
    },
    "pop": {
     "notes": 3,
@@ -16716,8 +17401,10 @@
     "basis": "explicit_ok"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -16725,8 +17412,17 @@
      "power": null,
      "signal": null
     },
-    "note": "游船码头，不适合过夜",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "[露营R]船上乘坐时长：全程2.5小时（所以乘坐8：30时间会更充裕），船上有厕所，干净否不知道，没上",
+      "note_id": "6aa8cee40000000029014564",
+      "author": "发疯号",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa8cee40000000029014564"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -16781,7 +17477,10 @@
    "poi_name": "深渡旅游码头",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:风景名胜",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -17083,8 +17782,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 275
+    "notes": 30,
+    "likes": 3039
    },
    "pop": {
     "notes": 30,
@@ -17265,8 +17964,10 @@
     "basis": "no_veto_default"
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -17274,8 +17975,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "公园门口路边免费停车，很多露营的帐篷和人",
+      "note_id": "6a1a984d000000000803f86d",
+      "author": "小狗陈满减",
+      "note_url": "https://www.xiaohongshu.com/explore/6a1a984d000000000803f86d"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -17334,7 +18044,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -17431,8 +18143,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 421
+    "notes": 6,
+    "likes": 64
    },
    "pop": {
     "notes": 6,
@@ -17776,8 +18488,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 306
+    "notes": 19,
+    "likes": 7160
    },
    "pop": {
     "notes": 19,
@@ -17888,8 +18600,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 168
+    "notes": 11,
+    "likes": 599
    },
    "pop": {
     "notes": 11,
@@ -17962,8 +18674,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -17971,8 +18685,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "二潭去的时候还没人管理，但露营垃圾多到无处下脚",
+      "note_id": "66c97ee6000000001f018a1f",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/66c97ee6000000001f018a1f"
+     },
+     {
+      "kind": "camp",
+      "quote": "2️⃣升钢村水质一般但胜在有停车场，有人管理（清理垃圾），宠物也友好，有树荫遮蔽",
+      "note_id": "66c97ee6000000001f018a1f",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/66c97ee6000000001f018a1f"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -18015,7 +18745,7 @@
    "rating_src": null,
    "heat": {
     "notes": 1,
-    "likes": 44
+    "likes": 11
    },
    "pop": {
     "notes": 1,
@@ -18032,6 +18762,8 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -18371,7 +19103,7 @@
    "rating_src": null,
    "heat": {
     "notes": 1,
-    "likes": 357
+    "likes": 11
    },
    "pop": {
     "notes": 1,
@@ -18474,7 +19206,7 @@
    "rating_src": null,
    "heat": {
     "notes": 1,
-    "likes": 421
+    "likes": 9
    },
    "pop": {
     "notes": 1,
@@ -18932,8 +19664,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 127
+    "notes": 13,
+    "likes": 557
    },
    "pop": {
     "notes": 13,
@@ -19150,8 +19882,8 @@
    "rating": 4.6,
    "rating_src": "庆源古村",
    "heat": {
-    "notes": 1,
-    "likes": 58
+    "notes": 7,
+    "likes": 371
    },
    "pop": {
     "notes": 7,
@@ -19258,8 +19990,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 2,
-    "likes": 160
+    "notes": 10,
+    "likes": 572
    },
    "pop": {
     "notes": 10,
@@ -19769,8 +20501,8 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 1,
-    "likes": 58
+    "notes": 29,
+    "likes": 3344
    },
    "pop": {
     "notes": 29,
@@ -20061,8 +20793,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -20070,8 +20804,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "· 湖边露营与环湖骑行：沿湖有超大天然草坪，可免费搭帐篷、野餐",
+      "note_id": "6a3fd92f0000000008003ad9",
+      "author": "山谷流泉",
+      "note_url": "https://www.xiaohongshu.com/explore/6a3fd92f0000000008003ad9"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -20112,6 +20855,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -20396,8 +21141,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -20405,8 +21152,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "上海1h直达✨嘉善免费宝藏露营地太绝了",
+      "note_id": "69ee238400000000370359bf",
+      "author": "刘大白｜床车路书",
+      "note_url": "https://www.xiaohongshu.com/explore/69ee238400000000370359bf"
+     },
+     {
+      "kind": "camp",
+      "quote": "挖到嘉兴嘉善超小众神仙露营地🌿",
+      "note_id": "69ee238400000000370359bf",
+      "author": "刘大白｜床车路书",
+      "note_url": "https://www.xiaohongshu.com/explore/69ee238400000000370359bf"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -20461,7 +21224,10 @@
    "poi_name": "祥符荡科创绿谷",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:其余",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -20526,8 +21292,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -20535,8 +21303,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "然后一直往前开会碰到一个S型的大转弯（图13）过了S弯就快到目的地了 看到这根电线杆就代表已经到达目的地（图14）从左边小道下去（图15）这条路是石子路 有点不好走 没有户外经验的小伙伴不建议去这里 这一路都可以玩水 哪里合适就可以在哪搭天幕开启玩水模式啦",
+      "note_id": "6897fd480000000023023007",
+      "author": "凌晨的集市人不多",
+      "note_url": "https://www.xiaohongshu.com/explore/6897fd480000000023023007"
+     },
+     {
+      "kind": "camp",
+      "quote": "tips：一定一定要擦防晒霜 我们去的时候图省力没搭天幕 擦了防晒的地方没有被晒伤 没擦防晒的地方被紫外线晒的火辣辣的 回家洗完澡后才发现 或者直接物理防晒更有效",
+      "note_id": "6897fd480000000023023007",
+      "author": "凌晨的集市人不多",
+      "note_url": "https://www.xiaohongshu.com/explore/6897fd480000000023023007"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -20595,6 +21379,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇",
     "山野徒步"
    ],
@@ -21863,8 +22649,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -21872,8 +22660,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "进入景区，左侧是一块露营地，有厕所",
+      "note_id": "6a58af2f0000000001000c35",
+      "author": "小蜗牛",
+      "note_url": "https://www.xiaohongshu.com/explore/6a58af2f0000000001000c35"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -21933,6 +22730,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -21999,8 +22798,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -22008,8 +22809,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "露营最上头的不是装备多贵、照片多精致，是“刚好在场”的傍晚",
+      "note_id": "6ad3529e000000001803b943",
+      "author": "一边走一边拍",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad3529e000000001803b943"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -22068,7 +22878,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -22969,8 +23781,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -22978,8 +23792,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这住店",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "藏在安吉古城遗址公园里的九亩松风，300多亩的山野营地，帐篷散落在松林、湖畔与茶山之间，推开帐篷门就是漫山松影与湖光，自带治愈氛围感，秋冬来这里格外舒服🍂",
+      "note_id": "6ad9899e000000003300baf2",
+      "author": "",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad9899e000000003300baf2"
+     },
+     {
+      "kind": "camp",
+      "quote": "工作日的营地安静很多，不用拥挤，拍照取景自由度很高",
+      "note_id": "6ad9899e000000003300baf2",
+      "author": "",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad9899e000000003300baf2"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -23027,8 +23857,8 @@
     "basis": "小红书点名搜索 2 条相关笔记"
    },
    "heat": {
-    "notes": 1,
-    "likes": 481
+    "notes": 2,
+    "likes": 32
    },
    "heat_basis": "小红书点名搜索 2 条相关笔记",
    "rating": 3.5,
@@ -23038,7 +23868,8 @@
    "poi_type_dist_m": 106,
    "kind_src": "name",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -23104,17 +23935,35 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "我们在浅滩找了个位置露营，桌子椅子一摆，娃踩水，大人喝茶，又是一个有山有水的周末[萌萌哒R]",
+      "note_id": "6a9f8c69000000002b013718",
+      "author": "饶",
+      "note_url": "https://www.xiaohongshu.com/explore/6a9f8c69000000002b013718"
+     },
+     {
+      "kind": "camp",
+      "quote": "最后唠叨一句：这么棒的美景得大家一起护，露营请把垃圾全部带走，做到无痕出游[派对R]",
+      "note_id": "6a9f8c69000000002b013718",
+      "author": "饶",
+      "note_url": "https://www.xiaohongshu.com/explore/6a9f8c69000000002b013718"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -23153,9 +24002,13 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "古村古镇"
    ],
-   "access": {},
+   "access": {
+    "water": true
+   },
    "dog_tier": "explicit",
    "sources": [
     {
@@ -23433,8 +24286,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -23442,8 +24297,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "徒步治愈身心，露营治愈生活🌿",
+      "note_id": "6a55ec65000000000803fe5a",
+      "author": "夏小镜📷",
+      "note_url": "https://www.xiaohongshu.com/explore/6a55ec65000000000803fe5a"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -23502,6 +24366,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -23900,8 +24766,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -23909,8 +24777,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "5、大草坪、生态：这一部分见仁见智了，环境确实比市区好，大草坪也适合露营，但是人流多后露营的人也多就吵闹起来了，如果不执着于大草坪的朋友可以全园随处安营扎寨",
+      "note_id": "6aa7a626000000001001f18d",
+      "author": "阿午的慢慢日常",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa7a626000000001001f18d"
+     },
+     {
+      "kind": "camp",
+      "quote": "话又说回来，单纯冲着露营看景，南京似乎有许多免费公园就可以",
+      "note_id": "6aa7a626000000001001f18d",
+      "author": "阿午的慢慢日常",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa7a626000000001001f18d"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -23969,7 +24853,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -24529,8 +25415,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -24538,8 +25426,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "营地藏在林木之间，满眼都是绿意，妥妥的森系氛围感",
+      "note_id": "6adbbfca000000003300ff9a",
+      "author": "橘小小",
+      "note_url": "https://www.xiaohongshu.com/explore/6adbbfca000000003300ff9a"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -24592,7 +25489,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -24649,8 +25547,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -24658,8 +25558,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "💚可以野餐、露营🏕️、骑车🚴、钓鱼🎣",
+      "note_id": "6a0b223a0000000035026c69",
+      "author": "苏苏苏呀🍭",
+      "note_url": "https://www.xiaohongshu.com/explore/6a0b223a0000000035026c69"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -24717,7 +25626,10 @@
    "poi_name": "巴城生态湿地公园-夕露园",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:风景名胜",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -24970,8 +25882,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -24979,8 +25893,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "导航：镇江米芾书法公园东门（停车场旁边就有个厕所）图2",
+      "note_id": "69117c9a0000000004015779",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/69117c9a0000000004015779"
+     },
+     {
+      "kind": "camp",
+      "quote": "途径：米芾书法公园东门停车场-伴山咖啡-瞭望阁-狮子山-云山谷-拾里咖啡-飞行营地",
+      "note_id": "69117c9a0000000004015779",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/69117c9a0000000004015779"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -25039,6 +25969,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -25517,8 +26449,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -25526,8 +26460,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这住店",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "水真的好、会游泳的可以游泳、能带狗、可以抓鱼（溪水鱼）、可以露营、可以烧烤🍖",
+      "note_id": "6a9048b60000000007004cde",
+      "author": "快乐小神仙爱户外🚗",
+      "note_url": "https://www.xiaohongshu.com/explore/6a9048b60000000007004cde"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -25582,7 +26525,9 @@
    "poi_name": "沪缘栖谷民宿(安吉龙王山峡谷漂流店)",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -25972,17 +26917,35 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "☞园区：进门可以根据小火车的停靠站开始玩，从左边开始逛，亲子乐园（里面无动力项目很多，就是厕所的卫生堪忧，还是进门处的厕所比较干净）跟步行动物区很近（小动物种类不多，有梅花鹿，孔雀，猴子，鹦鹉，山羊，兔子等，可以自己带胡萝卜），飞机VR一次进十个人，体验时间五分钟左右，彩虹滑道和水滑道可以无限次玩，就是有点高，需要爬楼",
+      "note_id": "66ffdc86000000002c02e25c",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/66ffdc86000000002c02e25c"
+     },
+     {
+      "kind": "camp",
+      "quote": "☞我们是下午一点才到的，玩到五点返回，还是有很多没玩的，可以预留一天时间去，还有夜场就没过多了解了，走的时候露营的地方已经有很多人在烧烤，门口卖小吃的摊点也很多，总体来说没有去过的可以去一次，中规中矩",
+      "note_id": "66ffdc86000000002c02e25c",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/66ffdc86000000002c02e25c"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -26041,9 +27004,13 @@
    "poi_type_dist_m": 225,
    "kind_src": "poi_type:其余",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
-   "access": {},
+   "access": {
+    "water": true
+   },
    "dog_tier": "veto",
    "sources": [
     {
@@ -26322,8 +27289,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "car"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -26331,8 +27300,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "床车过夜安全 也有公厕（还很干净 图17）",
+      "note_id": "6abb9909000000001802c164",
+      "author": "床车日记",
+      "note_url": "https://www.xiaohongshu.com/explore/6abb9909000000001802c164"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -26393,7 +27371,9 @@
    "scenes": [
     "草坪遛弯",
     "玩水",
-    "溯溪"
+    "溯溪",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -27200,8 +28180,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -27209,8 +28191,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "因为这次计划去溯溪，所以提前准备好了溯溪和露营的东西，水果饮料可以在当地买，那边有超市哦",
+      "note_id": "6a086b400000000035023ef4",
+      "author": "疯批后妈$",
+      "note_url": "https://www.xiaohongshu.com/explore/6a086b400000000035023ef4"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -27271,6 +28262,8 @@
    "scenes": [
     "玩水",
     "溯溪",
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -27434,8 +28427,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -27443,8 +28438,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "在#猪罗纪营地[话题]# 美美玩了一下午",
+      "note_id": "6ae01c07000000001b0203d0",
+      "author": "🥦大王",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae01c07000000001b0203d0"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -27503,7 +28507,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -28014,8 +29019,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -28023,8 +29030,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "公园很大，很多人露营，最吸引的是中央的大草坪，铺张野餐布躺下吹风，人和小狗都笑到停不下来",
+      "note_id": "6ad37a89000000001203e324",
+      "author": "一一一一咦",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad37a89000000001203e324"
+     },
+     {
+      "kind": "camp",
+      "quote": "乐园旁是露营基地，有一大片粉子黛，很出片",
+      "note_id": "6ad37a89000000001203e324",
+      "author": "一一一一咦",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad37a89000000001203e324"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -28082,7 +29105,10 @@
    "poi_name": "长兴岛归谷生态园",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -28253,8 +29279,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -28262,8 +29290,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "杭州周边免费溯溪露营玩水地德清东沈村",
+      "note_id": "6a8b99c50000000026038ad6",
+      "author": "乐享杭州",
+      "note_url": "https://www.xiaohongshu.com/explore/6a8b99c50000000026038ad6"
+     },
+     {
+      "kind": "camp",
+      "quote": "杭州自驾1.2h直达｜德清东沈村莫干山脚下免费竹海溯溪露营秘境💦夏日遛娃避暑宝藏地",
+      "note_id": "6a8b99c50000000026038ad6",
+      "author": "乐享杭州",
+      "note_url": "https://www.xiaohongshu.com/explore/6a8b99c50000000026038ad6"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -28310,6 +29354,8 @@
    "poi_type_dist_m": 1894,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -28367,8 +29413,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -28376,8 +29424,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "Day1：抵达深溪岕村→办理入住→逛古村小溪→古松山庄 / 松花露营咖啡午餐→南山竹海深度游→仙人台看日落（可选森林野骑）→住深溪岕村",
+      "note_id": "6927afc7000000000d037e2e",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6927afc7000000000d037e2e"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -28438,6 +29495,8 @@
    "scenes": [
     "玩水",
     "溯溪",
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -28495,8 +29554,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -28504,8 +29565,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "溧阳露营地点推荐，七彩曹山这边的水库",
+      "note_id": "6ac5c27e0000000002013b3a",
+      "author": "Joshua",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac5c27e0000000002013b3a"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -28564,6 +29634,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -28621,8 +29693,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -28630,8 +29704,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "还有一片地方可以露营，爸妈放空之地",
+      "note_id": "6acf2343000000001803a25d",
+      "author": "Super🌟Tiara🐬",
+      "note_url": "https://www.xiaohongshu.com/explore/6acf2343000000001803a25d"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -28689,7 +29772,10 @@
    "poi_name": "神马农场",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:度假村",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -28745,8 +29831,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -28754,8 +29842,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "▪️ 湖畔露营烧烤 铁锅炖",
+      "note_id": "6a0b1c3d000000000803363b",
+      "author": "鑫鑫",
+      "note_url": "https://www.xiaohongshu.com/explore/6a0b1c3d000000000803363b"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -28815,6 +29912,8 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -29817,8 +30916,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -29826,8 +30927,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "玩水露营地—桐庐肖岭水库高家村",
+      "note_id": "6864f9b500000000110001d7",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6864f9b500000000110001d7"
+     },
+     {
+      "kind": "camp",
+      "quote": "[打卡R]便捷：村口宽敞，方便停车，村里有公共厕所",
+      "note_id": "6864f9b500000000110001d7",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6864f9b500000000110001d7"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -29886,6 +31003,8 @@
    "poi_type_dist_m": 42,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -29943,8 +31062,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -29952,8 +31073,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "藏在桐庐的一处秘境，杭州周边免费水边露营地，夏日玩水好去处，任何车型可直达水边，适合亲子，休闲，可以待上一整天~",
+      "note_id": "6a097d590000000036031af8",
+      "author": "乐石书法",
+      "note_url": "https://www.xiaohongshu.com/explore/6a097d590000000036031af8"
+     },
+     {
+      "kind": "camp",
+      "quote": "1⃣导航直接搜索“桐庐高明村”，杭州出发百公里左右，市区开车1.5-2小时到达，无需门票，免费停车，车子直接停在营地处，便利度拉满",
+      "note_id": "6a097d590000000036031af8",
+      "author": "乐石书法",
+      "note_url": "https://www.xiaohongshu.com/explore/6a097d590000000036031af8"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -29994,6 +31131,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -30051,8 +31190,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -30060,8 +31201,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "千岛湖建设的还挺城市的，舟山的湖水版……没想到清明在理想花园能碰到二三十只狗狗，🐶比👶🏻还多[笑哭R][笑哭R][笑哭R]照片拍的随便，天气也不行，实际环境还是挺不错的，特别适合遛狗和露营，可惜我家狗现在没法放开绳子",
+      "note_id": "69d10770000000001a032879",
+      "author": "哈士奇妈粉🧡",
+      "note_url": "https://www.xiaohongshu.com/explore/69d10770000000001a032879"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -30120,7 +31270,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -30934,8 +32086,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -30943,8 +32097,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这住店",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "2.酒店地理位置绝佳，就在小普陀、南宋石刻公园附近，大门口就是露营营地，晚上湖边逛逛也是惬意",
+      "note_id": "699820e1000000001503bd30",
+      "author": "不去不去😷",
+      "note_url": "https://www.xiaohongshu.com/explore/699820e1000000001503bd30"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -31003,7 +32166,8 @@
    "poi_type_dist_m": 93,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -33064,8 +34228,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -33073,8 +34239,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "✅️ 遇到带狗露营的家庭还分享狗狗零食",
+      "note_id": "6a4e7ede000000001603ce19",
+      "author": "土狗不土叫土豆",
+      "note_url": "https://www.xiaohongshu.com/explore/6a4e7ede000000001603ce19"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -33134,7 +34309,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -33670,8 +34847,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -33679,8 +34858,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "千岛湖富山村｜免费湖畔露营天花板",
+      "note_id": "69d21ff7000000001d018f8a",
+      "author": "星星在路上💫",
+      "note_url": "https://www.xiaohongshu.com/explore/69d21ff7000000001d018f8a"
+     },
+     {
+      "kind": "camp",
+      "quote": "💰费用：营地免费，可过夜、可明火",
+      "note_id": "69d21ff7000000001d018f8a",
+      "author": "星星在路上💫",
+      "note_url": "https://www.xiaohongshu.com/explore/69d21ff7000000001d018f8a"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -33737,6 +34932,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇",
     "山野徒步"
    ],
@@ -34256,8 +35453,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -34265,8 +35464,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "1、先到梁弄镇，路过四明湖，有大片草地，露营的不少，风景很好",
+      "note_id": "692a44a5000000001e02b724",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/692a44a5000000001e02b724"
+     },
+     {
+      "kind": "camp",
+      "quote": "这里比地图上的四明山观景台好多了，而且车还少，停车位较多，如果房车驻车至少比前一个好",
+      "note_id": "692a44a5000000001e02b724",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/692a44a5000000001e02b724"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -34325,7 +35540,10 @@
    "poi_name": "李家坑",
    "poi_type_dist_m": 1,
    "kind_src": "poi_type:风景名胜",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "default",
    "sources": [
@@ -35094,8 +36312,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -35103,8 +36323,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "北园人多，这边安静不少，适合放空～（注意不能搭帐篷⛺）",
+      "note_id": "6ae336460000000035023c53",
+      "author": "一瓶雪碧!",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae336460000000035023c53"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -35163,7 +36392,10 @@
    "poi_name": "温州园博园",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:风景名胜",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -35675,17 +36907,35 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "周末想找个地方躺平发呆，有山有水、能吃能玩、车程两小时内，刷遍社交软件后锁定了这个浙南小城——顺溪古镇",
+      "note_id": "6ad323a1000000001402fd48",
+      "author": "📸",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad323a1000000001402fd48"
+     },
+     {
+      "kind": "camp",
+      "quote": "溪南音乐草坪超大片，白天搭帐篷野餐放风筝，晚上变身露天Livehouse，篝火点起来氛围感拉满",
+      "note_id": "6ad323a1000000001402fd48",
+      "author": "📸",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad323a1000000001402fd48"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -35743,9 +36993,13 @@
    "kind_src": "name",
    "scenes": [
     "玩水",
-    "溯溪"
+    "溯溪",
+    "露营",
+    "过夜"
    ],
-   "access": {},
+   "access": {
+    "water": true
+   },
    "dog_tier": "explicit",
    "sources": [
     {
@@ -36390,8 +37644,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -36399,8 +37655,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "古镇不远处就是山水知音涧，还有特色咖啡馆，休闲玩水的露营⛺️营地，自然山水风光之上现代商业也赋予了这个地界新的生命",
+      "note_id": "6ac33d6000000000150036a2",
+      "author": "欢天喜地",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac33d6000000000150036a2"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -36461,6 +37726,8 @@
    "scenes": [
     "玩水",
     "溯溪",
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -37545,7 +38812,7 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
+    "status": "forbidden",
     "modes": [],
     "fee": null,
     "facilities": {
@@ -37554,8 +38821,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里提到不让过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "▪️户外游玩，拍照，喝咖啡（⚠️禁止明火烧烤，不能过夜露营）",
+      "note_id": "6ae53a74000000000703a159",
+      "author": "金金乐道",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae53a74000000000703a159"
+     },
+     {
+      "kind": "camp",
+      "quote": "▪️配套有公共卫生间，补给建议自带水和零食",
+      "note_id": "6ae53a74000000000703a159",
+      "author": "金金乐道",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae53a74000000000703a159"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -38008,8 +39291,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -38017,8 +39302,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "可搭帐篷野餐，严禁明火烧烤",
+      "note_id": "6aa5f9460000000028035fb7",
+      "author": "以后",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa5f9460000000028035fb7"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -38078,7 +39372,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -38135,8 +39431,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -38144,8 +39442,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "邹浦河湿地公园南头露营地-2（吴淞江边）",
+      "note_id": "694c15d8000000001e021a79",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/694c15d8000000001e021a79"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -38205,7 +39512,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -38262,8 +39571,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -38271,8 +39582,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "露营应该也是可以的，有观鸟区，现在荷花正好开了有看到一小片",
+      "note_id": "6a34edeb0000000017029b51",
+      "author": "柴犬福尔摩卡",
+      "note_url": "https://www.xiaohongshu.com/explore/6a34edeb0000000017029b51"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -38311,7 +39631,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -38572,8 +39894,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -38581,8 +39905,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "这个神仙露营地点我承包了～幸庄湿地公园",
+      "note_id": "69edf602000000001f005714",
+      "author": "夏小镜📷",
+      "note_url": "https://www.xiaohongshu.com/explore/69edf602000000001f005714"
+     },
+     {
+      "kind": "camp",
+      "quote": "周边还有公共厕所，设施很完善",
+      "note_id": "69edf602000000001f005714",
+      "author": "夏小镜📷",
+      "note_url": "https://www.xiaohongshu.com/explore/69edf602000000001f005714"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -38642,7 +39982,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -39348,8 +40690,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -39357,8 +40701,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "⛺北支江南岸公园露营，心随江水宽",
+      "note_id": "6ac4d768000000000a021f0c",
+      "author": "娇娇朵朵吖",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac4d768000000000a021f0c"
+     },
+     {
+      "kind": "camp",
+      "quote": "p1-4：江边露营草地加步道",
+      "note_id": "6ac4d768000000000a021f0c",
+      "author": "娇娇朵朵吖",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac4d768000000000a021f0c"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -39418,7 +40778,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -39475,8 +40837,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -39484,8 +40848,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "寻一处临湖营地，背靠青山，眼前是翡翠一般的湖水",
+      "note_id": "6ac5ce98000000000b004254",
+      "author": "一千克",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac5ce98000000000b004254"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -39545,6 +40918,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -39602,8 +40977,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -39611,8 +40988,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "下面一点适合搭天幕的地方水流比较缓，石头上全是水草滑滑的",
+      "note_id": "6a3f796e000000001702bcb8",
+      "author": "晓晓小小米粒妈",
+      "note_url": "https://www.xiaohongshu.com/explore/6a3f796e000000001702bcb8"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -39673,6 +41059,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -39730,8 +41118,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -39739,8 +41129,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "杭州周边高性价比露营地·富阳树石村",
+      "note_id": "6aacaeb8000000001103b45f",
+      "author": "碎碎念的黄老师",
+      "note_url": "https://www.xiaohongshu.com/explore/6aacaeb8000000001103b45f"
+     },
+     {
+      "kind": "camp",
+      "quote": "[打卡R]导航到“树石村露营地”，长深高速龙门古镇下，然后走一段乡镇道路",
+      "note_id": "6aacaeb8000000001103b45f",
+      "author": "碎碎念的黄老师",
+      "note_url": "https://www.xiaohongshu.com/explore/6aacaeb8000000001103b45f"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -39800,6 +41206,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -39966,8 +41374,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -39975,8 +41385,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这住店",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "原本满心欢喜订了景区旁的宠物友好营地",
+      "note_id": "6ab8644f0000000018011551",
+      "author": "丫丫孤单不孤独",
+      "note_url": "https://www.xiaohongshu.com/explore/6ab8644f0000000018011551"
+     },
+     {
+      "kind": "camp",
+      "quote": "营地临着超美的月亮湖，整片湖景视野开阔治愈",
+      "note_id": "6ab8644f0000000018011551",
+      "author": "丫丫孤单不孤独",
+      "note_url": "https://www.xiaohongshu.com/explore/6ab8644f0000000018011551"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -40032,7 +41458,9 @@
    "poi_name": "绍兴上虞乐野民宿",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -40088,17 +41516,35 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🅿️停车场：免费，大概能停10辆左右，停满可停路边，旁边有厕所🚾，干净卫生",
+      "note_id": "6a01c79c00000000070284d4",
+      "author": "sun",
+      "note_url": "https://www.xiaohongshu.com/explore/6a01c79c00000000070284d4"
+     },
+     {
+      "kind": "camp",
+      "quote": "体育公园旁有个大亭子（图5），专为我们20多人露营、野餐准备的，比起岛上搭的天幕（大概7-8个位置），这里更舒服自在",
+      "note_id": "6a01c79c00000000070284d4",
+      "author": "sun",
+      "note_url": "https://www.xiaohongshu.com/explore/6a01c79c00000000070284d4"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -40136,9 +41582,13 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
-   "access": {},
+   "access": {
+    "water": true
+   },
    "dog_tier": "default",
    "sources": [
     {
@@ -40980,8 +42430,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -40989,8 +42441,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "【嘉善日光域营地｜达人免费体验招募】",
+      "note_id": "6aebebfd000000000300a220",
+      "author": "1天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6aebebfd000000000300a220"
+     },
+     {
+      "kind": "camp",
+      "quote": "【嘉善日光域营地｜达人免费体验招募】",
+      "note_id": "6aebebfd000000000300a220",
+      "author": "1天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6aebebfd000000000300a220"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -41050,7 +42518,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -41435,8 +42904,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -41444,8 +42915,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "散步、拍照、露营、遛娃全都适配",
+      "note_id": "6abf8be1000000001c01f3b0",
+      "author": "高白",
+      "note_url": "https://www.xiaohongshu.com/explore/6abf8be1000000001c01f3b0"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -41502,7 +42982,9 @@
    "poi_type_dist_m": 9,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -41559,8 +43041,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -41568,8 +43052,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🌟上海周边露营｜大尖山景区｜可明火",
+      "note_id": "69f9bf68000000003601cb4f",
+      "author": "跟着Zoey去野",
+      "note_url": "https://www.xiaohongshu.com/explore/69f9bf68000000003601cb4f"
+     },
+     {
+      "kind": "camp",
+      "quote": "上海周边居然藏着这么适合带娃的露营地车程1.5小时直达，人少景美还能躺平，真的挖到宝了😭",
+      "note_id": "69f9bf68000000003601cb4f",
+      "author": "跟着Zoey去野",
+      "note_url": "https://www.xiaohongshu.com/explore/69f9bf68000000003601cb4f"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -41629,6 +43129,8 @@
    "poi_type_dist_m": 619,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -41804,8 +43306,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "car"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -41813,8 +43317,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "坐在秋千上待了好一会避雨，又车里睡了会，起来想着不能浪费白来一趟，打起精神接着逛逛拍个照",
+      "note_id": "65ff99e700000000140052e8",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/65ff99e700000000140052e8"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -41873,7 +43386,10 @@
    "poi_name": "森利园",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:风景名胜",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -43048,8 +44564,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -43057,8 +44575,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "大片的草坪好适合露营⛺️",
+      "note_id": "6ac49255000000001a027a33",
+      "author": "是卓芮呀",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac49255000000001a027a33"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -43118,7 +44645,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "explicit",
@@ -43175,8 +44704,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -43184,8 +44715,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "湖州邱城遗址公园｜遛娃拍照露营绝绝子",
+      "note_id": "69eb0870000000002202a58c",
+      "author": "小新",
+      "note_url": "https://www.xiaohongshu.com/explore/69eb0870000000002202a58c"
+     },
+     {
+      "kind": "camp",
+      "quote": "✅ 露营超省心，不用带帐篷，只带防潮垫就可以，绿野仙踪晒不着",
+      "note_id": "69eb0870000000002202a58c",
+      "author": "小新",
+      "note_url": "https://www.xiaohongshu.com/explore/69eb0870000000002202a58c"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -43242,6 +44789,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "人文古迹"
    ],
    "access": {},
@@ -43299,8 +44848,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -43308,8 +44859,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "宠物友好露营位，野餐超舒服￼￼￼",
+      "note_id": "69d26a3e000000001a025d3e",
+      "author": "小耳朵图图",
+      "note_url": "https://www.xiaohongshu.com/explore/69d26a3e000000001a025d3e"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -43368,7 +44928,10 @@
    "poi_name": "琵琶岛·自然野ALOKA ISLAND",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -43415,8 +44978,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "lodging",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -43424,8 +44989,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这住店",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "从松之屿民宿的静谧，到舷外餐厅的浪漫，再到营地烧烤的烟火气，一天的快乐被安排得明明白白，真的太适合周末出逃了🌿",
+      "note_id": "69b4ea3300000000230177f1",
+      "author": "一颗工程菌",
+      "note_url": "https://www.xiaohongshu.com/explore/69b4ea3300000000230177f1"
+     },
+     {
+      "kind": "camp",
+      "quote": "✅从温馨舒适的民宿，到风景绝美的餐厅，再到充满烟火气的烧烤营地，嘉兴森泊把度假的所有美好都集齐了",
+      "note_id": "69b4ea3300000000230177f1",
+      "author": "一颗工程菌",
+      "note_url": "https://www.xiaohongshu.com/explore/69b4ea3300000000230177f1"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -43484,7 +45065,9 @@
    "poi_name": "松之屿3·南北湖民宿(南北湖店)",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -44688,8 +46271,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -44697,8 +46282,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "红绿双灯塔、999米临海长堤、帆船码头、草坪露营地",
+      "note_id": "6a7abf39000000002202febc",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6a7abf39000000002202febc"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -44758,7 +46352,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -44922,8 +46518,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -44931,8 +46529,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "舟山｜开车直达沙滩的免费露营地，能生火",
+      "note_id": "6ac64661000000001301b706",
+      "author": "Salt太咸（户外版）",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac64661000000001301b706"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -44993,7 +46600,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "露营"
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "unknown",
@@ -45166,8 +46774,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -45175,8 +46785,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "这个沙滩人也少，旁边还有可以露营的地方，非常遗憾我们没有带天幕，吹吹海风吃点好吃的不知道多幸福",
+      "note_id": "6aa6c0a6000000001001ff8e",
+      "author": "敏敏plus",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa6c0a6000000001001ff8e"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -45236,7 +46855,9 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -45724,8 +47345,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -45733,8 +47356,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "金华 | 雅金村市区驱车15min 可垂钓露营地",
+      "note_id": "6ae825e80000000025018bc2",
+      "author": "5天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae825e80000000025018bc2"
+     },
+     {
+      "kind": "camp",
+      "quote": "🚗定位：金华市金东区雅金村公共厕所（西南160米）po评论区置顶，这一条路上到处都是露营的地方",
+      "note_id": "6ae825e80000000025018bc2",
+      "author": "5天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae825e80000000025018bc2"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -45795,6 +47434,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -45970,8 +47611,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -45979,8 +47622,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🌿金满湖草坪加油区｜遛娃露营一日游",
+      "note_id": "6acc9f76000000001a0230bf",
+      "author": "爱撸铁的设计师小鲍",
+      "note_url": "https://www.xiaohongshu.com/explore/6acc9f76000000001a0230bf"
+     },
+     {
+      "kind": "camp",
+      "quote": "可以自带天幕、帐篷露营野餐，晒晒太阳吹吹风",
+      "note_id": "6acc9f76000000001a0230bf",
+      "author": "爱撸铁的设计师小鲍",
+      "note_url": "https://www.xiaohongshu.com/explore/6acc9f76000000001a0230bf"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -46041,7 +47700,9 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "access": {},
    "dog_tier": "default",
@@ -46209,8 +47870,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -46218,8 +47881,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "⛰️ 山顶云海｜自驾露营",
+      "note_id": "6acde39d0000000018012d25",
+      "author": "隽阜",
+      "note_url": "https://www.xiaohongshu.com/explore/6acde39d0000000018012d25"
+     },
+     {
+      "kind": "camp",
+      "quote": "03 📍桐庐·雄狮子 小众山顶露营点，末段非铺装，建议高底盘SUV",
+      "note_id": "6acde39d0000000018012d25",
+      "author": "隽阜",
+      "note_url": "https://www.xiaohongshu.com/explore/6acde39d0000000018012d25"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -46257,7 +47936,10 @@
    "poi_name": "毛熊坞蓝莓园",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:其余",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "unknown",
    "sources": [
@@ -46304,8 +47986,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -46313,8 +47997,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "✔️露营：天幕、蛋卷桌、克米特椅、烧烤炉、卡式炉",
+      "note_id": "6a410082000000002100813a",
+      "author": "上海户外露营租赁",
+      "note_url": "https://www.xiaohongshu.com/explore/6a410082000000002100813a"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -46374,6 +48067,8 @@
    "poi_type_dist_m": 4,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -46431,8 +48126,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -46440,8 +48137,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "空气清新，人不算多，好多家庭来遛娃，还有遛狗、写生、野营喝茶的",
+      "note_id": "6aeef87e00000000120083c9",
+      "author": "18:07",
+      "note_url": "https://www.xiaohongshu.com/explore/6aeef87e00000000120083c9"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -46490,6 +48196,8 @@
    "kind_src": "name",
    "scenes": [
     "草坪遛弯",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "access": {},
@@ -46663,8 +48371,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -46672,8 +48382,17 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "大片草坪自由露营、山间咖啡店发呆、不定期山野音乐会",
+      "note_id": "6a4dfc840000000016027b81",
+      "author": "就叫张张",
+      "note_url": "https://www.xiaohongshu.com/explore/6a4dfc840000000016027b81"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -46730,7 +48449,10 @@
    "poi_name": "响堂桃源谷",
    "poi_type_dist_m": 0,
    "kind_src": "poi_type:风景名胜",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "default",
    "sources": [
@@ -47367,8 +49089,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -47376,8 +49100,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "关于场地：入口一座铁门很小，车开进来景色怡人，一望无际的田园风光，有草坪，有山林，有田野，可以露营可以钓鱼，也可以骑行",
+      "note_id": "699c5334000000001a024a43",
+      "author": "小八和嘻嘻",
+      "note_url": "https://www.xiaohongshu.com/explore/699c5334000000001a024a43"
+     },
+     {
+      "kind": "camp",
+      "quote": "车子可以开进来露营，有好几处风车的景色，草坪打理的非常干净",
+      "note_id": "699c5334000000001a024a43",
+      "author": "小八和嘻嘻",
+      "note_url": "https://www.xiaohongshu.com/explore/699c5334000000001a024a43"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -47434,7 +49174,10 @@
    "poi_name": "七丫口郊野湿地",
    "poi_type_dist_m": 0,
    "kind_src": "name",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "access": {},
    "dog_tier": "explicit",
    "sources": [
@@ -47847,8 +49590,10 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -47856,8 +49601,24 @@
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "种草｜上海周边，太仓电站村露营点全攻略",
+      "note_id": "6919bfed000000000700a39f",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6919bfed000000000700a39f"
+     },
+     {
+      "kind": "camp",
+      "quote": "电站村露营地，在电站村生态园内",
+      "note_id": "6919bfed000000000700a39f",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6919bfed000000000700a39f"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -47915,6 +49676,8 @@
    "poi_type_dist_m": 0,
    "kind_src": "name",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "access": {},
@@ -48577,8 +50340,8 @@
     "basis": "小红书点名搜索 6 条相关笔记"
    },
    "heat": {
-    "notes": 1,
-    "likes": 168
+    "notes": 6,
+    "likes": 388
    },
    "heat_basis": "小红书点名搜索 6 条相关笔记",
    "poi_type": "医疗保健服务;诊所;诊所",
@@ -49212,17 +50975,35 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
-     "water": null,
+     "water": true,
      "power": null,
      "signal": null
     },
-    "note": "",
-    "verified_at": null
+    "note": "笔记里有人在这扎营（正规营地）",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "杭州开车 1.5 小时，海拔 1100 米的山顶营地，80块钱能睡一晚🌌",
+      "note_id": "6ab509100000000018007f25",
+      "author": "龙门秘境",
+      "note_url": "https://www.xiaohongshu.com/explore/6ab509100000000018007f25"
+     },
+     {
+      "kind": "camp",
+      "quote": "· 自带帐篷露营 100 元/人（会员价80元/人）",
+      "note_id": "6ab509100000000018007f25",
+      "author": "龙门秘境",
+      "note_url": "https://www.xiaohongshu.com/explore/6ab509100000000018007f25"
+     }
+    ]
    },
    "sub_pois": [
     {
@@ -49278,9 +51059,12 @@
    "kind_src": "name",
    "scenes": [
     "露营",
+    "过夜",
     "山野徒步"
    ],
-   "access": {},
+   "access": {
+    "water": true
+   },
    "dog_tier": "unknown",
    "sources": [
     {
