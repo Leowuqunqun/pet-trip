@@ -59231,8 +59231,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -59240,9 +59242,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "▫️萌宠乐园｜8:30–17:00｜自由家营地",
+      "note_id": "6aeeeca5000000002000ae0e",
+      "author": "2天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6aeeeca5000000002000ae0e"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -59269,6 +59280,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": null,
@@ -59309,8 +59322,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -59318,9 +59333,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "合肥宝藏露营地——包河大圩星月湿地",
+      "note_id": "6ae4b15e000000001202e6ce",
+      "author": "霸都视觉",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae4b15e000000001202e6ce"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -59346,7 +59370,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
@@ -72553,8 +72580,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -72562,9 +72591,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "巢湖边上有观景台，大量的露营地，拖家带口出来玩的人巨多无比",
+      "note_id": "6adc89bc000000002c0381d6",
+      "author": "momo",
+      "note_url": "https://www.xiaohongshu.com/explore/6adc89bc000000002c0381d6"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -72586,7 +72624,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -72844,8 +72884,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -72853,9 +72895,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🎫门票：免费，无需预约直接入园",
+      "note_id": "6a67175b0000000001032e6f",
+      "author": "云贝贝旅游",
+      "note_url": "https://www.xiaohongshu.com/explore/6a67175b0000000001032e6f"
+     },
+     {
+      "kind": "camp",
+      "quote": "3. 露营需要在官方公众号提前预约，禁止明火",
+      "note_id": "6a67175b0000000001032e6f",
+      "author": "云贝贝旅游",
+      "note_url": "https://www.xiaohongshu.com/explore/6a67175b0000000001032e6f"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -72879,6 +72937,8 @@
    "scenes": [
     "草坪遛弯",
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": null,
@@ -76838,8 +76898,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -76847,9 +76909,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "第20天：芝田星河露营地、天鹅湖景区、如意谷农场",
+      "note_id": "6ad22860000000001403151b",
+      "author": "哪哪都想去🚀",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad22860000000001403151b"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -76871,6 +76942,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
    "heat": null,
