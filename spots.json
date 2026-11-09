@@ -56877,8 +56877,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -56886,9 +56888,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "杭州周边车床露营点深度测评8：太湖观景台",
+      "note_id": "6aa26baf00000000110351d3",
+      "author": "3天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa26baf00000000110351d3"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -56916,6 +56927,8 @@
    "tier": "B",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "人文古迹"
    ],
    "heat": {
@@ -57597,8 +57610,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -57606,9 +57621,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "图五：青山湖景区    这里是我小时候就在的景点，有一大片草坪，还能坐船游玩青山湖，建议露营选择这里",
+      "note_id": "69fca65e0000000022029c3d",
+      "author": "拾光屿岛",
+      "note_url": "https://www.xiaohongshu.com/explore/69fca65e0000000022029c3d"
+     },
+     {
+      "kind": "camp",
+      "quote": "到了之后一直往前是一片露营地，如果还是想看水上森林就往右骑行，沿着绿道一直骑就能到水上森林，春天还能经过一大片花海",
+      "note_id": "69fca65e0000000022029c3d",
+      "author": "拾光屿岛",
+      "note_url": "https://www.xiaohongshu.com/explore/69fca65e0000000022029c3d"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -57636,6 +57667,8 @@
    "tier": "B",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": null,
@@ -67777,8 +67810,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -67786,9 +67821,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "吃完晚饭路过太湖乘风起观景台，这感觉太夏天了[营地车R][渔夫帽R][风镜R]",
+      "note_id": "6a3781e0000000001603d181",
+      "author": "西塞山前",
+      "note_url": "https://www.xiaohongshu.com/explore/6a3781e0000000001603d181"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -67809,7 +67853,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [],
