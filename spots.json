@@ -17410,12 +17410,12 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 40 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
    "pending": [
     "overnight"
    ],
-   "heat_basis": "点名搜索 40 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "poi_type": "风景名胜;风景名胜;风景名胜",
    "poi_name": "深渡旅游码头",
    "poi_type_dist_m": 0,
@@ -26396,9 +26396,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 39 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 39 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": {
@@ -47546,9 +47546,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 37 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 37 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": {
@@ -52512,15 +52512,15 @@
    "rating": null,
    "rating_src": null,
    "heat": {
-    "notes": 0,
-    "likes": 0
+    "notes": 9,
+    "likes": 65
    },
    "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+    "notes": 9,
+    "likes": 65,
+    "basis": "小红书点名搜索 9 条相关笔记"
    },
-   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   "heat_basis": "小红书点名搜索 9 条相关笔记"
   },
   {
    "id": "x-白鹇谷",
@@ -59134,7 +59134,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 10,
+    "likes": 282
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -59144,7 +59147,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 10,
+    "likes": 282,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
   },
   {
    "id": "x-维纳斯国际酒店(青阳城区店)",
@@ -59222,7 +59231,10 @@
    "scenes": [
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -59232,7 +59244,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-黄山市太平湖风景区",
@@ -59301,7 +59319,10 @@
     "玩水",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 9
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -59311,7 +59332,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 1,
+    "likes": 9,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-齐云山度假区",
@@ -60180,7 +60207,10 @@
     "草坪遛弯",
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -60190,7 +60220,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-西山国家森林公园",
@@ -63804,7 +63840,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 57
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -63814,7 +63853,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 57,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-月亮湾风景区",
@@ -66077,7 +66122,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 18,
+    "likes": 1061
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -66087,7 +66135,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 18,
+    "likes": 1061,
+    "basis": "小红书点名搜索 18 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 18 条相关笔记"
   },
   {
    "id": "x-龙山水库",
@@ -72003,7 +72057,10 @@
     "玩水",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72013,7 +72070,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-冶父山国家森林公园",
@@ -72230,7 +72293,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 10,
+    "likes": 258
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72240,7 +72306,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 10,
+    "likes": 258,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
   },
   {
    "id": "x-地藏禅寺",
@@ -72698,7 +72770,10 @@
     "玩水",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 24
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72708,7 +72783,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 5,
+    "likes": 24,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-长春水库",
@@ -72851,7 +72932,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 155
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72861,7 +72945,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 2,
+    "likes": 155,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-西溪南古村落",
@@ -72926,7 +73016,10 @@
     "溯溪",
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 39
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72936,7 +73029,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 4,
+    "likes": 39,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-老海关钟楼",
@@ -73423,7 +73522,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 15,
+    "likes": 3176
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -73433,7 +73535,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 15,
+    "likes": 3176,
+    "basis": "小红书点名搜索 15 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 15 条相关笔记"
   },
   {
    "id": "x-龟山湿地公园",
@@ -73497,7 +73605,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 1676
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -73507,7 +73618,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 3,
+    "likes": 1676,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-合肥滨湖国家森林公园",
@@ -74279,7 +74396,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -74289,7 +74409,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-豺狗狼尖",
@@ -74350,7 +74476,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 13,
+    "likes": 251
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -74360,7 +74489,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 13,
+    "likes": 251,
+    "basis": "小红书点名搜索 13 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 13 条相关笔记"
   },
   {
    "id": "x-青年与海营地",
@@ -77964,7 +78099,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -77974,7 +78112,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 1,
+    "likes": 0,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-蒙山人家景区",
