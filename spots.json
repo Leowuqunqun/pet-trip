@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 728,
+  "count": 725,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -5335,115 +5335,6 @@
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=121.833749,31.949847&name=%E4%B8%9C%E9%83%A8%E6%B5%B7%E5%A0%A4%E9%BB%91%E6%B2%99%E6%BB%A9&src=pet-trip&coordinate=gaode&callnative=0",
-     "title": "在高德地图查看位置",
-     "why": "坐标来源"
-    }
-   ]
-  },
-  {
-   "id": "x-濮院古镇-游览车站点",
-   "name": "濮院古镇-游览车站点",
-   "kind": "village",
-   "tags": [],
-   "province": "浙江",
-   "city": "嘉兴",
-   "gcj": [
-    120.626206,
-    30.679302
-   ],
-   "drive": {
-    "hours_oneway": 1.97,
-    "km": 122.4,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-02 10:44"
-   },
-   "dog": {
-    "policy": "unknown",
-    "evidence": "小红书 C级UGC（笔记 6a3793df，@琑0805*1005）：「」",
-    "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "no_dog_mention",
-    "risk_hint": ""
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null
-   },
-   "sub_pois": [
-    {
-     "name": "濮院古镇-游览车站点",
-     "gcj": [
-      120.626206,
-      30.679302
-     ],
-     "note": "嘉兴濮院时尚古镇 两天一晚 旅游攻略"
-    }
-   ],
-   "trips": [
-    "小红书-濮院时尚古镇游客中心"
-   ],
-   "geo_src": "xhs",
-   "origin": "小红书带狗笔记",
-   "curation_note": "",
-   "raw_note": "嘉兴濮院时尚古镇 两天一晚 旅游攻略",
-   "photos": [
-    {
-     "url": "https://store.is.autonavi.com/showpic/61a36d2b4d035b660000005565952099?type=pic",
-     "title": "",
-     "poi_name": "濮院古镇-游览车站点",
-     "src": "高德POI"
-    },
-    {
-     "url": "https://store.is.autonavi.com/showpic/c5e7a065c00ceaf60000005565940606?type=pic",
-     "title": "",
-     "poi_name": "濮院古镇-游览车站点",
-     "src": "高德POI"
-    },
-    {
-     "url": "https://store.is.autonavi.com/showpic/d36e23f1dac465f30000005565952100?type=pic",
-     "title": "",
-     "poi_name": "濮院古镇-游览车站点",
-     "src": "高德POI"
-    }
-   ],
-   "rating": 3.8,
-   "rating_src": "濮院古镇-游览车站点",
-   "heat": {
-    "notes": 1,
-    "likes": 247
-   },
-   "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 40 条笔记，无一条标题带该地名"
-   },
-   "heat_basis": "点名搜索 40 条笔记，无一条标题带该地名",
-   "pending": [
-    "dog",
-    "overnight"
-   ],
-   "poi_type": "风景名胜;风景名胜相关;旅游景点",
-   "poi_name": "濮院古镇-游览车站点",
-   "poi_type_dist_m": 0,
-   "kind_src": "name",
-   "scenes": [
-    "古村古镇"
-   ],
-   "access": {},
-   "dog_tier": "unknown",
-   "sources": [
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=120.626206,30.679302&name=%E6%BF%AE%E9%99%A2%E5%8F%A4%E9%95%87-%E6%B8%B8%E8%A7%88%E8%BD%A6%E7%AB%99%E7%82%B9&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
     }
@@ -38449,11 +38340,11 @@
    },
    "dog": {
     "policy": "allowed",
-    "evidence": "小红书笔记（6981ec36000000001a02e6f0）：「个公园⬇️ 1️⃣东平森林公园 2️⃣西沙湿地公园 \t 两个公园几乎没什么人，忍不住悄悄放开牵引绳让小狗撒欢🐶（￼😳温馨提示：不提倡）。 小狗向来超爱大自然，在公园里更是欢快得不得了，在枯黄的草甸上无拘无束地奔跑。 看着朵拉跑这么开心，我也」",
-    "evidence_level": "同篇笔记提及",
-    "basis": "离线回扫已采笔记",
-    "risk_hint": "",
-    "verified_at": null
+    "evidence": "小红书 UGC（笔记 6995bb61）：「] 寿安寺 （P1-P2） 狗狗免费 / 人类免费 / 停车免费 \t 始建于南宋，清幽古朴，可以直接带狗狗进寺（注意牵好哦，而且怕打扰清净，我们没有进殿）！工作人员超热情，还夸我家狗子可爱～孩子从进门」",
+    "verified_at": null,
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "basis": "explicit_ok",
+    "risk_hint": ""
    },
    "overnight": {
     "status": "unknown",
@@ -38476,6 +38367,14 @@
       31.725356
      ],
      "note": "发现批次坐标"
+    },
+    {
+     "name": "西沙国家湿地公园-游客接待中心",
+     "gcj": [
+      121.239286,
+      31.727614
+     ],
+     "note": "发现批次坐标"
     }
    ],
    "trips": [
@@ -38483,7 +38382,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「西沙国家湿地公园-游客接待中心」(461 米，游客接待中心在国家湿地公园里；同前例『濮院时尚古镇游客中心 → 濮院时尚古镇』)",
    "raw_note": "",
    "photos": [
     {
@@ -38502,6 +38401,24 @@
      "url": "http://store.is.autonavi.com/showpic/bfb7b468ec8d8ce9261c10827ae6748a",
      "title": "",
      "poi_name": "西沙湿地公园",
+     "src": "高德POI"
+    },
+    {
+     "url": "http://store.is.autonavi.com/showpic/3a85f2aa2fb08a0a7f341db6c5b87ab2",
+     "title": "",
+     "poi_name": "西沙国家湿地公园-游客接待中心",
+     "src": "高德POI"
+    },
+    {
+     "url": "https://aos-comment.amap.com/B0JUTXUPNV/comment/41A6F2B2_2A6E_4407_8CD3_03462F2849C3_L0_001_2000_150_1759732632624_47147011.jpg",
+     "title": "",
+     "poi_name": "西沙国家湿地公园-游客接待中心",
+     "src": "高德POI"
+    },
+    {
+     "url": "https://aos-comment.amap.com/B0JUTXUPNV/comment/20260225-620b733b4520e1ceca644926-3fLA6XZPZfrAe37iSDUFk5.jpg",
+     "title": "",
+     "poi_name": "西沙国家湿地公园-游客接待中心",
      "src": "高德POI"
     }
    ],
@@ -38530,7 +38447,7 @@
     "草坪遛弯"
    ],
    "access": {},
-   "dog_tier": "default",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -38555,107 +38472,7 @@
      "url": "https://uri.amap.com/marker?position=121.235192,31.725356&name=%E8%A5%BF%E6%B2%99%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
-    }
-   ]
-  },
-  {
-   "id": "x-西沙国家湿地公园-游客接待中心",
-   "name": "西沙国家湿地公园-游客接待中心",
-   "kind": "park",
-   "tags": [],
-   "province": "上海",
-   "city": "上海",
-   "gcj": [
-    121.239286,
-    31.727614
-   ],
-   "drive": {
-    "hours_oneway": 1.85,
-    "km": 113.5,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-06 12:25"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 UGC（笔记 6995bb61）：「] 寿安寺 （P1-P2） 狗狗免费 / 人类免费 / 停车免费 \t 始建于南宋，清幽古朴，可以直接带狗狗进寺（注意牵好哦，而且怕打扰清净，我们没有进殿）！工作人员超热情，还夸我家狗子可爱～孩子从进门」",
-    "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_ok",
-    "risk_hint": ""
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
     },
-    "note": "",
-    "verified_at": null
-   },
-   "sub_pois": [
-    {
-     "name": "西沙国家湿地公园-游客接待中心",
-     "gcj": [
-      121.239286,
-      31.727614
-     ],
-     "note": "发现批次坐标"
-    }
-   ],
-   "trips": [
-    "小红书-带狗"
-   ],
-   "geo_src": "amap",
-   "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
-   "raw_note": "",
-   "photos": [
-    {
-     "url": "http://store.is.autonavi.com/showpic/3a85f2aa2fb08a0a7f341db6c5b87ab2",
-     "title": "",
-     "poi_name": "西沙国家湿地公园-游客接待中心",
-     "src": "高德POI"
-    },
-    {
-     "url": "https://aos-comment.amap.com/B0JUTXUPNV/comment/41A6F2B2_2A6E_4407_8CD3_03462F2849C3_L0_001_2000_150_1759732632624_47147011.jpg",
-     "title": "",
-     "poi_name": "西沙国家湿地公园-游客接待中心",
-     "src": "高德POI"
-    },
-    {
-     "url": "https://aos-comment.amap.com/B0JUTXUPNV/comment/20260225-620b733b4520e1ceca644926-3fLA6XZPZfrAe37iSDUFk5.jpg",
-     "title": "",
-     "poi_name": "西沙国家湿地公园-游客接待中心",
-     "src": "高德POI"
-    }
-   ],
-   "pending": [
-    "overnight",
-    "photos"
-   ],
-   "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
-   },
-   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
-   "rating": null,
-   "rating_src": null,
-   "heat": null,
-   "poi_type": "风景名胜;风景名胜相关;旅游景点",
-   "poi_name": "西沙国家湿地公园-游客接待中心",
-   "poi_type_dist_m": 0,
-   "kind_src": "name",
-   "scenes": [
-    "草坪遛弯"
-   ],
-   "access": {},
-   "dog_tier": "explicit",
-   "sources": [
     {
      "platform": "xhs",
      "id": "6995bb61000000000a029197",
@@ -58437,9 +58254,19 @@
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=119.303388,31.604314",
      "poi": "吕庄水库"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69c53a150000000023025490",
+     "title": "快收藏✅常州免费露营地分享（5处纯野地）"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.301949,31.596381",
+     "poi": "吕庄水库观景平台"
     }
    ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「吕庄水库观景平台」(887 米，观景平台是水库的一个观景点，不是独立目的地)",
    "tier": "B",
    "scenes": [
     "玩水"
@@ -69029,86 +68856,6 @@
    "dog_tier": "explicit"
   },
   {
-   "id": "x-吕庄水库观景平台",
-   "name": "吕庄水库观景平台",
-   "kind": "water",
-   "tags": [],
-   "province": "江苏",
-   "city": "溧阳",
-   "gcj": [
-    119.301949,
-    31.596381
-   ],
-   "drive": {
-    "hours_oneway": 3.38,
-    "km": 275.9,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 10:17"
-   },
-   "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "吕庄水库观景平台",
-   "poi_type": "风景名胜;公园广场;城市广场",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/69c53a150000000023025490",
-     "title": "快收藏✅常州免费露营地分享（5处纯野地）"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=119.301949,31.596381",
-     "poi": "吕庄水库观景平台"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "玩水",
-    "人文古迹"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "unknown",
-   "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
-   },
-   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
-  },
-  {
    "id": "x-天目湖涵田云顶·观景平台",
    "name": "天目湖涵田云顶·观景平台",
    "kind": "water",
@@ -73140,6 +72887,14 @@
       30.683747
      ],
      "note": "嘉兴沈荡»神仙湖»丰义 带🐶游玩攻略"
+    },
+    {
+     "name": "濮院古镇-游览车站点",
+     "gcj": [
+      120.626206,
+      30.679302
+     ],
+     "note": "嘉兴濮院时尚古镇 两天一晚 旅游攻略"
     }
    ],
    "trips": [],
@@ -73162,9 +72917,15 @@
      "url": "https://uri.amap.com/marker?position=120.632894,30.683747&name=%E6%BF%AE%E9%99%A2%E6%97%B6%E5%B0%9A%E5%8F%A4%E9%95%87%E6%B8%B8%E5%AE%A2%E4%B8%AD%E5%BF%83&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.626206,30.679302&name=%E6%BF%AE%E9%99%A2%E5%8F%A4%E9%95%87-%E6%B8%B8%E8%A7%88%E8%BD%A6%E7%AB%99%E7%82%B9&src=pet-trip&coordinate=gaode&callnative=0",
+     "title": "在高德地图查看位置",
+     "why": "坐标来源"
     }
    ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「濮院时尚古镇游客中心」(32 米，游客中心在古镇里)",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「濮院时尚古镇游客中心」(32 米，游客中心在古镇里) ｜ 已并入「濮院古镇-游览车站点」(775 米，景区内游览车站点；同前例『游客中心 → 古镇』)",
    "tier": "B",
    "scenes": [
     "古村古镇"
@@ -73233,6 +72994,24 @@
      "url": "https://aos-comment.amap.com/B0J63R6Q4V/comment/9076D8F3_F8A0_414D_96C9_0E7D092E2F08_L0_001_1500_200_1766945134443_54615482.jpg",
      "title": "",
      "poi_name": "濮院时尚古镇游客中心",
+     "src": "高德POI"
+    },
+    {
+     "url": "https://store.is.autonavi.com/showpic/61a36d2b4d035b660000005565952099?type=pic",
+     "title": "",
+     "poi_name": "濮院古镇-游览车站点",
+     "src": "高德POI"
+    },
+    {
+     "url": "https://store.is.autonavi.com/showpic/c5e7a065c00ceaf60000005565940606?type=pic",
+     "title": "",
+     "poi_name": "濮院古镇-游览车站点",
+     "src": "高德POI"
+    },
+    {
+     "url": "https://store.is.autonavi.com/showpic/d36e23f1dac465f30000005565952100?type=pic",
+     "title": "",
+     "poi_name": "濮院古镇-游览车站点",
      "src": "高德POI"
     }
    ],
