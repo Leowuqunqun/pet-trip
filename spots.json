@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 735,
+  "count": 730,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -183,7 +183,8 @@
       "author": "5天前",
       "note_url": "https://www.xiaohongshu.com/explore/6ae71e47000000001e0165b2"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -501,7 +502,8 @@
       "author": "小狼",
       "note_url": "https://www.xiaohongshu.com/explore/6ad3299a000000000a01f071"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -750,7 +752,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/691be75600000000190245b0"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -1481,7 +1484,8 @@
       "author": "恩",
       "note_url": "https://www.xiaohongshu.com/explore/6ac8f6f3000000001b023a67"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -1672,7 +1676,8 @@
       "author": "大敏",
       "note_url": "https://www.xiaohongshu.com/explore/6ad4c68b0000000029010f1a"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -2367,7 +2372,8 @@
       "author": "苏州带狗玩",
       "note_url": "https://www.xiaohongshu.com/explore/6a1054fe00000000380377ca"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -2787,7 +2793,8 @@
       "author": "忽爸不着家",
       "note_url": "https://www.xiaohongshu.com/explore/69c60c96000000002101311f"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -3014,11 +3021,11 @@
    },
    "dog": {
     "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 69d280d7，@1414141414）：「话题标签：可以带狗」",
-    "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "合集笔记（未点名该地点）",
-    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理"
+    "evidence": ": 碎银几两Seeing Tea(南湖天地店) 🉑带狗 浙江省嘉兴市南湖区南湖街道南湖路南湖天地 💡宠物友好 外面南湖天地可以遛狗 有草坪 可以看日落 \t 3️⃣ 📍姚家荡公园 🉑带狗 🆓 环湖一圈 p15-18 浙江省嘉兴市南湖区城南街道",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
    },
    "overnight": {
     "status": "unknown",
@@ -3048,7 +3055,7 @@
    ],
    "geo_src": "xhs",
    "origin": "小红书带狗笔记",
-   "curation_note": "",
+   "curation_note": " ｜ 已并入「马家浜文化博物馆」(162 米，博物馆就在遗址公园里，同一次出行)",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
    "photos": [
     {
@@ -3129,7 +3136,7 @@
     "人文古迹"
    ],
    "access": {},
-   "dog_tier": "default",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -3154,6 +3161,16 @@
      "url": "https://uri.amap.com/marker?position=120.705337,30.702347&name=%E9%A9%AC%E5%AE%B6%E6%B5%9C%E8%80%83%E5%8F%A4%E9%81%97%E5%9D%80%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a00b90e00000000370369e3",
+     "title": "📍嘉兴遛狗 选不过来根本选不过来！❤️‍🔥"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.706518,30.703403",
+     "poi": "马家浜文化博物馆"
     }
    ]
   },
@@ -3767,7 +3784,8 @@
       "author": "海斯阿",
       "note_url": "https://www.xiaohongshu.com/explore/6a354900000000001702b25b"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -3904,7 +3922,8 @@
       "author": "1天前",
       "note_url": "https://www.xiaohongshu.com/explore/6aec02d60000000016006a14"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -4078,7 +4097,8 @@
       "author": "豆了个豆",
       "note_url": "https://www.xiaohongshu.com/explore/6acb886e0000000018007e04"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -4275,7 +4295,8 @@
       "author": "季忆糖哇",
       "note_url": "https://www.xiaohongshu.com/explore/6aa28075000000001103b72c"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -4559,7 +4580,8 @@
       "author": "赞",
       "note_url": "https://www.xiaohongshu.com/explore/6ae7dd74000000000300bb2f"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -4739,7 +4761,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/692e586d000000000d00ddf9"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -4888,7 +4911,8 @@
       "author": "三皮行记📸",
       "note_url": "https://www.xiaohongshu.com/explore/6ac642d6000000001b0337ec"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -5594,7 +5618,8 @@
       "author": "别管我是谁",
       "note_url": "https://www.xiaohongshu.com/explore/6ac48ad8000000001203a0ee"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -5767,7 +5792,8 @@
       "author": "妞妞宝",
       "note_url": "https://www.xiaohongshu.com/explore/6aab8df1000000002b001fc5"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -5886,7 +5912,8 @@
       "author": "倔强的马尾",
       "note_url": "https://www.xiaohongshu.com/explore/6ad451a4000000002a02c9b8"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -6037,7 +6064,8 @@
       "author": "我就是呆呆辰（杭州游玩🎡遛娃攻略）",
       "note_url": "https://www.xiaohongshu.com/explore/6ac4df9900000000180175c4"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -6355,7 +6383,8 @@
       "author": "猪咪不是猪",
       "note_url": "https://www.xiaohongshu.com/explore/69f8cdf30000000035027a5e"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -6775,7 +6804,8 @@
       "author": "妞妞宝",
       "note_url": "https://www.xiaohongshu.com/explore/6ae42564000000001100e4c0"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -6954,7 +6984,8 @@
       "author": "OldONE不对焦",
       "note_url": "https://www.xiaohongshu.com/explore/6ac4bfca0000000014003509"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -7301,7 +7332,8 @@
       "author": "Sunny",
       "note_url": "https://www.xiaohongshu.com/explore/6a6e9b8b00000000240268ec"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -7649,7 +7681,8 @@
       "author": "野蛮小奇",
       "note_url": "https://www.xiaohongshu.com/explore/69b77905000000001a02f731"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -8138,7 +8171,8 @@
       "author": "宠物友好推荐官冬爸队长",
       "note_url": "https://www.xiaohongshu.com/explore/6ad369bb000000001500fdf6"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -8537,7 +8571,8 @@
       "author": "傻狗肉包",
       "note_url": "https://www.xiaohongshu.com/explore/6ab1dded0000000038001f05"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -8782,7 +8817,8 @@
       "author": "燕小A的遛娃日记",
       "note_url": "https://www.xiaohongshu.com/explore/6acb9fff000000001b022ef8"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -9038,7 +9074,8 @@
       "author": "阿辉走不动",
       "note_url": "https://www.xiaohongshu.com/explore/6a39116c00000000220167da"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -10008,7 +10045,8 @@
       "author": "上海爷叔的山海",
       "note_url": "https://www.xiaohongshu.com/explore/6a7671130000000024024046"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -10615,7 +10653,8 @@
       "author": "曹",
       "note_url": "https://www.xiaohongshu.com/explore/6a48cbfb00000000220193a8"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -11201,7 +11240,8 @@
       "author": "邓咚咚",
       "note_url": "https://www.xiaohongshu.com/explore/69fb08730000000037037617"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -11626,7 +11666,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/690eabee0000000005031c76"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -11855,7 +11896,7 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "allowed_wild",
+    "status": "gray",
     "modes": [
      "tent"
     ],
@@ -11866,7 +11907,7 @@
      "power": null,
      "signal": null
     },
-    "note": "笔记里有人在这过夜",
+    "note": "备用水源保护区，原文明确禁止明火露营；帐篷/车宿是否可行需现场确认，不该按「可野外过夜」呈现",
     "verified_at": null,
     "evidence": [
      {
@@ -11876,7 +11917,9 @@
       "author": "阿柚好物集",
       "note_url": "https://www.xiaohongshu.com/explore/6aa50ca0000000002900ed1c"
      }
-    ]
+    ],
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
     {
@@ -12249,7 +12292,8 @@
       "author": "人生加油",
       "note_url": "https://www.xiaohongshu.com/explore/69c8afb50000000023005f62"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -12397,7 +12441,8 @@
       "author": "南京生活研究所",
       "note_url": "https://www.xiaohongshu.com/explore/6a76dfe500000000330193a8"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -12639,9 +12684,25 @@
      "power": null,
      "signal": null
     },
-    "note": "营地群含生态营地/露营公园/2号营地三个相邻营位，帐篷与车中泊都可能，需电话确认",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence_level": "推断（无原话）"
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "[一R]这个位置露营位置相对较多，在芦苇区外的断头路上可以一路排开",
+      "note_id": "69368295000000001f008b72",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/69368295000000001f008b72"
+     },
+     {
+      "kind": "camp",
+      "quote": "搬家露营的朋友小心裤子和鞋子",
+      "note_id": "69368295000000001f008b72",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/69368295000000001f008b72"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -12674,7 +12735,7 @@
    ],
    "geo_src": "高德POI",
    "origin": "抖音带狗行程",
-   "curation_note": "",
+   "curation_note": " ｜ 已并入「安吉露营」(181 米，「安吉露营」是泛指名，指的是小杭坑这片营地群)",
    "raw_note": "大关自然村1号 ☎17357211578｜池子 POI（营地），距生态营地 0.13 km，有电话可问营地规则",
    "photos": [
     {
@@ -12722,6 +12783,16 @@
      "url": "https://uri.amap.com/marker?position=119.456495,30.633361&name=%E5%AE%89%E5%90%89%E5%B0%8F%E6%9D%AD%E5%9D%91%EF%BC%88%E8%90%A5%E5%9C%B0%E7%BE%A4%EF%BC%89&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ac0701c000000001a02260f",
+     "title": "来安吉，我逢人便说这个露营地有多美❗️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.458193,30.632625",
+     "poi": "安吉露营"
     }
    ]
   },
@@ -13483,7 +13554,8 @@
       "author": "苏苏去哪块",
       "note_url": "https://www.xiaohongshu.com/explore/6ae1aa100000000023010792"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -14226,7 +14298,8 @@
       "author": "皮夹克麻麻📷",
       "note_url": "https://www.xiaohongshu.com/explore/69f9fa67000000001a037329"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -14368,7 +14441,8 @@
       "author": "十一麻麻杭州遛娃攻略",
       "note_url": "https://www.xiaohongshu.com/explore/6a09ceb10000000006033295"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -14505,7 +14579,8 @@
       "author": "潇梅",
       "note_url": "https://www.xiaohongshu.com/explore/6a7d473a0000000033019b74"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -14753,7 +14828,8 @@
       "author": "南京小丸子",
       "note_url": "https://www.xiaohongshu.com/explore/6adeabff00000000150380a5"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -15243,7 +15319,8 @@
       "author": "有点东西",
       "note_url": "https://www.xiaohongshu.com/explore/6addfb8f000000002d007cdc"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -16181,7 +16258,8 @@
       "author": "先先贝麻麻",
       "note_url": "https://www.xiaohongshu.com/explore/6ac3c8f90000000018004395"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -16579,7 +16657,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/686aa7b1000000002400d1d7"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -16716,7 +16795,8 @@
       "author": "Jolly",
       "note_url": "https://www.xiaohongshu.com/explore/6ab3ace6000000001b03158e"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -17336,7 +17416,8 @@
       "author": "发疯号",
       "note_url": "https://www.xiaohongshu.com/explore/6aa8cee40000000029014564"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -17901,7 +17982,8 @@
       "author": "小狗陈满减",
       "note_url": "https://www.xiaohongshu.com/explore/6a1a984d000000000803f86d"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -18641,7 +18723,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/66c97ee6000000001f018a1f"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -20787,7 +20870,8 @@
       "author": "山谷流泉",
       "note_url": "https://www.xiaohongshu.com/explore/6a3fd92f0000000008003ad9"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -21144,7 +21228,8 @@
       "author": "刘大白｜床车路书",
       "note_url": "https://www.xiaohongshu.com/explore/69ee238400000000370359bf"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -21295,7 +21380,8 @@
       "author": "凌晨的集市人不多",
       "note_url": "https://www.xiaohongshu.com/explore/6897fd480000000023023007"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -22670,7 +22756,8 @@
       "author": "小蜗牛",
       "note_url": "https://www.xiaohongshu.com/explore/6a58af2f0000000001000c35"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -22819,7 +22906,8 @@
       "author": "一边走一边拍",
       "note_url": "https://www.xiaohongshu.com/explore/6ad3529e000000001803b943"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -23706,7 +23794,8 @@
       "author": "",
       "note_url": "https://www.xiaohongshu.com/explore/6ad9899e000000003300baf2"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -23860,7 +23949,8 @@
       "author": "饶",
       "note_url": "https://www.xiaohongshu.com/explore/6a9f8c69000000002b013718"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -24215,7 +24305,8 @@
       "author": "夏小镜📷",
       "note_url": "https://www.xiaohongshu.com/explore/6a55ec65000000000803fe5a"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -24702,7 +24793,8 @@
       "author": "阿午的慢慢日常",
       "note_url": "https://www.xiaohongshu.com/explore/6aa7a626000000001001f18d"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -25360,7 +25452,8 @@
       "author": "橘小小",
       "note_url": "https://www.xiaohongshu.com/explore/6adbbfca000000003300ff9a"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -25492,7 +25585,8 @@
       "author": "苏苏苏呀🍭",
       "note_url": "https://www.xiaohongshu.com/explore/6a0b223a0000000035026c69"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -25844,7 +25938,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/69117c9a0000000004015779"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -26444,7 +26539,8 @@
       "author": "快乐小神仙爱户外🚗",
       "note_url": "https://www.xiaohongshu.com/explore/6a9048b60000000007004cde"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -26919,7 +27015,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/66ffdc86000000002c02e25c"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -27294,7 +27391,8 @@
       "author": "床车日记",
       "note_url": "https://www.xiaohongshu.com/explore/6abb9909000000001802c164"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -28186,7 +28284,8 @@
       "author": "疯批后妈$",
       "note_url": "https://www.xiaohongshu.com/explore/6a086b400000000035023ef4"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -28433,7 +28532,8 @@
       "author": "🥦大王",
       "note_url": "https://www.xiaohongshu.com/explore/6ae01c07000000001b0203d0"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -29033,7 +29133,8 @@
       "author": "一一一一咦",
       "note_url": "https://www.xiaohongshu.com/explore/6ad37a89000000001203e324"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -29306,7 +29407,8 @@
       "author": "乐享杭州",
       "note_url": "https://www.xiaohongshu.com/explore/6a8b99c50000000026038ad6"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -29433,7 +29535,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/6927afc7000000000d037e2e"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -29574,7 +29677,8 @@
       "author": "Joshua",
       "note_url": "https://www.xiaohongshu.com/explore/6ac5c27e0000000002013b3a"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -29713,7 +29817,8 @@
       "author": "Super🌟Tiara🐬",
       "note_url": "https://www.xiaohongshu.com/explore/6acf2343000000001803a25d"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -29851,7 +29956,8 @@
       "author": "鑫鑫",
       "note_url": "https://www.xiaohongshu.com/explore/6a0b1c3d000000000803363b"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -30944,7 +31050,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/6864f9b500000000110001d7"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -31090,7 +31197,8 @@
       "author": "乐石书法",
       "note_url": "https://www.xiaohongshu.com/explore/6a097d590000000036031af8"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -31211,7 +31319,8 @@
       "author": "哈士奇妈粉🧡",
       "note_url": "https://www.xiaohongshu.com/explore/69d10770000000001a032879"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -32109,7 +32218,8 @@
       "author": "不去不去😷",
       "note_url": "https://www.xiaohongshu.com/explore/699820e1000000001503bd30"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -33623,7 +33733,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「坎头古村落」(184 米，「磡/坎」同地异写，同一个古村)",
    "raw_note": "",
    "photos": [],
    "pending": [
@@ -33666,6 +33776,16 @@
      "url": "https://uri.amap.com/marker?position=118.816261,30.238646&name=%E7%A3%A1%E5%A4%B4%E6%9D%91&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69a38d9a000000002801e958",
+     "title": "安徽省宣城市绩溪县·皖浙天路～"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.816208,30.23698",
+     "poi": "坎头古村落"
     }
    ]
   },
@@ -34158,7 +34278,8 @@
       "author": "土狗不土叫土豆",
       "note_url": "https://www.xiaohongshu.com/explore/6a4e7ede000000001603ce19"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -34831,7 +34952,8 @@
       "author": "星星在路上💫",
       "note_url": "https://www.xiaohongshu.com/explore/69d21ff7000000001d018f8a"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -35463,7 +35585,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/692a44a5000000001e02b724"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -36294,7 +36417,7 @@
     "risk_hint": ""
    },
    "overnight": {
-    "status": "allowed_wild",
+    "status": "gray",
     "modes": [
      "tent"
     ],
@@ -36305,7 +36428,7 @@
      "power": null,
      "signal": null
     },
-    "note": "笔记里有人在这过夜",
+    "note": "原文明确不能搭帐篷；安静适合放空 ≠ 可以过夜",
     "verified_at": null,
     "evidence": [
      {
@@ -36315,7 +36438,9 @@
       "author": "一瓶雪碧!",
       "note_url": "https://www.xiaohongshu.com/explore/6ae336460000000035023c53"
      }
-    ]
+    ],
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）"
    },
    "sub_pois": [
     {
@@ -36917,7 +37042,8 @@
       "author": "📸",
       "note_url": "https://www.xiaohongshu.com/explore/6ad323a1000000001402fd48"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -37647,7 +37773,8 @@
       "author": "欢天喜地",
       "note_url": "https://www.xiaohongshu.com/explore/6ac33d6000000000150036a2"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -38820,7 +38947,8 @@
       "author": "金金乐道",
       "note_url": "https://www.xiaohongshu.com/explore/6ae53a74000000000703a159"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -39307,7 +39435,8 @@
       "author": "以后",
       "note_url": "https://www.xiaohongshu.com/explore/6aa5f9460000000028035fb7"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -39447,7 +39576,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/694c15d8000000001e021a79"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -39819,7 +39949,8 @@
       "author": "夏小镜📷",
       "note_url": "https://www.xiaohongshu.com/explore/69edf602000000001f005714"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -40627,7 +40758,8 @@
       "author": "娇娇朵朵吖",
       "note_url": "https://www.xiaohongshu.com/explore/6ac4d768000000000a021f0c"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -40767,7 +40899,8 @@
       "author": "一千克",
       "note_url": "https://www.xiaohongshu.com/explore/6ac5ce98000000000b004254"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -40907,7 +41040,8 @@
       "author": "晓晓小小米粒妈",
       "note_url": "https://www.xiaohongshu.com/explore/6a3f796e000000001702bcb8"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -41055,7 +41189,8 @@
       "author": "碎碎念的黄老师",
       "note_url": "https://www.xiaohongshu.com/explore/6aacaeb8000000001103b45f"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -41311,7 +41446,8 @@
       "author": "丫丫孤单不孤独",
       "note_url": "https://www.xiaohongshu.com/explore/6ab8644f0000000018011551"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -41453,7 +41589,8 @@
       "author": "sun",
       "note_url": "https://www.xiaohongshu.com/explore/6a01c79c00000000070284d4"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -42379,7 +42516,8 @@
       "author": "1天前",
       "note_url": "https://www.xiaohongshu.com/explore/6aebebfd000000000300a220"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -42846,7 +42984,8 @@
       "author": "高白",
       "note_url": "https://www.xiaohongshu.com/explore/6abf8be1000000001c01f3b0"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -42990,7 +43129,8 @@
       "author": "跟着Zoey去野",
       "note_url": "https://www.xiaohongshu.com/explore/69f9bf68000000003601cb4f"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -43248,7 +43388,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/65ff99e700000000140052e8"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -44506,7 +44647,8 @@
       "author": "是卓芮呀",
       "note_url": "https://www.xiaohongshu.com/explore/6ac49255000000001a027a33"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -44653,7 +44795,8 @@
       "author": "小新",
       "note_url": "https://www.xiaohongshu.com/explore/69eb0870000000002202a58c"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -44790,7 +44933,8 @@
       "author": "小耳朵图图",
       "note_url": "https://www.xiaohongshu.com/explore/69d26a3e000000001a025d3e"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -44927,7 +45071,8 @@
       "author": "一颗工程菌",
       "note_url": "https://www.xiaohongshu.com/explore/69b4ea3300000000230177f1"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -46229,7 +46374,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/6a7abf39000000002202febc"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -46508,7 +46654,8 @@
       "author": "Salt太咸（户外版）",
       "note_url": "https://www.xiaohongshu.com/explore/6ac64661000000001301b706"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -46764,7 +46911,8 @@
       "author": "敏敏plus",
       "note_url": "https://www.xiaohongshu.com/explore/6aa6c0a6000000001001ff8e"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -47342,7 +47490,8 @@
       "author": "5天前",
       "note_url": "https://www.xiaohongshu.com/explore/6ae825e80000000025018bc2"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -47608,7 +47757,8 @@
       "author": "爱撸铁的设计师小鲍",
       "note_url": "https://www.xiaohongshu.com/explore/6acc9f76000000001a0230bf"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -47867,7 +48017,8 @@
       "author": "隽阜",
       "note_url": "https://www.xiaohongshu.com/explore/6acde39d0000000018012d25"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -47976,7 +48127,8 @@
       "author": "上海户外露营租赁",
       "note_url": "https://www.xiaohongshu.com/explore/6a410082000000002100813a"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -48116,7 +48268,8 @@
       "author": "18:07",
       "note_url": "https://www.xiaohongshu.com/explore/6aeef87e00000000120083c9"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -48361,7 +48514,8 @@
       "author": "就叫张张",
       "note_url": "https://www.xiaohongshu.com/explore/6a4dfc840000000016027b81"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -49086,7 +49240,8 @@
       "author": "小八和嘻嘻",
       "note_url": "https://www.xiaohongshu.com/explore/699c5334000000001a024a43"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -49587,7 +49742,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/6919bfed000000000700a39f"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -50627,7 +50783,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「四明湖红杉林」(200 米，同一片水杉林——秋冬季叶片发红所以又叫红杉林)",
    "raw_note": "",
    "photos": [
     {
@@ -50688,6 +50844,21 @@
      "url": "https://uri.amap.com/marker?position=121.058194,29.924363&name=%E5%9B%9B%E6%98%8E%E6%B9%96%E6%B0%B4%E6%9D%89%E6%B9%BF%E5%9C%B0&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6965e7e7000000001a0232fc",
+     "title": "一些和小狗无法复刻的旅行瞬间 🎞️"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/68c0eceb000000001d03464f",
+     "title": "浙江，推荐一个冷门小众的小城4天3晚攻略"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=121.056565,29.923236",
+     "poi": "四明湖红杉林"
     }
    ],
    "rating": null,
@@ -50985,7 +51156,8 @@
       "author": "龙门秘境",
       "note_url": "https://www.xiaohongshu.com/explore/6ab509100000000018007f25"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [
     {
@@ -52493,7 +52665,8 @@
       "author": "茶茶茶",
       "note_url": "https://www.xiaohongshu.com/explore/69f00df00000000036019bc8"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [
@@ -53166,90 +53339,6 @@
     "basis": "小红书点名搜索 10 条相关笔记"
    },
    "heat_basis": "小红书点名搜索 10 条相关笔记"
-  },
-  {
-   "id": "x-四明湖红杉林",
-   "name": "四明湖红杉林",
-   "kind": "water",
-   "tags": [],
-   "province": "浙江",
-   "city": "宁波",
-   "gcj": [
-    121.056565,
-    29.923236
-   ],
-   "drive": {
-    "hours_oneway": 2.8,
-    "km": 198.3,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:55"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "一些和小狗无法复刻的旅行瞬间 🎞️ 回顾去年一整年，竟然和无所谓一起去了26座城市50多个宠物友好地点，拍摄了2w+的视频和照片（虽然偷懒大部份都没剪 [汗颜R]  回顾这一年感觉到处都留下了快乐的印记 [红色心形R] \t 📒 以",
-    "evidence_level": "笔记提及",
-    "basis": "合集笔记（未点名该地点）",
-    "risk_hint": "证据来自合集笔记、未点名该地点，按默认放行处理",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "四明湖红杉林",
-   "poi_type": "风景名胜;风景名胜;风景名胜",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6965e7e7000000001a0232fc",
-     "title": "一些和小狗无法复刻的旅行瞬间 🎞️"
-    },
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/68c0eceb000000001d03464f",
-     "title": "浙江，推荐一个冷门小众的小城4天3晚攻略"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=121.056565,29.923236",
-     "poi": "四明湖红杉林"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "玩水"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "default",
-   "pop": {
-    "notes": 0,
-    "likes": 0,
-    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
-   },
-   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-大溪水库",
@@ -54676,7 +54765,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/6936a3cd000000001d03cc93"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -54947,7 +55037,8 @@
       "author": "吱吱吱",
       "note_url": "https://www.xiaohongshu.com/explore/6ac6791a000000001b02ddcd"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -55053,7 +55144,8 @@
       "author": "爱吃面包的小可",
       "note_url": "https://www.xiaohongshu.com/explore/6aa22354000000000b037aa8"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -59899,7 +59991,8 @@
       "author": "郭不聒噪（只做情绪版）",
       "note_url": "https://www.xiaohongshu.com/explore/6ae746a4000000002501a102"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -60976,98 +61069,6 @@
    "kind_src": "name",
    "access": {},
    "dog_tier": "explicit"
-  },
-  {
-   "id": "x-安吉露营",
-   "name": "安吉露营",
-   "kind": "campground",
-   "tags": [],
-   "province": "浙江",
-   "city": "湖州",
-   "gcj": [
-    119.458193,
-    30.632625
-   ],
-   "drive": {
-    "hours_oneway": 3.02,
-    "km": 232.7,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:56"
-   },
-   "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "official_camp",
-    "modes": [
-     "tent",
-     "car"
-    ],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "笔记里有人在这扎营（正规营地）",
-    "verified_at": null,
-    "evidence": [
-     {
-      "kind": "camp",
-      "quote": "[一R]这个位置露营位置相对较多，在芦苇区外的断头路上可以一路排开",
-      "note_id": "69368295000000001f008b72",
-      "author": "20",
-      "note_url": "https://www.xiaohongshu.com/explore/69368295000000001f008b72"
-     },
-     {
-      "kind": "camp",
-      "quote": "搬家露营的朋友小心裤子和鞋子",
-      "note_id": "69368295000000001f008b72",
-      "author": "20",
-      "note_url": "https://www.xiaohongshu.com/explore/69368295000000001f008b72"
-     }
-    ]
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "安吉露营",
-   "poi_type": "体育休闲服务;体育休闲服务场所;体育休闲服务场所",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6ac0701c000000001a02260f",
-     "title": "来安吉，我逢人便说这个露营地有多美❗️"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=119.458193,30.632625",
-     "poi": "安吉露营"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "露营",
-    "过夜"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "unknown"
   },
   {
    "id": "x-安吉古城遗址博物馆",
@@ -65419,7 +65420,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/6915d6bb000000000500289a"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -65981,7 +65983,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 6
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -65991,7 +65996,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 3,
+    "likes": 6,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-嘉兴子城遗址公园",
@@ -66055,7 +66066,10 @@
     "草坪遛弯",
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 58
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -66065,7 +66079,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 4,
+    "likes": 58,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-月河历史街区",
@@ -66999,79 +67019,6 @@
    "dog_tier": "veto"
   },
   {
-   "id": "x-马家浜文化博物馆",
-   "name": "马家浜文化博物馆",
-   "kind": "scenic",
-   "tags": [],
-   "province": "浙江",
-   "city": "嘉兴",
-   "gcj": [
-    120.706518,
-    30.703403
-   ],
-   "drive": {
-    "hours_oneway": 1.71,
-    "km": 110.3,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:57"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": ": 碎银几两Seeing Tea(南湖天地店) 🉑带狗 浙江省嘉兴市南湖区南湖街道南湖路南湖天地 💡宠物友好 外面南湖天地可以遛狗 有草坪 可以看日落 \t 3️⃣ 📍姚家荡公园 🉑带狗 🆓 环湖一圈 p15-18 浙江省嘉兴市南湖区城南街道",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "马家浜文化博物馆",
-   "poi_type": "科教文化服务;博物馆;博物馆",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a00b90e00000000370369e3",
-     "title": "📍嘉兴遛狗 选不过来根本选不过来！❤️‍🔥"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=120.706518,30.703403",
-     "poi": "马家浜文化博物馆"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "人文古迹"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "explicit"
-  },
-  {
    "id": "x-风和日丽",
    "name": "风和日丽",
    "kind": "scenic",
@@ -67205,7 +67152,8 @@
       "author": "爱美食的饱饱羊",
       "note_url": "https://www.xiaohongshu.com/explore/6accdcf2000000001b0214cb"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -68126,7 +68074,8 @@
       "author": "20",
       "note_url": "https://www.xiaohongshu.com/explore/69296641000000001e003543"
      }
-    ]
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -72434,79 +72383,6 @@
    "tier": "B",
    "scenes": [
     "玩水"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "default"
-  },
-  {
-   "id": "x-坎头古村落",
-   "name": "坎头古村落",
-   "kind": "village",
-   "tags": [],
-   "province": "安徽",
-   "city": "绩溪",
-   "gcj": [
-    118.816208,
-    30.23698
-   ],
-   "drive": {
-    "hours_oneway": 4.17,
-    "km": 349.0,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:59"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "『皖浙天路』主要就是『家朋乡』跟『荆州乡』两个乡之间的一条条盘山公路，而荆州乡段又与浙江杭州临安区相邻。 - 按以下顺序矫正路线导航： 1、【中国石化金沙加油站】 加油站东面能看到一块红色大牌写着〖皖浙天路入口〗。 - 2、【坎头古村落】 ",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "坎头古村落",
-   "poi_type": "风景名胜;风景名胜相关;旅游景点",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/69a38d9a000000002801e958",
-     "title": "安徽省宣城市绩溪县·皖浙天路～"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=118.816208,30.23698",
-     "poi": "坎头古村落"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "古村古镇"
    ],
    "heat": null,
    "rating": null,
@@ -77377,9 +77253,19 @@
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=118.008984,24.504322",
      "poi": "蔡尖尾山"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698df28d000000001b0167c4",
+     "title": "在厦门遛狗真的很难抑郁吧😭"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.008154,24.502991",
+     "poi": "蔡尖尾山天语舟气象公园"
     }
    ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「蔡尖尾山天语舟气象公园」(169 米，气象公园在山上，名字是同一条)",
    "tier": "B",
    "scenes": [
     "山野徒步"
@@ -77608,80 +77494,6 @@
    "tier": "B",
    "scenes": [
     "玩水"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "unknown"
-  },
-  {
-   "id": "x-蔡尖尾山天语舟气象公园",
-   "name": "蔡尖尾山天语舟气象公园",
-   "kind": "park",
-   "tags": [],
-   "province": "福建",
-   "city": "厦门",
-   "gcj": [
-    118.008154,
-    24.502991
-   ],
-   "drive": {
-    "hours_oneway": 11.77,
-    "km": 1023.6,
-    "source": "osrm 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 15:56"
-   },
-   "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "蔡尖尾山天语舟气象公园",
-   "poi_type": "OSM:park",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/698df28d000000001b0167c4",
-     "title": "在厦门遛狗真的很难抑郁吧😭"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=118.008154,24.502991",
-     "poi": "蔡尖尾山天语舟气象公园"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "草坪遛弯",
-    "山野徒步"
    ],
    "heat": null,
    "rating": null,
