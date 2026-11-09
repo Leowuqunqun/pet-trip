@@ -54314,8 +54314,11 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent",
+     "car"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -54323,9 +54326,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "床车过夜露营直达-仙居淡竹",
+      "note_id": "6a0b17980000000006020046",
+      "author": "大囍",
+      "note_url": "https://www.xiaohongshu.com/explore/6a0b17980000000006020046"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -54351,7 +54363,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 10,
     "likes": 1687
@@ -54399,8 +54414,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -54408,9 +54425,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "我给你整理上虞石井水库（大家常叫石景水库）攻略，网红“绍兴小阿勒泰”，免费水杉草坪，适合野餐露营、拍照遛娃",
+      "note_id": "6ae973630000000003005d03",
+      "author": "6天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae973630000000003005d03"
+     },
+     {
+      "kind": "camp",
+      "quote": "📍导航：石井水库露营基地（不要只搜石井水库，直接导到水杉大草坪）",
+      "note_id": "6ae973630000000003005d03",
+      "author": "6天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae973630000000003005d03"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -54437,7 +54470,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 15,
@@ -55192,8 +55227,11 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent",
+     "car"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -55201,9 +55239,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "寻找杭州周边的床车露营地9，湘家荡",
+      "note_id": "6ae74562000000002501d487",
+      "author": "原来",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae74562000000002501d487"
+     },
+     {
+      "kind": "camp",
+      "quote": "嘉兴真的很多荡，上周神仙湖不错体验后，这周找一个人少的地方待一天，总的来说不适合过夜，可露营🏕️",
+      "note_id": "6ae74562000000002501d487",
+      "author": "原来",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae74562000000002501d487"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -55229,7 +55283,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 0,
     "likes": 0
@@ -55665,8 +55722,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -55674,9 +55733,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "周末短途自驾直接封神🏞️ 全程门票｜露营｜停车全免费",
+      "note_id": "6a7671130000000024024046",
+      "author": "上海爷叔的山海",
+      "note_url": "https://www.xiaohongshu.com/explore/6a7671130000000024024046"
+     },
+     {
+      "kind": "camp",
+      "quote": "玩水、桨板、露营、烧烤、徒步一站式解锁，性价比直接拉满🔥",
+      "note_id": "6a7671130000000024024046",
+      "author": "上海爷叔的山海",
+      "note_url": "https://www.xiaohongshu.com/explore/6a7671130000000024024046"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -55702,7 +55777,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 0,
     "likes": 0
@@ -56345,8 +56423,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -56354,9 +56434,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "独城生态公园露营区域以及对应入口",
+      "note_id": "69d201f3000000002202934c",
+      "author": "鱼蛋（淀粉版）",
+      "note_url": "https://www.xiaohongshu.com/explore/69d201f3000000002202934c"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -56383,7 +56472,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -56851,8 +56942,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -56860,9 +56953,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "绝美露营地日回山（赋石水库畔）",
+      "note_id": "6a0084120000000035032157",
+      "author": "Jinbaobei",
+      "note_url": "https://www.xiaohongshu.com/explore/6a0084120000000035032157"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -56889,7 +56991,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -57648,8 +57752,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -57657,9 +57763,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "#这是露营天堂吧[话题]#",
+      "note_id": "69e47f45000000001e00c143",
+      "author": "小小",
+      "note_url": "https://www.xiaohongshu.com/explore/69e47f45000000001e00c143"
+     },
+     {
+      "kind": "camp",
+      "quote": "吹江风，可露营⛺️，可骑行",
+      "note_id": "69e47f45000000001e00c143",
+      "author": "小小",
+      "note_url": "https://www.xiaohongshu.com/explore/69e47f45000000001e00c143"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -57686,7 +57808,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 11,
@@ -58250,8 +58374,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -58259,9 +58385,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "公园分了可搭帐篷区和不可搭帐篷区，就算不搭帐篷，不可搭帐篷区也有树荫，铺个野餐垫就能躺一下午",
+      "note_id": "6acf2ae6000000001303d424",
+      "author": "麻麻舞",
+      "note_url": "https://www.xiaohongshu.com/explore/6acf2ae6000000001303d424"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -58288,7 +58423,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 9,
@@ -58337,8 +58474,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -58346,9 +58485,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "宁波免费露营地推荐｜横河梅湖水库",
+      "note_id": "69ee103d000000003502eb1b",
+      "author": "轻野露营",
+      "note_url": "https://www.xiaohongshu.com/explore/69ee103d000000003502eb1b"
+     },
+     {
+      "kind": "camp",
+      "quote": "今天有空，去横河梅湖水库踩点露营地",
+      "note_id": "69ee103d000000003502eb1b",
+      "author": "轻野露营",
+      "note_url": "https://www.xiaohongshu.com/explore/69ee103d000000003502eb1b"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -58375,7 +58530,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -59692,8 +59849,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -59701,9 +59860,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "花桥可散步、可露营的地方很多，净水公园就是一个很好的选择",
+      "note_id": "6a1ba73c0000000036019b78",
+      "author": "沐沐向上生长",
+      "note_url": "https://www.xiaohongshu.com/explore/6a1ba73c0000000036019b78"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -59725,7 +59893,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 2,
@@ -60153,8 +60323,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -60162,9 +60334,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "但是我是国庆期间去的，节假日这里全是露营🏕️烧烤的，而且车能开进去，但是都是鸣笛声",
+      "note_id": "6ad2f067000000001303c147",
+      "author": "十三月末",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad2f067000000001303c147"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -60187,7 +60368,9 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 4,
@@ -60748,8 +60931,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -60757,9 +60942,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "午饭后我们选择到仑山湖逛一逛，优点之一是0门票[萌萌哒R]在度假村的附近，风景是真的好的没话说，有营地可以露营、烧烤、野餐，还有咖啡馆可以闲坐、学习、喝咖啡（营地和咖啡馆就在路的两侧）",
+      "note_id": "6ae6a7aa000000001500463b",
+      "author": "summer",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae6a7aa000000001500463b"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -60782,6 +60976,8 @@
    "tier": "B",
    "scenes": [
     "玩水",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": {
@@ -62639,8 +62835,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -62648,9 +62846,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "杭州余杭五常湿地，露营好去处",
+      "note_id": "69dd04a6000000001a036459",
+      "author": "爱旅游的小吃货",
+      "note_url": "https://www.xiaohongshu.com/explore/69dd04a6000000001a036459"
+     },
+     {
+      "kind": "camp",
+      "quote": "适合周边的人周末来露营，拿上帐篷或者毯子，带点水果零食，巴适滴很～（注：离得远没必要来哈，近的来玩玩很不错）",
+      "note_id": "69dd04a6000000001a036459",
+      "author": "爱旅游的小吃货",
+      "note_url": "https://www.xiaohongshu.com/explore/69dd04a6000000001a036459"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -62671,7 +62885,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 6,
     "likes": 170
@@ -62802,8 +63019,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -62811,9 +63030,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "环境幽静，露营地面积够大，整体感受不错",
+      "note_id": "6a6fdfea000000000502b7ff",
+      "author": "六子",
+      "note_url": "https://www.xiaohongshu.com/explore/6a6fdfea000000000502b7ff"
+     },
+     {
+      "kind": "camp",
+      "quote": "1营地有两个卫生间，家长可以带孩子去卫生间，不要随地小便（昨天去有家长带孩子直接去树下小便[笑哭R]）",
+      "note_id": "6a6fdfea000000000502b7ff",
+      "author": "六子",
+      "note_url": "https://www.xiaohongshu.com/explore/6a6fdfea000000000502b7ff"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -62835,7 +63070,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -63438,8 +63675,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -63447,9 +63686,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "5月浪漫首发｜余姚陆埠水库野餐露营⛺️",
+      "note_id": "644ff669000000002701006d",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/644ff669000000002701006d"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -63471,7 +63719,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -63585,8 +63835,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -63594,9 +63846,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "沿途可体杉林徒步、滩地露营、鱼鳞坝戏水、溪边垂钓、千年碇步桥、裘岙玻璃道等",
+      "note_id": "6918558f000000000401492b",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6918558f000000000401492b"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -63618,7 +63879,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -63731,8 +63994,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -63740,9 +64005,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "去往黄芽茶叶公司的路上，海拔逐渐升高，山里弥漫了雾气，能见度只有0.5米，加上山路弯道很多，还挺危险+刺激的，开车需要慢性，最后到达山顶小野落日观景台，有一个露营地，收费可以进入",
+      "note_id": "6ac0d369000000001501114b",
+      "author": "西瓜遛娃记",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac0d369000000001501114b"
+     },
+     {
+      "kind": "camp",
+      "quote": "收费，适合露营看日落，更深处可以去天泉山，天气不好就路过了",
+      "note_id": "6ac0d369000000001501114b",
+      "author": "西瓜遛娃记",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac0d369000000001501114b"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -63764,6 +64045,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇",
     "人文古迹"
    ],
@@ -64022,8 +64305,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -64031,9 +64316,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "开车直达‼️杭州康门水库免费露营攻略🏕️",
+      "note_id": "6aba3d4a0000000015014e8f",
+      "author": "蜡笔小昕昕",
+      "note_url": "https://www.xiaohongshu.com/explore/6aba3d4a0000000015014e8f"
+     },
+     {
+      "kind": "camp",
+      "quote": "‼️离露营区最近的停车位——康门水库驿站",
+      "note_id": "6aba3d4a0000000015014e8f",
+      "author": "蜡笔小昕昕",
+      "note_url": "https://www.xiaohongshu.com/explore/6aba3d4a0000000015014e8f"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -64055,7 +64356,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -64661,8 +64964,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -64670,9 +64975,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "搭帐篷、玩滑索、疯跑、读书，都适合",
+      "note_id": "6ab87958000000000a022482",
+      "author": "游泳的鱼",
+      "note_url": "https://www.xiaohongshu.com/explore/6ab87958000000000a022482"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -64694,7 +65008,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 3,
@@ -65591,10 +65907,10 @@
     "computed_at": "2026-11-09 12:57"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 687b9ff9000000000b01e7ba）：「好天配好水，小狗岸边走[害羞R]一路上遇到的两只小狗和主人们都好可爱，本着安全第一的原则让毛孩子们下水清凉一夏[流汗R] #阳山湖[poi_v2]# #见山夏·cafe·创意料理[poi_v2]#」",
     "evidence_level": "未核实",
-    "basis": "",
+    "basis": "no_veto_default",
     "risk_hint": "",
     "verified_at": null
    },
@@ -65668,7 +65984,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -66238,8 +66554,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -66247,9 +66565,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "遛狗、挖沙、露营、划船…",
+      "note_id": "6ae6f26d000000001200c143",
+      "author": "大名是仙仙啦",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae6f26d000000001200c143"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -66274,6 +66601,8 @@
     "草坪遛弯",
     "玩水",
     "溯溪",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": {
@@ -66485,8 +66814,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -66494,9 +66825,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "秋日遛娃来日落LING营地，吃喝玩乐一站搞定",
+      "note_id": "6ae93293000000000e025a92",
+      "author": "赞",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae93293000000000e025a92"
+     },
+     {
+      "kind": "camp",
+      "quote": "来大云日落LING营地，真的被治愈到了～秋日的草地、暖洋洋的落日，一整天都不想走🍁",
+      "note_id": "6ae93293000000000e025a92",
+      "author": "赞",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae93293000000000e025a92"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -66517,7 +66864,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 3,
     "likes": 6
@@ -67059,8 +67409,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -67068,9 +67420,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "长江边的露营新基地，苏锡通苏锡通园区OFF-CITY野营度假公园",
+      "note_id": "68c58a74000000001d0069d9",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/68c58a74000000001d0069d9"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -67092,7 +67453,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 0,
@@ -68344,8 +68707,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -68353,9 +68718,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "露营、挖沙、喂鱼、儿童乐园一站式搞定，",
+      "note_id": "6ae6e5fe0000000023010d08",
+      "author": "棠哩个棠",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae6e5fe0000000023010d08"
+     },
+     {
+      "kind": "camp",
+      "quote": "不需要帐篷，一张野餐垫两把椅子就可以露营啦",
+      "note_id": "6ae6e5fe0000000023010d08",
+      "author": "棠哩个棠",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae6e5fe0000000023010d08"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -68378,7 +68759,9 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -69028,8 +69411,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -69037,9 +69422,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "上游能玩桨板啥的，下游可以溯溪露营，非常多功能",
+      "note_id": "6892aadd000000002302502f",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/6892aadd000000002302502f"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -69062,7 +69456,9 @@
    "tier": "B",
    "scenes": [
     "玩水",
-    "溯溪"
+    "溯溪",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -69496,10 +69892,10 @@
     "computed_at": "2026-11-09 12:57"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6af1d0ca0000000033039983）：「南京宠物友好露营地｜江宁九龙湖公园 #理想中的露营地[话题]# #一起去露营[话题]# #带狗去露营[话题]# #宠物露营[话题]# #露营的一」",
     "evidence_level": "未核实",
-    "basis": "",
+    "basis": "explicit_ok",
     "risk_hint": "",
     "verified_at": null
    },
@@ -69566,7 +69962,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "pop": {
     "notes": 11,
     "likes": 701,
@@ -69845,8 +70241,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -69854,9 +70252,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "没想到郑和公园里竟藏着这样的营地和咖啡店",
+      "note_id": "6ad08be5000000000a026548",
+      "author": "🎈^魔都小作精^_🎨📷🎾🌻",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad08be5000000000a026548"
+     },
+     {
+      "kind": "camp",
+      "quote": "周末去了趟郑和公园里露营，发现这里简直是宝藏地块",
+      "note_id": "6ad08be5000000000a026548",
+      "author": "🎈^魔都小作精^_🎨📷🎾🌻",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad08be5000000000a026548"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -69878,7 +70292,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 6,
@@ -73762,8 +74178,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -73771,9 +74189,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "秋天适合露营之：长广溪湿地公园（无锡）",
+      "note_id": "6ae4455f000000001202e75b",
+      "author": "飞天",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae4455f000000001202e75b"
+     },
+     {
+      "kind": "camp",
+      "quote": "长广溪湿地公园是露营的好地方,秋天的第一场露营很适合来这里",
+      "note_id": "6ae4455f000000001202e75b",
+      "author": "飞天",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae4455f000000001202e75b"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -73797,7 +74231,9 @@
    "scenes": [
     "草坪遛弯",
     "玩水",
-    "溯溪"
+    "溯溪",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 4,
@@ -76343,8 +76779,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -76352,9 +76790,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "秋高气爽，周末云湖公园露营走起⛺",
+      "note_id": "6adb6544000000002b0000b6",
+      "author": "ZYN",
+      "note_url": "https://www.xiaohongshu.com/explore/6adb6544000000002b0000b6"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -76377,7 +76824,9 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": {
     "notes": 6,
@@ -77041,8 +77490,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -77050,9 +77501,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "⚠️ 这里是饮用水源保护区，禁止游泳、划船和烧烤，无痕露营一定要带走所有垃圾",
+      "note_id": "6ab27253000000003501c485",
+      "author": "小星哥🚩",
+      "note_url": "https://www.xiaohongshu.com/explore/6ab27253000000003501c485"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -77079,7 +77539,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
