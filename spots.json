@@ -80627,7 +80627,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 9
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -80637,7 +80640,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 1,
+    "likes": 9,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-音乐喷泉",
@@ -80703,7 +80712,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 11,
+    "likes": 217
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -80713,7 +80725,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 11,
+    "likes": 217,
+    "basis": "小红书点名搜索 11 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 11 条相关笔记"
   },
   {
    "id": "x-凤凰山公园",
@@ -80795,7 +80813,10 @@
     "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 10,
+    "likes": 44
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -80805,7 +80826,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 10,
+    "likes": 44,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
   },
   {
    "id": "x-三才峰观景台",
@@ -80874,7 +80901,10 @@
     "山野徒步",
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 5
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -80884,7 +80914,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "veto",
+   "pop": {
+    "notes": 1,
+    "likes": 5,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-泉州植物园",
@@ -80950,7 +80986,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 6,
+    "likes": 86
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -80960,7 +80999,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 6,
+    "likes": 86,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
   },
   {
    "id": "x-泗华郊野公园",
@@ -81028,7 +81073,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 10,
+    "likes": 2237
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81038,7 +81086,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 10,
+    "likes": 2237,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
   },
   {
    "id": "x-霞浦愉村半舍山庄",
@@ -81106,7 +81160,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81116,7 +81173,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-东湖湿地公园",
@@ -81193,7 +81256,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 10,
+    "likes": 114
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81203,7 +81269,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 10,
+    "likes": 114,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
   },
   {
    "id": "x-水云间民宿",
@@ -81264,7 +81336,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 12
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81274,7 +81349,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "veto",
+   "pop": {
+    "notes": 2,
+    "likes": 12,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-山舍民宿",
@@ -81335,7 +81416,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81345,7 +81429,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-下梅古民居",
@@ -81406,7 +81496,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 76
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81416,7 +81509,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "restricted"
+   "dog_tier": "restricted",
+   "pop": {
+    "notes": 3,
+    "likes": 76,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-武夷山国家森林公园",
@@ -81500,7 +81599,10 @@
     "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 6,
+    "likes": 124
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81510,7 +81612,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 6,
+    "likes": 124,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
   },
   {
    "id": "x-南安城西湿地公园",
@@ -81573,7 +81681,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 10
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81583,7 +81694,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 2,
+    "likes": 10,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-芦际潭森林公园",
@@ -81649,7 +81766,10 @@
     "溯溪",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 10,
+    "likes": 852
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81659,7 +81779,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 10,
+    "likes": 852,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
   },
   {
    "id": "x-蓝溪湿地公园",
@@ -81737,7 +81863,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81747,7 +81876,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-清源山国家重点风景名胜区-南台岩",
@@ -81810,7 +81945,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81820,7 +81958,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-东圳水库",
@@ -81896,7 +82040,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 12,
+    "likes": 264
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81906,7 +82053,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 12,
+    "likes": 264,
+    "basis": "小红书点名搜索 12 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 12 条相关笔记"
   },
   {
    "id": "x-三坊七巷",
@@ -81967,7 +82120,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 15,
+    "likes": 1031
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -81977,7 +82133,13 @@
    ],
    "kind_src": "poi_type:旅游景点",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 15,
+    "likes": 1031,
+    "basis": "小红书点名搜索 15 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 15 条相关笔记"
   }
  ],
  "out_of_range": [
