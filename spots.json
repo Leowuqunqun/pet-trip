@@ -80657,10 +80657,10 @@
     "computed_at": "2026-11-10 09:15"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6aa5f6e0000000002802d386）：「→【THE  GARDEN·青屿时壑】前，所以推荐以下2个机位 ✔THE  GARDEN·青屿时壑 宠物友好，可以带毛孩子边吃西餐，边看喷泉。 \t ✔THE  GARDEN·青屿时壑正对面！ 全景无遮挡，光影水幕全部拍进画面 我拍摄的位置就」",
     "evidence_level": "未核实",
-    "basis": "",
+    "basis": "explicit_ok",
     "risk_hint": "",
     "verified_at": null
    },
@@ -80713,7 +80713,7 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "explicit"
   },
   {
    "id": "x-凤凰山公园",
