@@ -674,6 +674,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .stops-d[open] summary{border-bottom:0}
 .stops-d .sd-body{padding-top:2px}
 
+.pin-ghost{width:10px;height:10px;border-radius:50%;opacity:.35;box-shadow:0 0 0 1.5px #fff}
 </style>
 </head>
 <body>
@@ -821,7 +822,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, kinds:{}, scenes:{}, dogTier:{}, provinces:{}, active:null, trip:[]};
+var DATA=null, MAP=null, CLUSTER=null, GHOSTS=null, STATE={hours:5, night:false, dog:false, kinds:{}, scenes:{}, dogTier:{}, provinces:{}, active:null, trip:[]};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -943,6 +944,13 @@ function syncFilterUI(){
   Array.prototype.forEach.call(document.querySelectorAll(".legend [data-kind]"), function(b){
     b.setAttribute("aria-pressed", kindActive(b.getAttribute("data-kind")) ? "true" : "false");
   });
+}
+
+/* 只被"车程"这一条挡住的点位：地图上画成淡点，不直接消失。
+   理由（主人 2026-11-10）：车程数据还在补，先把点在地图上标出来；藏掉等于告诉用户"没这个点"。 */
+function matchIgnoringHours(s){
+  var sv = STATE.hours; STATE.hours = 1e9;
+  try { return match(s); } finally { STATE.hours = sv; }
 }
 
 function match(s){
@@ -1243,6 +1251,9 @@ function initMap(){
     spiderfyDistanceMultiplier:1.5
   });
   MAP.addLayer(CLUSTER);
+  /* 超程点位单独一层，**不进聚簇**：进了聚簇会两件事一起坏——簇上的数字把超程点也算进去
+     （"431 个点"这种假数字），淡点在簇里又根本看不见。 */
+  GHOSTS = L.layerGroup().addTo(MAP);
 }
 
 /* 一张地图上放所有点，靠**形状**分类型——光靠颜色在缩略图上分不出来。
@@ -1265,6 +1276,14 @@ function svgFor(kind){
   return '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" '+
          'stroke-linecap="round" stroke-linejoin="round">'+glyphOf(kind)+'</svg>';
 }
+function pinIconGhost(s){
+  var col = KIND_COLOR[s.kind]||"#9C8A76";
+  return L.divIcon({
+    className:"", iconSize:[10,10], iconAnchor:[5,5],
+    html:'<div class="pin-ghost" style="background:'+col+'"></div>'
+  });
+}
+
 function pinIcon(s){
   var col = KIND_COLOR[s.kind]||"#9C8A76";
   /* 营地放大一圈：它是"今晚睡哪"的答案，不该和普通点一样大 */
@@ -1339,6 +1358,18 @@ function renderLegend(){
 
 function syncMarkers(list){
   CLUSTER.clearLayers();
+  /* 超出行程的点也上地图（淡点），点一下照样能看详情——"看不见"比"看到了但超程"更糟 */
+  var shown = {}; list.forEach(function(s){ shown[s.id]=1; });
+  var ghosts = DATA.spots.filter(function(s){ return !shown[s.id] && matchIgnoringHours(s); });
+  window.__dbg = {list: list.length, ghosts: ghosts.length, total: DATA.spots.length};
+  GHOSTS.clearLayers();
+  ghosts.forEach(function(s){
+    var g = L.marker([s.gcj[1], s.gcj[0]], {icon:pinIconGhost(s), opacity:1});
+    g.bindPopup('<div class="pop-t">'+esc(s.name)+'</div><div class="pop-row">超出当前行程 '+
+      hm((driveInfo(s)||{}).hours_oneway||0)+' · 点一下看详情</div>');
+    g.on("click", function(){ openDetail(s.id); });
+    GHOSTS.addLayer(g);
+  });
   var layers = list.map(function(s){
     var mk = L.marker([s.gcj[1], s.gcj[0]], {icon:pinIcon(s), riseOnHover:true});
     var nk=nightKey(s), dk=dogKey(s);
@@ -1356,6 +1387,9 @@ function syncMarkers(list){
     return mk;
   });
   CLUSTER.addLayers(layers);
+  window.__dbg.layers = CLUSTER.getLayers().length;
+  window.__dbg.ghostLayers = GHOSTS.getLayers().length;
+  window.__dbg.km = MAP.getZoom();
   if(list.length && !STATE.active) fitAll(list);
 }
 
