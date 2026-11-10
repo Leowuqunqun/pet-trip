@@ -2040,9 +2040,18 @@ function fetchWeek(c){
           "&current=temperature_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m"+
           "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max"+
           "&timezone=Asia%2FShanghai&forecast_days=16";
-  return fetch(u).then(function(r){
+  /* 给请求加**硬超时**：Open-Meteo 会周期性劣化（2026-11-10 实测单次 7–14 秒，偶发挂住不返回）。
+     没有超时的话，一个挂住的请求会让「本周推荐」永远停在「正在算」——用户看到的是死页面。
+     超时后走 catch，把那片区 WeatherOk 置 false，用 0.4 保底系数继续算，页面照常出结果。 */
+  var AC = window.AbortController ? new AbortController() : null;
+  var timer = AC ? setTimeout(function(){ try{ AC.abort(); }catch(e){} }, 12000) : null;
+  return fetch(u, AC ? {signal: AC.signal} : undefined).then(function(r){
+    if(timer) clearTimeout(timer);
     if(!r.ok) throw new Error("HTTP "+r.status);
     return r.json();
+  }, function(e){
+    if(timer) clearTimeout(timer);
+    throw e;
   });
 }
 
