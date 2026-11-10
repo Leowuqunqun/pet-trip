@@ -14182,11 +14182,11 @@
     "computed_at": "2026-10-30 16:45"
    },
    "dog": {
-    "policy": "allowed",
-    "evidence": "原文本身是正面评价，被误判成禁令｜原文：「亲自实测象山松兰山，真的是宠物友好满分💯，完全是小狗的快乐天堂」",
+    "policy": "forbidden",
+    "evidence": "小红书 C级UGC（笔记 6a6ac809000000001303cdc5）：「作为常年带毛孩子出游的铲屎官，踩过无数“宠物禁入”的海滩雷，这次亲自实测象山松兰山，真的是宠物友好满分💯，完全是小狗的快乐天堂」",
     "verified_at": null,
     "evidence_level": "人工核对原文",
-    "basis": "人工纠错（原文归属）",
+    "basis": "explicit_veto",
     "risk_hint": ""
    },
    "overnight": {
@@ -34399,11 +34399,11 @@
     "computed_at": "2026-11-06 12:03"
    },
    "dog": {
-    "policy": "restricted",
-    "evidence": "禁的是水滑道这一设施，不是整座山｜原文：「水滑道禁止宠物，规划好下山路线」",
+    "policy": "forbidden",
+    "evidence": "小红书 C级UGC（笔记 6a6b6fd5000000002903360d）：「水滑道禁止宠物，规划好下山路线」",
     "verified_at": null,
     "evidence_level": "人工核对原文",
-    "basis": "人工纠错（原文归属）",
+    "basis": "explicit_veto",
     "risk_hint": ""
    },
    "overnight": {
