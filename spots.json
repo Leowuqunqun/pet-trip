@@ -74210,10 +74210,10 @@
     "computed_at": "2026-11-09 12:57"
    },
    "dog": {
-    "policy": "restricted",
-    "evidence": "[四R]书圣故里：山上的文笔塔和寺庙宠物不能进去❌，其他区域都宠物友好✅，带狗的话体验感一般，可去可不去[石化R]",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "原证据归属错误：所引原文「[四R]书圣故里：山上的文笔塔和寺庙宠物不能进去」说的是书圣故里，不是羊山公园；且该笔记现已删除，无法复核。按 owner 口径「没有明确说不允许 = 宠物友好」定 default。若日后找到针对羊山公园本身的禁令原文，改回 restricted/veto 即可（本条回滚只需删掉这段）。｜原文：「[四R]书圣故里：山上的文笔塔和寺庙宠物不能进去❌，其他区域都宠物友好✅（← 指书圣故里）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -74267,7 +74267,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "restricted",
+   "dog_tier": "default",
    "pop": {
     "notes": 10,
     "likes": 56,
