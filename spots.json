@@ -88629,7 +88629,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 3
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -88639,7 +88642,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 2,
+    "likes": 3,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-小坪森林公园",
@@ -88708,7 +88717,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 9,
+    "likes": 540
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -88718,7 +88730,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 9,
+    "likes": 540,
+    "basis": "小红书点名搜索 9 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 9 条相关笔记"
   },
   {
    "id": "x-香山郊野公园",
@@ -88799,7 +88817,10 @@
     "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 10
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -88809,7 +88830,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 2,
+    "likes": 10,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-坂头森林公园",
@@ -88878,7 +88905,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 70
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -88888,7 +88918,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "veto",
+   "pop": {
+    "notes": 2,
+    "likes": 70,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-漳州古城",
@@ -88954,7 +88990,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 9,
+    "likes": 704
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -88964,7 +89003,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 9,
+    "likes": 704,
+    "basis": "小红书点名搜索 9 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 9 条相关笔记"
   },
   {
    "id": "x-五缘湾湿地公园",
@@ -89033,7 +89078,10 @@
     "草坪遛弯",
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 7,
+    "likes": 121
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89043,7 +89091,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto"
+   "dog_tier": "veto",
+   "pop": {
+    "notes": 7,
+    "likes": 121,
+    "basis": "小红书点名搜索 7 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 7 条相关笔记"
   },
   {
    "id": "x-集美学村",
@@ -89106,7 +89160,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 18,
+    "likes": 22861
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89116,7 +89173,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 18,
+    "likes": 22861,
+    "basis": "小红书点名搜索 18 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 18 条相关笔记"
   },
   {
    "id": "x-古山重景区",
@@ -89198,7 +89261,10 @@
     "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 190
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89208,7 +89274,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 3,
+    "likes": 190,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-云水谣古镇",
@@ -89271,7 +89343,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 227
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89281,7 +89356,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 5,
+    "likes": 227,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-梅林古镇",
@@ -89344,7 +89425,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 14,
+    "likes": 1642
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89354,7 +89438,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 14,
+    "likes": 1642,
+    "basis": "小红书点名搜索 14 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 14 条相关笔记"
   },
   {
    "id": "x-儒乐湖",
@@ -89436,7 +89526,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 7,
+    "likes": 470
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89446,7 +89539,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 7,
+    "likes": 470,
+    "basis": "小红书点名搜索 7 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 7 条相关笔记"
   },
   {
    "id": "x-九真山",
@@ -89514,7 +89613,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 10,
+    "likes": 775
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89524,7 +89626,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 10,
+    "likes": 775,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
   },
   {
    "id": "x-橘子洲",
@@ -89590,7 +89698,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 1253
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89600,7 +89711,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 1253,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-岳麓山",
@@ -89668,7 +89785,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89678,7 +89798,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-官湖沙滩",
@@ -89741,7 +89867,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 11,
+    "likes": 232
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89751,7 +89880,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 11,
+    "likes": 232,
+    "basis": "小红书点名搜索 11 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 11 条相关笔记"
   },
   {
    "id": "x-九龙湖",
@@ -89814,7 +89949,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 18
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89824,7 +89962,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 18,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-庐山西海",
@@ -89912,7 +90056,10 @@
     "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 17,
+    "likes": 1212
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -89922,7 +90069,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 17,
+    "likes": 1212,
+    "basis": "小红书点名搜索 17 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 17 条相关笔记"
   }
  ],
  "out_of_range": [
