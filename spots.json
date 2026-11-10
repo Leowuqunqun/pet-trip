@@ -80741,8 +80741,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -80750,9 +80752,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "凤凰山公园不仅有儿童乐园可以攀爬、滑梯、玩沙坑，还可以搭帐篷、露营、看海",
+      "note_id": "6aed5c4f000000002b03e9e3",
+      "author": "1天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6aed5c4f000000002b03e9e3"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -80780,6 +80791,8 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": null,
@@ -81131,8 +81144,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -81140,9 +81155,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "误打误撞终于被我找到了一个野生的露营地🏕，没有人打扰，发呆，喝茶，烧烤自由自在，如果晴天会更美",
+      "note_id": "6ae9bce20000000015020de2",
+      "author": "6天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae9bce20000000015020de2"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -81165,7 +81189,9 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -81418,8 +81444,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -81427,9 +81455,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "武夷山国家森林公园茶诗乐营地",
+      "note_id": "6ad577d5000000000c00cd99",
+      "author": "觉尘",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad577d5000000000c00cd99"
+     },
+     {
+      "kind": "camp",
+      "quote": "茶诗乐营地位置武夷山国家森林公园1号线边上的星村镇黄村村毛家洲，遛娃、品茶、戏水、露营的好地方",
+      "note_id": "6ad577d5000000000c00cd99",
+      "author": "觉尘",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad577d5000000000c00cd99"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -81452,6 +81496,8 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": null,
@@ -81641,8 +81687,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -81650,9 +81698,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "2. 帐篷营地：大片开阔草坪，可以搭天幕、帐篷野餐",
+      "note_id": "6aa54875000000000d026e84",
+      "author": "半山",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa54875000000000d026e84"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -81676,7 +81733,9 @@
    "scenes": [
     "草坪遛弯",
     "玩水",
-    "溯溪"
+    "溯溪",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
@@ -81789,8 +81848,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -81798,9 +81859,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "挑战打卡福州100个露营地之东圳水库",
+      "note_id": "692abcb7000000001e013bbc",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/692abcb7000000001e013bbc"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -81822,7 +81892,9 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
    "heat": null,
    "rating": null,
