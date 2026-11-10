@@ -40397,11 +40397,11 @@
     "computed_at": "2026-11-06 19:37"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 UGC（笔记 68b6ee70）：「🐕宠物政策：不可携宠❌」",
+    "policy": "allowed",
+    "evidence": "清单笔记整篇被判 forbidden，但该景点条目明写「牵绳可带狗，只能带柯基、柴犬等小狗…目前大狗不能带了」——是限小型而非禁入｜原文：「📍上海·上海影视乐园 🐕宠物政策：牵绳可带狗，只能带柯基、柴犬等小狗」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -40478,7 +40478,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "restricted",
    "sources": [
     {
      "platform": "amap",
@@ -40506,11 +40506,11 @@
     "computed_at": "2026-11-06 19:37"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 UGC（笔记 68b6ee70）：「🐕宠物政策：不可携宠❌」",
+    "policy": "allowed",
+    "evidence": "同一篇清单笔记整篇被判 forbidden，但该景点条目明写「牵绳可带狗，体型不限✔️」——明确可带狗，属误判｜原文：「📍南京·石湫影视基地 🐕宠物政策：牵绳可带狗，体型不限✔️」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -40585,7 +40585,7 @@
    "kind_src": "poi_type:其余",
    "scenes": [],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "amap",
