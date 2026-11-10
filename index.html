@@ -2080,8 +2080,15 @@ function buildPlans(){
   PLAN.window = wk;
   var lim = (STATE.hours == null) ? 99 : STATE.hours;   /* 默认不限车程 */
 
+  /* 推荐纳入范围 = 江浙沪皖（owner 已拍板）。
+     注意：这条**不能**用车程来兜底——2026-11-10 把默认车程筛掉之后，lim 变成 99，
+     福建(27)/山东(25)/江西(4) 一次全进了候选池（727 个），跟"推荐只看江浙沪皖"直接冲突。
+     车程是地图的筛选条件，省份才是推荐的边界。 */
+  var PLAN_PROV = { "上海":1, "江苏":1, "浙江":1, "安徽":1 };
+
   var pool = DATA.spots.filter(function(s){
     var h = spotH(s);
+    if(!PLAN_PROV[s.province]) return false;
     if(h==null || h>lim) return false;
     if(spotCoord(s)==null) return false;
     if(((s.dog||{}).policy)==="forbidden") return false;
