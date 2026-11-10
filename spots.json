@@ -90654,8 +90654,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -90663,9 +90665,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "重庆周末说走就走，日产N6冲铁山坪露营⛺",
+      "note_id": "6ad09d1a00000000140393f3",
+      "author": "吃豆豆不",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad09d1a00000000140393f3"
+     },
+     {
+      "kind": "camp",
+      "quote": "车门一关，奔赴山野，日产N6把周末露营的松弛感稳稳拿捏",
+      "note_id": "6ad09d1a00000000140393f3",
+      "author": "吃豆豆不",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad09d1a00000000140393f3"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -90687,6 +90705,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": {
@@ -91717,8 +91737,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -91726,9 +91748,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "大部分人去铜鼓荡，会在地图上直接搜「铜鼓荡露营点」或者「孤独星球铜鼓荡露营公园」，到地方就会被村民拦住🚫",
+      "note_id": "6a999043000000002b01159d",
+      "author": "莉比爱旅行",
+      "note_url": "https://www.xiaohongshu.com/explore/6a999043000000002b01159d"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -91749,7 +91780,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 6,
     "likes": 2439
@@ -91960,8 +91994,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -91969,9 +92005,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "白天骑马、晚上烤全羊，带娃的亲子游、扎帐篷露营的、铺野餐垫的、举着无人机满天飞的，一个都没落下",
+      "note_id": "6ad4c6f0000000000c00975c",
+      "author": "御霞客",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad4c6f0000000000c00975c"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -91992,7 +92037,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 0,
     "likes": 0
@@ -92451,8 +92499,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -92460,9 +92510,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "对于一个曾今的BC露营爱好者来说 这里就是天堂",
+      "note_id": "695e4aee000000000a02dc3b",
+      "author": "村民老白",
+      "note_url": "https://www.xiaohongshu.com/explore/695e4aee000000000a02dc3b"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -92483,7 +92542,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 0,
     "likes": 0
@@ -93678,8 +93740,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -93687,9 +93751,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "萨普营地的半夜，银河亮得很醒目，但夜里风冷，想看星空的话，保暖要做好",
+      "note_id": "6af2d93d000000002903ed92",
+      "author": "16:43",
+      "note_url": "https://www.xiaohongshu.com/explore/6af2d93d000000002903ed92"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -93711,6 +93784,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": {
