@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 725,
+  "count": 743,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -3065,7 +3065,7 @@
    ],
    "geo_src": "xhs",
    "origin": "小红书带狗笔记",
-   "curation_note": " ｜ 已并入「马家浜文化博物馆」(162 米，博物馆就在遗址公园里，同一次出行)",
+   "curation_note": " ｜ 已并入「马家浜文化博物馆」(162 米，博物馆就在遗址公园里，同一次出行) ｜ 已并入「马家浜文化博物馆」(162 米，博物馆就在遗址公园里，同一次出行)",
    "raw_note": "📍湘家荡 你简直美好得不像话😭",
    "photos": [
     {
@@ -8228,7 +8228,7 @@
    ],
    "geo_src": "xhs",
    "origin": "小红书带狗笔记",
-   "curation_note": " ｜ 已并入「安吉古城遗址博物馆」(386 米，博物馆在遗址公园里，同一次出行)",
+   "curation_note": " ｜ 已并入「安吉古城遗址博物馆」(386 米，博物馆在遗址公园里，同一次出行) ｜ 已并入「安吉古城遗址博物馆」(386 米，博物馆在遗址公园里，同一次出行)",
    "raw_note": "📍安吉 真的不缺好看的风景",
    "photos": [
     {
@@ -12657,7 +12657,7 @@
    ],
    "geo_src": "高德POI",
    "origin": "抖音带狗行程",
-   "curation_note": " ｜ 已并入「安吉露营」(181 米，「安吉露营」是泛指名，指的是小杭坑这片营地群)",
+   "curation_note": " ｜ 已并入「安吉露营」(181 米，「安吉露营」是泛指名，指的是小杭坑这片营地群) ｜ 已并入「安吉露营」(181 米，「安吉露营」是泛指名，指的是小杭坑这片营地群)",
    "raw_note": "大关自然村1号 ☎17357211578｜池子 POI（营地），距生态营地 0.13 km，有电话可问营地规则",
    "photos": [
     {
@@ -23179,7 +23179,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「苏州同里古镇旅游区」(0 米，同一处，一个带城市前缀)",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「苏州同里古镇旅游区」(0 米，同一处，一个带城市前缀) ｜ 已并入「苏州同里古镇旅游区」(0 米，同一处，一个带城市前缀)",
    "raw_note": "",
    "photos": [
     {
@@ -25768,7 +25768,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「巴城生态湿地公园-夕露园」(0 米，后者是前者的完整 POI 名)",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「巴城生态湿地公园-夕露园」(0 米，后者是前者的完整 POI 名) ｜ 已并入「巴城生态湿地公园-夕露园」(0 米，后者是前者的完整 POI 名)",
    "raw_note": "",
    "photos": [
     {
@@ -26367,7 +26367,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「鄣山大峡谷风景区」(0 米，「障/鄣」同地异写)",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「鄣山大峡谷风景区」(0 米，「障/鄣」同地异写) ｜ 已并入「鄣山大峡谷风景区」(0 米，「障/鄣」同地异写)",
    "raw_note": "",
    "photos": [
     {
@@ -26436,6 +26436,11 @@
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=118.766896,30.098202",
      "poi": "鄣山大峡谷风景区"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6965e7e7000000001a0232fc",
+     "title": "一些和小狗无法复刻的旅行瞬间 🎞️"
     }
    ]
   },
@@ -27449,7 +27454,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「凤城河风景区」(0 米，同音不同写法；保留有否决证据的那条)",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「凤城河风景区」(0 米，同音不同写法；保留有否决证据的那条) ｜ 已并入「凤城河风景区」(0 米，同音不同写法；保留有否决证据的那条)",
    "raw_note": "",
    "photos": [
     {
@@ -33756,7 +33761,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「胡氏宗祠」(349 米，胡氏宗祠就在龙川景区内，去龙川看的就是这个祠堂)",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「胡氏宗祠」(349 米，胡氏宗祠就在龙川景区内，去龙川看的就是这个祠堂) ｜ 已并入「胡氏宗祠」(349 米，胡氏宗祠就在龙川景区内，去龙川看的就是这个祠堂)",
    "raw_note": "",
    "photos": [
     {
@@ -34003,7 +34008,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「坎头古村落」(184 米，「磡/坎」同地异写，同一个古村)",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「坎头古村落」(184 米，「磡/坎」同地异写，同一个古村) ｜ 已并入「坎头古村落」(184 米，「磡/坎」同地异写，同一个古村)",
    "raw_note": "",
    "photos": [],
    "pending": [
@@ -35096,7 +35101,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「庾村文化市集」(92 米，同一村内，广场这条信息最全（热度21）) ｜ 已并入「庾村景区」(149 米，同上)",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「庾村文化市集」(92 米，同一村内，广场这条信息最全（热度21）) ｜ 已并入「庾村景区」(149 米，同上) ｜ 已并入「庾村文化市集」(92 米，同一村内，广场这条信息最全（热度21）) ｜ 已并入「庾村景区」(149 米，同上)",
    "raw_note": "",
    "photos": [
     {
@@ -51000,9 +51005,9 @@
    },
    "dog": {
     "policy": "allowed",
-    "evidence": "小红书笔记（67ca91cf0000000028035a7c）：「话题标签：带狗狗」",
-    "evidence_level": "同篇笔记提及",
-    "basis": "离线回扫已采笔记",
+    "evidence": "一些和小狗无法复刻的旅行瞬间 🎞️ 回顾去年一整年，竟然和无所谓一起去了26座城市50多个宠物友好地点，拍摄了2w+的视频和照片（虽然偷懒大部份都没剪 [汗颜R]  回顾这一年感觉到处都留下了快乐的印记 [红色心形R] \t 📒 以",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
     "risk_hint": "",
     "verified_at": null
    },
@@ -51034,7 +51039,7 @@
    ],
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「四明湖红杉林」(200 米，同一片水杉林——秋冬季叶片发红所以又叫红杉林)",
+   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。 ｜ 已并入「四明湖红杉林」(200 米，同一片水杉林——秋冬季叶片发红所以又叫红杉林) ｜ 已并入「四明湖红杉林」(200 米，同一片水杉林——秋冬季叶片发红所以又叫红杉林)",
    "raw_note": "",
    "photos": [
     {
@@ -51079,7 +51084,7 @@
     "玩水"
    ],
    "access": {},
-   "dog_tier": "default",
+   "dog_tier": "explicit",
    "sources": [
     {
      "platform": "xhs",
@@ -58869,7 +58874,7 @@
      "poi": "吕庄水库观景平台"
     }
    ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「吕庄水库观景平台」(887 米，观景平台是水库的一个观景点，不是独立目的地)",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「吕庄水库观景平台」(887 米，观景平台是水库的一个观景点，不是独立目的地) ｜ 已并入「吕庄水库观景平台」(887 米，观景平台是水库的一个观景点，不是独立目的地)",
    "tier": "B",
    "scenes": [
     "玩水"
@@ -64941,7 +64946,7 @@
      "poi": "夫子庙步行街"
     }
    ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「夫子庙步行街」(91 米，步行街是夫子庙的一部分；保留有否决证据的)",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「夫子庙步行街」(91 米，步行街是夫子庙的一部分；保留有否决证据的) ｜ 已并入「夫子庙步行街」(91 米，步行街是夫子庙的一部分；保留有否决证据的)",
    "tier": "B",
    "scenes": [
     "人文古迹"
@@ -77770,7 +77775,7 @@
      "poi": "泰山极顶"
     }
    ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「泰山极顶」(8 米，极顶是景区内的一个顶)",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「泰山极顶」(8 米，极顶是景区内的一个顶) ｜ 已并入「泰山极顶」(8 米，极顶是景区内的一个顶)",
    "tier": "B",
    "scenes": [
     "山野徒步"
@@ -80555,6 +80560,1352 @@
     "basis": "小红书点名搜索 1 条相关笔记"
    },
    "heat_basis": "小红书点名搜索 1 条相关笔记"
+  },
+  {
+   "id": "x-四季花海",
+   "name": "四季花海",
+   "kind": "scenic",
+   "tags": [],
+   "province": "福建",
+   "city": "莆田",
+   "gcj": [
+    119.19538,
+    25.300617
+   ],
+   "drive": {
+    "hours_oneway": 9.94,
+    "km": 868.8,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:14"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "下来的几个点位都是观景平台，可以停下来拍拍照，风景都超美的，图8 2️⃣东沙 🎫门票：35元/人 🐶宠物友好无额外收费 🅿️门口有停车场，6r/小时 🌊海滩比较小，但是沙质细，很干净，人流也不算多，可以和小狗一起自由奔跑；看不到日落，但有晚",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "四季花海",
+   "poi_type": "旅游景点:风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69fb517c000000002301406d",
+     "title": "Vol.20｜舟山带狗看海三天两晚攻略🏝️"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a94efcb000000001803e197",
+     "title": "舟山2.5天带狗逐海观山｜定海+朱家尖+岱山"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.19538,25.300617",
+     "poi": "四季花海"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:风景名胜",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-音乐喷泉",
+   "name": "音乐喷泉",
+   "kind": "scenic",
+   "tags": [],
+   "province": "福建",
+   "city": "南平",
+   "gcj": [
+    117.499106,
+    27.330906
+   ],
+   "drive": {
+    "hours_oneway": 7.94,
+    "km": 687.0,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "音乐喷泉",
+   "poi_type": "旅游景点:风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a1d47b4000000003502e793",
+     "title": "宜兴＝小希腊+小南法+小荔波+小岚山+小景德"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69c60c96000000002101311f",
+     "title": "上海🚗1h直达｜东太湖免费露营天花板"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.499106,27.330906",
+     "poi": "音乐喷泉"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:风景名胜",
+   "access": {},
+   "dog_tier": "unknown"
+  },
+  {
+   "id": "x-凤凰山公园",
+   "name": "凤凰山公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "莆田",
+   "gcj": [
+    118.98777,
+    25.446374
+   ],
+   "drive": {
+    "hours_oneway": 9.94,
+    "km": 866.8,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "字数超限所以上下两篇来写， 小宝8岁，哈喽也7岁了，我也27了。 今年开始慢慢进入休闲游的状态了。 \t 1🈷️ 🔘日照：山海天旅游度假区 🔘荣成：昀咖啡海滩，烟墩角，布鲁威斯，路边野树林，天鹅湖国家公园，白鹅咖啡馆，那香海 🔘威海市：日落湾",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "凤凰山公园",
+   "poi_type": "旅游景点:公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6953c389000000001e0312fc",
+     "title": "🐕2025年-🐾小狗足迹地图记录（上） 海尔弟弟"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69ccf4e5000000002301fbb4",
+     "title": "杭州大草坪汇总|进阶版2.0"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.98777,25.446374",
+     "poi": "凤凰山公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-三才峰观景台",
+   "name": "三才峰观景台",
+   "kind": "scenic",
+   "tags": [],
+   "province": "福建",
+   "city": "南平",
+   "gcj": [
+    117.932544,
+    27.624362
+   ],
+   "drive": {
+    "hours_oneway": 7.23,
+    "km": 627.5,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "forbidden",
+    "evidence": "建窑遗址写着宠物不得入内，实际工作人员也没有管，趁着没人我们把狗子放开跑了一会儿~",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "三才峰观景台",
+   "poi_type": "旅游景点:其它旅游景点",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ab113ee000000003003edc2",
+     "title": "武夷山一号风景道自驾攻略（附看猴路线）"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69fef333000000001e00d88e",
+     "title": "武夷山 | 小狗我也是坐过竹筏啦！⛰️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.932544,27.624362",
+     "poi": "三才峰观景台"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "山野徒步",
+    "人文古迹"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "veto"
+  },
+  {
+   "id": "x-泉州植物园",
+   "name": "泉州植物园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "泉州",
+   "gcj": [
+    118.654604,
+    25.062137
+   ],
+   "drive": {
+    "hours_oneway": 10.69,
+    "km": 931.5,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "航多找一下 本次拜拜献祭了两万出行剩下的所有零食，以表达小狗的诚心[合十R][合十R] \t pps：宠物友好已是不易，大家记得牵好绳子清理粪便哦～",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "泉州植物园",
+   "poi_type": "旅游景点:植物园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ad0e3aa000000001a030059",
+     "title": "小狗爽玩之福建出游篇"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.654604,25.062137",
+     "poi": "泉州植物园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-泗华郊野公园",
+   "name": "泗华郊野公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "莆田",
+   "gcj": [
+    119.005999,
+    25.473047
+   ],
+   "drive": {
+    "hours_oneway": 9.84,
+    "km": 863.4,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "二刷了 爱惨了 草坪还是绿时 大太阳 太出片了 这次去冬天了 黄了 还是阴天 出片率低 但是不影响遛狗 太好遛了😭好权威的地方😭 \t 📍泉州植物园 🉑带狗 福建省泉州市洛江区河市镇山边村俞大猷公园旁 💡还会再三刷四刷的程度！！！！！！！ \t",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "泗华郊野公园",
+   "poi_type": "旅游景点:公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6991d8b7000000001b01e9f8",
+     "title": "既然闽A小狗进不了三坊七巷 那就👋"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.005999,25.473047",
+     "poi": "泗华郊野公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-霞浦愉村半舍山庄",
+   "name": "霞浦愉村半舍山庄",
+   "kind": "lodging",
+   "tags": [],
+   "province": "福建",
+   "city": "宁德",
+   "gcj": [
+    120.237382,
+    26.980065
+   ],
+   "drive": {
+    "hours_oneway": 6.92,
+    "km": 596.3,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "多，正好去东壁村看落日～顺带去赵妈私房菜吃了顿海鲜晚餐。吃完去民宿休息。 民宿🏠：霞浦愉村半舍山庄 宠物友好，额外收宠物清洁费100元。 房间非常大，景色绝美。新手司机建议白天抵达名宿，路较曲折。老司机随意。 名宿有非常非常大的后坡。植被丰",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "霞浦愉村半舍山庄",
+   "poi_type": "酒店宾馆:其它酒店宾馆",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6988232b000000001a0263e0",
+     "title": "2026携宠福建自驾游|第一站:霞浦"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6adb26d20000000033031fbe",
+     "title": "是可以为了这块草坪专门安排一次旅行的程度"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.237382,26.980065",
+     "poi": "霞浦愉村半舍山庄"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "古村古镇"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-东湖湿地公园",
+   "name": "东湖湿地公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "福州",
+   "gcj": [
+    119.598489,
+    25.840121
+   ],
+   "drive": {
+    "hours_oneway": 9.06,
+    "km": 783.0,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "话题标签：宠物友好",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "东湖湿地公园",
+   "poi_type": "旅游景点:公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/699534f3000000001a0297b0",
+     "title": ""
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.598489,25.840121",
+     "poi": "东湖湿地公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-水云间民宿",
+   "name": "水云间民宿",
+   "kind": "lodging",
+   "tags": [],
+   "province": "福建",
+   "city": "宁德",
+   "gcj": [
+    119.910035,
+    27.231657
+   ],
+   "drive": {
+    "hours_oneway": 6.72,
+    "km": 587.7,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "forbidden",
+    "evidence": "11、南京逸住府，酒店位置很好，周围都是景区，用走就能到，每只狗清洁费138元，其实南京夫子庙啊老门东啊一搬都不能带狗进入，人也很多，我们早上五点多起来，就冲老门东了，保安没管我们，南京郊区有很多度假小村庄宠物都友好，我们这次去的是佘村，这",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "水云间民宿",
+   "poi_type": "酒店宾馆:其它酒店宾馆",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/68b7fbbf000000001d00445a",
+     "title": "总结携宠出游沪苏浙皖的宠物民宿（酒店）"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.910035,27.231657",
+     "poi": "水云间民宿"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "veto"
+  },
+  {
+   "id": "x-山舍民宿",
+   "name": "山舍民宿",
+   "kind": "lodging",
+   "tags": [],
+   "province": "福建",
+   "city": "宁德",
+   "gcj": [
+    120.298198,
+    27.302023
+   ],
+   "drive": {
+    "hours_oneway": 6.47,
+    "km": 560.2,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "上想着早点到酒店休息，就定了花筑奢·九华山陌上星空互见民宿（在花间堂边上）的酒店餐，位置在半山腰，很宠物友好，老板人也很nice直接免了清洁费。用餐有免费接驳车送，餐厅也可以带宠物，餐也可以（忘记拍照📸） Day[二R] 早上起来吃完早餐，",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "山舍民宿",
+   "poi_type": "酒店宾馆:其它酒店宾馆",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69c9610e0000000023027ae8",
+     "title": "小狗3天2夜大愿文化园&九华山&九子岩攻略"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.298198,27.302023",
+     "poi": "山舍民宿"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-下梅古民居",
+   "name": "下梅古民居",
+   "kind": "scenic",
+   "tags": [],
+   "province": "福建",
+   "city": "南平",
+   "gcj": [
+    118.047938,
+    27.66889
+   ],
+   "drive": {
+    "hours_oneway": 7.14,
+    "km": 616.0,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "restricted",
+    "evidence": "有一个博物馆，但是小狗不能进，只能在周边稍微走一走",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "下梅古民居",
+   "poi_type": "旅游景点:风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6911aeb300000000050309df",
+     "title": "带狗自驾武夷山|不进景区不爬山轻松路线来 五花肉不多"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.047938,27.66889",
+     "poi": "下梅古民居"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:风景名胜",
+   "access": {},
+   "dog_tier": "restricted"
+  },
+  {
+   "id": "x-武夷山国家森林公园",
+   "name": "武夷山国家森林公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "南平",
+   "gcj": [
+    117.790568,
+    27.681281
+   ],
+   "drive": {
+    "hours_oneway": 7.71,
+    "km": 639.8,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "。[失望R][失望R] 这一次终于在武夷山玩到水了。四次武夷山旅行的经验了 所以给大家分享一下武夷山宠物友好酒店。我总结了三个酒店 第一个🏨观蓝舒苑 房间有大露台，楼下就是遛狗的步道，很适合狗狗。服务也很好！p2-5 风景也很不错 这个天气",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "武夷山国家森林公园",
+   "poi_type": "旅游景点:其它旅游景点",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/688f44740000000023020c6f",
+     "title": "武夷山衢州带狗玩吃住行攻略 平安麻麻"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.790568,27.681281",
+     "poi": "武夷山国家森林公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-南安城西湿地公园",
+   "name": "南安城西湿地公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "泉州",
+   "gcj": [
+    118.378108,
+    24.973436
+   ],
+   "drive": {
+    "hours_oneway": 10.82,
+    "km": 952.9,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "二刷了 爱惨了 草坪还是绿时 大太阳 太出片了 这次去冬天了 黄了 还是阴天 出片率低 但是不影响遛狗 太好遛了😭好权威的地方😭 \t 📍泉州植物园 🉑带狗 福建省泉州市洛江区河市镇山边村俞大猷公园旁 💡还会再三刷四刷的程度！！！！！！！ \t",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "南安城西湿地公园",
+   "poi_type": "旅游景点:公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.378108,24.973436",
+     "poi": "南安城西湿地公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-芦际潭森林公园",
+   "name": "芦际潭森林公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "福州",
+   "gcj": [
+    119.517813,
+    26.002138
+   ],
+   "drive": {
+    "hours_oneway": 8.94,
+    "km": 778.9,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "二刷了 爱惨了 草坪还是绿时 大太阳 太出片了 这次去冬天了 黄了 还是阴天 出片率低 但是不影响遛狗 太好遛了😭好权威的地方😭 \t 📍泉州植物园 🉑带狗 福建省泉州市洛江区河市镇山边村俞大猷公园旁 💡还会再三刷四刷的程度！！！！！！！ \t",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "芦际潭森林公园",
+   "poi_type": "旅游景点:公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.517813,26.002138",
+     "poi": "芦际潭森林公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "玩水",
+    "溯溪",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-蓝溪湿地公园",
+   "name": "蓝溪湿地公园",
+   "kind": "park",
+   "tags": [],
+   "province": "福建",
+   "city": "泉州",
+   "gcj": [
+    118.381687,
+    24.966811
+   ],
+   "drive": {
+    "hours_oneway": 10.79,
+    "km": 951.6,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "二刷了 爱惨了 草坪还是绿时 大太阳 太出片了 这次去冬天了 黄了 还是阴天 出片率低 但是不影响遛狗 太好遛了😭好权威的地方😭 \t 📍泉州植物园 🉑带狗 福建省泉州市洛江区河市镇山边村俞大猷公园旁 💡还会再三刷四刷的程度！！！！！！！ \t",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "蓝溪湿地公园",
+   "poi_type": "旅游景点:公园",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/698c69e8000000001d013113",
+     "title": "最好遛狗的公园出现了… 我说真的☝️"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.381687,24.966811",
+     "poi": "蓝溪湿地公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "玩水",
+    "溯溪"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-清源山国家重点风景名胜区-南台岩",
+   "name": "清源山国家重点风景名胜区-南台岩",
+   "kind": "scenic",
+   "tags": [],
+   "province": "福建",
+   "city": "泉州",
+   "gcj": [
+    118.60395,
+    24.951168
+   ],
+   "drive": {
+    "hours_oneway": 10.8,
+    "km": 940.7,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "1️⃣闽A福州 📍鼓山 💡🧭:鼓山大榕树观景台 🌃 🉑带狗 🆓 鼓山风景区鼓山大榕树观景台 福建省福州市晋安区鼓山路鼓山风景区 \t 2️⃣闽B莆田 📍天马山 🌃 🉑带狗  🈶停车费 🧭:清友十九号(天马山店) 福建省莆田市城厢区 💡:可以进",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "清源山国家重点风景名胜区-南台岩",
+   "poi_type": "旅游景点:风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/694179b8000000001b0313a1",
+     "title": "一起恭喜这位小狗集齐了闽ABCD的夜景🌃🤏 1414141414"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.60395,24.951168",
+     "poi": "清源山国家重点风景名胜区-南台岩"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "default"
+  },
+  {
+   "id": "x-东圳水库",
+   "name": "东圳水库",
+   "kind": "water",
+   "tags": [],
+   "province": "福建",
+   "city": "莆田",
+   "gcj": [
+    118.947429,
+    25.480822
+   ],
+   "drive": {
+    "hours_oneway": 10.13,
+    "km": 875.0,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "湖公园  🉑带狗  大草坪✅ 游泳✅ 福建省莆田市荔城区拱辰街道玉湖路莆田市青少年宫西北400米 💡可以带狗环湖走一圈 3km➕  1h左右 公园算不错的 大草坪都有 蛮好遛狗的 建议走一圈 💡电车可以 🧭: 国家电网汽车充电站(福建省莆田",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "东圳水库",
+   "poi_type": "地名地址:自然地名:湖泊",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6929aa9e000000001b0319ee",
+     "title": "妈妈！我在莆田找到了超好遛的公园诶！ 1414141414"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=118.947429,25.480822",
+     "poi": "东圳水库"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "name",
+   "access": {},
+   "dog_tier": "explicit"
+  },
+  {
+   "id": "x-三坊七巷",
+   "name": "三坊七巷",
+   "kind": "scenic",
+   "tags": [],
+   "province": "福建",
+   "city": "福州",
+   "gcj": [
+    119.29682,
+    26.08241
+   ],
+   "drive": {
+    "hours_oneway": 8.77,
+    "km": 767.3,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-10 09:15"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "呢！ \t 2️⃣📍玉湖新城环湖公园 🉑带狗 大草坪✅ 游泳✅ 福建省莆田市荔城区拱辰街道玉湖路莆 💡可以带狗环湖走一圈3km 1h左右 💡电车可以 🧭: 国家电网汽车充电站(福建省莆田市两馆一宫停车场充电站) 🅿️🆓 \t 3️⃣ 📍白塘湖公",
+    "evidence_level": "笔记提及",
+    "basis": "小红书笔记正文",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "三坊七巷",
+   "poi_type": "旅游景点:国家级景点",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6991d8b7000000001b01e9f8",
+     "title": "既然闽A小狗进不了三坊七巷 那就👋"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.29682,26.08241",
+     "poi": "三坊七巷"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:旅游景点",
+   "access": {},
+   "dog_tier": "explicit"
   }
  ],
  "out_of_range": [
