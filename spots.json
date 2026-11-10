@@ -90492,8 +90492,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -90501,9 +90503,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "🉑露营⛺️｜徒步｜赏秋🍁｜宠物友好🐶",
+      "note_id": "6ad196260000000014031ac5",
+      "author": "晔爸outdoor",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad196260000000014031ac5"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -90524,7 +90535,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 4,
     "likes": 2729
@@ -91657,8 +91671,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -91666,9 +91682,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "市区内🚗半小时可达，免费停车🅿️，可以炭火露营🏕️，秋景好看的免费滨水露营地，真的太舒服了",
+      "note_id": "6ad182bf0000000001008a61",
+      "author": "小柴迷迷",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad182bf0000000001008a61"
+     },
+     {
+      "kind": "camp",
+      "quote": "几乎没有游客，偶尔几户露营的小伙伴，超级安静",
+      "note_id": "6ad182bf0000000001008a61",
+      "author": "小柴迷迷",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad182bf0000000001008a61"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -91689,7 +91721,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": {
     "notes": 0,
     "likes": 0
@@ -92593,8 +92628,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -92602,9 +92639,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "❹-如果你是第一次远程高强度徒步，建议先轻装走一趟，别上来就重装，不确定因素很多（高强度负重走一天再扎营、煮面、收拾、夜里再遇个狂风暴雨，第一天勉强可能撑过去，但后面会抓狂的，相信我）",
+      "note_id": "6ae6fb6c000000000e027f85",
+      "author": "Vincent超",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae6fb6c000000000e027f85"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -92631,6 +92677,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": {
@@ -92680,8 +92728,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -92689,9 +92739,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "👋第6站：黄家洼草坪营地",
+      "note_id": "6ac504a30000000015005c8e",
+      "author": "人间观察家",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac504a30000000015005c8e"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -92713,6 +92772,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": {
@@ -92762,8 +92823,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -92771,9 +92834,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "▪️ 定位：到达山顶进营地往右边走就能看到",
+      "note_id": "6ae2cc7e0000000026037d8c",
+      "author": "甜豆豆",
+      "note_url": "https://www.xiaohongshu.com/explore/6ae2cc7e0000000026037d8c"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -92795,6 +92867,8 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
    "heat": {
