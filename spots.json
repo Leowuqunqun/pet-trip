@@ -71207,10 +71207,10 @@
     "computed_at": "2026-11-09 12:57"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
+    "policy": "allowed",
+    "evidence": "小红书笔记（699c444a000000000b013a65）：「（必看） • 神农顶：允许狗狗入园，不能坐景区大巴，只能自驾/包车到各观景台，全程牵绳 • 大九湖：宠物友好，必须签宠物保障书，才可坐景区大巴+小火车 • 通用：全程牵绳、清理粪便 二、一日路线（紧凑不绕路） 总原则：先大九湖（晨雾+小火车」",
+    "evidence_level": "同篇笔记提及",
+    "basis": "离线回扫已采笔记",
     "risk_hint": "",
     "verified_at": null
    },
@@ -71261,7 +71261,7 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "pop": {
     "notes": 10,
     "likes": 1705,
@@ -75118,10 +75118,10 @@
     "computed_at": "2026-11-09 12:59"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
+    "policy": "allowed",
+    "evidence": "小红书笔记（67871e3b000000001601a05e）：「：没人、可放开、自由跑 Day1️⃣：汕头to长沙（住的没推荐，都觉得一般，有木有反向推荐不错的长沙可带狗酒店呀） Day2️⃣：长沙到神农架 Day3️⃣：我们雇了车导（不开车很爽）。☝️去神农顶玩，我们一路随机停了车在一些可以下狗的地方」",
+    "evidence_level": "同篇笔记提及",
+    "basis": "离线回扫已采笔记",
     "risk_hint": "",
     "verified_at": null
    },
@@ -75197,7 +75197,7 @@
    "access": {
     "water": true
    },
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "pop": {
     "notes": 7,
     "likes": 170,
@@ -79754,10 +79754,10 @@
     "computed_at": "2026-11-09 15:56"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
+    "policy": "allowed",
+    "evidence": "小红书笔记（698df28d000000001b0167c4）：「💡得知十里长堤 不能带狗 本来想带14看日落」",
+    "evidence_level": "同篇笔记提及",
+    "basis": "离线回扫已采笔记",
     "risk_hint": "",
     "verified_at": null
    },
@@ -79816,7 +79816,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 3,
     "likes": 11,
@@ -79930,10 +79930,10 @@
     "computed_at": "2026-11-09 15:56"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
+    "policy": "allowed",
+    "evidence": "小红书笔记（698df28d000000001b0167c4）：「💡得知十里长堤 不能带狗 本来想带14看日落」",
+    "evidence_level": "同篇笔记提及",
+    "basis": "离线回扫已采笔记",
     "risk_hint": "",
     "verified_at": null
    },
@@ -79992,7 +79992,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 4,
     "likes": 26,
@@ -80115,10 +80115,10 @@
     "computed_at": "2026-11-09 15:56"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
+    "policy": "allowed",
+    "evidence": "小红书笔记（698df28d000000001b0167c4）：「💡得知十里长堤 不能带狗 本来想带14看日落」",
+    "evidence_level": "同篇笔记提及",
+    "basis": "离线回扫已采笔记",
     "risk_hint": "",
     "verified_at": null
    },
@@ -80176,7 +80176,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 3,
     "likes": 63,
@@ -80305,10 +80305,10 @@
     "computed_at": "2026-11-09 15:56"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
+    "policy": "allowed",
+    "evidence": "小红书笔记（69944008000000001b01d5fd）：「🐕漳州带狗: 1️⃣📍七首岩寺 🉑带狗 🆓 🌅 福建省漳州市龙海区九湖镇院后村附近 💡就在市区 看日出很方便 山也不高 车直达 \t 2️⃣ 📍漳州古城 🉑带狗 🆓 福建省漳州市芗城区新华西路中山公园东 💡:电车可以🧭: 📍特来电充电站(彩虹」",
+    "evidence_level": "同篇笔记提及",
+    "basis": "离线回扫已采笔记",
     "risk_hint": "",
     "verified_at": null
    },
@@ -80374,7 +80374,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "pop": {
     "notes": 11,
     "likes": 126,
@@ -80497,10 +80497,10 @@
     "computed_at": "2026-11-09 15:56"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
+    "policy": "allowed",
+    "evidence": "小红书笔记（6ab40c80000000000a022c9d）：「沿途也没啥风景 感觉特地跑一趟意义不太大[叹气R] [赞R][赞R][赞R]武夷山几乎所有地方都是宠物友好 吃的也很棒 住的也很棒！！ 🏨住的这家酒店其实一年前就想去住但是一直没时间 这次终于去成了 酒店环境超级无敌好……公区水池里很多大」",
+    "evidence_level": "同篇笔记提及",
+    "basis": "离线回扫已采笔记",
     "risk_hint": "",
     "verified_at": null
    },
@@ -80553,7 +80553,7 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "pop": {
     "notes": 1,
     "likes": 1,
