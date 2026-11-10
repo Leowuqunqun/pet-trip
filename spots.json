@@ -18350,13 +18350,13 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 39 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
    "pending": [
     "dog",
     "overnight"
    ],
-   "heat_basis": "点名搜索 39 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "poi_type": "体育休闲服务;休闲场所;休闲场所",
    "poi_name": "灵山美人靠农家乐",
    "poi_type_dist_m": 63,
@@ -18977,12 +18977,12 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 40 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
    "pending": [
     "overnight"
    ],
-   "heat_basis": "点名搜索 40 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "poi_type": "住宿服务;住宿服务相关;住宿服务相关",
    "poi_name": "黄山太平湖景度假民宿(水上娱乐中心店)",
    "poi_type_dist_m": 1,
@@ -20085,14 +20085,14 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 39 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
    "pending": [
     "dog",
     "overnight",
     "photos"
    ],
-   "heat_basis": "点名搜索 39 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "poi_type": "科教文化服务;传媒机构;传媒机构",
    "poi_name": "杨家堂村史馆",
    "poi_type_dist_m": 0,
@@ -36903,9 +36903,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 37 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 37 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": {
@@ -37015,9 +37015,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 36 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 36 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": {
@@ -37384,9 +37384,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 35 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 35 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": {
@@ -48174,9 +48174,9 @@
    "pop": {
     "notes": 0,
     "likes": 0,
-    "basis": "点名搜索 35 条笔记，无一条标题带该地名"
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
-   "heat_basis": "点名搜索 35 条笔记，无一条标题带该地名",
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名",
    "rating": null,
    "rating_src": null,
    "heat": {
@@ -56319,7 +56319,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 11,
+    "likes": 4511
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -56329,7 +56332,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 11,
+    "likes": 4511,
+    "basis": "小红书点名搜索 11 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 11 条相关笔记"
   },
   {
    "id": "x-沙溪古镇",
@@ -59419,7 +59428,10 @@
     "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 20
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -59429,7 +59441,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 1,
+    "likes": 20,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-大圩星月湿地",
@@ -59509,7 +59527,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 9,
+    "likes": 267
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -59519,7 +59540,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 9,
+    "likes": 267,
+    "basis": "小红书点名搜索 9 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 9 条相关笔记"
   },
   {
    "id": "x-中国宜兴陶瓷博物馆",
@@ -63769,7 +63796,10 @@
     "玩水",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 39
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -63779,7 +63809,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 4,
+    "likes": 39,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-徽州府衙",
@@ -66760,7 +66796,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -66770,7 +66809,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-建德云漫松间温泉美宿",
@@ -71973,7 +72018,10 @@
     "玩水",
     "溯溪"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 7
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -71983,7 +72031,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 2,
+    "likes": 7,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-黄山太平湖沐心度假酒店",
@@ -72140,7 +72194,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 19
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72150,7 +72207,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 1,
+    "likes": 19,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-马仁奇峰景区",
@@ -72467,7 +72530,10 @@
    "scenes": [
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72477,7 +72543,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-九华山德懋堂酒店",
@@ -72623,7 +72695,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 452
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72633,7 +72708,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 2,
+    "likes": 452,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-九华山风景区",
@@ -72696,7 +72777,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 69
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -72706,7 +72790,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 2,
+    "likes": 69,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-黄山太平湖漫心府",
@@ -73357,7 +73447,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 7,
+    "likes": 48
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -73367,7 +73460,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 7,
+    "likes": 48,
+    "basis": "小红书点名搜索 7 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 7 条相关笔记"
   },
   {
    "id": "x-合肥岸上草原",
@@ -73449,7 +73548,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 7,
+    "likes": 399
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -73459,7 +73561,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 7,
+    "likes": 399,
+    "basis": "小红书点名搜索 7 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 7 条相关笔记"
   },
   {
    "id": "x-骆岗公园",
@@ -73709,7 +73817,10 @@
     "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 320
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -73719,7 +73830,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 320,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-世纪公园",
@@ -75737,7 +75854,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 13,
+    "likes": 138
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -75747,7 +75867,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 13,
+    "likes": 138,
+    "basis": "小红书点名搜索 13 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 13 条相关笔记"
   },
   {
    "id": "x-下湖水库",
@@ -75972,7 +76098,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 106
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -75982,7 +76111,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 8,
+    "likes": 106,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-和平公园",
@@ -76367,7 +76502,10 @@
    "scenes": [
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -76377,7 +76515,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit"
+   "dog_tier": "explicit",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-安庆古城",
@@ -76765,7 +76909,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 4
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -76775,7 +76922,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 4,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-花筑·天柱山竹篱茅舍民宿",
