@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
-<title>带狗去哪儿 · 江浙沪皖</title>
+<title>带狗去哪儿 · 从上海出发</title>
 <style>
 *,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -694,7 +694,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     </div>
     <div class="filters" id="filters">
       <label class="chip-wrap">单程 ≤ <b id="range-out">5.0</b>h
-        <input type="range" id="range" min="1" max="6" step="0.5" value="5">
+        <input type="range" id="range" min="1" max="13" step="0.5" value="5">
       </label>
       <button class="chip" data-f="night" aria-pressed="false">能过夜</button>
       <button class="chip" id="fpanel-toggle" aria-pressed="false" aria-expanded="false">筛选 <b id="fpanel-n"></b></button>
@@ -709,6 +709,11 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       <div class="fp-title">带狗</div>
       <button class="chip" data-dog="explicit" aria-pressed="false">明确友好</button>
       <button class="chip" data-dog="default" aria-pressed="false">默认允许</button>
+      <!-- 「去哪儿」：福建/山东/江西的点位已经入库，但筛选条上原来没有任何入口，
+           只能在图上放大缩小去找——对"扩到全国"等于没做。按省不设门槛（江西只有 4 个
+           也照样列），因为这里的目的正是让人**看见**新省份。 -->
+      <div class="fp-title">去哪儿</div>
+      <div id="fpanel-provinces" style="display:contents"></div>
     </div>
     <!-- 一张图上全都有，靠图标分类型：帐篷=能睡的营地，树=公园… -->
     <div class="legend" id="legend"></div>
@@ -816,7 +821,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, kinds:{}, scenes:{}, dogTier:{}, active:null, trip:[]};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:5, night:false, dog:false, kinds:{}, scenes:{}, dogTier:{}, provinces:{}, active:null, trip:[]};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -908,6 +913,9 @@ function syncSummary(){
       out.push('<button class="fsum" data-clear-dog="'+esc(k)+'">'+lb+'<span class="x">✕</span></button>');
     }
   });
+  Object.keys(STATE.provinces).forEach(function(k){
+    if(STATE.provinces[k]) out.push('<button class="fsum" data-clear-province="'+esc(k)+'">'+esc(k)+'<span class="x">✕</span></button>');
+  });
   Object.keys(STATE.kinds).forEach(function(k){
     if(STATE.kinds[k]) out.push('<button class="fsum" data-clear-kind="'+esc(k)+'">'+esc(KIND_LABEL[k]||k)+'<span class="x">✕</span></button>');
   });
@@ -929,6 +937,9 @@ function syncFilterUI(){
   Array.prototype.forEach.call(document.querySelectorAll(".chip[data-dog]"), function(b){
     b.setAttribute("aria-pressed", STATE.dogTier[b.getAttribute("data-dog")] ? "true" : "false");
   });
+  Array.prototype.forEach.call(document.querySelectorAll(".chip[data-province]"), function(b){
+    b.setAttribute("aria-pressed", STATE.provinces[b.getAttribute("data-province")] ? "true" : "false");
+  });
   Array.prototype.forEach.call(document.querySelectorAll(".legend [data-kind]"), function(b){
     b.setAttribute("aria-pressed", kindActive(b.getAttribute("data-kind")) ? "true" : "false");
   });
@@ -949,6 +960,8 @@ function match(s){
               (tier === "unknown" && dt.indexOf("default") >= 0);
     if(!hit) return false;
   }
+  var pv = Object.keys(STATE.provinces).filter(function(k){ return STATE.provinces[k]; });
+  if(pv.length && pv.indexOf(s.province || "") < 0) return false;
   if(!sceneActive(s.scenes)) return false;
   if(!kindActive(s.kind)) return false;
   return true;
@@ -1013,6 +1026,27 @@ function renderCards(list, totalAll){
         box.innerHTML = '<div class="empty">' + esc(ORIGIN.name) + '出发 ' + STATE.hours.toFixed(1) +
           ' 小时内还没有点位。<br>全国的点还在采集中，先把单程上限拉大看看，' +
           '或者点左上角换回上海。</div>';
+        return;
+      }
+    }
+    /* 选了省份却一个点都没有：几乎一定是车程上限比这些省份的最近点还短
+       （福建/山东/江西 的最近点都在 5h 以外）。只写一句"把单程时长拉长"等于
+       让用户自己去拖滑块——实测点"福建"就是这么得到 0 个点的，入口形同虚设。
+       这里直接给一个"放宽到能看见第一个点"的按钮。 */
+    var pvSel = Object.keys(STATE.provinces).filter(function(k){ return STATE.provinces[k]; });
+    if(pvSel.length){
+      var need = null;
+      (DATA.spots||[]).forEach(function(s){
+        if(pvSel.indexOf(s.province||"") < 0) return;
+        var dr0 = driveInfo(s); if(!dr0) return;
+        if(need === null || dr0.hours_oneway < need) need = dr0.hours_oneway;
+      });
+      if(need !== null && need > STATE.hours){
+        var fixed = Math.min(13, Math.ceil(need*2)/2);
+        box.innerHTML = '<div class="empty">' + esc(pvSel.join("、")) + ' 的点都在 ' +
+          STATE.hours.toFixed(1) + ' 小时以外（最近的约 ' + need.toFixed(1) + 'h）。<br>' +
+          '<button class="fsum" data-fix-hours="' + fixed.toFixed(1) + '" style="margin-top:8px">' +
+          '把单程放宽到 ' + fixed.toFixed(1) + 'h</button></div>';
         return;
       }
     }
@@ -1275,6 +1309,22 @@ function renderSceneBar(){
   el("fpanel-scenes").innerHTML = html;
 }
 
+/* 省份筛选条。与场景条不同，这里**不设 20 条门槛**：门槛的作用是避免"筛出 3 个结果"
+   的按钮，但省份正是"让人看见新扩的地区"用的，江西只有 4 个点也必须能点到。
+   排序按点位数由多到少，浙江/江苏/安徽/上海 在前，福建/山东/江西 在后。 */
+function renderProvinceBar(){
+  var counts = {};
+  (DATA.spots||[]).forEach(function(s){
+    var pv = s.province; if(!pv) return;
+    counts[pv] = (counts[pv]||0) + 1;
+  });
+  var order = Object.keys(counts).sort(function(a,b){ return counts[b]-counts[a]; });
+  el("fpanel-provinces").innerHTML = order.map(function(k){
+    return '<button class="chip" data-province="'+esc(k)+'" aria-pressed="false">'+
+             esc(k)+' <b style="font-weight:600;opacity:.6">'+counts[k]+'</b></button>';
+  }).join("");
+}
+
 function renderLegend(){
   var box = el("legend"); if(!box) return;
   box.innerHTML = Object.keys(KIND_LABEL).filter(function(k){
@@ -1505,6 +1555,7 @@ function bind(){
     if(sum){
       if(sum.hasAttribute("data-clear-scene")) STATE.scenes[sum.getAttribute("data-clear-scene")] = false;
       if(sum.hasAttribute("data-clear-dog")) STATE.dogTier[sum.getAttribute("data-clear-dog")] = false;
+      if(sum.hasAttribute("data-clear-province")) STATE.provinces[sum.getAttribute("data-clear-province")] = false;
       if(sum.hasAttribute("data-clear-kind")) STATE.kinds[sum.getAttribute("data-clear-kind")] = false;
       PLAN.dirty = true; syncFilterUI(); render(); return;
     }
@@ -1522,6 +1573,8 @@ function bind(){
       STATE.scenes[b.getAttribute("data-scene")] = !on;
     } else if(b.hasAttribute("data-dog")){
       STATE.dogTier[b.getAttribute("data-dog")] = !on;
+    } else if(b.hasAttribute("data-province")){
+      STATE.provinces[b.getAttribute("data-province")] = !on;
     } else {
       var f = b.getAttribute("data-f");
       if(f==="night") STATE.night = !on;
@@ -1534,6 +1587,14 @@ function bind(){
   el("filters").addEventListener("click", onChipClick);
   el("fpanel").addEventListener("click", onChipClick);
   el("list").addEventListener("click", function(e){
+    /* 空状态里的一键放宽车程 */
+    var fx = e.target.closest("[data-fix-hours]");
+    if(fx){
+      STATE.hours = parseFloat(fx.getAttribute("data-fix-hours"));
+      var rg = el("range"); if(rg) rg.value = String(STATE.hours);
+      el("range-out").textContent = STATE.hours.toFixed(1);
+      PLAN.dirty = true; render(); return;
+    }
     /* 三层分流：行程按钮 → 来源链接 → 卡片本体。
        顺序不能反，否则点"＋ 行程"会顺带弹详情。 */
     var tb = e.target.closest("[data-trip]");
@@ -2454,6 +2515,7 @@ fetch("spots.json", {cache:"no-cache"})
     bindTrip();
     renderLegend();
     renderSceneBar();
+    renderProvinceBar();
     bindLegend();
     scrollFade(el("filters"));
     scrollFade(el("legend"));
