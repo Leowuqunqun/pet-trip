@@ -2135,10 +2135,11 @@ function buildPlans(){
     return b.scene - a.scene;
   }).slice(0,8);
 
-  var i = 0;
-  function next(){
-    if(i>=shortlist.length) return Promise.resolve();
-    var c = shortlist[i++];
+  /* 天气**并发**取，不要串行。
+     2026-11-10 实测：Open-Meteo 从不到 1 秒变成单次 7–14 秒，而这里是 8 个片区一个接一个取，
+     于是「打开就是本周推荐」变成盯着「正在算」一两分钟——串行把延迟乘了 8 倍。
+     并发后总耗时≈最慢那一次；单个失败仍然只影响自己那片区（下面的 catch 保持原样）。 */
+  return Promise.all(shortlist.map(function(c){
     return fetchWeek(c.centroid).then(function(w){
       c.now = w.current || null;
       c.wFri = dayOf(w, wk.fri); c.wSat = dayOf(w, wk.sat); c.wSun = dayOf(w, wk.sun);
@@ -2146,10 +2147,8 @@ function buildPlans(){
     }).catch(function(e){
       c.now=null; c.wFri=c.wSat=c.wSun=null; c.weatherOk=false;
       c.weatherErr = (e&&e.message)||"取不到";
-    }).then(next);
-  }
-
-  return next().then(function(){
+    });
+  })).then(function(){
     /* 综合分 = 景色 × 天气。天气好但景色一般，和景色好但天气一般，会拉平到一起比。
        天气取不到就按 0.4 的保底系数，不让"查不到"变成"直接淘汰"。 */
     shortlist.forEach(function(c){
