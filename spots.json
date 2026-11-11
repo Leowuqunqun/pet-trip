@@ -95936,8 +95936,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -95945,9 +95947,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "⛺露营友好：公园中间的小松树附近孩子特别多，而且因为树荫多，比其他地方凉快不少，是天然的\"遛娃据点\"",
+      "note_id": "6ac390f4000000001b01cfe5",
+      "author": "C44",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac390f4000000001b01cfe5"
+     },
+     {
+      "kind": "camp",
+      "quote": "💡小贴士： · 想露营建议选离湖有一定距离的大草地，湖边小虫子真的很多，别问我怎么知道的😂 · 时间充裕的话，玩完还可以去旁边的汤湖环湖绿道骑行散步，风景一样绝绝子",
+      "note_id": "6ac390f4000000001b01cfe5",
+      "author": "C44",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac390f4000000001b01cfe5"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -95955,6 +95973,11 @@
    "poi_name": "藏龙岛国家湿地公园",
    "poi_type": "腾讯POI:旅游景点:风景名胜",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6ac390f4000000001b01cfe5",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=114.415467,30.419367",
@@ -95964,9 +95987,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 6,
+    "likes": 440
+   },
    "rating": null,
    "photos": [
     {
@@ -95984,7 +96012,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 6,
+    "likes": 440,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
   },
   {
    "id": "x-蓝天公园",
@@ -96042,7 +96076,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 70
+   },
    "rating": null,
    "photos": [
     {
@@ -96060,7 +96097,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 5,
+    "likes": 70,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-哈尔滨市政府广场",
@@ -96118,7 +96161,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 5
+   },
    "rating": null,
    "photos": [
     {
@@ -96136,7 +96182,13 @@
    ],
    "dog_tier": "default",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 1,
+    "likes": 5,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-哈尔滨黛茜花园",
@@ -96192,7 +96244,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 106
+   },
    "rating": null,
    "photos": [
     {
@@ -96210,7 +96265,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "poi_type:其余",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 4,
+    "likes": 106,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-金河湾壹号花园",
@@ -96268,7 +96329,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [
     {
@@ -96286,7 +96350,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   }
  ],
  "out_of_range": [
