@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 813,
+  "count": 819,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -95329,6 +95329,464 @@
     "basis": "小红书点名搜索 6 条相关笔记"
    },
    "heat_basis": "小红书点名搜索 6 条相关笔记"
+  },
+  {
+   "id": "x-鼓架山郊野公园",
+   "name": "鼓架山郊野公园",
+   "kind": "park",
+   "tags": [],
+   "province": "湖北",
+   "city": "武汉",
+   "gcj": [
+    114.467001,
+    30.558417
+   ],
+   "drive": {
+    "hours_oneway": 8.61,
+    "km": 768.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-11 14:41"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 69cd5357 正文明确写带狗到该点（explicit_ok），按原文记录｜原文：「超大草坪也太适合小狗了吧！今天天气好马上带小狗出发｜🧭导航：鼓架山郊野公园」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "鼓架山郊野公园",
+   "poi_type": "OSM:peak",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=114.467001,30.558417",
+     "poi": "鼓架山郊野公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "山野徒步"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/5476f98be5bd/1.jpg",
+     "title": "汪在严西湖鼓架山开心的半天🐕💕",
+     "author": "闲来无事溜个Loki",
+     "note_url": "https://www.xiaohongshu.com/explore/6ac4f806000000000a01ec15?xsec_token=ABfydQskDtVWYgR8BHryAma3FiOLTJoEGwbRtsW4ZMZ58=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {}
+  },
+  {
+   "id": "x-沣西·沣河生态公园",
+   "name": "沣西·沣河生态公园",
+   "kind": "park",
+   "tags": [],
+   "province": "陕西",
+   "city": "西安",
+   "gcj": [
+    108.73717,
+    34.209032
+   ],
+   "drive": {
+    "hours_oneway": 15.41,
+    "km": 1399.4,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-11 14:41"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 6ad182bf 正文明确写带狗到该点（explicit_ok），按原文记录｜原文：「这里更适合带狗狗散步、打卡拍照、慢悠悠逛秋景！！」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "沣西·沣河生态公园",
+   "poi_type": "OSM:river",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=108.73717,34.209032",
+     "poi": "沣西·沣河生态公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/7d65de1a46a2/1.jpg",
+     "title": "西安适合狗狗玩的宠物友好公园 小崽崽6仔",
+     "author": "2天前",
+     "note_url": "https://www.xiaohongshu.com/explore/6af072f8000000000300427a?xsec_token=ABhusLQ6FwfyXKCen3u7NQHyC9lEDTJTCanhkNwSz2-GE=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {}
+  },
+  {
+   "id": "x-鹤鸣湖公园",
+   "name": "鹤鸣湖公园",
+   "kind": "park",
+   "tags": [],
+   "province": "陕西",
+   "city": "西安",
+   "gcj": [
+    108.827664,
+    34.196219
+   ],
+   "drive": {
+    "hours_oneway": 14.96,
+    "km": 1390.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-11 14:41"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 6acd8141 正文明确写带狗到该点（explicit_ok），按原文记录｜原文：「终于在西安南郊挖到周末零拥挤的神仙遛狗地｜📍鹤鸣湖公园」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "鹤鸣湖公园",
+   "poi_type": "OSM:lake",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=108.827664,34.196219",
+     "poi": "鹤鸣湖公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯",
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/00fc8d96129b/1.jpg",
+     "title": "鹤鸣湖公园 你辜负了九头蛇 4小时前",
+     "author": "赞",
+     "note_url": "https://www.xiaohongshu.com/explore/6af3d5c9000000002501eeb2?xsec_token=ABGwpUG47B2MUYTOPpifzMZCoibY4PcT-KzUMyPEESG4E=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {}
+  },
+  {
+   "id": "x-净月中央公园",
+   "name": "净月中央公园",
+   "kind": "park",
+   "tags": [],
+   "province": "吉林",
+   "city": "长春",
+   "gcj": [
+    125.383454,
+    43.794201
+   ],
+   "drive": {
+    "hours_oneway": 21.59,
+    "km": 1990.0,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-11 14:41"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 6a34be8f 正文明确写带狗到该点（explicit_ok），按原文记录｜原文：「🐾 外地小狗长春行｜解锁宠物友好新路线（笔记逐点打卡净月中央公园）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "净月中央公园",
+   "poi_type": "OSM:park",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=125.383454,43.794201",
+     "poi": "净月中央公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/4b81056805d0/1.jpg",
+     "title": "长春 | 解锁宠物友好新路线",
+     "author": "请叫我张工资💰",
+     "note_url": "https://www.xiaohongshu.com/explore/6addd3ad000000002c036000?xsec_token=ABYXSRayXtF1Q9-0OdoMiRbeLJai0YjQJf7GP7DoShJdw=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {}
+  },
+  {
+   "id": "x-长春工业轨迹公园",
+   "name": "长春工业轨迹公园",
+   "kind": "park",
+   "tags": [],
+   "province": "吉林",
+   "city": "长春",
+   "gcj": [
+    125.347824,
+    43.826312
+   ],
+   "drive": {
+    "hours_oneway": 21.66,
+    "km": 1987.5,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-11 14:41"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 68dd54c7 正文明确写带狗到该点（explicit_ok），按原文记录｜原文：「长春宠物友好体验感拉满！！（笔记逐点打卡该公园）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "长春工业轨迹公园",
+   "poi_type": "OSM:park",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=125.347824,43.826312",
+     "poi": "长春工业轨迹公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/ae68d2f49e58/1.jpg",
+     "title": "长春工业轨迹公园露营｜超详解！快来看！",
+     "author": "自由风露营装备",
+     "note_url": "https://www.xiaohongshu.com/explore/69eae1e9000000001f031805?xsec_token=ABdnbX9U_bGRWR2gxNUIw-9hExxxRLeYxMEznjo5o903U=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {}
+  },
+  {
+   "id": "x-一湖三岛",
+   "name": "一湖三岛",
+   "kind": "water",
+   "tags": [],
+   "province": "黑龙江",
+   "city": "哈尔滨",
+   "gcj": [
+    126.535696,
+    45.793554
+   ],
+   "drive": {
+    "hours_oneway": 24.27,
+    "km": 2245.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-11 14:41"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 6ab34f8d 正文明确写带狗到该点（explicit_ok），按原文记录｜原文：「步行导航到一湖三岛 沿途就可以带狗狗边走边玩了！」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "一湖三岛",
+   "poi_type": "OSM:park",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=126.535696,45.793554",
+     "poi": "一湖三岛"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/9a8273e2f3f6/1.jpg",
+     "title": "哈尔滨 | 一湖三岛",
+     "author": "黄油小面包",
+     "note_url": "https://www.xiaohongshu.com/explore/6a06ad2a0000000036019e8f?xsec_token=ABxYLG03dyB-GlWOqXlZmtCfp1UInQG0gT0BKZJF9dDNk=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {}
   }
  ],
  "out_of_range": [
