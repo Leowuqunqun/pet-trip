@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 824,
+  "count": 826,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -96357,6 +96357,155 @@
     "basis": "点名搜索 20 条笔记，无一条标题带该地名"
    },
    "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
+  },
+  {
+   "id": "x-神州半岛",
+   "name": "神州半岛",
+   "kind": "scenic",
+   "tags": [],
+   "province": "海南",
+   "city": "万宁",
+   "gcj": [
+    110.36161,
+    18.68036
+   ],
+   "drive": {
+    "hours_oneway": 24.23,
+    "km": 2179.2,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 00:34"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书多篇笔记明确写带狗到该点（69931d9c 等，explicit_ok）｜原文：「P2-4📍神州半岛（可以和灯塔拍照）｜万宁带狗出游，整条海岛公路和小狗一路解锁」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "神州半岛",
+   "poi_type": "腾讯POI:地名地址:自然地名:岛屿",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=110.36161,18.68036",
+     "poi": "神州半岛"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/7b31c443fbb5/1.jpg",
+     "title": "万宁神州半岛｜带小狗感受了温柔的海边时光",
+     "author": "四喜今天去哪儿玩",
+     "note_url": "https://www.xiaohongshu.com/explore/6aeb14e0000000000300b27d?xsec_token=ABOn1qQsOOMxL8k_cTHMA7z4ZiA6cgZNalVVg_CSH3hgo=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {},
+   "geo_note": "腾讯 POI 未返回城市；神州半岛属万宁市（海南省），2026-11-12 人工补"
+  },
+  {
+   "id": "x-分界洲岛",
+   "name": "分界洲岛",
+   "kind": "scenic",
+   "tags": [],
+   "province": "海南",
+   "city": "三亚",
+   "gcj": [
+    109.434732,
+    18.301364
+   ],
+   "drive": {
+    "hours_oneway": 25.2,
+    "km": 2282.0,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 00:34"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书多篇笔记明确写带狗到该点（69931d9c 等，explicit_ok）｜原文：「📍分界洲岛（只有这一个可以上大型犬，对宠物友好）；另有笔记写服务中心签宠物协议、狗狗可带进船舱」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "分界洲岛",
+   "poi_type": "腾讯POI:旅游景点:其它旅游景点",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=109.434732,18.301364",
+     "poi": "分界洲岛"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/4385e90bb5b7/1.jpg",
+     "title": "我宣布 分界洲岛就是最适合小狗的海岛",
+     "author": "意思意思",
+     "note_url": "https://www.xiaohongshu.com/explore/69e33d4b000000001f001661?xsec_token=ABePFcHukaRMwWGeGPwsYBJGCduZ29poDlpicjVgWOMVc=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {}
   }
  ],
  "out_of_range": [
