@@ -95356,8 +95356,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -95365,9 +95367,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "这里离湖边公园草坪更近，方便露营",
+      "note_id": "6aafd2c20000000025036a5c",
+      "author": "大脸猫摸鱼",
+      "note_url": "https://www.xiaohongshu.com/explore/6aafd2c20000000025036a5c"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -95375,6 +95386,11 @@
    "poi_name": "鼓架山郊野公园",
    "poi_type": "OSM:peak",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6aafd2c20000000025036a5c",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=114.467001,30.558417",
@@ -95385,9 +95401,14 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
+    "露营",
+    "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 39
+   },
    "rating": null,
    "photos": [
     {
@@ -95405,7 +95426,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 5,
+    "likes": 39,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-沣西·沣河生态公园",
@@ -95433,8 +95460,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -95442,9 +95471,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "市区内🚗半小时可达，免费停车🅿️，可以炭火露营🏕️，秋景好看的免费滨水露营地，真的太舒服了",
+      "note_id": "6ad182bf0000000001008a61",
+      "author": "小柴迷迷",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad182bf0000000001008a61"
+     },
+     {
+      "kind": "camp",
+      "quote": "几乎没有游客，偶尔几户露营的小伙伴，超级安静",
+      "note_id": "6ad182bf0000000001008a61",
+      "author": "小柴迷迷",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad182bf0000000001008a61"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -95452,6 +95497,11 @@
    "poi_name": "沣西·沣河生态公园",
    "poi_type": "OSM:river",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6ad182bf0000000001008a61",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=108.73717,34.209032",
@@ -95461,9 +95511,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [
     {
@@ -95481,7 +95536,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-鹤鸣湖公园",
@@ -95540,7 +95601,10 @@
     "草坪遛弯",
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 28
+   },
    "rating": null,
    "photos": [
     {
@@ -95558,7 +95622,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 5,
+    "likes": 28,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-净月中央公园",
@@ -95616,7 +95686,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 153
+   },
    "rating": null,
    "photos": [
     {
@@ -95634,7 +95707,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 8,
+    "likes": 153,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-长春工业轨迹公园",
@@ -95662,8 +95741,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "official_camp",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -95671,9 +95752,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这扎营（正规营地）",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "长春工业轨迹公园露营｜超详解",
+      "note_id": "69eae1e9000000001f031805",
+      "author": "自由风露营装备",
+      "note_url": "https://www.xiaohongshu.com/explore/69eae1e9000000001f031805"
+     },
+     {
+      "kind": "camp",
+      "quote": "长春市区露营天花板🌿工业轨迹公园太好躺了",
+      "note_id": "69eae1e9000000001f031805",
+      "author": "自由风露营装备",
+      "note_url": "https://www.xiaohongshu.com/explore/69eae1e9000000001f031805"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -95681,6 +95778,11 @@
    "poi_name": "长春工业轨迹公园",
    "poi_type": "OSM:park",
    "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/69eae1e9000000001f031805",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
     {
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=125.347824,43.826312",
@@ -95690,9 +95792,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 44
+   },
    "rating": null,
    "photos": [
     {
@@ -95710,7 +95817,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 2,
+    "likes": 44,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-一湖三岛",
@@ -95768,7 +95881,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 52
+   },
    "rating": null,
    "photos": [
     {
@@ -95786,7 +95902,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 1,
+    "likes": 52,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   }
  ],
  "out_of_range": [
