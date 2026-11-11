@@ -96417,7 +96417,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 9,
+    "likes": 495
+   },
    "rating": null,
    "photos": [
     {
@@ -96436,7 +96439,13 @@
    "dog_tier": "explicit",
    "kind_src": "name",
    "access": {},
-   "geo_note": "腾讯 POI 未返回城市；神州半岛属万宁市（海南省），2026-11-12 人工补"
+   "geo_note": "腾讯 POI 未返回城市；神州半岛属万宁市（海南省），2026-11-12 人工补",
+   "pop": {
+    "notes": 9,
+    "likes": 495,
+    "basis": "小红书点名搜索 9 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 9 条相关笔记"
   },
   {
    "id": "x-分界洲岛",
@@ -96492,7 +96501,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 19,
+    "likes": 702
+   },
    "rating": null,
    "photos": [
     {
@@ -96510,7 +96522,13 @@
    ],
    "dog_tier": "explicit",
    "kind_src": "name",
-   "access": {}
+   "access": {},
+   "pop": {
+    "notes": 19,
+    "likes": 702,
+    "basis": "小红书点名搜索 19 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 19 条相关笔记"
   }
  ],
  "out_of_range": [
