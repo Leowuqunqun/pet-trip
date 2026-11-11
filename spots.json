@@ -96384,7 +96384,7 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
+    "status": "allowed_wild",
     "modes": [],
     "fee": null,
     "facilities": {
@@ -96393,9 +96393,11 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "小红书笔记 699c6a40 逐条写万宁免费露营地：「1. 神州半岛第三湾（露营胜地）…过夜实测：可过夜，是神州半岛的露营胜地」。证据指的是半岛内的第三湾（车可直达沙滩边），不是整个半岛每一处，按可野外过夜记录并在 note 里写明范围",
     "verified_at": null,
-    "evidence": []
+    "evidence": [],
+    "basis": "人工纠错（原文归属）",
+    "evidence_level": "推断（无原话）"
    },
    "sub_pois": [],
    "trips": [],
@@ -96411,7 +96413,10 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
    "heat": null,
    "rating": null,
    "photos": [
