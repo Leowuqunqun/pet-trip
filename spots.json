@@ -5442,11 +5442,11 @@
     "computed_at": "2026-11-01 21:21"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "小红书 C级UGC（笔记 69088a4e，@宠物友好推荐官冬爸队长）：「❌不可携宠：」",
+    "policy": "allowed",
+    "evidence": "原 forbidden 来自笔记 69088a4e《泰州带狗旅行》的「❌不可携宠：📍梅园」——那是**泰州梅园**，与无锡梅园开原寺同名异地（该笔记正文不含「梅园开原寺」）。按主人口径「没有明确说不能进就算宠物友好」，撤销误挂｜原文：「❌不可携宠：📍凤城河景区（望海楼）/📍梅园/📍乔园/📍溱湖湿地公园…」",
     "verified_at": null,
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "basis": "explicit_veto",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": ""
    },
    "overnight": {
@@ -5546,7 +5546,7 @@
     "人文古迹"
    ],
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "default",
    "sources": [
     {
      "platform": "amap",
@@ -56405,10 +56405,10 @@
     "computed_at": "2026-11-09 12:56"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "✨小Tip：小景点不可携宠，注意人多，夜游很好看",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "restricted",
+    "evidence": "原文是「✨小Tip：小景点不可携宠」——**通用提示**，没有点名烟雨长廊；但它是西塘古镇内的收费小景点，按受限（街区可走、内部小景点不行）记录，比整点禁入更贴近事实｜原文：「✨小Tip：小景点不可携宠，注意人多，夜游很好看！」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -56486,7 +56486,7 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "restricted",
    "pop": {
     "notes": 5,
     "likes": 43,
@@ -89056,10 +89056,10 @@
     "computed_at": "2026-11-10 20:12"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "💡得知十里长堤 不能带狗 本来想带14看日落",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "原 forbidden 的证据是「💡得知十里长堤 不能带狗」——主语是**厦门十里长堤**，不是坂头森林公园；同句没有任何关于本点的表述。按主人口径「没明确说不能进就算宠物友好」撤销｜原文：「💡得知十里长堤 不能带狗 本来想带14看日落」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -89126,7 +89126,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "default",
    "pop": {
     "notes": 2,
     "likes": 70,
@@ -89245,10 +89245,10 @@
     "computed_at": "2026-11-10 20:12"
    },
    "dog": {
-    "policy": "forbidden",
-    "evidence": "💡得知十里长堤 不能带狗 本来想带14看日落",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
+    "policy": "allowed",
+    "evidence": "与坂头森林公园同一句证据（十里长堤），本点无任何禁入表述。撤销误挂，等新证据｜原文：「💡得知十里长堤 不能带狗 本来想带14看日落」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -89315,7 +89315,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "veto",
+   "dog_tier": "default",
    "pop": {
     "notes": 7,
     "likes": 121,
