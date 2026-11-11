@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 819,
+  "count": 824,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -95909,6 +95909,384 @@
     "basis": "小红书点名搜索 1 条相关笔记"
    },
    "heat_basis": "小红书点名搜索 1 条相关笔记"
+  },
+  {
+   "id": "x-藏龙岛国家湿地公园",
+   "name": "藏龙岛国家湿地公园",
+   "kind": "park",
+   "tags": [],
+   "province": "湖北",
+   "city": "武汉",
+   "gcj": [
+    114.415467,
+    30.419367
+   ],
+   "drive": {
+    "hours_oneway": 8.07,
+    "km": 764.3,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 00:17"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 68c7bcfa 正文明确写到该点带狗（explicit_ok）｜原文：「免费骑行+遛狗天堂！｜📍 地点：武汉藏龙岛国家湿地公园」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "藏龙岛国家湿地公园",
+   "poi_type": "腾讯POI:旅游景点:风景名胜",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=114.415467,30.419367",
+     "poi": "藏龙岛国家湿地公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/725a86b50e13/1.jpg",
+     "title": "宠物友好｜藏龙岛国家湿地公园 淘叮叮小猪迪🐷",
+     "author": "20",
+     "note_url": "https://www.xiaohongshu.com/explore/6921e50f000000001e001d67?xsec_token=ABcECVWmFTXGCIqyK1nDlY8IMwmxT8sBCSKOlwzlDoiHA=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {}
+  },
+  {
+   "id": "x-蓝天公园",
+   "name": "蓝天公园",
+   "kind": "park",
+   "tags": [],
+   "province": "吉林",
+   "city": "长春",
+   "gcj": [
+    125.202762,
+    43.89457
+   ],
+   "drive": {
+    "hours_oneway": 21.03,
+    "km": 1982.4,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 00:17"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 6a34be8f 正文明确写到该点带狗（explicit_ok）｜原文：「🐾 外地小狗长春行｜解锁宠物友好新路线（笔记逐点打卡蓝天公园）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "蓝天公园",
+   "poi_type": "腾讯POI:旅游景点:公园",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=125.202762,43.89457",
+     "poi": "蓝天公园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/c74b569d953e/1.jpg",
+     "title": "长春蓝天公园真的太出片了！",
+     "author": "🔑Key宠摄",
+     "note_url": "https://www.xiaohongshu.com/explore/69e5f3ca000000001a02a935?xsec_token=AB40QXlXY7kIVgjVTa85g5d8-aw_8yEgLrGGAtpqkRDJg=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {}
+  },
+  {
+   "id": "x-哈尔滨市政府广场",
+   "name": "哈尔滨市政府广场",
+   "kind": "park",
+   "tags": [],
+   "province": "黑龙江",
+   "city": "哈尔滨",
+   "gcj": [
+    126.536018,
+    45.800351
+   ],
+   "drive": {
+    "hours_oneway": 23.48,
+    "km": 2239.9,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 00:17"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 薄省-批次3 正文明确写到该点带狗（no_veto_default）｜原文：「市区开车半小时内即可抵达…超大草坪，狗狗尽情撒欢！｜📍地点位于哈尔滨市政府广场」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "哈尔滨市政府广场",
+   "poi_type": "腾讯POI:旅游景点:城市广场",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=126.536018,45.800351",
+     "poi": "哈尔滨市政府广场"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "草坪遛弯"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/ddc41bde0f01/1.jpg",
+     "title": "【哈尔滨遛狗地图】市区内秋末遛狗神地🍁",
+     "author": "乔布斯是天使",
+     "note_url": "https://www.xiaohongshu.com/explore/6adcbf41000000002c019cca?xsec_token=ABMppB7EcmewWs0H1TLOx2Gf7fkZXgdUp8DB1przVvC7I=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "default",
+   "kind_src": "name",
+   "access": {}
+  },
+  {
+   "id": "x-哈尔滨黛茜花园",
+   "name": "哈尔滨黛茜花园",
+   "kind": "scenic",
+   "tags": [],
+   "province": "黑龙江",
+   "city": "哈尔滨",
+   "gcj": [
+    126.724818,
+    45.67276
+   ],
+   "drive": {
+    "hours_oneway": 23.3,
+    "km": 2224.9,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 00:17"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 6aa7e1dd 正文明确写到该点带狗（explicit_ok）｜原文：「导航🧭哈尔滨黛茜花园｜不查证件不查犬证直接进，人类付费，小狗免费～」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "哈尔滨黛茜花园",
+   "poi_type": "腾讯POI:娱乐休闲:其它娱乐休闲",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=126.724818,45.67276",
+     "poi": "哈尔滨黛茜花园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/7e1b8ca5128b/1.jpg",
+     "title": "哈尔滨黛茜花园/大狗也宠物友好！！！",
+     "author": "爆珠星球",
+     "note_url": "https://www.xiaohongshu.com/explore/6aa7e1dd0000000012002430?xsec_token=ABDfmq0Niul8WxmAK9iVTdPRtpy1eD32htPjetvbsbY54=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "poi_type:其余",
+   "access": {}
+  },
+  {
+   "id": "x-金河湾壹号花园",
+   "name": "金河湾壹号花园",
+   "kind": "water",
+   "tags": [],
+   "province": "黑龙江",
+   "city": "哈尔滨",
+   "gcj": [
+    126.528989,
+    45.79777
+   ],
+   "drive": {
+    "hours_oneway": 23.48,
+    "km": 2240.1,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 00:17"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 6ab34f8d 正文明确写到该点带狗（explicit_ok）｜原文：「航到金河湾壹号花园 旁边有一个免费停车场…沿途就可以带狗狗边走边玩了！」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "金河湾壹号花园",
+   "poi_type": "腾讯POI:旅游景点:公园",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=126.528989,45.79777",
+     "poi": "金河湾壹号花园"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水"
+   ],
+   "heat": null,
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/af89cf8cfff9/1.jpg",
+     "title": "哈尔滨·一湖三岛｜带狗狗来小洱海吧！🌊",
+     "author": "六百六万的日记",
+     "note_url": "https://www.xiaohongshu.com/explore/6ab34f8d000000000a023f1d?xsec_token=ABQCUOu85M91pk9lPsyvPL-AmCcWtsU_gFwkCB-tBEMuM=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {}
   }
  ],
  "out_of_range": [
