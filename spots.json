@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 826,
+  "count": 832,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -96529,6 +96529,528 @@
     "basis": "小红书点名搜索 19 条相关笔记"
    },
    "heat_basis": "小红书点名搜索 19 条相关笔记"
+  },
+  {
+   "id": "x-贺兰山1958创意产业休闲区",
+   "name": "贺兰山1958创意产业休闲区",
+   "kind": "scenic",
+   "tags": [],
+   "province": "宁夏",
+   "city": "银川",
+   "gcj": [
+    106.001448,
+    38.702361
+   ],
+   "drive": {
+    "hours_oneway": 20.4,
+    "km": 1945.9,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 08:52"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 69d09487 明确写到该点带狗情况，按原文记录｜原文：「✅宠物友好！全程可以带狗，毛孩子自由撒欢（银川遛狗笔记，点名该园区）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "笔记里有人在这过夜",
+    "verified_at": null,
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "园区不要门票，能逛能拍能露营",
+      "note_id": "6ac86fb30000000002013eb9",
+      "author": "三石不赶路",
+      "note_url": "https://www.xiaohongshu.com/explore/6ac86fb30000000002013eb9"
+     }
+    ],
+    "evidence_level": "笔记原话"
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "贺兰山1958创意产业休闲区",
+   "poi_type": "腾讯POI:旅游景点:景点公园附属",
+   "sources": [
+    {
+     "platform": "xiaohongshu",
+     "url": "https://www.xiaohongshu.com/explore/6ac86fb30000000002013eb9",
+     "title": "小红书笔记（犬政策/过夜判定的出处）"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=106.001448,38.702361",
+     "poi": "贺兰山1958创意产业休闲区"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "露营",
+    "过夜",
+    "山野徒步"
+   ],
+   "heat": {
+    "notes": 2,
+    "likes": 44
+   },
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/9571ddbb35c3/1.jpg",
+     "title": "银川遛狗｜带修勾闯进贺兰山1958的工业浪漫",
+     "author": "桃酥酥~",
+     "note_url": "https://www.xiaohongshu.com/explore/69d09487000000001f001300?xsec_token=AB6Drfoi68ErSSH0jVKqoO01yjXSCucDSI9qFDGjJF7Y0=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {},
+   "pop": {
+    "notes": 2,
+    "likes": 44,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
+  },
+  {
+   "id": "x-拜寺口双塔",
+   "name": "拜寺口双塔",
+   "kind": "scenic",
+   "tags": [],
+   "province": "宁夏",
+   "city": "银川",
+   "gcj": [
+    105.967574,
+    38.681493
+   ],
+   "drive": {
+    "hours_oneway": 20.53,
+    "km": 1951.0,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 08:52"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 6ac1eb99 明确写到该点带狗情况，按原文记录｜原文：「景区免费，停车收费…泡芙和彩蛋也是爬过贺兰山的小狗了（带狗进景区）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "拜寺口双塔",
+   "poi_type": "腾讯POI:旅游景点:风景名胜",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=105.967574,38.681493",
+     "poi": "拜寺口双塔"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "人文古迹"
+   ],
+   "heat": {
+    "notes": 11,
+    "likes": 332
+   },
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/2db4e41773df/1.jpg",
+     "title": "小狗解锁新地点～贺兰山拜寺口双塔",
+     "author": "窦十六",
+     "note_url": "https://www.xiaohongshu.com/explore/69f59dd30000000035027fc0?xsec_token=ABvf1L6ic633fZmwymyqwPTdYlyO_8E4ssDl5-RDu9ttY=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "name",
+   "access": {},
+   "pop": {
+    "notes": 11,
+    "likes": 332,
+    "basis": "小红书点名搜索 11 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 11 条相关笔记"
+  },
+  {
+   "id": "x-西夏陵",
+   "name": "西夏陵",
+   "kind": "scenic",
+   "tags": [],
+   "province": "宁夏",
+   "city": "银川",
+   "gcj": [
+    106.019437,
+    38.442964
+   ],
+   "drive": {
+    "hours_oneway": 20.07,
+    "km": 1922.5,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 08:52"
+   },
+   "dog": {
+    "policy": "restricted",
+    "evidence": "小红书笔记 6abf6c56 明确写到该点带狗情况，按原文记录｜原文：「📍银川西夏陵…景区外有停狗位和停猫位，笼子都带锁（狗不能进景区，只能寄存在门口）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "西夏陵",
+   "poi_type": "腾讯POI:旅游景点:国家级景点",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=106.019437,38.442964",
+     "poi": "西夏陵"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "人文古迹"
+   ],
+   "heat": {
+    "notes": 3,
+    "likes": 577
+   },
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/84a317e0d699/1.jpg",
+     "title": "宁夏｜银川·西夏王陵",
+     "author": "皮总是一只边牧",
+     "note_url": "https://www.xiaohongshu.com/explore/699d0cfa000000001b0179e5?xsec_token=ABKbvGSRuUKOxwhV2fxpxxPFPwXCTI6teanBRbt4S7Too=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "restricted",
+   "kind_src": "poi_type:旅游景点",
+   "access": {},
+   "pop": {
+    "notes": 3,
+    "likes": 577,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
+  },
+  {
+   "id": "x-镇北堡西部影城",
+   "name": "镇北堡西部影城",
+   "kind": "village",
+   "tags": [],
+   "province": "宁夏",
+   "city": "银川",
+   "gcj": [
+    106.072621,
+    38.615267
+   ],
+   "drive": {
+    "hours_oneway": 20.25,
+    "km": 1935.0,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 08:52"
+   },
+   "dog": {
+    "policy": "restricted",
+    "evidence": "小红书笔记 6abf6c56 明确写到该点带狗情况，按原文记录｜原文：「📍银川近镇北堡影视城…也允许宠物入园，不过大型犬需提前询问」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "镇北堡西部影城",
+   "poi_type": "腾讯POI:旅游景点:国家级景点",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=106.072621,38.615267",
+     "poi": "镇北堡西部影城"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": {
+    "notes": 6,
+    "likes": 322
+   },
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/cdf7085ca991/1.jpg",
+     "title": "带小狗自驾游vlog一镇北堡西部影城 锅铁",
+     "author": "20",
+     "note_url": "https://www.xiaohongshu.com/explore/6927fa3d000000001e00e714?xsec_token=ABr_dnxFLxdP5x5J6e4x-rAhzQsz_QJ_Up5IcyIvKYajc=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "restricted",
+   "kind_src": "name",
+   "access": {},
+   "pop": {
+    "notes": 6,
+    "likes": 322,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
+  },
+  {
+   "id": "x-黄河宿集",
+   "name": "黄河宿集",
+   "kind": "scenic",
+   "tags": [],
+   "province": "宁夏",
+   "city": "中卫",
+   "gcj": [
+    104.982127,
+    37.450445
+   ],
+   "drive": {
+    "hours_oneway": 21.12,
+    "km": 2012.3,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 08:52"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "小红书笔记 69a83add 明确写到该点带狗情况，按原文记录｜原文：「✅黄河宿集（带狗改道前往，原文把它列为可去的替代目的地）」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "黄河宿集",
+   "poi_type": "腾讯POI:旅游景点:其它旅游景点",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=104.982127,37.450445",
+     "poi": "黄河宿集"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": {
+    "notes": 12,
+    "likes": 545
+   },
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/253c738f0530/1.jpg",
+     "title": "宁夏中卫宠物友好之【黄河宿集】",
+     "author": "幺鸡&白脸&汉堡是一家🥕",
+     "note_url": "https://www.xiaohongshu.com/explore/6a466150000000001503e677?xsec_token=AB5wuiqF-t346CwDmj_cgCqXtLL7-SFJiTwSZPA9wkjj8=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "explicit",
+   "kind_src": "poi_type:旅游景点",
+   "access": {},
+   "pop": {
+    "notes": 12,
+    "likes": 545,
+    "basis": "小红书点名搜索 12 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 12 条相关笔记"
+  },
+  {
+   "id": "x-沙坡头",
+   "name": "沙坡头",
+   "kind": "scenic",
+   "tags": [],
+   "province": "宁夏",
+   "city": "中卫",
+   "gcj": [
+    105.00186,
+    37.470071
+   ],
+   "drive": {
+    "hours_oneway": 21.2,
+    "km": 2016.1,
+    "source": "tencent 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 08:52"
+   },
+   "dog": {
+    "policy": "forbidden",
+    "evidence": "小红书笔记 69a83add 明确写到该点带狗情况，按原文记录｜原文：「❌沙坡头，金沙岛不能带狗，羊皮筏子也无法体验」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "沙坡头",
+   "poi_type": "腾讯POI:旅游景点:国家级景点",
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=105.00186,37.470071",
+     "poi": "沙坡头"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [],
+   "heat": {
+    "notes": 3,
+    "likes": 22
+   },
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/6000b2162417/1.jpg",
+     "title": "小狗自驾攻略｜中卫沙坡头🌵10r解锁沙漠大片",
+     "author": "小狗奶茶出门啦",
+     "note_url": "https://www.xiaohongshu.com/explore/6a6351430000000005038453?xsec_token=ABdUQAuJS4obeZKIA5J285hUtXN1l7beylvRV1yZxg3jY=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "dog_tier": "veto",
+   "kind_src": "poi_type:旅游景点",
+   "access": {},
+   "pop": {
+    "notes": 3,
+    "likes": 22,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   }
  ],
  "out_of_range": [
