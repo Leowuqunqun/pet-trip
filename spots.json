@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 832,
+  "count": 833,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -97051,6 +97051,96 @@
     "basis": "小红书点名搜索 3 条相关笔记"
    },
    "heat_basis": "小红书点名搜索 3 条相关笔记"
+  },
+  {
+   "id": "x-北长滩",
+   "name": "北长滩",
+   "kind": "scenic",
+   "tags": [],
+   "province": "宁夏",
+   "city": "中卫",
+   "gcj": [
+    104.749087,
+    37.347006
+   ],
+   "drive": {
+    "hours_oneway": 23.18,
+    "km": 2007.7,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-12 09:06"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": "",
+    "verified_at": null
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [],
+   "geo_src": "amap",
+   "poi_name": "北长滩",
+   "poi_type": "旅游景点:风景名胜",
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6901744d",
+     "title": "小狗的旅行日记｜中卫"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=104.749087,37.347006",
+     "poi": "北长滩"
+    }
+   ],
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "tier": "B",
+   "scenes": [
+    "玩水"
+   ],
+   "heat": {
+    "notes": 4,
+    "likes": 60
+   },
+   "rating": null,
+   "photos": [
+    {
+     "url": "images/654ee3fd822b/1.jpg",
+     "title": "带🐶玩中卫｜这些更值得",
+     "author": "失焦",
+     "note_url": "https://www.xiaohongshu.com/explore/6a58a52d000000001101f18d?xsec_token=ABY2lM--jMNH9hlTfvjghhB9LVSSXF5HE3XHDBfoJ0s7k=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
+   "raw_note": "",
+   "pending": [
+    "drive_verify",
+    "kind"
+   ],
+   "kind_src": "poi_type:风景名胜",
+   "access": {},
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 4,
+    "likes": 60,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   }
  ],
  "out_of_range": [
