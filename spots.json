@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 926,
+  "count": 922,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -97168,8 +97168,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -97177,9 +97179,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "森林公园内有露营地、无动力游玩设施区、大草原、遛马场、滑雪场（冬季开放）",
+      "note_id": "6abdf2a1000000001a024b2b",
+      "author": "觅见",
+      "note_url": "https://www.xiaohongshu.com/explore/6abdf2a1000000001a024b2b"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -97206,9 +97217,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 66
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -97218,7 +97234,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 4,
+    "likes": 66,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-金佛山",
@@ -97286,7 +97308,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 148
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -97296,83 +97321,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
-  },
-  {
-   "id": "x-重庆主城",
-   "name": "重庆主城",
-   "kind": "scenic",
-   "tags": [],
-   "province": "重庆",
-   "city": "重庆",
-   "gcj": [
-    106.487237,
-    29.463687
-   ],
-   "drive": {
-    "hours_oneway": 18.18,
-    "km": 1656.5,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-15 16:46"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 5,
+    "likes": 148,
+    "basis": "小红书点名搜索 5 条相关笔记"
    },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 697b3ec1000000002200b1cb）：「重庆主城遛狗地｜少人知晓的无人遛狗好地方」",
-    "evidence_level": "未核实",
-    "basis": "per_note",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "重庆主城",
-   "poi_type": "腾讯POI:汽车:其它汽车",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/697b3ec1000000002200b1cb",
-     "title": "重庆主城遛狗地｜少人知晓的无人遛狗好地方"
-    },
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a7340b5000000002500adfd",
-     "title": "重庆主城80KM｜瀑布+水上公路👙🥽🩴🛟⛲️"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=106.487237,29.463687",
-     "poi": "重庆主城"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "poi_type:其余",
-   "access": {},
-   "dog_tier": "unknown"
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-两江嘉美公园",
@@ -97435,7 +97390,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 283
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -97445,7 +97403,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 8,
+    "likes": 283,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-涂山雕塑公园",
@@ -97509,7 +97473,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 651
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -97519,7 +97486,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 4,
+    "likes": 651,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-石景山",
@@ -97587,7 +97560,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 322
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -97597,7 +97573,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 4,
+    "likes": 322,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-金海湖",
@@ -97665,7 +97647,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 55
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -97675,7 +97660,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 55,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-门头沟",
@@ -97741,7 +97732,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 188
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -97751,7 +97745,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 188,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-玉渡山",
@@ -97779,8 +97779,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -97788,9 +97790,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "大草甸人多一点，但是很大很干净，大家的露营点距离够远，狗狗跑一跑也不会影响到别人，玩的超级开心[超喜欢R]",
+      "note_id": "6af85f95000000002a02675d",
+      "author": "21:48",
+      "note_url": "https://www.xiaohongshu.com/explore/6af85f95000000002a02675d"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -97817,9 +97828,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 45
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -97829,7 +97845,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 45,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-白水寺",
@@ -97857,8 +97879,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -97866,9 +97890,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "人比热门赏秋地少很多，还能搭帐篷遛狗",
+      "note_id": "6af864f1000000002a00f54a",
+      "author": "21:41",
+      "note_url": "https://www.xiaohongshu.com/explore/6af864f1000000002a00f54a"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -97895,9 +97928,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 72
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -97907,7 +97945,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 72,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-金祖山",
@@ -97975,7 +98019,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 8
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -97985,7 +98032,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 8,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-上方山",
@@ -98048,7 +98101,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98058,7 +98114,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-日光山",
@@ -98126,7 +98188,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98136,7 +98201,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-王平镇",
@@ -98164,8 +98235,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -98173,9 +98246,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "镇子现在应该在大力搞旅游，地图、路标、餐饮、民宿、露营烧烤等基础设施还是不错的",
+      "note_id": "6a1c236a000000003502dce1",
+      "author": "喵的小抽屉",
+      "note_url": "https://www.xiaohongshu.com/explore/6a1c236a000000003502dce1"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -98196,8 +98278,14 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
-   "heat": null,
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
+   "heat": {
+    "notes": 1,
+    "likes": 12
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98207,7 +98295,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 12,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-马家湾",
@@ -98275,7 +98369,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 85
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98285,7 +98382,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 85,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-免费景区",
@@ -98346,7 +98449,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 2
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98358,7 +98464,13 @@
    "access": {
     "fee": "免"
    },
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 2,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-北京房山",
@@ -98421,7 +98533,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 6,
+    "likes": 451
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98431,7 +98546,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 6,
+    "likes": 451,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
   },
   {
    "id": "x-密云水库",
@@ -98499,7 +98620,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 14,
+    "likes": 2989
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98509,7 +98633,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 14,
+    "likes": 2989,
+    "basis": "小红书点名搜索 14 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 14 条相关笔记"
   },
   {
    "id": "x-南马场水库",
@@ -98577,7 +98707,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 18,
+    "likes": 533
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98587,7 +98720,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 18,
+    "likes": 533,
+    "basis": "小红书点名搜索 18 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 18 条相关笔记"
   },
   {
    "id": "x-顺义南彩银杏园",
@@ -98615,8 +98754,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -98624,9 +98765,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "分大个子营地和小个子营地，里面有一些娱乐设施，不过可能因为天冷了没什么人打理，小个子营地里的草比较高了",
+      "note_id": "6adc6327000000002c01f037",
+      "author": "一小袋酸辣鸡脆骨",
+      "note_url": "https://www.xiaohongshu.com/explore/6adc6327000000002c01f037"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -98652,8 +98802,14 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
-   "heat": null,
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
+   "heat": {
+    "notes": 4,
+    "likes": 73
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98663,7 +98819,13 @@
    ],
    "kind_src": "poi_type:旅游景点",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 4,
+    "likes": 73,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-鹫峰国家森林公园",
@@ -98727,7 +98889,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 59
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98737,7 +98902,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 5,
+    "likes": 59,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-一亩园",
@@ -98798,7 +98969,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 41
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98808,7 +98982,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 41,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-东风乡",
@@ -98869,7 +99049,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 19
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98879,7 +99062,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 19,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-凤凰岭",
@@ -98942,7 +99131,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 10
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -98952,7 +99144,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 3,
+    "likes": 10,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-喇叭沟",
@@ -99013,7 +99211,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 202
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99023,7 +99224,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 202,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-圆明园",
@@ -99084,7 +99291,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 1
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99094,7 +99304,13 @@
    ],
    "kind_src": "poi_type:旅游景点",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 4,
+    "likes": 1,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-坡峰岭",
@@ -99157,7 +99373,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 386
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99167,7 +99386,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 3,
+    "likes": 386,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-大屯乡",
@@ -99228,7 +99453,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99238,7 +99466,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 29 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 29 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-大觉寺",
@@ -99301,7 +99535,10 @@
    "scenes": [
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 29
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99311,7 +99548,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 3,
+    "likes": 29,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-宛平城",
@@ -99372,7 +99615,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 61
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99382,80 +99628,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "unknown"
-  },
-  {
-   "id": "x-小川村",
-   "name": "小川村",
-   "kind": "village",
-   "tags": [],
-   "province": "北京",
-   "city": "北京",
-   "gcj": [
-    116.500236,
-    40.632479
-   ],
-   "drive": {
-    "hours_oneway": 14.88,
-    "km": 1344.4,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-15 16:47"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 4,
+    "likes": 61,
+    "basis": "小红书点名搜索 4 条相关笔记"
    },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 6a0e33a100000000070274b8）：「夏天带小狗去哪儿玩水💦精选线路｜附轨迹」",
-    "evidence_level": "未核实",
-    "basis": "per_note",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "小川村",
-   "poi_type": "腾讯POI:地名地址:行政地名",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a0e33a100000000070274b8",
-     "title": "夏天带小狗去哪儿玩水💦精选线路｜附轨迹"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=116.500236,40.632479",
-     "poi": "小川村"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "古村古镇"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "unknown"
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-星河湾",
@@ -99518,7 +99697,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 271
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99528,7 +99710,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 271,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-板栗村",
@@ -99556,8 +99744,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -99565,9 +99755,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "整个区域不算大，下面是瀑布打卡点和一个小木屋，适合慢悠悠拍拍照喝喝咖啡的人群，再往上面走还有专门的露营区",
+      "note_id": "6a49e6eb000000002003b497",
+      "author": "樱桃小王子",
+      "note_url": "https://www.xiaohongshu.com/explore/6a49e6eb000000002003b497"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -99589,9 +99788,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 296
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99601,7 +99805,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 3,
+    "likes": 296,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-果庄村",
@@ -99629,8 +99839,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -99638,9 +99850,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "溪边露营地一般都50元/位",
+      "note_id": "69d20e1b000000001a032932",
+      "author": "到处逛公园",
+      "note_url": "https://www.xiaohongshu.com/explore/69d20e1b000000001a032932"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -99662,9 +99883,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
+    "露营",
+    "过夜",
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 22
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99674,7 +99900,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 22,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-桑峪村",
@@ -99737,7 +99969,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 188
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99747,7 +99982,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 5,
+    "likes": 188,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-梨想山",
@@ -99810,7 +100051,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 7
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99820,7 +100064,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 7,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-水泉沟",
@@ -99848,8 +100098,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -99857,9 +100109,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "整体更偏户外运动，不太适合露营",
+      "note_id": "6a3e3eb6000000001603f181",
+      "author": "亮晶晶的小圆",
+      "note_url": "https://www.xiaohongshu.com/explore/6a3e3eb6000000001603f181"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -99880,8 +100141,14 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
-   "heat": null,
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99891,7 +100158,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 27 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 27 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-百泉山",
@@ -99954,7 +100227,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 2
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -99964,7 +100240,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 2,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-百瑞谷",
@@ -100025,7 +100307,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 771
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100035,7 +100320,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 8,
+    "likes": 771,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-箭杆岭",
@@ -100098,7 +100389,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 50
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100108,7 +100402,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 3,
+    "likes": 50,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-红螺寺",
@@ -100171,7 +100471,10 @@
    "scenes": [
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 394
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100181,7 +100484,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 5,
+    "likes": 394,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-西峪村",
@@ -100244,7 +100553,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 468
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100254,7 +100566,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 468,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-谷积山",
@@ -100317,7 +100635,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 15
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100327,7 +100648,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 15,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-金水湖",
@@ -100390,7 +100717,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100400,7 +100730,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-长峪城",
@@ -100461,7 +100797,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 4,
+    "likes": 53
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100471,7 +100810,13 @@
    ],
    "kind_src": "poi_type:风景名胜",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 4,
+    "likes": 53,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-东风公园",
@@ -100534,7 +100879,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 14,
+    "likes": 499
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100544,7 +100892,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 14,
+    "likes": 499,
+    "basis": "小红书点名搜索 14 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 14 条相关笔记"
   },
   {
    "id": "x-中山公园",
@@ -100608,7 +100962,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 16,
+    "likes": 2309
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100618,7 +100975,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 16,
+    "likes": 2309,
+    "basis": "小红书点名搜索 16 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 16 条相关笔记"
   },
   {
    "id": "x-天元公园",
@@ -100681,7 +101044,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 9,
+    "likes": 351
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100691,7 +101057,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 9,
+    "likes": 351,
+    "basis": "小红书点名搜索 9 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 9 条相关笔记"
   },
   {
    "id": "x-平房公园",
@@ -100754,7 +101126,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 9,
+    "likes": 251
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100764,7 +101139,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 9,
+    "likes": 251,
+    "basis": "小红书点名搜索 9 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 9 条相关笔记"
   },
   {
    "id": "x-永寿禅寺",
@@ -100827,7 +101208,10 @@
    "scenes": [
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 12,
+    "likes": 607
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100837,7 +101221,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 12,
+    "likes": 607,
+    "basis": "小红书点名搜索 12 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 12 条相关笔记"
   },
   {
    "id": "x-海淀中关",
@@ -100900,7 +101290,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 1453
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100910,7 +101303,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 1453,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-爨底下村",
@@ -100973,7 +101372,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 20,
+    "likes": 2454
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -100983,7 +101385,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 20,
+    "likes": 2454,
+    "basis": "小红书点名搜索 20 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 20 条相关笔记"
   },
   {
    "id": "x-绿堤公园",
@@ -101046,7 +101454,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 13,
+    "likes": 280
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101056,7 +101467,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 13,
+    "likes": 280,
+    "basis": "小红书点名搜索 13 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 13 条相关笔记"
   },
   {
    "id": "x-赵全营镇",
@@ -101084,8 +101501,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -101093,9 +101512,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "然后去水杉秘境帐篷露营地，在水杉林间搭个帐篷，氛围感直接拉满，适合和朋友来场自然野趣之旅～",
+      "note_id": "68db329f000000001300f26b",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/68db329f000000001300f26b"
+     },
+     {
+      "kind": "camp",
+      "quote": "• 水杉秘境帐篷露营地：水杉林里露营太绝了，自带一种静谧的美感，露营爱好者别错过",
+      "note_id": "68db329f000000001300f26b",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/68db329f000000001300f26b"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -101116,8 +101551,14 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
-   "heat": null,
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
+   "heat": {
+    "notes": 4,
+    "likes": 123
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101127,7 +101568,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 4,
+    "likes": 123,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-久敬庄公园",
@@ -101190,7 +101637,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 870
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101200,7 +101650,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 5,
+    "likes": 870,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-老君堂公园",
@@ -101263,7 +101719,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 6,
+    "likes": 27
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101273,7 +101732,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 6,
+    "likes": 27,
+    "basis": "小红书点名搜索 6 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 6 条相关笔记"
   },
   {
    "id": "x-南石洋大峡谷",
@@ -101336,7 +101801,10 @@
    "scenes": [
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 16,
+    "likes": 495
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101346,7 +101814,13 @@
    ],
    "kind_src": "poi_type:旅游景点",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 16,
+    "likes": 495,
+    "basis": "小红书点名搜索 16 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 16 条相关笔记"
   },
   {
    "id": "x-商务富锦公园",
@@ -101374,8 +101848,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -101383,9 +101859,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "✅露营：全程4km左右，足矣找个自己喜欢的位置露营",
+      "note_id": "6a5b77630000000011004351",
+      "author": "小黑狗莱福",
+      "note_url": "https://www.xiaohongshu.com/explore/6a5b77630000000011004351"
+     },
+     {
+      "kind": "camp",
+      "quote": "🚻卫生间：商务富锦公园-杨林谷园区内 带空调的卫生间[doge]",
+      "note_id": "6a5b77630000000011004351",
+      "author": "小黑狗莱福",
+      "note_url": "https://www.xiaohongshu.com/explore/6a5b77630000000011004351"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -101407,9 +101899,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 64
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101419,78 +101916,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
-  },
-  {
-   "id": "x-密云不老屯镇",
-   "name": "密云不老屯镇",
-   "kind": "village",
-   "tags": [],
-   "province": "北京",
-   "city": "北京",
-   "gcj": [
-    116.977316,
-    40.567425
-   ],
-   "drive": {
-    "hours_oneway": 14.64,
-    "km": 1314.8,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-15 16:47"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 64,
+    "basis": "小红书点名搜索 1 条相关笔记"
    },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 6a391adf0000000021015fb4）：「在密云挖到躺在草垛上虚度一整天的夯咖」",
-    "evidence_level": "未核实",
-    "basis": "per_note",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "密云不老屯镇",
-   "poi_type": "腾讯POI:地名地址:行政地名",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a391adf0000000021015fb4",
-     "title": "在密云挖到躺在草垛上虚度一整天的夯咖"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=116.977316,40.567425",
-     "poi": "密云不老屯镇"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "unknown"
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-昌平十三陵镇",
@@ -101553,7 +101985,10 @@
    "scenes": [
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101563,7 +101998,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 27 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 27 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-朝南森林公园",
@@ -101627,7 +102068,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 2
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101637,7 +102081,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 2,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-滨水文化公园",
@@ -101665,8 +102115,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -101674,9 +102126,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "可以搭帐篷、遛狗、放风筝，闹市里的宝藏滨水公园，老少皆宜，城市赏秋休闲好去处",
+      "note_id": "6af042f70000000015010cc1",
+      "author": "6天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6af042f70000000015010cc1"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -101698,9 +102159,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 13
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101710,7 +102176,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 8,
+    "likes": 13,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-玉河湿地公园",
@@ -101738,8 +102210,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -101747,9 +102221,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "2、可以野餐，允许在树荫草坪搭帐篷，严禁明火烧烤",
+      "note_id": "6af3c1f9000000002a0128ae",
+      "author": "4天前",
+      "note_url": "https://www.xiaohongshu.com/explore/6af3c1f9000000002a0128ae"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -101771,9 +102254,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 10,
+    "likes": 342
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101783,7 +102271,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 10,
+    "likes": 342,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
   },
   {
    "id": "x-坝河金盏淀公园",
@@ -101811,8 +102305,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -101820,9 +102316,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "⛺可露营搭帐篷｜大草坪、人少清净，躺平晒太阳绝佳",
+      "note_id": "6ad4bd590000000026039d01",
+      "author": "大盛小猴",
+      "note_url": "https://www.xiaohongshu.com/explore/6ad4bd590000000026039d01"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -101844,9 +102349,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "草坪遛弯"
+    "草坪遛弯",
+    "露营",
+    "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 860
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101856,7 +102366,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 3,
+    "likes": 860,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-金盏淀湿地公园",
@@ -101919,7 +102435,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 803
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -101929,7 +102448,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 5,
+    "likes": 803,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-云龙涧自然风景区",
@@ -101993,7 +102518,10 @@
     "玩水",
     "溯溪"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102003,7 +102531,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-南苑森林湿地公园",
@@ -102067,7 +102601,10 @@
     "草坪遛弯",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 133
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102077,7 +102614,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 8,
+    "likes": 133,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-神堂峪自然风景区",
@@ -102138,7 +102681,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102148,7 +102694,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-环山湖",
@@ -102217,7 +102769,10 @@
     "玩水",
     "山野徒步"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 20
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102227,7 +102782,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 20,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-东疆亲海",
@@ -102295,7 +102856,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 14,
+    "likes": 463
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102305,7 +102869,13 @@
    ],
    "kind_src": "poi_type:旅游景点",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 14,
+    "likes": 463,
+    "basis": "小红书点名搜索 14 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 14 条相关笔记"
   },
   {
    "id": "x-河海花园",
@@ -102373,7 +102943,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 7,
+    "likes": 140
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102383,7 +102956,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 7,
+    "likes": 140,
+    "basis": "小红书点名搜索 7 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 7 条相关笔记"
   },
   {
    "id": "x-萌宠乐园",
@@ -102449,7 +103028,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 265
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102459,7 +103041,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 8,
+    "likes": 265,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-观澜角公园",
@@ -102487,8 +103075,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -102496,9 +103086,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "▪️大草坪可以搭帐篷野餐，吹海风放空",
+      "note_id": "6abdaf2e000000000a025b5c",
+      "author": "M.",
+      "note_url": "https://www.xiaohongshu.com/explore/6abdaf2e000000000a025b5c"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -102526,9 +103125,14 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
+    "露营",
+    "过夜",
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 7,
+    "likes": 3640
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102538,7 +103142,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 7,
+    "likes": 3640,
+    "basis": "小红书点名搜索 7 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 7 条相关笔记"
   },
   {
    "id": "x-天鹅湖",
@@ -102601,7 +103211,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 40
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102611,7 +103224,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 40,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-小白楼",
@@ -102672,7 +103291,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102682,7 +103304,13 @@
    ],
    "kind_src": "poi_type:旅游景点",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-独乐寺",
@@ -102745,7 +103373,10 @@
    "scenes": [
     "人文古迹"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 22
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102755,7 +103386,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 3,
+    "likes": 22,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-环秀湖",
@@ -102783,8 +103420,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -102792,9 +103431,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "[超喜欢R]边上就是草坪有搭建好的露营篷🏕️，可以免费露营[斜眼R]",
+      "note_id": "68e5e702000000000301e6a1",
+      "author": "20",
+      "note_url": "https://www.xiaohongshu.com/explore/68e5e702000000000301e6a1"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -102816,9 +103464,14 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102828,7 +103481,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 20 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 20 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-生态城",
@@ -102856,8 +103515,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -102865,9 +103526,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "天津 生态城的这个公园 露营太舒服了吧",
+      "note_id": "6a24f1d50000000017009a4f",
+      "author": "繁星户外｜天津滨海",
+      "note_url": "https://www.xiaohongshu.com/explore/6a24f1d50000000017009a4f"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -102888,8 +103558,14 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
-   "heat": null,
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
+   "heat": {
+    "notes": 4,
+    "likes": 578
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102899,7 +103575,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 4,
+    "likes": 578,
+    "basis": "小红书点名搜索 4 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 4 条相关笔记"
   },
   {
    "id": "x-生态谷",
@@ -102960,7 +103642,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 252
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -102970,7 +103655,13 @@
    ],
    "kind_src": "poi_type:旅游景点:公园",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 252,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-郭家沟",
@@ -102998,8 +103689,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -103007,9 +103700,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "16:00 水库大坝登高看全村湖景→西木帐篷营地草坪小憩",
+      "note_id": "6a221b4d0000000038023143",
+      "author": "拿走不谢的小红薯",
+      "note_url": "https://www.xiaohongshu.com/explore/6a221b4d0000000038023143"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -103030,8 +103732,14 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
-   "heat": null,
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
+   "heat": {
+    "notes": 1,
+    "likes": 3
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103041,7 +103749,13 @@
    ],
    "kind_src": "poi_type:旅游景点",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 3,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-黄崖关",
@@ -103102,7 +103816,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 40
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103112,7 +103829,13 @@
    ],
    "kind_src": "poi_type:旅游景点",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 40,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-儿童乐园",
@@ -103173,7 +103896,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 7,
+    "likes": 942
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103183,7 +103909,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 7,
+    "likes": 942,
+    "basis": "小红书点名搜索 7 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 7 条相关笔记"
   },
   {
    "id": "x-南堤滨海",
@@ -103246,7 +103978,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 1
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103256,7 +103991,13 @@
    ],
    "kind_src": "poi_type:旅游景点:公园",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 2,
+    "likes": 1,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-南湾公园",
@@ -103284,8 +104025,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -103293,9 +104036,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "天津遛娃｜南湾公园✨钓蟹捞鱼露营2610",
+      "note_id": "6addfeae0000000025020351",
+      "author": "LL",
+      "note_url": "https://www.xiaohongshu.com/explore/6addfeae0000000025020351"
+     },
+     {
+      "kind": "camp",
+      "quote": "免费看海🌊、草坪露营🏕、钓小螃蟹🦀、捞小鱼🐟一站式搞定～🥳",
+      "note_id": "6addfeae0000000025020351",
+      "author": "LL",
+      "note_url": "https://www.xiaohongshu.com/explore/6addfeae0000000025020351"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -103318,9 +104077,14 @@
    "tier": "B",
    "scenes": [
     "草坪遛弯",
-    "玩水"
+    "玩水",
+    "露营",
+    "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 113
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103330,7 +104094,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 8,
+    "likes": 113,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-张家峪村",
@@ -103393,7 +104163,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 245
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103403,7 +104176,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 245,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-水上公园",
@@ -103466,7 +104245,10 @@
    "scenes": [
     "草坪遛弯"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 2,
+    "likes": 7
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103476,7 +104258,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 2,
+    "likes": 7,
+    "basis": "小红书点名搜索 2 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 2 条相关笔记"
   },
   {
    "id": "x-海岸公园",
@@ -103540,7 +104328,10 @@
     "草坪遛弯",
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 8,
+    "likes": 891
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103550,7 +104341,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 8,
+    "likes": 891,
+    "basis": "小红书点名搜索 8 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 8 条相关笔记"
   },
   {
    "id": "x-海贝公园",
@@ -103614,7 +104411,10 @@
     "草坪遛弯",
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 10,
+    "likes": 696
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103624,7 +104424,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 10,
+    "likes": 696,
+    "basis": "小红书点名搜索 10 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 10 条相关笔记"
   },
   {
    "id": "x-西井峪村",
@@ -103687,7 +104493,10 @@
    "scenes": [
     "古村古镇"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 56
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103697,7 +104506,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 5,
+    "likes": 56,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-古海岸湿地",
@@ -103760,7 +104575,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 5,
+    "likes": 11
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103770,7 +104588,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 5,
+    "likes": 11,
+    "basis": "小红书点名搜索 5 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 5 条相关笔记"
   },
   {
    "id": "x-无动力乐园",
@@ -103798,8 +104622,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -103807,9 +104633,18 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "1️⃣ **新杨公园（普陀）｜免费**：环上公园，无动力探险设施+「种子研究室」互动沙坑，还有森林露营区，玩沙+认种子两不误",
+      "note_id": "6aa02ce4000000002802ebc9",
+      "author": "一键遛娃",
+      "note_url": "https://www.xiaohongshu.com/explore/6aa02ce4000000002802ebc9"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -103830,8 +104665,14 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
-   "heat": null,
+   "scenes": [
+    "露营",
+    "过夜"
+   ],
+   "heat": {
+    "notes": 17,
+    "likes": 3355
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103841,7 +104682,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 17,
+    "likes": 3355,
+    "basis": "小红书点名搜索 17 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 17 条相关笔记"
   },
   {
    "id": "x-蓟州区下营镇",
@@ -103869,8 +104716,10 @@
     "verified_at": null
    },
    "overnight": {
-    "status": "unknown",
-    "modes": [],
+    "status": "allowed_wild",
+    "modes": [
+     "tent"
+    ],
     "fee": null,
     "facilities": {
      "toilet": null,
@@ -103878,9 +104727,25 @@
      "power": null,
      "signal": null
     },
-    "note": "",
+    "note": "笔记里有人在这过夜",
     "verified_at": null,
-    "evidence": []
+    "evidence": [
+     {
+      "kind": "camp",
+      "quote": "✅推荐导航：悠见全日营营地，不要直接搜“歪顶坨”，容易导到野路",
+      "note_id": "6aeb3a910000000016033eaf",
+      "author": "做梦都想涨粉一百万",
+      "note_url": "https://www.xiaohongshu.com/explore/6aeb3a910000000016033eaf"
+     },
+     {
+      "kind": "camp",
+      "quote": "走右侧牌坊水泥路，开到帆船凉亭→歪顶坨徒步驿站，有简易厕所",
+      "note_id": "6aeb3a910000000016033eaf",
+      "author": "做梦都想涨粉一百万",
+      "note_url": "https://www.xiaohongshu.com/explore/6aeb3a910000000016033eaf"
+     }
+    ],
+    "evidence_level": "笔记原话"
    },
    "sub_pois": [],
    "trips": [],
@@ -103901,81 +104766,14 @@
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
-   "scenes": [],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "unknown"
-  },
-  {
-   "id": "x-三亚湾",
-   "name": "三亚湾",
-   "kind": "water",
-   "tags": [],
-   "province": "海南",
-   "city": "三亚",
-   "gcj": [
-    109.464218,
-    18.282593
-   ],
-   "drive": {
-    "hours_oneway": 24.46,
-    "km": 2297.4,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-15 16:47"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 69defe4d000000001a028fbd）：「自驾海南东线所有的沙滩，这几个最宠物友好！」",
-    "evidence_level": "未核实",
-    "basis": "per_note",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "三亚湾",
-   "poi_type": "腾讯POI:地名地址:热点区域:商圈类",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/69defe4d000000001a028fbd",
-     "title": "自驾海南东线所有的沙滩，这几个最宠物友好！"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=109.464218,18.282593",
-     "poi": "三亚湾"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
    "scenes": [
-    "玩水"
+    "露营",
+    "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -103985,7 +104783,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 27 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 27 条笔记，无一条标题带该地名"
   }
  ],
  "out_of_range": [
