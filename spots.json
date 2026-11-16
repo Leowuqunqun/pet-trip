@@ -105390,7 +105390,10 @@
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "tier": "B",
    "scenes": [],
-   "heat": null,
+   "heat": {
+    "notes": 3,
+    "likes": 166
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -105400,7 +105403,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 3,
+    "likes": 166,
+    "basis": "小红书点名搜索 3 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 3 条相关笔记"
   },
   {
    "id": "x-银沙滩",
@@ -105727,7 +105736,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 1,
+    "likes": 12
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -105737,7 +105749,13 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown"
+   "dog_tier": "unknown",
+   "pop": {
+    "notes": 1,
+    "likes": 12,
+    "basis": "小红书点名搜索 1 条相关笔记"
+   },
+   "heat_basis": "小红书点名搜索 1 条相关笔记"
   },
   {
    "id": "x-唐岛湾",
@@ -105902,7 +105920,10 @@
     "露营",
     "过夜"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -105912,7 +105933,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 27 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 27 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-春光海",
@@ -105975,7 +106002,10 @@
    "scenes": [
     "玩水"
    ],
-   "heat": null,
+   "heat": {
+    "notes": 0,
+    "likes": 0
+   },
    "rating": null,
    "photos": [],
    "raw_note": "",
@@ -105985,7 +106015,13 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "default"
+   "dog_tier": "default",
+   "pop": {
+    "notes": 0,
+    "likes": 0,
+    "basis": "点名搜索 30 条笔记，无一条标题带该地名"
+   },
+   "heat_basis": "点名搜索 30 条笔记，无一条标题带该地名"
   },
   {
    "id": "x-果冻海",
