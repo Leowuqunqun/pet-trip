@@ -1100,8 +1100,9 @@ function renderCards(list, totalAll){
       var xh = ph.filter(function(p){ return p.src === "小红书"; });
       thumbSrc = (gd[0] || xh[1] || xh[0] || ph[0]).url;
     }
+    /* 2026-11-20 修：＋号原来写在 card-thumb 里面，绝对定位就以缩略图为参照，
+       所以 right:2px 只是"图片右边缘"，怎么调都压在图上。移到 card 这一层才真正靠整行右侧。 */
     var thumb = '<span class="card-thumb">' +
-        tripBtnHTML(s.id) +
         '<span class="fb" style="background:'+col+'">'+svgFor(k)+'</span>' +
         (thumbSrc ? '<img src="'+esc(thumbSrc)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' +
               (ph.length>1 ? '<span class="cnt">'+ph.length+'</span>' : '') : '') +
@@ -1118,7 +1119,7 @@ function renderCards(list, totalAll){
           '<span>'+esc(s.city||"")+'</span>' +
         '</span>' +
         '<span class="card-facts">' + facts.join("") + '</span>' +
-      '</span></div>';
+      '</span>' + tripBtnHTML(s.id) + '</div>';
   }).join("") + (TOTAL > PAGE
       ? '<div class="more-note">还有 ' + (TOTAL - PAGE) + ' 个点没列出来。<br>' +
         '缩小范围看，或点上方「全部」。</div>'
@@ -2571,4 +2572,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261120T1448 -->
+<!-- rebuild-trigger 20261120T1452 -->
