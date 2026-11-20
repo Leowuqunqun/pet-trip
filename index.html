@@ -191,9 +191,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
    一屏里 20 张带框的卡片，框线本身就成了噪音。 */
 .card{
   display:flex;gap:13px;align-items:flex-start;width:100%;text-align:left;
-  font:inherit;color:inherit;cursor:pointer;
+  font:inherit;color:inherit;cursor:pointer;position:relative;
   background:transparent;border:0;border-radius:0;
-  padding:13px 2px;flex:none;
+  padding:13px 34px 13px 2px;flex:none;
   border-bottom:1px solid var(--line);
   transition:background .14s var(--ease);
 }
@@ -267,7 +267,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 /* 行程按钮：小、靠右，点一下就进去，不用打开详情 */
 /* ＋ 浮在缩略图右上角：塞进文字行会被长事实挤走，且和第二行的车程抢位置 */
 .card-trip{
-  position:absolute;right:4px;top:4px;z-index:2;
+  position:absolute;right:2px;top:calc(50% - 12px);z-index:2;
   width:24px;height:24px;padding:0;border-radius:999px;
   border:0;background:rgba(255,255,255,.88);color:var(--ink-2);
   font-size:15px;font-weight:500;cursor:pointer;line-height:1;
@@ -854,7 +854,7 @@ function hmCN(h){
   return mm + " 分";
 }
 function tag(txt,cls){return '<span class="tag '+cls+'">'+esc(txt)+'</span>';}
-/* 卡片上的「加入行程」按钮：浮在缩略图右上角，不占文字行 */
+/* 卡片上的「加入行程」按钮：整行右侧、垂直居中（2026-11-20 owner 要求） */
 function tripBtnHTML(id){
   var on = inTrip(id);
   return '<button class="card-trip' + (on ? " on" : "") + '" data-trip="' + esc(id) + '"' +
@@ -1004,11 +1004,14 @@ function renderNear(){
 
 function renderCards(list, totalAll){
   var scoped = (totalAll != null && totalAll !== list.length);
-  el("count").textContent = list.length + " 个点";
+  /* 2026-11-20 owner 定调：**总数是静态的，地图内的数量才是动态的**。
+     原来正好反了 —— 顶部圆片跟着地图缩放变，左侧面板反而写死"共 N 个"，
+     两个数字一静一动摆反了位置，看的人会以为全国的点位在缩水。 */
+  el("count").textContent = (totalAll != null ? totalAll : list.length) + " 个点";
   var hint = el("list-hint");
   hint.textContent = scoped
-    ? "地图范围内" + (STATE.hours == null ? "（共 " + totalAll + " 个）" : " · 单程 ≤" + STATE.hours.toFixed(1) + "h（共 " + totalAll + " 个符合筛选）")
-    : (STATE.hours == null ? "全部点位" : "单程 " + STATE.hours.toFixed(1) + "h 内");
+    ? "地图范围内 " + list.length + " 个"
+    : (STATE.hours == null ? "全部点位" : "单程 ≤" + STATE.hours.toFixed(1) + "h 内");
 
   var box = el("list");
   if(!list.length){
@@ -2567,5 +2570,5 @@ fetch("spots.json", {cache:"no-cache"})
 })();
 </script>
 </body>
-<!-- rebuild-trigger 20261110T2356 -->
 </html>
+<!-- rebuild-trigger 20261120T1448 -->
