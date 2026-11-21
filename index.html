@@ -8,9 +8,9 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" href="icon-192.png">
 <link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="vendor/MarkerCluster.css">
+<link rel="stylesheet" href="vendor/MarkerCluster.Default.css">
 <title>带狗去哪儿 · 从上海出发</title>
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -825,8 +825,8 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   <img id="lb-img" alt="">
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="vendor/leaflet.js"></script>
+<script src="vendor/leaflet.markercluster.js"></script>
 <script>
 (function(){
 "use strict";
@@ -1121,6 +1121,12 @@ function renderCards(list, totalAll){
                : (dk==="unknown" ? null : [DOG_LABEL[dk][0], DOG_LABEL[dk][1] || "n"]);
     if(dogTxt) facts.push('<span class="fact dog '+dogTxt[1]+'">'+esc(dogTxt[0])+'</span>');
     if(nk !== "unknown") facts.push('<span class="fact">'+esc(NIGHT_LABEL[nk][0])+'</span>');
+    /* 季节标签：现在是"适合/最佳"就点明，明确不建议的也点明（避免白跑一趟） */
+    (function(){
+      var t = seasonTier(s, seasonOf(new Date()));
+      if(t === 3) facts.push('<span class="fact" style="color:var(--terra-2)">'+seasonOf(new Date())+'季最佳</span>');
+      else if(t === 0) facts.push('<span class="fact" style="color:var(--rose)">'+seasonOf(new Date())+'季不建议</span>');
+    })();
     (s.scenes||[]).slice(0,2).forEach(function(x){
       facts.push('<span class="fact">'+esc(x)+'</span>');
     });
@@ -1495,6 +1501,24 @@ function openDetail(id){
     '<div class="kv"><div class="k">来回</div><div class="v">约 '+hm(d.hours_oneway*2)+'</div></div>' +
     '<div class="kv"><div class="k">依据</div><div class="v" style="color:var(--ink-3);font-size:12px">'+esc(srcLabel(d.source))+'</div></div>' +
     '</div></div>';
+
+  /* 季节：哪几个月值得去，依据是原文还是推断必须写清楚 */
+  (function(){
+    var se = s.season;
+    if(!se) return;
+    var rows = ["春","夏","秋","冬"].map(function(k){
+      var t = (se.scores||{})[k];
+      var lab = SEASON_LABEL[t] || "—";
+      var color = t===3 ? "var(--terra-2)" : t===0 ? "var(--rose)" : "var(--ink-2)";
+      return '<div class="kv"><div class="k">'+k+'</div><div class="v" style="color:'+color+'">'+lab+'</div></div>';
+    }).join("");
+    var srcTxt = se.src === "原文" ? "笔记原文" : (se.src === "推断" ? "类型推断（非事实）" : "没有依据");
+    html += '<div class="sec"><div class="sec-t">什么季节去</div><div class="panel">' +
+      rows +
+      (se.evidence ? '<div class="quote cite">'+esc(se.evidence)+'</div>' : '') +
+      (se.src === "原文" ? '<div class="kv"><div class="k">依据</div><div class="v" style="color:var(--ink-3);font-size:12px">'+esc(srcTxt)+'</div></div>' : '') +
+      '</div></div>';
+  })();
 
   /* 犬政策 */
   html += '<div class="sec"><div class="sec-t">带狗政策</div><div class="panel">' +
@@ -1923,6 +1947,25 @@ var SEASON_WORDS = {
   "冬":["温泉","雪景","雾凇","围炉"]
 };
 
+/* ─── 季节档位（2026-11-21 owner：季节必须是推荐的第一优先级）───
+   数据来自 script/build-season.py：每个点位带 season.scores（春/夏/秋/冬 各 0~3）。
+   3=最佳 2=适合 1=可去 0=这个季节不建议去。
+   拿不到 season 字段的老数据一律按 2（中性）处理——"不知道"不能当"不好"。 */
+var SEASON_LABEL = {3:"最佳", 2:"适合", 1:"将就", 0:"不建议"};
+function seasonTier(s, season){
+  var sc = s.season && s.season.scores;
+  if(!sc || sc[season] == null) return 2;
+  return sc[season];
+}
+/* 一句话说明依据，避免把"推断"当成事实 */
+function seasonNote(s, season){
+  var se = s.season;
+  if(!se) return "";
+  var t = seasonTier(s, season);
+  var head = season + "季" + (SEASON_LABEL[t] || "适合");
+  return se.src === "原文" ? head + "（" + se.evidence + "）" : head + "（" + se.evidence + "）";
+}
+
 /* ─── 一个地方值不值得去：看有多少人在发它 ───
    数据里没有"美不美"这个量，也不该由我编一个。能用的现成信号是热度和天气：
    1) pop   —— 按点名搜小红书，标题确实提到这个点的笔记数 + 累计赞。
@@ -2008,6 +2051,12 @@ function scoreSpot(s, season){
   if(ev.length){ sc+=3; why.push({t:"过夜有笔记原话", s:"过夜"}); }
   if(fac.toilet===true){ sc+=1; why.push({t:"写明有卫生间", s:"设施"}); }
   if((s.photos||[]).length){ sc+=1; why.push({t:"有实拍图 "+s.photos.length+" 张", s:"图"}); }
+
+  /* 季节档位：3 加分、1 减分、0 重减 —— 让同一次推荐里优先挑当季的站 */
+  var tier = seasonTier(s, season);
+  if(tier === 3){ sc += 3; why.push({t:season+"季最佳", s:"季节"}); }
+  else if(tier === 1){ sc -= 2; }
+  else if(tier === 0){ sc -= 8; }
 
   var text = String(dog.evidence||"") + " " +
              ev.map(function(e){ return String(e&&e.quote||""); }).join(" ");
@@ -2136,8 +2185,12 @@ function clusterScene(c){
 }
 
 function buildPlans(){
-  var season = seasonOf(new Date());
   var wk = thisWeekend(PLAN.weekOffset);
+  /* 季节跟着**所选的那个周末**走：翻到 12 月的周末就该按冬天排，
+     不能一直按"今天是什么季节"。 */
+  /* wk.fri 是 "2026-11-27" 这样的字符串，不是 Date —— 直接传给 seasonOf 会炸
+     （第一版就是这么挂的：TypeError: d.getMonth is not a function，整条推荐出不来）。 */
+  var season = seasonOf(new Date((wk.fri || isoDate(new Date())) + "T12:00:00"));
   PLAN.window = wk;
   var lim = (STATE.hours == null) ? 99 : STATE.hours;   /* 默认不限车程 */
 
@@ -2155,8 +2208,16 @@ function buildPlans(){
     if(((s.dog||{}).policy)==="forbidden") return false;
     if(s.kind==="transit") return false;
     if(/码头|停车场|公交|地铁|客运站|收费站|服务区|执法/.test(s.name)) return false;
+    /* 季节第一优先级：这个季节"不建议"的点直接不进候选。
+       例：十一月不会给你推漂流/玩水。若筛完太少（冬天尤其），兜底放回，
+       因为"没得选"比"选一个将就的"更糟。 */
     return true;
   });
+  var poolAll = pool;
+  pool = pool.filter(function(s){ return seasonTier(s, season) > 0; });
+  if(pool.length < 30){ pool = poolAll; PLAN.seasonFallback = true; }
+  else PLAN.seasonFallback = false;
+  PLAN.seasonCut = poolAll.length - pool.length;
   pool.forEach(function(s){
     s.__p = scoreSpot(s, season) || { score:0, why:[] };
     s.__pop = popOf(s);
@@ -2240,7 +2301,20 @@ function buildPlans(){
       pl.weatherOk = c.weatherOk; pl.weatherErr = c.weatherErr;
       return pl;
     });
-    built.sort(function(a,b){ return b.combo - a.combo; });
+    /* 季节是第一优先级：先按"这条路线里最好那个站的季节档位"分组，组内再比 热度×天气。
+       乘法做不到这一点——热度可以盖过季节，而 owner 要求季节优先。 */
+    built.forEach(function(pl){
+      var t = 2;
+      pl.stops.forEach(function(x){
+        var st = seasonTier(x.s, season);
+        if(st > t) t = st;
+      });
+      pl.seasonTier = t;
+    });
+    built.sort(function(a,b){
+      if(b.seasonTier !== a.seasonTier) return b.seasonTier - a.seasonTier;
+      return b.combo - a.combo;
+    });
     var picks = built.slice(0,3);
     PLAN.fetchedAt = new Date().toLocaleString("zh-CN", {hour12:false});
     return picks;
@@ -2296,6 +2370,8 @@ function planStopHTML(s, leg, dayLabel){
   var p = s.__p || {why:[]};
   var meta = "单程 " + hm(spotH(s));
   if(leg!=null) meta += " · 与上一站直线 " + leg.toFixed(1) + "km";
+  var seT = seasonTier(s, seasonOf(new Date()));
+  if(seT === 3) meta += " · " + seasonOf(new Date()) + "季最佳";
   return '<li class="plan-stop" data-id="'+esc(s.id)+'" title="点开看详情">' +
       (dayLabel ? '<div class="plan-daymark">'+esc(dayLabel)+'</div>' : '') +
       '<div class="ps-name">'+esc(s.name)+'</div>' +
@@ -2440,7 +2516,7 @@ function planBodyHTML(){
   var wFail = (sat.length===0 && PLAN.weekOffset===0);
   var wMiss = PLAN.plans.length - sat.length;
   var head = (wFail ? '<div class="plan-warn" style="margin-bottom:12px">'+
-      '这次<b>没取到天气</b>（Open-Meteo 请求失败或网络不通）。下面的排序<b>只按热度</b>，'+
+      '这次<b>没取到天气</b>（Open-Meteo 请求失败或网络不通）。下面的排序<b>先按季节、再按热度</b>（少了天气这一项），'+
       '出发前请自己再确认一次天气。</div>' : '') +
       ((wMiss>0 && !wFail) ? '<div class="plan-warn" style="margin-bottom:12px">'+
       '有 '+wMiss+' 条路线没取到天气，那几条按热度保底排序，不代表当天天气好。</div>' : '') +
@@ -2452,16 +2528,20 @@ function planBodyHTML(){
           '这个周末超出了天气预报的范围（Open-Meteo 最多给 16 天），<b>还没出预报</b>。'+
           '所以下面的排序只按"这地方有多热"，天气这一项没有参与。</div>' : '') +
       '<details class="plan-note">' +
-      '<summary>窗口 <b>周五 '+DEPART_HOUR+':00 出发 · 周日晚回</b> · 候选 '+PLAN.pool+' 个点 · 排序＝热度×天气</summary>' +
+      '<summary>窗口 <b>周五 '+DEPART_HOUR+':00 出发 · 周日晚回</b> · 候选 '+PLAN.pool+' 个点 · 排序＝季节 → 热度×天气</summary>' +
       '<div class="pn-body">' +
       '候选点 = '+(STATE.hours == null ? '不限车程' : '单程 ≤'+STATE.hours.toFixed(1)+'h')+'、排除明确禁狗，共 '+PLAN.pool+' 个。' +
       (sat.length ? '天气每次打开都重新查（Open-Meteo 实时预报），这次抓取于 '+esc(PLAN.fetchedAt)+
       (PLAN.at ? '（'+planAgeText()+'）' : '')+'。'
         : '天气这次<b>没取到</b>（尝试于 '+esc(PLAN.fetchedAt)+'），所以排序里没有天气这一项。') +
       '车程是真实路网算的；<b>站与站之间只给直线距离，不是车程</b>。<br>' +
-      '<b>排序只看两样：这地方现在有多热、去的那天天气怎么样</b>。' +
-      '"热"是指小红书上这段时间有多少人在发这个地方——发的人越多、看的人越多，说明越值得去；' +
-      '天气取周六的实时预报。犬政策、有没有原话、有没有厕所只用来当理由和挑营地，不参与排序。' +
+      '<b>排序先看季节，再看两样：这地方现在有多热、去的那天天气怎么样</b>。' +
+      '<b>季节排第一</b>——同样是海边，十一月去和七月去不是一回事；这个季节"不建议"的点直接不进候选' +
+      (PLAN.seasonCut ? '（这次筛掉了 '+PLAN.seasonCut+' 个）' : '') +
+      (PLAN.seasonFallback ? '，但这个季节能去的地方太少，已放宽兜底' : '') + '。' +
+      '季节判断来自笔记原文或类型推断，详情页每条都写明依据。' +
+      '<br>"热"是指小红书上这段时间有多少人在发这个地方——发的人越多越值得去；天气取周六的实时预报。' +
+      '犬政策、有没有原话、有没有厕所只用来当理由和挑营地，不参与排序。' +
       '</div></details>';
 
   /* 顶部已经统一说过"这周不建议出发"时，卡片里就不再重复同一句话 */
@@ -2625,4 +2705,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261120T1806 -->
+<!-- rebuild-trigger 20261121T0910 -->
