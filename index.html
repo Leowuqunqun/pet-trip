@@ -92,8 +92,46 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 /* 筛选面板默认收起。三排胶囊并排列在屏幕上不是"精细"，是"乱"——
    而且场景和类型大面积重复（草坪遛弯≈公园、古村古镇≈古村），
    摆两排只会让人以为是两个维度。要点才展开。 */
-.fpanel{display:none;flex-wrap:wrap;gap:7px;padding:2px 0 11px}
-.fpanel.open{display:flex}
+/* 筛选抽屉（2026-11-21）：原来展开在 header 里，把地图压掉一大截。
+   现在固定贴底、最高 62vh，上半屏地图始终露着；点遮罩或「完成」收起。 */
+.fscrim{position:fixed;inset:0;z-index:1150;background:rgba(22,26,24,.22);
+  opacity:0;pointer-events:none;transition:opacity .18s}
+.fscrim.open{opacity:1;pointer-events:auto}
+.fpanel{position:fixed;left:0;right:0;bottom:0;z-index:1200;
+  background:var(--paper-2);border-radius:18px 18px 0 0;
+  box-shadow:0 -18px 44px rgba(16,30,40,.22);
+  max-height:62vh;display:flex;flex-direction:column;
+  transform:translateY(102%);visibility:hidden;
+  transition:transform .22s ease, visibility .22s}
+.fpanel.open{transform:none;visibility:visible}
+.fp-bar{flex:none;display:flex;align-items:center;gap:8px;
+  padding:14px 16px 8px;border-bottom:1px solid var(--line);position:relative}
+.fp-grab{position:absolute;left:50%;top:6px;transform:translateX(-50%);
+  width:38px;height:4px;border-radius:2px;background:var(--line-2)}
+.fp-name{font-size:13px;font-weight:700;color:var(--ink)}
+.fp-done{margin-left:auto;border:0;background:var(--brand);color:#F4F7F4;
+  font:inherit;font-size:12.5px;font-weight:600;padding:6px 15px;border-radius:999px;cursor:pointer}
+.fp-body{flex:1;min-height:0;overflow-y:auto;display:flex;flex-wrap:wrap;gap:7px;
+  padding:10px 16px calc(18px + env(safe-area-inset-bottom,0px))}
+/* 抽屉里的 chip 必须有边界：外面那条筛选行可以"没选就没底色"，
+   但抽屉是一张可点清单，没有边界就看不出哪些能点。 */
+.fp-body .chip{border:1px solid var(--line-2);background:var(--card)}
+.fp-body .chip[aria-pressed="true"]{border-color:var(--brand);background:var(--brand-soft);color:var(--brand-2);font-weight:600}
+/* 桌面：做成右下浮层，别把整条底边糊住 */
+@media (min-width:900px){
+  .fpanel{left:auto;right:16px;bottom:16px;width:392px;border-radius:16px;
+    max-height:min(62vh,540px);transform:translateY(calc(100% + 24px))}
+}
+/* 搜索条 */
+.searchbar{display:none;padding:0 0 10px}
+.searchbar.open{display:flex;align-items:center;gap:7px}
+#q{flex:1;min-width:0;height:37px;border-radius:10px;border:1px solid var(--line-2);
+  background:var(--paper-2);padding:0 12px;font:inherit;font-size:14px;color:var(--ink);outline:none}
+#q:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+#q::placeholder{color:var(--ink-3)}
+#q::-webkit-search-cancel-button,#q::-webkit-search-decoration{-webkit-appearance:none;display:none}
+.sb-x{border:0;background:transparent;color:var(--ink-3);font-size:15px;
+  cursor:pointer;padding:6px 4px;line-height:1}
 .fpanel .fp-title{
   width:100%;font-size:11px;color:var(--ink-3);letter-spacing:.04em;
   margin:6px 0 -1px;
@@ -606,7 +644,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   .shell[data-view="plan"] .main-row{display:none}
   /* 筛选条和图例只服务于"浏览地图"，推荐页上它们是噪音，占 90px */
   .shell[data-view="plan"] .filters,
+  .shell[data-view="plan"] .searchbar,
   .shell[data-view="plan"] .fpanel,
+  .shell[data-view="plan"] .fscrim,
   .shell[data-view="plan"] .legend,
   .shell[data-view="plan"] .tripbar{display:none}
   .shell[data-view="plan"] .topbar{padding-bottom:8px}
@@ -730,29 +770,45 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       </label>
       <button class="chip" data-f="night" aria-pressed="false">能过夜</button>
       <button class="chip" id="fpanel-toggle" aria-pressed="false" aria-expanded="false">筛选 <b id="fpanel-n"></b></button>
+      <button class="chip" id="search-toggle" aria-pressed="false">搜索</button>
       <span id="fsum"></span>
+    </div>
+    <div class="searchbar" id="searchbar">
+      <input id="q" type="search" placeholder="搜地点或城市，如 莫干山 / 湖州" autocomplete="off" enterkeyhint="search">
+      <button class="sb-x" id="q-clear" aria-label="清空搜索">✕</button>
     </div>
     <!-- 面板里的两组：想干什么（场景）+ 带不带狗（政策分档）。
          犬政策拆两档是因为风险不同：「明确友好」是笔记/园区明说可以带，
          「默认允许」只是现场没有禁止标识，去之前得自己确认。 -->
-    <div class="fpanel" id="fpanel">
-      <div class="fp-title">想干什么</div>
-      <div id="fpanel-scenes" style="display:contents"></div>
-      <div class="fp-title">带狗</div>
-      <button class="chip" data-dog="explicit" aria-pressed="false">明确友好</button>
-      <button class="chip" data-dog="default" aria-pressed="false">默认允许</button>
-      <!-- 「去哪儿」：福建/山东/江西的点位已经入库，但筛选条上原来没有任何入口，
-           只能在图上放大缩小去找——对"扩到全国"等于没做。按省不设门槛（江西只有 4 个
-           也照样列），因为这里的目的正是让人**看见**新省份。 -->
-      <div class="fp-title">什么季节</div>
-      <button class="chip" data-season="当季最佳" aria-pressed="false">当季最佳</button>
-      <button class="chip" data-season="春" aria-pressed="false">春</button>
-      <button class="chip" data-season="夏" aria-pressed="false">夏</button>
-      <button class="chip" data-season="秋" aria-pressed="false">秋</button>
-      <button class="chip" data-season="冬" aria-pressed="false">冬</button>
-      <div class="fp-title">去哪儿</div>
-      <div id="fpanel-provinces" style="display:contents"></div>
+  <!-- 筛选做成底部抽屉（2026-11-21）：原来它展开在 header 里，会把地图压掉一大截，
+       手机上基本等于没地图可看。抽屉最高 62vh，上半屏地图始终可见，点遮罩或「完成」收起。 -->
+  <div class="fscrim" id="fscrim"></div>
+  <div class="fpanel" id="fpanel" role="dialog" aria-label="筛选">
+    <div class="fp-bar">
+      <span class="fp-grab"></span>
+      <span class="fp-name">筛选</span>
+      <button class="fp-done" id="fpanel-done">完成</button>
     </div>
+    <div class="fp-body">
+
+  <div class="fp-title">想干什么</div>
+  <div id="fpanel-scenes" style="display:contents"></div>
+  <div class="fp-title">带狗</div>
+  <button class="chip" data-dog="explicit" aria-pressed="false">明确友好</button>
+  <button class="chip" data-dog="default" aria-pressed="false">默认允许</button>
+  <!-- 「去哪儿」：福建/山东/江西的点位已经入库，但筛选条上原来没有任何入口，
+       只能在图上放大缩小去找——对"扩到全国"等于没做。按省不设门槛（江西只有 4 个
+       也照样列），因为这里的目的正是让人**看见**新省份。 -->
+  <div class="fp-title">什么季节</div>
+  <button class="chip" data-season="当季最佳" aria-pressed="false">当季最佳</button>
+  <button class="chip" data-season="春" aria-pressed="false">春</button>
+  <button class="chip" data-season="夏" aria-pressed="false">夏</button>
+  <button class="chip" data-season="秋" aria-pressed="false">秋</button>
+  <button class="chip" data-season="冬" aria-pressed="false">冬</button>
+  <div class="fp-title">去哪儿</div>
+  <div id="fpanel-provinces" style="display:contents"></div>
+    </div>
+  </div>
     <!-- 一张图上全都有，靠图标分类型：帐篷=能睡的营地，树=公园… -->
     <div class="legend" id="legend"></div>
     <div class="tripbar" id="tripbar">
@@ -861,7 +917,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, active:null, trip:[]};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, q:"", active:null, trip:[]};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -1011,12 +1067,21 @@ function match(s){
   if(!sceneActive(s.scenes)) return false;
   if(!kindActive(s.kind)) return false;
   if(!seasonActive(s)) return false;
+  if(!matchQuery(s, STATE.q)) return false;
   return true;
 }
 
 /* 季节筛选（2026-11-21 owner：「你要增加筛选即可」）——
    推荐那边不再按季节收窄候选，改由用户自己筛。
    「当季最佳」= 只看当前季节档位 3；具体季节 = 该季档位 ≥2（值得去）。 */
+/* 地点搜索（2026-11-21）：名字 / 城市 / 省份 / 上级 POI 名，子串匹配，不区分大小写。
+   不做拼音：库里没有拼音字段，硬编一个近似表反而会给出"看起来搜到了其实不对"的结果。 */
+function matchQuery(s, q){
+  if(!q) return true;
+  q = q.toLowerCase();
+  var hay = [s.name, s.city, s.province, s.poi_name, (s.tags||[]).join(" ")].join(" ").toLowerCase();
+  return hay.indexOf(q) >= 0;
+}
 function selectedSeasons(){
   return Object.keys(STATE.season).filter(function(k){ return STATE.season[k]; });
 }
@@ -1070,11 +1135,15 @@ function renderCards(list, totalAll){
   /* 2026-11-20 owner 定调：**总数是静态的，地图内的数量才是动态的**。
      原来正好反了 —— 顶部圆片跟着地图缩放变，左侧面板反而写死"共 N 个"，
      两个数字一静一动摆反了位置，看的人会以为全国的点位在缩水。 */
+  /* 顶部这个数 = **筛选后**的总数，但**不跟地图视野变**（owner 2026-11-20 裁决：
+     "总的数量不跟随地图而动态减少，左侧面板上的才应该是动态的"）。
+     所以传的是 totalAll（已过滤、与视野无关），不是 list（视野内）；视野内的数在提示行。 */
   el("count").textContent = (totalAll != null ? totalAll : list.length) + " 个点";
   var hint = el("list-hint");
   hint.textContent = scoped
-    ? "地图范围内 " + list.length + " 个"
-    : (STATE.hours == null ? "全部点位" : "单程 ≤" + STATE.hours.toFixed(1) + "h 内");
+    ? (STATE.q ? "搜到 " + list.length + " 个" : "地图范围内 " + list.length + " 个")
+    : (STATE.q ? "搜到 " + list.length + " 个"
+       : (STATE.hours == null ? "全部点位" : "单程 ≤" + STATE.hours.toFixed(1) + "h 内"));
 
   var box = el("list");
   if(!list.length){
@@ -1661,10 +1730,13 @@ function bind(){
       PLAN.dirty = true; syncFilterUI(); render(); return;
     }
     var tg = e.target.closest("#fpanel-toggle");
-    if(tg){
-      var open = el("fpanel").classList.toggle("open");
-      tg.setAttribute("aria-expanded", open ? "true" : "false");
-      tg.setAttribute("aria-pressed", open ? "true" : "false");
+    if(tg){ togglePanel(); return; }
+    var sd = e.target.closest("#search-toggle");
+    if(sd){
+      var open2 = el("searchbar").classList.toggle("open");
+      sd.setAttribute("aria-pressed", open2 ? "true" : "false");
+      if(open2){ var qi = el("q"); if(qi){ qi.focus(); } }
+      else { el("q").value = ""; STATE.q = ""; PLAN.dirty = true; render(); }
       return;
     }
     var b = e.target.closest(".chip"); if(!b) return;
@@ -1687,6 +1759,36 @@ function bind(){
     syncFilterUI();
     render();
   }
+  /* 抽屉开合只走这一个入口，保证遮罩、按钮状态、焦点三处不会各自跑偏 */
+  function togglePanel(force){
+    var fp = el("fpanel"), sc = el("fscrim"), tg = el("fpanel-toggle");
+    var open = (force == null) ? !fp.classList.contains("open") : !!force;
+    fp.classList.toggle("open", open);
+    if(sc) sc.classList.toggle("open", open);
+    if(tg){
+      tg.setAttribute("aria-expanded", open ? "true" : "false");
+      tg.setAttribute("aria-pressed", open ? "true" : "false");
+    }
+    return open;
+  }
+  window.__togglePanel = togglePanel;
+  if(el("fscrim")) el("fscrim").addEventListener("click", function(){ togglePanel(false); });
+  if(el("fpanel-done")) el("fpanel-done").addEventListener("click", function(){ togglePanel(false); });
+
+  /* 搜索输入：即时过滤（数据在本地，1021 个点，直接同步过滤即可） */
+  (function(){
+    var qi = el("q"); if(!qi) return;
+    qi.addEventListener("input", function(){
+      STATE.q = qi.value.trim();
+      PLAN.dirty = true;
+      render();
+    });
+    var cl = el("q-clear");
+    if(cl) cl.addEventListener("click", function(){
+      qi.value = ""; STATE.q = ""; PLAN.dirty = true; render(); qi.focus();
+    });
+  })();
+
   el("filters").addEventListener("click", onChipClick);
   el("fpanel").addEventListener("click", onChipClick);
   el("list").addEventListener("click", function(e){
@@ -2732,4 +2834,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261121T0940 -->
+<!-- rebuild-trigger 20261121T0957 -->
