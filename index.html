@@ -2208,16 +2208,11 @@ function buildPlans(){
     if(((s.dog||{}).policy)==="forbidden") return false;
     if(s.kind==="transit") return false;
     if(/码头|停车场|公交|地铁|客运站|收费站|服务区|执法/.test(s.name)) return false;
-    /* 季节第一优先级：这个季节"不建议"的点直接不进候选。
-       例：十一月不会给你推漂流/玩水。若筛完太少（冬天尤其），兜底放回，
-       因为"没得选"比"选一个将就的"更糟。 */
     return true;
   });
-  var poolAll = pool;
-  pool = pool.filter(function(s){ return seasonTier(s, season) > 0; });
-  if(pool.length < 30){ pool = poolAll; PLAN.seasonFallback = true; }
-  else PLAN.seasonFallback = false;
-  PLAN.seasonCut = poolAll.length - pool.length;
+  /* 季节只做权重，**不做门槛**（owner 2026-11-21：「最佳不是只能去那，你可以推荐但是不要收窄」）。
+     第一版在这里把本季 0 分的点直接剔出候选，冬天等于只剩 5 个点可选——那是收窄，不是推荐。
+     现在所有候选一律保留，季节只影响排序得分。 */
   pool.forEach(function(s){
     s.__p = scoreSpot(s, season) || { score:0, why:[] };
     s.__pop = popOf(s);
@@ -2301,20 +2296,21 @@ function buildPlans(){
       pl.weatherOk = c.weatherOk; pl.weatherErr = c.weatherErr;
       return pl;
     });
-    /* 季节是第一优先级：先按"这条路线里最好那个站的季节档位"分组，组内再比 热度×天气。
-       乘法做不到这一点——热度可以盖过季节，而 owner 要求季节优先。 */
+    /* 季节权重：档位越高系数越大，但**不清零、不剔除**——
+       一条"适合"档但热度极高、天气极好的路线，仍然可以压过一条"最佳"档的普通路线。
+       系数区间 0.25~1.0，够让季节明显影响排序，又不至于把场子锁死。 */
+    var SEASON_WEIGHT = {3:1.0, 2:0.78, 1:0.5, 0:0.25};
     built.forEach(function(pl){
-      var t = 2;
+      var t = 0;
       pl.stops.forEach(function(x){
         var st = seasonTier(x.s, season);
         if(st > t) t = st;
       });
       pl.seasonTier = t;
+      pl.seasonWeight = SEASON_WEIGHT[t] != null ? SEASON_WEIGHT[t] : 0.78;
+      pl.score = pl.combo * pl.seasonWeight;
     });
-    built.sort(function(a,b){
-      if(b.seasonTier !== a.seasonTier) return b.seasonTier - a.seasonTier;
-      return b.combo - a.combo;
-    });
+    built.sort(function(a,b){ return b.score - a.score; });
     var picks = built.slice(0,3);
     PLAN.fetchedAt = new Date().toLocaleString("zh-CN", {hour12:false});
     return picks;
@@ -2535,10 +2531,9 @@ function planBodyHTML(){
       (PLAN.at ? '（'+planAgeText()+'）' : '')+'。'
         : '天气这次<b>没取到</b>（尝试于 '+esc(PLAN.fetchedAt)+'），所以排序里没有天气这一项。') +
       '车程是真实路网算的；<b>站与站之间只给直线距离，不是车程</b>。<br>' +
-      '<b>排序先看季节，再看两样：这地方现在有多热、去的那天天气怎么样</b>。' +
-      '<b>季节排第一</b>——同样是海边，十一月去和七月去不是一回事；这个季节"不建议"的点直接不进候选' +
-      (PLAN.seasonCut ? '（这次筛掉了 '+PLAN.seasonCut+' 个）' : '') +
-      (PLAN.seasonFallback ? '，但这个季节能去的地方太少，已放宽兜底' : '') + '。' +
+      '<b>排序看三样：季节、这地方现在有多热、去的那天天气怎么样</b>。' +
+      '<b>季节只影响排序权重，不是门槛</b>——任何季节都能去，只是排位不同；' +
+      '同样热度的两个地方，当季的那个排前面。' +
       '季节判断来自笔记原文或类型推断，详情页每条都写明依据。' +
       '<br>"热"是指小红书上这段时间有多少人在发这个地方——发的人越多越值得去；天气取周六的实时预报。' +
       '犬政策、有没有原话、有没有厕所只用来当理由和挑营地，不参与排序。' +
@@ -2705,4 +2700,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261121T0910 -->
+<!-- rebuild-trigger 20261121T0934 -->
