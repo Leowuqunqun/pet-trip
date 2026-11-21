@@ -744,6 +744,12 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       <!-- 「去哪儿」：福建/山东/江西的点位已经入库，但筛选条上原来没有任何入口，
            只能在图上放大缩小去找——对"扩到全国"等于没做。按省不设门槛（江西只有 4 个
            也照样列），因为这里的目的正是让人**看见**新省份。 -->
+      <div class="fp-title">什么季节</div>
+      <button class="chip" data-season="当季最佳" aria-pressed="false">当季最佳</button>
+      <button class="chip" data-season="春" aria-pressed="false">春</button>
+      <button class="chip" data-season="夏" aria-pressed="false">夏</button>
+      <button class="chip" data-season="秋" aria-pressed="false">秋</button>
+      <button class="chip" data-season="冬" aria-pressed="false">冬</button>
       <div class="fp-title">去哪儿</div>
       <div id="fpanel-provinces" style="display:contents"></div>
     </div>
@@ -855,7 +861,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, dogTier:{}, provinces:{}, active:null, trip:[]};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, active:null, trip:[]};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -938,6 +944,9 @@ function sceneActive(list){
    否则用户看到"52 个点"却看不到原因，只会以为数据丢了。点一下就能取消。 */
 function syncSummary(){
   var out = [];
+  Object.keys(STATE.season).forEach(function(k){
+    if(STATE.season[k]) out.push('<button class="fsum" data-clear-season="'+esc(k)+'">'+esc(k)+'<span class="x">✕</span></button>');
+  });
   Object.keys(STATE.scenes).forEach(function(k){
     if(STATE.scenes[k]) out.push('<button class="fsum" data-clear-scene="'+esc(k)+'">'+esc(k)+'<span class="x">✕</span></button>');
   });
@@ -971,6 +980,9 @@ function syncFilterUI(){
   Array.prototype.forEach.call(document.querySelectorAll(".chip[data-dog]"), function(b){
     b.setAttribute("aria-pressed", STATE.dogTier[b.getAttribute("data-dog")] ? "true" : "false");
   });
+  document.querySelectorAll(".chip[data-season]").forEach(function(b){
+    b.setAttribute("aria-pressed", STATE.season[b.getAttribute("data-season")] ? "true" : "false");
+  });
   Array.prototype.forEach.call(document.querySelectorAll(".chip[data-province]"), function(b){
     b.setAttribute("aria-pressed", STATE.provinces[b.getAttribute("data-province")] ? "true" : "false");
   });
@@ -998,7 +1010,24 @@ function match(s){
   if(pv.length && pv.indexOf(s.province || "") < 0) return false;
   if(!sceneActive(s.scenes)) return false;
   if(!kindActive(s.kind)) return false;
+  if(!seasonActive(s)) return false;
   return true;
+}
+
+/* 季节筛选（2026-11-21 owner：「你要增加筛选即可」）——
+   推荐那边不再按季节收窄候选，改由用户自己筛。
+   「当季最佳」= 只看当前季节档位 3；具体季节 = 该季档位 ≥2（值得去）。 */
+function selectedSeasons(){
+  return Object.keys(STATE.season).filter(function(k){ return STATE.season[k]; });
+}
+function seasonActive(s){
+  var sel = selectedSeasons();
+  if(!sel.length) return true;
+  var cur = seasonOf(new Date());
+  return sel.some(function(k){
+    if(k === "当季最佳") return seasonTier(s, cur) === 3;
+    return seasonTier(s, k) >= 2;
+  });
 }
 
 /* ───────── 渲染列表 ───────── */
@@ -1624,6 +1653,7 @@ function bind(){
     /* 已选摘要 chip：点一下取消那一条 */
     var sum = e.target.closest(".fsum");
     if(sum){
+      if(sum.hasAttribute("data-clear-season")) STATE.season[sum.getAttribute("data-clear-season")] = false;
       if(sum.hasAttribute("data-clear-scene")) STATE.scenes[sum.getAttribute("data-clear-scene")] = false;
       if(sum.hasAttribute("data-clear-dog")) STATE.dogTier[sum.getAttribute("data-clear-dog")] = false;
       if(sum.hasAttribute("data-clear-province")) STATE.provinces[sum.getAttribute("data-clear-province")] = false;
@@ -1646,6 +1676,8 @@ function bind(){
       STATE.dogTier[b.getAttribute("data-dog")] = !on;
     } else if(b.hasAttribute("data-province")){
       STATE.provinces[b.getAttribute("data-province")] = !on;
+    } else if(b.hasAttribute("data-season")){
+      STATE.season[b.getAttribute("data-season")] = !on;
     } else {
       var f = b.getAttribute("data-f");
       if(f==="night") STATE.night = !on;
@@ -2700,4 +2732,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261121T0934 -->
+<!-- rebuild-trigger 20261121T0940 -->
