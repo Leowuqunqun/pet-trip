@@ -768,6 +768,13 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   font-size:12.5px;color:var(--brand-2)}
 .atrip-foot{margin-top:14px;padding-top:10px;border-top:1px dashed var(--line-2);
   font-size:11.5px;line-height:1.65;color:var(--ink-3)}
+
+/* 筛选体验（2026-11-21）：已启用状态、清空、折叠、组内说明 */
+.chip.on{border-color:var(--brand);background:var(--brand-soft);color:var(--brand-2);font-weight:600}
+.fsum-clear{color:var(--terra-2);border-style:dashed;font-weight:600}
+.chip-more{border-style:dashed;color:var(--ink-2)}
+.fp-title{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.fp-hint{font-weight:400;font-size:11px;color:var(--ink-3);letter-spacing:0}
 </style>
 </head>
 <body>
@@ -813,9 +820,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     </div>
     <div class="fp-body">
 
-  <div class="fp-title">想干什么</div>
+  <div class="fp-title">想干什么<small class="fp-hint">可多选 · 任一项对上就算</small></div>
   <div id="fpanel-scenes" style="display:contents"></div>
-  <div class="fp-title">带狗</div>
+  <div class="fp-title">带狗<small class="fp-hint">只勾一档就够</small></div>
   <button class="chip" data-dog="explicit" aria-pressed="false">明确友好</button>
   <button class="chip" data-dog="default" aria-pressed="false">默认允许</button>
   <!-- 「去哪儿」：福建/山东/江西的点位已经入库，但筛选条上原来没有任何入口，
@@ -827,7 +834,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   <button class="chip" data-season="夏" aria-pressed="false">夏</button>
   <button class="chip" data-season="秋" aria-pressed="false">秋</button>
   <button class="chip" data-season="冬" aria-pressed="false">冬</button>
-  <div class="fp-title">去哪儿</div>
+  <div class="fp-title">去哪儿<small class="fp-hint">可多选 · 省份之间是"或"</small></div>
   <div id="fpanel-provinces" style="display:contents"></div>
     </div>
   </div>
@@ -954,7 +961,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, q:"", active:null, trip:[]};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, q:"", active:null, trip:[], provExpanded:false, autoFit:false};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -1055,9 +1062,16 @@ function syncSummary(){
   Object.keys(STATE.kinds).forEach(function(k){
     if(STATE.kinds[k]) out.push('<button class="fsum" data-clear-kind="'+esc(k)+'">'+esc(KIND_LABEL[k]||k)+'<span class="x">✕</span></button>');
   });
-  el("fsum").innerHTML = out.join("");
   var n = out.length;
+  if(n) out.push('<button class="fsum fsum-clear" data-clear-all="1">清空</button>');
+  el("fsum").innerHTML = out.join("");
   el("fpanel-n").textContent = n ? String(n) : "";
+  /* 按钮有没有"已启用"状态：原来只把数字塞进去，颜色不变，
+     关掉抽屉之后完全看不出自己还带着条件（2026-11-21 实测 aria-pressed 一直是 false）。 */
+  /* 只改视觉状态，不碰 aria-pressed——那个属性被"抽屉是否展开"占着，
+     两边都写会互相覆盖（实测 class 是 on、aria-pressed 却是 false，自相矛盾）。 */
+  var tg = el("fpanel-toggle");
+  if(tg) tg.classList.toggle("on", n > 0);
 }
 
 function syncFilterUI(){
@@ -1133,6 +1147,13 @@ function seasonActive(s){
 }
 
 /* ───────── 渲染列表 ───────── */
+/* 有没有勾任何筛选条件（不含搜索与车程滑块，那两个各自有独立入口） */
+function hasFilters(){
+  function any(o){ return o && Object.keys(o).some(function(k){ return o[k]; }); }
+  return any(STATE.scenes) || any(STATE.kinds) || any(STATE.dogTier) ||
+         any(STATE.provinces) || any(STATE.season);
+}
+
 function sortedFiltered(){
   return DATA.spots.filter(match).slice().sort(function(a,b){
     /* 一律按单程车程由近到远 */
@@ -1159,6 +1180,9 @@ function render(){
   var all = sortedFiltered();
   syncMarkers(all);
   renderCards(all);
+  /* 有地图就按视野列卡片：这样提示行才说得清"地图范围内 N 个"，
+     而不是把筛选总数再说一遍（顶部圆片已经在说总数了）。 */
+  if(mapUsable()) renderNear();
 }
 
 function renderNear(){
@@ -1177,10 +1201,13 @@ function renderCards(list, totalAll){
      所以传的是 totalAll（已过滤、与视野无关），不是 list（视野内）；视野内的数在提示行。 */
   el("count").textContent = (totalAll != null ? totalAll : list.length) + " 个点";
   var hint = el("list-hint");
+  /* 原来只分了"视野内/全量"两种说法，于是勾了筛选之后顶部写着 116 个点、
+     提示行还写"全部点位"——两句话自相矛盾（2026-11-21 实测）。 */
   hint.textContent = scoped
     ? (STATE.q ? "搜到 " + list.length + " 个" : "地图范围内 " + list.length + " 个")
     : (STATE.q ? "搜到 " + list.length + " 个"
-       : (STATE.hours == null ? "全部点位" : "单程 ≤" + STATE.hours.toFixed(1) + "h 内"));
+       : (hasFilters() ? "筛选后 " + list.length + " 个"
+          : (STATE.hours == null ? "全部点位" : "单程 ≤" + STATE.hours.toFixed(1) + "h 内")));
 
   var box = el("list");
   if(!list.length){
@@ -1498,10 +1525,25 @@ function renderProvinceBar(){
     counts[pv] = (counts[pv]||0) + 1;
   });
   var order = Object.keys(counts).sort(function(a,b){ return counts[b]-counts[a]; });
-  el("fpanel-provinces").innerHTML = order.map(function(k){
+  /* 30 个省一次铺开要滚 600px，把玩法区挤到屏幕外（2026-11-21 实测）。
+     默认只露前 10 个（已覆盖江浙沪皖闽赣鲁豫湘鄂），其余折起来；
+     已经选中的省不管排第几都露出来，否则找不到自己勾了什么。 */
+  var LIMIT = 10, expanded = !!STATE.provExpanded;
+  var shown = expanded ? order : order.slice(0, LIMIT);
+  if(!expanded){
+    order.slice(LIMIT).forEach(function(k){
+      if(STATE.provinces[k] && shown.indexOf(k) < 0) shown.push(k);
+    });
+  }
+  var html = shown.map(function(k){
     return '<button class="chip" data-province="'+esc(k)+'" aria-pressed="false">'+
              esc(k)+' <b style="font-weight:600;opacity:.6">'+counts[k]+'</b></button>';
   }).join("");
+  if(order.length > LIMIT){
+    html += '<button class="chip chip-more" data-prov-more="1">'
+          + (expanded ? "收起" : "更多省份（还差 " + (order.length - LIMIT) + " 个）") + '</button>';
+  }
+  el("fpanel-provinces").innerHTML = html;
 }
 
 function renderLegend(){
@@ -1538,7 +1580,33 @@ function syncMarkers(list){
   CLUSTER.addLayers(layers);
   window.__dbg.layers = CLUSTER.getLayers().length;
   window.__dbg.km = MAP.getZoom();
-  if(list.length && !STATE.active) fitAll(list);
+  /* 筛选后要不要重新取景（2026-11-21 改）：
+     原来无条件 fitAll(结果)，于是勾一个"玩水"（338 个点遍布全国）就把地图从长三角
+     拽到云贵川——用户正在看的地方被自己的一次筛选弄丢了。
+     现在的规则：**当前视野里还有结果就原地不动**；一个都没有才重取景。
+     搜索例外：搜索就是"我要去那儿"，直接飞过去才对。 */
+  if(list.length && !STATE.active){
+    var stillVisible = mapUsable() && list.some(inView);
+    if(!stillVisible || STATE.q) fitAll(list);
+  }
+}
+
+/* 首屏视野：只看"周末开得到"的范围（单程 ≤3h）。点数太少才退回全部，
+   免得在东部沿海以外的地方一打开就是空白地图。 */
+function fitNear(list){
+  var near = list.filter(function(s){
+    var dr = driveInfo(s);
+    return dr && typeof dr.hours_oneway === "number" && dr.hours_oneway <= 3;
+  });
+  var use = near.length >= 20 ? near : list;
+  if(!MAP || !use.length) return;
+  MAP.invalidateSize();
+  var sz = MAP.getSize();
+  if(!sz || sz.x < 40 || sz.y < 40) return;   /* 容器还是 0×0：算出来的一定是错的 */
+  var pts = use.map(function(s){ return [s.gcj[1], s.gcj[0]]; })
+               .filter(function(pt){ return pt[0] != null && pt[1] != null; });
+  if(!pts.length) return;
+  MAP.fitBounds(pts, {padding:[30,30], maxZoom:9});
 }
 
 function fitAll(list){
@@ -1767,8 +1835,15 @@ function bind(){
       if(sum.hasAttribute("data-clear-dog")) STATE.dogTier[sum.getAttribute("data-clear-dog")] = false;
       if(sum.hasAttribute("data-clear-province")) STATE.provinces[sum.getAttribute("data-clear-province")] = false;
       if(sum.hasAttribute("data-clear-kind")) STATE.kinds[sum.getAttribute("data-clear-kind")] = false;
+      if(sum.hasAttribute("data-clear-all")){
+        ["season","scenes","dogTier","provinces","kinds"].forEach(function(k){
+          Object.keys(STATE[k]).forEach(function(x){ STATE[k][x] = false; });
+        });
+      }
       PLAN.dirty = true; syncFilterUI(); render(); return;
     }
+    var pm = e.target.closest("[data-prov-more]");
+    if(pm){ STATE.provExpanded = !STATE.provExpanded; renderProvinceBar(); syncFilterUI(); return; }
     var tg = e.target.closest("#fpanel-toggle");
     if(tg){ togglePanel(); return; }
     var sd = e.target.closest("#search-toggle");
@@ -3136,6 +3211,11 @@ function setView(v){
     setTimeout(function(){
       if(!MAP) return;
       MAP.invalidateSize();
+      /* 首次真正看到地图时才做自动取景（见上面的 autoFit 说明） */
+      if(!STATE.autoFit && DATA && DATA.spots && DATA.spots.length){
+        fitNear(DATA.spots);
+        STATE.autoFit = true;
+      }
       renderNear();     /* 地图有尺寸了才谈得上"视口内有哪些点" */
     }, 40);
   }else{
@@ -3195,7 +3275,22 @@ fetch("spots.json", {cache:"no-cache"})
     /* 手机打开就是推荐页，不用点"本周推荐" */
     if(window.matchMedia("(max-width:859px)").matches) setView("plan");
     /* 布局稳定后再算 fitBounds：立刻算会把容器尺寸算小，点位挤到屏幕外 */
-    setTimeout(function(){ if(d.spots.length) fitAll(d.spots); }, 80);
+    /* 首屏按车程取景（2026-11-21）：原来一进来 fitAll 把 1021 个点全塞进视野，
+       打开就是内蒙古/宁夏，左边卡片全是"单程 6 小时 55 分"——
+       跟"从上海出发过周末"这个定位完全对不上。默认先看 3 小时内的，全国让用户自己拉。 */
+    setTimeout(function(){
+      if(!d.spots.length) return;
+      /* 地图此刻可能还是 display:none（手机默认停在"推荐"页），
+         在 0×0 容器上 fitBounds 会算出一个横跨半个中国的视野。
+         所以：能算就算，不能算就等切到地图页再算，只算一次。 */
+      /* 只有桌面端此刻地图真的可见（≥860px 默认就在地图页）才在这里取景。
+         手机上这里看到的"可用"是假的：容器 display:none 时 fitBounds 会在 0×0 上算，
+         结果横跨半个中国——正好是这个 bug 的表现。手机交给 setView("map") 再算。 */
+      if(window.matchMedia("(min-width:860px)").matches && mapUsable()){
+        fitNear(d.spots);
+        STATE.autoFit = true;
+      }
+    }, 80);
     window.addEventListener("resize", function(){ MAP.invalidateSize(); });
     window.addEventListener("orientationchange", function(){
       setTimeout(function(){ MAP.invalidateSize(); }, 260);
@@ -3216,4 +3311,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261121T1039 -->
+<!-- rebuild-trigger 20261121T1233 -->
