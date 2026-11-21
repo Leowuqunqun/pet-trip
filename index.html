@@ -746,6 +746,28 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .stops-d[open] summary{border-bottom:0}
 .stops-d .sd-body{padding-top:2px}
 
+
+/* 以某点为中心排行程（2026-11-21）：入口按钮 + 分天版面 */
+.anchorbtn{
+  width:100%;margin-top:8px;padding:11px 14px;border-radius:12px;cursor:pointer;
+  border:1px solid var(--brand);background:var(--brand-soft);color:var(--brand-2);
+  font:inherit;font-size:13.5px;font-weight:600;text-align:left;
+}
+.achips{display:flex;gap:7px;flex-wrap:wrap}
+.aday{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+.aday:first-child{border-top:0;padding-top:0}
+.aday-h{font-size:13px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:8px}
+.aday-h .adir{font-size:11.5px;font-weight:600;color:var(--ink-3);letter-spacing:.02em}
+.astop{padding:9px 0 0;display:flex;flex-direction:column;gap:2px}
+.as-n{font-size:13.5px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:6px}
+.as-tag{font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:5px;
+  background:var(--brand);color:#F4F7F4;letter-spacing:.02em}
+.as-m{font-size:12px;color:var(--ink-2)}
+.as-w{font-size:11.5px;color:var(--ink-3)}
+.asleep{margin-top:9px;padding:8px 10px;border-radius:10px;background:var(--brand-soft);
+  font-size:12.5px;color:var(--brand-2)}
+.atrip-foot{margin-top:14px;padding-top:10px;border-top:1px dashed var(--line-2);
+  font-size:11.5px;line-height:1.65;color:var(--ink-3)}
 </style>
 </head>
 <body>
@@ -850,6 +872,21 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       </div>
     </div>
     <div id="d-body"></div>
+  </div>
+</div>
+
+<!-- 以某点为中心排行程（2026-11-21）：从详情页进入，不绑日期、不取天气 -->
+<div class="detail" id="atrip">
+  <div class="detail-inner">
+    <div class="d-top">
+      <div class="grabwrap"><button class="close" id="atrip-close" aria-label="关闭">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+      <div class="d-head">
+        <div class="d-title" id="a-title"></div>
+        <div class="d-loc" id="a-loc"></div>
+      </div>
+    </div>
+    <div id="a-body"></div>
   </div>
 </div>
 
@@ -1537,7 +1574,10 @@ function openDetail(id){
   /* 加入行程放在最上面：先决定"去不去"，再看细节 */
   var inT = inTrip(s.id);
   html += '<div class="sec" style="margin-top:2px"><button class="tripbtn' + (inT ? " on" : "") +
-          '" data-trip="' + esc(s.id) + '">' + (inT ? "✓ 已在行程 · 点击移除" : "＋ 加入行程") + '</button></div>';
+          '" data-trip="' + esc(s.id) + '">' + (inT ? "✓ 已在行程 · 点击移除" : "＋ 加入行程") + '</button>' +
+          (spotCoord(s) ? '<button class="anchorbtn" data-anchor="' + esc(s.id) + '">'
+             + '以这里为中心排行程 ›</button>' : '') +
+          '</div>';
 
   /* 照片：先看图，再看结论——"长啥样"比指标更直觉 */
   if(s.photos && s.photos.length){
@@ -1788,6 +1828,28 @@ function bind(){
       qi.value = ""; STATE.q = ""; PLAN.dirty = true; render(); qi.focus();
     });
   })();
+
+  /* 以某点为中心排行程 */
+  el("detail").addEventListener("click", function(e){
+    var ab = e.target.closest("[data-anchor]");
+    if(ab){ openAnchor(ab.getAttribute("data-anchor")); }
+  });
+  if(el("atrip-close")) el("atrip-close").addEventListener("click", closeAnchor);
+  el("atrip").addEventListener("click", function(e){
+    if(e.target === el("atrip")) { closeAnchor(); return; }
+    var d = e.target.closest("[data-days]");
+    if(d){ ATRIP.days = parseInt(d.getAttribute("data-days"), 10) || 2; renderAnchor(); return; }
+    var add = e.target.closest("[data-atrip-add]");
+    if(add){
+      var c = findSpot(ATRIP.centerId);
+      var t = c ? buildAnchorTrip(c, ATRIP.days, seasonOf(new Date())) : null;
+      if(t){
+        t.dayList.forEach(function(dd){ dd.stops.forEach(function(x){ if(!inTrip(x.s.id)) toggleTrip(x.s.id); }); });
+        add.textContent = "✓ 已加入行程";
+        add.classList.add("on");
+      }
+    }
+  });
 
   el("filters").addEventListener("click", onChipClick);
   el("fpanel").addEventListener("click", onChipClick);
@@ -2260,6 +2322,222 @@ function nearestChain(start, pool, max){
   }
   return out;
 }
+
+/* ───────── 以某点为中心排行程（2026-11-21 owner 需求）─────────
+   与「本周推荐」的区别要写清楚：
+     · 本周推荐 = 从上海出发，固定周五晚走、周日晚回，靠天气排；
+     · 这个     = 把用户搜到的那个点当大本营，在它周边按**方向**分天，不绑日期。
+   站间距离一律是**直线距离**：库里没有点与点之间的车程，高德额度也不允许现场算，
+   界面上必须写"直线"，不能让它看起来像车程（那会骗人）。 */
+var ATRIP_RADIUS_KM = 45;   // 选点上限：再远就不算"周边"了
+var ATRIP_DAY_KM = 25;      // 一天之内尽量不超过这个直线距离（山区 25km ≈ 1–1.5h 车程）
+
+function bearingDeg(a, b){
+  var toR = Math.PI/180;
+  var y = Math.sin((b[0]-a[0])*toR) * Math.cos(b[1]*toR);
+  var x = Math.cos(a[1]*toR)*Math.sin(b[1]*toR) - Math.sin(a[1]*toR)*Math.cos(b[1]*toR)*Math.cos((b[0]-a[0])*toR);
+  return (Math.atan2(y, x)/toR + 360) % 360;
+}
+
+function buildAnchorTrip(center, days, season){
+  var c0 = spotCoord(center);
+  if(!c0) return null;
+  var cand = [];
+  DATA.spots.forEach(function(s){
+    if(s.id === center.id) return;
+    if(dogKey(s) === "forbidden") return;
+    var pc = spotCoord(s); if(!pc) return;
+    var km = haversineKm(c0, pc);
+    if(km > ATRIP_RADIUS_KM) return;
+    cand.push({ s:s, km:km, brg:bearingDeg(c0, pc) });
+  });
+
+  /* 按方位每 60° 分一桶：同一天只在同一侧活动，避免"上午东边下午西边"来回折返。
+     桶内排序 = 当季档位 → 热度（笔记数）→ 距离近。 */
+  var buckets = {};
+  cand.forEach(function(x){
+    var k = Math.floor(((x.brg + 30) % 360) / 60);
+    (buckets[k] = buckets[k] || []).push(x);
+  });
+  var groups = Object.keys(buckets).map(function(k){
+    var list = buckets[k].slice().sort(function(a,b){
+      var ta = seasonTier(a.s, season), tb = seasonTier(b.s, season);
+      if(tb !== ta) return tb - ta;
+      var pa = popOf(a.s), pb = popOf(b.s);
+      var na = pa ? pa.notes : 0, nb = pb ? pb.notes : 0;
+      if(nb !== na) return nb - na;
+      return a.km - b.km;
+    });
+    var top = popOf(list[0].s);
+    return { list:list, topNotes: top ? top.notes : 0, dir: compassOf(list[0].brg) };
+  });
+  groups.sort(function(a,b){ return b.topNotes - a.topNotes; });
+
+  var used = { };
+  used[center.id] = 1;
+  /* 分天规则（两条约束互相牵制，必须一起满足）：
+       ① **同一天只在一个方向上玩**——所以在同一个方位桶里取点，跨桶就换天；
+       ② **一天别跑太远**——桶内先拿 ≤25km 的，不够再放宽到 45km。
+     第一版先只做了②（全局近距优先），结果一天里塞了"西边 1.3km"和"东边 22km"，
+     方向标签成了平均值，等于骗人；反过来先只做①又会排出直线 35km 的站。 */
+  var perDayCap = function(day){ return day === 1 ? 2 : 3; };
+  var dayPicks = [[]];
+  var cap = perDayCap(1);
+  groups.forEach(function(g){
+    var near = g.list.filter(function(x){ return x.km <= ATRIP_DAY_KM; });
+    var far  = g.list.filter(function(x){ return x.km >  ATRIP_DAY_KM; });
+    near.concat(far).forEach(function(x){
+      if(used[x.s.id]) return;
+      /* 只排到用户要的天数为止。原来不设上限，多出来的点也被标成 used，
+         于是"住宿候选"里把它们排除了 —— 明明 0.2km 外有民宿，却报只能野营。 */
+      if(dayPicks.length > days) return;
+      if(dayPicks[dayPicks.length-1].length >= cap){
+        if(dayPicks.length >= days) return;
+        dayPicks.push([]);
+        cap = perDayCap(dayPicks.length);
+      }
+      used[x.s.id] = 1;
+      dayPicks[dayPicks.length-1].push(x);
+    });
+  });
+
+  var dayList = [];
+  for(var d=1; d<=days; d++){
+    var raw = dayPicks[d-1] || [];
+    /* 站序按"从上一站就近接下去"排（最近邻链），不是按离中心远近——
+       按远近排会出现"1.3km → 22km → 7.5km"这种来回折返的顺序。 */
+    var stops = [];
+    if(d === 1) stops.push({ s:center, km:0, center:true });
+    /* 两天以上也是从大本营出发，所以起点统一用 center——
+       先写成了"第一天从 center、之后从 raw[0]"，反而把顺序绕乱。 */
+    nearestChain(center, raw, raw.length).forEach(function(x){ stops.push(x); });
+    /* 当晚住宿：优先距离最近、且确实能睡的点（营地/民宿/野外露营都算） */
+    var sleep = null;
+    if(d < days){
+      /* 先看当天已玩的点里有没有能睡的（营地/民宿/野外露营）——那样当晚不用再跑一段路。
+         第一版只在"周边池"里找，结果明明当天玩的就是民宿，却报"这一晚没找到可过夜的点"。 */
+      /* 住宿优先级：能住店 > 官方营地 > 野外露营 > 其他。
+         "能睡"和"睡得稳"不是一回事：把"允许野外露营"排在民宿前面，等于让人带狗睡山上。 */
+      var SLEEP_RANK = { lodging:0, official_camp:1, allowed_wild:2, gray:3 };
+      var rankOf = function(x){ var r = SLEEP_RANK[sleepKind(x.s)]; return r == null ? 9 : r; };
+      var inDay = stops.filter(function(x){ return isNight(x.s) && sleepKind(x.s) != null; })
+                       .sort(function(a,b){ return rankOf(a) - rankOf(b) || a.km - b.km; });
+      /* 当天已玩的点 与 周边可睡点 放在一起比，不能"当天有能睡的就绝不看周边"：
+         实测这样会把"莫干山（允许野营）"排在 0.2km 外的民宿前面，等于让人带狗睡山上。 */
+      var sleepPool = inDay.slice();
+      for(var j=0;j<cand.length;j++){
+        var x = cand[j];
+        if(used[x.s.id] || !isNight(x.s) || sleepKind(x.s)==null) continue;
+        sleepPool.push({ s:x.s, km:x.km, fromPool:true });
+      }
+      sleepPool.sort(function(a,b){ return rankOf(a) - rankOf(b) || a.km - b.km; });
+      if(sleepPool.length){
+        sleep = { s: sleepPool[0].s, km: sleepPool[0].km };
+        used[sleep.s.id] = 1;
+      }
+    }
+    var brgs = stops.filter(function(x){ return !x.center; }).map(function(x){ return x.brg; });
+    var dir = "";
+    if(brgs.length){
+      /* 方位角取平均要按圆处理：直接算算术平均，在 0°/360° 附近会得出反方向 */
+      var sx = 0, sy = 0;
+      brgs.forEach(function(b){ sx += Math.cos(b*Math.PI/180); sy += Math.sin(b*Math.PI/180); });
+      dir = compassOf((Math.atan2(sy, sx)*180/Math.PI + 360) % 360);
+    }
+    dayList.push({ day:d, stops:stops, sleep:sleep, dir:dir });
+  }
+
+  var totalKm = 0, maxLeg = 0;
+  dayList.forEach(function(d){
+    d.stops.forEach(function(x){ if(x.km){ totalKm += x.km; if(x.km>maxLeg) maxLeg=x.km; } });
+    if(d.sleep){ totalKm += d.sleep.km; }
+  });
+  return { center:center, days:days, season:season, dayList:dayList, totalKm:totalKm, maxLeg:maxLeg,
+           pool:cand.length, radius:ATRIP_RADIUS_KM };
+}
+
+function compassOf(brg){
+  var names = ["北","东北","东","东南","南","西南","西","西北"];
+  return names[Math.floor(((brg + 22.5) % 360) / 45)];
+}
+
+/* ───────── 以某点为中心排行程：渲染与开合 ───────── */
+var ATRIP = { centerId:null, days:2 };
+
+function atripWhy(x, season){
+  var bits = [];
+  var t = seasonTier(x.s, season);
+  if(t === 3) bits.push(season + "季最佳");
+  else if(t === 2) bits.push(season + "季适合");
+  else if(t === 1) bits.push(season + "季将就");
+  else bits.push(season + "季不建议");
+  var p = popOf(x.s);
+  if(p && p.notes) bits.push("笔记 " + p.notes + " 条");
+  return bits.join(" · ");
+}
+
+function renderAnchor(){
+  var c = findSpot(ATRIP.centerId); if(!c) return;
+  var season = seasonOf(new Date());
+  var t = buildAnchorTrip(c, ATRIP.days, season);
+  el("a-title").textContent = "以 " + c.name + " 为中心";
+  var dh = spotH(c);
+  el("a-loc").textContent = [c.city || c.province,
+    (dh != null ? "从上海 " + dh.toFixed(1) + "h" : null),
+    "周边 " + ATRIP_RADIUS_KM + " km"].filter(Boolean).join(" · ");
+  if(!t){ el("a-body").innerHTML = '<div class="sec">这个点没有坐标，排不了。</div>'; return; }
+
+  var h = '<div class="sec"><div class="achips">';
+  [1,2,3].forEach(function(d){
+    h += '<button class="chip" data-days="' + d + '" aria-pressed="' + (ATRIP.days === d) + '">'
+       + d + ' 天' + (d > 1 ? " " + (d-1) + " 晚" : "") + '</button>';
+  });
+  h += '</div></div>';
+
+  if(!t.pool){
+    h += '<div class="sec">周边 '+ATRIP_RADIUS_KM+' km 内没有别的点，只能单点玩。</div>';
+  }
+
+  t.dayList.forEach(function(d){
+    h += '<div class="aday"><div class="aday-h">第 ' + d.day + ' 天';
+    if(d.day === 1) h += '<span class="adir">大本营</span>';
+    else if(d.dir) h += '<span class="adir">往' + d.dir + '方向</span>';
+    h += '</div>';
+    d.stops.forEach(function(x){
+      h += '<div class="astop">'
+         + '<div class="as-n">' + esc(x.s.name) + (x.center ? '<span class="as-tag">大本营</span>' : '') + '</div>'
+         + '<div class="as-m">' + [ (KIND_LABEL[x.s.kind] || "其他"),
+              (x.km ? "直线 " + x.km.toFixed(1) + " km" : null) ].filter(Boolean).join(" · ") + '</div>'
+         + '<div class="as-w">' + esc(atripWhy(x, season)) + '</div>'
+         + '</div>';
+    });
+    if(d.sleep){
+      h += '<div class="asleep">今晚住：<b>' + esc(d.sleep.s.name) + '</b>'
+         + '（' + ((NIGHT_LABEL[sleepKind(d.sleep.s)] || [])[0] || "可过夜") + ' · 直线 ' + d.sleep.km.toFixed(1) + ' km）</div>';
+    } else if(d.day < t.days){
+      h += '<div class="asleep">这一晚没找到可过夜的点 —— 可能得住民宿或缩短一天。</div>';
+    }
+    h += '</div>';
+  });
+
+  h += '<div class="sec" style="margin-top:14px">'
+     + '<button class="tripbtn" data-atrip-add="1">＋ 把这些点都加入行程</button></div>';
+  h += '<div class="atrip-foot">'
+     + '共 ' + t.totalKm.toFixed(1) + ' km 直线移动，最远一站 ' + t.maxLeg.toFixed(1) + ' km'
+     + (t.maxLeg > ATRIP_DAY_KM ? '（超过 ' + ATRIP_DAY_KM + ' km，这一站建议单独安排半天）' : '') + '。<br>'
+     + '<b>站与站之间的距离是直线，不是车程</b>；山区实际车程通常是直线的 1.3–1.8 倍，出发前用导航复核。<br>'
+     + '季节按现在（' + season + '季）排；这个模式不绑日期，也不预测天气。'
+     + '</div>';
+  el("a-body").innerHTML = h;
+}
+
+function openAnchor(id){
+  var s = findSpot(id); if(!s || !spotCoord(s)) return;
+  ATRIP.centerId = id;
+  el("atrip").classList.add("open");
+  renderAnchor();
+}
+function closeAnchor(){ el("atrip").classList.remove("open"); }
 
 function weatherScore(tmax, tmin, pop){
   var mid=(tmax+tmin)/2, s=100;
@@ -2834,4 +3112,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261121T0957 -->
+<!-- rebuild-trigger 20261121T1020 -->
