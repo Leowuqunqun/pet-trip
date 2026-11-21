@@ -1839,6 +1839,8 @@ function bind(){
     if(e.target === el("atrip")) { closeAnchor(); return; }
     var d = e.target.closest("[data-days]");
     if(d){ ATRIP.days = parseInt(d.getAttribute("data-days"), 10) || 2; renderAnchor(); return; }
+    var sd = e.target.closest("[data-aseason]");
+    if(sd){ ATRIP.season = sd.getAttribute("data-aseason") || null; renderAnchor(); return; }
     var add = e.target.closest("[data-atrip-add]");
     if(add){
       var c = findSpot(ATRIP.centerId);
@@ -2339,6 +2341,58 @@ function bearingDeg(a, b){
   return (Math.atan2(y, x)/toR + 360) % 360;
 }
 
+/* 路径长度：大本营 → 各站 → (当晚住宿 || 回大本营)。全程直线，不是车程。 */
+function routeLen(center, stops, sleep){
+  var pts = [spotCoord(center)];
+  stops.forEach(function(x){ pts.push(spotCoord(x.s)); });
+  pts.push(spotCoord(sleep ? sleep.s : center));
+  var L = 0;
+  for(var i=0; i<pts.length-1; i++){ if(pts[i] && pts[i+1]) L += haversineKm(pts[i], pts[i+1]); }
+  return L;
+}
+
+/* 穷举站序（每天 ≤4 站 → 最多 24 种排列）。
+   最近邻是近似解，站数这么少没必要近似；顺手就把"回头路"压到最小。 */
+function bestOrder(center, stops, sleep){
+  if(stops.length <= 1) return stops.slice();
+  var best = null, bestLen = Infinity;
+  (function walk(rest, acc){
+    if(!rest.length){
+      var L = routeLen(center, acc, sleep);
+      if(L < bestLen){ bestLen = L; best = acc.slice(); }
+      return;
+    }
+    for(var i=0; i<rest.length; i++){
+      acc.push(rest[i]);
+      walk(rest.slice(0,i).concat(rest.slice(i+1)), acc);
+      acc.pop();
+    }
+  })(stops.slice(), []);
+  return best || stops.slice();
+}
+
+/* 绕行下界：大本营→最远站→终点。实际路径越接近它，越不像在兜圈子。 */
+function routeLowerBound(center, stops, sleep){
+  var c0 = spotCoord(center), farP = null, farKm = 0;
+  stops.forEach(function(x){
+    var pc = spotCoord(x.s);
+    if(!pc || !c0) return;
+    var km = haversineKm(c0, pc);
+    if(km > farKm){ farKm = km; farP = pc; }
+  });
+  if(!farP) return 0;
+  var end = spotCoord(sleep ? sleep.s : center);
+  return farKm + (end ? haversineKm(farP, end) : 0);
+}
+
+/* 一天的排法打包成一个可复用的结果 */
+function planDayRoute(center, picks, sleep){
+  var ordered = bestOrder(center, picks, sleep);
+  var len = routeLen(center, ordered, sleep);
+  var lb = routeLowerBound(center, ordered, sleep);
+  return { ordered: ordered, len: len, lower: lb, detour: lb > 0.5 ? len/lb : 1 };
+}
+
 function buildAnchorTrip(center, days, season){
   var c0 = spotCoord(center);
   if(!c0) return null;
@@ -2401,58 +2455,87 @@ function buildAnchorTrip(center, days, season){
     });
   });
 
+  /* ── 第二阶段：站序 + 回头路 ──
+     路径 = 大本营 → 各站 → (当晚住宿 || 回大本营)，全程直线。
+     站序用穷举（每天 ≤4 站，最多 24 种排列）而不是最近邻：站数这么少，没必要近似。
+     绕行系数 = 实际路径 / 下界（大本营→最远站→终点）；1.00 = 直去直回，>1.3 才算明显回头。 */
   var dayList = [];
+  var pickSleep = function(d, picks){
+    if(d >= days) return null;
+    var SLEEP_RANK = { lodging:0, official_camp:1, allowed_wild:2, gray:3 };
+    var rankOf = function(x){ var r = SLEEP_RANK[sleepKind(x.s)]; return r == null ? 9 : r; };
+    /* 住宿优先级：能住店 > 官方营地 > 野外露营 > 存疑。
+       "能睡"和"睡得稳"不是一回事：把野营排在民宿前面，等于让人带狗睡山上。 */
+    var pool = picks.filter(function(x){ return isNight(x.s) && sleepKind(x.s) != null; }).slice();
+    for(var j=0;j<cand.length;j++){
+      var x = cand[j];
+      if(used[x.s.id] || !isNight(x.s) || sleepKind(x.s)==null) continue;
+      pool.push({ s:x.s, km:x.km });
+    }
+    /* 同类型里取离当天路线最近的：先按距离排，再看类型——顺序反过来会让"0.2km 的民宿"
+       输给"30km 外的营地"，那显然是错的。 */
+    pool.sort(function(a,b){ return a.km - b.km; });
+    pool.sort(function(a,b){ return rankOf(a) - rankOf(b); });
+    return pool.length ? { s: pool[0].s, km: pool[0].km } : null;
+  };
+
   for(var d=1; d<=days; d++){
-    var raw = dayPicks[d-1] || [];
-    /* 站序按"从上一站就近接下去"排（最近邻链），不是按离中心远近——
-       按远近排会出现"1.3km → 22km → 7.5km"这种来回折返的顺序。 */
-    var stops = [];
-    if(d === 1) stops.push({ s:center, km:0, center:true });
-    /* 两天以上也是从大本营出发，所以起点统一用 center——
-       先写成了"第一天从 center、之后从 raw[0]"，反而把顺序绕乱。 */
-    nearestChain(center, raw, raw.length).forEach(function(x){ stops.push(x); });
-    /* 当晚住宿：优先距离最近、且确实能睡的点（营地/民宿/野外露营都算） */
-    var sleep = null;
-    if(d < days){
-      /* 先看当天已玩的点里有没有能睡的（营地/民宿/野外露营）——那样当晚不用再跑一段路。
-         第一版只在"周边池"里找，结果明明当天玩的就是民宿，却报"这一晚没找到可过夜的点"。 */
-      /* 住宿优先级：能住店 > 官方营地 > 野外露营 > 其他。
-         "能睡"和"睡得稳"不是一回事：把"允许野外露营"排在民宿前面，等于让人带狗睡山上。 */
-      var SLEEP_RANK = { lodging:0, official_camp:1, allowed_wild:2, gray:3 };
-      var rankOf = function(x){ var r = SLEEP_RANK[sleepKind(x.s)]; return r == null ? 9 : r; };
-      var inDay = stops.filter(function(x){ return isNight(x.s) && sleepKind(x.s) != null; })
-                       .sort(function(a,b){ return rankOf(a) - rankOf(b) || a.km - b.km; });
-      /* 当天已玩的点 与 周边可睡点 放在一起比，不能"当天有能睡的就绝不看周边"：
-         实测这样会把"莫干山（允许野营）"排在 0.2km 外的民宿前面，等于让人带狗睡山上。 */
-      var sleepPool = inDay.slice();
-      for(var j=0;j<cand.length;j++){
-        var x = cand[j];
-        if(used[x.s.id] || !isNight(x.s) || sleepKind(x.s)==null) continue;
-        sleepPool.push({ s:x.s, km:x.km, fromPool:true });
-      }
-      sleepPool.sort(function(a,b){ return rankOf(a) - rankOf(b) || a.km - b.km; });
-      if(sleepPool.length){
-        sleep = { s: sleepPool[0].s, km: sleepPool[0].km };
-        used[sleep.s.id] = 1;
-      }
-    }
-    var brgs = stops.filter(function(x){ return !x.center; }).map(function(x){ return x.brg; });
-    var dir = "";
-    if(brgs.length){
-      /* 方位角取平均要按圆处理：直接算算术平均，在 0°/360° 附近会得出反方向 */
-      var sx = 0, sy = 0;
-      brgs.forEach(function(b){ sx += Math.cos(b*Math.PI/180); sy += Math.sin(b*Math.PI/180); });
-      dir = compassOf((Math.atan2(sy, sx)*180/Math.PI + 360) % 360);
-    }
-    dayList.push({ day:d, stops:stops, sleep:sleep, dir:dir });
+    var picks = dayPicks[d-1] || [];
+    var sleep = pickSleep(d, picks);
+    if(sleep) used[sleep.s.id] = 1;
+    var r = planDayRoute(center, picks, sleep);
+    dayList.push({ day:d, picks:r.ordered, sleep:sleep, len:r.len, detour:r.detour, center:center });
   }
 
-  var totalKm = 0, maxLeg = 0;
-  dayList.forEach(function(d){
-    d.stops.forEach(function(x){ if(x.km){ totalKm += x.km; if(x.km>maxLeg) maxLeg=x.km; } });
-    if(d.sleep){ totalKm += d.sleep.km; }
+  /* 跨天换站：把某天的某站和另一天的某站对调，若两天合计路径变短就换。
+     扇区分天保证"方向大体一致"，但每桶最多能出 3 站，边界上的站仍可能被分到不合适的日子。
+     这一步就是把那些站挪到更顺的那天去。 */
+  var swapRound = 0, moved = true;
+  while(moved && swapRound++ < 6){
+    moved = false;
+    for(var a=0; a<dayList.length; a++){
+      for(var b=a+1; b<dayList.length; b++){
+        var A = dayList[a], B = dayList[b];
+        for(var i=0; i<A.picks.length; i++){
+          for(var j=0; j<B.picks.length; j++){
+            var pa = A.picks.slice(), pb = B.picks.slice();
+            var tmp = pa[i]; pa[i] = pb[j]; pb[j] = tmp;
+            var ra = planDayRoute(center, pa, A.sleep);
+            var rb = planDayRoute(center, pb, B.sleep);
+            if(ra.len + rb.len < (A.len + B.len) - 0.8){
+              A.picks = ra.ordered; A.len = ra.len; A.detour = ra.detour;
+              B.picks = rb.ordered; B.len = rb.len; B.detour = rb.detour;
+              moved = true;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 方向标签按当天最终站点算（换站之后可能变了） */
+  dayList.forEach(function(dd){
+    var brgs = dd.picks.map(function(x){ return x.brg; });
+    dd.dir = "";
+    if(brgs.length){
+      /* 方位角取平均要按圆处理：算术平均在 0°/360° 附近会得出反方向 */
+      var sx = 0, sy = 0;
+      brgs.forEach(function(b){ sx += Math.cos(b*Math.PI/180); sy += Math.sin(b*Math.PI/180); });
+      dd.dir = compassOf((Math.atan2(sy, sx)*180/Math.PI + 360) % 360);
+    }
+    dd.stops = [];
+    if(dd.day === 1) dd.stops.push({ s:dd.center, km:0, center:true });
+    dd.picks.forEach(function(x){ dd.stops.push(x); });
   });
-  return { center:center, days:days, season:season, dayList:dayList, totalKm:totalKm, maxLeg:maxLeg,
+
+  var totalKm = 0, maxLeg = 0, worstDetour = 1, detourDay = 0;
+  dayList.forEach(function(dd){
+    totalKm += dd.len;
+    dd.stops.forEach(function(x){ if(x.km > maxLeg) maxLeg = x.km; });
+    if(dd.detour > worstDetour){ worstDetour = dd.detour; detourDay = dd.day; }
+  });
+  return { center:center, days:days, season:season, dayList:dayList,
+           totalKm:totalKm, maxLeg:maxLeg, worstDetour:worstDetour, detourDay:detourDay,
            pool:cand.length, radius:ATRIP_RADIUS_KM };
 }
 
@@ -2462,7 +2545,7 @@ function compassOf(brg){
 }
 
 /* ───────── 以某点为中心排行程：渲染与开合 ───────── */
-var ATRIP = { centerId:null, days:2 };
+var ATRIP = { centerId:null, days:2, season:null };   // season=null 表示"当季"
 
 function atripWhy(x, season){
   var bits = [];
@@ -2478,7 +2561,7 @@ function atripWhy(x, season){
 
 function renderAnchor(){
   var c = findSpot(ATRIP.centerId); if(!c) return;
-  var season = seasonOf(new Date());
+  var season = ATRIP.season || seasonOf(new Date());
   var t = buildAnchorTrip(c, ATRIP.days, season);
   el("a-title").textContent = "以 " + c.name + " 为中心";
   var dh = spotH(c);
@@ -2492,6 +2575,15 @@ function renderAnchor(){
     h += '<button class="chip" data-days="' + d + '" aria-pressed="' + (ATRIP.days === d) + '">'
        + d + ' 天' + (d > 1 ? " " + (d-1) + " 晚" : "") + '</button>';
   });
+  h += '</div>';
+
+  /* 季节可选（owner 2026-11-21）：默认"当季"，也可以按淡季/旺季看不同排法 */
+  h += '<div class="achips" style="margin-top:8px">';
+  [["当季", null], ["春", "春"], ["夏", "夏"], ["秋", "秋"], ["冬", "冬"]].forEach(function(pair){
+    var on = (pair[1] === null && !ATRIP.season) || (pair[1] === ATRIP.season);
+    h += '<button class="chip" data-aseason="' + (pair[1] === null ? "" : pair[1]) + '" aria-pressed="' + on + '">'
+       + (pair[1] === null ? "当季（" + seasonOf(new Date()) + "）" : pair[0] + "季") + '</button>';
+  });
   h += '</div></div>';
 
   if(!t.pool){
@@ -2502,6 +2594,10 @@ function renderAnchor(){
     h += '<div class="aday"><div class="aday-h">第 ' + d.day + ' 天';
     if(d.day === 1) h += '<span class="adir">大本营</span>';
     else if(d.dir) h += '<span class="adir">往' + d.dir + '方向</span>';
+    /* 绕行系数：1.00 = 直去直回；>1.3 才算明显回头，标出来 */
+    var dtag = '移动 ' + d.len.toFixed(1) + ' km · 绕行 ×' + d.detour.toFixed(2);
+    h += '<span class="adir" style="margin-left:auto;' + (d.detour > 1.3 ? 'color:var(--terra-2);font-weight:700' : '') + '">'
+       + dtag + (d.detour > 1.3 ? ' 回头路' : '') + '</span>';
     h += '</div>';
     d.stops.forEach(function(x){
       h += '<div class="astop">'
@@ -2525,8 +2621,12 @@ function renderAnchor(){
   h += '<div class="atrip-foot">'
      + '共 ' + t.totalKm.toFixed(1) + ' km 直线移动，最远一站 ' + t.maxLeg.toFixed(1) + ' km'
      + (t.maxLeg > ATRIP_DAY_KM ? '（超过 ' + ATRIP_DAY_KM + ' km，这一站建议单独安排半天）' : '') + '。<br>'
+     + '<b>回头路检查</b>：每天按"实际走的直线总长 ÷ 直去直回的下界"算绕行系数，'
+     + '1.00 表示一路直去直回；这次最绕的是第 ' + t.detourDay + ' 天 ×' + t.worstDetour.toFixed(2) + ''
+     + (t.worstDetour > 1.3 ? '（周边能去的点就这几个，已经调过站序和换天）' : '（没有明显回头）') + '。<br>'
      + '<b>站与站之间的距离是直线，不是车程</b>；山区实际车程通常是直线的 1.3–1.8 倍，出发前用导航复核。<br>'
-     + '季节按现在（' + season + '季）排；这个模式不绑日期，也不预测天气。'
+     + '季节按 ' + season + '季 排' + (ATRIP.season ? '（手动选的）' : '（当季，可点上面的春/夏/秋/冬换）')
+     + '；这个模式不绑日期，也不预测天气。'
      + '</div>';
   el("a-body").innerHTML = h;
 }
@@ -3112,4 +3212,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261121T1020 -->
+<!-- rebuild-trigger 20261121T1029 -->
