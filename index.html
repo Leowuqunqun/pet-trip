@@ -797,7 +797,6 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       <label class="chip-wrap" title="默认不限，自己拖才生效">单程 <b id="range-out">不限</b>
         <input type="range" id="range" min="1" max="13" step="0.5" value="13">
       </label>
-      <button class="chip" data-f="night" aria-pressed="false">能过夜</button>
       <button class="chip" id="fpanel-toggle" aria-pressed="false" aria-expanded="false">筛选 <b id="fpanel-n"></b></button>
       <button class="chip" id="search-toggle" aria-pressed="false">搜索</button>
       <span id="fsum"></span>
@@ -821,6 +820,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     <div class="fp-body">
 
   <div class="fp-title">想干什么<small class="fp-hint">可多选 · 任一项对上就算</small></div>
+  <div id="fpanel-derived" style="display:contents"></div>
   <div id="fpanel-scenes" style="display:contents"></div>
   <div class="fp-title">带狗<small class="fp-hint">只勾一档就够</small></div>
   <button class="chip" data-dog="explicit" aria-pressed="false">明确友好</button>
@@ -961,7 +961,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, q:"", active:null, trip:[], provExpanded:false, autoFit:false};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, camp:false, q:"", active:null, trip:[], provExpanded:false, autoFit:false};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -1033,6 +1033,29 @@ function kindActive(kind){
 function selectedScenes(){
   return Object.keys(STATE.scenes).filter(function(k){ return STATE.scenes[k]; });
 }
+/* 「能露营」= 允许扎营：过夜状态是官方营地/野外露营，或者类型就是营地，
+   或者笔记里明确提到露营。三个来源取并集，因为"这里能不能搭帐篷"正是它们合起来回答的问题。 */
+function canCamp(s){
+  var st = (s.overnight || {}).status;
+  if(st === "official_camp" || st === "allowed_wild") return true;
+  if(s.kind === "campground") return true;
+  return (s.scenes || []).indexOf("露营") >= 0;
+}
+
+/* 玩法组的"或"：勾中的场景 + 能过夜 + 能露营，命中任意一个就算。
+   「能过夜」「能露营」在界面上和别的玩法摆在一起，用户读到的规则就是"任一项对上就算"，
+   所以它们必须是 OR 的一员——先写成独立 AND，等于"玩水 且 能露营"，
+   与抽屉里那行说明自相矛盾（实测 玩水338 + 能露营277 只剩 101 个）。 */
+function sceneOrActive(s){
+  var sel = selectedScenes() || [];
+  var hit = false;
+  if(sel.length) hit = hit || sel.some(function(k){ return (s.scenes || []).indexOf(k) >= 0; });
+  if(STATE.camp) hit = hit || canCamp(s);
+  if(STATE.night) hit = hit || isNight(s);
+  var any = sel.length > 0 || STATE.camp || STATE.night;
+  return any ? hit : true;
+}
+
 function sceneActive(list){
   var sel = selectedScenes();
   if(!sel.length) return true;
@@ -1059,6 +1082,8 @@ function syncSummary(){
   Object.keys(STATE.provinces).forEach(function(k){
     if(STATE.provinces[k]) out.push('<button class="fsum" data-clear-province="'+esc(k)+'">'+esc(k)+'<span class="x">✕</span></button>');
   });
+  if(STATE.night) out.push('<button class="fsum" data-clear-night="1">能过夜<span class="x">✕</span></button>');
+  if(STATE.camp) out.push('<button class="fsum" data-clear-camp="1">能露营<span class="x">✕</span></button>');
   Object.keys(STATE.kinds).forEach(function(k){
     if(STATE.kinds[k]) out.push('<button class="fsum" data-clear-kind="'+esc(k)+'">'+esc(KIND_LABEL[k]||k)+'<span class="x">✕</span></button>');
   });
@@ -1078,7 +1103,8 @@ function syncFilterUI(){
   syncSummary();
   Array.prototype.forEach.call(document.querySelectorAll(".chip[data-f]"), function(b){
     var f = b.getAttribute("data-f");
-    if(f === "night") return;
+    if(f === "night"){ b.setAttribute("aria-pressed", STATE.night ? "true" : "false"); return; }
+    if(f === "camp"){ b.setAttribute("aria-pressed", STATE.camp ? "true" : "false"); return; }
     b.setAttribute("aria-pressed", STATE.kinds[f] ? "true" : "false");
   });
   Array.prototype.forEach.call(document.querySelectorAll(".chip[data-scene]"), function(b){
@@ -1102,7 +1128,7 @@ function match(s){
   var dr = driveInfo(s);
   if(dr && STATE.hours != null && dr.hours_oneway > STATE.hours) return false;
   if(!dr) return false;
-  if(STATE.night && !isNight(s)) return false;
+
   var dt = Object.keys(STATE.dogTier).filter(function(k){ return STATE.dogTier[k]; });
   if(dt.length){
     var tier = s.dog_tier || "unknown";
@@ -1115,7 +1141,7 @@ function match(s){
   }
   var pv = Object.keys(STATE.provinces).filter(function(k){ return STATE.provinces[k]; });
   if(pv.length && pv.indexOf(s.province || "") < 0) return false;
-  if(!sceneActive(s.scenes)) return false;
+  if(!sceneOrActive(s)) return false;
   if(!kindActive(s.kind)) return false;
   if(!seasonActive(s)) return false;
   if(!matchQuery(s, STATE.q)) return false;
@@ -1151,7 +1177,7 @@ function seasonActive(s){
 function hasFilters(){
   function any(o){ return o && Object.keys(o).some(function(k){ return o[k]; }); }
   return any(STATE.scenes) || any(STATE.kinds) || any(STATE.dogTier) ||
-         any(STATE.provinces) || any(STATE.season);
+         any(STATE.provinces) || any(STATE.season) || !!STATE.night || !!STATE.camp;
 }
 
 function sortedFiltered(){
@@ -1507,12 +1533,25 @@ function renderSceneBar(){
     (s.scenes||[]).forEach(function(x){ counts[x] = (counts[x]||0) + 1; });
   });
   var html = SCENE_ORDER.filter(function(k){
-    return (counts[k]||0) >= SCENE_MIN && k !== "过夜";
+    /* 「露营」（玩法）与上面派生的「能露营」是同一批点（实测都是 277），
+       两个都摆出来等于把"住宿 54 vs 过夜 326"的重复换了个地方犯一遍。留「能露营」。 */
+    return (counts[k]||0) >= SCENE_MIN && k !== "过夜" && k !== "露营";
   }).map(function(k){
     return '<button class="chip" data-scene="'+esc(k)+'" aria-pressed="false">'+
              esc(k)+' <b style="font-weight:600;opacity:.6">'+(counts[k]||0)+'</b></button>';
   }).join("");
   el("fpanel-scenes").innerHTML = html;
+
+  /* 派生条件：能过夜 / 能露营。数量现算，不写死。
+     「能过夜」用的是和卡片上"可过夜"完全同一个判定（isNight），
+     所以不会出现"筛选 326、卡片上写不能过夜"这种两套标准。 */
+  var nNight = DATA.spots.filter(isNight).length;
+  var nCamp = DATA.spots.filter(canCamp).length;
+  el("fpanel-derived").innerHTML =
+    '<button class="chip" data-f="night" aria-pressed="false">能过夜 ' +
+      '<b style="font-weight:600;opacity:.6">' + nNight + '</b></button>' +
+    '<button class="chip" data-f="camp" aria-pressed="false">能露营 ' +
+      '<b style="font-weight:600;opacity:.6">' + nCamp + '</b></button>';
 }
 
 /* 省份筛选条。与场景条不同，这里**不设 20 条门槛**：门槛的作用是避免"筛出 3 个结果"
@@ -1548,8 +1587,12 @@ function renderProvinceBar(){
 
 function renderLegend(){
   var box = el("legend"); if(!box) return;
+  /* 营地/住宿不再放在这一排（2026-11-22 owner 裁决）：
+     它们是"类型"，而用户想的是"能不能露营/能不能过夜"，跟玩法组同一件事。
+     两个入口给两个数量（住宿 54 vs 过夜 326），只会让人以为住宿点很少。
+     现在它们以「能露营」「能过夜」出现在抽屉的玩法组里，这一排只留没有歧义的。 */
   box.innerHTML = Object.keys(KIND_LABEL).filter(function(k){
-    return k !== "other" && k !== "food";
+    return k !== "other" && k !== "food" && k !== "campground" && k !== "lodging" && k !== "transit";
   }).map(function(k){
     return '<span class="lg" data-kind="'+esc(k)+'" role="button" tabindex="0" aria-pressed="true">'+
            '<i style="background:'+(KIND_COLOR[k]||"#9C8A76")+'">'+svgFor(k)+'</i>'+
@@ -1835,7 +1878,10 @@ function bind(){
       if(sum.hasAttribute("data-clear-dog")) STATE.dogTier[sum.getAttribute("data-clear-dog")] = false;
       if(sum.hasAttribute("data-clear-province")) STATE.provinces[sum.getAttribute("data-clear-province")] = false;
       if(sum.hasAttribute("data-clear-kind")) STATE.kinds[sum.getAttribute("data-clear-kind")] = false;
+      if(sum.hasAttribute("data-clear-night")) STATE.night = false;
+      if(sum.hasAttribute("data-clear-camp")) STATE.camp = false;
       if(sum.hasAttribute("data-clear-all")){
+        STATE.night = false; STATE.camp = false;
         ["season","scenes","dogTier","provinces","kinds"].forEach(function(k){
           Object.keys(STATE[k]).forEach(function(x){ STATE[k][x] = false; });
         });
@@ -1868,6 +1914,7 @@ function bind(){
     } else {
       var f = b.getAttribute("data-f");
       if(f==="night") STATE.night = !on;
+      else if(f==="camp") STATE.camp = !on;
       else STATE.kinds[f] = !on;
     }
     PLAN.dirty = true;
@@ -3311,4 +3358,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261121T1233 -->
+<!-- rebuild-trigger 20261122T1809 -->
