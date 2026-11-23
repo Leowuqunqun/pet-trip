@@ -2326,6 +2326,18 @@ function bind(){
     if(e.target === el("lightbox")) el("lightbox").classList.remove("open");
   });
   document.addEventListener("keydown", function(e){
+    /* 卡片标着 role="button" tabindex="0"，那就必须能用键盘打开（2026-11-23）。
+       以前 tab 到卡片上按回车/空格毫无反应——"看起来是按钮、其实是死按钮"，
+       读屏用户会以为这页打不开任何点。 */
+    if((e.key === "Enter" || e.key === " " || e.key === "Spacebar")){
+      var t = e.target;
+      if(t && t.classList && t.classList.contains("card")){
+        e.preventDefault();
+        var cid = t.getAttribute("data-id");
+        if(cid) openDetail(cid);
+        return;
+      }
+    }
     if(e.key === "Escape"){
       el("lightbox").classList.remove("open");
       el("detail").classList.remove("open");
@@ -3828,4 +3840,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1549 -->
+<!-- rebuild-trigger 20261123T1609 -->
