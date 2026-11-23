@@ -3981,6 +3981,15 @@ document.addEventListener("click", function(e){
     setWeek(parseInt(wb.getAttribute("data-off"), 10) || 0);
     return;
   }
+  /* 同一类问题（2026-11-24）：推荐里的「站点」也只有桌面弹层能点开详情，
+     手机首屏那 15 个站点是哑的——点上去什么都不发生，连"详情 ›"的字样都白写了。 */
+  var ps = e.target.closest && e.target.closest(".plan-stop");
+  if(ps && ps.getAttribute("data-id")){
+    STATE.detailFromPlan = true;
+    closePlan();
+    openDetail(ps.getAttribute("data-id"));
+    return;
+  }
   var pt = e.target.closest && e.target.closest("[data-plantrip]");
   if(pt){
     /* 卡片上的序号是"全局第几条"（标题按 1./2./3./4.… 连续编号），
@@ -4198,4 +4207,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T2049 -->
+<!-- rebuild-trigger 20261123T2103 -->
