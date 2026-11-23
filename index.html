@@ -1472,6 +1472,10 @@ function renderCards(list, totalAll){
                : tier==="restricted" ? ["部分受限","a"]
                : (dk==="unknown" ? null : [DOG_LABEL[dk][0], DOG_LABEL[dk][1] || "n"]);
     if(dogTxt) facts.push('<span class="fact dog '+dogTxt[1]+'">'+esc(dogTxt[0])+'</span>');
+    /* 109 个点的笔记里根本没提能不能带狗（2026-11-24）。
+       以前卡片上一个字都不显示 —— 看着"默认没事"，其实是什么都不知道。
+       按主人的口径它算能用，但"能用"和"确知"是两回事，得在卡上留个记号。 */
+    else if(dk === "unknown") facts.push('<span class="fact" style="color:var(--ink-3)">犬政策没写</span>');
     if(inBeen(s.id)) facts.push('<span class="fact" style="color:var(--ink-3)">去过了</span>');
     if(nk !== "unknown") facts.push('<span class="fact">'+esc(NIGHT_LABEL[nk][0])+'</span>');
     /* 季节标签：现在是"适合/最佳"就点明，明确不建议的也点明（避免白跑一趟） */
@@ -2057,7 +2061,16 @@ function openDetail(id){
      现在放在照片之后的第一个位置——看完"长啥样"，立刻回答"我能不能带它进去"。 */
   html += '<div class="sec"><div class="sec-t">带狗政策</div><div class="panel">' +
     '<div class="kv"><div class="k">结论</div><div class="v">'+tag(DOG_LABEL[dk][0],DOG_LABEL[dk][1])+'</div></div>' +
-    (dg.evidence ? '<div class="quote cite">'+esc(dg.evidence)+'</div>' : '') +
+    /* 没写 ≠ 不行（2026-11-24）：按主人定的口径，只有明确说不行才排除，
+       所以这里要讲清"为什么它还在推荐里"，否则看着像漏标了。 */
+    (dk === "unknown"
+      ? '<div class="quote">笔记里没提能不能带狗。按"没明确禁就算友好"的口径，这里当作可以带；' +
+        '真要去，进门问一句最稳。</div>'
+      : '') +
+    /* 空引文别渲染成空括号「」——有些点挂着 C 级来源却没有原话，
+       数据里就写着「…：「」」，直接印出来等于给别人看一个空引号（2026-11-24）。 */
+    (tidyEv(dg.evidence)
+      ? '<div class="quote cite">'+esc(tidyEv(dg.evidence))+'</div>' : '') +
     (dg.risk_hint ? '<div class="quote warn">⚠ '+esc(dg.risk_hint)+'</div>' : '') +
     '</div></div>';
 
@@ -3733,6 +3746,13 @@ function composePlan(kind, c, wk, season){
 
 /* ─── 渲染 ─── */
 /* 周日几点到家：最后一站回上海的单程车程 + 16:00 收工。 */
+/* 数据里有些证据是一句「来源：『』」——引号里啥也没有。
+   印出来对读者毫无用处，还会显得这地方真有一句原话。 */
+function tidyEv(t){
+  var v = String(t||"").replace(/「\s*」/g, "").replace(/[：:,，]\s*$/, "").trim();
+  return v.length >= 6 ? v : "";
+}
+
 function homeLineHTML(p){
   var last = p.stops && p.stops[p.stops.length-1];
   if(!last || !last.s) return "";
@@ -4257,4 +4277,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T2136 -->
+<!-- rebuild-trigger 20261123T2152 -->
