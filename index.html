@@ -1180,7 +1180,10 @@ function match(s){
 function matchQuery(s, q){
   if(!q) return true;
   q = q.toLowerCase();
-  var hay = [s.name, s.city, s.province, s.poi_name, (s.tags||[]).join(" ")].join(" ").toLowerCase();
+  /* aliases：合并重复点时被并掉的那个名字（「东钱湖」并入「东钱湖风景名胜区」之后，
+     搜「东钱湖」还得能找出来）。不带上这一条，合并就等于把一个搜索入口丢了。 */
+  var hay = [s.name, s.city, s.province, s.poi_name,
+             (s.tags||[]).join(" "), (s.aliases||[]).join(" ")].join(" ").toLowerCase();
   return hay.indexOf(q) >= 0;
 }
 function selectedSeasons(){
@@ -3650,4 +3653,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1409 -->
+<!-- rebuild-trigger 20261123T1418 -->

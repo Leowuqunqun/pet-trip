@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 1028,
+  "count": 1021,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -9312,6 +9312,21 @@
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=119.673602,30.747176",
      "poi": "安吉古城遗址博物馆"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69a84da7000000001b016460",
+     "title": "🐕找到了全江浙沪最好遛狗的公园…！🆘"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a5afbcf000000000f010f7f",
+     "title": "浙江分疆｜这一刻我和小狗都很自由"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.670214,30.745278",
+     "poi": "安吉古城"
     }
    ],
    "season": {
@@ -9330,7 +9345,18 @@
     "src": "推断",
     "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
     "conf": 0
-   }
+   },
+   "aliases": [
+    "安吉古城"
+   ],
+   "merged_from": [
+    {
+     "name": "安吉古城",
+     "id": "x-安吉古城",
+     "dist_m": 0,
+     "at": "2026-11-23"
+    }
+   ]
   },
   {
    "id": "x-善卷洞风景区",
@@ -11374,7 +11400,7 @@
    ],
    "geo_src": "xhs",
    "origin": "小红书带狗笔记",
-   "curation_note": "",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
    "raw_note": "人和狗都超满意的东钱湖两日游🩵一定再来",
    "photos": [
     {
@@ -11431,6 +11457,21 @@
      "url": "https://uri.amap.com/marker?position=121.670591,29.753893&name=%E4%B8%9C%E9%92%B1%E6%B9%96%E9%A3%8E%E6%99%AF%E5%90%8D%E8%83%9C%E5%8C%BA&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6974a6db000000002801dc7a",
+     "title": "🐕宁波遛狗必去东钱湖"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69b55e8a000000001a02b7f6",
+     "title": "宁波东钱湖📍一个适合遛狗拍照的地方"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=121.670591,29.753893",
+     "poi": "东钱湖"
     }
    ],
    "season": {
@@ -11449,7 +11490,18 @@
     "src": "原文",
     "evidence": "笔记原文：玩水",
     "conf": 1
-   }
+   },
+   "aliases": [
+    "东钱湖"
+   ],
+   "merged_from": [
+    {
+     "name": "东钱湖",
+     "id": "x-东钱湖",
+     "dist_m": 0,
+     "at": "2026-11-23"
+    }
+   ]
   },
   {
    "id": "x-溱潼古镇旅游区",
@@ -16023,7 +16075,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；水杉",
+    "evidence": "笔记原文：水杉；玩水",
     "conf": 2
    }
   },
@@ -22350,7 +22402,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；水杉",
+    "evidence": "笔记原文：水杉；玩水",
     "conf": 2
    }
   },
@@ -26385,7 +26437,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；赏秋",
+    "evidence": "笔记原文：赏秋；玩水",
     "conf": 2
    }
   },
@@ -30916,7 +30968,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；赏秋",
+    "evidence": "笔记原文：赏秋；玩水",
     "conf": 2
    }
   },
@@ -40767,7 +40819,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；红叶",
+    "evidence": "笔记原文：红叶；玩水",
     "conf": 2
    }
   },
@@ -55673,6 +55725,16 @@
      "url": "https://uri.amap.com/marker?position=121.756230,29.207238&name=%E7%9F%BF%E5%B1%B1%E5%85%AC%E5%9B%AD&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6998fca8000000001a034a38?xsec_source=pc_search",
+     "title": "我不说你也以为这是马尔代夫吧"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=121.75623,29.207238",
+     "poi": "宁海伍山海滨石窟国家矿山公园"
     }
    ],
    "season": {
@@ -55690,7 +55752,18 @@
     "src": "推断",
     "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
     "conf": 0
-   }
+   },
+   "aliases": [
+    "宁海伍山海滨石窟国家矿山公园"
+   ],
+   "merged_from": [
+    {
+     "name": "宁海伍山海滨石窟国家矿山公园",
+     "id": "x-宁海伍山海滨石窟国家矿山公园",
+     "dist_m": 0,
+     "at": "2026-11-23"
+    }
+   ]
   },
   {
    "id": "x-天鹅岛",
@@ -58644,7 +58717,7 @@
      "冬": 2
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；水杉",
+    "evidence": "笔记原文：水杉；冬季",
     "conf": 2
    }
   },
@@ -62985,7 +63058,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；水杉",
+    "evidence": "笔记原文：水杉；玩水",
     "conf": 2
    }
   },
@@ -65965,7 +66038,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；赏秋",
+    "evidence": "笔记原文：赏秋；玩水",
     "conf": 2
    }
   },
@@ -72720,6 +72793,16 @@
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=119.43107,32.214537",
      "poi": "西津渡古街"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69215653000000001d03ae11",
+     "title": "小狗不友好城市-镇江"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.43108,32.214578",
+     "poi": "昭关石塔"
     }
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
@@ -72753,6 +72836,27 @@
      "author": "allie29",
      "note_url": "https://www.xiaohongshu.com/explore/69215653000000001d03ae11?xsec_token=ABcECVWmFTXGCIqyK1nDlY8BKBEKasQc8dO3M0Hl3Nc1Q=&xsec_source=pc_search",
      "src": "小红书"
+    },
+    {
+     "url": "images/38fb2ea7e86a/1.webp",
+     "title": "江浙沪宠物友好徒步路线 （1）秋冬不溯溪版",
+     "author": "无忧无虑小强子",
+     "note_url": "https://www.xiaohongshu.com/explore/6acca25b000000001402d526?xsec_token=ABP5xFnSWopytNHipc6IogQydHWWk2laFAPIl7jfjbeHo=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "images/38fb2ea7e86a/2.webp",
+     "title": "江浙沪宠物友好徒步路线 （1）秋冬不溯溪版",
+     "author": "无忧无虑小强子",
+     "note_url": "https://www.xiaohongshu.com/explore/6acca25b000000001402d526?xsec_token=ABP5xFnSWopytNHipc6IogQydHWWk2laFAPIl7jfjbeHo=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "images/38fb2ea7e86a/3.webp",
+     "title": "江浙沪宠物友好徒步路线 （1）秋冬不溯溪版",
+     "author": "无忧无虑小强子",
+     "note_url": "https://www.xiaohongshu.com/explore/6acca25b000000001402d526?xsec_token=ABP5xFnSWopytNHipc6IogQydHWWk2laFAPIl7jfjbeHo=&xsec_source=pc_search",
+     "src": "小红书"
     }
    ],
    "raw_note": "",
@@ -72783,7 +72887,18 @@
     "src": "推断",
     "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
     "conf": 0
-   }
+   },
+   "aliases": [
+    "昭关石塔"
+   ],
+   "merged_from": [
+    {
+     "name": "昭关石塔",
+     "id": "x-昭关石塔",
+     "dist_m": 0,
+     "at": "2026-11-23"
+    }
+   ]
   },
   {
    "id": "x-南山风景区",
@@ -73043,126 +73158,6 @@
     "src": "原文",
     "evidence": "笔记原文：玩水",
     "conf": 1
-   }
-  },
-  {
-   "id": "x-昭关石塔",
-   "name": "昭关石塔",
-   "kind": "scenic",
-   "tags": [],
-   "province": "江苏",
-   "city": "镇江",
-   "gcj": [
-    119.43108,
-    32.214578
-   ],
-   "drive": {
-    "hours_oneway": 3.15,
-    "km": 251.9,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-09 12:56"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "个周末来了镇江，银杏金黄，山林翠绿，一切都刚好。只可惜不太欢迎小狗，“三山一渡”附近找不到一家像样的宠物友好酒店，吃饭也都是被赶出门外吃的，如果能更包容一点就完美了。 [栗子R] 南山（p1-4）：外围的高崇寺是此行秋意最浓的地方，整个寺院",
-    "evidence_level": "笔记提及",
-    "basis": "小红书笔记正文",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "昭关石塔",
-   "poi_type": "风景名胜;风景名胜相关;旅游景点",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/69215653000000001d03ae11",
-     "title": "小狗不友好城市-镇江"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=119.43108,32.214578",
-     "poi": "昭关石塔"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "人文古迹"
-   ],
-   "heat": {
-    "notes": 11,
-    "likes": 154
-   },
-   "rating": null,
-   "photos": [
-    {
-     "url": "images/38fb2ea7e86a/1.webp",
-     "title": "江浙沪宠物友好徒步路线 （1）秋冬不溯溪版",
-     "author": "无忧无虑小强子",
-     "note_url": "https://www.xiaohongshu.com/explore/6acca25b000000001402d526?xsec_token=ABP5xFnSWopytNHipc6IogQydHWWk2laFAPIl7jfjbeHo=&xsec_source=pc_search",
-     "src": "小红书"
-    },
-    {
-     "url": "images/38fb2ea7e86a/2.webp",
-     "title": "江浙沪宠物友好徒步路线 （1）秋冬不溯溪版",
-     "author": "无忧无虑小强子",
-     "note_url": "https://www.xiaohongshu.com/explore/6acca25b000000001402d526?xsec_token=ABP5xFnSWopytNHipc6IogQydHWWk2laFAPIl7jfjbeHo=&xsec_source=pc_search",
-     "src": "小红书"
-    },
-    {
-     "url": "images/38fb2ea7e86a/3.webp",
-     "title": "江浙沪宠物友好徒步路线 （1）秋冬不溯溪版",
-     "author": "无忧无虑小强子",
-     "note_url": "https://www.xiaohongshu.com/explore/6acca25b000000001402d526?xsec_token=ABP5xFnSWopytNHipc6IogQydHWWk2laFAPIl7jfjbeHo=&xsec_source=pc_search",
-     "src": "小红书"
-    }
-   ],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "explicit",
-   "pop": {
-    "notes": 11,
-    "likes": 154,
-    "basis": "小红书点名搜索 11 条相关笔记"
-   },
-   "heat_basis": "小红书点名搜索 11 条相关笔记",
-   "season": {
-    "best": [
-     "春",
-     "秋"
-    ],
-    "avoid": [],
-    "scores": {
-     "春": 3,
-     "夏": 2,
-     "秋": 3,
-     "冬": 1
-    },
-    "src": "推断",
-    "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
-    "conf": 0
    }
   },
   {
@@ -81008,7 +81003,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；水杉",
+    "evidence": "笔记原文：水杉；玩水",
     "conf": 2
    }
   },
@@ -112587,7 +112582,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；赏秋",
+    "evidence": "笔记原文：赏秋；玩水",
     "conf": 2
    }
   },
@@ -117295,6 +117290,16 @@
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=116.635512,39.95778",
      "poi": "坝河金盏淀公园"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/692d557a000000001b022a85",
+     "title": "北京“小贝加尔湖”打卡｜11.30亲测人少景美！ horbit"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=116.635512,39.95778",
+     "poi": "金盏淀湿地公园"
     }
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
@@ -117339,105 +117344,18 @@
     "src": "推断",
     "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
     "conf": 0
-   }
-  },
-  {
-   "id": "x-金盏淀湿地公园",
-   "name": "金盏淀湿地公园",
-   "kind": "park",
-   "tags": [],
-   "province": "北京",
-   "city": "北京",
-   "gcj": [
-    116.635512,
-    39.95778
+   },
+   "aliases": [
+    "金盏淀湿地公园"
    ],
-   "drive": {
-    "hours_oneway": 13.13,
-    "km": 1234.1,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-15 16:47"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 692d557a000000001b022a85）：「北京“小贝加尔湖”打卡｜11.30亲测人少景美！ horbit」",
-    "evidence_level": "未核实",
-    "basis": "per_note",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "金盏淀湿地公园",
-   "poi_type": "腾讯POI:旅游景点:公园",
-   "sources": [
+   "merged_from": [
     {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/692d557a000000001b022a85",
-     "title": "北京“小贝加尔湖”打卡｜11.30亲测人少景美！ horbit"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=116.635512,39.95778",
-     "poi": "金盏淀湿地公园"
+     "name": "金盏淀湿地公园",
+     "id": "x-金盏淀湿地公园",
+     "dist_m": 0,
+     "at": "2026-11-23"
     }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "草坪遛弯"
-   ],
-   "heat": {
-    "notes": 5,
-    "likes": 803
-   },
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "unknown",
-   "pop": {
-    "notes": 5,
-    "likes": 803,
-    "basis": "小红书点名搜索 5 条相关笔记"
-   },
-   "heat_basis": "小红书点名搜索 5 条相关笔记",
-   "season": {
-    "best": [
-     "春",
-     "秋"
-    ],
-    "avoid": [],
-    "scores": {
-     "春": 3,
-     "夏": 2,
-     "秋": 3,
-     "冬": 2
-    },
-    "src": "推断",
-    "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
-    "conf": 0
-   }
+   ]
   },
   {
    "id": "x-云龙涧自然风景区",
@@ -119660,6 +119578,16 @@
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=117.468907,39.04033",
      "poi": "海岸公园"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/68ec66f900000000040074b2",
+     "title": "天津宠物友好公园（持续更新中）"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=117.468907,39.04033",
+     "poi": "古海岸湿地"
     }
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
@@ -119705,7 +119633,18 @@
     "src": "原文",
     "evidence": "笔记原文：玩水",
     "conf": 1
-   }
+   },
+   "aliases": [
+    "古海岸湿地"
+   ],
+   "merged_from": [
+    {
+     "name": "古海岸湿地",
+     "id": "x-古海岸湿地",
+     "dist_m": 0,
+     "at": "2026-11-23"
+    }
+   ]
   },
   {
    "id": "x-海贝公园",
@@ -119903,106 +119842,6 @@
     "src": "推断",
     "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
     "conf": 0
-   }
-  },
-  {
-   "id": "x-古海岸湿地",
-   "name": "古海岸湿地",
-   "kind": "park",
-   "tags": [],
-   "province": "天津",
-   "city": "天津",
-   "gcj": [
-    117.468907,
-    39.04033
-   ],
-   "drive": {
-    "hours_oneway": 11.61,
-    "km": 1084.5,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-15 16:47"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 68ec66f900000000040074b2）：「天津宠物友好公园（持续更新中）」",
-    "evidence_level": "未核实",
-    "basis": "per_note",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "古海岸湿地",
-   "poi_type": "腾讯POI:旅游景点:公园",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/68ec66f900000000040074b2",
-     "title": "天津宠物友好公园（持续更新中）"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=117.468907,39.04033",
-     "poi": "古海岸湿地"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "玩水"
-   ],
-   "heat": {
-    "notes": 5,
-    "likes": 11
-   },
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "unknown",
-   "pop": {
-    "notes": 5,
-    "likes": 11,
-    "basis": "小红书点名搜索 5 条相关笔记"
-   },
-   "heat_basis": "小红书点名搜索 5 条相关笔记",
-   "season": {
-    "best": [
-     "夏",
-     "秋"
-    ],
-    "avoid": [
-     "冬"
-    ],
-    "scores": {
-     "春": 2,
-     "夏": 3,
-     "秋": 3,
-     "冬": 0
-    },
-    "src": "原文",
-    "evidence": "笔记原文：玩水",
-    "conf": 1
    }
   },
   {
@@ -121756,6 +121595,16 @@
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=121.591683,37.46028",
      "poi": "果冻海"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a100ced00000000080241de",
+     "title": "超全面‼️带小狗烟台旅游看这篇足够🐕"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=121.591683,37.46028",
+     "poi": "玻璃海"
     }
    ],
    "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
@@ -121800,7 +121649,18 @@
     "src": "原文",
     "evidence": "笔记原文：玩水",
     "conf": 1
-   }
+   },
+   "aliases": [
+    "玻璃海"
+   ],
+   "merged_from": [
+    {
+     "name": "玻璃海",
+     "id": "x-玻璃海",
+     "dist_m": 0,
+     "at": "2026-11-23"
+    }
+   ]
   },
   {
    "id": "x-灵山湾",
@@ -127619,193 +127479,6 @@
    }
   },
   {
-   "id": "x-东钱湖",
-   "name": "东钱湖",
-   "kind": "water",
-   "tags": [],
-   "province": "浙江",
-   "city": "宁波",
-   "gcj": [
-    121.670591,
-    29.753893
-   ],
-   "drive": {
-    "hours_oneway": 2.97,
-    "km": 243.1,
-    "source": "osrm 驾车路径规划（真实路网）",
-    "computed_at": "2026-10-30 16:44"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 6974a6db000000002801dc7a）：「🐕宁波遛狗必去东钱湖」",
-    "evidence_level": "未核实",
-    "basis": "per_note",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "东钱湖",
-   "poi_type": "腾讯POI:旅游景点:国家级景点",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6974a6db000000002801dc7a",
-     "title": "🐕宁波遛狗必去东钱湖"
-    },
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/69b55e8a000000001a02b7f6",
-     "title": "宁波东钱湖📍一个适合遛狗拍照的地方"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=121.670591,29.753893",
-     "poi": "东钱湖"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "玩水"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "name",
-   "access": {},
-   "dog_tier": "unknown",
-   "season": {
-    "best": [
-     "夏"
-    ],
-    "avoid": [
-     "冬"
-    ],
-    "scores": {
-     "春": 1,
-     "夏": 3,
-     "秋": 2,
-     "冬": 0
-    },
-    "src": "原文",
-    "evidence": "笔记原文：玩水",
-    "conf": 1
-   }
-  },
-  {
-   "id": "x-安吉古城",
-   "name": "安吉古城",
-   "kind": "park",
-   "tags": [],
-   "province": "浙江",
-   "city": "湖州",
-   "gcj": [
-    119.670214,
-    30.745278
-   ],
-   "drive": {
-    "hours_oneway": 2.6,
-    "km": 204.1,
-    "source": "tencent 驾车路径规划（真实路网）",
-    "computed_at": "2026-10-31 21:34"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 69a84da7000000001b016460）：「🐕找到了全江浙沪最好遛狗的公园…！🆘」",
-    "evidence_level": "未核实",
-    "basis": "per_note",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "安吉古城",
-   "poi_type": "腾讯POI:旅游景点:公园",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/69a84da7000000001b016460",
-     "title": "🐕找到了全江浙沪最好遛狗的公园…！🆘"
-    },
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a5afbcf000000000f010f7f",
-     "title": "浙江分疆｜这一刻我和小狗都很自由"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=119.670214,30.745278",
-     "poi": "安吉古城"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "poi_type:旅游景点:公园",
-   "access": {},
-   "dog_tier": "unknown",
-   "season": {
-    "best": [
-     "春",
-     "秋"
-    ],
-    "avoid": [],
-    "scores": {
-     "春": 3,
-     "夏": 2,
-     "秋": 3,
-     "冬": 2
-    },
-    "src": "推断",
-    "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
-    "conf": 0
-   }
-  },
-  {
    "id": "x-天文台",
    "name": "天文台",
    "kind": "scenic",
@@ -128079,97 +127752,6 @@
     "src": "推断",
     "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
     "conf": 0
-   }
-  },
-  {
-   "id": "x-玻璃海",
-   "name": "玻璃海",
-   "kind": "scenic",
-   "tags": [],
-   "province": "山东",
-   "city": "烟台",
-   "gcj": [
-    121.591683,
-    37.46028
-   ],
-   "drive": {
-    "hours_oneway": 10.53,
-    "km": 912.2,
-    "source": "osrm 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-16 20:03"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 6a100ced00000000080241de）：「超全面‼️带小狗烟台旅游看这篇足够🐕」",
-    "evidence_level": "未核实",
-    "basis": "no_veto_default",
-    "risk_hint": "",
-    "verified_at": null
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [],
-   "geo_src": "amap",
-   "poi_name": "玻璃海",
-   "poi_type": "腾讯POI:旅游景点:风景名胜",
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6a100ced00000000080241de",
-     "title": "超全面‼️带小狗烟台旅游看这篇足够🐕"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=121.591683,37.46028",
-     "poi": "玻璃海"
-    }
-   ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
-   "tier": "B",
-   "scenes": [
-    "玩水"
-   ],
-   "heat": null,
-   "rating": null,
-   "photos": [],
-   "raw_note": "",
-   "pending": [
-    "drive_verify",
-    "kind"
-   ],
-   "kind_src": "poi_type:风景名胜",
-   "access": {},
-   "dog_tier": "default",
-   "season": {
-    "best": [
-     "夏",
-     "秋"
-    ],
-    "avoid": [
-     "冬"
-    ],
-    "scores": {
-     "春": 2,
-     "夏": 3,
-     "秋": 3,
-     "冬": 0
-    },
-    "src": "原文",
-    "evidence": "笔记原文：玩水",
-    "conf": 1
    }
   },
   {
@@ -130024,94 +129606,6 @@
      "春": 1,
      "夏": 3,
      "秋": 2,
-     "冬": 0
-    },
-    "src": "原文",
-    "evidence": "笔记原文：玩水",
-    "conf": 1
-   }
-  },
-  {
-   "id": "x-宁海伍山海滨石窟国家矿山公园",
-   "name": "宁海伍山海滨石窟国家矿山公园",
-   "kind": "park",
-   "tags": [],
-   "province": "浙江",
-   "city": "象山",
-   "gcj": [
-    121.75623,
-    29.207238
-   ],
-   "drive": {
-    "hours_oneway": 3.7,
-    "km": 311.6,
-    "source": "osrm 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-23 13:22"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "我不说你也以为这是马尔代夫吧 昨天去了盱眙的象山矿山公园（宠物友好），遇到好天气，简直美爆了，我说这是盱眙马尔代夫没人反对吧[偷笑R] \t 🧭导航：中国石化淮安盱眙水上加油站，看到图2️⃣的标志在门",
-    "evidence_level": "C 级 UGC（未经官方核实）",
-    "verified_at": null,
-    "basis": "explicit_ok",
-    "risk_hint": ""
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null,
-    "evidence": []
-   },
-   "sub_pois": [],
-   "trips": [
-    "小红书发现-浙江"
-   ],
-   "geo_src": "xhs",
-   "origin": "小红书发现-浙江",
-   "curation_note": "",
-   "raw_note": "我不说你也以为这是马尔代夫吧",
-   "photos": [],
-   "sources": [
-    {
-     "platform": "xhs",
-     "url": "https://www.xiaohongshu.com/explore/6998fca8000000001a034a38?xsec_source=pc_search",
-     "title": "我不说你也以为这是马尔代夫吧"
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=121.75623,29.207238",
-     "poi": "宁海伍山海滨石窟国家矿山公园"
-    }
-   ],
-   "pending": false,
-   "kind_src": "name",
-   "scenes": [
-    "草坪遛弯",
-    "玩水",
-    "山野徒步"
-   ],
-   "access": {},
-   "dog_tier": "explicit",
-   "season": {
-    "best": [
-     "夏",
-     "秋"
-    ],
-    "avoid": [
-     "冬"
-    ],
-    "scores": {
-     "春": 2,
-     "夏": 3,
-     "秋": 3,
      "冬": 0
     },
     "src": "原文",
