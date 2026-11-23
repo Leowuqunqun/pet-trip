@@ -3968,7 +3968,9 @@ function planBodyHTML(){
       '有 '+wMiss+' 条路线没取到天气，那几条按热度保底排序，不代表当天天气好。</div>' : '') +
       (allBad ? '<div class="plan-warn" style="margin-bottom:12px">'+
       '周六几个片区降水都在 '+Math.min.apply(null, PLAN.plans.filter(function(p){return p.wSat;})
-        .map(function(p){ return Math.round(p.wSat.pop); }))+'% 以上，这周不建议出发。</div>' : '') +
+        .map(function(p){ return Math.round(p.wSat.pop); }))+'% 以上，这周不建议出发。'+
+      /* 光说"别去"是句丧气话——总得给个下一步：顺手能翻到下周末（2026-11-24） */
+      '<br><button class="chip" data-week-next="1" style="margin-top:8px">看下周末的天气 ›</button></div>' : '') +
       ((!sat.length && PLAN.weekOffset>0)
         ? '<div class="plan-warn" style="margin-bottom:12px">'+
           '这个周末超出了天气预报的范围（Open-Meteo 最多给 16 天），<b>还没出预报</b>。'+
@@ -4051,6 +4053,8 @@ document.addEventListener("click", function(e){
      桌面弹层 #plan-panel 上有处理器，而**手机首屏是另一份 DOM（#home-body）**——
      也就是手机上点了毫无反应，却是手机上最常用的那个界面。改挂到 document 上，
      两份 DOM 都覆盖到。 */
+  var wn = e.target.closest && e.target.closest("[data-week-next]");
+  if(wn){ e.preventDefault(); setWeek((PLAN.weekOffset || 0) + 1); return; }
   var wb = e.target.closest && e.target.closest(".plan-weeks button");
   if(wb){
     e.preventDefault();
@@ -4283,4 +4287,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T2211 -->
+<!-- rebuild-trigger 20261123T2229 -->
