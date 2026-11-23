@@ -855,6 +855,11 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     </div>
     <div class="fp-body">
 
+  <div class="fp-title">排序<small class="fp-hint">列表先按什么排</small></div>
+  <button class="chip" data-sort="drive" aria-pressed="true">先看近的</button>
+  <button class="chip" data-sort="heat" aria-pressed="false">先看火的</button>
+  <button class="chip" data-sort="dog" aria-pressed="false">先看犬友好</button>
+
   <div class="fp-title">想干什么<small class="fp-hint">可多选 · 任一项对上就算</small></div>
   <div id="fpanel-derived" style="display:contents"></div>
   <div id="fpanel-scenes" style="display:contents"></div>
@@ -997,7 +1002,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, camp:false, q:"", active:null, trip:[], provExpanded:false, autoFit:false, fitHours:null, fitCenter:null};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, camp:false, q:"", active:null, trip:[], provExpanded:false, autoFit:false, fitHours:null, fitCenter:null, sortMode:"drive"};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -1146,6 +1151,11 @@ function syncFilterUI(){
   Array.prototype.forEach.call(document.querySelectorAll(".chip[data-scene]"), function(b){
     b.setAttribute("aria-pressed", STATE.scenes[b.getAttribute("data-scene")] ? "true" : "false");
   });
+  Array.prototype.forEach.call(document.querySelectorAll(".chip[data-sort]"), function(b){
+    b.setAttribute("aria-pressed", b.getAttribute("data-sort") === (STATE.sortMode||"drive") ? "true" : "false");
+  });
+  var st = el("sheet-title");
+  if(st) st.textContent = SORT_LABEL[STATE.sortMode||"drive"] || SORT_LABEL.drive;
   Array.prototype.forEach.call(document.querySelectorAll(".chip[data-dog]"), function(b){
     b.setAttribute("aria-pressed", STATE.dogTier[b.getAttribute("data-dog")] ? "true" : "false");
   });
@@ -1219,10 +1229,34 @@ function hasFilters(){
          any(STATE.provinces) || any(STATE.season) || !!STATE.night || !!STATE.camp;
 }
 
+var SORT_LABEL = {drive:"按车程排序", heat:"按热度排序", dog:"按犬友好排序"};
+var DOG_RANK = {explicit:3, default:2, restricted:1, unknown:0, veto:-1};
+
+function spotHeat(s){
+  var h = s.heat || s.pop || {};
+  return { notes: (h.notes||0), likes: (h.likes||0) };
+}
+function hoursOf(s){ return ((driveInfo(s)||{}).hours_oneway||99); }
+
 function sortedFiltered(){
+  var mode = STATE.sortMode || "drive";
   return DATA.spots.filter(match).slice().sort(function(a,b){
-    /* 一律按单程车程由近到远 */
-    return ((driveInfo(a)||{}).hours_oneway||99)-((driveInfo(b)||{}).hours_oneway||99);
+    if(mode === "heat"){
+      /* 热度＝小红书上这段时间有多少人在发（owner 定义）。条数为主，点赞为辅。 */
+      var ha = spotHeat(a), hb = spotHeat(b);
+      if(hb.notes !== ha.notes) return hb.notes - ha.notes;
+      if(hb.likes !== ha.likes) return hb.likes - ha.likes;
+      return hoursOf(a) - hoursOf(b);
+    }
+    if(mode === "dog"){
+      /* 犬友好档位：明确友好 > 默认允许 > 部分受限 > 未核实 > 禁入；同档再看车程 */
+      var ra = DOG_RANK[a.dog_tier] != null ? DOG_RANK[a.dog_tier] : 0;
+      var rb = DOG_RANK[b.dog_tier] != null ? DOG_RANK[b.dog_tier] : 0;
+      if(ra !== rb) return rb - ra;
+      return hoursOf(a) - hoursOf(b);
+    }
+    /* 默认：单程车程由近到远 */
+    return hoursOf(a) - hoursOf(b);
   });
 }
 
@@ -2129,6 +2163,14 @@ function bind(){
       else { el("q").value = ""; STATE.q = ""; PLAN.dirty = true; render(); }
       return;
     }
+    /* 排序是单选，不能走下面那个"按一下翻转"的通用逻辑 */
+    var sb = e.target.closest(".chip[data-sort]");
+    if(sb){
+      STATE.sortMode = sb.getAttribute("data-sort");
+      PLAN.dirty = true;
+      syncFilterUI(); render();
+      return;
+    }
     var b = e.target.closest(".chip"); if(!b) return;
     var on = b.getAttribute("aria-pressed") === "true";
     b.setAttribute("aria-pressed", on ? "false" : "true");
@@ -2313,7 +2355,7 @@ var FILTER_DIMS = ["night","dog","camp"];
 var FILTER_MAPS  = ["kinds","scenes","season","dogTier","provinces"];
 
 function filtersSignature(){
-  var o = {h: STATE.hours, q: STATE.q};
+  var o = {h: STATE.hours, q: STATE.q, s: STATE.sortMode || "drive"};
   FILTER_DIMS.forEach(function(k){ o[k] = !!STATE[k]; });
   FILTER_MAPS.forEach(function(k){
     o[k] = Object.keys(STATE[k] || {}).filter(function(x){ return STATE[k][x]; }).sort();
@@ -2337,6 +2379,7 @@ function loadFilters(){
   try{ o = JSON.parse(raw); }catch(e){ return false; }
   if(!o || typeof o !== "object") return false;
   if(o.h != null) STATE.hours = o.h;
+  if(o.s && SORT_LABEL[o.s]) STATE.sortMode = o.s;
   FILTER_DIMS.forEach(function(k){ if(o[k] != null) STATE[k] = !!o[k]; });
   FILTER_MAPS.forEach(function(k){
     if(!Array.isArray(o[k])) return;
@@ -3785,4 +3828,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1516 -->
+<!-- rebuild-trigger 20261123T1535 -->
