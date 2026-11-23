@@ -304,6 +304,15 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   font-size:var(--t-xs);color:var(--ink-2);line-height:1.7;
 }
 .card-facts .fact + .fact::before{content:"·";margin:0 7px;color:var(--ink-3)}
+.card-anchor{
+  display:inline-flex;align-items:center;gap:3px;margin-top:6px;padding:4px 9px;
+  border-radius:999px;border:1px solid var(--brand-soft);background:transparent;
+  color:var(--brand-2);font:inherit;font-size:var(--t-xs);font-weight:600;
+  cursor:pointer;line-height:1.2;
+}
+.card-anchor:active{transform:scale(.97)}
+.card-anchor::before{content:"◎";font-size:11px;opacity:.8}
+
 .fact.dog{display:inline-flex;align-items:center;font-weight:600}
 .fact.dog::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;margin-right:5px}
 .fact.dog.g{color:var(--green)}
@@ -1355,6 +1364,10 @@ function renderCards(list, totalAll){
           '<span>'+esc(s.city||"")+'</span>' +
         '</span>' +
         '<span class="card-facts">' + facts.join("") + '</span>' +
+        /* 2026-11-23 owner：排行程的入口原来只在详情页里，得先点开卡片才看得见。
+           现在直接放在卡片上——看到"想去这儿"就能立刻以它为中心排一版。 */
+        (spotCoord(s) ? '<button class="card-anchor" data-anchor="' + esc(s.id) + '"'
+           + ' title="以这里为中心安排两天/三天">以这里为中心排行程</button>' : '') +
       '</span>' + tripBtnHTML(s.id) + '</div>';
   }).join("") + (TOTAL > PAGE
       ? '<div class="more-note">还有 ' + (TOTAL - PAGE) + ' 个点没列出来。<br>' +
@@ -2166,6 +2179,8 @@ function bind(){
     }
     /* 三层分流：行程按钮 → 来源链接 → 卡片本体。
        顺序不能反，否则点"＋ 行程"会顺带弹详情。 */
+    var ab = e.target.closest("[data-anchor]");
+    if(ab){ e.preventDefault(); openAnchor(ab.getAttribute("data-anchor")); return; }
     var tb = e.target.closest("[data-trip]");
     if(tb){
       e.preventDefault();
@@ -3538,4 +3553,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1132 -->
+<!-- rebuild-trigger 20261123T1157 -->
