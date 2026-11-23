@@ -1226,6 +1226,7 @@ function render(){
   /* 有地图就按视野列卡片：这样提示行才说得清"地图范围内 N 个"，
      而不是把筛选总数再说一遍（顶部圆片已经在说总数了）。 */
   if(mapUsable()) renderNear();
+  saveFilters();     /* 每次渲染顺手记住条件；内部按签名比对，不变就不写盘 */
 }
 
 function renderNear(){
@@ -2070,7 +2071,9 @@ function bind(){
       if(sum.hasAttribute("data-clear-night")) STATE.night = false;
       if(sum.hasAttribute("data-clear-camp")) STATE.camp = false;
       if(sum.hasAttribute("data-clear-all")){
-        STATE.night = false; STATE.camp = false;
+        STATE.night = false; STATE.camp = false; STATE.hours = null;
+        var rr = el("range"); if(rr) rr.value = "13";
+        var ro2 = el("range-out"); if(ro2) ro2.textContent = "不限";
         ["season","scenes","dogTier","provinces","kinds"].forEach(function(k){
           Object.keys(STATE[k]).forEach(function(x){ STATE[k][x] = false; });
         });
@@ -2255,6 +2258,57 @@ function loadTrip(){
   }catch(e){ return []; }
 }
 function saveTrip(){ try{ localStorage.setItem(TRIP_KEY, JSON.stringify(STATE.trip)); }catch(e){} }
+
+/* ───────── 筛选条件的记忆（2026-11-23）─────────
+   主人的用法是"周末想找能露营+玩水的"，点完关掉，下次打开又得重新点一遍。
+   筛选是**人的偏好**，不是一次性动作，所以存起来。
+   不存的东西：搜索词（一次性的）、起点（另有 pp-origin-v1 管）、当前打开的详情。 */
+var FILTER_KEY = "pp-filters-v1";
+var FILTER_DIMS = ["night","dog","camp"];
+var FILTER_MAPS  = ["kinds","scenes","season","dogTier","provinces"];
+
+function filtersSignature(){
+  var o = {h: STATE.hours, q: STATE.q};
+  FILTER_DIMS.forEach(function(k){ o[k] = !!STATE[k]; });
+  FILTER_MAPS.forEach(function(k){
+    o[k] = Object.keys(STATE[k] || {}).filter(function(x){ return STATE[k][x]; }).sort();
+  });
+  return JSON.stringify(o);
+}
+var lastFilterSig = null;
+
+function saveFilters(){
+  var sig = filtersSignature();
+  if(sig === lastFilterSig) return;        /* 地图平移也会触发 render，别每次都写盘 */
+  lastFilterSig = sig;
+  try{ localStorage.setItem(FILTER_KEY, sig); }catch(e){}
+}
+
+function loadFilters(){
+  var raw = null;
+  try{ raw = localStorage.getItem(FILTER_KEY); }catch(e){}
+  if(!raw) return false;
+  var o;
+  try{ o = JSON.parse(raw); }catch(e){ return false; }
+  if(!o || typeof o !== "object") return false;
+  if(o.h != null) STATE.hours = o.h;
+  FILTER_DIMS.forEach(function(k){ if(o[k] != null) STATE[k] = !!o[k]; });
+  FILTER_MAPS.forEach(function(k){
+    if(!Array.isArray(o[k])) return;
+    STATE[k] = STATE[k] || {};
+    o[k].forEach(function(x){ STATE[k][x] = true; });
+  });
+  lastFilterSig = filtersSignature();      /* 记下来，避免第一次 render 又写一遍 */
+  return true;
+}
+
+/* 把记住的条件同步到控件上（滑块位置和它的文字标签） */
+function paintFilterControls(){
+  var rg = el("range");
+  if(rg) rg.value = STATE.hours == null ? "13" : String(STATE.hours);
+  var ro = el("range-out");
+  if(ro) ro.textContent = STATE.hours == null ? "不限" : Number(STATE.hours).toFixed(1) + "h";
+}
 function inTrip(id){ return STATE.trip.indexOf(id) >= 0; }
 function toggleTrip(id){
   var i = STATE.trip.indexOf(id);
@@ -3496,6 +3550,8 @@ fetch("spots.json", {cache:"no-cache"})
   .then(function(d){
     DATA = d;
     initOrigin();
+    /* 恢复上次的筛选（要先于第一次 render，否则会先闪一下"全部点位"） */
+    if(loadFilters()) paintFilterControls();
     buildOriginPanel();
     el("origin-line").onclick = openOriginPanel;
     initMap();
@@ -3553,4 +3609,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1322 -->
+<!-- rebuild-trigger 20261123T1334 -->
