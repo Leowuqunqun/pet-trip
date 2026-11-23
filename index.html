@@ -3662,8 +3662,12 @@ fetch("spots.json", {cache:"no-cache"})
     }
     /* 先要当前位置（静默，失败就停在默认基准，不打断） */
     setTimeout(autoLocate, 400);
-    /* 手机打开就是推荐页，不用点"本周推荐" */
-    if(window.matchMedia("(max-width:859px)").matches) setView("plan");
+    /* 视图选择（2026-11-23）：manifest 里的两个快捷方式写的正是 ?view=plan / ?view=map，
+       但页面一直没人认这两个参数——长按图标点进去和直接打开一模一样。
+       现在认了：带参数就听参数，没带则手机默认进推荐页。 */
+    var viewParam = /[?&]view=(plan|map)/.exec(location.search);
+    if(viewParam) setView(viewParam[1]);
+    else if(window.matchMedia("(max-width:859px)").matches) setView("plan");
     /* 布局稳定后再算 fitBounds：立刻算会把容器尺寸算小，点位挤到屏幕外 */
     /* 首屏按车程取景（2026-11-21）：原来一进来 fitAll 把 1021 个点全塞进视野，
        打开就是内蒙古/宁夏，左边卡片全是"单程 6 小时 55 分"——
@@ -3701,4 +3705,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1444 -->
+<!-- rebuild-trigger 20261123T1456 -->
