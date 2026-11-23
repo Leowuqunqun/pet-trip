@@ -585,6 +585,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   font-size:13px;font-weight:600;padding:9px 14px;cursor:pointer}
 .install-bar .ib-go{background:var(--ink);color:#fff}
 .install-bar .ib-x{background:var(--paper-2);color:var(--ink-3);padding:9px 12px}
+.has-install-bar #list{padding-bottom:96px}
+.has-install-bar #plan-body{padding-bottom:96px}
+.has-install-bar #home-body{padding-bottom:96px}
 .skel-tip{padding:4px 2px 12px;font-size:13px;color:var(--ink-3)}
 .skel-card{height:118px;border-radius:12px;margin:0 0 10px;
   background:linear-gradient(100deg,var(--paper-2) 20%,rgba(0,0,0,.045) 40%,var(--paper-2) 60%);
@@ -1417,6 +1420,15 @@ function renderCards(list, totalAll){
           '把单程放宽到 ' + fixed.toFixed(1) + 'h</button></div>';
         return;
       }
+    }
+    /* 空状态要说人话（2026-11-24）：以前不管什么原因都写"试试把单程时长拉长"，
+       可搜"qzwx"搜不到时，车程根本没关系——等于把人指去拖一个不相干的滑块。
+       现在按真正在起作用的那个条件说，并给一个一键解决它的按钮。 */
+    if(STATE.q){
+      box.innerHTML = '<div class="empty">没搜到带「' + esc(STATE.q) + '」的点。' +
+        '<br>换个词试试，或者把搜索清掉看全部。<br>' +
+        '<button class="fsum" data-clear-q="1" style="margin-top:8px">清掉搜索</button></div>';
+      return;
     }
     var hints = [];
     if(selectedScenes().length) hints.push("取消场景筛选");
@@ -2335,6 +2347,13 @@ function bind(){
       window.scrollTo(0, keep);
       return;
     }
+    /* 空状态里的一键清掉搜索 */
+    var cq = e.target.closest("[data-clear-q]");
+    if(cq){
+      STATE.q = "";
+      var qi0 = el("q"); if(qi0) qi0.value = "";
+      PLAN.dirty = true; render(); toast("搜索已清掉"); return;
+    }
     /* 空状态里的一键放宽车程 */
     var fx = e.target.closest("[data-fix-hours]");
     if(fx){
@@ -2578,6 +2597,7 @@ function installWanted(){
 function isIOS(){ return /iPad|iPhone|iPod/.test(navigator.userAgent||""); }
 function dropInstallBar(){
   var b = el("install"); if(!b) return;
+  document.documentElement.classList.remove("has-install-bar");
   b.classList.remove("on");
   setTimeout(function(){ if(b.parentNode) b.parentNode.removeChild(b); }, 260);
 }
@@ -2595,6 +2615,9 @@ function showInstallHint(){
     (canPrompt ? '<button class="ib-go" id="install-go">装</button>' : '') +
     '<button class="ib-x" id="install-x" aria-label="不再提示">×</button>';
   document.body.appendChild(bar);
+  /* 这条提示是 fixed 贴在底部的，会压住列表最下面那一行（比如空状态里的
+     「清掉搜索」按钮）。给它让出位置：body 打个标记，列表补一段下边距（2026-11-24）。 */
+  document.documentElement.classList.add("has-install-bar");
   requestAnimationFrame(function(){ bar.classList.add("on"); });
   el("install-x").addEventListener("click", function(){
     try{ localStorage.setItem(INSTALL_KEY, "no"); }catch(e){}
@@ -4207,4 +4230,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T2103 -->
+<!-- rebuild-trigger 20261123T2121 -->
