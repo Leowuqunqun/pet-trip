@@ -822,14 +822,17 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 }
 /* 站点明细：桌面展开，手机收起，不然一条路线比一屏还长 */
 .stops-d summary{list-style:none;cursor:pointer;font-size:12px;font-weight:600;color:var(--brand-2);
-  padding:8px 0 6px;border-top:1px solid var(--line);display:flex;align-items:center;gap:6px}
+  padding:8px 0 6px 0;border-top:1px solid var(--line);display:block;position:relative;padding-right:58px}
 .stops-d summary::-webkit-details-marker{display:none}
-.stops-d summary::after{content:"展开 ›";margin-left:auto;font-weight:600;color:var(--ink-3)}
+/* 「展开/收起」钉在右上角：摘要里现在还要放一行名字链，
+   用 flex 的话链子会被挤到标题右边、跟它抢同一行（2026-11-24）。 */
+.stops-d summary::after{content:"展开 ›";position:absolute;right:0;top:8px;
+  font-weight:600;color:var(--ink-3);white-space:nowrap}
 .stops-d[open] summary::after{content:"收起 ⌄"}
 .stops-d summary{border-bottom:0}
 .stops-d[open] summary{border-bottom:0}
 .stops-d .sd-body{padding-top:2px}
-.sd-chain{margin-top:4px;font-weight:400;font-size:12px;line-height:1.6;color:var(--ink-2);
+.sd-chain{margin-top:5px;font-weight:400;font-size:12px;line-height:1.6;color:var(--ink-2);
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .sd-chain .arw{color:var(--ink-3);margin:0 1px}
 
@@ -3512,6 +3515,17 @@ function clock(hoursFloat){
   return String(hh).padStart(2,"0")+":"+String(mm).padStart(2,"0");
 }
 
+/* 周日几点能到家（2026-11-24）：
+   路线卡一直只写"周日玩完直接回上海"，可回**几点**才是能不能周一起床上班的关键。
+   口径写死、写在旁边看得见：**周日 16:00 收工**（再玩下去到家就过九点了），
+   加上最后一站回上海的单程车程。这是估算不是承诺，所以字样上写「约」。 */
+var SUNDAY_WRAP_HOUR = 16;
+function homeByClock(hoursFloat){
+  var t = SUNDAY_WRAP_HOUR*60 + Math.round((hoursFloat||0)*60);
+  var hh = Math.floor(t/60)%24, mm = t%60;
+  return String(hh).padStart(2,"0")+":"+String(mm).padStart(2,"0");
+}
+
 /* ─── 组路线 ───
    排序只看两样：**景色**和**天气**。
    证据（可带狗/有原话/有厕所/有图）只用来当理由展示和选"睡哪"，
@@ -3718,6 +3732,17 @@ function composePlan(kind, c, wk, season){
 }
 
 /* ─── 渲染 ─── */
+/* 周日几点到家：最后一站回上海的单程车程 + 16:00 收工。 */
+function homeLineHTML(p){
+  var last = p.stops && p.stops[p.stops.length-1];
+  if(!last || !last.s) return "";
+  var backH = spotH(last.s);
+  if(!backH) return "";
+  return '<div class="plan-line"><b>周日晚</b>按 <b>' + SUNDAY_WRAP_HOUR + ':00</b> 收工算，' +
+    '最后一站回上海约 <b>' + hm(backH) + '</b>，' +
+    '大约 <b>' + homeByClock(backH) + '</b> 到家。</div>';
+}
+
 function planStopHTML(s, leg, dayLabel){
   var p = s.__p || {why:[]};
   var meta = "单程 " + hm(spotH(s));
@@ -3828,7 +3853,8 @@ function planCardHTML(p, idx, quiet){
       '<div class="plan-line"><b>过夜</b>周五、周六两晚都睡「'+esc(sp.name)+'」'+esc(NIGHT_LABEL[nightKey(sp)][0])+
         (q ? '，原话：「'+esc(String(q.quote||"").slice(0,40))+'」' : '，这一步没有笔记原话，属人工判断')+'。</div>' +
       '<div class="plan-line"><b>怎么走</b>周五夜直接到睡的地方；周六在附近玩；周日玩完，'+
-        '最后一站特意挑离上海最近的那个'+(spanTxt?'，'+esc(spanTxt):'')+'。</div>';
+        '最后一站特意挑离上海最近的那个'+(spanTxt?'，'+esc(spanTxt):'')+'。</div>' +
+      homeLineHTML(p);
   } else {
     body = p.stops.map(function(x,i){
         return planStopHTML(x.s, i===0?null:p.legs[i-1], i===0 ? "周六早上出发" : "");
@@ -3837,7 +3863,8 @@ function planCardHTML(p, idx, quiet){
         (spanTxt?'，'+esc(spanTxt):'')+'。</div>' +
       (PLAN.plans.some(function(q){ return q.kind==='两晚三天'; })
         ? '<div class="plan-line"><b>过夜</b>当天来回，不用带帐篷。想住一晚的话看上面那条两晚的。</div>'
-        : '<div class="plan-line"><b>过夜</b>当天来回，不用带帐篷。</div>');
+        : '<div class="plan-line"><b>过夜</b>当天来回，不用带帐篷。</div>') +
+      homeLineHTML(p);
   }
 
   var anySeason = p.stops.some(function(x){
@@ -4230,4 +4257,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T2121 -->
+<!-- rebuild-trigger 20261123T2136 -->
