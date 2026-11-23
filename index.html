@@ -3572,6 +3572,15 @@ fetch("spots.json", {cache:"no-cache"})
        否则 bind()/renderXxxBar() 重建的按钮还是"没按"的样子（2026-11-23） */
     if(hadSavedFilters) syncFilterUI();
     render();
+    /* 注册离线缓存（2026-11-23）：营地没信号也能打开，顺带让浏览器给「添加到主屏幕」。
+       注册失败不影响任何功能，所以这里吞掉错误，只留一行日志。 */
+    if("serviceWorker" in navigator && location.protocol.indexOf("http") === 0){
+      /* 直接注册，不要挂 window.onload —— 这段代码本身就在 load 之后才跑到
+         （前面的 spots.json 要等网络回来），挂上去永远不会触发（2026-11-23 实测）。 */
+      navigator.serviceWorker.register("sw.js").catch(function(e){
+        if(window.console) console.info("离线缓存未启用：" + e.message);
+      });
+    }
     /* 先要当前位置（静默，失败就停在默认基准，不打断） */
     setTimeout(autoLocate, 400);
     /* 手机打开就是推荐页，不用点"本周推荐" */
@@ -3613,4 +3622,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1347 -->
+<!-- rebuild-trigger 20261123T1352 -->
