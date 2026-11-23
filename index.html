@@ -580,6 +580,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
 .toast button{flex:none;background:rgba(255,255,255,.22);border:0;color:#fff;font:inherit;
   font-size:12px;font-weight:600;padding:5px 10px;border-radius:7px;cursor:pointer}
+.beenbtn{width:100%;border:1px solid var(--line-2);background:transparent;color:var(--ink-3);
+  font:inherit;font-size:13px;padding:9px 0;border-radius:10px;cursor:pointer}
+.beenbtn.on{border-color:var(--line-2);background:var(--paper-2);color:var(--ink-2)}
 .tripbtn{width:100%;border:1px dashed var(--line-2);background:var(--paper-2);color:var(--ink);font:inherit;font-size:14px;font-weight:600;padding:11px 0;border-radius:12px;cursor:pointer}
 .tripbtn.on{border-style:solid;border-color:var(--green);background:var(--green-soft);color:var(--green)}
 /* ── 行程面板 ── */
@@ -1037,7 +1040,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, camp:false, q:"", active:null, trip:[], provExpanded:false, autoFit:false, fitHours:null, fitCenter:null, sortMode:"drive"};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, camp:false, q:"", active:null, trip:[], been:[], provExpanded:false, autoFit:false, fitHours:null, fitCenter:null, sortMode:"drive"};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -1425,6 +1428,7 @@ function renderCards(list, totalAll){
                : tier==="restricted" ? ["部分受限","a"]
                : (dk==="unknown" ? null : [DOG_LABEL[dk][0], DOG_LABEL[dk][1] || "n"]);
     if(dogTxt) facts.push('<span class="fact dog '+dogTxt[1]+'">'+esc(dogTxt[0])+'</span>');
+    if(inBeen(s.id)) facts.push('<span class="fact" style="color:var(--ink-3)">去过了</span>');
     if(nk !== "unknown") facts.push('<span class="fact">'+esc(NIGHT_LABEL[nk][0])+'</span>');
     /* 季节标签：现在是"适合/最佳"就点明，明确不建议的也点明（避免白跑一趟） */
     (function(){
@@ -1976,7 +1980,10 @@ function openDetail(id){
           '" data-trip="' + esc(s.id) + '">' + (inT ? "✓ 已在行程 · 点击移除" : "＋ 加入行程") + '</button>' +
           (spotCoord(s) ? '<button class="anchorbtn" data-anchor="' + esc(s.id) + '">'
              + '以这里为中心排行程 ›</button>' : '') +
-          '</div>';
+          '</div>' +
+          '<div class="sec" style="margin-top:6px"><button class="beenbtn' +
+          (inBeen(s.id) ? ' on' : '') + '" data-been="' + esc(s.id) + '">' +
+          (inBeen(s.id) ? '✓ 去过了 · 不再推荐' : '标记为去过（之后不再推荐）') + '</button></div>';
 
   /* 照片：先看图，再看结论——"长啥样"比指标更直觉 */
   if(s.photos && s.photos.length){
@@ -2345,6 +2352,18 @@ function bind(){
     }
     var tb = e.target.closest("[data-trip]");
     if(tb){ e.preventDefault(); toggleTrip(tb.getAttribute("data-trip")); return; }
+    var bb = e.target.closest("[data-been]");
+    if(bb){
+      e.preventDefault();
+      var bid = bb.getAttribute("data-been");
+      toggleBeen(bid);
+      /* 就地换标签，不重开详情：重开会把用户刚滚到的位置甩回顶部 */
+      var on = inBeen(bid);
+      bb.classList.toggle("on", on);
+      bb.textContent = on ? "✓ 去过了 · 不再推荐" : "标记为去过（之后不再推荐）";
+      toast(on ? "记下了：去过的地方不再占用推荐位" : "已从「去过」里移除");
+      return;
+    }
     var img = e.target.closest(".gallery img");
     if(!img || img.classList.contains("broken") || !img.getAttribute("src")) return;
     el("lb-img").src = img.src;
@@ -2388,6 +2407,24 @@ function loadTrip(){
   }catch(e){ return []; }
 }
 function saveTrip(){ try{ localStorage.setItem(TRIP_KEY, JSON.stringify(STATE.trip)); }catch(e){} }
+
+/* ───────── 去过了（2026-11-24） ─────────
+   「每周带狗去哪玩」这个每周会重复发生的需求，最怕的就是**反复推同一个地方**——
+   去过的地方不是不能再去，而是不该再占推荐位。所以这里只记"去过"，不记别的。 */
+var BEEN_KEY = "pp-been-v1";
+function saveBeen(){ try{ localStorage.setItem(BEEN_KEY, JSON.stringify(STATE.been)); }catch(e){} }
+function loadBeen(){
+  try{
+    var a = JSON.parse(localStorage.getItem(BEEN_KEY) || "[]");
+    if(a instanceof Array) STATE.been = a.filter(function(x){ return typeof x === "string"; });
+  }catch(e){}
+}
+function inBeen(id){ return STATE.been.indexOf(id) >= 0; }
+function toggleBeen(id){
+  var i = STATE.been.indexOf(id);
+  if(i >= 0) STATE.been.splice(i, 1); else STATE.been.unshift(id);
+  saveBeen(); render(); PLAN.dirty = true;
+}
 
 /* ───────── 筛选条件的记忆（2026-11-23）─────────
    主人的用法是"周末想找能露营+玩水的"，点完关掉，下次打开又得重新点一遍。
@@ -3397,6 +3434,17 @@ function buildPlans(){
   /* 季节只做权重，**不做门槛**（owner 2026-11-21：「最佳不是只能去那，你可以推荐但是不要收窄」）。
      第一版在这里把本季 0 分的点直接剔出候选，冬天等于只剩 5 个点可选——那是收窄，不是推荐。
      现在所有候选一律保留，季节只影响排序得分。 */
+  /* 去过的不进候选（2026-11-24）：每周都推同一批地方，这个产品就没用了。
+     但不是"永久封杀"——PLAN.includeBeen 打开就把它们放回来（不持久化，下次打开回到默认）。 */
+  var beenSkipped = 0;
+  if(!PLAN.includeBeen){
+    pool = pool.filter(function(s){
+      if(inBeen(s.id)){ beenSkipped++; return false; }
+      return true;
+    });
+  }
+  PLAN.beenSkipped = beenSkipped;
+
   pool.forEach(function(s){
     s.__p = scoreSpot(s, season) || { score:0, why:[] };
     s.__pop = popOf(s);
@@ -3722,7 +3770,9 @@ function planBodyHTML(){
   if(PLAN.err)
     return weekBarHTML() + '<div class="plan-loading">没能生成推荐：'+esc(PLAN.err)+'</div>';
   if(!PLAN.plans.length)
-    return weekBarHTML() + '<div class="plan-loading">当前范围内凑不出 3 个点以上的片区。</div>';
+    return weekBarHTML() + '<div class="plan-loading">当前范围内凑不出 3 个点以上的片区。' +
+      (PLAN.beenSkipped ? '<br>（你已经去过 '+PLAN.beenSkipped+' 个，都跳过了；' +
+        '<button class="chip" data-incl-been="1">把去过的也纳进来</button>）' : '') + '</div>';
 
   var sat = PLAN.plans.map(function(p){ return p.weatherOk&&p.wSat ? p.wSat.score : null; })
                      .filter(function(x){ return x!=null; });
@@ -3748,7 +3798,13 @@ function planBodyHTML(){
       '<details class="plan-note">' +
       '<summary>窗口 <b>周五 '+DEPART_HOUR+':00 出发 · 周日晚回</b> · 候选 '+PLAN.pool+' 个点 · 排序＝季节 → 热度×天气</summary>' +
       '<div class="pn-body">' +
-      '候选点 = '+(STATE.hours == null ? '不限车程' : '单程 ≤'+STATE.hours.toFixed(1)+'h')+'、排除明确禁狗，共 '+PLAN.pool+' 个。' +
+      '候选点 = '+(STATE.hours == null ? '不限车程' : '单程 ≤'+STATE.hours.toFixed(1)+'h')+'、排除明确禁狗' +
+      (PLAN.beenSkipped ? '、跳过 ' + PLAN.beenSkipped + ' 个你去过的' : '') + '，共 '+PLAN.pool+' 个。' +
+      /* 去过被跳过了就得说清楚，否则"怎么少了一大截"没法解释；还得留个把纳回来的口子 */
+      (PLAN.beenSkipped ? '<br>跳过的 '+PLAN.beenSkipped+' 个是你在详情页标记过「去过」的。' +
+         '<button class="chip" data-incl-been="1">把去过的也纳进来</button>'
+        : (PLAN.includeBeen && STATE.been.length ? '<br>现在把你去过的 '+STATE.been.length+' 个也纳进来了。' +
+           '<button class="chip" data-incl-been="0">还是跳过吧</button>' : '')) +
       (sat.length ? '天气每次打开都重新查（Open-Meteo 实时预报），这次抓取于 '+esc(PLAN.fetchedAt)+
       (PLAN.at ? '（'+planAgeText()+'）' : '')+'。'
         : '天气这次<b>没取到</b>（尝试于 '+esc(PLAN.fetchedAt)+'），所以排序里没有天气这一项。') +
@@ -3829,6 +3885,14 @@ document.addEventListener("click", function(e){
     saveTrip(); renderTrip();
     toast(added ? "已把 " + added + " 个点装进行程" + (STATE.trip.length > added ? "（另有 " + (STATE.trip.length - added) + " 个之前就加过）" : "")
                 : "这 " + pl.stops.length + " 个点已经在行程里了");
+    return;
+  }
+  var inc = e.target.closest && e.target.closest("[data-incl-been]");
+  if(inc){
+    /* 把"去过"的纳回来 / 再跳过去：只影响这一次，不落盘——下次打开回到"跳过"的默认 */
+    PLAN.includeBeen = inc.getAttribute("data-incl-been") === "1";
+    PLAN.dirty = true;
+    openPlan();
     return;
   }
   var b = e.target.closest && e.target.closest("[data-plan-page]");
@@ -3956,6 +4020,7 @@ fetch("spots.json", {cache:"no-cache"})
     scrollFade(el("legend"));
     bindPlan();
     STATE.trip = loadTrip();
+    loadBeen();
     loadSharedTrip();        /* 带 ?trip= 的链接优先，且不静默覆盖已有行程 */
     renderTrip();
     /* 恢复的筛选要等所有 chip 都渲染出来之后再刷一次按下态，
@@ -4021,4 +4086,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1825 -->
+<!-- rebuild-trigger 20261123T1840 -->
