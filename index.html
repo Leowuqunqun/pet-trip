@@ -165,6 +165,10 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .plan-thumbs{display:flex;gap:8px;margin:10px 0 6px}
 .plan-thumbs .pt{flex:1;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:var(--line)}
 .plan-thumbs .pt img{width:100%;height:100%;object-fit:cover;display:block}
+.ti-ops{display:flex;align-items:center;gap:2px;flex:0 0 auto}
+.ti-mv{border:1px solid var(--line);background:var(--paper);color:var(--ink-2);font:inherit;font-size:13px;
+  width:26px;height:26px;line-height:1;border-radius:8px;cursor:pointer;padding:0}
+.ti-mv:active{background:var(--paper-2)}
 .trip-warn{margin:0 0 10px;padding:10px 12px;border-radius:10px;line-height:1.55;
   background:rgba(190,60,50,.07);border:1px solid rgba(190,60,50,.22);color:var(--ink-2);font-size:12.5px}
 .trip-warn.soft{background:rgba(150,110,40,.07);border-color:rgba(150,110,40,.22)}
@@ -605,7 +609,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .trip-item .ti-n{flex:1;min-width:0}
 .trip-item .ti-t{font-weight:600;font-size:14px}
 .trip-item .ti-m{color:var(--ink-2);font-size:12px;margin-top:3px}
-.trip-item .ti-x{border:0;background:transparent;color:var(--ink-3);font-size:20px;line-height:1;cursor:pointer;padding:0 4px}
+.trip-item .ti-x{border:0;background:transparent;color:var(--ink-3);font-size:19px;line-height:1;cursor:pointer;padding:0 6px;height:26px}
 .trip-actions{display:flex;gap:8px;margin-top:16px}
 .trip-actions button{flex:1;border:1px solid var(--line-2);background:var(--paper-2);color:var(--ink);font:inherit;font-size:13px;font-weight:600;padding:10px 0;border-radius:10px;cursor:pointer}
 .trip-actions .primary{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -2716,7 +2720,13 @@ function renderTripPanel(){
       '<div class="ti-m">单程 ' + hm(d.hours_oneway) + ' · ' + Math.round(d.km) + ' km · ' +
       esc(NIGHT_LABEL[nightKey(sp)][0]) +
       (f.toilet === true ? ' · 有厕所' : (f.toilet === false ? ' · 无厕所' : '')) +
-      '</div></div><button class="ti-x" data-rm="' + esc(id) + '" aria-label="移除">×</button></div>';
+      '</div></div>' +
+      /* 「点之间怎么串由你定」说了很久，可面板里只有一键重排，手动根本调不了顺序（2026-11-24）。 */
+      '<div class="ti-ops">' +
+        (i > 0 ? '<button class="ti-mv" data-tmove="up" data-ti="' + i + '" aria-label="上移">↑</button>' : '') +
+        (i < STATE.trip.length - 1 ? '<button class="ti-mv" data-tmove="down" data-ti="' + i + '" aria-label="下移">↓</button>' : '') +
+        '<button class="ti-x" data-rm="' + esc(id) + '" aria-label="移除">×</button>' +
+      '</div></div>';
   }).join("");
   sub.textContent = "最远单程 " + hm(maxH) + " · 点之间怎么串由你定";
 
@@ -2869,6 +2879,16 @@ function bindTrip(){
       STATE.trip = next; saveTrip(); renderTrip(); renderTripPanel();
       if(before - after < 0.5) toast("现在这个顺序已经挺顺了（少跑不到 0.5 km）");
       else toast("已按最省路排好：直线少跑 " + Math.round(before - after) + " km");
+      return;
+    }
+    var mv = e.target.closest("[data-tmove]");
+    if(mv){
+      var from = parseInt(mv.getAttribute("data-ti"), 10);
+      var to = mv.getAttribute("data-tmove") === "up" ? from - 1 : from + 1;
+      if(from >= 0 && to >= 0 && to < STATE.trip.length){
+        var tmp = STATE.trip[from]; STATE.trip[from] = STATE.trip[to]; STATE.trip[to] = tmp;
+        saveTrip(); renderTrip(); renderTripPanel();
+      }
       return;
     }
     var b = e.target.closest("[data-rm]"); if(!b) return;
@@ -4148,4 +4168,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1951 -->
+<!-- rebuild-trigger 20261123T2003 -->
