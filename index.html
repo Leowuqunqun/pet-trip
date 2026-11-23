@@ -775,6 +775,13 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .chip-more{border-style:dashed;color:var(--ink-2)}
 .fp-title{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
 .fp-hint{font-weight:400;font-size:11px;color:var(--ink-3);letter-spacing:0}
+
+.chip-locate::before{content:"◎";margin-right:4px;font-size:12px;opacity:.75}
+.chip-locate.busy{opacity:.6;pointer-events:none}
+.origin-back{margin:6px 0 0;padding:8px 12px;border-radius:10px;border:1px solid rgba(0,0,0,.12);background:transparent;color:var(--ink-2);font-size:12.5px;cursor:pointer}
+.origin-back[aria-pressed="true"]{border-color:var(--ink);color:var(--ink);font-weight:600}
+.origin-grid{display:flex;flex-direction:column;gap:2px}
+.origin-here{margin:2px 0 0;padding:9px 12px;border-radius:10px;border:1px dashed var(--brand);background:transparent;color:var(--brand-2);font-size:13px;font-weight:600;cursor:pointer}
 </style>
 </head>
 <body>
@@ -797,6 +804,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
       <label class="chip-wrap" title="默认不限，自己拖才生效">单程 <b id="range-out">不限</b>
         <input type="range" id="range" min="1" max="13" step="0.5" value="13">
       </label>
+      <button class="chip chip-locate" id="locate" aria-pressed="false" title="用当前位置当出发点">定位</button>
       <button class="chip" id="fpanel-toggle" aria-pressed="false" aria-expanded="false">筛选 <b id="fpanel-n"></b></button>
       <button class="chip" id="search-toggle" aria-pressed="false">搜索</button>
       <span id="fsum"></span>
@@ -961,7 +969,7 @@ var DOG_LABEL = {
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, camp:false, q:"", active:null, trip:[], provExpanded:false, autoFit:false};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, camp:false, q:"", active:null, trip:[], provExpanded:false, autoFit:false, fitHours:null, fitCenter:null};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -1386,6 +1394,101 @@ function initOrigin(){
     : {name: DATA.meta.origin.name, gcj: DATA.meta.origin.gcj.slice(), custom: false};
   paintOrigin();
 }
+
+/* ───────── 定位（2026-11-22） ─────────
+   手机端最没用的东西就是"从上海出发"——人在路上，车程还是按上海算的。
+   所以定位不是"把地图挪到我这儿"，而是**把出发点换成我当前站的位置**，
+   这样单程时间、排序、3 小时取景全都跟着变对。
+   两个坑必须在代码里解决，不能靠注释提醒：
+   ① 浏览器给的是 WGS84，高德底图和库里所有点位是 GCJ-02，不转换会偏几百米；
+   ② 换出发点后车程只能用直线估算（没有路网数据），必须让用户看得见这个"约"。 */
+function wgs2gcj(lat, lng){
+  var a = 6378245.0, ee = 0.00669342162296594323;
+  function outOfChina(la, ln){ return ln < 72.004 || ln > 137.8347 || la < 0.8293 || la > 55.8271; }
+  function tLat(x, y){
+    var r = -100.0 + 2.0*x + 3.0*y + 0.2*y*y + 0.1*x*y + 0.2*Math.sqrt(Math.abs(x));
+    r += (20.0*Math.sin(6.0*x*Math.PI) + 20.0*Math.sin(2.0*x*Math.PI))*2.0/3.0;
+    r += (20.0*Math.sin(y*Math.PI) + 40.0*Math.sin(y/3.0*Math.PI))*2.0/3.0;
+    r += (160.0*Math.sin(y/12.0*Math.PI) + 320*Math.sin(y*Math.PI/30.0))*2.0/3.0;
+    return r;
+  }
+  function tLng(x, y){
+    var r = 300.0 + x + 2.0*y + 0.1*x*x + 0.1*x*y + 0.1*Math.sqrt(Math.abs(x));
+    r += (20.0*Math.sin(6.0*x*Math.PI) + 20.0*Math.sin(2.0*x*Math.PI))*2.0/3.0;
+    r += (20.0*Math.sin(x*Math.PI) + 40.0*Math.sin(x/3.0*Math.PI))*2.0/3.0;
+    r += (150.0*Math.sin(x/12.0*Math.PI) + 300.0*Math.sin(x/30.0*Math.PI))*2.0/3.0;
+    return r;
+  }
+  if(outOfChina(lat, lng)) return {lat: lat, lng: lng};
+  var dLat = tLat(lng - 105.0, lat - 35.0), dLng = tLng(lng - 105.0, lat - 35.0);
+  var radLat = lat / 180.0 * Math.PI;
+  var magic = Math.sin(radLat); magic = 1 - ee * magic * magic;
+  var sqrtMagic = Math.sqrt(magic);
+  dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * Math.PI);
+  dLng = (dLng * 180.0) / (a / sqrtMagic * Math.cos(radLat) * Math.PI);
+  return {lat: lat + dLat, lng: lng + dLng};
+}
+
+function locateMe(opt){
+  opt = opt || {};
+  var quiet = !!opt.silent;
+  var btn = el("locate");
+  if(!navigator.geolocation){
+    if(!quiet) toast("这个浏览器不支持定位，换个浏览器试试");
+    return;
+  }
+  /* 非 https 下浏览器会直接拒绝，而且很多人说不清原因，所以先把话说在前面 */
+  var secure = (location.protocol === "https:") ||
+               /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  if(!secure){
+    if(!quiet) toast("定位要 https 才给用（现在是 " + location.protocol + "），线上站点可以");
+    return;
+  }
+  if(btn){ btn.classList.add("busy"); btn.textContent = "定位中…"; }
+  navigator.geolocation.getCurrentPosition(function(pos){
+    if(btn){ btn.classList.remove("busy"); btn.textContent = "定位"; }
+    var g = wgs2gcj(pos.coords.latitude, pos.coords.longitude);
+    var acc = Math.round(pos.coords.accuracy || 0);
+    setOrigin("我的位置", [g.lng, g.lat], true);
+    closeOriginPanel();
+    /* 换到新位置之后：刚从上海那套视野里跳出来时，3 小时圈还是"半个华东"，
+       看不出"我就在这儿"。先框 1.5 小时圈；周边点少就直接站在我这儿看。 */
+    /* 定位后**固定站在我这儿看**（zoom 9 ≈ 半径 60 公里）：
+       用包围盒去拟合"我周围有点的地方"实测会把视野推到北边的安徽江苏去——
+       那些点把框撑大了，我反而不在框中央。人在现场时，"我在这儿"比"框住所有点"重要。 */
+    if(mapUsable()){
+      MAP.setView([g.lat, g.lng], 9);
+      STATE.autoFit = true;
+    }else if(!STATE.autoFit){
+      STATE.fitCenter = [g.lat, g.lng];   /* 地图还没露脸：等它出来再站过去 */
+    }
+    render();
+    refreshOriginPanel();
+    if(!quiet) toast("已换成当前位置出发" + (acc ? "（精度约 " + acc + " 米）" : "") + " · 车程按直线估算");
+  }, function(err){
+    if(btn){ btn.classList.remove("busy"); btn.textContent = "定位"; }
+    var why = {
+      1: "你拒绝了定位授权，可以在浏览器地址栏那把权限打开",
+      2: "定位不可用：设备没有定位服务",
+      3: "定位超时，信号弱时换个地方再试"
+    }[err && err.code] || "定位失败，原因不明";
+    /* 静默失败（开机那次）不弹提示：会变成每次打开都挨一句抱怨。
+       点「定位」这种主动动作才把原因说清楚。 */
+    if(!quiet) toast(why);
+  }, {enableHighAccuracy:true, timeout:10000, maximumAge:60000});
+}
+
+
+/* 开机先去拿当前位置（owner 2026-11-22）：默认就该是"我现在在哪儿"，
+   让用户先看见上海再自己去点定位，是多余的中间步骤。
+   唯一例外：用户主动改回过上海基准，就尊重这个选择，不再每次打开都去打扰权限。 */
+function autoLocate(){
+  var saved = null;
+  try{ saved = JSON.parse(localStorage.getItem("pp-origin-v1") || "null"); }catch(e){}
+  if(saved && saved.name !== "我的位置") return;
+  locateMe({silent:true});
+}
+
 function paintOrigin(){
   /* 头部一行放不下「从上海人民广场出发」，只留城市；全名在面板和地图气泡里 */
   var shortName = ORIGIN.name.replace("人民广场", "");
@@ -1404,13 +1507,32 @@ function setOrigin(name, gcj, custom){
   if(MAP) MAP.setView([gcj[1], gcj[0]], MAP.getZoom());
   if(ORIGIN_MARKER){
     ORIGIN_MARKER.setLatLng([gcj[1], gcj[0]]);
-    ORIGIN_MARKER.setPopupContent('<div class="pop-t">出发点</div><div class="pop-row">'+esc(name)+'</div>');
+    /* 定位来的出发点画成实心蓝点：用户得能一眼确认"系统认为我在哪儿"，
+       和原来那个空心米色点区分开，免得把上海那个点当成自己。 */
+    var isMe = (name === "我的位置");
+    ORIGIN_MARKER.setStyle(isMe
+      ? {radius:8, color:"#ffffff", weight:3, fillColor:"#2F6FED", fillOpacity:1}
+      : {radius:7, color:"#B85C38", weight:2.5, fillColor:"#F4F7F4", fillOpacity:1});
+    ORIGIN_MARKER.setPopupContent('<div class="pop-t">'+(isMe ? "我在这儿" : "出发点")+'</div>'+
+      '<div class="pop-row">'+esc(isMe ? "当前位置 · 车程按直线估算" : name)+'</div>');
   }
   closeOriginPanel();
   render();
   toast(custom ? "已换成" + name + "出发 · 车程按直线估算" : "已回到" + name + "出发 · 真实路网车程");
 }
-function openOriginPanel(){ el("origin-panel").classList.add("open"); }
+function openOriginPanel(){
+  refreshOriginPanel();
+  el("origin-panel").classList.add("open");
+}
+/* 面板只在初始化时建一次，选中态必须每次打开时重算——
+   否则定位换过出发点之后，面板里"上海"还亮着，用户会以为自己还在用上海。 */
+function refreshOriginPanel(){
+  var grid = el("origin-grid"); if(!grid) return;
+  var me = (ORIGIN.name === "我的位置");
+  var h = grid.querySelector("#origin-here"), b = grid.querySelector("#origin-shanghai");
+  if(h) h.setAttribute("aria-pressed", me ? "true" : "false");
+  if(b) b.setAttribute("aria-pressed", me ? "false" : "true");
+}
 function closeOriginPanel(){ el("origin-panel").classList.remove("open"); }
 function buildOriginPanel(){
   var box = document.createElement("div");
@@ -1418,17 +1540,28 @@ function buildOriginPanel(){
   box.innerHTML = '<button class="origin-close" id="origin-close" aria-label="关闭">×</button>' +
     '<h4>从哪儿出发</h4>' +
     '<div class="origin-grid" id="origin-grid"></div>' +
-    '<div class="origin-note">上海人民广场是按真实路网算的车程；换其他地方按直线距离换算，' +
-    '实测误差约 ±15%，所以写「约」。滑块只负责过滤，不决定收录。</div>';
+    '<div class="origin-note">默认用你手机的位置当出发点，所有单程时间都从这儿算。' +
+    '只有上海基准是按真实路网算的；其他位置按直线距离换算，实测误差约 ±15%，所以写「约」。</div>';
   document.body.appendChild(box);
+  /* 不再列城市（owner 2026-11-22）：默认就用当前位置，选城市是多余的中间步骤。
+     现在只剩两件事——重新定位，或改回上海基准（唯一有真实路网车程的出发点）。 */
   var grid = box.querySelector("#origin-grid");
-  ORIGIN_PRESETS.forEach(function(p){
-    var b = document.createElement("button");
-    b.textContent = p[0] === "上海人民广场" ? "上海" : p[0];
-    b.setAttribute("aria-pressed", ORIGIN.name === p[0] ? "true" : "false");
-    b.onclick = function(){ setOrigin(p[0], p[1], p[2]); };
-    grid.appendChild(b);
-  });
+  var here = document.createElement("button");
+  here.id = "origin-here";
+  here.className = "origin-here";
+  here.textContent = "重新定位我的位置";
+  here.onclick = function(){ locateMe(); };
+  grid.appendChild(here);
+  var back = document.createElement("button");
+  back.id = "origin-shanghai";
+  back.className = "origin-back";
+  back.textContent = "改回上海基准（真实路网）";
+  back.onclick = function(){
+    setOrigin(DATA.meta.origin.name, DATA.meta.origin.gcj, false);
+    closeOriginPanel();
+    toast("已回到上海基准 · 车程用真实路网");
+  };
+  grid.appendChild(back);
   box.querySelector("#origin-close").onclick = closeOriginPanel;
   box.onclick = function(e){ if(e.target === box) closeOriginPanel(); };
 }
@@ -1628,20 +1761,61 @@ function syncMarkers(list){
      拽到云贵川——用户正在看的地方被自己的一次筛选弄丢了。
      现在的规则：**当前视野里还有结果就原地不动**；一个都没有才重取景。
      搜索例外：搜索就是"我要去那儿"，直接飞过去才对。 */
-  if(list.length && !STATE.active){
-    var stillVisible = mapUsable() && list.some(inView);
+  /* 地图没露脸时一律不取景：容器 0×0 上 fitBounds 会算出一个横跨半个中国、
+     zoom 11 落在宁夏的视野，然后列表就变成"地图范围内 0 个"。
+     这种时刻该做的事是等 setView("map") 里的 scheduleAutoFit。 */
+  if(list.length && !STATE.active && mapUsable()){
+    var stillVisible = list.some(inView);
     if(!stillVisible || STATE.q) fitAll(list);
   }
 }
 
 /* 首屏视野：只看"周末开得到"的范围（单程 ≤3h）。点数太少才退回全部，
    免得在东部沿海以外的地方一打开就是空白地图。 */
-function fitNear(list){
+
+/* 等地图容器尺寸稳定后再取景。轮询而不是猜一个延时：
+   CSS 过渡的时长每个浏览器、每台机器都不一样，猜早了就是上面说的事故。 */
+function scheduleAutoFit(){
+  var tries = 0;
+  function tick(){
+    if(!MAP) return;
+    tries++;
+    MAP.invalidateSize();
+    var sz = MAP.getSize();
+    if(sz && sz.x > 200 && sz.y > 200){
+      if(STATE.fitCenter){
+        MAP.setView(STATE.fitCenter, 9);
+        STATE.fitCenter = null;
+      }else{
+        fitNear(DATA.spots, STATE.fitHours || 3);
+        STATE.fitHours = null;
+      }
+      STATE.autoFit = true;
+      renderNear();
+      return;
+    }
+    if(tries < 15) setTimeout(tick, 120);
+  }
+  tick();
+}
+
+function fitNear(list, maxHours){
+  var hrs = (maxHours == null) ? 3 : maxHours;
   var near = list.filter(function(s){
     var dr = driveInfo(s);
-    return dr && typeof dr.hours_oneway === "number" && dr.hours_oneway <= 3;
+    return dr && typeof dr.hours_oneway === "number" && dr.hours_oneway <= hrs;
   });
-  var use = near.length >= 20 ? near : list;
+  /* 圈里点太少时**不要退回全库**：那等于又把视野拉成半个中国，
+     和"看我现在开得到哪儿"正好相反。改成取最近的 40 个，视野跟着我走。 */
+  var use = near;
+  if(near.length < 20){
+    use = list.slice().sort(function(a, b){
+      var da = driveInfo(a), db = driveInfo(b);
+      var ha = (da && da.hours_oneway != null) ? da.hours_oneway : 999;
+      var hb = (db && db.hours_oneway != null) ? db.hours_oneway : 999;
+      return ha - hb;
+    }).slice(0, 40);
+  }
   if(!MAP || !use.length) return;
   MAP.invalidateSize();
   var sz = MAP.getSize();
@@ -1655,6 +1829,8 @@ function fitNear(list){
 function fitAll(list){
   if(!MAP || !list.length) return;
   MAP.invalidateSize();                       /* 容器尺寸刚定下来时 fitBounds 会算偏，先刷一次 */
+  var szAll = MAP.getSize();
+  if(!szAll || szAll.x < 40 || szAll.y < 40) return;   /* 容器还没尺寸：算了也是错的 */
   var pts = list.map(function(s){return [s.gcj[1], s.gcj[0]];});
   pts.push(DATA.meta.origin.gcj.slice().reverse());
   MAP.fitBounds(pts, {padding:[30,30], maxZoom:11});
@@ -1888,6 +2064,8 @@ function bind(){
       }
       PLAN.dirty = true; syncFilterUI(); render(); return;
     }
+    var lc = e.target.closest("#locate");
+    if(lc){ locateMe(); return; }
     var pm = e.target.closest("[data-prov-more]");
     if(pm){ STATE.provExpanded = !STATE.provExpanded; renderProvinceBar(); syncFilterUI(); return; }
     var tg = e.target.closest("#fpanel-toggle");
@@ -3258,11 +3436,11 @@ function setView(v){
     setTimeout(function(){
       if(!MAP) return;
       MAP.invalidateSize();
-      /* 首次真正看到地图时才做自动取景（见上面的 autoFit 说明） */
-      if(!STATE.autoFit && DATA && DATA.spots && DATA.spots.length){
-        fitNear(DATA.spots);
-        STATE.autoFit = true;
-      }
+      /* 首次真正看到地图时才做自动取景（见上面的 autoFit 说明）。
+         注意不能在这一步直接 fit：抽屉/视图切换时容器尺寸有过渡，
+         40ms 时可能只有几十像素，fitBounds 会算出 zoom 11 落在大西北——
+         实测就是这么把列表变成"地图范围内 0 个"的。等尺寸真的稳定再算。 */
+      if(!STATE.autoFit && DATA && DATA.spots && DATA.spots.length) scheduleAutoFit();
       renderNear();     /* 地图有尺寸了才谈得上"视口内有哪些点" */
     }, 40);
   }else{
@@ -3319,6 +3497,8 @@ fetch("spots.json", {cache:"no-cache"})
     loadSharedTrip();        /* 带 ?trip= 的链接优先，且不静默覆盖已有行程 */
     renderTrip();
     render();
+    /* 先要当前位置（静默，失败就停在默认基准，不打断） */
+    setTimeout(autoLocate, 400);
     /* 手机打开就是推荐页，不用点"本周推荐" */
     if(window.matchMedia("(max-width:859px)").matches) setView("plan");
     /* 布局稳定后再算 fitBounds：立刻算会把容器尺寸算小，点位挤到屏幕外 */
@@ -3358,4 +3538,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261122T1809 -->
+<!-- rebuild-trigger 20261123T1132 -->
