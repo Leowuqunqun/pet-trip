@@ -3551,7 +3551,8 @@ fetch("spots.json", {cache:"no-cache"})
     DATA = d;
     initOrigin();
     /* 恢复上次的筛选（要先于第一次 render，否则会先闪一下"全部点位"） */
-    if(loadFilters()) paintFilterControls();
+    var hadSavedFilters = loadFilters();
+    if(hadSavedFilters) paintFilterControls();
     buildOriginPanel();
     el("origin-line").onclick = openOriginPanel;
     initMap();
@@ -3567,6 +3568,9 @@ fetch("spots.json", {cache:"no-cache"})
     STATE.trip = loadTrip();
     loadSharedTrip();        /* 带 ?trip= 的链接优先，且不静默覆盖已有行程 */
     renderTrip();
+    /* 恢复的筛选要等所有 chip 都渲染出来之后再刷一次按下态，
+       否则 bind()/renderXxxBar() 重建的按钮还是"没按"的样子（2026-11-23） */
+    if(hadSavedFilters) syncFilterUI();
     render();
     /* 先要当前位置（静默，失败就停在默认基准，不打断） */
     setTimeout(autoLocate, 400);
@@ -3609,4 +3613,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1334 -->
+<!-- rebuild-trigger 20261123T1344 -->
