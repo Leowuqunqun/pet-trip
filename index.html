@@ -156,6 +156,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   margin:14px 0 4px;padding:12px 14px;border-radius:14px;
   background:var(--card,#fffdf8);border:1px dashed var(--line,#e6ddcb);
 }
+.plan-thumbs{display:flex;gap:8px;margin:10px 0 6px}
+.plan-thumbs .pt{flex:1;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:var(--line)}
+.plan-thumbs .pt img{width:100%;height:100%;object-fit:cover;display:block}
 .trip-order{
   margin:14px 0 4px;padding:12px 14px;border-radius:14px;
   background:var(--card);border:1px dashed var(--line);
@@ -1404,12 +1407,7 @@ function renderCards(list, totalAll){
     /* 列表缩略图挑"看得出这是哪儿"的那张：
        小红书首图常是带大字封面的拼图或自拍，做缩略图很糟；
        高德商户图通常是地点本身。都没有才退回小红书第 2 张（跳过封面）。 */
-    var thumbSrc = null;
-    if(ph){
-      var gd = ph.filter(function(p){ return p.src !== "小红书"; });
-      var xh = ph.filter(function(p){ return p.src === "小红书"; });
-      thumbSrc = (gd[0] || xh[1] || xh[0] || ph[0]).url;
-    }
+    var thumbSrc = pickThumb(s);
     /* 2026-11-20 修：＋号原来写在 card-thumb 里面，绝对定位就以缩略图为参照，
        所以 right:2px 只是"图片右边缘"，怎么调都压在图上。移到 card 这一层才真正靠整行右侧。 */
     var thumb = '<span class="card-thumb">' +
@@ -3450,6 +3448,35 @@ function wdayHTML(d, label){
     '<b>'+Math.round(d.pop)+'%</b><s>'+Math.round(d.tmin)+'~'+Math.round(d.tmax)+'°</s></div>';
 }
 
+/* 挑一张"看得出这是哪儿"的图：小红书首图常是带大字封面或自拍，做缩略图很糟；
+   高德商户图通常是地点本身。都没有才退回小红书第 2 张（跳过封面）。
+   列表卡片和推荐卡片共用这一套，免得两处各挑一张、说的不是一回事。 */
+function pickThumb(s){
+  var ph = s && s.photos && s.photos.length ? s.photos : null;
+  if(!ph) return null;
+  var gd = ph.filter(function(p){ return p.src !== "小红书"; });
+  var xh = ph.filter(function(p){ return p.src === "小红书"; });
+  return (gd[0] || xh[1] || xh[0] || ph[0]).url;
+}
+
+/* 推荐卡加一排站点的实拍图（2026-11-23）：以前三条路线全是文字，
+   "无锡窑湖小镇"和"苏州金鸡湖"在字面上没区别，看一眼就得往下读。
+   有图的站最多取 3 张，一张都没有就整排不出现，不占位。 */
+function planThumbsHTML(p){
+  var items = [], seen = {};
+  for(var i=0;i<p.stops.length && items.length<3;i++){
+    var sp = p.stops[i].s, u = pickThumb(sp);
+    if(!u || seen[u]) continue;
+    seen[u] = 1;
+    items.push({u:u, n:sp.name});
+  }
+  if(!items.length) return "";
+  return '<div class="plan-thumbs">' + items.map(function(it){
+    return '<span class="pt"><img src="'+esc(it.u)+'" alt="'+esc(it.n)+' 实拍" '+
+      'loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></span>';
+  }).join("") + '</div>';
+}
+
 function planCardHTML(p, idx, quiet){
   var head = '<div class="plan-head"><span class="plan-tag '+
     (p.kind==="两晚三天"?"pt-2d":"pt-1d")+'">'+esc(p.kind)+'</span>'+
@@ -3523,7 +3550,7 @@ function planCardHTML(p, idx, quiet){
     return (x.s.__p.why||[]).some(function(w){ return w.s==="笔记"; });
   });
 
-  return '<div class="plan-card">' + head + weather +
+  return '<div class="plan-card">' + head + planThumbsHTML(p) + weather +
     '<details class="stops-d" open><summary>路线 · '+p.stops.length+' 个点'+
       (spanTxt ? ' · '+esc(spanTxt) : '')+'</summary><div class="sd-body">' +
     '<ol class="plan-stops">' + body + '</ol>' +
@@ -3840,4 +3867,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1609 -->
+<!-- rebuild-trigger 20261123T1625 -->
