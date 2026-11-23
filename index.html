@@ -8,6 +8,12 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" href="icon-192.png">
 <link rel="manifest" href="manifest.json">
+<!-- 弱网下这两家都不在首屏关键路径上，但建连要 300~600ms；
+     提前握手，等真正要用（地图瓦片/天气）时就不用从零开始（2026-11-24）。 -->
+<link rel="preconnect" href="https://webrd01.is.autonavi.com" crossorigin>
+<link rel="dns-prefetch" href="https://webrd01.is.autonavi.com">
+<link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
+<link rel="dns-prefetch" href="https://api.open-meteo.com">
 <link rel="stylesheet" href="vendor/leaflet.css">
 <link rel="stylesheet" href="vendor/MarkerCluster.css">
 <link rel="stylesheet" href="vendor/MarkerCluster.Default.css">
@@ -4277,4 +4283,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T2152 -->
+<!-- rebuild-trigger 20261123T2211 -->
