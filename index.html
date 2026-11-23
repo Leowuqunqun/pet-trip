@@ -1850,6 +1850,7 @@ function syncMarkers(list){
     return mk;
   });
   CLUSTER.addLayers(layers);
+  drawTripLine();          /* 图层清空重加之后连线得补回来 */
   window.__dbg.layers = CLUSTER.getLayers().length;
   window.__dbg.km = MAP.getZoom();
   /* 筛选后要不要重新取景（2026-11-21 改）：
@@ -2693,6 +2694,28 @@ function renderTrip(){
   if(!STATE.trip.length){ bar.classList.remove("on"); }
   else { bar.classList.add("on"); el("trip-count").textContent = STATE.trip.length; }
   if(el("trip-panel").classList.contains("open")) renderTripPanel();
+  drawTripLine();
+}
+
+/* 把行程按顺序在地图上连起来（2026-11-24）。
+   为什么是虚线：连线走的是**站与站的直线**，我没有逐段跑过路网车程，
+   画成实线会让人以为是真实路线。虚线 + 面板里那句"直线共 N km（不是车程）"是一套说法。
+   为什么要连：只看一堆编号看不出来这趟是"一路往西"还是"来回折返"，连起来一眼就明白。 */
+var TRIP_LINE = null;
+function drawTripLine(){
+  window.__dbg = window.__dbg || {};
+  if(typeof MAP === "undefined" || !MAP){ window.__dbg.tripLinePts = 0; return; }
+  if(TRIP_LINE){ try{ MAP.removeLayer(TRIP_LINE); }catch(e){} TRIP_LINE = null; }
+  var pts = [];
+  STATE.trip.forEach(function(id){
+    var s = findSpot(id);
+    if(s && s.gcj) pts.push([s.gcj[1], s.gcj[0]]);
+  });
+  window.__dbg.tripLinePts = pts.length;
+  if(pts.length < 2) return;
+  TRIP_LINE = L.polyline(pts, {
+    color: "#1f6f43", weight: 3, opacity: .8, dashArray: "7 7", interactive: false
+  }).addTo(MAP);
 }
 function bindLegend(){
   var box = el("legend"); if(!box) return;
@@ -2706,9 +2729,25 @@ function bindLegend(){
   });
 }
 
+/* 打开行程时把地图挪到这趟的范围内（2026-11-24）：
+   否则连线多半在视野外——点了"查看"却只看见一堆别的点，等于没看见自己排的路。 */
+function fitTrip(){
+  if(!mapUsable() || STATE.trip.length < 2) return;
+  var pts = [];
+  STATE.trip.forEach(function(id){
+    var sp = findSpot(id);
+    if(sp && sp.gcj) pts.push([sp.gcj[1], sp.gcj[0]]);
+  });
+  if(pts.length < 2) return;
+  var b = L.latLngBounds(pts);
+  if(b.getNorthEast().equals(b.getSouthWest())) MAP.setView(pts[0], 11);
+  else MAP.fitBounds(b, {padding: [40, 40], maxZoom: 12});
+}
+
 function bindTrip(){
   el("trip-open").addEventListener("click", function(){
     renderTripPanel(); el("trip-panel").classList.add("open");
+    fitTrip();
   });
   el("trip-close").addEventListener("click", function(){ el("trip-panel").classList.remove("open"); });
   el("trip-panel").addEventListener("click", function(e){
@@ -3967,4 +4006,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1754 -->
+<!-- rebuild-trigger 20261123T1807 -->
