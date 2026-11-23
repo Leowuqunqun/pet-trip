@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 1021,
+  "count": 1028,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -6666,7 +6666,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；桃花",
+    "evidence": "笔记原文：桃花；玩水",
     "conf": 2
    }
   },
@@ -10618,7 +10618,7 @@
      "冬": 2
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；温泉",
+    "evidence": "笔记原文：温泉；玩水",
     "conf": 2
    }
   },
@@ -12315,7 +12315,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；秋天",
+    "evidence": "笔记原文：秋天；玩水",
     "conf": 2
    }
   },
@@ -13682,7 +13682,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；秋天",
+    "evidence": "笔记原文：秋天；玩水",
     "conf": 2
    }
   },
@@ -33490,7 +33490,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；桃花",
+    "evidence": "笔记原文：桃花；玩水",
     "conf": 2
    }
   },
@@ -36947,7 +36947,7 @@
    "geo_src": "amap",
    "origin": "发现批次（关键词矩阵搜索）",
    "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
-   "raw_note": "",
+   "raw_note": "后悔才来❗杭州直达的免费玩水溯溪露营地",
    "photos": [
     {
      "url": "https://store.is.autonavi.com/showpic/2809ca2070c9aaecf538221e38168ed3",
@@ -36991,7 +36991,9 @@
     "露营",
     "过夜"
    ],
-   "access": {},
+   "access": {
+    "fee": "免"
+   },
    "dog_tier": "unknown",
    "sources": [
     {
@@ -37004,6 +37006,11 @@
      "url": "https://uri.amap.com/marker?position=119.391351,30.105816&name=%E6%B1%90%E9%81%87%E6%B0%91%E5%AE%BF&src=pet-trip&coordinate=gaode&callnative=0",
      "title": "在高德地图查看位置",
      "why": "坐标来源"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.391351,30.105816",
+     "poi": "杭州汐遇民宿"
     }
    ],
    "season": {
@@ -40758,7 +40765,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；红叶",
+    "evidence": "笔记原文：红叶；玩水",
     "conf": 2
    }
   },
@@ -71667,7 +71674,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：秋季；玩水",
+    "evidence": "笔记原文：玩水；秋季",
     "conf": 2
    }
   },
@@ -91116,7 +91123,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；桃花",
+    "evidence": "笔记原文：桃花；玩水",
     "conf": 2
    }
   },
@@ -91472,7 +91479,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；秋天",
+    "evidence": "笔记原文：秋天；玩水",
     "conf": 2
    }
   },
@@ -127040,7 +127047,7 @@
      "冬": 0
     },
     "src": "原文",
-    "evidence": "笔记原文：玩水；秋天",
+    "evidence": "笔记原文：秋天；玩水",
     "conf": 2
    }
   },
@@ -129577,6 +129584,607 @@
    "kind_src": "name",
    "access": {},
    "dog_tier": "unknown",
+   "season": {
+    "best": [
+     "春",
+     "秋"
+    ],
+    "avoid": [],
+    "scores": {
+     "春": 3,
+     "夏": 2,
+     "秋": 3,
+     "冬": 1
+    },
+    "src": "推断",
+    "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
+    "conf": 0
+   }
+  },
+  {
+   "id": "x-江南之源文化遗址公园",
+   "name": "江南之源文化遗址公园",
+   "kind": "park",
+   "tags": [],
+   "province": "浙江",
+   "city": "德清",
+   "gcj": [
+    120.039237,
+    30.604474
+   ],
+   "drive": {
+    "hours_oneway": 2.2,
+    "km": 184.9,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-23 13:22"
+   },
+   "dog": {
+    "policy": "restricted",
+    "evidence": "⚠️仅博物馆、越王陵室内区域狗狗不能进入，其余户外区域畅玩",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "area_or_large_dog",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-浙江"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-浙江",
+   "curation_note": "",
+   "raw_note": "说这里是杭州西兰花不过分吧！",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6a09bb82000000003601eb96?xsec_source=pc_search",
+     "title": "说这里是杭州西兰花不过分吧！"
+    },
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6ac5db13000000001c02d65a?xsec_source=pc_search",
+     "title": "江浙沪携宠自驾✨安吉古城遗址公园"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.039237,30.604474",
+     "poi": "江南之源文化遗址公园"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "草坪遛弯",
+    "人文古迹"
+   ],
+   "access": {},
+   "dog_tier": "restricted",
+   "season": {
+    "best": [
+     "春",
+     "秋"
+    ],
+    "avoid": [],
+    "scores": {
+     "春": 3,
+     "夏": 2,
+     "秋": 3,
+     "冬": 2
+    },
+    "src": "推断",
+    "evidence": "按类别与关键词推断（该点位没有季节相关的笔记原文）",
+    "conf": 0
+   }
+  },
+  {
+   "id": "x-下渚湖国家湿地公园",
+   "name": "下渚湖国家湿地公园",
+   "kind": "park",
+   "tags": [],
+   "province": "浙江",
+   "city": "德清",
+   "gcj": [
+    120.047435,
+    30.514875
+   ],
+   "drive": {
+    "hours_oneway": 2.26,
+    "km": 184.0,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-23 13:22"
+   },
+   "dog": {
+    "policy": "unknown",
+    "evidence": "",
+    "verified_at": null,
+    "evidence_level": "未核实",
+    "basis": "",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-浙江"
+   ],
+   "geo_src": "amap",
+   "origin": "小红书发现-浙江",
+   "curation_note": "",
+   "raw_note": "德清下渚湖｜藏在湿地里的秋日浪漫",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=120.047435,30.514875",
+     "poi": "下渚湖国家湿地公园"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "草坪遛弯",
+    "玩水"
+   ],
+   "access": {},
+   "dog_tier": "unknown",
+   "season": {
+    "best": [
+     "夏",
+     "秋"
+    ],
+    "avoid": [
+     "冬"
+    ],
+    "scores": {
+     "春": 2,
+     "夏": 3,
+     "秋": 3,
+     "冬": 0
+    },
+    "src": "原文",
+    "evidence": "笔记原文：玩水",
+    "conf": 1
+   }
+  },
+  {
+   "id": "x-独松关壹号咖啡",
+   "name": "独松关壹号咖啡",
+   "kind": "scenic",
+   "tags": [],
+   "province": "浙江",
+   "city": "安吉",
+   "gcj": [
+    119.713748,
+    30.567677
+   ],
+   "drive": {
+    "hours_oneway": 2.71,
+    "km": 224.1,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-23 13:22"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "话题标签：可以带狗",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "explicit_ok_tag",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-浙江"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-浙江",
+   "curation_note": "",
+   "raw_note": "安吉遛狗 | 趁着没人，赶快来玩水🌳",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69e4946d000000001a035cc8?xsec_source=pc_search",
+     "title": "安吉遛狗 | 趁着没人，赶快来玩水🌳"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.713748,30.567677",
+     "poi": "独松关壹号咖啡"
+    }
+   ],
+   "pending": false,
+   "kind_src": "兜底",
+   "scenes": [],
+   "access": {},
+   "dog_tier": "explicit",
+   "season": {
+    "best": [
+     "夏",
+     "秋"
+    ],
+    "avoid": [
+     "冬"
+    ],
+    "scores": {
+     "春": 2,
+     "夏": 3,
+     "秋": 3,
+     "冬": 0
+    },
+    "src": "原文",
+    "evidence": "笔记原文：玩水",
+    "conf": 1
+   }
+  },
+  {
+   "id": "x-瀑布咖啡(云瀑·自由集)",
+   "name": "瀑布咖啡(云瀑·自由集)",
+   "kind": "water",
+   "tags": [],
+   "province": "浙江",
+   "city": "安吉",
+   "gcj": [
+    119.680519,
+    30.435935
+   ],
+   "drive": {
+    "hours_oneway": 2.83,
+    "km": 229.0,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-23 13:22"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "：狗狗随便下水，夏日遛狗必来 Day2 下午 📍猪罗纪营地 顺路打卡网红猪罗纪营地 真心实意测评⚠️带狗狗不建议专程前来 整体场景精致唯美 很适合女生拍照打卡 但是天气炎热 园区遮阳较少 狗狗长时间停",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-浙江"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-浙江",
+   "curation_note": "",
+   "raw_note": "安吉带狗两日游🌿撸羊玩水｜真实游玩测评",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69f8c501000000002003a23c?xsec_source=pc_search",
+     "title": "安吉带狗两日游🌿撸羊玩水｜真实游玩测评"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.680519,30.435935",
+     "poi": "瀑布咖啡(云瀑·自由集)"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "玩水",
+    "溯溪"
+   ],
+   "access": {},
+   "dog_tier": "explicit",
+   "season": {
+    "best": [
+     "夏"
+    ],
+    "avoid": [
+     "冬"
+    ],
+    "scores": {
+     "春": 1,
+     "夏": 3,
+     "秋": 2,
+     "冬": 0
+    },
+    "src": "原文",
+    "evidence": "笔记原文：玩水",
+    "conf": 1
+   }
+  },
+  {
+   "id": "x-青山湖景区",
+   "name": "青山湖景区",
+   "kind": "water",
+   "tags": [],
+   "province": "浙江",
+   "city": "临安",
+   "gcj": [
+    119.765722,
+    30.257241
+   ],
+   "drive": {
+    "hours_oneway": 3.0,
+    "km": 217.7,
+    "source": "amap 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-09 10:19"
+   },
+   "dog": {
+    "policy": "forbidden",
+    "evidence": "要门票的景区里面宠物不能进，但是外围可以",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "explicit_veto",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-浙江"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-浙江",
+   "curation_note": "",
+   "raw_note": "快带娃去杭州青山湖！遛狗遛娃圣地！",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/69f72fe3000000002301e958?xsec_source=pc_search",
+     "title": "快带娃去杭州青山湖！遛狗遛娃圣地！"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.765722,30.257241",
+     "poi": "青山湖景区"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "玩水",
+    "山野徒步"
+   ],
+   "access": {},
+   "dog_tier": "veto",
+   "season": {
+    "best": [
+     "夏"
+    ],
+    "avoid": [
+     "冬"
+    ],
+    "scores": {
+     "春": 1,
+     "夏": 3,
+     "秋": 2,
+     "冬": 0
+    },
+    "src": "原文",
+    "evidence": "笔记原文：玩水",
+    "conf": 1
+   }
+  },
+  {
+   "id": "x-宁海伍山海滨石窟国家矿山公园",
+   "name": "宁海伍山海滨石窟国家矿山公园",
+   "kind": "park",
+   "tags": [],
+   "province": "浙江",
+   "city": "象山",
+   "gcj": [
+    121.75623,
+    29.207238
+   ],
+   "drive": {
+    "hours_oneway": 3.7,
+    "km": 311.6,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-23 13:22"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "我不说你也以为这是马尔代夫吧 昨天去了盱眙的象山矿山公园（宠物友好），遇到好天气，简直美爆了，我说这是盱眙马尔代夫没人反对吧[偷笑R] \t 🧭导航：中国石化淮安盱眙水上加油站，看到图2️⃣的标志在门",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-浙江"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-浙江",
+   "curation_note": "",
+   "raw_note": "我不说你也以为这是马尔代夫吧",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/6998fca8000000001a034a38?xsec_source=pc_search",
+     "title": "我不说你也以为这是马尔代夫吧"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=121.75623,29.207238",
+     "poi": "宁海伍山海滨石窟国家矿山公园"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "草坪遛弯",
+    "玩水",
+    "山野徒步"
+   ],
+   "access": {},
+   "dog_tier": "explicit",
+   "season": {
+    "best": [
+     "夏",
+     "秋"
+    ],
+    "avoid": [
+     "冬"
+    ],
+    "scores": {
+     "春": 2,
+     "夏": 3,
+     "秋": 3,
+     "冬": 0
+    },
+    "src": "原文",
+    "evidence": "笔记原文：玩水",
+    "conf": 1
+   }
+  },
+  {
+   "id": "x-象山半边山观堂",
+   "name": "象山半边山观堂",
+   "kind": "scenic",
+   "tags": [],
+   "province": "浙江",
+   "city": "象山",
+   "gcj": [
+    121.965985,
+    29.257088
+   ],
+   "drive": {
+    "hours_oneway": 3.8,
+    "km": 314.7,
+    "source": "osrm 驾车路径规划（真实路网）",
+    "computed_at": "2026-11-23 13:22"
+   },
+   "dog": {
+    "policy": "allowed",
+    "evidence": "️ 感谢一个月前的我灵光一闪！周六无脑拽上烧麦，逃离上海“水帘洞”，冲向宁波象山！🌊 两天一夜，全程宠物友好无坑！按头安利给想带狗子看海的ee们！ \t 🚗 Day 1：半边山我们来啦！ - 上午：8点",
+    "evidence_level": "C 级 UGC（未经官方核实）",
+    "verified_at": null,
+    "basis": "explicit_ok",
+    "risk_hint": ""
+   },
+   "overnight": {
+    "status": "unknown",
+    "modes": [],
+    "fee": null,
+    "facilities": {
+     "toilet": null,
+     "water": null,
+     "power": null,
+     "signal": null
+    },
+    "note": "",
+    "verified_at": null,
+    "evidence": []
+   },
+   "sub_pois": [],
+   "trips": [
+    "小红书发现-浙江"
+   ],
+   "geo_src": "xhs",
+   "origin": "小红书发现-浙江",
+   "curation_note": "",
+   "raw_note": "带毛孩逃离雨季🌧️｜象山+东旦2天1夜",
+   "photos": [],
+   "sources": [
+    {
+     "platform": "xhs",
+     "url": "https://www.xiaohongshu.com/explore/68581f2a000000002001ac78?xsec_source=pc_search",
+     "title": "带毛孩逃离雨季🌧️｜象山+东旦2天1夜"
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=121.965985,29.257088",
+     "poi": "象山半边山观堂"
+    }
+   ],
+   "pending": false,
+   "kind_src": "name",
+   "scenes": [
+    "山野徒步",
+    "人文古迹"
+   ],
+   "access": {},
+   "dog_tier": "explicit",
    "season": {
     "best": [
      "春",
