@@ -165,6 +165,8 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .plan-thumbs{display:flex;gap:8px;margin:10px 0 6px}
 .plan-thumbs .pt{flex:1;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:var(--line)}
 .plan-thumbs .pt img{width:100%;height:100%;object-fit:cover;display:block}
+.ti-n[data-tdetail]{cursor:pointer}
+.ti-go{float:right;font-weight:400;font-size:12px;color:var(--ink-3)}
 .ti-ops{display:flex;align-items:center;gap:2px;flex:0 0 auto}
 .ti-mv{border:1px solid var(--line);background:var(--paper);color:var(--ink-2);font:inherit;font-size:13px;
   width:26px;height:26px;line-height:1;border-radius:8px;cursor:pointer;padding:0}
@@ -2715,8 +2717,10 @@ function renderTripPanel(){
     var sp = findSpot(id); if(!sp) return "";
     var d = driveInfo(sp) || {}, f = (sp.overnight || {}).facilities || {};
     if(d.hours_oneway > maxH) maxH = d.hours_oneway;
-    return '<div class="trip-item"><div class="ti-n">' +
-      '<div class="ti-t">' + (i + 1) + '. ' + esc(sp.name) + '</div>' +
+    /* 点名字能看详情（2026-11-24）：以前收了 5 个点，想在行程里核对某一站
+       还是得关掉面板、回列表里翻出来点开——面板里明明已经有这个名字了。 */
+    return '<div class="trip-item"><div class="ti-n" data-tdetail="' + esc(id) + '" role="button" tabindex="0">' +
+      '<div class="ti-t">' + (i + 1) + '. ' + esc(sp.name) + '<span class="ti-go">详情 ›</span></div>' +
       '<div class="ti-m">单程 ' + hm(d.hours_oneway) + ' · ' + Math.round(d.km) + ' km · ' +
       esc(NIGHT_LABEL[nightKey(sp)][0]) +
       (f.toilet === true ? ' · 有厕所' : (f.toilet === false ? ' · 无厕所' : '')) +
@@ -2879,6 +2883,13 @@ function bindTrip(){
       STATE.trip = next; saveTrip(); renderTrip(); renderTripPanel();
       if(before - after < 0.5) toast("现在这个顺序已经挺顺了（少跑不到 0.5 km）");
       else toast("已按最省路排好：直线少跑 " + Math.round(before - after) + " km");
+      return;
+    }
+    var td = e.target.closest("[data-tdetail]");
+    if(td){
+      var tid = td.getAttribute("data-tdetail");
+      el("trip-panel").classList.remove("open");
+      openDetail(tid);
       return;
     }
     var mv = e.target.closest("[data-tmove]");
@@ -4168,4 +4179,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T2003 -->
+<!-- rebuild-trigger 20261123T2014 -->
