@@ -165,6 +165,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .plan-thumbs{display:flex;gap:8px;margin:10px 0 6px}
 .plan-thumbs .pt{flex:1;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:var(--line)}
 .plan-thumbs .pt img{width:100%;height:100%;object-fit:cover;display:block}
+.trip-warn{margin:0 0 10px;padding:10px 12px;border-radius:10px;line-height:1.55;
+  background:rgba(190,60,50,.07);border:1px solid rgba(190,60,50,.22);color:var(--ink-2);font-size:12.5px}
+.trip-warn.soft{background:rgba(150,110,40,.07);border-color:rgba(150,110,40,.22)}
 .trip-order{
   margin:14px 0 4px;padding:12px 14px;border-radius:14px;
   background:var(--card);border:1px dashed var(--line);
@@ -2714,6 +2717,19 @@ function renderTripPanel(){
   }).join("");
   sub.textContent = "最远单程 " + hm(maxH) + " · 点之间怎么串由你定";
 
+  /* 过夜提醒（2026-11-24）：出发窗口是"周五 18:00 走、周日晚回"，那是**睡两晚**的行程。
+     可行程面板只一条条写"过夜未核实"，从不总结——收满 5 个点看着挺完整，
+     到了山里才发现没有一个是确认能睡的。这里在最上面直接说清楚。 */
+  var nSleep = STATE.trip.filter(function(id){ var sp = findSpot(id); return sp && isNight(sp); }).length;
+  if(STATE.trip.length && nSleep === 0){
+    box.insertAdjacentHTML("afterbegin",
+      '<div class="trip-warn">这趟 <b>没有确认能过夜的点</b>：周五、周六两晚睡哪儿要先定下来。' +
+      '<br>点位上写着"过夜未核实"的，多半是公园/野地，能不能扎营得打电话问。</div>');
+  } else if(STATE.trip.length && nSleep === 1 && STATE.trip.length > 1){
+    box.insertAdjacentHTML("afterbegin",
+      '<div class="trip-warn soft">只有 <b>1 个</b>能过夜的点，两晚住同一处也行，但别指望换个地方睡。</div>');
+  }
+
   /* 顺序这件事以前只写了"由你定"，但不给任何帮助——收了 5 个点之后，
      人其实最想知道"怎么串才不来回跑"（2026-11-23）。 */
   if(STATE.trip.length >= 2){
@@ -4122,4 +4138,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1916 -->
+<!-- rebuild-trigger 20261123T1933 -->
