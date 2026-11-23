@@ -151,6 +151,13 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   transition:background .16s var(--ease),color .16s var(--ease);
 }
 .chip:active{transform:scale(.97)}
+.more-btn{
+  margin-top:8px;padding:9px 16px;border-radius:999px;border:1px solid var(--brand);
+  background:var(--brand-soft);color:var(--brand-ink);font:inherit;font-size:13px;font-weight:600;
+  cursor:pointer;-webkit-tap-highlight-color:transparent;
+}
+.more-btn:active{transform:scale(.97)}
+.more-hint{font-size:11.5px;color:var(--ink-3)}
 .more-note{padding:16px 14px 22px;text-align:center;color:var(--ink-3);font-size:12px;line-height:1.7;border-top:1px dashed var(--line);}
 .chip[aria-pressed="true"]{
   background:var(--ink);color:#F4F7F4;font-weight:500;
@@ -1229,6 +1236,8 @@ function render(){
   saveFilters();     /* 每次渲染顺手记住条件；内部按签名比对，不变就不写盘 */
 }
 
+var LIST_SHOWN = 120, LAST_LIST = null, LAST_LIST_SIG = null;
+
 function renderNear(){
   if(!mapUsable()) return;
   var all = sortedFiltered();
@@ -1303,8 +1312,14 @@ function renderCards(list, totalAll){
                     hints[hints.length-1] + "。</div>";
     return;
   }
+  /* 分页（2026-11-23）：原来固定只画前 120 张，底下只留一句"还有 N 个没列出来，
+     缩小范围看"——等于让人自己去猜怎么缩小。现在给一个"再看一批"，
+     想翻就翻，不想翻也不占地方。列表一变（换筛选/换视野）就退回第一批。 */
   var TOTAL = list.length, PAGE = 120;
-  var pageList = list.slice(0, PAGE);
+  var sig = TOTAL + "|" + ((list[0] && list[0].id) || "") + "|" + ((list[TOTAL-1] && list[TOTAL-1].id) || "");
+  if(sig !== LAST_LIST_SIG){ LAST_LIST_SIG = sig; LIST_SHOWN = PAGE; }
+  var pageList = list.slice(0, LIST_SHOWN);
+  LAST_LIST = list;
   box.innerHTML = pageList.map(function(s){
     var k = s.kind, col = KIND_COLOR[k]||"#9C8A76";
     var nk = nightKey(s), dk = dogKey(s);
@@ -1370,9 +1385,12 @@ function renderCards(list, totalAll){
         (spotCoord(s) ? '<button class="card-anchor" data-anchor="' + esc(s.id) + '"'
            + ' title="以这里为中心安排两天/三天">以这里为中心排行程</button>' : '') +
       '</span>' + tripBtnHTML(s.id) + '</div>';
-  }).join("") + (TOTAL > PAGE
-      ? '<div class="more-note">还有 ' + (TOTAL - PAGE) + ' 个点没列出来。<br>' +
-        '缩小范围看，或点上方「全部」。</div>'
+  }).join("") + (TOTAL > pageList.length
+      ? '<div class="more-note">先列了 ' + pageList.length + ' 个，还有 ' +
+        (TOTAL - pageList.length) + ' 个。<br>' +
+        '<button class="more-btn" data-more="1">再看 ' +
+        Math.min(PAGE, TOTAL - pageList.length) + ' 个</button> ' +
+        '<span class="more-hint">或者缩小一下地图范围</span></div>'
       : "");
 }
 
@@ -2172,6 +2190,16 @@ function bind(){
   el("filters").addEventListener("click", onChipClick);
   el("fpanel").addEventListener("click", onChipClick);
   el("list").addEventListener("click", function(e){
+    /* 「再看一批」：把后面 120 个接上去，不动当前卡片（不然滚动位置全丢） */
+    var more = e.target.closest("[data-more]");
+    if(more && LAST_LIST){
+      e.preventDefault();
+      var keep = window.scrollY;
+      LIST_SHOWN = Math.min(LAST_LIST.length, LIST_SHOWN + 120);
+      renderCards(LAST_LIST);
+      window.scrollTo(0, keep);
+      return;
+    }
     /* 空状态里的一键放宽车程 */
     var fx = e.target.closest("[data-fix-hours]");
     if(fx){
@@ -3622,4 +3650,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1352 -->
+<!-- rebuild-trigger 20261123T1409 -->

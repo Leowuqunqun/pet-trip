@@ -1,21 +1,47 @@
 {
- "name": "宠物友好旅行",
- "short_name": "宠物旅行",
+ "id": "/pet-trip/",
+ "name": "带狗去哪儿 · 周末带狗玩的营地与公园",
+ "short_name": "带狗去哪儿",
+ "description": "按车程、季节、能不能带狗、能不能过夜筛出周末能去的地方，并以某个点为中心排两三天行程。",
+ "lang": "zh-CN",
  "start_url": "./index.html",
+ "scope": "./",
  "display": "standalone",
+ "orientation": "portrait",
  "background_color": "#FBF6EF",
  "theme_color": "#FBF6EF",
+ "categories": [
+  "travel",
+  "lifestyle"
+ ],
  "icons": [
   {
    "src": "icon-192.png",
    "sizes": "192x192",
-   "type": "image/png"
+   "type": "image/png",
+   "purpose": "any"
   },
   {
    "src": "icon-512.png",
    "sizes": "512x512",
    "type": "image/png",
-   "purpose": "any maskable"
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "本周推荐",
+   "url": "./index.html?view=plan"
+  },
+  {
+   "name": "地图找点",
+   "url": "./index.html?view=map"
   }
  ]
 }
