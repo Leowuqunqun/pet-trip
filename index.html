@@ -580,6 +580,12 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
 .toast button{flex:none;background:rgba(255,255,255,.22);border:0;color:#fff;font:inherit;
   font-size:12px;font-weight:600;padding:5px 10px;border-radius:7px;cursor:pointer}
+.been-chip{display:inline-flex;align-items:center;gap:4px;margin:0 6px 6px 0;padding:5px 4px 5px 10px;
+  border:1px solid var(--line);border-radius:999px;background:var(--paper-2);font-size:12.5px;color:var(--ink-2)}
+.been-chip .bc-x{border:0;background:transparent;color:var(--ink-3);font:inherit;font-size:15px;
+  line-height:1;padding:2px 6px;border-radius:999px;cursor:pointer}
+.been-chip .bc-x:hover{background:rgba(0,0,0,.06);color:var(--ink)}
+.fp-note{padding:2px 0 10px;font-size:12.5px;color:var(--ink-3)}
 .beenbtn{width:100%;border:1px solid var(--line-2);background:transparent;color:var(--ink-3);
   font:inherit;font-size:13px;padding:9px 0;border-radius:10px;cursor:pointer}
 .beenbtn.on{border-color:var(--line-2);background:var(--paper-2);color:var(--ink-2)}
@@ -906,6 +912,8 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   <button class="chip" data-season="冬" aria-pressed="false">冬</button>
   <div class="fp-title">去哪儿<small class="fp-hint">可多选 · 省份之间是"或"</small></div>
   <div id="fpanel-provinces" style="display:contents"></div>
+  <!-- 去过的（2026-11-24）：标了就得能看见、能改，否则标错了只能靠回忆去详情页找回来 -->
+  <div id="fpanel-been" style="display:contents"></div>
     </div>
   </div>
     <!-- 一张图上全都有，靠图标分类型：帐篷=能睡的营地，树=公园… -->
@@ -2167,6 +2175,14 @@ function bind(){
   /* 筛选条有两条（硬条件 + 玩法场景），监听必须挂在两条上。
      只挂第一条时，场景 chip 点了毫无反应——实测抓到的第三个"看起来做了其实没做"。 */
   function onChipClick(e){
+    var ub = e.target.closest("[data-unbeen]");
+    if(ub){
+      e.preventDefault();
+      toggleBeen(ub.getAttribute("data-unbeen"));
+      renderBeenPanel();
+      toast("已撤掉这条「去过」记录");
+      return;
+    }
     /* 已选摘要 chip：点一下取消那一条 */
     var sum = e.target.closest(".fsum");
     if(sum){
@@ -2235,6 +2251,7 @@ function bind(){
     var fp = el("fpanel"), sc = el("fscrim"), tg = el("fpanel-toggle");
     var open = (force == null) ? !fp.classList.contains("open") : !!force;
     fp.classList.toggle("open", open);
+    if(open) renderBeenPanel();          /* 每次打开都按最新的「去过」重画 */
     if(sc) sc.classList.toggle("open", open);
     if(tg){
       tg.setAttribute("aria-expanded", open ? "true" : "false");
@@ -2424,7 +2441,26 @@ function toggleBeen(id){
   var i = STATE.been.indexOf(id);
   if(i >= 0) STATE.been.splice(i, 1); else STATE.been.unshift(id);
   saveBeen(); render(); PLAN.dirty = true;
+  if(typeof renderBeenPanel === "function") renderBeenPanel();
 }
+
+/* 把「去过」列出来：既能看见自己标过哪些，也能一条条撤掉 */
+function renderBeenPanel(){
+var box = el("fpanel-been"); if(!box) return;
+var list = (STATE.been || []).map(function(id){ return findSpot(id); }).filter(Boolean);
+if(!list.length){
+  box.innerHTML = '<div class="fp-title">去过的地方<small class="fp-hint">还没有</small></div>' +
+    '<div class="fp-note">在点位详情里点「标记为去过」，推荐就不再推它。</div>';
+  return;
+}
+box.innerHTML = '<div class="fp-title">去过的 ' + list.length + ' 个<small class="fp-hint">点 × 可以撤掉</small></div>' +
+  list.slice(0, 40).map(function(sp){
+    return '<span class="been-chip">' + esc(sp.name) +
+      '<button class="bc-x" data-unbeen="' + esc(sp.id) + '" aria-label="撤掉 ' + esc(sp.name) + '">×</button></span>';
+  }).join('') +
+  (list.length > 40 ? '<div class="fp-note">还有 ' + (list.length - 40) + ' 个没列出来</div>' : '');
+}
+/* 打开筛选面板时重画一次（面板是常驻 DOM，不重画就会显示旧数据） */
 
 /* ───────── 筛选条件的记忆（2026-11-23）─────────
    主人的用法是"周末想找能露营+玩水的"，点完关掉，下次打开又得重新点一遍。
@@ -4086,4 +4122,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1840 -->
+<!-- rebuild-trigger 20261123T1904 -->
