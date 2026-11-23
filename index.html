@@ -156,6 +156,13 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   margin:14px 0 4px;padding:12px 14px;border-radius:14px;
   background:var(--card,#fffdf8);border:1px dashed var(--line,#e6ddcb);
 }
+.trip-order{
+  margin:14px 0 4px;padding:12px 14px;border-radius:14px;
+  background:var(--card);border:1px dashed var(--line);
+}
+.to-line{font-size:13px;line-height:1.7;color:var(--ink-2);margin-bottom:10px}
+.to-line b{color:var(--ink-1)}
+.to-note{color:var(--ink-3);font-size:11.5px}
 .more-btn{
   margin-top:8px;padding:9px 16px;border-radius:999px;border:1px solid var(--brand);
   background:var(--brand-soft);color:var(--brand-ink);font:inherit;font-size:13px;font-weight:600;
@@ -2490,6 +2497,69 @@ function renderTripPanel(){
       '</div></div><button class="ti-x" data-rm="' + esc(id) + '" aria-label="移除">×</button></div>';
   }).join("");
   sub.textContent = "最远单程 " + hm(maxH) + " · 点之间怎么串由你定";
+
+  /* 顺序这件事以前只写了"由你定"，但不给任何帮助——收了 5 个点之后，
+     人其实最想知道"怎么串才不来回跑"（2026-11-23）。 */
+  if(STATE.trip.length >= 2){
+    var st = tripOrderStats(STATE.trip);
+    box.innerHTML += '<div class="trip-order">' +
+      '<div class="to-line">按现在的顺序：直线共 <b>' + Math.round(st.km) + ' km</b>' +
+      '（去 <b>' + Math.round(st.outKm) + '</b>' + ' ／ 回 <b>' + Math.round(st.backKm) + '</b>）' +
+      ' · 约 <b>' + hm(st.hours) + '</b> 车程<span class="to-note">（直线估算，不是路网）</span></div>' +
+      '<button class="more-btn" data-trip-opt="1">按最省路排一下</button>' +
+      '</div>';
+  }
+}
+
+/* 一串点的直线里程：出发地 → 1 → 2 → … → 最后 → 回出发地。
+   车速用库里标定过的 1km ≈ 0.0169h（直线/车程的中位比），只当估算。 */
+var STRAIGHT_H_PER_KM = 0.0169;
+function tripOrderStats(ids){
+  var from = ORIGIN && ORIGIN.gcj ? ORIGIN.gcj : null;
+  var pts = ids.map(function(id){ var sp = findSpot(id); return sp ? spotCoord(sp) : null; })
+               .filter(function(c){ return c; });
+  if(!from || pts.length < 2) return {km:0, outKm:0, backKm:0, hours:0};
+  var outKm = 0, prev = from;
+  pts.forEach(function(c){ outKm += havKm(prev, c); prev = c; });
+  /* 回程：最后一站直接回出发地。前面算的是"一路往前"，所以回程单独算。 */
+  var backKm = havKm(prev, from);
+  var km = outKm + backKm;
+  return {km: km, outKm: outKm, backKm: backKm, hours: km * STRAIGHT_H_PER_KM};
+}
+
+/* 最近邻 + 2-opt：点位数不超过 40，够用且必然收敛。
+   出发点固定不动，返回排好的 id 列表。 */
+function optimizeTripOrder(ids){
+  var from = ORIGIN && ORIGIN.gcj ? ORIGIN.gcj : null;
+  var items = ids.map(function(id){ var sp = findSpot(id); return {id:id, c: sp ? spotCoord(sp) : null}; });
+  var withC = items.filter(function(x){ return x.c; });
+  var noC = items.filter(function(x){ return !x.c; }).map(function(x){ return x.id; });
+  if(!from || withC.length < 3) return ids.slice();
+  var left = withC.slice(), order = [], cur = from;
+  while(left.length){
+    var best = 0, bestD = Infinity;
+    for(var i=0;i<left.length;i++){
+      var d = havKm(cur, left[i].c);
+      if(d < bestD){ bestD = d; best = i; }
+    }
+    order.push(left[best]); cur = left[best].c; left.splice(best,1);
+  }
+  var cost = function(seq){
+    var t = 0, prev = from;
+    seq.forEach(function(x){ t += havKm(prev, x.c); prev = x.c; });
+    return t + havKm(prev, from);
+  };
+  var improved = true, guard = 0;
+  while(improved && guard++ < 60){
+    improved = false;
+    for(var i=0;i<order.length-1;i++){
+      for(var j=i+1;j<order.length;j++){
+        var trial = order.slice(0,i).concat(order.slice(i,j+1).reverse(), order.slice(j+1));
+        if(cost(trial) < cost(order) - 1e-9){ order = trial; improved = true; }
+      }
+    }
+  }
+  return order.map(function(x){ return x.id; }).concat(noC);
 }
 function renderTrip(){
   var bar = el("tripbar");
@@ -2518,6 +2588,16 @@ function bindTrip(){
     if(e.target === el("trip-panel")) el("trip-panel").classList.remove("open");
   });
   el("trip-list").addEventListener("click", function(e){
+    var opt = e.target.closest("[data-trip-opt]");
+    if(opt){
+      var before = tripOrderStats(STATE.trip).km;
+      var next = optimizeTripOrder(STATE.trip);
+      var after = tripOrderStats(next).km;
+      STATE.trip = next; saveTrip(); renderTrip(); renderTripPanel();
+      if(before - after < 0.5) toast("现在这个顺序已经挺顺了（少跑不到 0.5 km）");
+      else toast("已按最省路排好：直线少跑 " + Math.round(before - after) + " km");
+      return;
+    }
     var b = e.target.closest("[data-rm]"); if(!b) return;
     toggleTrip(b.getAttribute("data-rm"));
   });
@@ -3705,4 +3785,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1456 -->
+<!-- rebuild-trigger 20261123T1516 -->
