@@ -533,6 +533,10 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   }
   .grab{display:none}
   .sheet-head{padding-top:14px}
+  /* 卡片高度对齐（2026-11-24）：桌面端是单列长列表，标签多一行就高 19px，
+     一列里 130/149 交替看着像错位。统一按最高的那个留够，信息一个字都不砍。 */
+  .card{min-height:150px}
+  .card-body{justify-content:center}
   .detail{align-items:center;justify-content:center;padding:24px}
   .detail-inner{
     max-width:620px;border-radius:var(--r-xl);max-height:86vh;
@@ -570,6 +574,11 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   background:var(--card);border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.18);
   opacity:0;transform:translateY(12px);transition:opacity .22s,transform .22s}
 .install-bar.on{opacity:1;transform:translateY(0)}
+/* 桌面端手机条不该拉满 1280px 横在路上：挪到下面居中、限宽，跟内容一样宽 */
+@media (min-width:860px){
+  .install-bar{left:50%;right:auto;width:520px;margin-left:-260px}
+  .install-bar.on{transform:translateY(0)}
+}
 .install-bar .ib-t{flex:1;min-width:0;font-size:13px;line-height:1.5;color:var(--ink-2)}
 .install-bar .ib-t b{display:block;font-size:14px;color:var(--ink-1);margin-bottom:2px}
 .install-bar .ib-go,.install-bar .ib-x{flex:none;border:0;border-radius:10px;font:inherit;
@@ -4179,4 +4188,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T2014 -->
+<!-- rebuild-trigger 20261123T2027 -->
