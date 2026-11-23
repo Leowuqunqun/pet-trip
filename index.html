@@ -151,6 +151,11 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
   transition:background .16s var(--ease),color .16s var(--ease);
 }
 .chip:active{transform:scale(.97)}
+.plan-more{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:14px 0 4px;padding:12px 14px;border-radius:14px;
+  background:var(--card,#fffdf8);border:1px dashed var(--line,#e6ddcb);
+}
 .more-btn{
   margin-top:8px;padding:9px 16px;border-radius:999px;border:1px solid var(--brand);
   background:var(--brand-soft);color:var(--brand-ink);font:inherit;font-size:13px;font-weight:600;
@@ -3229,7 +3234,13 @@ function buildPlans(){
       pl.score = pl.combo * pl.seasonWeight;
     });
     built.sort(function(a,b){ return b.score - a.score; });
-    var picks = built.slice(0,3);
+    /* 换一批（2026-11-23）：以前永远只给排前 3 的路线，不满意就没别的了——
+       可候选其实有几十条。现在把整张排序表留着，一次显示 3 条，翻得动。 */
+    PLAN.allBuilt = built;
+    var per = 3;
+    var page = PLAN.page || 0;
+    var picks = built.slice(page*per, page*per+per);
+    if(!picks.length){ PLAN.page = 0; picks = built.slice(0, per); }
     PLAN.fetchedAt = new Date().toLocaleString("zh-CN", {hour12:false});
     return picks;
   });
@@ -3458,9 +3469,29 @@ function planBodyHTML(){
       '</div></details>';
 
   /* 顶部已经统一说过"这周不建议出发"时，卡片里就不再重复同一句话 */
-  return weekBarHTML() + head + PLAN.plans.map(function(p, i){ return planCardHTML(p, i, allBad); }).join("") +
+  return weekBarHTML() + head +
+    PLAN.plans.map(function(p, i){
+      /* 编号接着往下排（第 4–6 条就该显示 4、5、6），不要每页都从 1 开始 */
+      return planCardHTML(p, (PLAN.page||0)*3 + i, allBad);
+    }).join("") +
+    planMoreHTML() +
     (PLAN.state==="loading" ? '<div class="plan-refreshing">正在重新查天气…（下面是 '+planAgeText()+' 的数据）</div>' : '') +
     '<div class="plan-foot">降水% 越低越好；出行指数 = 100 − 降水概率×0.9 − 体感温度惩罚（&lt;0℃ 扣 45、&lt;8℃ 扣 25、&lt;14℃ 扣 8、&gt;29℃ 扣 25）。权重写在这里，你可以不认同。</div>';
+}
+
+/* 「换一批」：候选路线不止 3 条，不满意就往下翻；翻到最后一条再点就回到前三 */
+function planMoreHTML(){
+  var all = PLAN.allBuilt || [];
+  var per = 3, page = PLAN.page || 0;
+  if(all.length <= per) return "";
+  var from = page*per + 1, to = page*per + PLAN.plans.length;
+  var last = (page+1)*per >= all.length;
+  return '<div class="plan-more">' +
+    '<button class="more-btn" data-plan-page="' + (last ? 0 : page+1) + '">' +
+      (last ? '回到前 ' + per + ' 条' : '换 ' + Math.min(per, all.length - from + 1) + ' 条') +
+    '</button>' +
+    '<span class="more-hint">共 ' + all.length + ' 条候选路线 · 现在看第 ' + from + '–' + to + ' 条</span>' +
+  '</div>';
 }
 
 function paintPlanBox(box, html){
@@ -3487,8 +3518,23 @@ function renderPlan(){
   if(el("home-sub")) el("home-sub").textContent = line;
 }
 
+/* 换一批只换显示，不重算：PLAN.allBuilt 已经排好序，翻页是纯前端动作 */
+document.addEventListener("click", function(e){
+  var b = e.target.closest && e.target.closest("[data-plan-page]");
+  if(!b) return;
+  var all = PLAN.allBuilt || [];
+  if(!all.length) return;
+  var per = 3, next = parseInt(b.getAttribute("data-plan-page"), 10) || 0;
+  if(next*per >= all.length) next = 0;
+  PLAN.page = next;
+  PLAN.plans = all.slice(next*per, next*per + per);
+  renderPlan();
+});
+
 function loadPlans(){
   PLAN.dirty = false;
+  /* 条件变了（换周末/改车程）就回到第一批，否则会带着上一次的翻页深度看新结果 */
+  PLAN.page = 0;
   PLAN.state="loading"; PLAN.err=""; renderPlan();
   buildPlans().then(function(list){
     PLAN.plans = list; PLAN.state="done";
@@ -3655,4 +3701,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1433 -->
+<!-- rebuild-trigger 20261123T1444 -->
