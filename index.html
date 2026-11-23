@@ -3971,6 +3971,16 @@ function renderPlan(){
 
 /* 换一批只换显示，不重算：PLAN.allBuilt 已经排好序，翻页是纯前端动作 */
 document.addEventListener("click", function(e){
+  /* 周末切换（2026-11-24）：这三个按钮（这周末/下周末/再下周末）以前只在
+     桌面弹层 #plan-panel 上有处理器，而**手机首屏是另一份 DOM（#home-body）**——
+     也就是手机上点了毫无反应，却是手机上最常用的那个界面。改挂到 document 上，
+     两份 DOM 都覆盖到。 */
+  var wb = e.target.closest && e.target.closest(".plan-weeks button");
+  if(wb){
+    e.preventDefault();
+    setWeek(parseInt(wb.getAttribute("data-off"), 10) || 0);
+    return;
+  }
   var pt = e.target.closest && e.target.closest("[data-plantrip]");
   if(pt){
     /* 卡片上的序号是"全局第几条"（标题按 1./2./3./4.… 连续编号），
@@ -4188,4 +4198,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T2027 -->
+<!-- rebuild-trigger 20261123T2049 -->
