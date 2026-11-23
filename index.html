@@ -1924,6 +1924,15 @@ function openDetail(id){
   }
 
   /* 核心答案条：这地方能不能今晚睡 */
+  /* 犬政策（2026-11-23 提到最前）：这是一款"带狗去哪儿"的应用，
+    能不能带狗是决定去不去的第一个问题，却排在车程和季节后面，手机上要滑两屏才看到。
+     现在放在照片之后的第一个位置——看完"长啥样"，立刻回答"我能不能带它进去"。 */
+  html += '<div class="sec"><div class="sec-t">带狗政策</div><div class="panel">' +
+    '<div class="kv"><div class="k">结论</div><div class="v">'+tag(DOG_LABEL[dk][0],DOG_LABEL[dk][1])+'</div></div>' +
+    (dg.evidence ? '<div class="quote cite">'+esc(dg.evidence)+'</div>' : '') +
+    (dg.risk_hint ? '<div class="quote warn">⚠ '+esc(dg.risk_hint)+'</div>' : '') +
+    '</div></div>';
+
   html += '<div class="sec"><div class="panel" style="border-left:3px solid '+
     (isNight(s)?"var(--green)":"var(--rose)")+'">' +
     '<div class="kv"><div class="k">今晚睡哪</div><div class="v"><b>'+esc(NIGHT_LABEL[nk][0])+'</b>'+
@@ -1979,13 +1988,6 @@ function openDetail(id){
       (se.src === "原文" ? '<div class="kv"><div class="k">依据</div><div class="v" style="color:var(--ink-3);font-size:12px">'+esc(srcTxt)+'</div></div>' : '') +
       '</div></div>';
   })();
-
-  /* 犬政策 */
-  html += '<div class="sec"><div class="sec-t">带狗政策</div><div class="panel">' +
-    '<div class="kv"><div class="k">结论</div><div class="v">'+tag(DOG_LABEL[dk][0],DOG_LABEL[dk][1])+'</div></div>' +
-    (dg.evidence ? '<div class="quote cite">'+esc(dg.evidence)+'</div>' : '') +
-    (dg.risk_hint ? '<div class="quote warn">⚠ '+esc(dg.risk_hint)+'</div>' : '') +
-    '</div></div>';
 
   /* 设施 */
   var f = o.facilities||{};
@@ -3653,4 +3655,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261123T1418 -->
+<!-- rebuild-trigger 20261123T1426 -->
