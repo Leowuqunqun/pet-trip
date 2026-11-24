@@ -1080,6 +1080,17 @@ var DOG_LABEL = {
   allowed:["可带狗","g"], leash:["需牵绳","a"], fee:["收费","a"],
   forbidden:["禁入","r"], restricted:["部分区域受限","a"], unknown:["犬政策未核实","n"]
 };
+/* 犬档依据（2026-11-25）：explicit=原文点名可带、default=没查到禁令按默认放行、
+   restricted=部分不让、veto=整体不让、unknown=未核实。
+   这几档的可信度完全不同，详情页必须把"依据等级"说出来——
+   否则"可带狗"三个字会被当成同样可靠，而实测 explicit 里约三分之一站不住（见 dog-evidence-gold.json）。 */
+var DOG_BASIS = {
+  explicit:["原文点名可带（有原话）","g"],
+  default:["没查到禁令，按默认放行（未点名）","a"],
+  restricted:["部分区域/设施不让","a"],
+  veto:["明确不让带","r"],
+  unknown:["未核实","n"]
+};
 
 var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, camp:false, q:"", active:null, trip:[], been:[], provExpanded:false, autoFit:false, fitHours:null, fitCenter:null, sortMode:"drive"};
 
@@ -2189,6 +2200,11 @@ function openDetail(id){
      现在放在照片之后的第一个位置——看完"长啥样"，立刻回答"我能不能带它进去"。 */
   html += '<div class="sec"><div class="sec-t">带狗政策</div><div class="panel">' +
     '<div class="kv"><div class="k">结论</div><div class="v">'+tag(DOG_LABEL[dk][0],DOG_LABEL[dk][1])+'</div></div>' +
+    (function(){
+      var b = DOG_BASIS[s.dog_tier] || null;
+      if(!b) return "";
+      return '<div class="kv"><div class="k">依据</div><div class="v">'+tag(b[0], b[1])+'</div></div>';
+    })() +
     /* 没写 ≠ 不行（2026-11-24）：按主人定的口径，只有明确说不行才排除，
        所以这里要讲清"为什么它还在推荐里"，否则看着像漏标了。 */
     (dk === "unknown"
@@ -4430,4 +4446,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261125T0129 -->
+<!-- rebuild-trigger 20261125T0130 -->
