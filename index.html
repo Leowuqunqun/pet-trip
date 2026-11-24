@@ -2093,6 +2093,43 @@ function fitAll(list){
 /* ───────── 详情 ───────── */
 function findSpot(id){ return DATA.spots.filter(function(s){return s.id===id;})[0]; }
 
+/* ---------------- 来源按需加载 ---------------- */
+var LAZY_SRC = { state: "idle", map: null };
+
+function lazyPaintSources(id){
+  var box = document.getElementById("d-src-v");
+  if(!box || STATE.active !== id) return;          /* 已经换了点，别动别人的框 */
+  var t = findSpot(id);
+  if(!t) return;
+  var arr = t.sources || (LAZY_SRC.map && LAZY_SRC.map[id] && LAZY_SRC.map[id].sources) || [];
+  t.sources = arr;                                  /* 记下来，下次点开不再请求 */
+  box.innerHTML = arr.map(function(x){
+    var nm = x.platform === "xhs" ? ("小红书" + (x.why ? ' · ' + x.why : '')) : "高德地图";
+    var tt = (x.title && x.platform !== "amap") ? '：' + esc(String(x.title).slice(0, 26)) : '';
+    var who = x.author ? ' <span style="color:var(--ink-3)">@' + esc(x.author) + '</span>' : '';
+    return '<div style="margin-top:4px"><a class="src-link" href="' + esc(x.url) +
+           '" target="_blank" rel="noopener noreferrer">' + esc(nm) + '</a>' + tt + who + '</div>';
+  }).join("");
+}
+
+function lazyFetchSources(id){
+  if(LAZY_SRC.state === "ok"){ lazyPaintSources(id); return; }
+  if(LAZY_SRC.state !== "idle") return;
+  LAZY_SRC.state = "loading";
+  fetch("spots-detail.json", {cache:"no-cache"}).then(function(r){
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    return r.json();
+  }).then(function(m){
+    LAZY_SRC.map = m || {};
+    LAZY_SRC.state = "ok";
+    lazyPaintSources(id);
+  }).catch(function(){
+    LAZY_SRC.state = "fail";
+    var box = document.getElementById("d-src-v");
+    if(box && STATE.active === id) box.textContent = "来源暂时没取到";
+  });
+}
+
 function openDetail(id){
   var s = findSpot(id); if(!s) return;
   STATE.active = id;
@@ -2254,8 +2291,15 @@ function openDetail(id){
 
   /* 来源：卡片上只放能点的链接，详情里把每条出处摊开——
      "凭哪句话得出这个结论"比"有九个赞"重要得多。 */
-  var srcs = s.sources || [];
-  if(srcs.length){
+  /* 来源按需加载（2026-11-24 夜）：主包不带 sources，点开详情才拉 spots-detail.json
+     （首屏 512KB → 391KB gzip）。这里只放占位节点，取到后**只重画这个节点**，
+     绝不重进 openDetail——上一版就是在这里递归重画，映射没命中就转圈把浏览器打死。 */
+  var srcs = s.sources;
+  if(srcs === undefined){
+    html += '<div class="sec"><div class="kv"><div class="k">来源</div>' +
+            '<div class="v" id="d-src-v">加载中…</div></div></div>';
+  }
+  if(srcs && srcs.length){
     html += '<div class="sec"><div class="kv"><div class="k">来源</div><div class="v">' +
       srcs.map(function(x){
         var name = x.platform === "xhs"
@@ -2283,6 +2327,7 @@ function openDetail(id){
     '</div>';
 
   el("d-body").innerHTML = html;
+  if(s.sources === undefined) lazyFetchSources(s.id);   /* 只补这一块，不重进 openDetail */
   el("detail").classList.add("open");
   if(decodeURIComponent(location.hash.slice(1)) !== id)
     history.replaceState(null, "", "#" + encodeURIComponent(id));
@@ -4376,4 +4421,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261124T1908 -->
+<!-- rebuild-trigger 20261124T1923 -->
