@@ -4280,11 +4280,23 @@ fetch("spots.json", {cache:"no-cache"})
     });
   })
   .catch(function(err){
-    el("list").innerHTML = '<div class="empty">数据加载失败：'+esc(err.message)+
-      '<br>检查 spots.json 是否在同一目录。</div>';
+    /* 2026-11-24：原来这里写的是"检查 spots.json 是否在同一目录"——那是给写代码的人看的，
+       看页面的人（车上、营地、山里，信号一格）读了不知道该怎么办。改成能照做的一句话 +
+       一个能点的按钮：reload 会重开连接，弱网下十次有八次就通了；装到桌面的还能直接用缓存起。 */
+    console.error("点位数据没取到：", err);
+    el("list").innerHTML =
+      '<div class="empty">这会儿没取到点位数据' +
+        '<div style="margin-top:6px;font-size:12.5px;opacity:.8">山里信号差很常见，点下面再试一次；' +
+        '装到桌面的，断网也能打开。</div>' +
+      '</div>' +
+      '<div style="text-align:center;padding-bottom:20px">' +
+        '<button class="btn ghost" id="retry-load" style="min-height:38px;height:38px">再试一次</button>' +
+      '</div>';
+    var rb = el("retry-load");
+    if(rb) rb.onclick = function(){ location.reload(); };
   });
 })();
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261124T0832 -->
+<!-- rebuild-trigger 20261124T0945 -->
