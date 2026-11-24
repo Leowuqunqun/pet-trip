@@ -1092,7 +1092,7 @@ var DOG_BASIS = {
   unknown:["未核实","n"]
 };
 
-var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, camp:false, q:"", active:null, trip:[], been:[], provExpanded:false, autoFit:false, fitHours:null, fitCenter:null, sortMode:"drive"};
+var DATA=null, MAP=null, CLUSTER=null, STATE={hours:null, night:false, dog:false, photo:false, kinds:{}, scenes:{}, season:{}, dogTier:{}, provinces:{}, camp:false, q:"", active:null, trip:[], been:[], provExpanded:false, autoFit:false, fitHours:null, fitCenter:null, sortMode:"drive"};
 
 /* ───────── 工具 ───────── */
 function el(id){return document.getElementById(id);}
@@ -1215,6 +1215,7 @@ function syncSummary(){
   });
   if(STATE.night) out.push('<button class="fsum" data-clear-night="1">能过夜<span class="x">✕</span></button>');
   if(STATE.camp) out.push('<button class="fsum" data-clear-camp="1">能露营<span class="x">✕</span></button>');
+  if(STATE.photo) out.push('<button class="fsum" data-clear-photo="1">有实拍<span class="x">✕</span></button>');
   Object.keys(STATE.kinds).forEach(function(k){
     if(STATE.kinds[k]) out.push('<button class="fsum" data-clear-kind="'+esc(k)+'">'+esc(KIND_LABEL[k]||k)+'<span class="x">✕</span></button>');
   });
@@ -1236,6 +1237,7 @@ function syncFilterUI(){
     var f = b.getAttribute("data-f");
     if(f === "night"){ b.setAttribute("aria-pressed", STATE.night ? "true" : "false"); return; }
     if(f === "camp"){ b.setAttribute("aria-pressed", STATE.camp ? "true" : "false"); return; }
+    if(f === "photo"){ b.setAttribute("aria-pressed", STATE.photo ? "true" : "false"); return; }
     b.setAttribute("aria-pressed", STATE.kinds[f] ? "true" : "false");
   });
   Array.prototype.forEach.call(document.querySelectorAll(".chip[data-scene]"), function(b){
@@ -1280,6 +1282,7 @@ function match(s){
   if(!sceneOrActive(s)) return false;
   if(!kindActive(s.kind)) return false;
   if(!seasonActive(s)) return false;
+  if(STATE.photo && !((s.photos||[]).length)) return false;
   if(!matchQuery(s, STATE.q)) return false;
   return true;
 }
@@ -1323,7 +1326,7 @@ function hasFilters(){
    以前这段逻辑只挂在抽屉/筛选条上的 .fsum 按钮里，而空状态里的"清空筛选看全部"
    长在列表容器里——点下去毫无反应，等于给了一个假按钮。现在两边共用同一段。 */
 function clearAllFilters(){
-  STATE.night = false; STATE.camp = false; STATE.hours = null;
+  STATE.night = false; STATE.camp = false; STATE.photo = false; STATE.hours = null;
   var rr = el("range"); if(rr) rr.value = "13";
   var ro2 = el("range-out"); if(ro2) ro2.textContent = "不限";
   ["season","scenes","dogTier","provinces","kinds"].forEach(function(k){
@@ -1944,11 +1947,17 @@ function renderSceneBar(){
      所以不会出现"筛选 326、卡片上写不能过夜"这种两套标准。 */
   var nNight = DATA.spots.filter(isNight).length;
   var nCamp = DATA.spots.filter(canCamp).length;
+  /* 「有实拍」（2026-11-25）：312 个点没有实拍图。带狗出门前最想知道的是"长啥样"，
+     而列表里没有图的卡片只剩一个类型图标，很难判断值不值得开一小时车。
+     给一个显式条件，让主人能一键只看有图的。 */
+  var nPhoto = DATA.spots.filter(function(s){ return (s.photos||[]).length; }).length;
   el("fpanel-derived").innerHTML =
     '<button class="chip" data-f="night" aria-pressed="false">能过夜 ' +
       '<b style="font-weight:600;opacity:.6">' + nNight + '</b></button>' +
     '<button class="chip" data-f="camp" aria-pressed="false">能露营 ' +
-      '<b style="font-weight:600;opacity:.6">' + nCamp + '</b></button>';
+      '<b style="font-weight:600;opacity:.6">' + nCamp + '</b></button>' +
+    '<button class="chip" data-f="photo" aria-pressed="false">有实拍 ' +
+      '<b style="font-weight:600;opacity:.6">' + nPhoto + '</b></button>';
 }
 
 /* 省份筛选条。与场景条不同，这里**不设 20 条门槛**：门槛的作用是避免"筛出 3 个结果"
@@ -2400,6 +2409,7 @@ function bind(){
       if(sum.hasAttribute("data-clear-kind")) STATE.kinds[sum.getAttribute("data-clear-kind")] = false;
       if(sum.hasAttribute("data-clear-night")) STATE.night = false;
       if(sum.hasAttribute("data-clear-camp")) STATE.camp = false;
+      if(sum.hasAttribute("data-clear-photo")) STATE.photo = false;
       if(sum.hasAttribute("data-clear-all")){ clearAllFilters(); }
       PLAN.dirty = true; syncFilterUI(); render(); return;
     }
@@ -2440,6 +2450,7 @@ function bind(){
       var f = b.getAttribute("data-f");
       if(f==="night") STATE.night = !on;
       else if(f==="camp") STATE.camp = !on;
+      else if(f==="photo") STATE.photo = !on;
       else STATE.kinds[f] = !on;
     }
     PLAN.dirty = true;
@@ -2674,7 +2685,7 @@ box.innerHTML = '<div class="fp-title">去过的 ' + list.length + ' 个<small c
    筛选是**人的偏好**，不是一次性动作，所以存起来。
    不存的东西：搜索词（一次性的）、起点（另有 pp-origin-v1 管）、当前打开的详情。 */
 var FILTER_KEY = "pp-filters-v1";
-var FILTER_DIMS = ["night","dog","camp"];
+var FILTER_DIMS = ["night","dog","camp","photo"];
 var FILTER_MAPS  = ["kinds","scenes","season","dogTier","provinces"];
 
 function filtersSignature(){
@@ -4446,4 +4457,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261125T0308 -->
+<!-- rebuild-trigger 20261125T0332 -->
