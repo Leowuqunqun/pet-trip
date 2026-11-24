@@ -46385,7 +46385,7 @@
     "computed_at": "2026-11-06 19:37"
    },
    "dog": {
-    "policy": "allowed",
+    "policy": "restricted",
     "evidence": "清单笔记整篇被判 forbidden，但该景点条目明写「牵绳可带狗，只能带柯基、柴犬等小狗…目前大狗不能带了」——是限小型而非禁入｜原文：「📍上海·上海影视乐园 🐕宠物政策：牵绳可带狗，只能带柯基、柴犬等小狗」",
     "verified_at": null,
     "evidence_level": "人工核对原文",
@@ -104899,7 +104899,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "restricted",
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -107238,7 +107238,7 @@
    ],
    "kind_src": "poi_type:旅游景点",
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "veto",
    "pop": {
     "notes": 16,
     "likes": 1021,
@@ -107344,7 +107344,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "restricted",
    "pop": {
     "notes": 17,
     "likes": 533,
@@ -108004,7 +108004,7 @@
    ],
    "kind_src": "poi_type:其余",
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "veto",
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -108224,7 +108224,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "explicit",
+   "dog_tier": "veto",
    "pop": {
     "notes": 17,
     "likes": 2902,
