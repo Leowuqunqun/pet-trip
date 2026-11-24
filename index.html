@@ -4445,6 +4445,30 @@ fetch("spots.json", {cache:"no-cache"})
     window.addEventListener("orientationchange", function(){
       setTimeout(function(){ MAP.invalidateSize(); }, 260);
     });
+    /* 详情包预热（2026-11-25）：来源单独放在 spots-detail.json（约 0.5MB），
+       原先只有**点开详情**才去拉 —— 于是"第一次在山里点开"必然拿不到来源，
+       看到的是「来源暂时没取到」。页面数据都下来了，就趁有网把它捞进缓存一次。
+       弱网/省流量时跳过：不为了一个来源多花 500KB。 */
+    (function warmDetail(){
+      var c = (navigator.connection || {});
+      if(c.saveData) return;
+      if(/(^|-)2g$/.test(c.effectiveType || "")) return;
+      if(LAZY_SRC.state !== "idle") return;
+      LAZY_SRC.state = "loading";
+      fetch("spots-detail.json", {cache:"no-cache"}).then(function(r){
+        if(!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      }).then(function(m){
+        LAZY_SRC.map = m || {};
+        LAZY_SRC.state = "ok";
+        /* 预热期间用户可能已经点开了详情：那时 lazyFetchSources 会因为 loading 直接返回，
+           这边补画一次，否则来源栏会一直停在加载中。 */
+        if(STATE.active) lazyPaintSources(STATE.active);
+      }).catch(function(){
+        LAZY_SRC.state = "idle";      /* 失败不是终点：点开详情时还能再试一次 */
+      });
+    })();
+
     /* 深链接：#<id> 直接打开那个点，方便从聊天里点进来 */
     var deep = decodeURIComponent(location.hash.slice(1));
     if(deep && findSpot(deep)) openDetail(deep);
@@ -4473,4 +4497,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261125T0452 -->
+<!-- rebuild-trigger 20261125T0509 -->
