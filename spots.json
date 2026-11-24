@@ -129172,10 +129172,10 @@
     "computed_at": "2026-11-20 03:16"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
+    "policy": "allowed",
+    "evidence": "笔记标题原话「宠物友好第一」，抽取器按 clause_allow 记了依据却没落成结论，一直挂在未核实｜原文：「腾冲【打鹰山】宠物友好第一 笨蛋养殖户」",
+    "evidence_level": "人工核对原文",
+    "basis": "人工纠错（原文归属）",
     "risk_hint": "",
     "verified_at": null
    },
@@ -129225,7 +129225,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "explicit",
    "season": {
     "best": [
      "春",
