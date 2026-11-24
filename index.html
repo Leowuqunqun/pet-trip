@@ -2291,6 +2291,12 @@ function openDetail(id){
 
   /* 来源：卡片上只放能点的链接，详情里把每条出处摊开——
      "凭哪句话得出这个结论"比"有九个赞"重要得多。 */
+  /* 坐标可疑：先说清楚，别让人照着图钉开过去 */
+  if(s.geo_suspect){
+    html += '<div class="sec"><div class="kv"><div class="k">坐标</div>' +
+            '<div class="v" style="color:#b0742a">位置待核（可能不准，别按它导航）</div></div></div>';
+  }
+
   /* 来源按需加载（2026-11-24 夜）：主包不带 sources，点开详情才拉 spots-detail.json
      （首屏 512KB → 391KB gzip）。这里只放占位节点，取到后**只重画这个节点**，
      绝不重进 openDetail——上一版就是在这里递归重画，映射没命中就转圈把浏览器打死。 */
@@ -3702,6 +3708,8 @@ function buildPlans(){
     if(((s.dog||{}).policy)==="forbidden") return false;
     if(s.kind==="transit") return false;
     if(/码头|停车场|公交|地铁|客运站|收费站|服务区|执法/.test(s.name)) return false;
+    /* 坐标可疑的点不进推荐：一个 400km 外的错误图钉，不如本周少给一条路线 */
+    if(s.geo_suspect) return false;
     return true;
   });
   /* 季节只做权重，**不做门槛**（owner 2026-11-21：「最佳不是只能去那，你可以推荐但是不要收窄」）。
@@ -4421,4 +4429,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261124T1934 -->
+<!-- rebuild-trigger 20261124T1940 -->
