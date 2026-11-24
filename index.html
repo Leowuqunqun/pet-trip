@@ -2706,6 +2706,11 @@ box.innerHTML = '<div class="fp-title">去过的 ' + list.length + ' 个<small c
    主人的用法是"周末想找能露营+玩水的"，点完关掉，下次打开又得重新点一遍。
    筛选是**人的偏好**，不是一次性动作，所以存起来。
    不存的东西：搜索词（一次性的）、起点（另有 pp-origin-v1 管）、当前打开的详情。 */
+/* 这次的数据是从 SW 缓存里拿的吗（2026-11-25）。
+   `navigator.onLine` 只在系统层面断网时为 false —— 停掉服务器/连不上网时它仍然是 true，
+   所以真正可靠的信号是 SW 给响应打的 X-PP-Offline 头（见 sw.js）。 */
+var DATA_FROM_CACHE = false;
+
 var FILTER_KEY = "pp-filters-v1";
 var FILTER_DIMS = ["night","dog","camp","photo"];
 var FILTER_MAPS  = ["kinds","scenes","season","dogTier","provinces"];
@@ -4026,8 +4031,12 @@ function planCardHTML(p, idx, quiet){
       '</div>' +
       (bad && !quiet ? '<div class="plan-warn">这周末的天气不适合出门（上面对比着看）。硬要去就带好雨具，营地注意积水。</div>' : '');
   } else {
-    weather = '<div class="plan-warn">天气没取到（'+esc(p.weatherErr||"网络不可用")+
-      '）—— 出发前自己看一眼预报，别按这条定日子。</div>';
+    /* 离线时别甩 HTTP 码：山里没信号是常态，人要知道的是"该干什么"（2026-11-25）。 */
+    weather = (DATA_FROM_CACHE || navigator.onLine === false)
+      ? '<div class="plan-warn">现在是离线的，天气得连上网才取得到 —— 有信号时刷新一次再看；' +
+        '别按这条定日子。</div>'
+      : '<div class="plan-warn">天气没取到（'+esc(p.weatherErr||"网络不可用")+
+        '）—— 出发前自己看一眼预报，别按这条定日子。</div>';
   }
 
   /* 「跨度」原来是各段距离求和，语义就错了：两站 1.4km 相加仍是 1.4，
@@ -4141,9 +4150,14 @@ function planBodyHTML(){
      取不到就说取不到，并且说清排序退化成只看热度。 */
   var wFail = (sat.length===0 && PLAN.weekOffset===0);
   var wMiss = PLAN.plans.length - sat.length;
+  /* 离线时别拿 HTTP 失败当解释：山里没信号是常态，人要知道"该怎么办"（2026-11-25）。 */
   var head = (wFail ? '<div class="plan-warn" style="margin-bottom:12px">'+
-      '这次<b>没取到天气</b>（Open-Meteo 请求失败或网络不通）。下面的排序<b>先按季节、再按热度</b>（少了天气这一项），'+
-      '出发前请自己再确认一次天气。</div>' : '') +
+      ((DATA_FROM_CACHE || navigator.onLine === false)
+        ? '现在是<b>离线的</b>，天气要连上网才取得到。下面按<b>先季节、再热度</b>排（少了天气这一项），'+
+          '有信号时刷新一次再看，出发前请自己确认天气。'
+        : '这次<b>没取到天气</b>（Open-Meteo 请求失败或网络不通）。下面的排序<b>先按季节、再按热度</b>（少了天气这一项），'+
+          '出发前请自己再确认一次天气。')+
+      '</div>' : '') +
       ((wMiss>0 && !wFail) ? '<div class="plan-warn" style="margin-bottom:12px">'+
       '有 '+wMiss+' 条路线没取到天气，那几条按热度保底排序，不代表当天天气好。</div>' : '') +
       (allBad ? '<div class="plan-warn" style="margin-bottom:12px">'+
@@ -4386,6 +4400,7 @@ fetch("spots.json", {cache:"no-cache"})
   .then(function(r){
     try{
       if(r.headers.get("X-PP-Offline") === "1"){
+        DATA_FROM_CACHE = true;
         var n = document.getElementById("stale-note");
         if(n) n.hidden = false;
       }
@@ -4513,4 +4528,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261125T0542 -->
+<!-- rebuild-trigger 20261125T0656 -->
