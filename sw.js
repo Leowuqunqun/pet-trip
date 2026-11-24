@@ -9,7 +9,7 @@
  *   图片/样式/脚本 → 缓存优先（这些改得少，第二次打开快很多）
  *   第三方瓦片     → 完全不碰（跨域、量大，缓存了反而拖慢首屏）
  */
-const VERSION = "pp-shell-v1";
+const VERSION = "pp-shell-v2";
 const SHELL = ["./", "index.html", "manifest.json", "icon-192.png", "icon-512.png"];
 const NET_TIMEOUT = 3500;        // 网络优先最多等这么久，超过就当没网
 const IMG_CAP = 400;             // 图片缓存条数上限，超了从最旧的开始砍
@@ -81,7 +81,9 @@ self.addEventListener("fetch", function (e) {
   if (url.origin !== self.location.origin) return;      // 瓦片/CDN 一律不碰
 
   const isDoc = req.mode === "navigate" || /\/$|index\.html$/.test(url.pathname);
-  const isData = /spots\.json$/.test(url.pathname);
+  /* spots-detail.json 也必须走这条：2026-11-24 拆包后详情来源是单独的文件，
+     原来只匹配 spots.json → 点开详情时离线直接失败（山里没信号正是它的用处）。 */
+  const isData = /spots(-detail)?\.json$/.test(url.pathname);
   if (isDoc || isData) { e.respondWith(networkFirst(req)); return; }
   if (/\.(png|jpe?g|webp|svg|css|js|woff2?)$/i.test(url.pathname)) {
     e.respondWith(cacheFirst(req));

@@ -2124,9 +2124,10 @@ function lazyFetchSources(id){
     LAZY_SRC.state = "ok";
     lazyPaintSources(id);
   }).catch(function(){
-    LAZY_SRC.state = "fail";
+    /* 失败不能是永久状态：山里断网点开一次，到有信号的地方再点开应该能重试。 */
+    LAZY_SRC.state = "idle";
     var box = document.getElementById("d-src-v");
-    if(box && STATE.active === id) box.textContent = "来源暂时没取到";
+    if(box && STATE.active === id) box.textContent = "来源暂时没取到（换个地方再点开重试）";
   });
 }
 
@@ -4429,4 +4430,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261124T2102 -->
+<!-- rebuild-trigger 20261124T2141 -->
