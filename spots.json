@@ -9,7 +9,7 @@
    ]
   },
   "schema_version": 1,
-  "count": 1146,
+  "count": 1145,
   "max_oneway_hours": 6.0,
   "disclaimer": "坐标来自高德 POI；车程来自高德驾车路径规划（真实路网）。犬政策/过夜合法性是人工核实字段，unknown 表示未核实，不代表可以去。"
  },
@@ -28084,153 +28084,6 @@
     "conf": 1
    },
    "tier": "B"
-  },
-  {
-   "id": "x-句容小蓝湖",
-   "name": "句容小蓝湖",
-   "kind": "water",
-   "tags": [],
-   "province": "江苏",
-   "city": "南京",
-   "gcj": [
-    119.098591,
-    32.075864
-   ],
-   "drive": {
-    "hours_oneway": 3.49,
-    "km": 275.1,
-    "source": "amap 驾车路径规划（真实路网）",
-    "computed_at": "2026-11-06 10:33"
-   },
-   "dog": {
-    "policy": "allowed",
-    "evidence": "小红书 C级UGC（笔记 6a3759060000000006031be0）：「藏在深山里的野生矿坑蓝湖，晴天自带绝美滤镜✨ 徒步、玩水、遛宠一站式拿捏，新手也能轻松冲！ \t 🎫 门票：全程🆓 🅿️ 停车：山脚村民收费 5-10r 想更近省力的宝子，可以把车往里开到底 抵达铁门位置（注意：全程碎石石头路，底盘高的车更适」",
-    "verified_at": null,
-    "evidence_level": "",
-    "basis": "no_veto_default",
-    "risk_hint": ""
-   },
-   "overnight": {
-    "status": "unknown",
-    "modes": [],
-    "fee": null,
-    "facilities": {
-     "toilet": null,
-     "water": null,
-     "power": null,
-     "signal": null
-    },
-    "note": "",
-    "verified_at": null
-   },
-   "sub_pois": [
-    {
-     "name": "伏牛山小蓝湖",
-     "gcj": [
-      119.098591,
-      32.075864
-     ],
-     "note": "发现批次坐标"
-    }
-   ],
-   "trips": [
-    "小红书-带狗"
-   ],
-   "geo_src": "amap",
-   "origin": "发现批次（关键词矩阵搜索）",
-   "curation_note": "2026-11 发现批次：坐标/车程/犬政策已核实，**热度未采**，不参与本周推荐的排序。",
-   "raw_note": "",
-   "photos": [
-    {
-     "url": "images/39f3ff12d8da/1.webp",
-     "title": "南京周边遛狗圣地-句容阿勒泰🤩",
-     "author": "丁哈尼",
-     "note_url": "https://www.xiaohongshu.com/explore/699e7cf2000000001600b19e?xsec_token=AB7QW2dwOQzzZ1USYE7N7xA1ofMmI7m_mBuorGIo-Y5Ho=&xsec_source=pc_search",
-     "src": "小红书"
-    },
-    {
-     "url": "images/39f3ff12d8da/2.webp",
-     "title": "南京周边遛狗圣地-句容阿勒泰🤩",
-     "author": "丁哈尼",
-     "note_url": "https://www.xiaohongshu.com/explore/699e7cf2000000001600b19e?xsec_token=AB7QW2dwOQzzZ1USYE7N7xA1ofMmI7m_mBuorGIo-Y5Ho=&xsec_source=pc_search",
-     "src": "小红书"
-    },
-    {
-     "url": "images/39f3ff12d8da/3.webp",
-     "title": "南京周边遛狗圣地-句容阿勒泰🤩",
-     "author": "丁哈尼",
-     "note_url": "https://www.xiaohongshu.com/explore/699e7cf2000000001600b19e?xsec_token=AB7QW2dwOQzzZ1USYE7N7xA1ofMmI7m_mBuorGIo-Y5Ho=&xsec_source=pc_search",
-     "src": "小红书"
-    }
-   ],
-   "pending": [
-    "overnight",
-    "photos"
-   ],
-   "pop": {
-    "notes": 4,
-    "likes": 340,
-    "basis": "小红书点名搜索 4 条相关笔记"
-   },
-   "heat": {
-    "notes": 4,
-    "likes": 340
-   },
-   "heat_basis": "小红书点名搜索 4 条相关笔记",
-   "rating": null,
-   "rating_src": null,
-   "poi_type": "地名地址信息;自然地名;湖泊",
-   "poi_name": "伏牛山小蓝湖",
-   "poi_type_dist_m": 0,
-   "kind_src": "name",
-   "scenes": [
-    "玩水"
-   ],
-   "access": {},
-   "dog_tier": "default",
-   "sources": [
-    {
-     "platform": "xhs",
-     "id": "6a3759060000000006031be0",
-     "url": "https://www.xiaohongshu.com/explore/6a3759060000000006031be0",
-     "title": "句容小蓝湖，小众秘境💙",
-     "author": "",
-     "why": "犬政策依据",
-     "likes": 0
-    },
-    {
-     "platform": "xhs",
-     "id": "6a24f952000000001702bdc3",
-     "url": "https://www.xiaohongshu.com/explore/6a24f952000000001702bdc3?xsec_token=ABJeyC2NUlbbpcuc8vhhjjvdEacyYA82C4HDbIsWW6Nmw=&xsec_source=pc_search",
-     "title": "南京开车半小时直达新西兰！",
-     "author": "南国小夜曲",
-     "why": "相关笔记",
-     "likes": 1172
-    },
-    {
-     "platform": "amap",
-     "url": "https://uri.amap.com/marker?position=119.098591,32.075864&name=%E5%8F%A5%E5%AE%B9%E5%B0%8F%E8%93%9D%E6%B9%96&src=pet-trip&coordinate=gaode&callnative=0",
-     "title": "在高德地图查看位置",
-     "why": "坐标来源"
-    }
-   ],
-   "season": {
-    "best": [
-     "夏"
-    ],
-    "avoid": [
-     "冬"
-    ],
-    "scores": {
-     "春": 1,
-     "夏": 3,
-     "秋": 2,
-     "冬": 0
-    },
-    "src": "原文",
-    "evidence": "笔记原文：玩水",
-    "conf": 1
-   }
   },
   {
    "id": "x-兴隆村",
@@ -136068,12 +135921,12 @@
     "computed_at": "2026-11-24 01:23"
    },
    "dog": {
-    "policy": "unknown",
-    "evidence": "",
-    "evidence_level": "未核实",
-    "basis": "",
-    "risk_hint": "",
-    "verified_at": null
+    "policy": "allowed",
+    "evidence": "小红书 C级UGC（笔记 6a3759060000000006031be0）：「藏在深山里的野生矿坑蓝湖，晴天自带绝美滤镜✨ 徒步、玩水、遛宠一站式拿捏，新手也能轻松冲！ \t 🎫 门票：全程🆓 🅿️ 停车：山脚村民收费 5-10r 想更近省力的宝子，可以把车往里开到底 抵达铁门位置（注意：全程碎石石头路，底盘高的车更适」",
+    "verified_at": null,
+    "evidence_level": "",
+    "basis": "no_veto_default",
+    "risk_hint": ""
    },
    "overnight": {
     "status": "unknown",
@@ -136089,7 +135942,16 @@
     "verified_at": null,
     "evidence": []
    },
-   "sub_pois": [],
+   "sub_pois": [
+    {
+     "name": "伏牛山小蓝湖",
+     "gcj": [
+      119.098591,
+      32.075864
+     ],
+     "note": "发现批次坐标"
+    }
+   ],
    "trips": [],
    "geo_src": "amap",
    "poi_name": "伏牛山小蓝湖",
@@ -136104,9 +135966,33 @@
      "platform": "amap",
      "url": "https://uri.amap.com/marker?position=119.098591,32.075864",
      "poi": "伏牛山小蓝湖"
+    },
+    {
+     "platform": "xhs",
+     "id": "6a3759060000000006031be0",
+     "url": "https://www.xiaohongshu.com/explore/6a3759060000000006031be0",
+     "title": "句容小蓝湖，小众秘境💙",
+     "author": "",
+     "why": "犬政策依据",
+     "likes": 0
+    },
+    {
+     "platform": "xhs",
+     "id": "6a24f952000000001702bdc3",
+     "url": "https://www.xiaohongshu.com/explore/6a24f952000000001702bdc3?xsec_token=ABJeyC2NUlbbpcuc8vhhjjvdEacyYA82C4HDbIsWW6Nmw=&xsec_source=pc_search",
+     "title": "南京开车半小时直达新西兰！",
+     "author": "南国小夜曲",
+     "why": "相关笔记",
+     "likes": 1172
+    },
+    {
+     "platform": "amap",
+     "url": "https://uri.amap.com/marker?position=119.098591,32.075864&name=%E5%8F%A5%E5%AE%B9%E5%B0%8F%E8%93%9D%E6%B9%96&src=pet-trip&coordinate=gaode&callnative=0",
+     "title": "在高德地图查看位置",
+     "why": "坐标来源"
     }
    ],
-   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标",
+   "curation_note": "词表匹配：小红书笔记正文提到 + 高德 POI 坐标 ｜ 已并入「句容小蓝湖」(同坐标同 POI：高德 poi_name 两条都是「伏牛山小蓝湖」，坐标都是 119.098591,32.075864。只是一条写成了「句容小蓝湖」、城市标成南京（句容实际属镇江）。以 POI 名为准保留一条。)",
    "tier": "B",
    "scenes": [
     "玩水",
@@ -136114,7 +136000,29 @@
    ],
    "heat": null,
    "rating": null,
-   "photos": [],
+   "photos": [
+    {
+     "url": "images/39f3ff12d8da/1.webp",
+     "title": "南京周边遛狗圣地-句容阿勒泰🤩",
+     "author": "丁哈尼",
+     "note_url": "https://www.xiaohongshu.com/explore/699e7cf2000000001600b19e?xsec_token=AB7QW2dwOQzzZ1USYE7N7xA1ofMmI7m_mBuorGIo-Y5Ho=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "images/39f3ff12d8da/2.webp",
+     "title": "南京周边遛狗圣地-句容阿勒泰🤩",
+     "author": "丁哈尼",
+     "note_url": "https://www.xiaohongshu.com/explore/699e7cf2000000001600b19e?xsec_token=AB7QW2dwOQzzZ1USYE7N7xA1ofMmI7m_mBuorGIo-Y5Ho=&xsec_source=pc_search",
+     "src": "小红书"
+    },
+    {
+     "url": "images/39f3ff12d8da/3.webp",
+     "title": "南京周边遛狗圣地-句容阿勒泰🤩",
+     "author": "丁哈尼",
+     "note_url": "https://www.xiaohongshu.com/explore/699e7cf2000000001600b19e?xsec_token=AB7QW2dwOQzzZ1USYE7N7xA1ofMmI7m_mBuorGIo-Y5Ho=&xsec_source=pc_search",
+     "src": "小红书"
+    }
+   ],
    "raw_note": "",
    "pending": [
     "drive_verify",
@@ -136122,7 +136030,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "default",
    "season": {
     "best": [
      "夏"
