@@ -116426,7 +116426,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "veto",
    "pop": {
     "notes": 4,
     "likes": 123,
@@ -118416,7 +118416,7 @@
    ],
    "kind_src": "poi_type:旅游景点",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "veto",
    "pop": {
     "notes": 0,
     "likes": 0,
@@ -123211,7 +123211,7 @@
    ],
    "kind_src": "name",
    "access": {},
-   "dog_tier": "unknown",
+   "dog_tier": "restricted",
    "season": {
     "best": [
      "春",
