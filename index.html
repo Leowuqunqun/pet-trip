@@ -2093,36 +2093,6 @@ function fitAll(list){
 /* ───────── 详情 ───────── */
 function findSpot(id){ return DATA.spots.filter(function(s){return s.id===id;})[0]; }
 
-/* 来源链接按需加载（2026-11-24）：spots.json 里 sources 字段占 489KB/整包 441KB(gzip) 的 18%，
-   而它只在"详情页-来源"这一处显示。首屏每个用户都要付这个带宽，但只有点开详情才用得上——
-   所以拆成 spots-detail.json，第一次点开详情时才拉，拉到后合并进内存，之后不再请求。
-   失败也不影响别的：那一段显示"来源暂时没取到"，其余照常。 */
-var DETAIL_LOADED = false, DETAIL_LOADING = false;
-function loadDetailSources(after){
-  if(DETAIL_LOADED || DETAIL_LOADING) return;
-  DETAIL_LOADING = true;
-  /* 每个点只试一次：失败后如果还按"没加载过"去重排，就会 fetch→render→fetch 转圈，
-     把浏览器拖死（2026-11-24 实测：进程直接被系统 SIGKILL）。 */
-  (DATA.spots || []).forEach(function(sp){ sp.__srcTried = true; });
-  fetch("spots-detail.json", {cache:"no-cache"}).then(function(r){
-    if(!r.ok) throw new Error("HTTP " + r.status);
-    return r.json();
-  }).then(function(map){
-    var n = 0;
-    (DATA.spots || []).forEach(function(sp){
-      var x = map[sp.id];
-      if(x && x.sources){ sp.sources = x.sources; n++; }
-      else if(x === undefined){ sp.sources = sp.sources || []; }
-    });
-    DETAIL_LOADED = true;
-    DETAIL_LOADING = false;
-    if(after) after(n);
-  }).catch(function(){
-    DETAIL_LOADING = false;
-    if(after) after(-1);
-  });
-}
-
 function openDetail(id){
   var s = findSpot(id); if(!s) return;
   STATE.active = id;
@@ -2285,15 +2255,6 @@ function openDetail(id){
   /* 来源：卡片上只放能点的链接，详情里把每条出处摊开——
      "凭哪句话得出这个结论"比"有九个赞"重要得多。 */
   var srcs = s.sources || [];
-  if(!srcs.length && s.sources === undefined && !s.__srcTried){
-    /* 还没拉过：先占位，拉回来如果还停在这个点就重画 */
-    html += '<div class="sec"><div class="kv"><div class="k">来源</div><div class="v" id="d-src-loading" style="color:var(--ink-3)">加载中…</div></div></div>';
-    loadDetailSources(function(){
-      if(STATE.active === s.id) openDetail(s.id);
-      var lb = el("d-src-loading");
-      if(lb && DETAIL_LOADED === false) lb.textContent = "来源暂时没取到";
-    });
-  }
   if(srcs.length){
     html += '<div class="sec"><div class="kv"><div class="k">来源</div><div class="v">' +
       srcs.map(function(x){
@@ -4415,4 +4376,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261124T1701 -->
+<!-- rebuild-trigger 20261124T1703 -->
