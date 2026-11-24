@@ -973,6 +973,12 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
         <h2 id="sheet-title">按车程排序</h2>
         <div class="hint" id="list-hint"></div>
       </div>
+      <!-- 离线/弱网提示（2026-11-25）：山里断网时 SW 会拿上次缓存顶上，
+           但页面看不出来 —— 点位可能是几天前的，人却以为是新的（多一个新点/少一个禁区都可能出岔）。
+           有网时不显示，也不占地方。 -->
+      <div id="stale-note" hidden style="margin:0 12px 8px;padding:8px 10px;border-radius:10px;background:var(--amber-bg,#FFF7E6);color:var(--amber-ink,#8a5a00);font-size:12.5px;line-height:1.5">
+        这会儿没网，显示的是<b>上次存下来的</b>点位，可能不是最新的；连上网会自动换成新的。
+      </div>
       <div class="list" id="list">
         <!-- 骨架（2026-11-24）：spots.json 是 3.4MB（gzip 457KB），手机上要好几百毫秒到几秒。
              以前这段时间左边面板是一片空白，看起来像"坏了"；先摆几个灰块，一眼就知道在加载。 -->
@@ -4375,7 +4381,17 @@ function bindPlan(){
 
 /* ───────── 启动 ───────── */
 fetch("spots.json", {cache:"no-cache"})
-  .then(function(r){ return r.json(); })
+  /* SW 在网络失败、改用缓存顶上时会加这个头（见 sw.js）。有这个头就说明
+     "你看到的不是刚下下来的数据"，必须让人知道。 */
+  .then(function(r){
+    try{
+      if(r.headers.get("X-PP-Offline") === "1"){
+        var n = document.getElementById("stale-note");
+        if(n) n.hidden = false;
+      }
+    }catch(e){}
+    return r.json();
+  })
   .then(function(d){
     DATA = d;
     initOrigin();
@@ -4497,4 +4513,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261125T0509 -->
+<!-- rebuild-trigger 20261125T0542 -->

@@ -72,7 +72,16 @@ async function networkFirst(req, timeoutMs) {
       fetch(req).then(function (res2) {
         if (res2 && res2.ok) c.put(req, res2.clone());
       }).catch(function () {});
-      return hit;
+      /* 打个记号告诉页面"这不是刚下下来的"（2026-11-25）。
+         改了响应头就必须重建 Response —— 缓存里那份是 immutable 的。
+         页面看到 X-PP-Offline: 1 会显示「这会儿没网，显示的是上次存下来的」。 */
+      try {
+        const h = new Headers(hit.headers);
+        h.set("X-PP-Offline", "1");
+        return new Response(hit.body, {status: hit.status, statusText: hit.statusText, headers: h});
+      } catch (e) {
+        return hit;
+      }
     }
     throw err;
   }
