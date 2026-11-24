@@ -2227,6 +2227,22 @@ function openDetail(id){
     (dg.risk_hint ? '<div class="quote warn">⚠ '+esc(dg.risk_hint)+'</div>' : '') +
     '</div></div>';
 
+  /* 笔记里的实用信息（2026-11-25）：addr/门票/停车/厕所这些字段在等高德额度，一直是空的；
+     但**笔记正文里本来就写了**（「园内免费停车」「19.9/人观光车入园」「夏季开放到 20:30」）。
+     这些是带狗出门真正会踩的坑，所以从来源笔记正文里原样抽出来，一条都不改写。
+     只抽得出 38 个点（很多来源笔记没存正文），抽不出就不显示——不猜、不补。 */
+  if(s.tips && s.tips.length){
+    html += '<div class="sec"><div class="sec-t">笔记里说</div><div class="panel">' +
+      s.tips.map(function(t){
+        return '<div class="quote cite" style="margin-top:6px">' +
+               '<b style="color:var(--ink-2);font-weight:600">' + esc(t.k || "贴士") + '</b> · ' +
+               esc(t.t) + '</div>';
+      }).join("") +
+      '<div class="note-txt" style="margin-top:8px;color:var(--ink-3)">原文摘自来源笔记，没改写；' +
+      '信息会过时，出门前再确认一眼。</div>' +
+      '</div></div>';
+  }
+
   html += '<div class="sec"><div class="panel" style="border-left:3px solid '+
     (isNight(s)?"var(--green)":"var(--rose)")+'">' +
     '<div class="kv"><div class="k">今晚睡哪</div><div class="v"><b>'+esc(NIGHT_LABEL[nk][0])+'</b>'+
@@ -4457,4 +4473,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261125T0332 -->
+<!-- rebuild-trigger 20261125T0400 -->
