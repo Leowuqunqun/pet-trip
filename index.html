@@ -1320,6 +1320,51 @@ function clearAllFilters(){
   });
 }
 
+/* 空状态不要只会说"清空"（2026-11-24）：用户勾了四五个条件仍然想找"附近能带狗的地方"，
+   一刀切清空等于把他选的东西全扔了。这里算一下"**只放松这一个条件**能救回多少个点"，
+   按救回多少排序给前三个——点一下只放掉那一个，其余保留。
+   为什么不是"每个都试"：按钮一多就成了第二个筛选面板，反而更难选。 */
+function relaxOptions(){
+  var opts = [];
+  function dimOn(k){ return Object.keys(STATE[k] || {}).some(function(x){ return STATE[k][x]; }); }
+  function tryOff(key, label){
+    var saved;
+    if(key === "hours"){ saved = STATE.hours; STATE.hours = null; }
+    else if(key === "q"){ saved = STATE.q; STATE.q = ""; }
+    else { saved = STATE[key]; STATE[key] = {}; }
+    var n = 0;
+    try{ n = sortedFiltered().length; }catch(e){ n = 0; }
+    if(key === "hours") STATE.hours = saved;
+    else if(key === "q") STATE.q = saved;
+    else STATE[key] = saved;
+    if(n > 0) opts.push({key: key, label: label, n: n});
+  }
+  if(dimOn("season")) tryOff("season", "不限季节");
+  if(selectedScenes().length) tryOff("scenes", "取消场景");
+  if(selectedKinds().length) tryOff("kinds", "取消类型");
+  if(dimOn("dogTier")) tryOff("dogTier", "放宽犬政策");
+  if(dimOn("provinces")) tryOff("provinces", "不限省份");
+  if(STATE.hours != null) tryOff("hours", "不限车程");
+  if(STATE.q) tryOff("q", "清掉搜索");
+  opts.sort(function(a, b){ return b.n - a.n; });
+  return opts.slice(0, 3);
+}
+
+function applyRelax(key){
+  if(key === "hours"){
+    STATE.hours = null;
+    var rr = el("range"); if(rr) rr.value = "13";
+    var ro = el("range-out"); if(ro) ro.textContent = "不限";
+    return;
+  }
+  if(key === "q"){
+    STATE.q = "";
+    var qi = el("q"); if(qi) qi.value = "";
+    return;
+  }
+  Object.keys(STATE[key] || {}).forEach(function(x){ STATE[key][x] = false; });
+}
+
 var SORT_LABEL = {drive:"按车程排序", heat:"按热度排序", dog:"按犬友好排序"};
 var DOG_RANK = {explicit:3, default:2, restricted:1, unknown:0, veto:-1};
 
@@ -1460,12 +1505,27 @@ function renderCards(list, totalAll){
     if(Object.keys(STATE.dogTier).some(function(k){ return STATE.dogTier[k]; })) hints.push("放宽犬政策要求");
     hints.push("把单程时长拉长");
     var anyFilter = hasFilters() || (STATE.hours != null);
+    /* 2026-11-24：先给"只放松一个条件"的按钮（按救回多少排序），再给一刀切清空。
+       原来只有清空 → 用户要么全丢、要么自己猜该取消哪个。 */
+    var relax = anyFilter ? relaxOptions() : [];
+    var relaxHtml = relax.map(function(o){
+      return '<button class="fsum" data-relax="' + o.key + '" style="margin-top:6px;display:block;width:100%">' +
+             o.label + ' → 还有 ' + o.n + ' 个</button>';
+    }).join("");
     box.innerHTML = '<div class="empty">这个条件下没有点。<br>试试' +
-                    (hints.length > 1 ? hints.slice(0,-1).join("、") + "，或" : "") +
-                    hints[hints.length-1] + "。" +
+                    (relax.length ? '只放松一个条件：' :
+                      (hints.length > 1 ? hints.slice(0,-1).join("、") + "，或" : "") + hints[hints.length-1] + "。") +
+                    relaxHtml +
                     (anyFilter ? '<br><button class="fsum" data-clear-all="1" style="margin-top:8px">清空筛选看全部</button>' : '') +
                     '</div>';
-    /* 这个按钮不在 #filters / #fpanel 里，委托监听收不到它的点击 —— 得自己绑。 */
+    /* 这些按钮不在 #filters / #fpanel 里，委托监听收不到点击 —— 得自己绑。 */
+    Array.prototype.forEach.call(box.querySelectorAll("[data-relax]"), function(btn){
+      btn.onclick = function(ev){
+        ev.stopPropagation();
+        applyRelax(btn.getAttribute("data-relax"));
+        PLAN.dirty = true; syncFilterUI(); render();
+      };
+    });
     var cbAll = box.querySelector("[data-clear-all]");
     if(cbAll) cbAll.onclick = function(ev){
       ev.stopPropagation();
@@ -4316,4 +4376,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261124T1623 -->
+<!-- rebuild-trigger 20261124T1638 -->
