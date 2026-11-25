@@ -630,6 +630,22 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .trip-item .ti-t{font-weight:600;font-size:14px}
 .trip-item .ti-m{color:var(--ink-2);font-size:12px;margin-top:3px}
 .trip-item .ti-x{border:0;background:transparent;color:var(--ink-3);font-size:19px;line-height:1;cursor:pointer;padding:0 6px;height:26px}
+/* 出发清单（2026-11-25）：带狗出门最容易忘的不是地点，是东西。
+   清单按行程内容自动加项：要露营就加帐篷睡袋、有玩水就加毛巾速干、
+   有"默认允许/未知"的点就提醒到了先问一句。勾选状态存在本地，换页面不丢。 */
+.pack-wrap{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+.pack-head{display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
+.pack-head b{font-size:13.5px}
+.pack-head .pack-n{margin-left:auto;color:var(--ink-3);font-size:12px}
+.pack-body{margin-top:10px}
+.pack-item{display:flex;gap:9px;align-items:flex-start;padding:7px 0;font-size:13.5px;color:var(--ink)}
+.pack-item input{margin:3px 0 0;width:16px;height:16px;accent-color:var(--ink);flex:none}
+.pack-item .pk-why{color:var(--ink-3);font-size:11.5px}
+.pack-item.done .pk-t{color:var(--ink-3);text-decoration:line-through}
+.pack-acts{display:flex;gap:8px;margin-top:10px}
+.pack-acts button{flex:1;border:1px solid var(--line-2);background:var(--paper-2);color:var(--ink);
+  font:inherit;font-size:12.5px;font-weight:600;padding:9px 0;border-radius:9px;cursor:pointer}
+
 .trip-actions{display:flex;gap:8px;margin-top:16px}
 .trip-actions button{flex:1;border:1px solid var(--line-2);background:var(--paper-2);color:var(--ink);font:inherit;font-size:13px;font-weight:600;padding:10px 0;border-radius:10px;cursor:pointer}
 .trip-actions .primary{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -1024,6 +1040,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     <h3>我的行程</h3>
     <div class="trip-sub" id="trip-sub"></div>
     <div id="trip-list"></div>
+    <div class="pack-wrap" id="pack-wrap"></div>
     <div class="trip-actions">
       <button id="trip-share-panel" class="primary">分享行程</button>
       <button id="trip-clear">清空</button>
@@ -2941,6 +2958,7 @@ function loadSharedTrip(){
 }
 
 function renderTripPanel(){
+  if(el("pack-wrap")) renderPack();
   var box = el("trip-list"), sub = el("trip-sub");
   if(!STATE.trip.length){
     sub.textContent = "";
@@ -3047,11 +3065,113 @@ function optimizeTripOrder(ids){
   }
   return order.map(function(x){ return x.id; }).concat(noC);
 }
+/* ─── 出发清单 ───────────────────────────────────────────────────────────
+   为什么按行程内容变：一份固定清单会被人划掉不看。要露营才出现帐篷睡袋，
+   有玩水才出现毛巾速干，行程里有"默认允许/未知"的点才提醒到了问一句——
+   出现得越少，剩下每一条才越值得看。 */
+var PACK_KEY = "pp-pack-v1";
+var PACK_BASE = [
+  { id: "lead",  t: "牵引绳 + 项圈/胸背",    why: "到哪儿都得拴，山里有野狗也有禁犬区" },
+  { id: "water", t: "水 + 折叠水碗",         why: "狗比人耐走但不耐渴" },
+  { id: "food",  t: "狗粮（按天数多带一顿）", why: "路上饿一顿能闹一整天" },
+  { id: "bag",   t: "拾便袋",                why: "景区和营地都查" },
+  { id: "med",   t: "常用药（碘伏/止泻/驱虫）", why: "山里最近的宠物医院往往在 50km 外" },
+  { id: "towel", t: "旧毛巾一条",            why: "擦脚、垫坐、临时裹身都用得上" }
+];
+function packExtras(){
+  var ex = [];
+  var spots = STATE.trip.map(findSpot).filter(Boolean);
+  /* 用页面自己的 nightKey（status 的真实取值是 official_camp/allowed_wild/gray/lodging，
+     一开始我按 camp/wild 判，露营那条分支永远不会触发——本地实测 322 个可过夜的点加进行程，
+     清单还是 6 条基础项，才发现判定写错了）。 */
+  var keys = spots.map(nightKey).filter(Boolean);
+  var anyTent = keys.some(function(k){ return k === "official_camp" || k === "allowed_wild" || k === "gray"; });
+  var anyLodging = keys.some(function(k){ return k === "lodging"; });
+  var anyWater = spots.some(function(s){ return (s.scenes||[]).some(function(x){
+      return x === "玩水" || x === "溯溪"; }); });
+  var anyAsk = spots.some(function(s){
+      return s.dog_tier === "default" || s.dog_tier === "unknown"; });
+  if(anyTent){
+    ex.push({ id: "tent",  t: "帐篷/睡袋/防潮垫", why: "这趟有能扎营的点" });
+    ex.push({ id: "dogbed",t: "狗窝或厚垫子",     why: "地上凉，狗比人先扛不住" });
+    ex.push({ id: "light", t: "头灯 + 备用电池",   why: "营地天黑得快" });
+  }
+  if(anyLodging){
+    ex.push({ id: "dogbed2", t: "狗窝或床单（住店用）", why: "不是每家都让狗上床" });
+    ex.push({ id: "askstay", t: "订房时问一句能不能带狗", why: "这趟有住店的点" });
+  }
+  if(anyWater){
+    ex.push({ id: "dry",   t: "速干衣 + 备用毛巾", why: "这趟有玩水/溯溪" });
+  }
+  if(anyAsk){
+    ex.push({ id: "ask",   t: "到了先问一句「狗能进吗」", why: "行程里有没写明禁犬的点" });
+  }
+  return ex;
+}
+function packItems(){ return PACK_BASE.concat(packExtras()); }
+function loadPack(){
+  try{ var o = JSON.parse(localStorage.getItem(PACK_KEY) || "{}"); return o && typeof o === "object" ? o : {}; }
+  catch(e){ return {}; }
+}
+function savePack(o){ try{ localStorage.setItem(PACK_KEY, JSON.stringify(o)); }catch(e){} }
+function renderPack(){
+  var box = el("pack-wrap"); if(!box) return;
+  var items = packItems();
+  var state = loadPack();
+  var done = items.filter(function(it){ return state[it.id]; }).length;
+  var open = state.__open !== false;   /* 默认展开：清单就是给人看的 */
+  box.innerHTML =
+    '<div class="pack-head" data-pack-toggle="1">' +
+      '<b>出发清单</b><span class="pack-n">' + done + '/' + items.length + (open ? ' ▾' : ' ▸') + '</span>' +
+    '</div>' +
+    (open ? '<div class="pack-body">' + items.map(function(it){
+      var c = !!state[it.id];
+      return '<label class="pack-item' + (c ? ' done' : '') + '">' +
+        '<input type="checkbox" data-pack-id="' + it.id + '"' + (c ? ' checked' : '') + '>' +
+        '<span><span class="pk-t">' + esc(it.t) + '</span>' +
+        '<span class="pk-why"> · ' + esc(it.why) + '</span></span></label>';
+    }).join("") + '</div>' +
+    '<div class="pack-acts"><button data-pack-copy="1">复制清单</button>' +
+    '<button data-pack-reset="1">全部清空</button></div>' : '');
+}
+function bindPack(){
+  var box = el("pack-wrap"); if(!box) return;
+  box.addEventListener("click", function(e){
+    var t = e.target;
+    if(t.closest("[data-pack-toggle]")){
+      var st = loadPack(); st.__open = !(st.__open !== false); savePack(st); renderPack(); return;
+    }
+    if(t.closest("[data-pack-reset]")){
+      var all = packItems();
+      var s2 = {}; s2.__open = true; savePack(s2); renderPack();
+      toast("清单已清空"); return;
+    }
+    if(t.closest("[data-pack-copy]")){
+      var st2 = loadPack(), items = packItems();
+      var txt = "出门清单（" + items.filter(function(it){ return st2[it.id]; }).length + "/" + items.length + " 已备）\n" +
+        items.map(function(it){ return (st2[it.id] ? "✓ " : "○ ") + it.t; }).join("\n");
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(function(){ toast("清单已复制"); },
+          function(){ window.prompt("复制清单：", txt); });
+      } else { window.prompt("复制清单：", txt); }
+      return;
+    }
+    var cb = t.closest("[data-pack-id]");
+    if(cb){
+      var st3 = loadPack();
+      if(cb.checked) st3[cb.getAttribute("data-pack-id")] = 1;
+      else delete st3[cb.getAttribute("data-pack-id")];
+      savePack(st3); renderPack();
+    }
+  });
+}
+
 function renderTrip(){
   var bar = el("tripbar");
   if(!STATE.trip.length){ bar.classList.remove("on"); }
   else { bar.classList.add("on"); el("trip-count").textContent = STATE.trip.length; }
   if(el("trip-panel").classList.contains("open")) renderTripPanel();
+  if(el("pack-wrap")) renderPack();
   drawTripLine();
 }
 
@@ -4418,6 +4538,8 @@ fetch("spots.json", {cache:"no-cache"})
     initMap();
     bind();
     bindTrip();
+    bindPack();
+    renderPack();
     renderLegend();
     renderSceneBar();
     renderProvinceBar();
@@ -4528,4 +4650,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261125T0710 -->
+<!-- rebuild-trigger 20261125T2238 -->
