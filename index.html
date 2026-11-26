@@ -619,28 +619,98 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .tripbtn{width:100%;border:1px dashed var(--line-2);background:var(--paper-2);color:var(--ink);font:inherit;font-size:14px;font-weight:600;padding:11px 0;border-radius:12px;cursor:pointer}
 .tripbtn.on{border-style:solid;border-color:var(--green);background:var(--green-soft);color:var(--green)}
 /* ── 行程面板 ── */
-.trip-panel{position:fixed;inset:0;display:none;z-index:1300;background:rgba(22,26,24,.35)}
+/* ─── 行程面板（2026-11-26 重设计）─────────────────────────────────────
+   它本来就该是一张**行程单**：周五 18:00 从上海出发、中间几站、周日 16:00 收工。
+   上一版是"一列卡片 + 一堆等宽灰色按钮"，看不出这是有起点终点的序列，也没法一眼比两套方案。
+   这一版：底部抽屉、时间轴、用宋体标题把"这趟"印出来。 */
+.trip-panel{position:fixed;inset:0;display:none;z-index:1300;background:rgba(22,26,24,.44)}
 .trip-panel.open{display:block}
-.trip-sheet{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(560px,92vw);max-height:82vh;overflow:auto;background:var(--paper);border-radius:var(--r-l);padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.28)}
-.trip-sheet h3{margin:0 0 4px;font-size:16px}
-.trip-sub{color:var(--ink-3);font-size:12px;margin-bottom:10px}
-.trip-item{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}
-.trip-item:last-child{border-bottom:0}
-.trip-item .ti-n{flex:1;min-width:0}
-.trip-item .ti-t{font-weight:600;font-size:14px}
-.trip-item .ti-m{color:var(--ink-2);font-size:12px;margin-top:3px}
-.trip-item .ti-x{border:0;background:transparent;color:var(--ink-3);font-size:19px;line-height:1;cursor:pointer;padding:0 6px;height:26px}
-/* 多份行程（2026-11-26）：一个周末常有 A/B 两套走法，也常要把方案发给别人对比。
-   标签条横着放，当前那份加深；点一下就切，不再"为了换方案把点一个个删掉"。 */
-.trip-tabs{display:flex;gap:7px;overflow-x:auto;padding:2px 0 4px;margin-top:6px;-webkit-overflow-scrolling:touch}
-.trip-tab{flex:none;display:flex;align-items:center;gap:5px;border:1px solid var(--line-2);background:var(--paper-2);
-  color:var(--ink-2);font:inherit;font-size:12px;padding:6px 10px;border-radius:999px;cursor:pointer;white-space:nowrap}
-.trip-tab.on{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:600}
-.trip-tab .tt-n{opacity:.66;font-size:11px}
+.trip-sheet{position:absolute;left:0;right:0;bottom:0;max-height:90vh;display:flex;flex-direction:column;
+  background:var(--paper);border-radius:22px 22px 0 0;box-shadow:0 -14px 44px rgba(20,24,22,.26);
+  animation:ts-up .2s ease-out}
+@keyframes ts-up{from{transform:translateY(18px);opacity:.55}to{transform:none;opacity:1}}
+.ts-grab{width:40px;height:4px;border-radius:2px;background:var(--line-2);margin:8px auto 0;flex:none}
+.ts-head{display:flex;align-items:flex-start;gap:10px;padding:10px 20px 0;flex:none}
+.ts-head h3{margin:0;font-family:"Songti SC","Songti TC","Noto Serif SC",Georgia,serif;
+  font-size:24px;line-height:1.2;letter-spacing:.01em;color:var(--ink)}
+.trip-sub{margin-top:6px;color:var(--ink-3);font-size:12px;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.ts-x{margin-left:auto;flex:none;border:0;background:transparent;color:var(--ink-3);font-size:16px;
+  width:34px;height:34px;border-radius:50%;cursor:pointer;line-height:1}
+.ts-x:active{background:var(--line)}
+
+/* 方案标签：横向可滑，当前那份用墨蓝实心 */
+.trip-tabs{display:flex;gap:7px;overflow-x:auto;padding:12px 20px 4px;flex:none;scrollbar-width:none}
+.trip-tabs::-webkit-scrollbar{display:none}
+.trip-tab{flex:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);
+  background:transparent;color:var(--ink-2);font:inherit;font-size:12.5px;padding:7px 12px;border-radius:99px;
+  cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.trip-tab .tt-n{font-size:11px;opacity:.7;font-variant-numeric:tabular-nums}
+.trip-tab.on{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600}
 .trip-tab.add{border-style:dashed;color:var(--ink-3)}
-.trip-acts2{display:flex;gap:8px;margin-top:8px}
-.trip-acts2 button{flex:1;border:0;background:transparent;color:var(--ink-3);font:inherit;font-size:12px;
-  padding:6px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* 票根虚线：上下用重复短划，边缘两个缺口，分隔"这份行程叫什么"和"它由什么组成" */
+.ts-perf{height:1px;margin:13px 0 0;flex:none;
+  background:repeating-linear-gradient(90deg,var(--line-2) 0 5px,transparent 5px 11px)}
+#trip-list{flex:1;min-height:0;overflow:auto;padding:4px 20px 8px;-webkit-overflow-scrolling:touch}
+
+/* 起点/终点：把"周五走、周日回"钉在时间轴两头 */
+.trip-anchor{display:flex;align-items:baseline;gap:9px;padding:12px 0 6px}
+.trip-anchor .ta-k{font-size:12px;font-weight:700;color:var(--terra);letter-spacing:.03em;
+  font-variant-numeric:tabular-nums}
+.trip-anchor .ta-v{font-size:12px;color:var(--ink-3)}
+.trip-anchor::after{content:"";flex:1;height:1px;background:var(--line);margin-left:4px}
+
+/* 一站：编号落在时间轴上，右边是它自己的信息，操作贴右侧 */
+.trip-item{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:12px;
+  padding:13px 0 13px;position:relative}
+.trip-item::before{content:"";position:absolute;left:13px;top:0;bottom:0;width:1px;background:var(--line-2)}
+/* 连接线只画"站与站之间"：用类名收两头，:first-of-type 会被同级的 .trip-anchor 抢走 */
+.trip-item.ti-first::before{top:22px}
+.trip-item.ti-last::before{bottom:calc(100% - 22px)}
+.trip-item .ti-dot{position:relative;z-index:1;width:28px;height:28px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center;
+  justify-content:center;font-variant-numeric:tabular-nums;box-shadow:0 0 0 4px var(--paper)}
+.trip-item .ti-n{min-width:0}
+.trip-item .ti-t{font-size:15.5px;font-weight:600;line-height:1.35;color:var(--ink);
+  display:flex;align-items:baseline;gap:8px}
+.trip-item .ti-go{font-size:11.5px;font-weight:500;color:var(--ink-3);text-decoration:underline;
+  text-underline-offset:3px;white-space:nowrap}
+.trip-item .ti-m{margin-top:7px;display:flex;flex-wrap:wrap;gap:5px 6px}
+.trip-item .ti-chip{font-size:11.5px;color:var(--ink-2);border:1px solid var(--line-2);
+  border-radius:6px;padding:2px 7px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.trip-item .ti-chip.night{color:var(--green);border-color:rgba(29,122,79,.35);background:var(--green-soft)}
+.trip-item .ti-chip.warn{color:var(--amber-ink);border-color:rgba(181,129,31,.4);background:var(--amber-soft)}
+.trip-item .ti-ops{display:flex;align-items:flex-start;gap:2px;padding-top:2px}
+.trip-item .ti-mv,.trip-item .ti-x{border:0;background:transparent;color:var(--ink-3);cursor:pointer;
+  width:26px;height:28px;border-radius:7px;font-size:13px;line-height:1}
+.trip-item .ti-mv:active,.trip-item .ti-x:active{background:var(--line)}
+.trip-item .ti-x{font-size:17px}
+
+/* 空状态：给下一步动作，不是给一句"还没有内容" */
+.trip-empty{padding:34px 6px 30px;text-align:center}
+.trip-empty b{display:block;font-family:"Songti SC","Noto Serif SC",Georgia,serif;font-size:17px;
+  font-weight:600;color:var(--ink);margin-bottom:8px}
+.trip-empty p{margin:0 auto;max-width:16em;color:var(--ink-3);font-size:12.5px;line-height:1.7}
+
+/* 汇总只回答两个问题：这趟多远、要不要重排。所以压成一行，别做成一张卡 */
+.trip-sheet .trip-order{margin:16px 0 2px;padding:14px 0 2px;border:0;border-top:1px solid var(--line);
+  border-radius:0;background:transparent;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap}
+.trip-sheet .to-line{margin:0;flex:1;min-width:180px;font-size:12.5px;line-height:1.6;color:var(--ink-2)}
+.trip-sheet .to-line b{color:var(--ink)}
+.trip-sheet .to-note{display:block;margin-top:2px;color:var(--ink-3);font-size:11px}
+.trip-sheet .more-btn{margin:0 0 0 6px;padding:0;border:0;background:transparent;color:var(--brand);
+  font:inherit;font-size:12.5px;font-weight:600;text-decoration:underline;text-underline-offset:3px;
+  white-space:nowrap;flex:none}
+.trip-sheet .trip-warn{margin:14px 0 4px;border-radius:12px;padding:11px 13px;font-size:12.5px;line-height:1.6}
+
+.ts-foot{flex:none;padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));
+  border-top:1px solid var(--line);background:var(--paper-2)}
+.ts-foot .primary{width:100%;border:0;border-radius:13px;background:var(--brand);color:#fff;
+  font:inherit;font-size:15px;font-weight:600;padding:14px 0;cursor:pointer;letter-spacing:.02em}
+.ts-foot .primary:active{background:var(--brand-2)}
+.ts-quiet{display:flex;justify-content:space-between;margin-top:9px}
+.ts-quiet button{border:0;background:transparent;color:var(--ink-3);font:inherit;font-size:12.5px;
+  padding:4px 2px;cursor:pointer}
 .trip-actions{display:flex;gap:8px;margin-top:16px}
 .trip-actions button{flex:1;border:1px solid var(--line-2);background:var(--paper-2);color:var(--ink);font:inherit;font-size:13px;font-weight:600;padding:10px 0;border-radius:10px;cursor:pointer}
 .trip-actions .primary{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -1031,20 +1101,26 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 </div>
 
 <div class="trip-panel" id="trip-panel">
-  <div class="trip-sheet">
-    <h3 id="trip-title">我的行程</h3>
-    <div class="trip-sub" id="trip-sub"></div>
+  <div class="trip-sheet" role="dialog" aria-label="我的行程">
+    <div class="ts-grab"></div>
+    <div class="ts-head">
+      <div>
+        <h3 id="trip-title">我的行程</h3>
+        <div class="trip-sub" id="trip-sub"></div>
+      </div>
+      <button class="ts-x" id="trip-close" aria-label="关闭">✕</button>
+    </div>
+    <div class="ts-perf"></div>
     <div class="trip-tabs" id="trip-tabs"></div>
     <div id="trip-list"></div>
-    <div class="trip-actions">
-      <button id="trip-share-panel" class="primary">分享行程</button>
-      <button id="trip-clear">清空</button>
-      <button id="trip-close">关闭</button>
-    </div>
-    <div class="trip-acts2">
-      <button id="trip-rename">重命名</button>
-      <button id="trip-new">另存一份</button>
-      <button id="trip-del">删除这份</button>
+    <div class="ts-foot">
+      <button id="trip-share-panel" class="primary">分享这份行程</button>
+      <div class="ts-quiet">
+        <button id="trip-rename">重命名</button>
+        <button id="trip-new">新方案</button>
+        <button id="trip-clear">清空</button>
+        <button id="trip-del">删除这份</button>
+      </div>
     </div>
   </div>
 </div>
@@ -2777,7 +2853,6 @@ function renderTripTabs(){
     return '<button class="trip-tab' + (t.id === ACTIVE ? " on" : "") + '" data-trip-id="' + esc(t.id) + '">' +
       esc(t.name) + '<span class="tt-n">' + t.ids.length + '</span></button>';
   }).join("");
-  html += '<button class="trip-tab add" id="trip-tab-add">＋ 新方案</button>';
   box.innerHTML = html;
 }
 
@@ -3086,32 +3161,42 @@ function renderTripPanel(){
   var box = el("trip-list"), sub = el("trip-sub");
   if(!STATE.trip.length){
     sub.textContent = "";
-    box.innerHTML = '<div style="padding:26px 0;text-align:center;color:var(--ink-3);font-size:13px">还没选地方。<br>点开任意一个点，按「＋ 加入行程」。</div>';
+    box.innerHTML = '<div class="trip-empty"><b>这趟还没定地方</b>' +
+      '<p>回到地图上点开任意一个点，按「＋ 加入行程」。<br>定满两晚，就是一趟完整的行程。</p></div>';
     return;
   }
   /* 只报"最远单程"：把每个点的单程加起来不是真实路线，
      报一个假的总时长不如不报。 */
   var maxH = 0;
-  box.innerHTML = STATE.trip.map(function(id, i){
+  box.innerHTML = '<div class="trip-anchor"><span class="ta-k">周五 18:00</span><span class="ta-v">上海 · 出发</span></div>' +
+    STATE.trip.map(function(id, i){
     var sp = findSpot(id); if(!sp) return "";
     var d = driveInfo(sp) || {}, f = (sp.overnight || {}).facilities || {};
     if(d.hours_oneway > maxH) maxH = d.hours_oneway;
     /* 点名字能看详情（2026-11-24）：以前收了 5 个点，想在行程里核对某一站
        还是得关掉面板、回列表里翻出来点开——面板里明明已经有这个名字了。 */
-    return '<div class="trip-item"><div class="ti-n" data-tdetail="' + esc(id) + '" role="button" tabindex="0">' +
-      '<div class="ti-t">' + (i + 1) + '. ' + esc(sp.name) + '<span class="ti-go">详情 ›</span></div>' +
-      '<div class="ti-m">单程 ' + hm(d.hours_oneway) + ' · ' + Math.round(d.km) + ' km · ' +
-      esc(NIGHT_LABEL[nightKey(sp)][0]) +
-      (f.toilet === true ? ' · 有厕所' : (f.toilet === false ? ' · 无厕所' : '')) +
-      '</div></div>' +
-      /* 「点之间怎么串由你定」说了很久，可面板里只有一键重排，手动根本调不了顺序（2026-11-24）。 */
+    var nk = nightKey(sp);
+    var sleeps = isNight(sp);
+    var chips = '<span class="ti-chip">单程 ' + hm(d.hours_oneway) + ' · ' + Math.round(d.km) + ' km</span>' +
+      '<span class="ti-chip' + (sleeps ? ' night' : '') + '">' + esc(NIGHT_LABEL[nk][0]) + '</span>' +
+      (f.toilet === true ? '<span class="ti-chip">有厕所</span>'
+        : (f.toilet === false ? '<span class="ti-chip warn">无厕所</span>' : ''));
+    return '<div class="trip-item' + (i === 0 ? ' ti-first' : '') +
+      (i === STATE.trip.length - 1 ? ' ti-last' : '') + '">' +
+      '<div class="ti-dot">' + (i + 1) + '</div>' +
+      '<div class="ti-n" data-tdetail="' + esc(id) + '" role="button" tabindex="0">' +
+        '<div class="ti-t"><span>' + esc(sp.name) + '</span><span class="ti-go">详情 ›</span></div>' +
+        '<div class="ti-m">' + chips + '</div>' +
+      '</div>' +
+      /* 顺序能手动调，是这条面板最早被要求的功能之一（2026-11-24）；操作收敛到右侧一列，别再散开。 */
       '<div class="ti-ops">' +
         (i > 0 ? '<button class="ti-mv" data-tmove="up" data-ti="' + i + '" aria-label="上移">↑</button>' : '') +
         (i < STATE.trip.length - 1 ? '<button class="ti-mv" data-tmove="down" data-ti="' + i + '" aria-label="下移">↓</button>' : '') +
         '<button class="ti-x" data-rm="' + esc(id) + '" aria-label="移除">×</button>' +
       '</div></div>';
-  }).join("");
-  sub.textContent = "最远单程 " + hm(maxH) + " · 点之间怎么串由你定";
+  }).join("") +
+    '<div class="trip-anchor"><span class="ta-k">周日 16:00</span><span class="ta-v">收工 · 回家</span></div>';
+  sub.textContent = STATE.trip.length + " 站 · 最远单程 " + hm(maxH);
 
   /* 过夜提醒（2026-11-24）：出发窗口是"周五 18:00 走、周日晚回"，那是**睡两晚**的行程。
      可行程面板只一条条写"过夜未核实"，从不总结——收满 5 个点看着挺完整，
@@ -3131,10 +3216,10 @@ function renderTripPanel(){
   if(STATE.trip.length >= 2){
     var st = tripOrderStats(STATE.trip);
     box.innerHTML += '<div class="trip-order">' +
-      '<div class="to-line">按现在的顺序：直线共 <b>' + Math.round(st.km) + ' km</b>' +
-      '（去 <b>' + Math.round(st.outKm) + '</b>' + ' ／ 回 <b>' + Math.round(st.backKm) + '</b>）' +
-      ' · 约 <b>' + hm(st.hours) + '</b> 车程<span class="to-note">（直线估算，不是路网）</span></div>' +
-      '<button class="more-btn" data-trip-opt="1">按最省路排一下</button>' +
+      '<div class="to-line">直线共 <b>' + Math.round(st.km) + ' km</b> · 约 <b>' + hm(st.hours) + '</b> 车程' +
+      '<span class="to-note">直线估算，不是路网 · 去 ' + Math.round(st.outKm) +
+      ' / 回 ' + Math.round(st.backKm) + '</span></div>' +
+      '<button class="more-btn" data-trip-opt="1">按最省路排</button>' +
       '</div>';
   }
 }
@@ -3292,7 +3377,6 @@ function bindTrip(){
   /* 多份行程（2026-11-26）：标签用事件委托，标签条是重绘的，逐个绑会绑到已经换掉的节点上 */
   var tabs = el("trip-tabs");
   if(tabs) tabs.addEventListener("click", function(e){
-    if(e.target.closest("#trip-tab-add")){ newTrip(); return; }
     var b = e.target.closest("[data-trip-id]");
     if(b) switchTrip(b.getAttribute("data-trip-id"));
   });
@@ -4680,4 +4764,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261126T1008 -->
+<!-- rebuild-trigger 20261126T1129 -->
