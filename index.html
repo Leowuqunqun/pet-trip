@@ -630,6 +630,17 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .trip-item .ti-t{font-weight:600;font-size:14px}
 .trip-item .ti-m{color:var(--ink-2);font-size:12px;margin-top:3px}
 .trip-item .ti-x{border:0;background:transparent;color:var(--ink-3);font-size:19px;line-height:1;cursor:pointer;padding:0 6px;height:26px}
+/* 多份行程（2026-11-26）：一个周末常有 A/B 两套走法，也常要把方案发给别人对比。
+   标签条横着放，当前那份加深；点一下就切，不再"为了换方案把点一个个删掉"。 */
+.trip-tabs{display:flex;gap:7px;overflow-x:auto;padding:2px 0 4px;margin-top:6px;-webkit-overflow-scrolling:touch}
+.trip-tab{flex:none;display:flex;align-items:center;gap:5px;border:1px solid var(--line-2);background:var(--paper-2);
+  color:var(--ink-2);font:inherit;font-size:12px;padding:6px 10px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.trip-tab.on{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:600}
+.trip-tab .tt-n{opacity:.66;font-size:11px}
+.trip-tab.add{border-style:dashed;color:var(--ink-3)}
+.trip-acts2{display:flex;gap:8px;margin-top:8px}
+.trip-acts2 button{flex:1;border:0;background:transparent;color:var(--ink-3);font:inherit;font-size:12px;
+  padding:6px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .trip-actions{display:flex;gap:8px;margin-top:16px}
 .trip-actions button{flex:1;border:1px solid var(--line-2);background:var(--paper-2);color:var(--ink);font:inherit;font-size:13px;font-weight:600;padding:10px 0;border-radius:10px;cursor:pointer}
 .trip-actions .primary{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -1021,13 +1032,19 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 
 <div class="trip-panel" id="trip-panel">
   <div class="trip-sheet">
-    <h3>我的行程</h3>
+    <h3 id="trip-title">我的行程</h3>
     <div class="trip-sub" id="trip-sub"></div>
+    <div class="trip-tabs" id="trip-tabs"></div>
     <div id="trip-list"></div>
     <div class="trip-actions">
       <button id="trip-share-panel" class="primary">分享行程</button>
       <button id="trip-clear">清空</button>
       <button id="trip-close">关闭</button>
+    </div>
+    <div class="trip-acts2">
+      <button id="trip-rename">重命名</button>
+      <button id="trip-new">另存一份</button>
+      <button id="trip-del">删除这份</button>
     </div>
   </div>
 </div>
@@ -2663,7 +2680,106 @@ function loadTrip(){
     return a.filter(function(id){ return !!findSpot(id); });
   }catch(e){ return []; }
 }
-function saveTrip(){ try{ localStorage.setItem(TRIP_KEY, JSON.stringify(STATE.trip)); }catch(e){} }
+function saveTrip(){
+  try{ localStorage.setItem(TRIP_KEY, JSON.stringify(STATE.trip)); }catch(e){}
+  /* 任何"往行程里加点/删点/换顺序"都走这里，所以多份行程的同步只挂在这一处，
+     不必去改 toggleTrip、重排、清空那些地方——一处漏改就会有两份数据打架。 */
+  if(TRIPS) syncActive();
+}
+
+/* ───────── 多份行程（2026-11-26） ─────────
+   一个周末常有 A/B 两套走法（雨天方案、近的/远的），也常要把方案发给别人对比。
+   原来只有一份 STATE.trip：换方案得把点一个个删掉，分享出去也没有名字，
+   对方打开只看到"行程 3 个点"，看不出是谁的什么方案。
+   现在：行程可以有多份，各有名字，能切换、另存、删除、分别分享。 */
+var TRIPS_KEY = "pp-trips-v2", ACTIVE_KEY = "pp-trip-active-v2";
+var TRIPS = null, ACTIVE = null;
+function newTripId(){ return "t" + Date.now().toString(36) + Math.random().toString(36).slice(2, 5); }
+function loadTrips(){
+  var arr = [], act = null;
+  try{ arr = JSON.parse(localStorage.getItem(TRIPS_KEY) || "[]"); }catch(e){ arr = []; }
+  try{ act = localStorage.getItem(ACTIVE_KEY); }catch(e){ act = null; }
+  if(!Array.isArray(arr)) arr = [];
+  /* 老版本只有一份（pp-trip-v1）。不迁移的话，用户升级后打开就是"行程空了"。 */
+  if(!arr.length) arr.push({ id: "t1", name: "我的行程", ids: loadTrip() });
+  arr = arr.filter(function(t){ return t && t.id && Array.isArray(t.ids); });
+  arr.forEach(function(t){ t.ids = t.ids.filter(function(id){ return !!findSpot(id); }); });
+  if(!arr.length) arr.push({ id: "t1", name: "我的行程", ids: [] });
+  if(!act || !arr.some(function(t){ return t.id === act; })) act = arr[0].id;
+  return { trips: arr, active: act };
+}
+function saveTrips(){
+  try{
+    localStorage.setItem(TRIPS_KEY, JSON.stringify(TRIPS));
+    localStorage.setItem(ACTIVE_KEY, ACTIVE);
+  }catch(e){}
+}
+function activeTrip(){
+  for(var i = 0; i < TRIPS.length; i++) if(TRIPS[i].id === ACTIVE) return TRIPS[i];
+  return null;
+}
+function syncActive(){
+  var t = activeTrip();
+  if(t) t.ids = STATE.trip.slice();
+  saveTrips();
+}
+function initTrips(){
+  var st = loadTrips();
+  TRIPS = st.trips; ACTIVE = st.active;
+  var t = activeTrip();
+  STATE.trip = t ? t.ids.slice() : [];
+  saveTrips();
+}
+function switchTrip(id){
+  if(id === ACTIVE) return;
+  var target = null;
+  TRIPS.forEach(function(t){ if(t.id === id) target = t; });
+  if(!target) return;
+  syncActive();
+  ACTIVE = id; saveTrips();
+  STATE.trip = target.ids.filter(function(x){ return !!findSpot(x); });
+  saveTrip(); renderTrip(); renderTripPanel(); drawTripLine();
+  toast("切到「" + target.name + "」· " + STATE.trip.length + " 个点");
+}
+function renameTrip(){
+  var t = activeTrip(); if(!t) return;
+  var name = prompt("这份行程叫什么？（例如：周末A · 安吉）", t.name);
+  if(name === null) return;
+  name = String(name).trim().slice(0, 20);
+  if(!name){ toast("名字不能为空"); return; }
+  t.name = name; saveTrips(); renderTripPanel();
+  toast("已改名：" + name);
+}
+function newTrip(){
+  syncActive();
+  var t = { id: newTripId(), name: "方案" + (TRIPS.length + 1), ids: [] };
+  TRIPS.push(t); ACTIVE = t.id; STATE.trip = [];
+  saveTrip(); saveTrips(); renderTrip(); renderTripPanel();
+  toast("新建了「" + t.name + "」，把点加进来，再点「重命名」起个名");
+}
+function delTrip(){
+  if(TRIPS.length <= 1){ toast("只剩这一份了，删掉就没行程可用"); return; }
+  var t = activeTrip(); if(!t) return;
+  if(!confirm("删除「" + t.name + "」？这份里的 " + STATE.trip.length + " 个点会一起没掉")) return;
+  syncActive();
+  TRIPS = TRIPS.filter(function(x){ return x.id !== t.id; });
+  ACTIVE = TRIPS[0].id; STATE.trip = TRIPS[0].ids.slice();
+  saveTrip(); saveTrips(); renderTrip(); renderTripPanel();
+  toast("已删除，切到「" + TRIPS[0].name + "」");
+}
+/* 标签条：一眼能看到"我有几套方案"，横着划，当前那份加深 */
+function renderTripTabs(){
+  var box = el("trip-tabs"); if(!box) return;
+  var title = el("trip-title");
+  var cur = activeTrip();
+  if(title) title.textContent = cur ? cur.name : "我的行程";
+  var html = TRIPS.map(function(t){
+    return '<button class="trip-tab' + (t.id === ACTIVE ? " on" : "") + '" data-trip-id="' + esc(t.id) + '">' +
+      esc(t.name) + '<span class="tt-n">' + t.ids.length + '</span></button>';
+  }).join("");
+  html += '<button class="trip-tab add" id="trip-tab-add">＋ 新方案</button>';
+  box.innerHTML = html;
+}
 
 /* ───────── 去过了（2026-11-24） ─────────
    「每周带狗去哪玩」这个每周会重复发生的需求，最怕的就是**反复推同一个地方**——
@@ -2773,7 +2889,8 @@ function fallbackCopy(t){
   document.body.removeChild(ta);
 }
 function tripText(){
-  var lines = ["带狗出行 · " + STATE.trip.length + " 个点"];
+  var __t = activeTrip();
+  var lines = [(__t ? __t.name + " · " : "") + STATE.trip.length + " 个点"];
   STATE.trip.forEach(function(id, i){
     var s = findSpot(id); if(!s) return;
     var f = (s.overnight || {}).facilities || {};
@@ -2888,7 +3005,11 @@ function b64d(s){
 
 function tripUrl(){
   var base = location.origin + location.pathname;
-  return base + "?trip=" + b64e(STATE.trip.join("\n"));
+  var t = activeTrip();
+  var nm = t ? t.name : "";
+  /* 名字也带上（2026-11-26）：收到链接的人要能一眼看出"这是谁的哪套方案"，
+     而不是打开后看到 3 个光秃秃的编号。base64url 里没有 & 和 = ，拼在 query 里安全。 */
+  return base + "?trip=" + b64e(STATE.trip.join("\n")) + (nm ? "&n=" + b64e(nm) : "");
 }
 
 function shareTrip(){
@@ -2903,8 +3024,9 @@ function shareTrip(){
         function(){ fallbackCopy(all); toast("行程链接已复制"); });
     } else { fallbackCopy(all); toast("行程链接已复制"); }
   };
+  var __t = activeTrip(), __nm = __t ? __t.name : "";
   if(navigator.share){
-    navigator.share({ title: "带狗出行 · " + STATE.trip.length + " 个点", text: text, url: url })
+    navigator.share({ title: (__nm ? __nm + " · " : "") + STATE.trip.length + " 个点", text: text, url: url })
       .catch(function(err){ if(err && err.name === "AbortError") return; fallback(); });
   } else { fallback(); }
 }
@@ -2927,20 +3049,40 @@ function loadSharedTrip(){
   }
   if(!ids.length){ toast("这条分享链接里的点位已经不在了"); return; }
   ids = ids.slice(0, 40);          /* 手改链接塞几百个也不至于卡死 */
-  var prev = STATE.trip.slice();
-  STATE.trip = ids;
-  saveTrip(); renderTrip();
-  if(prev.length && prev.join(",") !== ids.join(",")){
-    toast("已载入分享的行程 · " + ids.length + " 个点", {
-      label: "恢复我的", stay: 7000,
-      onTap: function(){ STATE.trip = prev; saveTrip(); renderTrip(); renderTripPanel(); toast("已恢复你原来的行程"); }
-    });
-  } else {
-    toast("已载入分享的行程 · " + ids.length + " 个点");
-  }
+  /* 带的行程名（没有就用"分享来的行程"） */
+  var nm = "";
+  var mn = /[?&]n=([^&]+)/.exec(location.search);
+  if(mn){ try{ nm = b64d(mn[1]).slice(0, 20); }catch(e){ nm = ""; } }
+  var name = nm || "分享来的行程";
+
+  /* 分享来的行程**单独存一份**，不覆盖你自己正在做的那份（2026-11-26）。
+     以前的做法是把 STATE.trip 直接换掉、给一个"恢复我的"按钮——换方案就等于毁掉手上的方案，
+     而且对方打开后行程面板是关着的，只看到底下一行"行程 3 个点"，等于白分享。 */
+  var prevActive = ACTIVE, prevIds = STATE.trip.slice();
+  syncActive();
+  var target = null;
+  TRIPS.forEach(function(t){ if(t.name === name) target = t; });
+  if(target){ target.ids = ids.slice(); }
+  else { target = { id: newTripId(), name: name, ids: ids.slice() }; TRIPS.push(target); }
+  ACTIVE = target.id; STATE.trip = ids.slice();
+  saveTrip(); saveTrips(); renderTrip();
+
+  var panel = el("trip-panel");
+  if(panel) panel.classList.add("open");
+  renderTripPanel();
+  drawTripLine();
+  toast("已载入分享的「" + name + "」· " + ids.length + " 个点", {
+    label: "回到我的", stay: 8000,
+    onTap: function(){
+      ACTIVE = prevActive; STATE.trip = prevIds;
+      saveTrip(); saveTrips(); renderTrip(); renderTripPanel(); drawTripLine();
+      toast("已回到你自己的行程");
+    }
+  });
 }
 
 function renderTripPanel(){
+  renderTripTabs();
   var box = el("trip-list"), sub = el("trip-sub");
   if(!STATE.trip.length){
     sub.textContent = "";
@@ -3147,6 +3289,16 @@ function bindTrip(){
   });
   el("trip-share").addEventListener("click", shareTrip);
   el("trip-share-panel").addEventListener("click", shareTrip);
+  /* 多份行程（2026-11-26）：标签用事件委托，标签条是重绘的，逐个绑会绑到已经换掉的节点上 */
+  var tabs = el("trip-tabs");
+  if(tabs) tabs.addEventListener("click", function(e){
+    if(e.target.closest("#trip-tab-add")){ newTrip(); return; }
+    var b = e.target.closest("[data-trip-id]");
+    if(b) switchTrip(b.getAttribute("data-trip-id"));
+  });
+  if(el("trip-rename")) el("trip-rename").addEventListener("click", renameTrip);
+  if(el("trip-new")) el("trip-new").addEventListener("click", newTrip);
+  if(el("trip-del")) el("trip-del").addEventListener("click", delTrip);
 }
 
 /* ═════════════════ 本周推荐 ═════════════════
@@ -4425,7 +4577,7 @@ fetch("spots.json", {cache:"no-cache"})
     scrollFade(el("filters"));
     scrollFade(el("legend"));
     bindPlan();
-    STATE.trip = loadTrip();
+    initTrips();            /* 行程可能有多份，先从仓库取当前那份 */
     loadBeen();
     loadSharedTrip();        /* 带 ?trip= 的链接优先，且不静默覆盖已有行程 */
     renderTrip();
@@ -4528,4 +4680,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261126T0946 -->
+<!-- rebuild-trigger 20261126T1008 -->
