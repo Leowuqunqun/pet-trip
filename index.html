@@ -717,10 +717,16 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 /* ─── 本周推荐 ─── */
 .plan-panel{position:fixed;inset:0;display:none;z-index:1400;background:rgba(22,26,24,.38)}
 .plan-panel.open{display:block}
+/* 680px 只够一列卡片——既然是"选项并排"，桌面就得有并列的地方（2026-11-27 放到 1040） */
 .plan-sheet{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:min(680px,94vw);max-height:88vh;background:var(--paper);border-radius:var(--r-l);
+  width:min(1040px,94vw);max-height:88vh;background:var(--paper);border-radius:var(--r-l);
   box-shadow:0 24px 60px rgba(0,0,0,.3);display:flex;flex-direction:column;overflow:hidden}
 .plan-top{flex:none;padding:20px 20px 0}
+/* 桌面：底部两颗按钮别各占一半宽——1040px 的面板上那像两条横幅（2026-11-27） */
+@media (min-width:860px){
+  .plan-sheet .trip-actions{justify-content:flex-end;gap:10px}
+  .plan-sheet .trip-actions button{flex:0 0 auto;padding:0 22px;min-height:44px}
+}
 .plan-scroll{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
   overscroll-behavior:contain;padding:0 20px}
 .plan-sheet h3{margin:0 0 4px;font-size:17px;font-family:var(--font-display)}
@@ -731,7 +737,11 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .plan-note summary::after{content:"展开说明 ›";float:right;color:var(--brand-2);font-weight:600;margin-left:8px}
 .plan-note[open] summary::after{content:"收起 ⌄"}
 .plan-note .pn-body{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
-.plan-card{border:1px solid var(--line);border-radius:var(--r-m);background:var(--card);padding:14px;margin-bottom:14px;box-shadow:var(--sh-1)}
+/* 卡片组：桌面并排（等高三列），手机横滑（下一张露一角，提示"还有别的选项"） */
+.plan-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;align-items:stretch}
+.plan-card{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:15px;
+  margin-bottom:0;box-shadow:var(--sh-1);display:flex;flex-direction:column;min-width:0}
+.plan-card .plan-acts{margin-top:auto}
 .plan-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .plan-head h4{margin:0;font-size:15px}
 .plan-tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
@@ -848,11 +858,13 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
     overscroll-behavior:contain;
     padding:0 var(--pad-r) calc(20px + env(safe-area-inset-bottom,0px)) var(--pad-l)}
 
-  /* 拆盒：卡片套小盒、小盒再套边框，一屏里十几层描边，看着就累。
-     手机上改成"通栏 + 分隔线"，靠字重和留白分层。 */
-  .plan-card{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;
-    box-shadow:none;padding:16px 0;margin-bottom:0}
-  .plan-card:first-of-type{border-top:0;padding-top:10px}
+  /* 手机：同样是卡片组，但一屏放不下三张——横着划，下一张露一角。
+     （2026-11-27 owner 要求"pc 和手机都用卡片组"；之前是通栏列表） */
+  .plan-cards{display:flex;grid-template-columns:none;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;padding:2px 0 12px;margin:0 -16px;padding-left:16px;padding-right:16px;
+    scrollbar-width:none}
+  .plan-cards::-webkit-scrollbar{display:none}
+  .plan-card{flex:0 0 88%;scroll-snap-align:center;padding:15px 15px 14px}
   .plan-now{background:transparent;border:0;border-radius:0;padding:0 0 2px;margin-bottom:10px}
   .pw-day{background:transparent;border:0;border-radius:0;padding:2px 0;align-items:flex-start;
     min-width:74px}
@@ -4340,8 +4352,7 @@ function planThumbsHTML(p){
 function planCardHTML(p, idx, quiet){
   var head = '<div class="plan-head"><span class="plan-tag '+
     (p.kind==="两晚三天"?"pt-2d":"pt-1d")+'">'+esc(p.kind)+'</span>'+
-    '<h4>'+(idx+1)+'. '+esc(p.name)+'</h4>'+
-    '<span class="plan-maxh">最远单程 '+esc(hm(p.maxH))+'</span></div>';
+    '<h4>'+(idx+1)+'. '+esc(p.name)+'</h4></div>';
 
   var weather;
   if(p.weatherOk){
@@ -4419,7 +4430,7 @@ function planCardHTML(p, idx, quiet){
   return '<div class="plan-card">' + head + planThumbsHTML(p) + weather +
     /* 手机上路线默认收起来（省空间），但"展开"之前连"这趟经过哪几个地方"都看不到，
        要判断一条路线合不合胃口只能先展开再收——所以摘要里直接串一条名字链（2026-11-24）。 */
-    '<details class="stops-d" open><summary>路线 · '+p.stops.length+' 个点'+
+    '<details class="stops-d" open><summary>路线 · '+p.stops.length+' 个点 · 最远单程 '+esc(hm(p.maxH))+
       (spanTxt ? ' · '+esc(spanTxt) : '')+
       '<div class="sd-chain">' + p.stops.slice(0, 6).map(function(st){
         /* 名字链本来只是"看一眼经过哪"，但它已经是一个点一个点排好的——顺手做成入口：
@@ -4532,10 +4543,14 @@ function planBodyHTML(){
 
   /* 顶部已经统一说过"这周不建议出发"时，卡片里就不再重复同一句话 */
   return weekBarHTML() + head +
+    /* 三条路线是**互相比较的选项**，不是一篇流水账——所以并排成一组卡片，
+       手机横着划、桌面铺成一排（owner 2026-11-27：「把不同选项的当做卡片组来展示」）。 */
+    '<div class="plan-cards">' +
     PLAN.plans.map(function(p, i){
       /* 编号接着往下排（第 4–6 条就该显示 4、5、6），不要每页都从 1 开始 */
       return planCardHTML(p, (PLAN.page||0)*3 + i, allBad);
     }).join("") +
+    '</div>' +
     planMoreHTML() +
     (PLAN.state==="loading" ? '<div class="plan-refreshing">正在重新查天气…（下面是 '+planAgeText()+' 的数据）</div>' : '') +
     '<div class="plan-foot">降水% 越低越好；出行指数 = 100 − 降水概率×0.9 − 体感温度惩罚（&lt;0℃ 扣 45、&lt;8℃ 扣 25、&lt;14℃ 扣 8、&gt;29℃ 扣 25）。权重写在这里，你可以不认同。</div>';
@@ -4560,11 +4575,12 @@ function paintPlanBox(box, html){
   if(!box) return;
   box.innerHTML = html;
   Array.prototype.forEach.call(box.querySelectorAll(".plan-week"), scrollFade);
-  var wide = window.matchMedia("(min-width:860px)").matches;
   var pn = box.querySelector(".plan-note");
-  /* 手机上默认收起：不收起时第一屏全被说明文字占满，看不到路线 */
-  if(pn) pn.open = wide;
-  Array.prototype.forEach.call(box.querySelectorAll(".stops-d"), function(d){ d.open = wide; });
+  /* 现在三条路线是并排的卡片（2026-11-27），比较的前提是"三张长得一样"：
+     默认一律收起，要细节的人自己展开一张。展开的默认值以前是"桌面 open"，
+     在卡片组里会让某一张比旁边高出半屏，反而没法比。 */
+  if(pn) pn.open = false;
+  Array.prototype.forEach.call(box.querySelectorAll(".stops-d"), function(d){ d.open = false; });
   box.scrollTop = 0;
 }
 
@@ -4871,4 +4887,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261127T1129 -->
+<!-- rebuild-trigger 20261127T1148 -->
