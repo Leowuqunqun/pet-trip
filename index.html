@@ -718,6 +718,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .plan-panel{position:fixed;inset:0;display:none;z-index:1400;background:rgba(22,26,24,.38)}
 .plan-panel.open{display:block}
 /* 680px 只够一列卡片——既然是"选项并排"，桌面就得有并列的地方（2026-11-27 放到 1040） */
+.plan-why{font-size:12px;line-height:1.5;color:var(--ink-3);margin:3px 0 9px}
+.plan-gated{font-size:12px;line-height:1.5;color:var(--ink-3);margin:0 0 12px;padding:8px 10px;
+  background:rgba(31,58,77,.045);border-radius:10px}
 .plan-sheet{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
   width:min(1040px,94vw);max-height:88vh;background:var(--paper);border-radius:var(--r-l);
   box-shadow:0 24px 60px rgba(0,0,0,.3);display:flex;flex-direction:column;overflow:hidden}
@@ -3636,6 +3639,10 @@ function scoreSpot(s, season){
 
   if(dog.policy==="allowed"){ sc+=3; why.push({t:"笔记写明可带狗", s:"犬政策"}); }
   if(dog.policy==="forbidden"){ sc-=20; }
+  /* 「部分受限」要和「明确可带」拉开距离：去掉热度之后（2026-11-27），
+     上海影视乐园这种"宠物只能进部分区域"的园区一度排到第一——那是"能进"不等于"适合带狗玩"。
+     扣分而不是剔除：owner 的口径是"没写不让进就当宠物友好"，但写了受限就该排在后面。 */
+  if(dog.policy==="restricted"){ sc-=4; why.push({t:"宠物只能进部分区域", s:"犬政策"}); }
 
   var ev = on.evidence||[];
   if(ev.length){ sc+=3; why.push({t:"过夜有笔记原话", s:"过夜"}); }
@@ -3652,6 +3659,12 @@ function scoreSpot(s, season){
              ev.map(function(e){ return String(e&&e.quote||""); }).join(" ");
   var hit = (SEASON_WORDS[season]||[]).filter(function(w){ return text.indexOf(w)>=0; })[0];
   if(hit){ sc+=2; why.push({t:"原话提到「"+hit+"」，"+season+"季正合适", s:"笔记"}); }
+
+  /* 类型权重（2026-11-27，去掉热度之后补上的）：没有"有多少人在发"这个信号，
+     光靠证据分会让上海市区的公园占满前几条——那是"遛狗半小时"，不是"跑一趟的周末"。
+     这里只区分"值不值得跑一趟"，不评价地方好坏：营地 +2、山水/古镇 +1、城市公园 −1。 */
+  var KINDW = {campground:2, water:1, scenic:1, village:0.5, park:-1, lodging:0, other:0};
+  sc += (KINDW[s.kind] != null ? KINDW[s.kind] : 0);
 
   sc -= Math.max(0, spotH(s)-1.5) * 0.7;
   return { score:sc, why:why };
@@ -4168,23 +4181,27 @@ function buildPlans(){
     c.plays  = c.spots.filter(function(s){ return !sleepKind(s) && s.kind!=="lodging"; }).sort(byRating);
     c.maxH = Math.max.apply(null, c.spots.map(spotH));
     c.scene = clusterScene(c);
+    /* 片区的"证据强度"：本片区最好的三站评分均值（scoreSpot，不含热度）。
+       候选池从这一步起就不再由热度决定——owner 2026-11-27：「3 不要把热度算进去」。 */
+    var qs = c.spots.map(function(x){ return ((x.__p||{}).score); })
+                    .filter(function(v){ return typeof v === "number"; })
+                    .sort(function(a,b){ return b-a; }).slice(0,3);
+    c.q = qs.length ? qs.reduce(function(a,b){ return a+b; }, 0)/qs.length : -99;
+    c.rich = c.spots.length;
   });
 
-  /* 先按景色挑出候选片区，天气等查完再一起排 */
+  /* 挑候选片区：按"证据强度"而不是热度（2026-11-27）。
+     同分时站多的优先——三个点都写着能带狗的片区，胜过孤零零一个点。 */
+  function byQ(a,b){ if(b.q !== a.q) return b.q - a.q; return b.rich - a.rich; }
   var ov = clusters.filter(function(c){ return c.sleeps.length && c.maxH<=4.5 && c.maxH>=1.0; })
-                   .sort(function(a,b){ return b.scene-a.scene; }).slice(0,8);
+                   .sort(byQ).slice(0,8);
   var dt = clusters.filter(function(c){ return c.maxH<=2.5 && c.plays.length>=2; })
-                   .sort(function(a,b){ return b.scene-a.scene; }).slice(0,8);
+                   .sort(byQ).slice(0,8);
   var seen = [];
   ov.concat(dt).forEach(function(c){ if(seen.indexOf(c)<0) seen.push(c); });
-  var shortlist = seen.sort(function(a,b){
-    if(a.scene == null && b.scene == null) return 0;
-    if(a.scene == null) return 1;
-    if(b.scene == null) return -1;
-    return b.scene - a.scene;
   /* 12 条（原 8 条）：3 条一页 × 4 页。
      放宽的理由不是"多给点"，而是"上周推过的这周要能让开"——候选太少，让开之后就只剩更差的。 */
-  }).slice(0,12);
+  var shortlist = seen.sort(byQ).slice(0,12);
 
   /* 天气**并发**取，不要串行。
      2026-11-10 实测：Open-Meteo 从不到 1 秒变成单次 7–14 秒，而这里是 8 个片区一个接一个取，
@@ -4200,68 +4217,108 @@ function buildPlans(){
       c.weatherErr = (e&&e.message)||"取不到";
     });
   })).then(function(){
-    /* 综合分 = 景色 × 天气。天气好但景色一般，和景色好但天气一般，会拉平到一起比。
-       天气取不到就按 0.4 的保底系数，不让"查不到"变成"直接淘汰"。 */
-    shortlist.forEach(function(c){
-      var w = c.wSat ? c.wSat.score : null;
-      c.weather = w;
-      /* 综合 = 这个片区最热那站的笔记数 × 天气/100。两个都是实数，不合成虚分。 */
-      var base = c.scene != null ? c.scene : 0;
-      c.combo = Math.round(base * (w!=null ? w/100 : 0.4) * 100) / 100;
-    });
-    shortlist.sort(function(a,b){ return b.combo-a.combo; });
+    /* ── 天气改成"闸门"，不参与排序（owner 2026-11-27：「1 需要」）────────
+       实测过的理由：候选都在长三角 200km 内、受同一天气系统影响，
+       同一个周末各片区的周六降水几乎一样（这周末 0%/0%/0%，下周末 53%/52%/47%）。
+       在这种情况下拿天气当乘数，等于所有候选乘同一个常数——不改变排序，只把分数整体缩放。
+       天气真正能回答的是另一件事：**这周末能不能出门**。所以改成阈值判断：
+       周六（没有就看周日）降水过半，或预报是大雨/暴雨/雷暴/雪 → 这个片区这周不推。
+       取不到天气就**不开闸**——不能把"没数据"当成"坏天气"。 */
+    var BAD_CODE = {65:1, 67:1, 75:1, 82:1, 95:1, 96:1, 99:1};
+    function gateOf(c){
+      var d = c.wSat || c.wSun;
+      if(!d) return "";
+      if(BAD_CODE[d.code]) return "预报有" + (WMO[d.code] || "恶劣天气");
+      if((d.pop || 0) >= 50) return "降水概率 " + d.pop + "%";
+      return "";
+    }
+    shortlist.forEach(function(c){ c.gate = gateOf(c); });
 
     function kindOf(c){
       return (c.sleeps.length && c.maxH<=4.5 && c.maxH>=1.0) ? "两晚三天" : "周六来回";
     }
-    /* 先把每条候选路线真的组出来，再用**这条路线自己的站**算评分——
-       用整个片区的最高分会出现"显示 4.6、综合按 4.9 算"的不一致。 */
-    var built = shortlist.map(function(c){
+
+    /* ── 排序依据：这趟行程自己的"证据强度"，**不含热度**（owner：「3 不要把热度算进去」）──
+       每一站本来就有评分：写明可带狗 +3、过夜有笔记原话 +3、写明有卫生间 +1、有实拍图 +1、
+       当季最佳 +3（当季不适合 -2 / 淡季 -8）、原话提到当季景象 +2，最后减车程。
+       一条路线取它最好的三站平均，再加一点"能玩几站"——一趟更充实的路线排前面。
+       热度和点赞**从排序里彻底退场**，只在点位详情里作为"有多少人在发"展示。 */
+    var all = shortlist.map(function(c){
       var pl = composePlan(kindOf(c), c, wk, season);
-      /* 只用"能玩的站"算评分：酒店 4.9 说明住得好，不说明这趟好玩，
-         而且卡片标题本来就是挑能玩的站当门面，两边必须同一个口径。 */
-      var ps = pl.stops.map(function(x){ return popOf(x.s); }).filter(function(x){ return x; });
-      ps.sort(function(a,b){ return (b.notes-a.notes) || (b.likes-a.likes); });
-      pl.pop = ps.length ? ps[0] : null;
-      pl.weather = c.weather;
-      var base2 = pl.pop ? pl.pop.notes : 0;
-      pl.combo = Math.round(base2 * (c.weather!=null ? c.weather/100 : 0.4) * 100) / 100;
       pl.wFri = c.wFri; pl.wSat = c.wSat; pl.wSun = c.wSun; pl.now = c.now;
       pl.weatherOk = c.weatherOk; pl.weatherErr = c.weatherErr;
+      pl.gate = c.gate || "";
+
+      var sc = pl.stops.map(function(x){ return (x.s.__p && x.s.__p.score) || 0; })
+                       .sort(function(a,b){ return b - a; });
+      var top3 = sc.slice(0, 3);
+      pl.base = top3.length ? top3.reduce(function(a,b){ return a + b; }, 0) / top3.length : 0;
+      pl.rich = Math.min(pl.stops.length, 5);
+      pl.score = pl.base + pl.rich * 0.4;
+
+      /* 卡片上要写的理由：从这几站的评分理由里挑不重复的 3 条（都是证据，不是热度） */
+      var why = [], seenT = {};
+      pl.stops.forEach(function(x){
+        ((x.s.__p && x.s.__p.why) || []).forEach(function(w){
+          if(seenT[w.t] || why.length >= 8) return;
+          seenT[w.t] = 1; why.push({ t:w.t, s:w.s });
+        });
+      });
+      pl.why = why;
       return pl;
     });
-    /* 季节权重：档位越高系数越大，但**不清零、不剔除**——
-       一条"适合"档但热度极高、天气极好的路线，仍然可以压过一条"最佳"档的普通路线。
-       系数区间 0.25~1.0，够让季节明显影响排序，又不至于把场子锁死。 */
-    var SEASON_WEIGHT = {3:1.0, 2:0.78, 1:0.5, 0:0.25};
-    built.forEach(function(pl){
-      var t = 0;
-      pl.stops.forEach(function(x){
-        var st = seasonTier(x.s, season);
-        if(st > t) t = st;
+    /* 理由要能**区分**：如果三条路线都写着"笔记写明可带狗"，那它不是理由，是共性。
+       按"在候选里出现的次数"排序，越少见越先写，取前三（2026-11-27）。 */
+    var freq = {};
+    all.forEach(function(pl){ (pl.why||[]).forEach(function(w){ freq[w.t] = (freq[w.t]||0) + 1; }); });
+    /* 理由的"硬度"：季节、笔记原话、过夜证据是这地方本身的特性；
+       "有实拍图 N 张"只说明资料齐，不说明值得跑一趟——排在最后，且只在别的理由不够时才用。 */
+    var PRIO = { "季节":0, "笔记":1, "过夜":2, "犬政策":3, "设施":4, "图":9 };
+    all.forEach(function(pl){
+      var seenCat = {}, uniq = [];
+      (pl.why||[]).slice().sort(function(a,b){
+        var pa = PRIO[a.s] != null ? PRIO[a.s] : 5, pb = PRIO[b.s] != null ? PRIO[b.s] : 5;
+        if(pa !== pb) return pa - pb;
+        return (freq[a.t]||0) - (freq[b.t]||0);       /* 同档里越少见越有区分度 */
+      }).forEach(function(w){
+        /* 同一类只留一条：「有实拍图 4 张」「有实拍图 9 张」是同一条说了两遍 */
+        var cat = w.t.replace(/\d+/g, "#");
+        if(seenCat[cat]) return;
+        seenCat[cat] = 1; uniq.push(w);
       });
-      pl.seasonTier = t;
-      pl.seasonWeight = SEASON_WEIGHT[t] != null ? SEASON_WEIGHT[t] : 0.78;
-      pl.score = pl.combo * pl.seasonWeight;
+      /* 三条里留一条"具体的"：光写"秋季最佳 · 过夜有原话 · 可带狗"，三条路线会一模一样，
+         那行字就没有区分作用了。所以两条硬理由 + 一条可数的（实拍图张数 / 有无卫生间），
+         让每张卡的理由行真的属于它自己。 */
+      var hard = uniq.filter(function(w){ return w.s !== "图"; });
+      var soft = uniq.filter(function(w){ return w.s === "图" || w.s === "设施"; });
+      pl.why = hard.slice(0, 2).concat(soft.slice(0, 1));
+      if(!pl.why.length) pl.why = uniq.slice(0, 3);
     });
+    var gated = all.filter(function(p){ return !!p.gate; });
+    var built = all.filter(function(p){ return !p.gate; });
+    PLAN.gated = gated.map(function(p){ return { name:p.name, gate:p.gate }; });
+    /* 全被闸门挡住时不能给空面板：放回来，但整页明写"这周末普遍不建议出门" */
+    PLAN.gateAll = false;
+    if(!built.length && all.length){ built = all; PLAN.gateAll = true; }
+
+    built.sort(function(a,b){ return b.score - a.score; });
     /* ── 每周换一批（2026-11-27）──────────────────────────────
        owner：「为什么每周推荐的内容都是相同的」。
-       查过原因，不是缓存：排序里能随"周"变的只有天气，而天气取不到时（现在就是）
-       全部退化成 0.4 的同一个系数，剩下只有热度×季节——两项都是静态数据，
-       于是每周算出来的前三名必然一模一样。这不是"随机不够"，是没有换人的机制。
-       做法：把**最近两周推荐过的片区让到队尾**（不是剔除——真没别的可推时还会轮到它），
-       让开门的是"这一档里还没推过的"里最好的那条。历史只存名字 + 周末日期，存在本机。 */
-    built.sort(function(a,b){ return b.score - a.score; });
+       查过原因，不是缓存：能随"周"变的只有天气，而天气对同周末各候选是同一个数，
+       乘上去不改变顺序；剩下能排序的只有静态数据，于是每周必然一样。
+       做法：把**最近两周推荐过的片区让到队尾**，但只在"同一档"里让——
+       与最好那条相差不到 2 分的才算一档，差得多的不许因为"没看过"顶上去。
+       历史只存名字 + 周末日期，存在本机。 */
     var recent = recentlyShown(2, wk.sat);
-    if(recent.length){
-      built.sort(function(a,b){
-        var ra = recent.indexOf(a.name) >= 0, rb = recent.indexOf(b.name) >= 0;
-        if(ra !== rb) return ra ? 1 : -1;      /* 推过的排到后面 */
-        return b.score - a.score;
-      });
+    if(recent.length && built.length){
+      var fresh = built.filter(function(p){ return recent.indexOf(p.name) < 0; });
+      var shown = built.filter(function(p){ return recent.indexOf(p.name) >= 0; });
+      /* 只在"换过的还够三条"时才让：让开之后凑不满一页，就别让——
+         宁可重复一个，也不要为了新鲜把更差的顶上来（2026-11-27 实测过一版：
+         评分去掉热度之后各条分数挤得很近，按 ±2 分划"同一档"只剩三四条，
+         结果下周末又回到原来那三条，等于没换）。 */
+      if(fresh.length >= 3) built = fresh.concat(shown);
     }
-    /* 换一批（2026-11-23）：以前永远只给排前 3 的路线，不满意就没别的了——
-       可候选其实有几十条。现在把整张排序表留着，一次显示 3 条，翻得动。 */
     PLAN.allBuilt = built;
     var per = 3;
     var page = PLAN.page || 0;
@@ -4394,6 +4451,14 @@ function planCardHTML(p, idx, quiet){
   var head = '<div class="plan-head"><span class="plan-tag '+
     (p.kind==="两晚三天"?"pt-2d":"pt-1d")+'">'+esc(p.kind)+'</span>'+
     '<h4>'+(idx+1)+'. '+esc(p.name)+'</h4></div>';
+  /* 为什么是这一条：把评分用到的证据直接写出来（owner 2026-11-27：「3 需要，但不要把热度算进去」）。
+     这些理由本身就是排序用的那几项，不是装饰文案——改排序就得改这里。 */
+  var whyHTML = (p.why && p.why.length)
+    ? '<div class="plan-why">' + p.why.map(function(w){ return esc(w.t); }).join(' · ') + '</div>' : '';
+  /* 候选全被闸门挡住时不能给空页面，就把它们放回来——但必须**每条都带上撤下的原因**，
+     否则用户看到的是"推荐"，实际是"顶着一场大雨硬推给你"（2026-11-27）。 */
+  var gateHTML = p.gate
+    ? '<div class="plan-warn">这周<b>不建议</b>去：' + esc(p.gate) + '。候选全被天气挡住，这条仅当备选。</div>' : '';
 
   var weather;
   if(p.weatherOk){
@@ -4468,7 +4533,7 @@ function planCardHTML(p, idx, quiet){
     return (x.s.__p.why||[]).some(function(w){ return w.s==="笔记"; });
   });
 
-  return '<div class="plan-card">' + head + planThumbsHTML(p) + weather +
+  return '<div class="plan-card">' + head + whyHTML + gateHTML + planThumbsHTML(p) + weather +
     /* 手机上路线默认收起来（省空间），但"展开"之前连"这趟经过哪几个地方"都看不到，
        要判断一条路线合不合胃口只能先展开再收——所以摘要里直接串一条名字链（2026-11-24）。 */
     '<details class="stops-d" open><summary>路线 · '+p.stops.length+' 个点 · 最远单程 '+esc(hm(p.maxH))+
@@ -4544,24 +4609,29 @@ function planBodyHTML(){
   /* 离线时别拿 HTTP 失败当解释：山里没信号是常态，人要知道"该怎么办"（2026-11-25）。 */
   var head = (wFail ? '<div class="plan-warn" style="margin-bottom:12px">'+
       ((DATA_FROM_CACHE || navigator.onLine === false)
-        ? '现在是<b>离线的</b>，天气要连上网才取得到。下面按<b>先季节、再热度</b>排（少了天气这一项），'+
-          '有信号时刷新一次再看，出发前请自己确认天气。'
-        : '这次<b>没取到天气</b>（Open-Meteo 请求失败或网络不通）。下面的排序<b>先按季节、再按热度</b>（少了天气这一项），'+
-          '出发前请自己再确认一次天气。')+
+        ? '现在是<b>离线的</b>，天气要连上网才取得到 —— 这周的天气闸门没开，' +
+          '下面几条是照常按证据强度排的，出发前请自己确认天气。'
+        : '这次<b>没取到天气</b>（Open-Meteo 请求失败或网络不通）—— 闸门没开，' +
+          '下面几条照常按证据强度排，出发前请自己再确认一次天气。')+
       '</div>' : '') +
       ((wMiss>0 && !wFail) ? '<div class="plan-warn" style="margin-bottom:12px">'+
-      '有 '+wMiss+' 条路线没取到天气，那几条按热度保底排序，不代表当天天气好。</div>' : '') +
+      '有 '+wMiss+' 条路线没取到天气，这几条没能过闸门检查，不代表当天天气好。</div>' : '') +
       (allBad ? '<div class="plan-warn" style="margin-bottom:12px">'+
       '周六几个片区降水都在 '+Math.min.apply(null, PLAN.plans.filter(function(p){return p.wSat;})
         .map(function(p){ return Math.round(p.wSat.pop); }))+'% 以上，这周不建议出发。'+
       /* 光说"别去"是句丧气话——总得给个下一步：顺手能翻到下周末（2026-11-24） */
       '<br><button class="chip" data-week-next="1" style="margin-top:8px">看下周末的天气 ›</button></div>' : '') +
+      ((PLAN.gated && PLAN.gated.length) ? '<div class="plan-gated">这周撤下来 ' + PLAN.gated.length + ' 个片区（天气没过闸）：' +
+        PLAN.gated.slice(0, 4).map(function(g){ return esc(g.name) + '（' + esc(g.gate) + '）'; }).join('、') +
+        (PLAN.gated.length > 4 ? ' 等' : '') + '</div>' : '') +
+      (PLAN.gateAll ? '<div class="plan-warn" style="margin-bottom:12px">这周末候选片区的天气都过了阈值（降水过半或恶劣天气）——' +
+        '下面几条是硬留下的，<b>真要去请自己再看一眼预报</b>。</div>' : '') +
       ((!sat.length && PLAN.weekOffset>0)
         ? '<div class="plan-warn" style="margin-bottom:12px">'+
           '这个周末超出了天气预报的范围（Open-Meteo 最多给 16 天），<b>还没出预报</b>。'+
-          '所以下面的排序只按"这地方有多热"，天气这一项没有参与。</div>' : '') +
+          '闸门这次没开——真到那周记得再看一眼。</div>' : '') +
       '<details class="plan-note">' +
-      '<summary>窗口 <b>周五 '+DEPART_HOUR+':00 出发 · 周日晚回</b> · 候选 '+PLAN.pool+' 个点 · 排序＝季节 → 热度×天气</summary>' +
+      '<summary>窗口 <b>周五 '+DEPART_HOUR+':00 出发 · 周日晚回</b> · 候选 '+PLAN.pool+' 个点 · 排序＝证据强度（不含热度）· 天气当闸门</summary>' +
       '<div class="pn-body">' +
       '候选点 = '+(STATE.hours == null ? '不限车程' : '单程 ≤'+STATE.hours.toFixed(1)+'h')+'、排除明确禁狗' +
       (PLAN.beenSkipped ? '、跳过 ' + PLAN.beenSkipped + ' 个你去过的' : '') + '，共 '+PLAN.pool+' 个。' +
@@ -4574,12 +4644,15 @@ function planBodyHTML(){
       (PLAN.at ? '（'+planAgeText()+'）' : '')+'。'
         : '天气这次<b>没取到</b>（尝试于 '+esc(PLAN.fetchedAt)+'），所以排序里没有天气这一项。') +
       '车程是真实路网算的；<b>站与站之间只给直线距离，不是车程</b>。<br>' +
-      '<b>排序看三样：季节、这地方现在有多热、去的那天天气怎么样</b>。' +
-      '<b>季节只影响排序权重，不是门槛</b>——任何季节都能去，只是排位不同；' +
-      '同样热度的两个地方，当季的那个排前面。' +
-      '季节判断来自笔记原文或类型推断，详情页每条都写明依据。' +
-      '<br>"热"是指小红书上这段时间有多少人在发这个地方——发的人越多越值得去；天气取周六的实时预报。' +
-      '犬政策、有没有原话、有没有厕所只用来当理由和挑营地，不参与排序。' +
+      '<b>排序只看这一趟的"证据强度"，热量和点赞已经不参与排队</b>（2026-11-27 起）。' +
+      '每一站按它自己写明的证据加分：笔记写明可带狗 +3、过夜有笔记原话 +3、写明有卫生间 +1、' +
+      '有实拍图 +1、当季最佳 +3（当季不适合 -2、淡季 -8）、原话提到当季景象 +2，再减车程。' +
+      '一条路线取最好的三站平均，再加一点"能玩几站"。' +
+      '<br>所以卡片标题下面那行小字，就是它排在这里的<b>理由本身</b>——不是装饰。' +
+      '<b>季节不是门槛</b>：任何季节都能去，只是排位不同；季节判断来自笔记原文或类型推断，详情页写明依据。' +
+      '<br><b>天气不参与排序，只当闸门</b>：长三角这个周末各片区的天气几乎一样（2026-11-27 实测三个候选' +
+      '周六降水 0%/0%/0%，下个周末 53%/52%/47%），拿它当乘数等于乘一个常数，不会改变顺序。' +
+      '它真正能回答的是"这周末能不能出门"，所以只在周六降水过半、或预报大雨/雷暴/雪时，把这个片区从这周撤下来。' +
       '<br><b>同一个地方不会连着两周再推给你</b>：上周推荐过的，这周先让到后面去' +
       '（只是让开，不是判它不好；候选不够时还会轮到它）。' +
       (sat.length ? '' : '<br><b>这次没有天气数据</b>，排序只剩热度和季节两项静态数据——' +
@@ -4932,4 +5005,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261127T1451 -->
+<!-- rebuild-trigger 20261127T1631 -->
