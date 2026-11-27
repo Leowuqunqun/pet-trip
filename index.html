@@ -784,9 +784,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .sd-loc{color:var(--brand);text-decoration:underline;text-decoration-color:var(--line-2);
   text-underline-offset:3px;cursor:pointer}
 .sd-loc:active{color:var(--terra)}
-.loc-num{background:transparent;border:0;box-shadow:none;color:#fff;font:inherit;font-size:11px;
-  font-weight:700;padding:0}
-.loc-num::before{display:none}
+.loc-pin{display:flex;align-items:center;justify-content:center;width:24px;height:24px;
+  border-radius:50%;background:var(--brand);color:#fff;font-size:11.5px;font-weight:700;
+  border:2px solid #fff;box-shadow:0 2px 6px rgba(20,26,22,.35);font-variant-numeric:tabular-nums}
 .ps-loc{padding:3px 9px;border-radius:999px;border:1px solid var(--line-2);background:var(--paper-2);
   color:var(--ink-2);font-size:var(--t-xs);font-weight:600;cursor:pointer;
   -webkit-tap-highlight-color:transparent}
@@ -2314,12 +2314,19 @@ function locateRoute(gi){
   var grp = L.layerGroup().addTo(MAP);
   grp.addLayer(L.polyline(pts, {color: "#1F3A4D", weight: 3, opacity: .85, dashArray: "6 6",
                                 interactive: false}));
-  /* 只画线还不够：一堆同款圆图标里，分不出哪几个属于这条线、谁在前谁在后（2026-11-27） */
+  /* 只画线还不够：一堆同款圆图标里，分不出哪几个属于这条线、谁在前谁在后（2026-11-27）。
+     编号必须压在聚合气泡之上——circleMarker 画在 SVG 覆盖层，会被 marker 层的聚合圈整个盖住
+     （实测线上就是这个样子：DOM 里 5 个编号都在，屏幕上只剩一堆"7 / 10 / 4"的聚合数）。 */
+  if(!MAP.getPane("locPane")){
+    var pane = MAP.createPane("locPane");
+    pane.style.zIndex = 690;          /* marker 层是 600，聚合在上面画 */
+    pane.style.pointerEvents = "none";
+  }
   pts.forEach(function(c, i){
-    L.circleMarker(c, {radius: 12, color: "#fff", weight: 2, fillColor: "#1F3A4D",
-                       fillOpacity: 1, interactive: false})
-      .addTo(grp)
-      .bindTooltip(String(i + 1), {permanent: true, direction: "center", className: "loc-num"});
+    L.marker(c, {
+      pane: "locPane", interactive: false,
+      icon: L.divIcon({className: "loc-pin", html: String(i + 1), iconSize: [24, 24], iconAnchor: [12, 12]})
+    }).addTo(grp);
   });
   LOC_MARK = grp;
   toast("这条路线 " + pts.length + " 站已框在地图上（虚线是站间直线）", {
@@ -4864,4 +4871,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261127T1122 -->
+<!-- rebuild-trigger 20261127T1129 -->
