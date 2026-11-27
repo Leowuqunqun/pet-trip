@@ -780,7 +780,22 @@ h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing
 .plan-stop:hover{border-color:var(--brand);box-shadow:var(--sh-2)}
 .plan-stop:hover .ps-name{color:var(--brand-2)}
 .plan-stop:active{transform:scale(.995)}
-.ps-foot{display:flex;justify-content:flex-end;margin-top:7px}
+.ps-foot{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-top:7px}
+.sd-loc{color:var(--brand);text-decoration:underline;text-decoration-color:var(--line-2);
+  text-underline-offset:3px;cursor:pointer}
+.sd-loc:active{color:var(--terra)}
+.loc-num{background:transparent;border:0;box-shadow:none;color:#fff;font:inherit;font-size:11px;
+  font-weight:700;padding:0}
+.loc-num::before{display:none}
+.ps-loc{padding:3px 9px;border-radius:999px;border:1px solid var(--line-2);background:var(--paper-2);
+  color:var(--ink-2);font-size:var(--t-xs);font-weight:600;cursor:pointer;
+  -webkit-tap-highlight-color:transparent}
+.ps-loc:active{background:var(--line)}
+.plan-acts{display:flex;gap:8px;margin-top:10px}
+.plan-acts .plan-to-trip{flex:1;margin-top:0}
+.plan-loc{flex:none;padding:0 14px;border-radius:12px;border:1px dashed var(--line-2);
+  background:transparent;color:var(--brand);font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}
+.plan-loc:active{background:var(--brand-soft)}
 .ps-go{
   padding:3px 9px;border-radius:999px;
   background:var(--brand-soft);color:var(--brand-2);
@@ -2248,6 +2263,73 @@ function lazyFetchSources(id){
     var box = document.getElementById("d-src-v");
     if(box && STATE.active === id) box.textContent = "来源暂时没取到（换个地方再点开重试）";
   });
+}
+
+/* ───────── 快速定位（2026-11-27）─────────
+   推荐给了三条路线、每条好几站，但"它们在哪"要靠自己一个个点开详情再找回地图。
+   定位做两件事：把地图挪过去，并在那个位置上留一个明显的圈——不然在一堆点里
+   用户还是认不出刚说的是哪个。 */
+var LOC_MARK = null;
+function clearLocMark(){
+  if(LOC_MARK){ try{ MAP.removeLayer(LOC_MARK); }catch(e){} LOC_MARK = null; }
+}
+function locateSpot(id, zoom){
+  var sp = findSpot(id); if(!sp) return;
+  var g = spotCoord(sp);
+  closePlan(); setView("map");
+  if(!g){ toast("「" + sp.name + "」没有坐标，只能看详情"); openDetail(id); return; }
+  /* 刚从推荐面板切回地图时容器是 display:none，尺寸为 0——这时候 setView/fitBounds
+     都会被算歪（老坑：0×0 容器上算视野会落到 zoom 11 的大西北）。等一帧再动地图。 */
+  setTimeout(function(){
+  if(!mapUsable()){ toast("地图还没出来，稍等一下再点一次"); return; }
+  MAP.setView([g[1], g[0]], zoom || 13, {animate:true});
+  clearLocMark();
+  LOC_MARK = L.circleMarker([g[1], g[0]], {
+    radius: 16, color: "#1F3A4D", weight: 2, fillColor: "#1F3A4D", fillOpacity: .16, interactive: false
+  }).addTo(MAP);
+  toast("定位到「" + sp.name + "」", {
+    label: "详情", stay: 6000,
+    onTap: function(){ openDetail(sp.id); }
+  });
+  }, 140);
+}
+function locateRoute(gi){
+  /* 卡片上写的是"全局第几条"，翻页后要换算回这一页的序号（同 data-plantrip 的老坑） */
+  var idx = gi - (PLAN.page || 0) * 3;
+  var pl = (PLAN.plans || [])[idx];
+  if(!pl) return;
+  var pts = pl.stops.map(function(x){ return spotCoord(x.s); }).filter(Boolean)
+                     .map(function(g){ return [g[1], g[0]]; });
+  closePlan(); setView("map");
+  if(!pts.length){ toast("这条路线上的点都没有坐标"); return; }
+  setTimeout(function(){
+  if(!mapUsable()){ toast("地图还没出来，稍等一下再点一次"); return; }
+  clearLocMark();
+  if(pts.length === 1){ MAP.setView(pts[0], 13); }
+  else { MAP.fitBounds(L.latLngBounds(pts), {padding: [50, 60], maxZoom: 12}); }
+  var grp = L.layerGroup().addTo(MAP);
+  grp.addLayer(L.polyline(pts, {color: "#1F3A4D", weight: 3, opacity: .85, dashArray: "6 6",
+                                interactive: false}));
+  /* 只画线还不够：一堆同款圆图标里，分不出哪几个属于这条线、谁在前谁在后（2026-11-27） */
+  pts.forEach(function(c, i){
+    L.circleMarker(c, {radius: 12, color: "#fff", weight: 2, fillColor: "#1F3A4D",
+                       fillOpacity: 1, interactive: false})
+      .addTo(grp)
+      .bindTooltip(String(i + 1), {permanent: true, direction: "center", className: "loc-num"});
+  });
+  LOC_MARK = grp;
+  toast("这条路线 " + pts.length + " 站已框在地图上（虚线是站间直线）", {
+    label: "装进行程", stay: 7000,
+    onTap: function(){
+      var added = 0;
+      pl.stops.forEach(function(x){
+        if(x.s && STATE.trip.indexOf(x.s.id) < 0){ STATE.trip.push(x.s.id); added++; }
+      });
+      saveTrip(); renderTrip();
+      toast(added ? "已把 " + added + " 个点装进行程" : "这 " + pl.stops.length + " 个点已经在行程里了");
+    }
+  });
+  }, 140);
 }
 
 function openDetail(id){
@@ -4203,7 +4285,8 @@ function planStopHTML(s, leg, dayLabel){
       (p.why.length ? '<div class="ps-why">'+p.why.slice(0,3).map(function(w){
           return '<span>'+esc(w.t)+'<i>· '+esc(w.s)+'</i></span>';
         }).join("")+'</div>' : '') +
-      '<div class="ps-foot"><span class="ps-go">详情 ›</span></div>' +
+      '<div class="ps-foot"><span class="ps-loc" data-planlocate="'+esc(s.id)+'">'
+        + '地图上看</span><span class="ps-go">详情 ›</span></div>' +
     '</li>';
 }
 
@@ -4328,7 +4411,11 @@ function planCardHTML(p, idx, quiet){
     '<details class="stops-d" open><summary>路线 · '+p.stops.length+' 个点'+
       (spanTxt ? ' · '+esc(spanTxt) : '')+
       '<div class="sd-chain">' + p.stops.slice(0, 6).map(function(st){
-        return esc((st.s || {}).name || "");
+        /* 名字链本来只是"看一眼经过哪"，但它已经是一个点一个点排好的——顺手做成入口：
+           不展开卡片也能点某个名字直接在地图上定位（2026-11-27）。 */
+        var sid = st.s && st.s.id;
+        return sid ? '<span class="sd-loc" data-planlocate="' + esc(sid) + '">' +
+                     esc(st.s.name) + '</span>' : esc((st.s || {}).name || "");
       }).join(' <span class="arw">→</span> ') +
       (p.stops.length > 6 ? ' <span class="arw">→</span> 还有 ' + (p.stops.length - 6) + ' 个' : '') +
       '</div></summary><div class="sd-body">' +
@@ -4338,7 +4425,12 @@ function planCardHTML(p, idx, quiet){
     '</div></details>' +
     /* 推荐看完想照着走，以前只能回列表一个个点「加入行程」。
        一条路线本身就是一串点，直接整串装进去（2026-11-23）。 */
-    '<button class="plan-to-trip" data-plantrip="' + idx + '">把这 ' + p.stops.length + ' 个点装进行程</button>' +
+    '<div class="plan-acts">' +
+      '<button class="plan-to-trip" data-plantrip="' + idx + '">把这 ' + p.stops.length + ' 个点装进行程</button>' +
+      /* 三条路线铺开时，最想知道的是"它们分别在哪、离得远不远"。
+         以前只能一个个点开详情再找回去，等于自己拼地图（owner 2026-11-27）。 */
+      '<button class="plan-loc" data-planroute="' + idx + '">地图上看这条</button>' +
+    '</div>' +
   '</div>';
 }
 
@@ -4493,6 +4585,10 @@ document.addEventListener("click", function(e){
   }
   /* 同一类问题（2026-11-24）：推荐里的「站点」也只有桌面弹层能点开详情，
      手机首屏那 15 个站点是哑的——点上去什么都不发生，连"详情 ›"的字样都白写了。 */
+  var lc = e.target.closest && e.target.closest("[data-planlocate]");
+  if(lc){ e.preventDefault(); locateSpot(lc.getAttribute("data-planlocate")); return; }
+  var lr = e.target.closest && e.target.closest("[data-planroute]");
+  if(lr){ locateRoute(parseInt(lr.getAttribute("data-planroute"), 10) || 0); return; }
   var ps = e.target.closest && e.target.closest(".plan-stop");
   if(ps && ps.getAttribute("data-id")){
     STATE.detailFromPlan = true;
@@ -4764,4 +4860,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261127T0106 -->
+<!-- rebuild-trigger 20261127T1114 -->
