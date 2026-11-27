@@ -3564,6 +3564,29 @@ var PLAN = { weekOffset:0, state:"idle", plans:[], err:"", fetchedAt:"", pool:0,
 /* 天气是实时数据，不能抓一次用到天荒地老。
    超过这个时长就重抓：预报本身也是每小时更新的。 */
 var PLAN_TTL_MS = 5*60*1000;
+/* 每周推荐过什么（本机记录，不上传）：{ "2026-11-28": ["湖州 · 庾村广场", ...] } */
+var SEEN_KEY = "pp-plan-seen-v1";
+function loadSeen(){
+  try{ var d = JSON.parse(localStorage.getItem(SEEN_KEY) || "{}"); return (d && typeof d === "object") ? d : {}; }
+  catch(e){ return {}; }
+}
+/* 最近 n 个"周末"推过的片区名（按日期倒序取 n 组）。
+   excludeSat = 正在算的那个周末：**不能把它自己算进"推过"**，
+   否则来回切一次周末，当前这周的推荐会自己让开自己，切回去结果就变了。 */
+function recentlyShown(n, excludeSat){
+  var d = loadSeen(), keys = Object.keys(d).filter(function(k){ return k !== excludeSat; })
+                       .sort().reverse().slice(0, n), out = [];
+  keys.forEach(function(k){ (d[k]||[]).forEach(function(nm){ if(out.indexOf(nm) < 0) out.push(nm); }); });
+  return out;
+}
+function rememberShown(sat, picks){
+  if(!sat || !picks || !picks.length) return;
+  var d = loadSeen();
+  d[sat] = picks.map(function(p){ return p.name; });
+  var keys = Object.keys(d).sort().reverse();
+  keys.slice(4).forEach(function(k){ delete d[k]; });   /* 只留最近 4 个周末 */
+  try{ localStorage.setItem(SEEN_KEY, JSON.stringify(d)); }catch(e){}
+}
 var PLAN_TIMER = null;
 
 function seasonOf(d){
@@ -4149,9 +4172,9 @@ function buildPlans(){
 
   /* 先按景色挑出候选片区，天气等查完再一起排 */
   var ov = clusters.filter(function(c){ return c.sleeps.length && c.maxH<=4.5 && c.maxH>=1.0; })
-                   .sort(function(a,b){ return b.scene-a.scene; }).slice(0,6);
+                   .sort(function(a,b){ return b.scene-a.scene; }).slice(0,8);
   var dt = clusters.filter(function(c){ return c.maxH<=2.5 && c.plays.length>=2; })
-                   .sort(function(a,b){ return b.scene-a.scene; }).slice(0,6);
+                   .sort(function(a,b){ return b.scene-a.scene; }).slice(0,8);
   var seen = [];
   ov.concat(dt).forEach(function(c){ if(seen.indexOf(c)<0) seen.push(c); });
   var shortlist = seen.sort(function(a,b){
@@ -4159,7 +4182,9 @@ function buildPlans(){
     if(a.scene == null) return 1;
     if(b.scene == null) return -1;
     return b.scene - a.scene;
-  }).slice(0,8);
+  /* 12 条（原 8 条）：3 条一页 × 4 页。
+     放宽的理由不是"多给点"，而是"上周推过的这周要能让开"——候选太少，让开之后就只剩更差的。 */
+  }).slice(0,12);
 
   /* 天气**并发**取，不要串行。
      2026-11-10 实测：Open-Meteo 从不到 1 秒变成单次 7–14 秒，而这里是 8 个片区一个接一个取，
@@ -4219,7 +4244,22 @@ function buildPlans(){
       pl.seasonWeight = SEASON_WEIGHT[t] != null ? SEASON_WEIGHT[t] : 0.78;
       pl.score = pl.combo * pl.seasonWeight;
     });
+    /* ── 每周换一批（2026-11-27）──────────────────────────────
+       owner：「为什么每周推荐的内容都是相同的」。
+       查过原因，不是缓存：排序里能随"周"变的只有天气，而天气取不到时（现在就是）
+       全部退化成 0.4 的同一个系数，剩下只有热度×季节——两项都是静态数据，
+       于是每周算出来的前三名必然一模一样。这不是"随机不够"，是没有换人的机制。
+       做法：把**最近两周推荐过的片区让到队尾**（不是剔除——真没别的可推时还会轮到它），
+       让开门的是"这一档里还没推过的"里最好的那条。历史只存名字 + 周末日期，存在本机。 */
     built.sort(function(a,b){ return b.score - a.score; });
+    var recent = recentlyShown(2, wk.sat);
+    if(recent.length){
+      built.sort(function(a,b){
+        var ra = recent.indexOf(a.name) >= 0, rb = recent.indexOf(b.name) >= 0;
+        if(ra !== rb) return ra ? 1 : -1;      /* 推过的排到后面 */
+        return b.score - a.score;
+      });
+    }
     /* 换一批（2026-11-23）：以前永远只给排前 3 的路线，不满意就没别的了——
        可候选其实有几十条。现在把整张排序表留着，一次显示 3 条，翻得动。 */
     PLAN.allBuilt = built;
@@ -4228,6 +4268,7 @@ function buildPlans(){
     var picks = built.slice(page*per, page*per+per);
     if(!picks.length){ PLAN.page = 0; picks = built.slice(0, per); }
     PLAN.fetchedAt = new Date().toLocaleString("zh-CN", {hour12:false});
+    rememberShown(wk.sat, picks);   /* 记在"那个周末"名下，下周算的时候就会让开 */
     return picks;
   });
 }
@@ -4539,6 +4580,10 @@ function planBodyHTML(){
       '季节判断来自笔记原文或类型推断，详情页每条都写明依据。' +
       '<br>"热"是指小红书上这段时间有多少人在发这个地方——发的人越多越值得去；天气取周六的实时预报。' +
       '犬政策、有没有原话、有没有厕所只用来当理由和挑营地，不参与排序。' +
+      '<br><b>同一个地方不会连着两周再推给你</b>：上周推荐过的，这周先让到后面去' +
+      '（只是让开，不是判它不好；候选不够时还会轮到它）。' +
+      (sat.length ? '' : '<br><b>这次没有天气数据</b>，排序只剩热度和季节两项静态数据——' +
+        '所以"每周不一样"靠的是上面这条让开机制，不是天气在变。') +
       '</div></details>';
 
   /* 顶部已经统一说过"这周不建议出发"时，卡片里就不再重复同一句话 */
@@ -4887,4 +4932,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261127T1434 -->
+<!-- rebuild-trigger 20261127T1451 -->
