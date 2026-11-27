@@ -2276,6 +2276,9 @@ function clearLocMark(){
 function locateSpot(id, zoom){
   var sp = findSpot(id); if(!sp) return;
   var g = spotCoord(sp);
+  /* 第一次真正看到地图时页面会自动取景到"全部点"（scheduleAutoFit）。
+     定位是用户的明确指令，不能随后被那次自动取景顶掉——先把 autoFit 标记为已完成。 */
+  STATE.autoFit = true;
   closePlan(); setView("map");
   if(!g){ toast("「" + sp.name + "」没有坐标，只能看详情"); openDetail(id); return; }
   /* 刚从推荐面板切回地图时容器是 display:none，尺寸为 0——这时候 setView/fitBounds
@@ -2300,6 +2303,7 @@ function locateRoute(gi){
   if(!pl) return;
   var pts = pl.stops.map(function(x){ return spotCoord(x.s); }).filter(Boolean)
                      .map(function(g){ return [g[1], g[0]]; });
+  STATE.autoFit = true;      /* 同上：别让首次自动取景把用户要的视野顶掉 */
   closePlan(); setView("map");
   if(!pts.length){ toast("这条路线上的点都没有坐标"); return; }
   setTimeout(function(){
@@ -4860,4 +4864,4 @@ fetch("spots.json", {cache:"no-cache"})
 </script>
 </body>
 </html>
-<!-- rebuild-trigger 20261127T1114 -->
+<!-- rebuild-trigger 20261127T1122 -->
